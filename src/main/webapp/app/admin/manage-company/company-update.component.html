@@ -1,0 +1,62 @@
+
+    <form [formGroup]="companyForm" (ngSubmit)="save()" >
+    <div class="modal-header">
+        <h4  class="modal-title" *ngIf="!editCompany"> Create Company</h4>
+        <h4  class="modal-title" *ngIf="editCompany"> Edit Company</h4>
+         <button aria-label="Close" data-dismiss="modal" class="close" type="button" (click)="close()"><span aria-hidden="true">x</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="d-flex justify-content-center">
+            <div class="alert alert-danger col-md-6" role="alert" *ngIf="errMsg!=undefined && errMsg.length>0">{{errMsg}}</div>
+        </div>
+        <ng-container *ngIf="!edited">
+
+            <div class="form-group row">
+                <input type="hidden" formControlName="companyId" class="form-control" />
+                <label for="Company Name" class="col-sm-2 col-form-label">Company Name</label>
+                <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                <div class="col-sm-6">
+                    <input type="text" formControlName="companyName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.companyName.errors }"  placeholder="Enter company name"/>
+                    <div *ngIf="submitted && f.companyName.errors" class="invalid-feedback">
+                        <div *ngIf="f.companyName.errors.required">Company Name is required</div>
+                        <div *ngIf="f.companyName.errors.minlength">Company name must be at least 3 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Domains" class="col-sm-2 col-form-label">Domains</label>
+                <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                <div class="col-sm-6">
+                    <tag-input 
+                    [secondaryPlaceholder]="'Add Domain(s)'" 
+                    [placeholder]="'Add Domain(s)'"
+                    [onTextChangeDebounce]="500"
+                    formControlName="tags"  
+                    [validators]="validators"
+                    [separatorKeyCodes]="[32, 188]"
+                    [ngClass]="{ 'is-invalid': submitted && f.tags.errors }"
+                     ></tag-input>
+                    <div *ngIf="submitted && f.tags.errors" style="font-size: 80%;color: #dc3545;">
+                        <div *ngIf="f.tags.errors.required">Company Domain(s) is required</div>
+                     </div>
+                     <small class="form-text text-muted">Eg: beroe-inc.com</small>
+                </div>
+            </div>
+        </ng-container> 
+         <ng-container *ngIf="edited">
+            <div class="d-flex justify-content-center">
+                <div class="alert alert-success" role="alert" *ngIf="sucessMsg.length>0">{{sucessMsg}}</div>
+            </div>
+         </ng-container>
+         
+         
+        
+    </div>
+    <div class="modal-footer" *ngIf="!edited">
+            <button [disabled]="!companyForm.valid" class="btn btn-proc-prime"><span *ngIf="!editCompany">Save</span><span *ngIf="editCompany">Update</span></button>
+    </div>
+</form>
+   
+ 
+

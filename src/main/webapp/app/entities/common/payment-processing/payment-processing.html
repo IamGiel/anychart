@@ -1,0 +1,159 @@
+<div class="container text-center minHeight">
+    <ng-container *ngIf="loading">      
+        <h1 style="margin-top: 150px;color:white;">Payment processing...<br/><br/>
+                <span style="font-size:28px;">Please wait while your transaction is being processed.</span></h1>
+        <div style="margin: 0 auto;width: 80px;">
+            <img src="../../../../content/images/loader_ripple.gif" alt='no img'/>
+        </div>
+    </ng-container> 
+    <ng-container *ngIf="!loading && state=='succeeded' && success">
+        <div class="row d-flex justify-content-center" style="margin-top: 150px;">
+            <div class="col-md-6 box">
+                <div class="head">
+                    
+                </div>
+                <div class="body">
+                    <img src="../../../../content/images/tick_success.png">
+                    <h3>Payment success</h3>
+                    <p>Your payment of ${{amount}} was successfully completed.</p>
+                    <br/>
+                   <!-- <p *ngIf="trasctionId!=null && trasctionId!=undefined">Transaction ID: <span>{{trasctionId}}</span></p>-->
+                    <button class="btn btn-primary" (click)="goToHome()">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!loading && state!='succeeded' && state!='cancelled' && !success">
+    <div class="row d-flex justify-content-center" style="margin-top: 150px;">
+        <div class="col-md-6 box">
+            <div class="head">
+                
+            </div>
+            <div class="body err">
+                <i-x-circle></i-x-circle>
+                <h3>Payment failed</h3>
+                <p>The transaction attempt has failed.</p><br/>
+               
+                <button class="btn backBtn" (click)="goToHome()">Go to Dashboard</button>
+                <button class="btn btn-primary" (click)="goToCart()">Try Again</button>
+            </div>
+        </div>
+    </div>
+    </ng-container>
+    <ng-container *ngIf="!loading && state=='cancelled'">
+        <div class="row d-flex justify-content-center" style="margin-top: 150px;">
+            <div class="col-md-6 box">
+                <div class="head"></div>
+                <div class="body err">
+                    <i-x-circle></i-x-circle>
+                    <h3>Payment Cancelled</h3>
+                    <p>Your purchase could not be processed at this time.</p>
+                    <p>Call support at +1 919 629 0678 or email compliance.support@beroe-inc.com for any queries. </p>
+                    <button class="btn backBtn" (click)="goToHome()">Go to Dashboard</button>
+                </div>
+            </div>
+        </div>
+        </ng-container>
+   <!-- <ng-container *ngIf="!loading && state!='succeeded' && !success">
+            <div class="row d-flex justify-content-center" style="margin-top: 150px;">
+                <div class="col-md-6 box">
+                    <div class="head">
+                        
+                    </div>
+                    <div class="body err">
+                        <i-x-circle></i-x-circle>
+                        <h3>Error processing transaction</h3>
+                        <p>The transaction attempt has failed.We are unable to process for below reason.</p>
+                        <p *ngIf="trasctionId!=null && trasctionId!=undefined">Transaction ID: <span>{{trasctionId}}</span></p>
+                        <p *ngIf="amount!=null && amount!=undefined">Amount: <span>{{amount}}</span></p>
+                        <p>Reason: <span>The system is currently unavailbale.(Error Code:AB43_VRT)</span></p>
+                        <p>Suggestion: <span>Please try after some time.</span></p>
+                        <button class="btn btn-primary" (click)="goToHome()">Back to Home</button>
+                    </div>
+                </div>
+            </div>
+    </ng-container>-->
+</div>
+    
+<style>
+     .box{
+        background: white;
+        border-radius: 4px;
+        padding: 0px;
+        box-shadow: 0 4px 90px 0 rgba(0,0,0,.9);
+     } 
+     .box .head{
+         background:url('../../../../content/images/beroe_icon.png') no-repeat;
+         height: 120px;
+        background-color: #19c8cc;
+        background-size: 141px 71px;
+        background-position: 50% 50%;
+     }
+     .box .body{
+         padding:40px;
+     }  
+     .box .body h3{
+        opacity: 0.7;
+        color: #181818;
+        font-family: 'Inter UI';
+        margin-top: 10px;
+        font-weight: 900;
+     }
+     .box .body p{
+        font-family: 'Inter UI';
+        margin-top: 10px;
+        font-size: 16px;
+     }
+     .box .body p span{ 
+        opacity: 0.8;
+        color: #181818;
+        font-family: 'Inter UI';
+        font-weight:900;
+    }
+    .box .btn-primary {
+        height: 48px;
+        width: 172px;
+        border-radius: 24px;
+        background: linear-gradient(134.72deg, #19c8cc 0%, #19c8cc 51%, #0c91dd 100%);
+        transition: 0.5s;
+        color: #ffffff;
+        font-family: 'Inter UI';
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        line-height: 24px;
+        background-size: 200% auto;
+        text-transform: uppercase;
+    }
+
+    .box .btn-primary:hover {
+        background-position: right center;
+    }
+    .box .err h3{
+       color: red !important;
+     }
+     .box .err i-x-circle{
+        color: red;
+        height: 50px;
+        width: 50px;
+     }
+.backBtn {
+    height: 48px;
+    width: 172px;
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #ffffff 0%, #ffffff 51%, #e7e7e7 100%);
+    transition: 0.5s;
+    color: silver;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    background-size: 200% auto;
+    text-transform: uppercase;
+    border:1px solid silver;
+}
+.backBtn:hover {
+    background-position: right center;
+}
+</style>

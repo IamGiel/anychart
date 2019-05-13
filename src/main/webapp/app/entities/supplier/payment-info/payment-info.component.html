@@ -1,0 +1,75 @@
+<div class="container pReq ">
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 welcome text-center title">
+           <h1 *ngIf="cart===undefined || cart==null || cart.complianceReqIds===null" ><b>Cart</b></h1>
+           <h1 *ngIf="cart!=undefined && cart!=null && cart.complianceReqIds!==null" ><b>Order Summary</b></h1>
+<!--             <p *ngIf="cart!=undefined && cart!=null && cart.complianceReqIds!==null">Please enter your billing information and review your order below.</p>
+ -->            <p *ngIf="cart===undefined || cart===null || cart.complianceReqIds===null">Your cart is empty</p>
+            <div class="row padTop30 btnRow">
+                <div class="col-md-12 text-center">
+                    <!--  next button -->
+                    <button *ngIf="cart===undefined || cart==null || cart.complianceReqIds===null" class="btn btn-prime2" type="button" routerLink='/supplier/dashboard'>
+                        <span>Go to Dashboard</span></button>
+                </div>
+             </div>
+            <div class="row"></div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <!-- ROW for payment info -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+               
+                <div *ngIf="cart!==undefined&& cart!=null&&cart.packageDetails!=undefined&&cart.packageDetails!=null" class="col-sm-6 pend-box">
+                    <h3>Summary</h3>
+                    <br>
+                    <div class="requestFrom">{{cart.requestCount}} Requests</div>
+                    <div  *ngFor="let package of cart.packageDetails" class="row">
+                        <div  class="col-md-8 text-left">
+                            <div class="dbDataSet"> {{package.packageName}} x {{package.packageQty}}</div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <div class=""><span *ngIf="package.currency=='DOLLAR'||package.currency=='USD'">$</span>{{package.totalPackagePrice}}</div>
+                        </div>
+                    </div>
+                    <hr style="margin-bottom:24px;">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <div class="costLbl">Total Cost</div>
+                        </div>
+                        <hr>
+                        <div class="col-md-6 text-right">
+                            <span class="totalCostLbl"><span>$</span>{{cart.totalPrice}}
+                        </div>
+                    </div>
+                    <!-- button payment centered -->
+                    <div class="row padTop30 btnRow">
+                        <div class="col-md-6 text-left">
+                                <button style="max-width: 100%" routerLink='/supplier/dashboard' class="btn btn-prime2" type="button" >
+                                         <span>Go to Dashboard</span></button>
+                        </div>
+                        <div class="col-md-6 text-right">
+                           <button style="max-width: 100%" (click)="pay(cart.totalPrice)" class="btn btn-prime2" type="button" >
+                                <span>COMPLETE PAYMENT</span></button>
+                        </div>
+                     </div>
+                    <div class="row padTop30"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+   
+    <div class="row padTop30"></div>
+
+</div>
+
+<!-- test -->

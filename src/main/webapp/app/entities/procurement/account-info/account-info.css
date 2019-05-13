@@ -1,0 +1,102 @@
+.welcome,
+.display-4 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.card {
+    height: 244px !important;
+}
+
+.cards {
+    font-weight: bold;
+    font-size: 19px;
+    margin-top: 60px;
+}
+
+.steps {
+    margin-bottom: 40px;
+    opacity: 0.5;
+}
+
+.titleContainer {
+    margin-bottom: 48px;
+}
+
+.noteForUser {
+    opacity: 0.8;
+    font-size: 21px !important;
+    font-weight: 100;
+    margin-bottom: 70px;
+    padding: 0px 20px 0px 20px;
+}
+
+.formDiv {
+    position: relative;
+    display: block;
+    top: -6vw;
+}
+
+/* back and next buttons */
+
+.btnContainer {
+    position: relative;
+}
+
+.checkBx {
+    position: relative;
+    display: inline-flex;
+    /* top: 26px; */
+}
+
+.checkBxElement {
+    position: relative;
+    left: 0px;
+    top: 3px;
+}
+
+.i-am-authorized-to-c {
+    height: 40px;
+    width: 313px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.backBtn {
+    height: 48px;
+    width: 114px;
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+
+#nextCleared {
+    color: white;
+    height: 48px;
+    width: 182px;
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+    background: linear-gradient(134.72deg, #19c8cc 0%, #0c91dd 100%);
+    position: relative;
+    /* left: -20%; */
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-style: none !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

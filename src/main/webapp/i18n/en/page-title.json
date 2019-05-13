@@ -1,0 +1,35 @@
+{
+    "pageTitle": {
+        "login": "Login",
+        "payment":"Payment",
+        "compliance":{
+            "dashboard": "Compliance Dashboard",
+            "account":"Account-Info",
+            "intro": "Compliance Introduction",
+            "request-data": "Select Package",
+            "upload-supplier": "Upload Supplier"
+        },
+        "supplier":{
+            "dashboard": "Supplier Dashboard",
+            "intro": "Supplier Introduction",
+            "claim-profile": "Supplier Claim Profile",
+            "account-info": "Supplier Account Info",
+            "pending-requests": "Supplier Pending Requests",
+            "payment-info": "Cart",
+            "faq": "fAQ",
+            "details": "Supplier Data"
+        },
+        
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "activated": "Activated",
+        "deactivated": "Deactivated",
+        "profiles": "Profiles",
+        "langKey": "Language",
+        "createdBy": "Created by",
+        "createdDate": "Created date",
+        "lastModifiedBy": "Modified by",
+        "lastModifiedDate": "Modified date"
+    }
+}

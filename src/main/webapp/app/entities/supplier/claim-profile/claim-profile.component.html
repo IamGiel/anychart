@@ -1,0 +1,61 @@
+<div *ngIf="!claimed" class="container pReq ">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 welcome text-center title">
+            <h5 >Step 2 of 4</h5>
+            <h1><b>Claim Your Profile</b></h1>
+            <p>Please review the information below for <b>{{ companyName }}.</b></p>
+            <div class="row"></div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+                <div class="pend-box">
+                        <div class="row">
+                             <h3> {{companyName}}</h3>
+                         </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="blkColor">{{dunsNumber}}</p>
+                                <h5 class="text-left">DUNS#</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-6">
+                                    <p class="blkColor">{{cityName}}</p>
+                                    <h5 class="text-left">Headquarters/Site Location</h5>
+                                </div>
+                        </div>
+                    </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+   
+
+    <div class="row padTop30">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+           <div class="checkBx" *ngIf="companyName!=null">
+                <label><input type="checkbox" class="ckbox-5" (click)="checkboxChecked($event)"> <span class="i-am-authorized-to-c">I am authorized to claim this account on behalf of {{companyName}}</label>
+            </div>
+        </div>
+        <div class="col-md-3"> </div>
+    </div>
+    <div class="row padTop30 btnRow">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-back" onclick="window.history.go(-1); return false;"><span>Back</span></button>
+                </div>
+                <div class="col-md-6 text-right">
+                    <button class="btn btn-prime2" [disabled]="checked!=true" (click)="claimProfile()" ><span>Claim Profile</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row padTop30"></div>
+</div>

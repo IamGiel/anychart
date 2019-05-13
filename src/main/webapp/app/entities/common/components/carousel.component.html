@@ -1,0 +1,34 @@
+
+<div class="container-fluid">
+    <div class="majRow">
+        <ng-container *ngIf="sharedData!=null && sharedData.length>3">
+                <div class=" container scrollerContainers">
+                    <div class="left" (click)="scrollRight($event)">
+                       <img class="rotate180" src="../../../../content/images/chevron-search.svg">
+                    </div>
+    
+                    <div class="right" (click)="scrollLeft($event)" >
+                        <img src="../../../../content/images/chevron-search.svg">
+                    </div>
+                </div>
+        </ng-container>
+        <div #widgetsContent class="card collapsibleContainer overflowAuto">
+            <div class="d-flex flex-row flex-nowrap">
+                <div class="card shared-cards" *ngFor="let company of sharedData">
+                    <div >
+                        <p class="company-name" (click)="goToCompanyProfile(company)">{{company.supplierName}}</p>
+                        <ngb-carousel>
+                            <ng-container *ngIf="company.rate.length>0">
+                                <ng-template ngbSlide *ngFor="let temp of company.rate">
+                                    <p class="company-rating text-center"> {{temp.value}}<span *ngIf="temp.type=='Paydex' && temp.value!='NA'" style="font-size:22px;">/100</span></p>
+                                    <p class="company-rating-title text-center"> {{temp.type}}</p>
+                                </ng-template>
+                            </ng-container>
+                        </ngb-carousel>
+                        <p class="download-report text-center" style="display:none;">Download Report<i-download style="margin-left:10px;"></i-download></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

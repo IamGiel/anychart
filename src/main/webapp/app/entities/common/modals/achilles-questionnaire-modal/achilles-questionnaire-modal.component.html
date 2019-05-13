@@ -1,0 +1,483 @@
+
+
+
+<div  style='font-family: "Inter UI"' class="container=fluid achillies-ques">
+    <div style="padding:5px 15px 5px 35px;height:50px;" [ngClass]="{'blueb':type=='supplier','purpleb':type!='supplier'}" class="modal-header">
+        <h4 style="font-size: 125%;margin-top:5px;" class="modal-title">Achilles Questionnaire</h4>
+        <button style="cursor:pointer;background: none;border: none;outline:none;margin:0px" class="btn btn-modal-close" (click)="activeModal.dismiss(' Close clicked')">
+            <i-x-circle  class="big modalClose" style="color:white;cursor:pointer" (click)="activeModal.dismiss('Close clicked')"></i-x-circle>
+
+        </button>
+        <!-- <button class="btn btn-modal-close" (click)="activeModal.dismiss('Close clicked')">Close</button> -->
+    </div>
+    <div [ngClass]="{'supplier-achilies':type=='supplier'}" class="modal-body m-body">
+        <!-- HSSE Form -->
+        <div style="padding:0px;padding-top:15px;" class="container">
+            <div class="row sectionTitle d-flex justify-content-between">
+                <div style="opacity:1" [ngClass]="{'blue':type=='supplier',purple:type!='supplier'}" class="sectionbtn">
+                    Achilles Health and Safety, Forced Labour, Ethical Labour Questionnaire
+                </div>
+                <!--  -->
+                <div *ngIf="saveBtnHSSEForm">
+                    <div *ngIf="!savedHSSEForm" style="padding: 5px">
+
+                        <button type="button" triggers="mouseenter:mouseleave" class="achilies-modal-info" container="body" ngbPopover="Your answers are saved.  Review and gather your organisation resources and return soon to complete the Achilles Questionnaire"
+                            popoverTitle="What's Next?">
+                            <i-alert-circle class="warning"></i-alert-circle>
+                        </button>
+                        <!-- <a href="#" (click)="false" data-toggle="tooltip" data-placement="top" title="Please return soon and complete the HSSE Form questionnaire">
+                            <i-alert-circle class="warning"></i-alert-circle>
+                        </a> -->
+                    </div>
+                    <div *ngIf="completedHSSEForm" style="padding: 5px">
+                        <button type="button" class="achilies-modal-info" triggers="mouseenter:mouseleave" container="body" ngbPopover="You may return and update your company status with regards to Achilles questionnaires and we will update accordingly."
+                            popoverTitle="Congratulations!">
+                            <i-check-circle class="completed"></i-check-circle>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- [@toggler]="state" -->
+            <form novalidate (ngSubmit)="onSubmitHsse()" [formGroup]="HSSEForm" class="container" id="ngForm">
+
+
+                <!-- healthe and safety -->
+                <div class="innerHS">
+                    <div (click)="openHSform()"  class="row sectionTitle2 d-flex justify-content-between">
+                        <div class="sectionbtn2">
+                            Health & Safety Mangement & Policy
+                        </div>
+                        <button class=" sectionbtnC ml-auto p-2" type="button">
+                            <i-chevron-down *ngIf="hideHSFormCheckbox"></i-chevron-down>
+                            <i-chevron-up *ngIf="!hideHSFormCheckbox"></i-chevron-up>
+                        </button>
+                    </div>
+                    <div [hidden]="hideHSFormCheckbox">
+                        <div *ngFor="let q of questionHsse" >
+                            <ng-container *ngIf="q.key === 'HSSE1'">
+                                <div class="select">
+                                    <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                    <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                            #inputValue required
+                                    [items]="q.options"
+                                    bindValue="value"
+                                    bindLabel="value"
+                                    >
+                                    </ng-select>
+                                </div>
+
+                                <!-- {{inputValue.value}} -->
+                            </ng-container>
+
+                            <ng-container *ngIf="q.type === 'checkbox'">
+                                <div class="select">
+                                    <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                  <!--   <div *ngIf="showAlert" class="alert alert-warning">Required</div> -->
+
+                                    <ng-container *ngIf="true">
+                                        <div *ngFor="let sel of q.options; let i = index">
+                                            <div id="checkboxes">
+                                              
+                                                <label style="display:inline-block" class="pending-select">
+                                                    <input *ngIf="q.key=='HSSE2'" id="{{ sel.value }}" type="checkbox"
+                                                    value="{{ q.key }}-{{ sel.value }}" (change)="onSlctdBox(inputValue2, $event)"
+                                                    formControlName="{{q.key+'-'+i}}" #inputValue2  >
+                                                    <span class="checkmark"></span>
+                                                </label> 
+                                                <label style="display:inline-block"> {{ sel.value }} </label>
+
+
+                                                
+
+                                               
+
+
+                                                <div *ngIf="sel.value === 'OHSAS 18001' && inputValue2?.checked">
+                                                    <div class="toolTip">
+                                                        If you're currently certified to OHSAS 18001 then you will need
+                                                        to
+                                                        migrate to ISO 45001 by
+                                                        2021 as OHSAS 18001 will be withdrawn
+                                                    </div>
+                                                </div>
+                                                <div *ngIf="sel.value === 'ISO45001' && inputValue2?.checked">
+                                                    <div class="toolTip">
+                                                        If you're currently certified to ISO45001 then you will need to
+                                                        migrate
+                                                        to ISO 45001 by 2021
+                                                        as OHSAS 18001 will be withdrawn
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </ng-container>
+
+                            <div *ngIf="showQ3">
+                                <ng-container *ngIf="q.key === 'HSSE3'">
+                                    <div class="select">
+                                        <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                        <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                        #inputValue required
+                                        [items]="q.options"
+                                        bindValue="value"
+                                        bindLabel="value"
+                                        >
+                                       
+                                        </ng-select>
+                                    </div>
+                                </ng-container>
+                            </div>
+
+                            <div *ngIf="showQ4">
+                                <ng-container *ngIf="q.key === 'HSSE4'">
+                                    <div class="select">
+                                        <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                        <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                        #inputValue required
+                                        [items]="q.options"
+                                        bindValue="value"
+                                        bindLabel="value"
+                                        >
+                                        </ng-select>
+                                      
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Forced Labor section hidden-->
+              <!--   <div  class="innerHS">
+                    <div (click)="openFLform()" class="row sectionTitle2 d-flex justify-content-between">
+                        <div class="sectionbtn2">
+                            Forced Labour 
+                        </div>
+                        <button class=" sectionbtnC ml-auto p-2"  type="button">
+                            <i-chevron-down *ngIf="hideFLFormCheckbox"></i-chevron-down>
+                            <i-chevron-up *ngIf="!hideFLFormCheckbox"></i-chevron-up>
+                        </button>
+                    </div>
+
+                    <div [hidden]="hideFLFormCheckbox">
+                        <div *ngFor="let q of questionHsse" class="form-group">
+
+                       
+                            <ng-container *ngIf="q.key === 'FL1'">
+                                <div class="select">
+                                    <label for="exampleFormControlInput1">{{ q.label }}
+                                        <button triggers="mouseenter:mouseleave" type="button" class="achilies-modal-info" container="body"
+                                            ngbPopover="Your organisation may also refer to CSR under the terms 'sustainability',
+                                                        'sustainable development'
+                                                        or 'Environmental and Social Governance (ESG)'"
+                                            popoverTitle="Note: ">
+                                            <i-info class="toolTipIcon" id="ttIcon"></i-info>
+                                        </button>
+                                    </label>
+
+                                  
+                                    <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                    #inputValue required
+                                    [items]="q.options"
+                                    bindValue="value"
+                                    bindLabel="value"
+                                    >
+                                    </ng-select>
+                                </div>
+                            </ng-container>
+                            <ng-container *ngIf="q.key === 'FL7'">
+                                <div class="select">
+          
+                                    <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                    <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                    #inputValue required
+                                    [items]="q.options"
+                                    bindValue="value"
+                                    bindLabel="value"
+                                    >
+                                    </ng-select>
+                                </div>
+                            </ng-container>
+
+                            <ng-container *ngIf="q.key === 'FL9'">
+                                <div *ngIf="showFL9">
+                                    <div class="select">
+                                    
+                                        <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                        <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                        #inputValue required
+                                        [items]="q.options"
+                                        bindValue="value"
+                                        bindLabel="value"
+                                        >
+                                        </ng-select>
+                                    </div>
+                                </div>
+                            </ng-container>
+
+                            <div *ngIf="showFL2">
+                                <ng-container *ngIf="q.key === 'FL2'">
+                                    <div class="select">
+                                      
+                                        <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                        <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                        #inputValue required
+                                        [items]="q.options"
+                                        bindValue="value"
+                                        bindLabel="value"
+                                        >
+                                        </ng-select>
+                                    </div>
+                                </ng-container>
+                            </div>
+                            <div *ngIf="showFL6">
+                                <ng-container *ngIf="q.key === 'FL6'">
+                                    <div class="select">
+                                        <label for="exampleFormControlInput1">{{ q.label }}
+
+                                            <button type="button" triggers="mouseenter:mouseleave" class="achilies-modal-info" container="body"
+                                                ngbPopover="Please select the statement that best applies to your organisation"
+                                                popoverTitle="Note: ">
+                                                
+                                                <i-info class="toolTipIcon" id="ttIcon"></i-info>
+                                            </button>
+
+                                        
+                                        </label>
+                              <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important;width:100%!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                        #inputValue required
+                                        [items]="q.options"
+                                        bindValue="value"
+                                        bindLabel="value"
+                                        >
+                                        </ng-select>
+                                    </div>
+                                </ng-container>
+                            </div>
+                       
+                            <div *ngIf="showFL3">
+                      
+                                <ng-container *ngIf="q.key === 'FL3'">
+                                    <div class="select">
+                                        <label for="exampleFormControlInput1">{{ q.label }}
+
+                                            <button triggers="mouseenter:mouseleave" type="button" class="achilies-modal-info" container="body"
+                                                ngbPopover="Please select the statement that best applies to your organisation"
+                                                popoverTitle="Note: ">
+                                              
+                                                <i-info class="toolTipIcon" id="ttIcon"></i-info>
+                                            </button>
+
+                                           
+                                        </label>
+                                                                          
+ <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                        #inputValue required
+                                        [items]="q.options"
+                                        bindValue="value"
+                                        bindLabel="value"
+                                        >
+                                        </ng-select>
+                                    </div>
+                                </ng-container>
+                            </div>
+                            <div *ngIf="showFL8">
+                                <ng-container *ngIf="q.key === 'FL8'">
+                                    <div class="select">
+                                      
+                                        <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                        <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                        #inputValue required
+                                        [items]="q.options"
+                                        bindValue="value"
+                                        bindLabel="value"
+                                        >
+                                        </ng-select>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ -->
+
+                <!-- Ethical Labout Form  -->
+                <div class="innerHS">
+                    <div (click)="openETform()" class="row sectionTitle2 d-flex justify-content-between">
+                        <div class="sectionbtn2">
+                            Modern Slavery Act
+                        </div>
+                        <button class=" sectionbtnC ml-auto p-2"  type="button">
+                            <i-chevron-down *ngIf="hideETFormCheckbox"></i-chevron-down>
+                            <i-chevron-up *ngIf="!hideETFormCheckbox"></i-chevron-up>
+                        </button>
+                    </div>
+                    <div [hidden]="hideETFormCheckbox">
+                        <div *ngFor="let q of questionHsse" class="form-group">
+
+                            <!-- <ng-container *ngIf="q.key === 'Ethical1'">
+                                <div class="select">
+                                  
+                                    <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                    <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                    #inputValue required
+                                    [items]="q.options"
+                                    bindValue="value"
+                                    bindLabel="value"
+                                    >
+                                    </ng-select>
+                                </div>
+                            </ng-container>
+                            <div *ngIf="showETH2">
+                                <ng-container *ngIf="q.key === 'Ethical2'">
+                                    <div class="select">
+                                        <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                        <input type="{{ q.type }}" min="0" max="100" step="0.1" (change)="limitPercent($event)" class="form-control tempPlaceHolder"
+                                            placeholder="00.00" formControlName="{{ q.key }}" #inputValue required />
+                                    </div>
+                                </ng-container>
+                            </div> -->
+                            <ng-container *ngIf="q.key === 'Ethical4' && showETH4">
+                                <div class="select">
+                                    
+                                    <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                    <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                    #inputValue required
+                                    [items]="q.options"
+                                    bindValue="value"
+                                    bindLabel="value"
+                                    >
+                                    </ng-select>
+                                </div>
+                            </ng-container>
+                            <ng-container *ngIf="q.key === 'Ethical3'">
+                                <div class="select">
+                                    <!-- <label for="exampleFormControlInput1">{{ q.label }}
+
+                                    </label>
+
+                                    <select class="form-control tempPlaceHolder" formControlName="{{ q.key }}"
+                                        #inputValue required>
+                                        <option ngValue="Select">Select </option>
+                                        <option [ngValue]="sel.value" *ngFor="let sel of q.options">{{ sel.key ||
+                                            sel.value }}</option>
+                                    </select> -->
+                                    <label for="exampleFormControlInput1">{{ q.label }}</label>
+                                    <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                    #inputValue required
+                                    [items]="q.options"
+                                    bindValue="value"
+                                    bindLabel="value"
+                                    >
+                                    </ng-select>
+                                </div>
+                            </ng-container>
+
+                            <ng-container *ngIf="q.key === 'Ethical5' && showETH5 && showETH4">
+                                <div class="select">
+                                     <label for="exampleFormControlInput1">{{ q.label }}<sup style="color:red">*</sup></label>
+                                    <div>
+                                        
+                                        <label for="testFile"><span [ngClass]="{'blueb':type=='supplier','purpleb':type!='supplier'}" style="cursor: pointer;outline: none;border: none;padding: 0px 20px;border-radius: 100px;font-size: 14px;display:inline-block"  [ngClass]="{'blueb':type=='supplier','purpleb':type!='supplier'}" *ngIf="!checkHS">Choose File</span>  {{((HSSEForm.controls.Ethical5.value==null||HSSEForm.controls.Ethical5.value=='')? '   No file selected':' ' + HSSEForm.controls.Ethical5.value) | fileName }}</label>
+                                        <input id="testFile" hidden type="file" (change)="onFileChange($event, q.key)" accept=".xlsx, .xls, .pdf, .doc, .docx"
+                                        style="width: auto" class="form-control tempPlaceHolder" #inputValue  /> 
+                                  
+                                    </div> 
+                                 
+                
+                                </div>
+                            </ng-container>
+                            <ng-container *ngIf="q.key === 'Ethical6' && showETH6 && showETH4">
+                                 <div class="select">
+                                    <label for="exampleFormControlInput1">{{ q.label }}<sup style="color:red">*</sup></label>
+                                    <input type="date" onkeydown="return false" max="{{today| date:'yyyy-MM-dd'}}" style="width: auto" class="form-control tempPlaceHolder"
+                                        formControlName="{{ q.key }}" #inputValue required />
+
+
+                                </div> 
+                                
+                            </ng-container>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                  <!-- Right to Work  -->
+                  <div class="innerHS">
+                    <div (click)="openRTWform()" class="row sectionTitle2 d-flex justify-content-between">
+                        <div class="sectionbtn2">
+                            Right to Work
+                        </div>
+                        <button class=" sectionbtnC ml-auto p-2"  type="button">
+                            <i-chevron-down *ngIf="hideRTWFormCheckbox"></i-chevron-down>
+                            <i-chevron-up *ngIf="!hideRTWFormCheckbox"></i-chevron-up>
+                        </button>
+                    </div>
+                    <div [hidden]="hideRTWFormCheckbox">
+                        <div *ngFor="let q of questionHsse" class="form-group">
+
+                           
+                            <ng-container *ngIf="q.key === 'RTW1'">
+                                <div class="select">
+                            
+                                    <label for="exampleFormControlInput1">{{ q.label }}
+                                    <ng-template #etp>
+                                    <p>For more information on right to work within the UK see  
+                                    <a href="https://www.gov.uk/check-job-applicant-right-to-work" target="_blank"> https://www.gov.uk/check-job-applicant-right-to-work</a> </p>
+                                    </ng-template>
+                                        <button triggers="mouseenter" type="button" class="achilies-modal-info" container="body"
+                                            [ngbPopover]="etp"
+                                            popoverTitle="Note: ">
+                                            <i-info class="toolTipIcon" id="rteIcon"></i-info>
+                                        </button>
+
+                                    </label>
+                                    <ng-select *ngIf="q.options!=undefined&&q.options.length>0" style="border-left: none!important" [searchable]="false"  formControlName="{{ q.key }}"
+                                    #inputValue required
+                                    [items]="q.options"
+                                    bindValue="value"
+                                    bindLabel="value"
+                                    >
+                                    </ng-select>
+                                </div>
+                            </ng-container>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div style="float: left;margin-top: 15px;font-size: 14px;"><span style="color:red">*</span> indicates required</div>
+                <div class="form-row frmRw">
+                 <!--    <input class="saveProgChckBx" type="checkbox" [checked]="checkHS" (click)="testCheckBoxHS($event)"
+                        #boxChecked1>
+                    <p class="saveProg">Check to mark as complete </p>-->
+                    <span style="display:inline-block;margin-top:9px;">
+
+                        <label [ngClass]="{'disabled':disableCheck||hideComplete}" style="display:inline-block" class="pending-select">
+                            <input  [disabled]="disableCheck||hideComplete" type="checkbox" [checked]="checkHS" (click)="testCheckBoxHS($event)"
+                            #boxChecked1  >
+                            <span style="margin-top:0px;padding-left:2.5px;" class="checkmark"></span>
+                        </label> 
+                        <label style="display:inline-block;margin-top:1px;margin-right:25px;margin-left:-10px">Check to mark as complete</label>
+    
+                    </span>
+                   
+                    <button [disabled]="hideComplete" class="achilles-submit-button" style="cursor:pointer;outline:none;border: none;padding: 10px 35px;border-radius: 100px;font-size: 18px;width:150px;" type="submit" [ngClass]="{'blueb':type=='supplier','purpleb':type!='supplier'}">{{checkHS?'Submit':'Save'}}</buton>
+                </div>
+            </form>
+
+        </div>
+
+
+        <!-- -->
+    </div>
+</div>
+<div class="modal-footer" [ngClass]="{'blueb':type=='supplier','purpleb':type!='supplier'}" ></div>
+</div>

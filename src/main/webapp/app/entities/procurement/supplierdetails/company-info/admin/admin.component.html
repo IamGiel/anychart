@@ -1,0 +1,121 @@
+<!-- 
+<input type="text" (input)="sectionId$.next($event.target.value)"/>
+ -->
+
+<ng-select [items]="sections$ | async"
+bindLabel="id"
+autofocus
+bindValue="id"
+[searchable]="false"
+placeholder="Select Section"
+(change)="selectSection($event)">
+</ng-select>
+
+<ng-container *ngIf="validate(section)">
+  <div style="margin:15px 0px">
+    <h5>
+      <span style="font-weight:bold">Section name:</span> {{section.section_name}}
+    </h5>
+  </div>
+  <div *ngFor="let row of section.rows">
+      <div *ngFor="let q of questions">
+          <ng-container *ngIf="(row==q.row)||(row==0&&(!validate(q.row)||q.row<0))">
+            <div class="question">
+              <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div><span style="font-weight:bold">Question: </span>{{q.question}}</div>
+                        <div><span style="font-weight:bold">Row: </span>{{q.row}}</div>
+                        <div><span style="font-weight:bold">Display Order: </span>{{q.displayOrder}}</div>
+                        <div><span style="font-weight:bold">Type: </span>{{q.answerType}}</div>
+                    </div>
+                  <div class="col-lg-3">
+                      
+                    <button  type="button" class="btn btn-outline-primary" (click)="q.isCollapsed = !q.isCollapsed"
+                        [attr.aria-expanded]="q.isCollapsed" aria-controls="collapseExample">
+                      Expand
+                    </button>
+          
+                        
+                    <button *ngIf="(q.answerType=='SINGLE_SELECT'||q.answerType=='MULTIPLE_SELECT'||q.answerType=='YES_NO')&&!validate(q.options)"  type="button" class="btn btn-outline-primary" (click)="getOptions(q)"
+                    >
+                      Get Options
+                    </button>
+
+                    <button *ngIf="q.isCollapsed"  type="button" class="btn btn-outline-primary" (click)="save(q)"
+                    >
+                      Save
+                    </button>
+                  </div>
+                  
+                  </div>
+          
+                  <div style="margin-top:20px" id="collapseExample" [ngbCollapse]="!q.isCollapsed">
+                      <div >
+                        <div >
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                      <p style="font-weight:bold;">Row</p>
+                                      <input type="number" [(ngModel)]="q.row"/>
+                                    </div>
+                                  <div class="col-lg-6">
+                                      <p style="font-weight:bold;">Display Order</p>
+                                      <input (change)="change()" type="number" [(ngModel)]="q.displayOrder"/>
+                                    
+                                  </div>
+                                  
+                                  </div>
+                                <div style="margin-top:15px;" class="row">
+                                    <div class="col-lg-6">
+                                      <p style="font-weight:bold;">Metadata</p>
+                                        <textarea [(ngModel)]="q.metadata" style="outline:none;border: 2px solid #e7e7e7;width:100%;background:transparent" *ngIf="validate(q.metadata)" rows="30" >
+                                            
+                                          </textarea>
+                                    </div>
+                                  <div class="col-lg-6">
+                                      <p style="font-weight:bold;">Options</p>
+                                    <span *ngIf="validate(q.options)" style="position: absolute;right: 0px;top: 5px;color: #6c4bd8;
+                                    font-weight: bold;cursor: pointer;">
+                                      <button *ngIf="validate(q.first)&&!q.first" (click)="pagination(q,false)" 
+                                      style="background: none;border: none;color: #6e4bd8;font-weight: bold;cursor: pointer;text-decoration: underline;
+                                      outline: none;">Previous</button>
+                                      <button *ngIf="validate(q.last)&&!q.last" (click)="pagination(q,true)" style="background: none;border: none;color: #6e4bd8;font-weight: bold;cursor: pointer;text-decoration: underline;
+                                      outline: none;">Next</button>
+                                    </span>
+                                      <div style="border: 1px solid #80808052;
+                                      padding: 10px;
+                                      margin-top: 15px;" *ngFor="let o of q.options">
+                                        <div>
+                                            <span style="font-weight:bold">id:</span>
+                                          {{o.id}}
+                                        </div>
+                                        <div>
+                                            <span style="font-weight:bold">value: </span>
+                                            {{o.optionValue}}
+                                          </div>
+                                          <div>
+                                              <span style="font-weight:bold"> metadata:</span>
+                                              {{o.metadata}}
+                                            </div>
+                                      </div>
+                                    
+                                  </div>
+                                  
+                                  </div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            
+          
+          </ng-container>
+          </div>
+  </div>
+
+</ng-container>
+
+
+

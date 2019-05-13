@@ -1,0 +1,141 @@
+
+
+
+<div class="container pReq ">
+        
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 welcome text-center title">
+                    <h5>Step 1 of 3</h5>
+                    <h1 style="margin-bottom:24px!important;"><b>Enter Account Info</b></h1>
+<!--                     <p>This will be the primary info associated with <b>{{ companyName }}</b>
+                        account going forward. Make sure to input an email account you check regularly.</p> -->
+<!--                     <p>The pre-filled information below is based on the primary contact information provided to us. If your name and email are different, please edit the form and enter correct details.</p>
+ -->                     <div class="row"></div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="alert alert-danger" *ngIf="err">
+                            <strong>Registration Failed!</strong> <span *ngIf="!publicDomain">{{errMsg}}.</span>
+                            <span *ngIf="publicDomain">Please use your work email to register. If you have any queries please send an email to <a href="mailto:ask@beroe-inc.com" target="_top" class="alert-link">ask@beroe-inc.com</a>. </span>
+                            <div class="text-center" *ngIf="userExist && !publicDomain" style="margin-top:5px;"> <strong style="vertical-align: bottom;">Proceed To</strong> <span (click)="gotoLogin()" class="badge badge-info" style="padding:5px 20px;cursor: pointer;"> Login</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+            </div>
+        
+            <!-- ROW for input fields here -->
+            <form class="form" id="acountInfoForm" [formGroup]="acountInfoForm" (ngSubmit)="createUser()">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- empty  -->
+                </div>
+                <div class="col-md-4 formDiv">
+                    <!-- ================================= -->
+                  
+                        <div class="input-wrap">
+                            <input type="text" class="form-control" id="name" placeholder="Enter name"  formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                            <label for='username' class="accountLbl">Full Name</label>
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">Your Name is required</div>
+                            </div>
+                        </div>
+        
+                        <div class="input-wrap">
+                            <input type="text" class="form-control" id="title" placeholder="Enter title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                            <label for='username' class="accountLbl">Title</label>
+                            <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                                <div *ngIf="f.title.errors.required">Your Title is required</div>
+                            </div>
+                        </div>
+                        <div class="input-wrap" ngbDropdown style="position:relative">
+                            <input hidden style="cursor:pointer;background-color:transparent" [(ngModel)]="country" ngbDropdownToggle required readonly type="text" class="form-control" id="country" placeholder="Select Country" formControlName="country" [ngClass]="{ 'is-invalid': submitted && f.country.errors }">
+                            <ng-select
+                                *ngIf="countries!=undefined&&countries.length>0"
+                                class="custom sup-select"
+                                style="padding-bottom:0px;"
+                                id="country"
+                                name="country"
+                                [items]="countries"
+                                bindLabel="countryName"
+                                bindValue="countryName"
+                                [ngModelOptions]="{standalone: true}"
+                                [(ngModel)]="country"
+                                formControlName="country"
+                                placeholder="Select Country"
+                            >
+                            </ng-select>
+                            <label for='country' class="accountLbl">Country</label>
+                            <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                                <div *ngIf="f.country.errors.required">Your Country is required</div>
+                            </div>
+                          <!--   <div style=" cursor:pointer;width:100%;max-height:500%;overflow-y: auto" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <div style="cursor:pointer;width:100%;min-width:100%;max-width:100%" *ngFor="let country of countries" (click)="selectCountry(country.countryName)" class="dropdown-item">{{country.countryName}}</div>   
+                            </div>
+                           
+                            <i-chevron-down style="position: absolute;right: 8px;top: 12px;width: 11px;" ></i-chevron-down>
+                         -->
+                        </div>
+<!-- 
+                        <div style="position:relative"  class="form-group input-wrap">
+                    
+                                <label class="country-label" for="country">Country</label>
+                      
+                                    <div ngbDropdown>
+                                    <input style="cursor:pointer;" placeholder="Select Country" ngbDropdownToggle required readonly type="country" class="form-control login-input"  id="country" placeholder=""  name="country">
+                                   <div style=" cursor:pointer;width:100%" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                            <div style="cursor:pointer;width:100%;min-width:100%;max-width:100%" *ngFor="let country of countries" (click)="selectCountry(country.countryName)" class="dropdown-item">{{country.countryName}}</div>   
+                                    </div>
+                                    </div>
+                                    <i-chevron-down style="position: absolute;right: 8px;top: 42px;width: 11px;" ></i-chevron-down>
+                              
+                        </div> -->
+        
+                        <div class="input-wrap">
+                            <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                            <label for='username' class="accountLbl">Work Email</label>
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Your Email is required</div>
+                                <div *ngIf="f.email.errors.email">Invalid Email</div>
+                            </div>
+                        </div>
+        
+                        <div class="input-wrap">
+                            <input type="password" class="form-control" id="InputPassword" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                            <label for='username' class="accountLbl">Password</label>
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Your Password is required</div>
+                                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                            </div>
+                        </div>
+                        
+             
+                    <!-- ================================= -->
+                </div>
+                <div class="col-md-4">
+                    <!-- empty -->
+                </div>
+            </div>
+        
+            <br>
+        
+            <div class="row padTop30 btnRow">
+                <div class="col-md-4 offset-md-2 col-12">
+                    <button class="btn btn-back" onclick="window.history.go(-1); return false;">
+                        <span>Back</span>
+                    </button>
+                </div>
+                <div class="col-md-4 text-right col-12">
+                    <!-- <button class="btn btn-prime2" routerLink='/supplier/payment-info'><span>NEXT</span></button> -->
+                    <button class="btn btn-prime2" form="acountInfoForm" type="submit" >
+                        <span>NEXT</span>
+                    </button>
+                </div>
+            </div>
+         </form>
+        
+            <div class="row padTop30"></div>
+        </div>

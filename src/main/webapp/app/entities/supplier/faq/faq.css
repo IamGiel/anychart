@@ -1,0 +1,59 @@
+h1 {
+    font-family: 'Inter UI';
+    text-align: center;
+    color: #181818;
+    opacity: 0.8;
+}
+.faqs-basicqn-head-wrp {
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+.inline-block {
+    display: inline-block;
+}
+.faqs-specific-head {
+    letter-spacing: 0.5px;
+    font-size: 1.125rem;
+    font-family: 'Inter UI';
+    font-weight: bold;
+    color: #181818;
+    opacity: 0.8;
+}
+.beroe-grey-extendor {
+    width: 40%;
+    margin-left: 12px;
+    margin-bottom: 4px;
+    height: 2px;
+    background: linear-gradient(90deg, #929292, transparent);
+}
+.faqs-content {
+    position: relative;
+    left: 23px;
+    cursor: pointer;
+}
+.faqs-content:hover {
+    text-decoration: underline;
+    text-decoration-color: #19c8cc;
+}
+.faqs-content .faqs-qsn {
+    line-height: 1.25;
+    font-size: 16px;
+    font-family: 'Inter UI';
+    letter-spacing: 0.4px;
+    color: #19c8cc;
+    width: calc(100% - 430px);
+    font-weight: bold;
+}
+.faqs-content-ans {
+    padding-left: 30px;
+    position: relative;
+}
+.faqs-content-ans .faqs-ans {
+    line-height: 1.25;
+    font-size: 14px;
+    font-family: 'Inter UI';
+    letter-spacing: 0.4px;
+    color: #464646;
+    width: calc(100% - 430px);
+    font-weight: bold;
+}

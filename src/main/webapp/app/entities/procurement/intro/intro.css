@@ -1,0 +1,206 @@
+/* ==========================================================================
+Welcome Page styles
+========================================================================== */
+.pReq h5 {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.pReq h1 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+}
+
+.pReq .title p {
+    padding: 10px 40px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 18px;
+}
+
+.display-4 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.card {
+    height: 100% !important;
+    padding: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.addReqMon {
+    height: 24px;
+    width: 100%;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 
+button {
+    background-image: linear-gradient(45deg, #544ad8 0%, #804cd9 100%);
+    height: 48px;
+    width: 172px;
+    border-radius: 24px;
+    color: white;
+    margin-bottom: 2%;
+    margin-top: 6%;
+} */
+
+.pReq .btn-prime1 {
+    margin-bottom: 44px;
+    margin-top: 30px;
+    height: 48px;
+    width: 172px;
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #804cd9 0%, #804cd9 51%, #544ad8 100%);
+    transition: 0.5s;
+    /* background: linear-gradient(134.72deg, #544AD8 0%, #544AD8 51%, #804CD9 100%); */
+    /* background: linear-gradient(134.72deg, #19c8cc 0%, #19c8cc 51%, #0c91dd 100%); */
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+
+    background-size: 200% auto;
+    text-transform: uppercase;
+}
+
+.pReq .btn-prime1:hover {
+    background-position: right center;
+}
+
+/* svg feather icon syles */
+
+.big {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #804cd9;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.svg {
+    color: #6b4cd9;
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.svgContainer {
+    text-align: center;
+    line-height: 38px;
+    height: 56px;
+    background: #f0edfb;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    width: 56px;
+    margin-left: 42%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    padding-top: 8px;
+}
+
+.lightGreyFonts,
+.noteForUser {
+    color: grey;
+    margin-bottom: 40px;
+}
+
+.noteForUser {
+    /* height: 100%; */
+    width: 100%;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.faq-Link {
+    color: #804cd9;
+    font-weight: 100;
+}
+
+.smallFont {
+    font-size: 14px;
+}
+.terms-line {
+    width: 100%;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+.terms-line a {
+    color: #804cd9;
+}
+.terms-line a:hover {
+    text-decoration: underline;
+}
+/* media queries  */
+@media (max-width: 768px) {
+    .pReq .title h1 {
+        font-size: 20px;
+    }
+
+    .col-md-4 {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 3%;
+    }
+
+    .pReq .title p {
+        font-size: 14px;
+        padding: 0px;
+    }
+
+    .pReq .request h3,
+    .pReq .pend-box h3 {
+        font-size: 16px;
+    }
+
+    .btnRow {
+        text-align: center;
+    }
+
+    .pReq .btn-prime2,
+    .pReq .btn-back {
+        display: block;
+        width: 100%;
+    }
+
+    .pReq .desc p {
+        font-size: 13px;
+    }
+}

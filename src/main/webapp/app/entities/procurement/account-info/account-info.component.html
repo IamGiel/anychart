@@ -1,0 +1,104 @@
+<div class="container-fluid ">
+    <!-- welcome row -->
+    <div class="row titleContainer">
+        <div class="col-md-2 welcome">
+            <!-- empty -->
+        </div>
+        <div class="col-md-8 welcome text-center">
+            <div class="steps">Step 2 of 4</div>
+            <h1 class="display-4"><b>Enter Account Info</b></h1>
+            <p class="noteForUser">This will be the primary info associated with <b>{{ companyName }}</b>
+                account going forward. Make sure to input an email account you check regularly.</p>
+
+        </div>
+        <div class="col-md-2 welcome">
+            <!-- empty -->
+
+        </div>
+    </div>
+
+
+    <!-- ROW for input fields here -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- empty  -->
+        </div>
+        <div class="col-md-4 formDiv">
+            <!-- ================================= -->
+            <form>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter title">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+            </form>
+            <!-- ================================= -->
+        </div>
+        <div class="col-md-4 formDiv" *ngIf="completedForm">
+            <!-- ================================= -->
+            <form>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter title">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+            </form>
+            <!-- ================================= -->
+        </div>
+        <div class="col-md-4">
+            <!-- empty -->
+        </div>
+    </div>
+
+
+    <br>
+
+
+    <!-- button next -->
+    <div class="row btnContainer">
+        <div class="col-md-6 welcome text-center">
+            <!--  back button -->
+            <input class="backBtn " action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />
+        </div>
+        <div class="col-md-6 welcome text-center">
+            <!--  next button -->
+            <button id="nextCleared" type="button" routerLink='/procurement/upload-supplier'>
+                next </button>
+        </div>
+    </div>
+</div>
+
+<!-- test -->

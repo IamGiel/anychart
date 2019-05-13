@@ -1,0 +1,39 @@
+<div class="form-group input-wrap">
+    <label *ngIf="title!=undefined" class="suppliername-label" for="suppliername">{{title}}</label>
+    <ng-select 
+    style="font-size:16px!important"
+    *ngIf="selector!=undefined && filterConstants[0]!=undefined && ngSelected[filterConstants[0]]!=undefined"
+        class="category-manager-select"
+        [items]="filters[filterConstants[0]]"
+        [multiple]="true"
+        bindLabel="selector"
+        [closeOnSelect]="false"
+        [(ngModel)]="ngSelected[filterConstants[0]]"
+        bindValue="selector"
+        name="filterConstants[0]"
+        (add)="onAdd($event,filterConstants[0],selector)"
+        (remove)="onRemove($event,filterConstants[0],selector)"
+        (clear)="onClear(filterConstants[0])"
+        [searchable]="false"
+        placeholder="Select"
+        [virtualScroll]="true"
+        [loading]="searching"
+        (scrollToEnd)="onScrollToEnd(filterConstants[0])"
+        >
+        <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+               
+                <div class="ng-value" >
+                    <span title="{{ngSelected[filterConstants[0]]}}" class="ng-value-label">{{items.length}} {{filterConstants[0]}} selected</span>
+                </div>
+            </ng-template>
+        
+        <ng-template ng-header-tmp>
+                <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange(filterConstants[0])" [(ngModel)]="filters.search[filterConstants[0]]"     type="country" class="form-control login-input"  id="suppliersSearch" placeholder="Search"   name="suppliersSearch">
+
+        </ng-template>
+        <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+            <input *ngIf="filters[filterConstants[0]][index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters[filterConstants[0]][index].checked"/> {{item.name}}
+        </ng-template>
+    </ng-select>
+    
+</div> 

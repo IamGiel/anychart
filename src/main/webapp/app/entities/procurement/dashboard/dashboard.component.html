@@ -1,0 +1,291 @@
+<div class="container" *ngIf="topRow!=undefined && topRow!=null && topRow.length>0">
+    <div class="row topRow" >
+        <div class="col-md-4"><span class="recent-share"> Recently Shared</span></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-right">
+            <ng-container *ngIf="isCollapsed">
+                <p class="hideShowBtn" (click)="isCollapsed = !isCollapsed">Show <i-chevron-down> </p>
+            </ng-container>
+            <ng-container *ngIf="!isCollapsed">
+                <p class="hideShowBtn" (click)="isCollapsed = !isCollapsed" >Hide <i-chevron-up></i-chevron-up></p>
+            </ng-container>
+        </div>
+    </div>
+    <jhi-custom-carousel [ngbCollapse]="isCollapsed"></jhi-custom-carousel>
+ </div>
+<div class="container dash-container">
+        <div style="border-bottom:none;margin:0px;" class="row divtitle">
+                <div class="col-md-3 headleft">
+                </div>
+                <div class="col-md-6 col-12">
+                  
+                    
+                </div>
+                
+                <div class="col-md-3 col-12 ">
+                    
+                      <button style="width:190px; margin:0px auto 10px auto;display: block"  *ngIf="isCatManager" class="btn buttoncsv" (click)="goToCatDashboard()" >MANAGE SUPPLIERS <i-arrow-right-circle></button>
+                        <button style="width:190px;margin:0px auto 10px auto" class="btn buttoncsv below-md" routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+
+                 </div>
+            </div>
+  <div style="margin: 0px" class="row divtitle">
+      <div class="col-md-3 headleft">
+          <span >Suppliers</span>
+      </div>
+      <div class="col-md-6 col-12">
+
+          <ul style="height:45px" class="nav nav-tab justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" rel="tab1" (click)="tabClicked('Shared')">
+                  <span [ngClass]="activeTab=='Shared' ? 'active' : 'inactive'">Shared</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" rel="tab1" (click)="tabClicked('Pending')">
+                  <span [ngClass]="activeTab=='Pending' ? 'active' : 'inactive'">Pending</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" rel="tab1" (click)="tabClicked('Declined')">
+                  <span [ngClass]="activeTab=='Declined' ? 'active' : 'inactive'">Declined</span></a>
+              </li>
+            </ul>            
+          
+      </div>
+      
+      <div class="col-md-3 col-12 ">
+          
+            <button style="width:190px;margin:0px auto" class="btn buttoncsv md-only" routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+       </div>
+  </div>
+  <div class="row" style="height: 40px"> </div>
+  <div>
+      <div *ngIf="activeTab=='Shared'">
+
+        <div class="row">
+          <div class="col-md-6">
+              <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                  <span class="searchIcon">
+                      <i-search class="featherPagFil2">
+                  </span>
+                  <span style="margin-left:16px;">
+                    <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Suppliers" (keydown.enter)="searchData($event,'shared')" (keyup)="showOldDate($event)"/>
+                  </span>
+              </div>
+          </div>
+          <div class="col-md-6 text-right">
+            <jhi-my-pagination *ngIf="total>0"
+            (goPage)="goToPage($event)"
+            (goNext)="onNext()"
+            (goPrev)="onPrev()"
+            [pagesToShow]="3"
+            [page]="page"
+            [perPage]="limit"
+            [count]="total"></jhi-my-pagination>
+          </div>
+        </div><br/>
+        <div class="row">
+            <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
+              <table class="table table-hover table-striped tex-center" style="width:99%;">
+                <thead>
+                    <tr class="text-center">
+                        <th class="text-left">Company Name</th>
+                        <th>DUNS</th>
+                        <th >D&B SER RATING <i-info class="infoFeather" ngbPopover="{{serPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>
+                       <!-- <th >D&B TREND RATING <i-info class="infoFeather" ngbPopover="{{noPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>
+                        <th>D&B PAYDEX <i-info class="infoFeather" ngbPopover="{{paydexPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>-->
+                        <th>CSR HUB <i-info class="infoFeather" ngbPopover="{{csrPop}}" placement="bottom" triggers="mouseenter:mouseleave"></i-info></th>
+                        <th>DOW JONES AME <i-info class="infoFeather" ngbPopover="{{dowPop}}" placement="bottom" triggers="mouseenter:mouseleave"></i-info></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of list; let i = index " class="text-center" >
+                        <td class="text-left"><span class="comp-name" (click)="goToCompanyProfile(item)">{{item.supplierName}}</span></td>
+                        <td >{{item.providerKey.DUNSNUMBER}}</td>
+                        <td >
+                            <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['Supplier Evaluation Risk']!=null" [ngIfElse]="SERElse">
+                                {{item.packageResponse.DNB['Supplier Evaluation Risk'].SER.riskScore}}
+                            </ng-template>
+                            <ng-template #SERElse>NA</ng-template>
+                        </td>
+                        <td >
+                            <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.CSRHUB!=null && item.packageResponse.CSRHUB.csrHubRating!=null && item.packageResponse.CSRHUB.csrHubRating.csrHubRating!=null&& item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating!=null" [ngIfElse]="CSRHUBElse">
+                                    {{item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating}}
+                                </ng-template>
+                                <ng-template #CSRHUBElse>NA</ng-template>
+                            </td>
+                            <td >
+                                <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DOW_JONES!=null && item.packageResponse.DOW_JONES['Dow Jones Basic']!=null && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones!=undefined && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones!=null && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones.length>0" [ngIfElse]="dowElse">
+                                   {{getDowJonesCount(item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones)}}
+                                </ng-template>
+                                <ng-template #dowElse>0</ng-template>
+                            </td>
+                       <!-- <td >
+                            <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['D&B Rating Trend']!=null" [ngIfElse]="TrendElse">
+                                {{item.packageResponse.DNB['D&B Rating Trend'].TrendRating.trendRating}}
+                            </ng-template>
+                            <ng-template #TrendElse>NA</ng-template>
+                        </td>
+                        <td >
+                            <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['Payment & Paydex Details']!=null" [ngIfElse]="PaydexElse">
+                                {{item.packageResponse.DNB['Payment & Paydex Details'].paydex.paydexScore}}
+                            </ng-template>
+                            <ng-template #PaydexElse>NA</ng-template>
+                        </td>-->
+
+                    </tr>
+                  </tbody>
+               </table>
+            </div>
+        </div>
+      </div>
+      <div *ngIf="activeTab=='Pending'">
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                      <span class="searchIcon">
+                          <i-search class="featherPagFil2">
+                      </span>
+                      <span style="margin-left:16px;">
+                        <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Suppliers" (keydown.enter)="searchData($event,'Pending')" (keyup)="showOldDate($event)"/>
+                      </span>
+                  </div>
+              </div>
+              <div class="col-md-6 text-right">
+                <jhi-my-pagination *ngIf="total>0"
+                (goPage)="goToPage($event)"
+                (goNext)="onNext()"
+                (goPrev)="onPrev()"
+                [pagesToShow]="3"
+                [page]="page"
+                [perPage]="limit"
+                [count]="total"></jhi-my-pagination>
+              </div>
+          </div><br/>
+          <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
+              <table class="table table-hover table-striped" style="width:99%;">
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>DUNS</th>
+                        <th>REQUEST SENT</th>
+                        <th class="text-center">LAST REQUEST</th>
+                        <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of list; let i = index ">
+                        <td>{{item.supplierName}}</td>
+                        <td>{{item.providerKey.DUNSNUMBER}}</td>
+                        <td>{{item.requestedDate | date:'dd-MMM-yyyy'}}</td>
+                        <td class="text-center"><span *ngIf="item.lastRequestedDate!==null">{{item.lastRequestedDate | niceDateFormatPipe}}</span><span *ngIf="item.lastRequestedDate==null">--</span></td>
+                        <td ><span (click)="sendReminder(item);" class="send-reminder" *ngIf="item.reminder!='sent' && item.reminder!='not-sent'">Send Reminder <i-send></i-send></span><span *ngIf="item.reminder=='sent' " style="color:#0c91dd;">Reminder Sent</span><span *ngIf="item.reminder=='not-sent'" style="color:red;">Not Sent</span></td>
+                      </tr>
+                  </tbody>
+               </table>
+            </div>
+      </div>
+      <div *ngIf="activeTab=='Declined'">
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                      <span class="searchIcon">
+                          <i-search class="featherPagFil2">
+                      </span>
+                      <span style="margin-left:16px;">
+                        <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Suppliers" (keydown.enter)="searchData($event,'Declined')" (keyup)="showOldDate($event)"/>
+                      </span>
+                  </div>
+              </div>
+              <div class="col-md-6 text-right">
+                <jhi-my-pagination *ngIf="total>0"
+                (goPage)="goToPage($event)"
+                (goNext)="onNext()"
+                (goPrev)="onPrev()"
+                [pagesToShow]="3"
+                [page]="page"
+                [perPage]="limit"
+                [count]="total"></jhi-my-pagination>
+              </div>
+          </div><br/>
+          <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
+              <table class="table table-hover table-striped" style="width:99%;">
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>DATE DECLINED</th>
+                        <th>REASON</th>
+                       </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of list; let i = index ">
+                          <td>{{item.supplierName}}</td>
+                          <td>{{item.declinedDate | date:'dd-MMM-yyyy'}}</td>
+                          <td>{{item.declineMessage}}</td>
+                      </tr>
+                  </tbody>
+               </table>
+            </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+            <div class="row pend" *ngIf="!loadingData && activeTab=='Pending' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0" ><p>There are no pending requests.</p></div>
+            <div class="row pend" *ngIf="!loadingData && activeTab=='Declined' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0"><p>No supplier has declined.</p></div>
+        <div >
+            <div class="divbody" id="tab1" *ngIf="!loadingData && activeTab=='Shared' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0">          
+
+                <div class="text-center"><i-upload class="feather"></i-upload> </div>
+                <div class="nosupdata">
+                    <span > Upload Supplier List </span>
+                  </div>
+                  <div class="description">
+                    <span > It does not look like any of your data requests have been completed yet. Check the Pending tab to send Reminders, or upload a new list of suppliers.</span>
+                  </div>
+                  <div class="text-center" style="margin-top: 40px;padding-bottom: 50px">
+                    <button class="btn buttoncsv" routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+                  </div>  
+                  <div class="text-center" style="margin-top: 40px;margin-bottom: 30px;display: none;">
+                      <span class="wantaddinformation">Want additional information?</span> <a><span class="faq" (click)="gotoFaq()">Check out the FAQ.</span> </a>
+                  </div>                      
+            </div>
+            <div id="tab2" *ngIf="!loadingData && activeTab=='Pending' && (list==undefined || list.length==null || list.length<=0) && searchKeyword.length<=0" class="divbody" >          
+                <div class="text-center"><i-upload class="feather"></i-upload></div>
+                <div class="nosupdata">
+                    <span > Upload Supplier List </span>
+                  </div>
+                  <div class="description">
+                    <span > You can send requests for supplier data once you have upload a list of your suppliers to the dashboard.</span>
+                  </div>
+                  <div class="text-center" style="margin-top: 40px;padding-bottom: 50px">
+                    <button class="btn buttoncsv" routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+                  </div>  
+                  <div class="text-center" style="margin-top: 40px;margin-bottom: 30px;display: none;">
+                      <span class="wantaddinformation">Want additional information?</span> <a><span class="faq" (click)="gotoFaq()">Check out the FAQ.</span> </a>
+                  </div>      
+            </div>
+            <div id="tab3" *ngIf="!loadingData && activeTab=='Declined' && (list==undefined || list.length==null || list.length<=0) && searchKeyword.length<=0" class="divbody">          
+                <div class="text-center"> <i-upload class="feather"></i-upload> </div>
+                <div class="nosupdata">
+                    <span > Upload Supplier List </span>
+                  </div>
+                  <div class="description">
+                    <span > If a supplier denies your data request it will appear here.</span>
+                  </div>
+                  <div class="text-center" style="margin-top: 40px;padding-bottom: 50px">
+                    <button class="btn buttoncsv"  routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+                  </div>         
+                  <div class="text-center" style="margin-top: 40px;margin-bottom: 30px;display: none;">
+                      <span  class="wantaddinformation">Want additional information?</span> <a><span class="faq" (click)="gotoFaq()" >Check out the FAQ.</span> </a>
+                  </div>        
+            </div>
+            
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+   </div>
+   <div class="row" *ngIf="searchKeyword.length>0 && (list==undefined || (list!=undefined && list==null) || list.length<=0)">
+       <p class="no-result"><b>No results found.</b> Please adjust your filter criteria. <span class="clear-filter" (click)='clearSearch()'>Clear Filters <i-x-square></i-x-square></span></p>
+    </div>
+
+</div>

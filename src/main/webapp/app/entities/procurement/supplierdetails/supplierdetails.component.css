@@ -1,0 +1,1172 @@
+.parentContainer {
+    width: 100%;
+    padding: 0px !important;
+}
+
+.maincontainer {
+    text-align: center;
+}
+
+.supName {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+
+.supDuns {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.datareqpending {
+    padding-right: 100px;
+    margin-top: 40px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.dnbparamvalb {
+    font-size: 20px;
+}
+
+.d-b-rating {
+    height: auto;
+    width: auto;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 24px;
+    font-weight: 900;
+}
+.nav-link {
+    text-transform: capitalize;
+}
+
+a {
+    font-size: 16px;
+    font-family: 'Inter UI';
+    font-weight: bold;
+    line-height: 20px;
+    color: #6b4cd9;
+}
+a:hover {
+    color: #6b4cd9 !important;
+}
+a.active {
+    color: #6b4cd9;
+}
+
+.procurement-nav span.active {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #6b4cd9;
+}
+
+.supplier-color .top-level {
+    color: #14b4d2;
+}
+
+.supplier-color {
+    color: #14b4d2 !important;
+}
+
+.supplier-color a.active {
+    color: #14b4d2;
+}
+.supplier-color a:hover {
+    color: #14b4d2 !important;
+}
+.supplier-color.procurement-nav span.active {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #14b4d2 !important;
+}
+
+.divbody1 {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-bottom: 60px;
+    width: 100%;
+}
+.divbody2 {
+    /*   margin-top: 56px; */
+    margin-bottom: 40px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.divseperation {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: 40px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.feather {
+    height: 36px;
+    width: 36px;
+    color: #bbbbbb;
+    margin-top: 60px;
+}
+
+.featherinfo {
+    height: 14px;
+    width: 14px;
+    color: #181818;
+    margin: 0px;
+    position: relative;
+    top: -3px;
+    left: 3px;
+}
+
+.datarequest {
+    margin-top: 40px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+}
+
+.description {
+    margin-top: 16px;
+    margin-left: 90px;
+    margin-right: 90px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.buttonreminder {
+    width: 186px;
+    border-radius: 24px;
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-align: center;
+}
+
+#collapseExample {
+    height: 100%;
+    /* margin-bottom: -50px; */
+    padding-bottom: 50px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* height: 240px; */
+    /* border: 1px solid #aaa; */
+    overflow: hidden;
+}
+
+.financialValBox {
+    border-radius: 4px;
+    background-color: #f0edfb;
+    padding: 8px 12px 8px 12px;
+    display: inline-block;
+}
+.creditValBox {
+    border-radius: 4px;
+    background-color: #eafaf3;
+    padding: 8px 12px 8px 12px;
+    display: inline-block;
+}
+.serValBox {
+    border-radius: 4px;
+    background-color: #e7f7fa;
+    padding: 8px 12px 8px 12px;
+    display: inline-block;
+}
+.paydexValBox {
+    border-radius: 4px;
+    background-color: #fff8ec;
+    padding: 8px 12px 8px 12px;
+    display: inline-block;
+}
+.csrValBox {
+    border-radius: 4px;
+    background-color: #ffedef;
+    padding: 8px 12px 8px 12px;
+    display: inline-block;
+}
+.financialValue {
+    height: auto;
+    width: auto;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    display: inline-block;
+}
+.creditValue {
+    height: auto;
+    width: auto;
+    color: #31d490;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+}
+.serValue {
+    height: auto;
+    width: auto;
+    color: #14b4d2;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    display: inline-block;
+}
+.paydexValue {
+    height: auto;
+    width: auto;
+    color: #ffbe45;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+}
+.paydexValue2 {
+    height: auto;
+    width: auto;
+    opacity: 0.3;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+}
+.csrValue {
+    height: auto;
+    width: auto;
+    color: #ff4f61;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+}
+.dataBox {
+    height: 204px;
+    border: 1px solid rgba(24, 24, 24, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding-right: 32px;
+    padding-left: 32px;
+    text-align: center;
+}
+.dataBoxlbl {
+    height: 20px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 48px;
+}
+.dataBoxFooter {
+    height: 20px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    padding-top: 12px;
+}
+.aboutEcovadis {
+    height: 96px;
+    width: 300px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    line-height: 24px;
+}
+.aboutRapidRatings {
+    height: 96px;
+    width: 300px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    line-height: 24px;
+}
+.download {
+    height: 24px;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+    margin-top: 48px;
+    display: inline-block;
+}
+.ccaLbl {
+    height: 20px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+.ccaBox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border-bottom: 4px solid #e7e7e7;
+}
+.ccaBoxItem {
+    width: 73px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+    padding-top: 15px;
+    position: absolute;
+    bottom: 4px;
+}
+.ccaBoxLimited {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ff4f61;
+}
+.ccaBoxItemLimited {
+    /* height: 24px;	
+    color: #FFFFFF;	
+    font-family: "Inter UI";	
+    font-size: 20px;	
+    font-weight: 900;	
+    line-height: 24px;	
+    text-align: center; */
+}
+.ccaBoxFair {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ffbe45;
+}
+.ccaBoxItemFair {
+    /* height: 24px;	
+    color: #FFFFFF;	
+    font-family: "Inter UI";	
+    font-size: 20px;	
+    font-weight: 900;	
+    line-height: 24px;	
+    text-align: center; */
+}
+
+.ccaBoxGood .ccaBoxItem {
+    position: relative;
+    font-size: 20px;
+    opacity: 1;
+    color: #fff;
+    font-weight: 900;
+}
+.ccaBoxGood .ccaBoxItem {
+    color: #fff;
+}
+
+.ccaBoxGood {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #31d490;
+    color: #fff !important;
+}
+.ccaGood {
+    color: #31d490;
+}
+.ccaBoxHigh {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #14b4d2;
+    color: #fff !important;
+}
+.ccaHigh {
+    color: #14b4d2;
+}
+.ccaBoxHigh .ccaBoxItem {
+    position: relative;
+    font-size: 20px;
+    opacity: 1;
+    color: #fff;
+    font-weight: 900;
+}
+.ccaBoxHigh .ccaBoxItem {
+    color: #fff;
+}
+
+.ccaBoxFair {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ffbe45;
+    color: #fff !important;
+}
+.ccaFair {
+    color: #ffbe45;
+}
+.ccaBoxFair .ccaBoxItem {
+    position: relative;
+    font-size: 20px;
+    opacity: 1;
+    color: #fff;
+    font-weight: 900;
+}
+.ccaBoxFair .ccaBoxItem {
+    color: #fff;
+}
+.ccaBoxLow {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ff4f61;
+    color: #fff !important;
+}
+
+.ccaLow {
+    color: #ff4f61;
+}
+.ccaBoxLow .ccaBoxItem {
+    position: relative;
+    font-size: 20px;
+    opacity: 1;
+    color: #fff;
+    font-weight: 900;
+}
+.ccaBoxLow .ccaBoxItem {
+    color: #fff;
+}
+
+.ccaBoxItemGood {
+    height: 24px;
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+}
+.ccaBoxHigh {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #14b4d2;
+}
+.ccaBoxItemHigh {
+    /* height: 24px;	
+    color: #FFFFFF;	
+    font-family: "Inter UI";	
+    font-size: 20px;	
+    font-weight: 900;	
+    line-height: 24px;	
+    text-align: center; */
+}
+@media (max-width: 768px) {
+    .description {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .buttonreminder {
+        border-radius: 20px;
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .nav-link {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+    .supName {
+        font-size: 18px;
+    }
+    .supDuns {
+        font-size: 8px;
+    }
+    .dnbparamval {
+        padding-top: 20px;
+        padding-bottom: 16px;
+        opacity: 0.9;
+        color: #181818;
+        font-family: 'Inter UI';
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+    .dnbparamvalb {
+        font-size: 12px;
+    }
+
+    .dnbparam {
+        padding-bottom: 20px;
+        opacity: 0.5;
+        color: #181818;
+        font-family: 'Inter UI';
+        font-size: 8px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 12px;
+    }
+    .divbody {
+        margin-top: 24px;
+        margin-bottom: 30px;
+    }
+    a {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+    }
+    .companydetailsLableright {
+        /*  margin-left: 40px; */
+    }
+
+    ul {
+        margin-top: 40px !important;
+    }
+
+    ul > li > a {
+        font-size: 16px !important;
+        font-weight: bold;
+    }
+
+    .breadcrumb > li > a {
+        font-size: 12px !important;
+    }
+    .container-fluid {
+        padding: 0px !important;
+    }
+
+    .innerBox {
+        padding: 40px !important;
+    }
+}
+
+.companydetailsLable {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+
+    margin-bottom: 4px;
+}
+
+.companydetailsLableleft {
+}
+
+.companydetailsVal {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 40px;
+}
+
+ul.breadcrumb {
+    color: #181818;
+    background-color: white;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1px;
+    padding-left: 0px;
+}
+ul.breadcrumb li {
+    display: inline;
+}
+ul.breadcrumb li + li:before {
+    padding: 8px 8px 8px 10px;
+    color: black;
+    content: '>\00a0';
+    font-size: 20px;
+}
+
+.ac:hover {
+    color: #181818 !important;
+}
+
+.brdBottom {
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.top-level {
+    height: 20px;
+    width: 82px;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+ul.breadcrumb li + li:before {
+    height: 20px;
+    width: 20px;
+    color: #d2d4d5b5 !important;
+    position: relative;
+    top: 2px;
+    left: 3px;
+}
+
+ul.breadcrumb li > a {
+    font-weight: 100 !important;
+}
+
+ul.nav > li > a {
+    font-weight: 100 !important;
+}
+.current-level {
+    height: 20px;
+    width: 55px;
+    opacity: 0.3;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+.no-margin {
+    margin: 0px !important;
+}
+
+.duns {
+    height: 20px;
+    width: 142px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 8px;
+}
+
+.company-name {
+    width: 280px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
+}
+
+.dnbparamval {
+    height: 44px;
+    width: 100%;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.dnbparamsdiv {
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    text-align: center;
+    position: relative;
+}
+
+.d-b-ser-rating {
+    height: 20px;
+    width: 100%;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+.dnbparam {
+    margin-top: 16px;
+    height: 20px;
+    width: 100%;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.info-container {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+.provided-by {
+    height: 20px;
+    width: 90px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.basic-information {
+    margin-top: 40px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+.key-personnel {
+    margin-top: 40px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+.edit-bg {
+    background-color: #f8f8f8;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.innerBox {
+    border-radius: 4px;
+}
+
+form input {
+    border: 2px solid #e7e7e7;
+    background-color: #f8f8f8;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+}
+
+.summary-container {
+    margin-top: 24px;
+    border-top: 1px solid #e7e7e7;
+    position: relative;
+}
+
+.summary {
+    margin-top: 41px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+}
+
+.summary-text {
+    margin-top: 16px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.supplier-color .social-links {
+    margin-top: 16px;
+    opacity: 0.8;
+    color: #14b4d2 !important;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: 100 !important;
+}
+
+.supplier-color .social-links a {
+    color: #14b4d2 !important;
+    font-family: 'Inter UI' !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    font-weight: 100 !important;
+
+    font-weight: 100 !important;
+}
+
+.social-links {
+    margin-top: 16px;
+    opacity: 0.8;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: 100 !important;
+}
+
+.social-links a {
+    color: #6b4cd9;
+    font-family: 'Inter UI' !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    font-weight: 100 !important;
+
+    font-weight: 100 !important;
+}
+
+.more-info {
+    margin-right: 24px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+    top: -2px;
+}
+
+@media (max-width: 575px) {
+    .xs-float-left {
+        float: none !important;
+        margin-top: 15px;
+        display: block;
+    }
+}
+
+.more-info.not-available {
+    margin-right: 0px !important;
+}
+
+.rating-headings {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 36px;
+}
+
+#financial-data {
+    margin-bottom: 40px;
+}
+/* 
+#environmental-container,
+#ethical-container,
+#labor-container {
+    border-top: 1px solid rgba(24, 24, 24, 0.10196078431372549);
+} */
+
+#environmental-container .badge-container,
+#labor-container .badge-container {
+    min-height: 244px;
+    display: block;
+    border: 1px solid rgba(24, 24, 24, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+    position: relative;
+}
+#labor-container .badge-container {
+    min-height: 244px;
+}
+#environmental-container .badge-container {
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+#environmental-container .overall-rating,
+#labor-container .overall-rating {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#environmental-container .csr-logo,
+#labor-container .csr-logo {
+    height: 40px;
+    width: 190px;
+}
+
+#environmental-container .more-less {
+    width: 100%;
+
+    padding: 6px;
+    height: 32px;
+    text-align: right;
+    border: 1px solid rgba(24, 24, 24, 0.1);
+    border-top: 1px solid transparent;
+
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+#environmental-container .less {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+#environmental-container .badge-container2 {
+    min-height: 244px;
+    border: 1px solid rgba(24, 24, 24, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding-bottom: 24px;
+}
+.lg-only {
+    display: none;
+}
+@media (min-width: 992px) {
+    .lg-only {
+        display: flex !important;
+    }
+}
+
+.appearences {
+    opacity: 0.9;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    margin-left: 34px;
+}
+
+.dow-jones-content {
+    min-height: 160px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(24, 24, 24, 0.05);
+}
+
+.dow-jones-sec {
+    padding: 24px 24px 0px 24px;
+}
+
+.dow-jones-sec .h {
+    margin-bottom: 0px;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+}
+
+.dow-jones-sec .expiration {
+    margin-bottom: 0px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+#ethical-container {
+    margin-bottom: 48px;
+}
+
+.launch {
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.u-absoluteCenter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.u-flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.u-offscreen {
+    position: absolute;
+    left: -999em;
+}
+.demo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radial-title {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+}
+
+.sidebar-card {
+    min-height: 236px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(24, 24, 24, 0.05);
+}
+
+.i-sup-details {
+    width: 20px;
+    margin-left: 8px;
+    opacity: 0.5;
+}
+
+.chevron-container {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.na {
+    margin-top: 14px;
+    display: inline-block;
+}
+
+.beroe-purple-extendor {
+    width: 40%;
+    margin-left: 12px;
+    margin-bottom: 8px;
+    height: 2px;
+    background: linear-gradient(90deg, #6b4cd98a, transparent);
+}
+
+.beroe-blue-extendor {
+    width: 40%;
+    margin-left: 12px;
+    margin-bottom: 8px;
+    height: 2px;
+    background: linear-gradient(90deg, #14b4d28a, transparent) !important;
+}
+
+@media (max-width: 1315px) {
+    .left-col {
+        width: 50% !important;
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+    }
+    .right-col {
+        width: 50% !important;
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .move-left-md {
+        padding-left: 20px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .md-top-60 {
+        margin-top: 60px !important;
+    }
+}
+
+.launch:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.3;
+    color: #181818;
+}

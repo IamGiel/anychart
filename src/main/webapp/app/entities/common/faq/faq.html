@@ -1,0 +1,29 @@
+<div class="container pp">
+    <div class="row text-center">
+       <h1>Supplier Compliance Program FAQs</h1>
+    </div>
+    <div class="row"><br/><br/></div>
+</div>
+<div class="container pcontainer">
+    <div class="panel-group"  *ngFor="let faqQue of faqList">
+       <div class="card" *ngFor="let faq of faqQue.list" (click)="collapse(faq)">
+            <div class="card-header">
+              <h5 class="card-title">
+                <a class="accordion-toggle" 
+                [attr.aria-expanded]="!isCollapsed">{{faq.question}}</a>
+              </h5>
+             
+            </div>
+            <div class="action-icon" ><i-plus-square *ngIf="!faq.isCollapsed"></i-plus-square><i-minus-square *ngIf="faq.isCollapsed"></i-minus-square></div>
+            <div id="collapseExample1" [ngbCollapse]="!faq.isCollapsed">
+              <div class="card-body">
+                <p [innerHtml]="faq.answer"></p>
+              </div>
+            </div>
+          </div>
+     </div>
+    
+</div>
+   
+
+

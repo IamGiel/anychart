@@ -1,0 +1,30 @@
+/*.logoImg{
+    background:url('../../../../content/images/beroe_icon.png') no-repeat center center;
+    height: 75px;
+    width: 200px;
+    background-size: contain;
+}
+.pp h1{color:white;margin-top: 10px;}
+.pcontainer{background: white;min-height:600px;}
+.search-box{    height: 47px;
+    background: whitesmoke;
+    width: 40%;
+    position: absolute;
+    margin-top: -26px;
+    margin-left: 16%;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    color: #5d52a8;
+    
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.13);
+    border: 1px solid #e8e8e8;
+   
+    padding-left: 15px;
+    padding-right: 5%;
+   
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+}
+.search-box:focus{outline: none !important;}*/

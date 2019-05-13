@@ -1,0 +1,758 @@
+<div class="container-fluid maincontainer">
+  <div>
+        <ul [class.supplier-color]="!readOnly"  class="breadcrumb no-padding no-margin ">
+            <li><a style="font-weight:900!important" class="top-level" (click)="goToDashboard()">DASHBOARD</a></li>
+            
+            <li><a style="font-weight:900!important" class=" current-level">PROFILE</a></li>
+        </ul>
+    </div> 
+
+    <div class="row" style="margin-top: 36px"> </div>
+
+    <div class="row">
+
+        <div class="col-12 col-lg-3 text-left">
+           
+            <div *ngIf="companyInfo!=undefined&&companyInfo.business_name!==undefined && companyInfo.business_name!==null"  class="company-name ">{{companyInfo.business_name}}</div>
+            <div *ngIf="dunsRequest!==undefined" class="duns">DUNS # {{ dunsRequest}}</div>
+
+            <!-- Company Info Tab -->
+
+            <div *ngIf="viewMode == 'tab1'" style="position:relative;" [class.supplier-color]="!readOnly"  class="summary-container ">
+                <span *ngIf="!readOnly && !editSummary && companyInfo!==undefined && companyInfo!==null" title="Edit"  (click)="toggleEdit('summary')" style="border-top-right-radius:0px!important;cursor:pointer; font-size: 10px;display: inline-block;position: absolute;right: 0px;padding: 12px 13px 13px 15px;background-color: #E7E7E7;border-radius: 0 4px 0 4px;top: 0px;">
+                    <i-edit style="display:inline-block;width:12.8px; height:12.8px;"></i-edit>
+                </span>
+                <form *ngIf="companyInfo!==undefined && companyInfo!==null" #summaryForm="ngForm">  
+                    
+                    <span title="Submit" *ngIf="!readOnly &&editSummary&&summaryForm.valid" (click)="toggleEdit('summary')" style="border-top-right-radius:0px!important;color:#fff;background-color: #31D490;cursor:pointer; font-size: 10px;display: inline-block;position: absolute;right: 0px;padding: 12px 13px 13px 15px;border-radius: 0 4px 0 4px;top: 0px;">
+                        <i-check  style="display:inline-block;width:12.8px; height:12.8px;"></i-check>
+                    </span>                      
+                    <h3 class="summary">
+                        Summary
+                    </h3>
+                    <p *ngIf="!editSummary"  class="summary-text">
+                        {{companyInfo.summary}}
+                    </p>
+                    <textarea placeholder="Add summary here" style="border:none;margin-top:16px;background:transparent;width:100%;border-bottom:2px solid #E7E7E7" *ngIf="editSummary"  name="summary" [(ngModel)]="companyInfo.summary" > </textarea>
+                    
+                    <p *ngIf="!editSummary  && (companyInfo.website!=undefined && companyInfo.website!=null) && companyInfo.website.length>0"  style="margin-top:40px;" class="social-links">
+                      <a href="{{companyInfo.website}}" target="_blank"><i-airplay style="position:relative;top:-1px;width:17px;margin-right:32px"></i-airplay>Visit our Website </a>
+                    </p>
+                    <p (click)="toggleEdit('summary')" *ngIf="!readOnly && !editSummary && (companyInfo.website==undefined || companyInfo.website==null || (companyInfo.website!==undefined && companyInfo.website.length==0))  "  style="margin-top:40px;" class="social-links">
+                        <i-airplay style="position:relative;top:-1px;width:17px;margin-right:32px"></i-airplay>Update Website
+                     </p>
+                     <i-airplay *ngIf="editSummary" style="color: #14B4D2;position:relative;top:-1px;width:17px;margin-right:27px"></i-airplay> <input style="width: calc(100% - 48px);background:transparent;margin-top:40px;" *ngIf="editSummary"  name="website" [(ngModel)]="companyInfo.website" type="text" pattern="^http:\/\/|(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$">
+                     <div style="font-size:12px;color:red" *ngIf="editSummary&&!checkUrl(companyInfo.website)&& validate(companyInfo.website) && companyInfo.website.length>0">
+                            Please enter a valid URL
+                     </div> 
+                    <p  *ngIf="!editSummary &&  (companyInfo.facebook!=undefined&&companyInfo.facebook!=null)&&companyInfo.facebook.length>0"  class="social-links">
+                            <fa-icon style="font-size: 16px;margin-right: 32px;margin-left: 1px;" [icon]="['fab', 'facebook-square']"></fa-icon><a href="{{companyInfo.facebook}}" target="_blank">Find us on Facebook </a>
+                  
+                        </p>
+                     
+                            <p (click)="toggleEdit('summary')"  *ngIf="!readOnly && !editSummary && (companyInfo.facebook==undefined||companyInfo.facebook==null||(companyInfo.facebook!==undefined && companyInfo.facebook.length==0))"  class="social-links">
+                                <fa-icon style="font-size: 16px;margin-right: 32px;margin-left: 1px;" [icon]="['fab', 'facebook-square']"></fa-icon>Update Facebook
+                            </p>
+                            <fa-icon  *ngIf="editSummary" style=" color: #14B4D2!important;font-size: 16px;margin-right: 32px;margin-left: 1px;" [icon]="['fab', 'facebook-square']"></fa-icon><input  #facebook="ngModel" style="width:calc(100% - 47px);margin-top:16px;background:transparent" *ngIf="editSummary"  name="facebook" [(ngModel)]="companyInfo.facebook" pattern="^http:\/\/|(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$" type="text">
+                            <div style="font-size:12px;color:red" *ngIf="editSummary&&!checkUrl(companyInfo.facebook)&& validate(companyInfo.facebook) && companyInfo.facebook.length>0">
+                            Please enter a valid URL
+                            </div> 
+    
+                      
+                  
+                    <p *ngIf="!editSummary  && (companyInfo.linkedIn!=undefined && companyInfo.linkedIn!=null)&&companyInfo.linkedIn.length>0"   class="social-links">
+                            <a href="{{companyInfo.linkedIn}}" target="_blank"> <fa-icon style="font-size: 16px;margin-right: 32px;margin-left: 1px;" [icon]="['fab', 'linkedin']"></fa-icon>Connect on Linkedin </a>
+                    </p>
+                    <p (click)="toggleEdit('summary')" *ngIf="!readOnly && !editSummary && (companyInfo.linkedIn==undefined || companyInfo.linkedIn==null||(companyInfo.linkedIn!==undefined && companyInfo.linkedIn.length==0))"  class="social-links">
+                            <fa-icon style="font-size: 16px;margin-right: 32px;margin-left: 1px;" [icon]="['fab', 'linkedin']"></fa-icon>Update Linkedin
+                    </p>
+                    <fa-icon  *ngIf="editSummary" style=" color: #14B4D2!important;font-size: 16px;margin-right: 32px;margin-left: 1px;" [icon]="['fab', 'linkedin']"></fa-icon><input style="width:calc(100% - 47px);margin-top:16px;background:transparent" *ngIf="editSummary"  name="linkedin" [(ngModel)]="companyInfo.linkedIn" type="text" pattern="^http:\/\/|(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$">
+                    <div style="font-size:12px;color:red" *ngIf="editSummary&&!checkUrl(companyInfo.linkedIn)&& validate(companyInfo.linkedIn) && companyInfo.linkedIn.length>0">
+                            Please enter a valid URL
+                    </div> 
+                </form>    
+         </div>
+         <div *ngIf="viewMode == 'tab2'">
+                <div  style="padding:40px;min-height:160px;margin-top:40px;border-radius: 4px;	background-color: #F8F8F8;display: block">
+                            <p *ngIf="validate(ratings.dnbSerRating.riskScore)" style='opacity: 0.9;color: #181818;font-family: "Inter UI";
+                                font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;'>
+                                {{ratings.dnbSerRating.riskScore}}
+                            </p>
+                            <p *ngIf="!validate(ratings.dnbSerRating.riskScore)"  style='opacity: 0.9;color: #181818;font-family: "Inter UI";
+                                font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;'>
+                                NA
+                            </p>
+                            
+                            
+                            <p style='margin-top:16px;opacity: 0.5;color: #181818;font-family: "Inter UI";
+                                font-size: 12px;font-weight: 800;letter-spacing: 1px;line-height: 20px;
+                                text-align: center;'>
+                                {{ratings.dnbSerRating.title}}
+                            </p>
+                </div>
+                <div *ngIf="!isSupplier" style="padding:40px;min-height:160px;margin-top:20px;border-radius: 4px;	background-color: #F8F8F8;display: block">
+                            <p style='opacity: 0.9;color: #181818;font-family: "Inter UI";
+                                font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;'>
+                                {{ratings.dowJones.totalCount}}
+                            </p>
+                            
+                            <p style='margin-top:16px;opacity: 0.5;color: #181818;font-family: "Inter UI";
+                                font-size: 12px;font-weight: 800;letter-spacing: 1px;line-height: 20px;
+                                text-align: center;'>
+                                Dow Jones AME Appearances
+                            </p>
+                </div>
+                <div *ngIf="notBase()"  style="margin-top:20px;padding-top:36px;padding-bottom: 16px;margin-bottom:15px;" class="sidebar-card">
+                        <div style="width:36%;margin:0 auto;">
+                                <circle-progress
+                                 *ngIf="validate(ratings.csrHubRating.averageRating)"
+                                    [responsive]="true"
+                                    [percent]="ratings.csrHubRating.averageRating"
+                                    [title]="ratings.csrHubRating.averageRating"
+                                    [outerStrokeWidth]="10"
+                                    [innerStrokeWidth]="10"
+                                    [space]="-10"
+                                    [outerStrokeColor]="getRadialColor(ratings.csrHubRating.averageRating)"
+                                    [innerStrokeColor]="'#1818182a'"
+                                    [animation]="true"
+                                    [animationDuration]="300"
+                                    [showSubtitle]="false"
+                                    [radius]="60"
+                                    [showUnits]="false"
+                                    [titleFontSize]="40" 
+                                    >
+                                </circle-progress>
+                             
+                        </div>
+                        <p *ngIf="!validate(ratings.csrHubRating.averageRating)" style='opacity: 0.9;color: #181818;font-family: "Inter UI";
+                            font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;'>
+                                NA
+                        </p>
+
+                        <p style='opacity: 0.5;	color: #181818;	font-family: "Inter UI";	font-size: 12px;	font-weight: 800;	letter-spacing: 1px;	line-height: 20px;	text-align: center;margin-top:12px;' class="overall-rating">    
+                            OVERALL RATING      
+                        <p>
+
+                        <img style="width:76px;display:block;margin:0 auto;margin-top:32px;" src="/content/images/csr.png">
+
+                </div>
+        </div>
+        </div>
+        <div class="col-12 col-lg-8 offset-lg-1 text-left">
+            <div class="container-fluid">
+            <div style="margin:0px" class="row brdBottom">
+                <div class="col-12">
+                    
+                </div>
+                <ul class=" md-top-60 nav nav-tab procurement-nav" [class.supplier-color]='!readOnly'>
+                   <li style="color: rgb(206, 206, 206);letter-spacing:0.5px" class="nav-item">
+                        <a style="padding:0px;margin-right:40px;padding-bottom:17px;" class="nav-link" [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode ='tab1'">
+                            <span style="padding-bottom:17px;font-weight:900"  [class.active]="viewMode == 'tab1'">Company Info</span></a>
+                    </li> 
+                     <!-- <li style="color: rgb(206, 206, 206);letter-spacing:0.5px" class="nav-item">
+                            <span style="padding:0px;margin-right:40px;padding-bottom:17px;" class="nav-link"  rel="tab1">
+                                <span style="line-height:20px;font-size:16px;padding-bottom:17px;font-weight:900"  [class.active]="viewMode == 'tab1'">Company Info</span></span>
+                    </li>  -->
+                    <li style="color: rgb(206, 206, 206);letter-spacing:0.5px" class="nav-item">
+                        <a style="padding:0px;margin-right:40px;padding-bottom:17px;" class="nav-link" [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode ='tab2'">
+                            <span style="padding-bottom:17px;font-weight:900;" (click)="timeThisCollapsingDiv()" [class.active]="viewMode == 'tab2'">Supplier Data</span></a>
+                    </li>
+                </ul>
+            </div>
+<!-- 
+            <div *ngIf="viewMode == 'tab1' && companyInfo!=undefined" class="basic-information">
+                Basic Information
+            </div> -->
+
+            <div *ngIf="!loading" style="margin-left:0px;margin-right:0px;" class="row" [class.divbody2]="viewMode == 'tab2'" rel="tab2" [class.divbody1]="viewMode == 'tab1'" rel="tab1">
+
+            
+             
+               <!--  <div style="width:100%"> -->
+
+                    <!-- Company Info Tab -->
+                    <div style="width:100%" *ngIf="viewMode == 'tab1'&&validate(complianceRequestId)">
+                        <jhi-company-info [requestId]="complianceRequestId"></jhi-company-info>
+                    </div>
+
+                    <!-- Supplier Data Tab -->
+                    <div style="padding:0px;" id="tab2" *ngIf="viewMode=='tab2'" class="container-fluid border-0">
+                        <!-- <div style='font-weight:900;margin-top:24px;height: 20px;	width: 154px;	opacity: 0.3;	color: #181818;	font-family: "Inter UI";	font-size: 12px;	letter-spacing: 1px;	line-height: 20px;'>
+                                UPDATED: 1 WEEK AGO
+                        </div> -->
+                        <div id="financial-data">
+                            <div style="margin-top:40px" class="rating-headings">
+                               <span>Financial Data</span> 
+                                <div style="display:inline-block; width: calc(100% - 235px);" class=" beroe-purple-extendor" [class.beroe-blue-extendor]="!readOnly" ></div>
+                            </div>
+    
+                            <div *ngIf="notBase()" id="dbRating" style="margin: 0 !important">
+                                <div (click)="toggleCollapse('dnbRating')" class="row align-items-center" style="cursor:pointer;margin-top:48px;padding-bottom:0px;">
+                                    <div  class="col-12">
+                                        <div class="row">
+                                            <div class="col-4 left-col"  style="padding-top: 8px;">
+                                                <span style="display:inline-block" class="d-b-rating">
+                                                    {{ratings.dnbRating.title}}
+                                                </span>
+                                                <ng-template #popContent>
+                                                    <p>D&B Credit Rating consists of two parts:</p>
+                                                            <p>·         Rating Classification: A rating of 5A means a business has a worth of $50+ million. HH, on the other end of the scale, indicates that a business is worth up to $4,999.
+                                                                    This part of the rating is based on a company’s net worth, when available, or issued capital (the value of the company’s shares).</p>
+                                                
+                                                                <p>
+                                                                        ·         Composite Credit Appraisal: This measures the risk of business failure, from 1, indicating “minimal,” to 4, “significant.”
+                                                                </p>
+                                                                
+                                                </ng-template>
+
+                                                <span  class="xs-float-left" >
+                                                    <i-info   [ngbPopover]='popContent' 
+                                                    class="featherinfo i-sup-details"  triggers="mouseenter:mouseleave"
+                                                    placement="right"></i-info>
+                                                    
+                                                </span>
+                                            </div>
+                                            <div class="col-8 right-col" style="padding:0px;">
+                                                                                        
+                                                <span *ngIf="(ratings.dnbRating.compositeCreditApprisial==undefined || ratings.dnbRating.compositeCreditApprisial==null ) && (ratings.dnbRating.options==undefined || ratings.dnbRating.financialStrength==undefined || ratings.dnbRating.financialStrength==null) && (ratings.dnbRating.otherClassification==undefined)" class="more-info not-available na">Not Available</span>                                        
+                                                <span *ngIf="ratings.dnbRating.financialStrength" class="financialValBox financialValue" title="Financial Strength">{{ratings.dnbRating.financialStrength}}</span>
+                                                <span [style.background-color]="getCcaBoxColor(ratings.dnbRating.compositeCreditApprisial)" title="Composite Credit Appraisal" [style.color]="getCcaColor(ratings.dnbRating.compositeCreditApprisial)" *ngIf="ratings.dnbRating.compositeCreditApprisial" class="creditValBox creditValue">{{ratings.dnbRating.compositeCreditApprisial}}</span>
+                                                <span class="chevron-container">
+                                                    <span *ngIf="!ratings.dnbRating.collapse && ((ratings.dnbRating.compositeCreditApprisial!=undefined && ratings.dnbRating.compositeCreditApprisial!=null) || (ratings.dnbRating.options!=undefined&&ratings.dnbRating.financialStrength!=undefined && ratings.dnbRating.financialStrength!=null) || ratings.dnbRating.otherClassification)" style=" position:relative;top:-2px;margin-top:8px;color:grey; font-family: 'Inter UI'; font-size: 16px; font-weight: 500; margin-left: 16px;">
+                                                        <span>
+                                                            <i-chevron-up>
+                                                        </span>
+                                                    </span>
+                                                    <span *ngIf="ratings.dnbRating.collapse && ((ratings.dnbRating.compositeCreditApprisial!=undefined && ratings.dnbRating.compositeCreditApprisial!=null) || ((ratings.dnbRating.options!=undefined&&ratings.dnbRating.financialStrength!=undefined && ratings.dnbRating.financialStrength!=null) || (ratings.dnbRating.otherClassification)))" style="position:relative;top:-2px;margin-top:8px;color:grey; font-family: 'Inter UI'; font-size: 16px; font-weight: 500;  margin-left: 16px;">
+                                                        <span>
+                                                            <i-chevron-down>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+    
+                                <div *ngIf="(ratings.dnbRating.options!=undefined||ratings.dnbRating.otherClassification)&&ratings.dnbRating.financialStrength!=undefined && ratings.dnbRating.financialStrength!=null" style="padding:0px 15px" class="row" [ngbCollapse]="ratings.dnbRating.collapse">
+                                    <div class="col-12">
+                                        <div style="    box-shadow: 0 2px 10px 0 rgba(24, 24, 24, 0.19);margin-top: 20px;padding-bottom: 20px;" class="row">
+                                            <div  *ngIf="(ratings.dnbRating.options!=undefined||ratings.dnbRating.otherClassification)&&ratings.dnbRating.financialStrength!=undefined && ratings.dnbRating.financialStrength!=null" style="margin-top:20px" class="col-lg-6">
+                                                <div  class="dataBox">
+                                                    
+                                                    <label class="dataBoxlbl">Financial Strength</label> 
+                                                    <i-info style="position: relative;top: -1px;" *ngIf="ratings.dnbRating.otherClassification" class="featherinfo" ngbPopover="{{ratings.dnbRating.description}}" triggers="mouseenter:mouseleave"></i-info>
+                                                    <div  [ngClass]="{'custom-slider':!ratings.dnbRating.otherClassification,'grey-slider':ratings.dnbRating.otherClassification}">
+                                                            <ng5-slider [(value)]="dnbScaleValue" [options]="ratings.dnbRating.options" style="margin-bottom: 4rem;"></ng5-slider>       
+                                                    </div>
+    
+                                                </div>
+                                            </div>
+                                            <div *ngIf="(ratings.dnbRating.compositeCreditApprisial!=undefined && ratings.dnbRating.compositeCreditApprisial!=null)&& validate(ratings.dnbRating.ratingTrendCodeDetails)" style="margin-top:20px"  class="col-lg-6">
+                                             
+                                                <div class="dataBox" style="padding-left:15px !important;">
+                                                    <label class="dataBoxlbl">Composite Credit Appraisal</label>
+                                                    <div class="row">
+                                                        <div   *ngIf="ratings.dnbRating.ratingTrendCodeDetails.limited!=undefined && ratings.dnbRating.ratingTrendCodeDetails.limited!=null" class="col-3">
+                                                            <div [ngClass]="{'ccaBox' : ratings.dnbRating.compositeCreditApprisial !=ratings.dnbRating.ratingTrendCodeDetails.limited, 'ccaBoxLow' : ratings.dnbRating.compositeCreditApprisial ==ratings.dnbRating.ratingTrendCodeDetails.limited }">
+                                                                <span class="ccaBoxItem">{{ratings.dnbRating.ratingTrendCodeDetails.limited}}</span>
+                                                            </div>
+                                                            <label [ngClass]="{'ccaLow' : ratings.dnbRating.compositeCreditApprisial == ratings.dnbRating.ratingTrendCodeDetails.limited }" class="ccaLbl">Limited</label>
+                                                        </div>
+                                                        <div *ngIf="ratings.dnbRating.ratingTrendCodeDetails.fair!=undefined && ratings.dnbRating.ratingTrendCodeDetails.fair!=null" class="col-3">
+                                                            <div [ngClass]="{'ccaBox' : ratings.dnbRating.compositeCreditApprisial !=ratings.dnbRating.ratingTrendCodeDetails.fair, 'ccaBoxFair' : ratings.dnbRating.compositeCreditApprisial == ratings.dnbRating.ratingTrendCodeDetails.fair }">
+                                                                <span class="ccaBoxItem">{{ratings.dnbRating.ratingTrendCodeDetails.fair}}</span>
+                                                            </div>
+                                                            <label [ngClass]="{'ccaFair' : ratings.dnbRating.compositeCreditApprisial == ratings.dnbRating.ratingTrendCodeDetails.fair }" class="ccaLbl" >Fair</label>
+                                                        </div>
+                                                        <div *ngIf="ratings.dnbRating.ratingTrendCodeDetails.good!=undefined && ratings.dnbRating.ratingTrendCodeDetails.good!=null" class="col-3">
+                                                            <div [ngClass]="{'ccaBox' : ratings.dnbRating.compositeCreditApprisial !=ratings.dnbRating.ratingTrendCodeDetails.good, 'ccaBoxGood' : ratings.dnbRating.compositeCreditApprisial == ratings.dnbRating.ratingTrendCodeDetails.good }">
+                                                                <span class="ccaBoxItem">{{ratings.dnbRating.ratingTrendCodeDetails.good}}</span>
+                                                            </div>
+                                                            <label [ngClass]="{'ccaGood' : ratings.dnbRating.compositeCreditApprisial == ratings.dnbRating.ratingTrendCodeDetails.good }" class="ccaLbl">Good</label>
+                                                        </div>
+                                                        <div *ngIf="ratings.dnbRating.ratingTrendCodeDetails.high!=undefined && ratings.dnbRating.ratingTrendCodeDetails.high!=null" class="col-3">
+                                                            <div [ngClass]="{'ccaBox' : ratings.dnbRating.compositeCreditApprisial != ratings.dnbRating.ratingTrendCodeDetails.high, 'ccaBoxHigh' : ratings.dnbRating.compositeCreditApprisial == ratings.dnbRating.ratingTrendCodeDetails.high }">
+                                                                <span  [ngClass]="{'ccaHigh' : ratings.dnbRating.compositeCreditApprisial == ratings.dnbRating.ratingTrendCodeDetails.high }" class="ccaBoxItem">{{ratings.dnbRating.ratingTrendCodeDetails.high}}</span>
+                                                            </div>
+                                                            <label class="ccaLbl">High</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div id="dbSerRating" style="margin: 0 !important">
+                                <div (click)="toggleCollapse('dnbSerRating')" class="row align-items-center" style="cursor:pointer;padding-bottom:0px;margin-top:40px">
+                                    <div class="col-12">
+
+                                        <div class="row">
+                                            <div style="padding-top:8px" class="col-4 left-col">
+                                                <span class="d-b-rating">
+                                                    {{ratings.dnbSerRating.title}} 
+                                                </span>
+                                                <span  class="xs-float-left" >
+                                                    <i-info class="featherinfo i-sup-details"   ngbPopover="The Supplier Evaluation Risk Rating (SER) is risk metric that helps supply management professionals evaluate the long term risk of doing business with a supplier. The SER score is based on a scale of 1-9, with 1 representing the lowest level of risk and 9 implying the highest level of risk. For suppliers whose headquarters are located outside the United States and Canada, the SER predicts the likelihood that a supplier will cease operations or reorganize without paying all creditors in full, or obtain relief from creditors under state/federal law over the next 12 months.The SER provides a consistent risk ranking across the globe." triggers="mouseenter:mouseleave"
+                                                    placement="right" ></i-info>
+                                                    
+                                                </span> 
+                                            </div>
+                                            <div style="padding:0px;" class="col-8 right-col">
+                                                    <span *ngIf="ratings.dnbSerRating.riskScore==undefined || ratings.dnbSerRating.riskScore==null" class="more-info  not-available na">Not Available</span> 
+                                                    <span *ngIf="ratings.dnbSerRating.riskScore!=undefined && ratings.dnbSerRating.riskScore!=null"  class="serValBox serValue" [style.color]="getSerRatingColor(ratings.dnbSerRating.riskScore)"  [style.background-color]="getSerBoxRatingColor(ratings.dnbSerRating.riskScore)">{{ratings.dnbSerRating.riskScore}}</span>
+                                                    <span class="chevron-container">
+                                                        <span *ngIf="!ratings.dnbSerRating.collapse && ratings.dnbSerRating.riskScore!=undefined && ratings.dnbSerRating.riskScore!=null" 
+                                                        style="position:relative;top:-2px;margin-top:8px;color:grey; font-family: 'Inter UI'; font-size: 16px; font-weight: 500;margin-left:16px; ">
+                                                            <span >
+                                                                <i-chevron-up>
+                                                            </span>
+                                                        </span>
+                                                        <span *ngIf="ratings.dnbSerRating.collapse && ratings.dnbSerRating.riskScore!=undefined && ratings.dnbSerRating.riskScore!=null" style="position:relative;top:-2px;margin-top:8px;color:grey; font-family: 'Inter UI'; font-size: 16px; font-weight: 500;margin-left:16px;">
+                                                            <span >
+                                                                <i-chevron-down>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+    
+                                <div style="padding: 0px 15px;height: auto;overflow-y: visible;overflow: visible;" *ngIf="ratings.dnbSerRating.riskScore!=undefined && ratings.dnbSerRating.riskScore!=null"   class="row" id="collapseExample" [ngbCollapse]="ratings.dnbSerRating.collapse">
+                                    <div class="col-12">
+                                        <div *ngIf="ratings.dnbSerRating.riskScore!=undefined && ratings.dnbSerRating.riskScore!=null"  style="    box-shadow: 0 2px 10px 0 rgba(24, 24, 24, 0.19);margin-top: 20px;padding-bottom: 20px;" class="row">
+                                            <div class="col-lg-6"  style="margin-top : 20px;">
+                                                <div class="dataBox">
+                                                    <label style="visibility:hidden" class="dataBoxlbl">Up to 3 months</label>
+                                                    <div  *ngIf="ratings.dnbSerRating.riskScore!=undefined && ratings.dnbSerRating.riskScore!=null"   
+                                                        [ngClass]=" ratings.dnbSerRating.sliderColors" >
+                                                        <ng5-slider [(value)]="ratings.dnbSerRating.riskScore" [options]="ratings.dnbSerRating.options"></ng5-slider>    
+                                                   </div>
+                                                    <p><span class="float-left dataBoxFooter">Low Risk</span> <span class="float-right dataBoxFooter">High
+                                                            Risk</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div *ngIf="notBase()" id="dbPaydex" style="margin: 0 !important;">
+                                <div (click)="toggleCollapse('dnbPaydex')" class="row align-items-center" style="cursor:pointer;margin-top:40px;padding-bottom:0px;">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div style="padding-top:8px" class="col-4 left-col">
+                                                <span class="d-b-rating">
+                                                    {{ratings.dnbPaydex.title}}
+                                                </span>
+                                                <i-info class="featherinfo i-sup-details"   ngbPopover="PAYDEX is Dun & Bradstreet's unique dollar-weighted numerical indicator of how a firm paid its bills over the
+                                                past year, based on trade experiences reported to D&B by various vendors. The D&B PAYDEX Score ranges
+                                                from 1 to 100, with higher scores indicating better payment performance. The tables below demonstrate how
+                                                the score correlates to payment behavior." triggers="mouseenter:mouseleave"
+                                                placement="right" ></i-info>
+
+                                            </div>
+                                            <div style="padding:0px" class="col-8 right-col">
+                                                <span class="xs-float-left">
+                                                    <span *ngIf="ratings.dnbPaydex.paydexScore==undefined||ratings.dnbPaydex.paydexScore==null"  class="more-info  not-available na">Not Available</span>
+                                                    <span  *ngIf="ratings.dnbPaydex.paydexScore!==undefined&&ratings.dnbPaydex.paydexScore!==null">
+                                                        <span style="display: inline-block;" class="paydexValBox paydexValue" [style.color]="getPaydexRatingColor(ratings.dnbPaydex.paydexScore)" [style.background-color]="getPaydexBoxRatingColor(ratings.dnbPaydex.paydexScore)">{{ratings.dnbPaydex.paydexScore}}</span> <span class="paydexValue2">/{{ratings.dnbPaydex.denominator}}</span> 
+                                                    </span>
+                                                </span>
+                                                <span class="chevron-container">
+                                                    <span *ngIf="!ratings.dnbPaydex.collapse&& ratings.dnbPaydex.paydexScore!==undefined&&ratings.dnbPaydex.paydexScore!==null" style="margin-left:16px;position:relative;top:-2px; margin-top:8px;color:grey; font-family: 'Inter UI' ; font-size: 16px; font-weight: 500;
+                                                    ">
+                                                        <span>
+                                                        <i-chevron-up>
+                                                        </span>
+                                                    </span>
+                                                    <span *ngIf="ratings.dnbPaydex.collapse&&ratings.dnbPaydex.paydexScore!==undefined&&ratings.dnbPaydex.paydexScore!==null" style="margin-left:16px;position:relative;top:-2px;margin-top:8px;color:grey; font-family: 'Inter UI'; font-size: 16px; font-weight: 500; ">
+                                                        <span>
+                                                            <i-chevron-down>
+                                                        </span>
+                                                     </span>
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                       
+                                        
+    
+                                       
+                                        
+                                    </div>
+                                </div>
+    
+                                <div *ngIf="ratings.dnbPaydex.options!==undefined && ratings.dnbPaydex.options!==null && ratings.dnbPaydex.paydexScore!==undefined && ratings.dnbPaydex.paydexScore!==null" style="padding:0px 15px" class="row" [ngbCollapse]="ratings.dnbPaydex.collapse">
+                                    <div class="col-12">
+                                        <div style="    box-shadow: 0 2px 10px 0 rgba(24, 24, 24, 0.19);margin-top: 20px;padding-bottom: 20px;" class="row">
+                                            <div *ngIf="ratings.dnbPaydex.options!==undefined && ratings.dnbPaydex.options!==null && ratings.dnbPaydex.paydexScore!==undefined && ratings.dnbPaydex.paydexScore!==null" style="margin-top:20px" class="col-lg-6">
+                                                <div class="dataBox">
+                                                    <label *ngIf="ratings.dnbPaydex.months!==undefined && ratings.dnbPaydex.months !==null" class="dataBoxlbl">{{ratings.dnbPaydex.months}}</label>
+                                                    <div  [ngClass]="ratings.dnbPaydex.sliderColors">
+                                                            <ng5-slider  [(value)]="ratings.dnbPaydex.paydexScore" [options]="ratings.dnbPaydex.options"></ng5-slider>
+                                                            
+                                                    </div>
+                                                    <p><span class="float-left dataBoxFooter">>120 days</span> <span class="float-right dataBoxFooter">Anticipates</span></p>
+                                                </div>
+                                            </div>
+                                          <!--   <div  *ngIf="ratings.dnbPaydex.options!==undefined && ratings.dnbPaydex.options!==null && ratings.dnbPaydex.paydexScore!==undefined && ratings.dnbPaydex.paydexScore!==null" style="margin-top:40px" class="col-lg-6">
+                                                <div class="dataBox">
+                                                    <label class="dataBoxlbl">Up to 24 months</label>
+                                                    <div [ngClass]="ratings.dnbPaydex.sliderColors">
+                                                            <ng5-slider [(value)]="ratings.dnbPaydex.paydexScore" [options]="ratings.dnbPaydex.options"></ng5-slider>
+                                                            
+                                                    </div>
+                                                    <p><span class="float-left dataBoxFooter">>120 days</span> <span class="float-right dataBoxFooter">Anticipates</span></p>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+  
+                        <div *ngIf="showEthical()" id="environmental-container">
+                            
+                            <div id="csr-container">
+                                <div  class="row">
+                                    <div style="padding-top: 40px;" class="col-12">
+                                        <div style="margin-bottom:32px" class="rating-headings">
+                                            <span>Environmental Data</span> 
+                                            <div style="display:inline-block ;width: calc(100% - 318px);" class=" beroe-purple-extendor" [class.beroe-blue-extendor]="!readOnly"></div>
+
+                                        </div>
+                                    </div>
+                                    <ng-container *ngIf="aqs.getSavedData().compliancePackages.indexOf('Base')==-1">
+   
+                                    <div  class="col-lg-6">
+                                        
+                                        <div  class="badge-container" style="margin-bottom:16px;">
+                                            <ng-template #csrAvgContent>
+                                              <p>CSR Ratings give the perceived performance on an absolute 0-100 scale</p>
+                                                            
+                                            </ng-template>
+
+                                            <span style="cursor:pointer;position: absolute;right:28px;top:15px;" class="xs-float-left" >
+                                                <i-info   [ngbPopover]='csrAvgContent' 
+                                                class="featherinfo i-sup-details"  triggers="mouseenter:mouseleave"
+                                                placement="right"></i-info>
+                                                
+                                            </span>
+                                            <div *ngIf="ratings.csrHubRating.averageRating!=undefined" style="width:35%;margin:0 auto;margin-top: 36px;">
+                                                    <circle-progress
+                                                    [responsive]="true"
+                                                    [percent]="ratings.csrHubRating.averageRating"
+                                                    [title]="ratings.csrHubRating.averageRating"
+                                                    [outerStrokeWidth]="10"
+                                                    [innerStrokeWidth]="10"
+                                                    [space]="-10"
+                                                    [outerStrokeColor]="getRadialColor(ratings.csrHubRating.averageRating)"
+                                                    [innerStrokeColor]="'#1818182a'"
+                                                    [animation]="true"
+                                                    [animationDuration]="300"
+                                                    [showSubtitle]="false"
+                                                    [radius]="60"
+                                                    [showUnits]="false"
+                                                    [titleFontSize]="40"
+                                                  ></circle-progress>
+                                                 
+                                            </div>
+                                              
+
+                                          
+                                                    
+                                                    <p *ngIf="!validate(ratings.csrHubRating.averageRating)" style='opacity: 0.9;color: #181818;font-family: "Inter UI";
+                                                        font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;margin-top:20%'>
+                                                            NA
+                                                    </p>
+                                                    <p  style="margin-top:12px" class="overall-rating">    
+                                                        OVERALL RATING      
+                                                    <p>
+                                                    
+
+                                                
+                                        </div>
+                                        <div *ngIf="1!=1 && ratings.csrHubRating.averageRating!=undefined" class="more-less">
+                                            <span >
+                                                    <span *ngIf="ratings.csrHubRating.collapse" (click)="toggleCollapse('csrHubRating')" class="less">MORE</span>
+                                                    <span *ngIf="!ratings.csrHubRating.collapse" (click)="toggleCollapse('csrHubRating')" class="less">LESS</span>
+    
+                                            </span>
+                                                
+                                            </div>
+                                    </div>
+                                    <div style="padding-left:100px" class="col-lg-6 move-left-md">
+                                            <p style="text-align:left" class="overall-rating">
+                                                POWERED BY   
+                                            </p>
+                                            
+                                            <img class="csr-logo" src="/content/images/csr.png">
+                                            <p style="font-size:14px;margin-top:8px;line-height:24px;color:#181818;opacity:0.8;font-family: Inter UI">
+                                             
+                                            CSRHub is the world's largest sustainability business intelligence database. Our ratings and tools help professional benchmark, evaluate and improve company sustainability performance.
+                                            </p>
+                                    </div>
+                                </ng-container>
+<!--                                     [ngbCollapse]="ratings.csrHubRating.collapse"
+ -->                                </div>
+                                <div  *ngIf="aqs.getSavedData().compliancePackages.indexOf('Advantage')>=0" style="margin-bottom:40px;" class="row">
+                                    
+                                    <div class="col-12">
+                                        <div class="badge-container2">
+                                            <div class="row">
+                                                <div  class="col-lg-3">
+                                                        <ng-template #csrCom>
+                                                                <p style="font-weight:bold;margin-bottom:5px;">Community</p>
+                                                                <p>Covers the company's commitment and effectiveness within the local, national and global community in which it does business</p>
+                                                              </ng-template>
+                  
+                                                              <span style="cursor:pointer;position: absolute;right:35px;top:15px;" class="xs-float-left" >
+                                                                  <i-info triggers="mouseenter:mouseleave"  [ngbPopover]='csrCom' 
+                                                                  class="featherinfo i-sup-details" 
+                                                                  placement="right"></i-info>
+                                                                  
+                                                              </span>
+                                                              <p *ngIf="!validate(ratings.csrHubRating.community)" style='opacity: 0.9;color: #181818;font-family: "Inter UI";font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;height: 60%;padding: 19% 0px;background-color: transparent;margin-top: 28px;margin-bottom: 0px;'>
+                                                                  NA
+                                                                </p>
+                                                    
+                                                    <div   *ngIf="validate(ratings.csrHubRating.community)" style="max-width:150px;width:60%;margin:0 auto;margin-top: 28px;height:60%">
+                                                                <circle-progress
+                                                                [responsive]="true"
+                                                                [percent]="ratings.csrHubRating.community"
+                                                                [title]="ratings.csrHubRating.community"
+                                                                [outerStrokeWidth]="10"
+                                                                [innerStrokeWidth]="10"
+                                                                [space]="-10"
+                                                                [outerStrokeColor]="getRadialColor(ratings.csrHubRating.community)"
+                                                                [innerStrokeColor]="'#1818182a'"
+                                                                [animation]="true"
+                                                                [animationDuration]="300"
+                                                                [showSubtitle]="false"
+                                                                [radius]="60"
+                                                                [showUnits]="false"
+                                                                [titleFontSize]="40"
+                                                              ></circle-progress>
+                                                             
+                                                        </div>
+                                                    
+                                                    <p style="margin-top:12px" class="overall-rating">
+                                                       COMMUNITY    
+                                                    <p>
+                                                </div>
+                                                <div  class="col-lg-3">
+                                                        <ng-template #csrEmp>
+                                                                <p style="font-weight:bold;margin-bottom:5px;">Employees</p>
+                                                                <p>Includes disclosure of policies, programs, & performance in diversity, labor relations and labor rights, compensation, benefits, and employee training, health and safety </p>
+                                                              </ng-template>
+                  
+                                                              <span style="cursor:pointer;position: absolute;right:35px;top:15px;" class="xs-float-left" >
+                                                                  <i-info triggers="mouseenter:mouseleave"  [ngbPopover]='csrEmp' 
+                                                                  class="featherinfo i-sup-details" 
+                                                                  placement="right"></i-info>
+                                                                  
+                                                              </span>
+                                                              <p *ngIf="!validate(ratings.csrHubRating.employees)" style='opacity: 0.9;color: #181818;font-family: "Inter UI";font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;height: 60%;padding: 19% 0px;background-color: transparent;margin-top: 28px;margin-bottom: 0px;'>
+                                                                NA
+                                                              </p>
+                                                        <div   *ngIf="validate(ratings.csrHubRating.employees)" style="max-width:150px;width:60%;margin:0 auto;margin-top: 28px;height:60%">
+                                                                <circle-progress
+                                                                [responsive]="true"
+                                                                [percent]="ratings.csrHubRating.employees"
+                                                                [title]="ratings.csrHubRating.employees"
+                                                                [outerStrokeWidth]="10"
+                                                                [innerStrokeWidth]="10"
+                                                                [space]="-10"
+                                                                [outerStrokeColor]="getRadialColor(ratings.csrHubRating.employees)"
+                                                                [innerStrokeColor]="'#1818182a'"
+                                                                [animation]="true"
+                                                                [animationDuration]="300"
+                                                                [showSubtitle]="false"
+                                                                [radius]="60"
+                                                                [showUnits]="false"
+                                                                [titleFontSize]="40"
+                                                              
+                                                              ></circle-progress>
+                                                             
+                                                        </div> 
+                                                     
+                                                    <p style="margin-top:12px" class="overall-rating">
+                                                        EMPLOYEES      
+                                                    <p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                        <ng-template #csrEnv>
+                                                                <p style="font-weight:bold;margin-bottom:5px;">Environment</p>
+                                                                <p>Covers a company's interactions with the environment at large, including use of natural resources, and a company's impact on the Earth's ecosystems </p>
+                                                              </ng-template>
+                  
+                                                              <span style="cursor:pointer;position: absolute;right:35px;top:15px;" class="xs-float-left" >
+                                                                  <i-info triggers="mouseenter:mouseleave"  [ngbPopover]='csrEnv' 
+                                                                  class="featherinfo i-sup-details" 
+                                                                  placement="right"></i-info>
+                                                                  
+                                                              </span>
+
+                                                              <p *ngIf="!validate(ratings.csrHubRating.environment)" style='opacity: 0.9;color: #181818;font-family: "Inter UI";font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;height: 60%;padding: 19% 0px;background-color: transparent;margin-top: 28px;margin-bottom: 0px;'>
+                                                                NA
+                                                              </p>
+                                                        <div *ngIf="validate(ratings.csrHubRating.environment)"  style="max-width:150px;width:60%;margin:0 auto;margin-top: 28px;height:60%">
+                                                                <circle-progress
+                                                                [responsive]="true"
+                                                                [percent]="ratings.csrHubRating.environment"
+                                                                [title]="ratings.csrHubRating.environment"
+                                                                [outerStrokeWidth]="10"
+                                                                [innerStrokeWidth]="10"
+                                                                [space]="-10"
+                                                                [outerStrokeColor]="getRadialColor(ratings.csrHubRating.environment)"
+                                                                [innerStrokeColor]="'#1818182a'"
+                                                                [animation]="true"
+                                                                [animationDuration]="300"
+                                                                [showSubtitle]="false"
+                                                                [radius]="60"
+                                                                [showUnits]="false"
+                                                                [titleFontSize]="40"
+                                                              ></circle-progress>
+                                                             
+                                                        </div>
+                                                    <p style="margin-top:12px" class="overall-rating">
+                                                        ENVIRONMENT      
+                                                    <p>
+                                                </div>
+                                                <div  class="col-lg-3">
+                                                        <ng-template #csrGov>
+                                                                <p style="font-weight:bold;margin-bottom:5px;">Government</p>
+                                                                <p>Covers disclosure of policies & procedures, board independence & diversity, executive compensation, attention to stakeholder concerns, & evaluation of a company's culture of ethical leadership and compliance </p>
+                                                              </ng-template>
+                  
+                                                              <span style="cursor:pointer;position: absolute;right:35px;top:15px;" class="xs-float-left" >
+                                                                  <i-info triggers="mouseenter:mouseleave"  [ngbPopover]='csrGov' 
+                                                                  class="featherinfo i-sup-details" 
+                                                                  placement="right"></i-info>
+                                                                  
+                                                              </span>
+                                                              <p *ngIf="!validate(ratings.csrHubRating.governance)" style='opacity: 0.9;color: #181818;font-family: "Inter UI";font-size: 40px;font-weight: 800;line-height: 44px;text-align: center;height: 60%;padding: 19% 0px;background-color: transparent;margin-top: 28px;margin-bottom: 0px;'>
+                                                                NA
+                                                              </p>
+                                                        <div *ngIf="validate(ratings.csrHubRating.governance)" style="max-width:150px;width:60%;margin:0 auto;margin-top: 28px;height:60%">
+                                                                <circle-progress
+                                                                [responsive]="true"
+                                                                [percent]="ratings.csrHubRating.governance"
+                                                                [title]="ratings.csrHubRating.governance"
+                                                                [outerStrokeWidth]="10"
+                                                                [innerStrokeWidth]="10"
+                                                                [space]="-10"
+                                                                [outerStrokeColor]="getRadialColor(ratings.csrHubRating.governance)"
+                                                                [innerStrokeColor]="'#1818182a'"
+                                                                [animation]="true"
+                                                                [animationDuration]="300"
+                                                                [showSubtitle]="false"
+                                                                [radius]="60"
+                                                                [showUnits]="false"
+                                                                [titleFontSize]="40"
+                                                              ></circle-progress>
+                                                             
+                                                        </div>
+                                                    <p style="margin-top:12px" class="overall-rating">
+                                                        GOVERNANCE      
+                                                    <p>
+                                                </div>
+                                            </div>
+                                            <div  style="width: 95%;margin:0 auto;padding: 0px 15px;height: 5px;margin-top:12px;" class="row lg-only">
+                                    
+                                                        <div style="border-top-left-radius: 2px;border-bottom-left-radius: 2px;background-color:#FF4F61" class="col-lg-2"></div>
+                                                        <div style="background-color:#FFBE45" class="col-lg-2"></div>
+                                                        <div style="background-color:#FFF245" class="col-lg-2"></div>
+                                                        <div style="background-color:#31D490" class="col-lg-2"></div>
+                                                        <div style="background-color:#14B4D2" class="col-lg-2"></div>
+                                                        <div style="border-top-right-radius: 2px;border-bottom-right-radius: 2px;background-color:#795DDC" class="col-lg-2"></div>
+                                               
+                                                
+                                            </div>
+                                            <div  style="width: 95%;margin:0 auto;padding: 0px 15px;height: 5px;margin-bottom:24px;" class="row lg-only">
+                                    
+                                                <div  class="col-lg-2"><span style="float:left;margin-top:11.5px">Low</span><span style="margin-top:11.5px;float:right">0-29</span> </div>
+                                                <div  class="col-lg-2"><div style="margin-top:11.5px;text-align:center">30-39</div></div>
+                                                <div class="col-lg-2"><div style="margin-top:11.5px;text-align:center">40-49</div></div>
+                                                <div  class="col-lg-2"><div style="margin-top:11.5px;text-align:center">50-59</div></div>
+                                                <div  class="col-lg-2"><div style="margin-top:11.5px;text-align:center">60-79</div></div>
+                                                <div  class="col-lg-2"><span style="float:left;margin-top:11.5px">80-100</span><span style="margin-top:11.5px;float:right">High</span></div>
+                                       
+                                        
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <jhi-dow-jones *ngIf="!ratings.dowJones.loading&&!isSupplier" style="margin-bottom:40px;margin-top:43px;display: block;"  [data]="ratings.dowJones.environmental" ></jhi-dow-jones>
+
+                        </div>
+
+                        <div *ngIf="!ratings.dowJones.loading&&!isSupplier"  id="ethical-container">
+                                <div style="margin-bottom:48px;margin-top:80px;" class="rating-headings">
+                                    <span>Ethical/Regulatory Data</span> 
+                                        <div style="display:inline-block;width: calc(100% - 381px);" class=" beroe-purple-extendor" [class.beroe-blue-extendor]="!readOnly"></div>
+                                    </div>
+                                    <jhi-dow-jones *ngIf="!ratings.dowJones.loading&&!isSupplier"  [data]="ratings.dowJones.ethical" ></jhi-dow-jones>
+                            </div>
+
+                            <div *ngIf="showEthical()" id="labor-container">
+                                    <div id="csr-container">
+                                            <div style="margin-bottom:16px;" class="row">
+                                                <div class="col-12">
+                                                        <div style="margin-top:40px;margin-bottom:32px" class="rating-headings">
+                                                            <span>
+                                                                Labor, Health and Safety
+                                                            </span> 
+                                                            <div style="display:inline-block;width: calc(100% - 393px);" class=" beroe-purple-extendor" [class.beroe-blue-extendor]="!readOnly"></div>
+
+                                                        </div>
+                                                </div>
+                                                <ng-container  *ngIf="validate(aqs.getSavedData())&&validate(aqs.getSavedData().compliancePackages)&&validate(aqs.getSavedData().compliancePackages[0])&&aqs.getSavedData().compliancePackages.indexOf('Base')==-1">                                              
+                                                    <div  class="col-lg-6">
+                                             
+                                                        <div *ngIf="package!=null && validate(aqs.getSavedData().dataPointResponseList) && validate(aqs.getSavedData().dataPointResponseList[0])" class="badge-container" style="min-height:264px;margin-bottom:16px;">
+                                                           <ng-container *ngIf="validate(aqs.getSavedData().dataPointResponseList[0].processedResponse)" >
+                                                                <img style="width: 30%;margin: 0 auto;display: block;margin-top: 10%;" src="{{getAchillesBadge(aqs.getSavedData().dataPointResponseList[0].processedResponse)}}" alt="">
+                                                                
+                                                                <p style="text-transform:uppercase;margin-top:5%;text-align:center" class="overall-rating">
+                                                                    {{getAchillesLabel(aqs.getSavedData().dataPointResponseList[0].processedResponse)}}  
+                                                                </p>
+                                                           </ng-container>
+                                                          
+                                                        
+                                                            
+                                                             
+                                                        </div>
+                                                    </div>
+                                                    <div style="padding-left:100px" class="col-lg-6 move-left-md">
+                                                            <p style="text-align:left" class="overall-rating">
+                                                                POWERED BY   
+                                                            </p>
+                                                            
+                                                            <img style="width:163px" src="/content/images/achilles.png">
+                                                            <p style="font-size:14px;margin-top:8px;line-height:24px;color:#181818;opacity:0.8;font-family: Inter UI">
+                                                                    We collect and validate supplier data and mitigate risks globally. This data-driven insight builds more secure, sustainable, better performing supply chains.</p>
+                                                    
+                                                             <button   *ngIf="aqs.getSavedData().compliancePackages.indexOf('Essential')>-1" (click)="openAchillesQuestionnaireModal()" style="margin-top:84px;font-size:16px!important;   cursor:pointer; background: none;border: none;outline: none;" [class.supplier-color]="!readOnly" [disabled]="readOnly&&!submitted"  class="launch">{{isSupplier?'Launch Questionnaire':'View Questionnaire'}}</button>
+                                                   </div>
+                                                </ng-container>
+                                                </div>
+                                                <jhi-dow-jones *ngIf="!ratings.dowJones.loading&&!isSupplier" style="margin-top:48px;display: block;"  [data]="ratings.dowJones.labor" ></jhi-dow-jones>
+                                    </div>
+                                    
+                                </div>
+                    </div>
+               <!-- </div> --> 
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

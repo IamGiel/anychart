@@ -1,0 +1,77 @@
+<div class="container login login-container" *ngIf="!showLoading">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="row"><div class="logoImg"></div></div>
+            <div class="row">
+                <h2 class="headline" *ngIf="loginType!='sup'">Unified Platform for Supplier Compliance & Monitoring</h2>
+                <h2 class="headline" *ngIf="loginType=='sup'">Unified Platform for Compliance & Monitoring</h2>
+                <p style="display: none;" class="supplier-login-info">Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac
+                    cursus commodo, tortor mauris.</p>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+           <div class="login-box login-box-mblspcf absolute">
+                <h2>Welcome to Beroe LiVE</h2>
+              
+                <div class="login-text" [ngClass]="{'sup-login-text':loginType == 'sup'}">
+                    <span class="menuItem" [ngClass]="{'menuItemActive':activeTab == 'Login'}" (click)="tabChange('Login');">Login</span>
+                    <span class="menuItem" [ngClass]="{'menuItemActive':activeTab != 'Login'}" (click)="tabChange('SignUp');" >Sign Up</span></div>
+                <div class="divider"></div>
+                <div class="login-content-wrap">
+                    <div class="alert alert-danger" *ngIf="authenticationError" jhiTranslate="login.messages.error.authentication">
+                        <strong>Failed to sign in!</strong> Please check your credentials and try again.
+                    </div>
+                    <div class="login-credentials" *ngIf="activeTab=='Login'">
+                        <form class="form" role="form" (ngSubmit)="login()">
+                                <div class="form-group input-wrap">
+                                    <label class="username-label" for="username">Email Address</label>
+                                    <input type="text" class="form-control login-input"  id="username" placeholder=""
+                                    [(ngModel)]="username" name="username" [ngClass]="{ 'sup-input':loginType == 'sup'}">
+                                </div>
+                                <div class="form-group input-wrap">
+                                    <label for="password">Password</label>
+                                    <input  [attr.type]="pwdToggle? 'text':'password' " class="form-control login-input" id="password" 
+                                            [(ngModel)]="password" name="password" [ngClass]="{ 'sup-input':loginType == 'sup'}">
+                                        <div class="showPwd"><i-eye (click)="showPwd()" *ngIf="!pwdToggle"></i-eye><i-eye-off (click)="showPwd()" *ngIf="pwdToggle"></i-eye-off></div>
+                                </div>
+                              
+                                <div class="input-wrap" style="margin-top:40px;">
+                                    
+                                    <div class="col-md-6" style="padding-top:15px; width: 217px;display: inline-flex;">
+                                        <input  id="rememberMe" type="checkbox" aria-invalid="false" [(ngModel)]="rememberMe" name="rememberme" (change)="rememberMeCheck()">
+                                        <label for="rememberMe" class="rememberMe" [ngClass]="{ 'suprememberMe':loginType == 'sup'}"><i-square class="rememberme-check" *ngIf="!checkRemeber"></i-square> <i-check-square  class="rememberme-check" *ngIf="checkRemeber"></i-check-square>Remember me</label>
+                                       <!--<label class="form-check-label remember-login" for="rememberMeCheck">
+                                            <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe" [(ngModel)]="rememberMe" checked> <span>Remember me </span>
+                                       </label>-->
+                                       </div>
+                                       <div class="col-md-6" style="    display: inline;">
+                                        <button type="submit" class="btn login-button" [ngClass]="{'proc-login-button':loginType == 'proc', 'sup-login-button':loginType == 'sup'}" >LOGIN</button>
+                                       </div>
+                                </div>
+                        </form>
+                        <hr/>
+                        <div class="login-links-wrap">
+                            <div class="center">
+                                <a class="login-page-links clearfix inline-block" (click)="requestResetPassword()">
+                                    <div class="link-txt left" [ngClass]="{'proc-link-txt':loginType == 'proc', 'sup-link-txt':loginType == 'sup'}">I forgot my password <i-chevron-right></i-chevron-right></div>
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-credentials" *ngIf="activeTab!='Login'">
+
+                        <jhi-register></jhi-register>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="showLoading" style="margin:0 auto;width: 200px;color: white;">
+   Loading...<img src="../../../content/images/loader_ripple.gif">
+</div>
+

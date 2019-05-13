@@ -1,0 +1,20 @@
+.pagination .controls,
+.pagination {
+    display: inline-flex;
+}
+.pagination .controls .link {
+    color: #bdbdbd;
+    margin-top: -1px;
+}
+.pagination .controls .disabled {
+    pointer-events: none;
+}
+.description {
+    opacity: 0.5;
+    font-family: 'Inter UI';
+    font-size: 14px;
+}
+.pagination .controls .pageno {
+    padding: 0px 30px;
+    opacity: 0.8;
+}

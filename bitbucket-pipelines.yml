@@ -1,0 +1,60 @@
+# This is a sample build configuration for Java (Maven).
+# Check our guides at https://confluence.atlassian.com/x/zd-5Mw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: atlassian/default-image:2
+
+pipelines:
+  custom: # Pipelines that are triggered manually
+    create-release: # The name that is displayed in the list in the Bitbucket Cloud GUI
+      - step:
+          name: Release creation
+          caches:
+            - maven
+          script:
+            - echo "Manual triggers for Release!"
+            - npm --version
+            - node --version
+            - npm install --verbose
+#            - npm install webpack
+#            - npm install webpack-cli
+            - npm install --save-dev webpack
+            - npm install --save-dev webpack-dev-server 
+            - npm install --save-dev webpack-cli 
+            - ls -l
+            - ls -l ./webpack
+            - ls -l ./node_modules
+            - ls -l ./node_modules/webpack
+            - ls -l ./node_modules/webpack-cli
+            - mvn -B package -DskipTests -Dspring.profiles.active=prod release:prepare -Dusername=$username -Dpassword=$password -DscmCommentPrefix="[skip ci]"
+            - ls -l
+            - ls -l ./target
+            - mvn release:perform #-Dgoals=package -Dspring.profiles.active=prod -DskipTests
+          artifacts:
+             - target/*.war
+      - step:
+          name: Copy artifacts
+          script:
+            - echo "Copying artifacts to Bitbucket download!"
+            - ls -l target
+            - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"target/$(cd ./target/ && ls -1 gateway-*.war)"
+    create-war:
+      - step:
+          name: Creating war and copying it
+          script:
+            - echo "Compiling branch"
+            - npm --version
+            - node --version
+            - npm install --verbose
+            - npm install --save-dev webpack
+            - npm install --save-dev webpack-dev-server 
+            - npm install --save-dev webpack-cli            
+            - ls -l ./webpack
+            - ls -l ./node_modules
+            - ls -l ./node_modules/webpack
+            - ls -l ./node_modules/webpack-cli            
+            - mvn -B package -DskipTests -Dspring.profiles.active=prod # -B batch mode makes Maven less verbose
+            - echo "Copying artifacts to Bitbucket download!"
+            - ls -l ./target/
+            - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"target/$(cd ./target/ && ls -1 gateway-*.war)"

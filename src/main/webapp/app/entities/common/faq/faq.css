@@ -1,0 +1,37 @@
+.card-title {
+    font-size: 15px !important;
+    font-family: 'Inter UI';
+    color: #181818;
+    width: 98%;
+}
+.card-body {
+    background: #f9f9f9;
+}
+.card-body p {
+    font-size: 15px !important;
+    font-family: 'Inter UI';
+    color: #181818;
+}
+.card {
+    margin-bottom: 5px !important;
+    background: #f1f1f1;
+    box-shadow: none;
+}
+.card .card-header {
+    display: inline-flex;
+}
+.action-icon {
+    position: absolute !important;
+    float: right;
+    right: 15px;
+    top: 30%;
+    color: #181818;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.pp h1 {
+    width: 100%;
+    font-size: 25px !important;
+    font-family: 'Inter UI';
+    color: #181818;
+}

@@ -1,0 +1,20 @@
+
+<div class="modal-header">
+    <h5 style="font-weight: 900">Decline Request<span *ngIf="data!==undefined&&data.ids!=undefined&&data.ids.length>1">s</span></h5>
+    <button aria-label="Close" data-dismiss="modal" class="close" type="button" (click)="activeModal.dismiss('closed')"><span aria-hidden="true">x</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form #commentForm="ngForm">
+                        <p style="margin-bottom:4px;font-weight:100">Decline Message</p>
+                        <textarea style="display: block;width: 100%;margin-bottom: 15px;" maxlength="500" required [(ngModel)]="comment"  name="comment" id="comment"></textarea>
+                        
+                        <button [ngClass]="{'disabled':comment==undefined ||(comment!==undefined && comment.length==0)}" [disabled]="comment==undefined ||(comment!==undefined && comment.length==0)" style="float:right" class="btn mod livex-sup-prime-btn" (click)="decline()"  type="submit">Submit</button>
+                    </form>                 
+                </div>
+            </div>
+        </div>
+</div>

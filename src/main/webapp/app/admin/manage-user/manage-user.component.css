@@ -1,0 +1,64 @@
+.btn-prime {
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #804cd9 0%, #804cd9 51%, #544ad8 100%);
+    transition: 0.5s;
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    background-size: 200% auto;
+    text-transform: uppercase;
+}
+
+.btn-prime:hover {
+    background-position: right center;
+}
+.has-search .form-control {
+    padding-left: 2.75rem;
+    background-image: none !important;
+}
+.has-search .form-control .is-focused {
+    background-image: none !important;
+    box-shadow: none !important;
+    border-color: silver !important;
+}
+.has-search .form-control:focus {
+    box-shadow: none !important;
+    border-color: silver !important;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    left: 5%;
+}
+.head-title th {
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 900;
+    color: #000;
+    opacity: 0.6;
+}
+.cust-table tr td {
+    font-family: 'Inter UI';
+}
+.cust-table tr a {
+    color: #000;
+    opacity: 0.8;
+}
+.cust-table tr a:hover {
+    color: #804cd9;
+    text-decoration: underline;
+}
+.i-cls {
+    cursor: pointer;
+}

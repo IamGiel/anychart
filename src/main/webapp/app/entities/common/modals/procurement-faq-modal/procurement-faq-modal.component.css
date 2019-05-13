@@ -1,0 +1,65 @@
+h4 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+p {
+    padding: 10px 40px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 18px;
+}
+
+.procTheme {
+    background-color: #6e42d3;
+    padding: 27px;
+}
+
+.supTheme {
+    background-color: #16bdcf;
+    padding: 27px;
+}
+
+div.m-body-proc:hover::-webkit-scrollbar-thumb {
+    background: #6e42d3;
+}
+
+div.m-body-sup:hover::-webkit-scrollbar-thumb {
+    background: #16bdcf;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    background: #16bdcf;
+} */
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.modalTitle {
+    display: contents;
+    text-align: center;
+    width: 100%;
+}
+
+.modalClose {
+    float: right;
+    height: 0;
+}

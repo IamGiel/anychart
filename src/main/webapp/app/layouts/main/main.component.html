@@ -1,0 +1,22 @@
+<div [ngClass]="baseClass" >
+
+    <jhi-page-ribbon></jhi-page-ribbon>
+    <div>
+        <ng-container *ngIf="(router.url !== '/login'&& router.url !== '/')">
+            <router-outlet  name="navbar"></router-outlet>
+        </ng-container>
+        <ng-container *ngIf="(router.url !== '/login'&& router.url !== '/')">
+            <div class="container navbar-top"></div>
+            <div class="container-fluid" style="height:15px;margin-bottom:-20px;">
+                <div class="navbar-bottom"></div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="container-fluid" >
+        <div class="card jh-card base-container" style="min-height: calc(100vh - 43px);">
+            <router-outlet></router-outlet>
+            <router-outlet name="popup"></router-outlet>
+        </div>
+        <jhi-footer></jhi-footer>
+    </div>
+</div>

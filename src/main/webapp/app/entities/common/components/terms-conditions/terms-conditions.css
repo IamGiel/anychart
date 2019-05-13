@@ -1,0 +1,59 @@
+.tc .modal-header {
+    font-family: 'Inter UI';
+    color: white;
+    padding: 15px;
+}
+.sup .modal-header {
+    background: linear-gradient(134.72deg, #19c8cc 0%, #0c91dd 100%);
+}
+.proc .modal-header {
+    background: linear-gradient(315deg, #544ad8, #804cd9);
+}
+.desc {
+    font-family: Inter UI;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+.title {
+    font-size: 17px;
+    font-weight: bold;
+}
+.subtitle {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal-fixed-header .modal-header {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%;
+}
+.modal-body {
+    position: absolute;
+    top: 56px;
+    min-height: 600px;
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    background: white;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, #0c91dd, #804cd9 100%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0c91dd;
+}

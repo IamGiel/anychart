@@ -1,0 +1,32 @@
+.form-control {
+    border: 0 !important;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.4375rem + 2px);
+    line-height: 1 !important;
+}
+
+/* bootstrap alert for required field */
+.ng-invalid:not(form) {
+    border-bottom: 2px solid rgb(190, 12, 12);
+    border-left: none;
+}
+
+label {
+    line-height: 32px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown::before {
+    position: absolute;
+    content: ' &#9660;';
+    top: 0px;
+    right: -8px;
+    height: 20px;
+    width: 20px;
+}

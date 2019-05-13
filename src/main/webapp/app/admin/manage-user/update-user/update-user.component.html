@@ -1,0 +1,110 @@
+
+    <form [formGroup]="userForm" (ngSubmit)="save()" >
+        <div class="modal-header">
+            <h4  class="modal-title" *ngIf="!editUser"> Create User</h4>
+            <h4  class="modal-title" *ngIf="editUser"> Edit User</h4>
+             <button aria-label="Close" data-dismiss="modal" class="close" type="button" (click)="close()"><span aria-hidden="true">x</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="d-flex justify-content-center">
+                <div class="alert alert-danger col-md-6" role="alert" *ngIf="errMsg.length>0">{{errMsg}}</div>
+            </div>
+            <ng-container *ngIf="!edited">
+    
+                <div class="form-group row">
+                    <input type="hidden" formControlName="userId" class="form-control" />
+                    <label for="Login" class="col-sm-2 col-form-label">Login</label>
+                    <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                    <div class="col-sm-6">
+                        <input type="text" formControlName="login" class="form-control" [ngClass]="{ 'is-invalid': f.login.touched && f.login.invalid }" />
+                        <div *ngIf="f.login.errors" class="invalid-feedback">
+                            <div *ngIf="f.login.errors.required">Login is required</div>
+                            <div *ngIf="f.login.errors.maxlength">This field cannot be longer than 50 characters.</div>
+                            <div *ngIf="f.login.errors.pattern">This field can only contain letters, digits and e-mail addresses.</div>
+                          </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="First Name" class="col-sm-2 col-form-label">First Name</label>
+                    <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                    <div class="col-sm-6">
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': f.firstName.touched && f.firstName.invalid }" />
+                        <div *ngIf=" f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Last Name" class="col-sm-2 col-form-label">Last Name</label>
+                    <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                    <div class="col-sm-6">
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': f.lastName.touched && f.lastName.invalid }" />
+                        <div *ngIf=" f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                         </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Email" class="col-sm-2 col-form-label">Email</label>
+                    <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                    <div class="col-sm-6">
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': f.email.touched && f.email.invalid }" />
+                        <div *ngIf=" f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.pattern">Your email is invalid.</div>
+                         </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="authority" class="col-sm-2 col-form-label">Roles</label>
+                    <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                    <div class="col-sm-6">
+                        <select class="form-control"  formControlName="authority" multiple name="authority" [ngClass]="{ 'is-invalid': f.authority.touched && f.authority.invalid }" >
+                            <option *ngFor="let authority of authorities" [value]="authority">{{authority}}</option>
+                        </select>
+                        <div *ngIf="f.authority.touched && f.authority.errors" class="invalid-feedback">
+                            <div *ngIf="f.authority.errors.required">Role is required</div>
+                         </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="language" class="col-sm-2 col-form-label">Language</label>
+                    <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                    <div class="col-sm-6">
+                        <select class="form-control"  formControlName="language" name="language" [ngClass]="{ 'is-invalid': f.language.touched && f.language.invalid }" >
+                            <option *ngFor="let language of languages" [value]="language">{{language}}</option>
+                        </select>
+                        <div *ngIf="f.language.errors" class="invalid-feedback">
+                            <div *ngIf="f.language.errors.required">Language is required</div>
+                         </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="activate" class="col-sm-2 col-form-label">Activated</label>
+                    <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+                    <div class="col-sm-6">
+                        <input type="checkbox" formControlName="activate" class="form-control" [ngClass]="{ 'is-invalid': f.activate.touched && f.activate.invalid }" />
+                    </div>
+                </div>
+               
+                
+            </ng-container> 
+             <ng-container *ngIf="edited">
+                <div class="d-flex justify-content-center">
+                    <div class="alert alert-success" role="alert" *ngIf="sucessMsg.length>0">{{sucessMsg}}</div>
+                </div>
+             </ng-container>
+             
+             
+            
+        </div>
+        <div class="modal-footer" *ngIf="!edited">
+            <button class="btn btn-proc-prime"  (click)="activeModal.dismiss('cancelled')">Cancel</button>
+            <button [disabled]="!userForm.valid" class="btn btn-proc-prime"><span *ngIf="!editUser">Save</span><span *ngIf="editUser">Update</span></button>
+        </div>
+    </form>
+       
+     
+    
+    

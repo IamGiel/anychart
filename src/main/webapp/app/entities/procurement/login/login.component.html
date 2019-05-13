@@ -1,0 +1,67 @@
+<div class="container login login-container" *ngIf="showLoading">
+        <div class="row">
+        <div class="col-md-5">
+            <div class="row">
+                <div class="logoImg"></div>
+            </div>
+            <div class="row">
+                <h2 class="headline">Centralized supplier compliance monitory</h2>
+                <p class="supplier-login-info">Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac
+                    cursus commodo, tortor mauris.</p>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+           <div class="login-box login-box-mblspcf absolute">
+                <h2>Welcome to Beroe Live X</h2>
+                <div class="login-text">Login</div>
+                <div class="divider"></div>
+                
+                <div class="login-content-wrap">
+                        <div class="alert alert-danger" *ngIf="authenticationError" jhiTranslate="login.messages.error.authentication">
+                                <strong>Failed to sign in!</strong> Please check your credentials and try again.
+                            </div>
+                    <div class="login-credentials">
+                            <form class="form" role="form" (ngSubmit)="login()">
+                                <div class="form-group input-wrap">
+                                    <input type="text" class=" login-input" name="username" id="username"
+                                    placeholder="" [(ngModel)]="username">
+                                    <label class="username-label" for="username">Email Address</label>
+                                </div>
+                                <div class="form-group input-wrap">
+                                    <input type="password" class="login-input" name="password" id="password"
+                                        [(ngModel)]="password">
+                                        <label for="password">Password</label>
+                                </div>
+                                <div class="input-wrap" style="margin-top:40px;">
+                                    <div class="col-md-6" style="padding-top:15px; width: 217px;display: inline-flex;">
+                                        <label class="form-check-label remember-login" for="rememberMeCheck">
+                                            <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe"
+                                                [(ngModel)]="rememberMe" checked> <span>Remember me </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6" style="    display: inline;">
+                                        <button type="submit" class="btn login-button">LOGIN</button>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                    <div class="login-links-wrap" style="display:none;">
+                        <div class="center">
+                            <a class="login-page-links clearfix inline-block" ng-click="loginForgotPassword()">
+                                <div class="link-txt left">I forgot my password</div>
+                                <div class="left">
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="!showLoading">
+        Loading...
+</div>

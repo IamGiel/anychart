@@ -1,0 +1,323 @@
+.pReq h5 {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+.pReq h1 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+}
+.pReq .title p {
+    padding: 10px 40px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 18px;
+}
+
+.pReq .pend-box {
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    padding: 40px 40px 15px;
+    margin-top: 10px;
+}
+.pReq .pend-box h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 2px;
+}
+.pReq .pend-box .paid-by {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.pReq .pend-box .reqAmnt {
+    padding-top: 15px;
+    text-align: right;
+}
+.pReq .pend-box .reqAmnt span:nth-child(1) {
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+.pReq .pend-box .reqAmnt span:nth-child(2) {
+    color: #6b4cd9;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.pReq .pend-box p {
+    padding-top: 12px;
+    opacity: 0.8;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.blkColor {
+    color: #181818 !important;
+}
+.pReq .btn-back {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+}
+.pReq .btn-back:hover {
+    background: silver;
+    background: linear-gradient(134.72deg, #f2f2f2 0%, #f2f2f2 21%, silver 100%);
+}
+.pReq .btn-back span {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    padding: 12px 40px;
+}
+.pReq .btn-prime2 {
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #544ad8 0%, #544ad8 51%, #804cd9 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-transform: uppercase;
+}
+.pReq .btn-prime2:hover {
+    background-position: right center;
+}
+
+.pReq .btn-prime2 span {
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    padding: 12px 40px;
+}
+.pReq .request h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+.pReq .request p {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+}
+.pReq hr {
+    border-radius: 4px 4px 0 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+}
+.padTop30 {
+    padding-top: 30px !important;
+}
+.pReq .desc p {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+}
+.pReq a {
+    color: #14b4d2;
+}
+
+@media (max-width: 768px) {
+    .pReq .title h1 {
+        font-size: 20px;
+    }
+    .pReq .title p {
+        font-size: 14px;
+        padding: 0px;
+    }
+    .pReq .request h3,
+    .pReq .pend-box h3 {
+        font-size: 16px;
+    }
+    .btnRow {
+        text-align: center;
+    }
+    .pReq .btn-prime2,
+    .pReq .btn-back {
+        display: block;
+        width: 100%;
+    }
+    .pReq .desc p {
+        font-size: 13px;
+    }
+    .request-box {
+        height: auto !important;
+    }
+}
+.pend-box input[type='checkbox'],
+.request-box input[type='checkbox'] {
+    display: none;
+}
+.pend-box input[type='checkbox'] + label,
+.request-box input[type='checkbox'] + label {
+    cursor: pointer;
+    background: url('../../../../content/images/unselected.svg') no-repeat;
+    background-position: 100% 5px;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 21px;
+    line-height: 24px;
+    color: #804cd9;
+    opacity: 1;
+}
+.pend-box input[type='checkbox']:checked + label,
+.request-box input[type='checkbox']:checked + label {
+    cursor: pointer;
+    background: url('../../../../content/images/selected.svg') no-repeat;
+    background-position: 100% 5px;
+    opacity: 1;
+}
+.pend-box-selected {
+    background-color: #f0edfb !important;
+}
+
+.card-pricing.popular {
+    z-index: 1;
+    border: 2px solid #544ad8;
+}
+.card-pricing .list-unstyled li {
+    padding: 0.5rem 0;
+    color: #6c757d;
+}
+.cust-btn {
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    width: auto !important;
+}
+.text-prm {
+    color: #544ad8 !important;
+}
+.card-deck .card:hover {
+    border: 2px solid #544ad8;
+    z-index: 1;
+}
+.request-box {
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    padding: 40px 40px 15px;
+    margin-top: 10px;
+    height: 100%;
+}
+.request-box p {
+    opacity: 0.8;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.request-box h2 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 24px;
+}
+.request-box h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+.request-box hr {
+    border-radius: 4px 4px 0 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+}
+.request-box p a,
+.feature-item span {
+    color: #544ad8;
+}
+
+.ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: right;
+}
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #544ad8;
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px;
+    right: -21px;
+}
+.ribbon span::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #544ad8;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #544ad8;
+}
+.ribbon span::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #544ad8;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #544ad8;
+}
+.request-box input[type='checkbox'] + label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+}

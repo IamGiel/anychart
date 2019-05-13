@@ -1,0 +1,123 @@
+/* after changing this file run 'npm run webpack:build' */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~inter-ui/inter-ui.css';
+@import '~@ng-select/ng-select/themes/default.theme.css';
+
+.procurement,
+.default {
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    font-family: 'Inter UI';
+}
+.supplier {
+    background: linear-gradient(134.72deg, #19c8cc 0%, #0c91dd 100%);
+    font-family: 'Inter UI';
+}
+.supplier .jh-navbar,
+.procurement .jh-navbar,
+.default .jh-navbar,
+.sdefault .jh-navbar {
+    background: none !important;
+    box-shadow: none;
+}
+
+.procurement-body {
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    font-family: 'Inter UI';
+}
+.supplier-body {
+    background: linear-gradient(134.72deg, #19c8cc 0%, #0c91dd 100%);
+    font-family: 'Inter UI';
+}
+.supplier-body .jh-navbar,
+.procurement-body .jh-navbar {
+    background: none !important;
+    box-shadow: none;
+}
+/*.supplier-body .navbar-brand span:nth-child(2),
+.procurement-body .navbar-brand span:nth-child(2) {
+    display: none;
+}
+.supplier-body .navbar-brand span:nth-child(3):after {
+    content: 'Supplier';
+}
+.procurement-body .navbar-brand span:nth-child(3):after {
+    content: 'Procurement';
+}*/
+.container::before {
+    background: url('http://lorempixel.com/200/100/');
+    width: 100%;
+    height: 20px;
+}
+.navbar-top {
+    background: #f2f2f2;
+    height: 15px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    opacity: 0.6;
+    width: 70%;
+}
+.navbar-bottom {
+    background: #f2f2f2;
+    height: 15px;
+    margin-left: 7%;
+    margin-right: 7%;
+    opacity: 0.8;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.footer .row {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: 'Inter UI';
+    color: white;
+}
+/*.default {
+    background: url('../images/Login-Background.svg') no-repeat center center, #6e42d3;
+    background-size: contain;
+}*/
+.loginCBG {
+    min-height: 100vh;
+    background-size: contain;
+    background-image: url('../images/Login-Background-Flipped.svg'), linear-gradient(134.72deg, #544ad8 0%, #6e42d3 100%);
+}
+.loginPBG {
+    min-height: 100vh;
+    background-image: url('../images/Login-Background-Flipped.svg'), linear-gradient(134.72deg, #19c8cc 0%, #0c91dd 100%);
+    background-size: contain;
+}
+.default-body .jh-navbar,
+.default-body .jh-navbar,
+.default-body .navbar-top,
+.default-body .navbar-bottom {
+    display: none;
+}
+.default .jh-card,
+.loginCBG .jh-card,
+.loginPBG .jh-card {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    margin: 0;
+}
+
+.default-body-supplier .jh-navbar,
+.default-body-supplier .jh-navbar,
+.default-body-supplier .navbar-top,
+.default-body-supplier .navbar-bottom {
+    display: none;
+}
+.default-body-supplier .jh-card {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.common-body .navbar-top,
+.common-body .navbar-bottom {
+    display: none;
+}
+.common-body .jh-card {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}

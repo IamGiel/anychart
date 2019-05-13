@@ -1,0 +1,94 @@
+<div *ngIf="showPage" class="container pReq">
+    <!-- title row -->
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-center title">
+            <h5>INTRODUCTION</h5>
+            <h1 style="margin-bottom:25px;">Welcome to Beroe LiVE</h1>
+       <!--  <p>We're excited to have you on board for the launch of our newest Initiative
+                aimed at
+                easing
+                compliance efforts.</p> -->
+            <div class="row"></div>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <!-- body row -->
+    <div class="row">
+        <div class="col-lg-4">
+            <div style="overflow: hidden;" class="card text-center">
+                <p class="coming-soon" style="position: absolute;
+                font-family: 'Inter UI';
+                font-size: 80%;
+                font-weight: bold;
+                background: #10a4d7;
+                color: #fff;
+                padding: 1% 2%;
+                width: 100%;
+                left: -38%;
+                transform: rotatez(-45deg);
+                top: 10%;">COMING SOON</p>
+
+                <div class="svgContainer">
+                    <i-upload class="big"></i-upload>
+                </div>
+                <h3 class="card-body addReqMon">Promote Your Company</h3>
+                <p class="noteForUser">Claim your profile to engage with the world's largest procurement community</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card text-center">
+                <div class="svgContainer">
+                    <i-send class="big"></i-send>
+                </div>
+                <h3 class="card-body addReqMon">Comply With Procurement</h3>
+                <p class="noteForUser">Fullfil request with procurement professionals to monitor your company's health</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div style="overflow:hidden" class="card text-center">
+                    <p class="coming-soon" style="position: absolute;
+                    font-family: 'Inter UI';
+                    font-size: 80%;
+                    font-weight: bold;
+                    background: #10a4d7;
+                    color: #fff;
+                    padding: 1% 2%;
+                    width: 100%;
+                    left: -38%;
+                    transform: rotatez(-45deg);
+                    top: 10%;">COMING SOON</p>
+                <div class="svgContainer">
+                    <i-trending-up class="big"></i-trending-up>
+                </div>
+                <h3 class="card-body addReqMon">Expand Your Profile</h3>
+                <p class="noteForUser">Enhance your visibility by highlighting your company's capabilities and accomplishments</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="!this.claimed" class="col-md-12">
+        <p style="font-size: 13px;" class="terms-line">I confirm that I am authorized to provide information and details about my organization and would like to enroll for Supplier Compliance program.
+                    <br>By signing up, I accept the <a (click)='terms()'>Terms of Service.</a></p>
+    </div>
+    <div class="row">
+           
+        <div class="col-md-4 col-2"></div>
+        <div class="col-md-4 col-8 text-center">
+            
+            <button style="margin-top:26px!important" class="btn btn-prime1"  (click)="getStarted()" type="submit">
+                 <div class="text-center">GET STARTED</div>
+            </button>
+            
+            <p class="lightGreyFonts">For additional information, <a (click)="openFaq()" class="faq-Link">Check out
+                    the
+                    FAQs</a></p>
+        </div>
+        <div class="col-md-4 col-2"></div>
+    </div>
+</div>
+
+

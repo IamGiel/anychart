@@ -1,0 +1,19 @@
+<!-- <div class="savedQ" [@toggler]="state"> -->
+
+<div class="container">
+    <!-- <h1>TEST</h1> -->
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <div *ngFor="let q of questions" class="form-row">
+            <jhi-achilles-questions [question]="q" [form]="form"></jhi-achilles-questions>
+        </div>
+        <br>
+        <div class="form-row">
+            <button type="submit" class="btn btn-prime2" (click)="animateMe()">Save</button>
+        </div>
+    </form>
+    <div *ngIf="payLoad" class="form-row">
+        <strong>Saved the following values</strong><br>{{payLoad}}
+    </div>
+</div>
+
+<!-- </div> -->

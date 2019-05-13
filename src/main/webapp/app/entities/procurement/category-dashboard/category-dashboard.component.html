@@ -1,0 +1,216 @@
+<div *ngIf="successMsg.length>0||errMsg.length>0" style="width:100%;position: fixed;top:15px;left:0px;z-index: 1000;">
+        <div style="margin:0 auto;max-width: 30%" class="alert alert-danger" *ngIf="errMsg.length>0" >
+            <strong>Failed !</strong> {{errMsg}}
+        </div>
+            
+  
+        <div style="margin:0 auto;max-width: 30%" class="alert alert-success" *ngIf="successMsg.length>0" >
+            <strong>Success.</strong> {{successMsg}}
+        </div>
+ 
+  </div>
+
+
+<div class="dash-container">
+    
+    <div class="row divtitle">
+      <div class="col-md-3 cust-title">
+          <h4 >Manage Supplier Lists</h4>
+      </div>
+      <div class="col-md-6 col-9">
+        
+           
+        </div>
+      <div class="col-md-3 col-3 text-right" *ngIf="!isProductsTeam">
+            <button class="btn btn-prime" (click)="goToCompliance()" >Compliance Requests <i-arrow-right-circle></button>
+      </div>
+    </div>
+  <hr style="background-color: #E7E7E7;"/>
+  <div class="row" style="display: none;">
+      <div class="col-md-3">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon text-right">
+                    <div class="card-icon"><i class="material-icons">weekend</i></div>
+                    <p class="card-category">Bookings</p>
+                    <h3 class="card-title">184</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats"><i-arrow-right-circle></i-arrow-right-circle><a href="#pablo">Get More Details...</a></div>
+                </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon text-right">
+                    <div class="card-icon"><i class="material-icons">weekend</i></div>
+                    <p class="card-category">Bookings</p>
+                    <h3 class="card-title">184</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats"><i class="material-icons text-danger">warning</i><a href="#pablo">Get More Space...</a></div>
+                </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon text-right">
+                    <div class="card-icon"><i class="material-icons">weekend</i></div>
+                    <p class="card-category">Bookings</p>
+                    <h3 class="card-title">184</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats"><i class="material-icons text-danger">warning</i><a href="#pablo">Get More Space...</a></div>
+                </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+            <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon text-right">
+                    <div class="card-icon"><i class="material-icons">weekend</i></div>
+                    <p class="card-category">Bookings</p>
+                    <h3 class="card-title">184</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats"><i class="material-icons text-danger">warning</i><a href="#pablo">Get More Space...</a></div>
+                </div>
+            </div>
+      </div>
+  </div>
+  
+      <div class="divtitle">
+        <div class="row">
+          <div class="col-md-3">
+              <div class="separator2" style="margin-left:0px;cursor: pointer;" (click)='openFilter()'>
+                  <span class="searchIcon">
+                      <i-filter class="featherPagFil2">
+                  </span>
+                  <span style="margin-left:16px;">{{totalFilters}} Filters Applied</span>
+              </div>
+          </div>
+          <div class="col-md-3">
+                <div class="separator2"  style="display:none;">
+                    <span class="searchIcon">
+                        <i-search class="featherPagFil2">
+                    </span>
+                    <span style="margin-left:16px;">
+                      <input [ngModel]="searchKeyword" class="sup-input" style="color: grey;width: 134px" type="text" placeholder="Search Suppliers" (keydown.enter)="searchData($event)" (keyup)="showOldData($event)"/>
+                    </span>
+                </div>
+            </div>
+          <div class="col-md-6 text-right">
+            <jhi-my-pagination 
+            (goPage)="goToPage($event)"
+            (goNext)="onNext()"
+            (goPrev)="onPrev()"
+            [pagesToShow]="3"
+            [page]="page+1"
+            [perPage]="10"
+            [count]="total"  *ngIf="total>0"></jhi-my-pagination>
+          </div>
+        </div><br/>
+        <div  *ngIf="total>0" class="row">
+            <div class="table-responsive">
+              <table sortable-table  (sorted)="onSorted($event)" class="table table-hover table-borderless" style="width:99%;margin-left: 5px;">
+                <colgroup>
+                    <col class="col-group-3">
+                    <col class="col-group-1">
+                    <col span="{{isSupCollapse?3:6}}" class="col-group-2">
+                </colgroup>
+                <thead>
+                    <tr class="head-title">
+                        <th></th>
+                        <th scope="col" >Company</th>
+                        <th [attr.colspan]="isSupCollapse?3:6">Supplier
+                          <i-plus-square *ngIf="isSupCollapse" class="clsp-icon" (click)="toggleSupColmn()"></i-plus-square>
+                          <i-minus-square *ngIf="!isSupCollapse" class="clsp-icon" (click)="toggleSupColmn()"></i-minus-square>
+                        </th>
+                        <th [attr.colspan]="isCatCollapse?3:6">Category Manager
+                            <i-plus-square *ngIf="isCatCollapse" class="clsp-icon" (click)="toggleCatColmn()"></i-plus-square>
+                            <i-minus-square *ngIf="!isCatCollapse" class="clsp-icon" (click)="toggleCatColmn()"></i-minus-square>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th scope="col"  sortable-column="name" sort-direction = 'desc'>Name</th>
+                        <th scope="col"  sortable-column="duns">D.U.N.S</th>
+                        <th scope="col"  sortable-column="contact-name">Contact Name</th>
+                        <th scope="col">Email</th>
+                        <ng-container *ngIf="!isSupCollapse">
+                            <th scope="col" >Phone</th>
+                            <th scope="col" >Address</th>
+                            <th scope="col" >spends</th>
+                        </ng-container>
+                        <th scope="col">Category</th>
+                        <th scope="col">Contact Name</th>
+                        <ng-container *ngIf="!isCatCollapse">
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                        </ng-container>
+                        <ng-container>
+                            <th scope="col">ISIN</th>
+                        </ng-container>
+                        <th>Action</th>
+                     </tr>
+                </thead>
+                  <tbody>
+                      <tr *ngFor="let item of list; let i = index " [ngClass]="{'edit':item.editable}">
+                        <td class="package-selection"><span class="circle" [ngClass]="whatClassIsIt(item.packages)" ></span></td>
+                        <td>{{item.supplierName}}</td>
+                        <td class="sup-col" style="width: 150px;"><span *ngIf="!item.editable || !isProductsTeam"><span *ngIf="item.dunsNumber!=('null'|| null); else NullFiled">{{item.dunsNumber}}</span></span>
+                           <input *ngIf="item.editable && isProductsTeam" type="text" class="form-control sup-input"  name="dunsNumber" [(ngModel)]="item.dunsNumber">
+                        </td>
+                        <td class="sup-col"><span *ngIf="!item.editable || (!isCatManager && !isProductsTeam)"><span *ngIf="item.contactName!=('null'|| null); else NullFiled">{{item.contactName}}</span> </span>
+                            <input *ngIf="item.editable && (isCatManager || isProductsTeam)" type="text" class="form-control sup-input"  name="contactName" [(ngModel)]="item.contactName">
+                        </td>
+                        <td class="sup-col"><span *ngIf="!item.editable || (!isCatManager && !isProductsTeam)"><span *ngIf="item.contactEmail!=('null'|| null); else NullFiled">{{item.contactEmail}}</span></span>
+                            <input *ngIf="item.editable && (isCatManager || isProductsTeam)" type="email" class="form-control sup-input"  name="contactEmail" [(ngModel)]="item.contactEmail">
+                        </td>
+                        <ng-container *ngIf="!isSupCollapse">
+                            <td class="sup-col"><span *ngIf="!item.editable || (!isCatManager && !isProductsTeam)"><span *ngIf="item.contactPhone!=('null'|| null); else NullFiled">{{item.contactPhone}}</span></span>
+                                <input *ngIf="item.editable && (isCatManager || isProductsTeam)" type="text" class="form-control sup-input"  name="contactPhone" [(ngModel)]="item.contactPhone">
+                            </td>
+                            <td class="sup-col"><span *ngIf="!item.editable || !isProductsTeam"><span *ngIf="item.address!=('null'|| null); else NullFiled">{{item.address}}</span> </span>
+                                <input *ngIf="item.editable && isProductsTeam" type="text" class="form-control sup-input"  name="address" [(ngModel)]="item.address">
+                            </td>
+                            <td class="sup-col"><span *ngIf="!item.editable || !isProductsTeam"><span *ngIf="item.spendPercentage!=('null'|| null); else NullFiled">{{item.spendPercentage}}</span></span>
+                                <input *ngIf="item.editable && isProductsTeam" type="text" class="form-control sup-input"  name="spendPercentage" [(ngModel)]="item.spendPercentage">
+                            </td>
+                        </ng-container>
+                        <td><span *ngIf="item.category!=('null'|| null); else NullFiled">{{item.category}}</span></td>
+                        <td><span *ngIf="item.categoryMangerName!=('null'|| null); else NullFiled">{{item.categoryMangerName}}</span></td>
+                        <ng-container *ngIf="!isCatCollapse">
+                            <td>{{item.categoryMangerEmail}}</td>
+                            <td>{{item.categoryMangerPhone}}</td>
+                        </ng-container>
+                        <ng-container>
+                            <td class="sup-col" style="width: 150px;"><span *ngIf="!item.editable || !isProductsTeam"><span *ngIf="item.providerKey!=('null'|| null); else NullFiled">{{item.providerKey.ISIN}}</span></span>
+                                <input *ngIf="item.editable && isProductsTeam" type="text" class="form-control sup-input"  name="ISIN" [(ngModel)]="item.providerKey.ISIN">
+                            </td>
+                        </ng-container>
+                        <td *ngIf="!item.btnHide && !item.complianceRequested" style="width: 100px;padding: 0px;text-align:center;">
+                            <i-edit *ngIf="!item.editable" class="edit-icon" (click)="editData(item)" title="Edit"></i-edit>
+                            <i-check-circle *ngIf="item.editable" class="update-icon" (click)="updateData(item)" title="Update"></i-check-circle>
+                            <i-send *ngIf="isProductsTeam && !item.editable"  class="update-icon" (click)="sendComplianceRequest(item)" title="Send Request"></i-send>
+                            <i-x-circle *ngIf="item.editable"  class="update-icon" (click)="cancelEdit(item)" title="Cancel Edit" style="color:red;"></i-x-circle>                       
+                         </td>
+                        <ng-template #NullFiled>---</ng-template>
+                    </tr>
+                  </tbody>
+               </table>
+            </div>
+            <hr style="width: 100%; margin-top: 5%; background-color: #E7E7E7;"/>
+            <div class="row package-selection" style="margin-left:2%;font-size: 13px;"> <span class="circle Base"></span>&nbsp; Base &nbsp;<span class="circle Essential"></span>&nbsp; Essential &nbsp; <span class="circle Advantage"></span> &nbsp;Advantage &nbsp;</div>
+        </div>
+      </div>
+      
+           
+  
+   
+   <div class="row no-result-row" *ngIf="loadingData" style="display: block;">
+       <p class="no-result">Loading..</p>
+    </div>
+    <div class="row no-result-row" *ngIf="total<=0 && !loadingData" style="display: block;">
+        <p class="no-result"><b>No results found.</b> Please adjust your filter criteria. <span *ngIf="totalFilters!=undefined && totalFilters>0" class="clear-filter" (click)='clearSearch()'>Clear Filters <i-x-square></i-x-square></span></p>
+    </div>
+
+</div>

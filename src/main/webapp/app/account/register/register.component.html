@@ -1,0 +1,120 @@
+
+<div *ngIf="!success">
+    <form  autocomplete="off"  #signupForm="ngForm" class="form" role="form"  (ngSubmit)="signup()">
+            <p style="text-align: right;font-size: 10px;margin-bottom: 0px;"><span class="req">*</span> indicates required.</p>
+            <div class="form-group input-wrap">
+
+                <label class="firstName-label" for="firstName">First Name{{firstName?.errors.required}} </label><span class="req">*</span>
+                <input required type="text" class="form-control login-input" id="firstName" placeholder=""
+                [(ngModel)]="payload.firstName" name="firstName" [ngClass]="{ 'sup-input':loginType == 'sup'}"  >
+            </div>
+            <div class="form-group input-wrap">
+                    <label class="lastname-label" for="lastname">Last Name</label><span class="req">*</span>
+                    <input required type="text" class="form-control login-input" id="lastname" placeholder=""
+                    [(ngModel)]="payload.lastName" [ngClass]="{ 'sup-input':loginType == 'sup'}" name="lastname" >
+            </div>
+            <div class="form-group input-wrap">
+                    <label class="title-label" for="title">Title</label><span class="req">*</span>
+                    <input required type="text" class="form-control login-input"  id="title" placeholder=""
+                    [(ngModel)]="payload.title" [ngClass]="{ 'sup-input':loginType == 'sup'}" name="title">
+            </div>
+            
+            <div class="form-group input-wrap">
+                <label class="workemail-label" for="workemail">Work Email</label><span class="req">*</span>
+                <input required type="email" class="form-control login-input"  id="workemail" placeholder=""
+                [(ngModel)]="payload.email" [ngClass]="{ 'sup-input':loginType == 'sup'}" name="workemail">
+            </div>
+
+            <div style="position:relative"  class="form-group input-wrap">
+                    
+                    <label class="country-label" for="country">Country</label><span class="req">*</span>
+          
+                    <!--     <div ngbDropdown>
+                        <input style="cursor:pointer;" placeholder="Select Country" ngbDropdownToggle required readonly type="country" class="form-control login-input"  id="country" placeholder="" [(ngModel)]="payload.country" [ngClass]="{ 'sup-input':loginType == 'sup'}" name="country">
+                       <div style=" cursor:pointer;width:100%;height:600%;overflow:auto;" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <div style="cursor:pointer;width:100%;min-width:100%;max-width:100%" *ngFor="let country of countries" (click)="selectCountry(country.countryName)" class="dropdown-item">{{country.countryName}}</div>   
+                        </div>
+                        </div>
+                        <i-chevron-down style="position: absolute;right: 8px;top: 42px;width: 11px;" ></i-chevron-down>
+                   -->
+
+                   
+                        <ng-select
+                                *ngIf="countries!=undefined&&countries.length>0"
+                                class="custom"
+                                [class.sup-select]="loginType=='sup'"
+                                id="country"
+                                [items]="countries"
+                                bindLabel="countryName"
+                                bindValue="countryName"
+                                [ngModelOptions]="{standalone: true}"
+                                [(ngModel)]="payload.country">
+                        </ng-select>
+                </div>
+    
+            
+            <div class="form-group input-wrap">
+                    <label class="telephone-label" for="telephone">Telephone</label>
+                    <input type="number"  class="form-control login-input"  id="telephone"  placeholder=""
+                    [(ngModel)]="payload.contact" [ngClass]="{ 'sup-input':loginType == 'sup'}" name="telephone">
+                </div>
+            <div class="form-group input-wrap">
+                <label for="spassword">Password</label><span class="req">*</span>
+                <input (change)="checkPassword()" required  [attr.type]="showPass? 'text':'password' " class="form-control login-input"id="spassword" 
+                        [(ngModel)]="payload.password" [ngClass]="{ 'sup-input':loginType == 'sup'}" name="spassword" >
+                        <div class="showPwd"><i-eye (click)="showPwd()" *ngIf="!showPass"></i-eye><i-eye-off (click)="showPwd()" *ngIf="showPass"></i-eye-off></div>
+                        
+            </div>
+            
+            <jhi-password-strength-bar [passwordToCheck]="payload.password"></jhi-password-strength-bar>
+            
+            <div style="margin-bottom:35px;" class="form-group input-wrap">
+                    <label for="scpassword">Confirm Password</label><span class="req">*</span>
+                    <input (change)="checkPassword()" required  [attr.type]="showPassc? 'text':'password' "  class="form-control login-input"  id="scpassword" 
+                            [(ngModel)]="payload.confirmPassword" [ngClass]="{ 'sup-input':loginType == 'sup'}" name="scpassword">
+                    <div class="showPwd"><i-eye (click)="showPwdc()" *ngIf="!showPassc"></i-eye><i-eye-off (click)="showPwdc()" *ngIf="showPassc"></i-eye-off></div>
+                            
+            </div> 
+                <span>
+                        <input  id="terms" type="checkbox" aria-invalid="false" [(ngModel)]="termsAccepted" name="terms" >
+                        <label for="terms" class="rememberMe" [ngClass]="{ 'suprememberMe':loginType == 'sup'}">
+                                <i-square class="rememberme-check" *ngIf="!termsAccepted"></i-square>
+                                <i-check-square  class="rememberme-check" *ngIf="termsAccepted"></i-check-square>
+                        </label>
+                </span>
+                <span style="font-size: 12px!important;font-style: italic;color: #181818;opacity: 0.8;">I agree to Beroe's <span  class="login-text" [ngClass]="{'sup-login-text':loginType == 'sup'}"><span class="menuItemActive" style="font-size: 12px!important;
+                        text-decoration: none!important;
+                        border: none;font-weight: 500;opacity:1;cursor:pointer;border-bottom:none!important" (click)="openTerms()" >Terms of Use,</span></span>  <span  class="login-text" [ngClass]="{'sup-login-text':loginType == 'sup'}"><span class="menuItemActive" style="font-size: 12px!important;
+                        text-decoration: none!important;
+                        border: none;font-weight: 500;opacity:1;cursor:pointer;border-bottom:none!important" (click)="openCookie()" >Cookie Policy</span></span> and <span  class="login-text" [ngClass]="{'sup-login-text':loginType == 'sup'}"><span class="menuItemActive" style="font-size: 12px!important;
+                        text-decoration: none!important;border: none;
+                        font-weight: 500;opacity:1;cursor: pointer;border-bottom:none!important" (click)="openPrivacy()">Privacy Policy Agreement</span></span>.
+                </span>
+
+       
+                
+             
+            <div class="input-wrap" style="margin-top:40px;">
+                
+                <div class="col-md-6" style="padding-top:15px; width: 217px;display: inline-flex;">
+                    
+                </div>
+                 
+        <div *ngIf="message.length>0" style="margin-bottom:50px" class="alert alert-danger" >
+                        <strong> {{message}}</strong>
+        
+
+        </div>
+                    <div class="col-md-6 " style="    display: inline;">
+                    <button [disabled]="!termsAccepted||signupForm.form.invalid||(payload.password!=payload.confirmPassword)||payload.country==undefined" style="float:right" type="submit" class="btn login-button" [ngClass]="{'proc-login-button':loginType == 'proc', 'sup-login-button':loginType == 'sup'}" >Sign Up</button>
+                    </div>
+            </div>
+        </form>
+       
+</div>  
+<div *ngIf="success" style="width:100%;margin-top:35%;" class="row">
+    <div class="col-12">
+            <p   [ngClass]="{'blue':loginType == 'sup','purple':loginType!='sup'}" style="text-align:center;font-size:16px;font-weight:bold">Registration successful. Please login.</p>
+            
+    </div>
+</div>        

@@ -1,0 +1,37 @@
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: white !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+.form-control {
+    border: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-group label {
+    text-transform: uppercase;
+    font-family: 'Inter UI';
+    color: #181818;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.selected {
+    background: #804cd9;
+    color: #fff !important;
+}

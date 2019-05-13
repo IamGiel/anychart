@@ -1,0 +1,221 @@
+.sup-coll {
+    background: #f8f8f8;
+}
+.col-group-2 {
+    background: #f8f8f8;
+}
+thead tr th {
+    color: #8b8b8b;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.table-hover tbody tr:hover,
+.table-hover tbody tr.edit {
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px 0 rgba(24, 24, 24, 0.1);
+    box-shadow: 0px 0px 16px #8f8f8f;
+}
+.clsp-icon {
+    margin-left: 5px;
+    height: 13px;
+    width: 13px;
+    color: #6b4cd9;
+    cursor: pointer;
+}
+.edit-icon {
+    width: 20px;
+    color: #8b8b8b;
+    cursor: pointer;
+}
+.update-icon {
+    width: 20px;
+    color: #6b4cd9;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.head-title th {
+    color: #464646 !important;
+    font-size: 13px !important;
+}
+.sup-input {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom: 1px #6b4cd9;
+    border-left-width: 0;
+}
+
+.sup-input:focus {
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+.sup-input:focus {
+    background-image: linear-gradient(0deg, #5d52a8 2px, rgba(0, 150, 136, 0) 0),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.26) 1px, transparent 0);
+}
+.cust-title h4 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+.divtitle {
+    margin-top: 40px;
+}
+.searchIcon {
+    box-sizing: border-box;
+    height: 11.45px;
+    width: 11.45px;
+}
+
+.card-stats {
+    border: 1px solid lightgrey;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.card-stats::before,
+.card-stats::after {
+    content: '';
+    z-index: -2;
+    display: block;
+    position: absolute;
+    bottom: 0.75em;
+    left: 0.18em;
+    width: 40%;
+    height: 20%;
+    max-height: 13em;
+    box-shadow: 0px 13px 8px #979797;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+.card-stats .card-header {
+    border: none;
+}
+.card-stats .card-header .card-icon {
+    border-radius: 3px;
+    background-color: #999;
+    padding: 15px;
+    margin-top: -30px;
+    margin-right: 15px;
+    float: left;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px #544ad8;
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+}
+.card.card-stats .card-header i {
+    font-size: 36px;
+    line-height: 56px;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    color: white;
+}
+.card.card-stats .card-header .card-category {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 10px;
+    color: #999;
+    font-size: 14px;
+}
+.card .card-header.card-header-icon .card-title {
+    color: #3c4858;
+    margin: 0;
+}
+.card.card-stats .card-header + .card-footer {
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+    padding: 10px 0 0;
+    margin: 0 15px 10px;
+    border-radius: 0;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+.card-stats .card-footer .stats {
+    color: #999;
+    font-size: 12px;
+    line-height: 22px;
+    display: inline-flex;
+}
+.no-result-row {
+    display: block;
+    text-align: center;
+    border: 1px solid silver;
+    padding: 25px 10px 10px 10px;
+}
+.clear-filter {
+    cursor: pointer;
+}
+.dash-container {
+    min-height: 100vh !important;
+}
+.table td,
+.table th {
+    vertical-align: middle !important;
+}
+.btn-prime {
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #804cd9 0%, #804cd9 51%, #544ad8 100%);
+    transition: 0.5s;
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    background-size: 200% auto;
+    text-transform: uppercase;
+}
+
+.btn-prime:hover {
+    background-position: right center;
+}
+.close-icon {
+    position: relative;
+    top: -31px;
+    right: -8px;
+    color: #dee2e6;
+    width: 20px;
+    cursor: pointer;
+}
+.close-icon:hover {
+    color: #6b4cd9;
+}
+
+.circle:before {
+    content: ' \25CF';
+    color: white;
+}
+.package-selection .Base:before {
+    color: #31d490 !important;
+}
+.package-selection .Essential:before {
+    color: #14b4d2 !important;
+}
+.package-selection .Advantage:before {
+    color: #ffbe45 !important;
+}

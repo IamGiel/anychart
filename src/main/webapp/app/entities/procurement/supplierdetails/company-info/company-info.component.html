@@ -1,0 +1,98 @@
+<form [formGroup]="form"  autocomplete="off">
+<ng-container *ngIf="!processing">
+  <div style="padding:0px" class="container-fluid">
+    <ng-container *ngFor="let section of sections | orderBy:'sectionOrder'" >
+        <div *ngIf="valid(section.numberOfRows)&&valid(section.questions)&&section.questions.length>0&&valid(section.section_name)&&section.section_name.length>0" [ngStyle]="(valid(section.metadata)&&valid(section.metadata.headingStyle))?section.metadata.headingStyle:{}"  class="basic-information">
+            {{section.section_name}}
+        </div>
+      <div *ngIf="valid(section.numberOfRows)&&valid(section.questions)&&section.questions.length>0"  class="section" [ngClass]="{'editBg':!section.readOnly}" [ngStyle]="(valid(section.metadata)&&valid(section.metadata.style))?section.metadata.style:{}" >
+      
+      <span title="Edit" *ngIf="section.readOnly&&isSupplier" (click)="toggleEdit(section)" style="cursor:pointer; font-size: 10px;display: inline-block;position: absolute;right: 0px;padding: 12px 13px 13px 15px;background-color: #E7E7E7;border-radius: 0 4px 0 4px;top: 0px;">
+        <i-edit style="display:inline-block;width:12.8px; height:12.8px;"></i-edit>
+      </span>
+      <button  title="Submit" *ngIf="!section.readOnly&&isSupplier" [disabled]="notValid(section.questions)" (click)="toggleEdit(section)" style="border:none;outline:none;color:#fff;background-color: #31D490;cursor:pointer; font-size: 10px;display: inline-block;position: absolute;right: 0px;padding: 12px 13px 13px 15px;border-radius: 0 4px 0 4px;top: 0px;">
+          <i-check style="display:inline-block;width:12.8px; height:12.8px;"></i-check>
+      </button>
+      <div *ngFor="let row of section.numberOfRows" class="row">
+        <ng-container *ngFor="let question of section.questions | orderBy: 'displayOrder'" >
+          <div *ngIf="valid(question.metadata)&&valid(question.row)&&question.row==row && show(question,section)" [ngClass]="valid(question.metadata.colsize)?question.metadata.colsize:'col-lg-6'">
+            <div [ngStyle]="box.style!=undefined?box.style:{}" *ngFor="let box of question.metadata.boxes | orderBy:'order'">
+                <ng-container  *ngIf="box.name=='label'">
+                  <div  class="label">
+                    {{question.question}}
+                  </div>
+                </ng-container>
+                <ng-container  *ngIf="box.name=='input'" >
+                  <ng-container *ngIf="box.type=='text'||box.type=='number'||box.type=='date'">
+                    <input (input)="handleChildren($event.target.value,question.questionId,section)" class="input" *ngIf="!section.readOnly&&!question.metadata.readOnly&&box.type!='date'&&question.answerType!='TEXT_AREA'" [ngStyle]="box.inputStyle!=undefined?box.inputStyle:{}" [formControlName]="question.questionId"
+                    [id]="'question'+question.questionId" [type]="box.type"/>
+                    <input   (input)="handleChildren($event.target.value,question.questionId,section)" onkeydown="return false" min="{{minDate(question)| date:'yyyy-MM-dd'}}"  max="{{maxDate(question)| date:'yyyy-MM-dd'}}"  class="input" *ngIf="!section.readOnly&&!question.metadata.readOnly&&box.type=='date'&&question.answerType!='TEXT_AREA'" [ngStyle]="box.inputStyle!=undefined?box.inputStyle:{}" [formControlName]="question.questionId"
+                    [id]="'question'+question.questionId" [type]="box.type"/>
+                    <textarea  (input)="handleChildren($event.target.value,question.questionId,section)" [formControlName]="question.questionId" style="outline:none;border: 2px solid #e7e7e7;resize:none;width:100%;background:transparent" *ngIf="!section.readOnly&&!question.metadata.readOnly&&question.answerType=='TEXT_AREA'" rows="4" [ngStyle]="box.inputStyle!=undefined?box.inputStyle:{}"></textarea>
+                  </ng-container>
+                    
+                  <ng-container *ngIf="box.type=='file'">
+                      <label *ngIf="!section.readOnly&&!question.metadata.readOnly" for="testFile{{question.questionId}}"><span  style="cursor: pointer;outline: none;border-bottom: 2px solid #e7e7e7;padding: 6px 0px;font-size: 14px;display: inline-block;border-radius: 0px;">Choose File</span>{{(valid(form.get(question.questionId.toString()).value))?' - '+ getFileName(form.get(question.questionId.toString()).value) :'' }} </label>
+                      <input  (input)="handleChildren($event.target.value,question.questionId,section)" id="testFile{{question.questionId}}" hidden type="file" (change)="onFileChange($event, question.questionId)" accept=".xlsx, .xls, .pdf, .doc, .docx"
+                      style="width: auto" class="form-control tempPlaceHolder" #inputValue  /> 
+                  </ng-container>
+
+                  <ng-container *ngIf="question.multiselect!=undefined">
+                    <ng-select 
+                      *ngIf="!section.readOnly&&!question.metadata.readOnly"
+                      [formControlName]="question.questionId" 
+                      placeholder="Select some items"
+                      [items]="question.options"
+                      bindLabel="optionValue"
+                      bindValue="optionValue"
+                      [multiple]="question.multiselect"
+                      (open)="onOpen(question,'',true)"
+                      [loading]="question.loading"
+                      (add)="onChange($event,question,true,section)"
+                      (remove)="onChange($event,question,false,section)"
+                      (change)="onChange($event,question,null,section)"
+                      (scrollToEnd)="onScrollToEnd(question)"
+                      [virtualScroll]="true"
+                      [searchable]="false"
+                     
+                      >
+                      <ng-template ng-header-tmp>
+                        <input  [ngModelOptions]="{standalone: true}" (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;    outline: none;padding-left: 5px;" (keyup)="search(question)" [(ngModel)]="question.search"     type="company" class="form-control login-input"  id="search{{question.questionId}}" placeholder="Search"   name="search{{question.questionId}}">
+                       
+                      </ng-template>
+                      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                        <div class="ng-value" *ngFor="let item of (items ? items.slice(0,1): [])">
+                            <span class="ng-value-label">{{item.optionValue}}</span>
+                            <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                        </div>
+                        <div class="ng-value" *ngIf="items.length > 1" >
+                            <span class="ng-value-label">{{items.length - 1}} more...</span>
+                        </div>
+                      </ng-template>
+                    </ng-select>
+                  </ng-container>
+                  <ng-container *ngFor="let c of question.customOptions"> 
+                    <textarea  *ngIf="showOptional(section,question,c)" [formControlName]="'custom_'+question.questionId.toString()+'_'+c" style="outline:none;border: 2px solid #e7e7e7;resize:none;width:100%;margin-top: 10px" rows="4" [ngStyle]="box.inputStyle!=undefined?box.inputStyle:{}"></textarea>
+                  </ng-container>
+                  <div title="{{form.get(question.questionId.toString()).value}}{{customAnswer(question)}}" [ngStyle]="box.style!=undefined?box.style:{}" class="inputText" *ngIf="(section.readOnly||question.metadata.readOnly)&&this.valid(form.get(question.questionId.toString()))">
+                    {{question.answerType!='FILE'?form.get(question.questionId.toString()).value:getFileName(form.get(question.questionId.toString()).value)}}{{customAnswer(question)}} 
+                  </div>
+                </ng-container>
+                <ng-container  *ngIf="box.name=='error' && question.metadata.validation.errors!=undefined&&question.metadata.validation.errors.length>0">                  
+                  <div *ngIf="formValidation[question.questionId].invalid && !section.readOnly&&!question.metadata.readOnly" [ngStyle]="box.style!=undefined?box.style:{}" class="error-text">
+                  <ng-container *ngFor="let e of question.metadata.validation.errors">
+                        <div *ngIf="formValidation[question.questionId].errors[e]">
+                            {{question.metadata.validation.messages[e]}}
+                        </div>
+                  </ng-container>
+                  </div >
+                </ng-container>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+  </div>
+</ng-container>
+</form>

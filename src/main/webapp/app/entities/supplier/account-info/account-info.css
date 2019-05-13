@@ -1,0 +1,316 @@
+/* .welcome,
+.display-4 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.card {
+    height: 244px !important;
+}
+
+.cards {
+    font-weight: bold;
+    font-size: 19px;
+    margin-top: 60px;
+}
+
+.steps {
+    margin-bottom: 40px;
+    opacity: 0.5;
+}
+
+.titleContainer {
+    margin-bottom: 48px;
+}
+
+.noteForUser {
+    opacity: 0.8;
+    font-size: 21px !important;
+    font-weight: 100;
+    margin-bottom: 70px;
+    padding: 0px 20px 0px 20px;
+}
+
+.formDiv {
+    position: relative;
+    display: block;
+    top: -6vw;
+}
+
+.btnContainer {
+    position: relative;
+}
+
+.checkBx {
+    position: relative;
+    display: inline-flex;
+}
+
+.checkBxElement {
+    position: relative;
+    left: 0px;
+    top: 3px;
+}
+
+.i-am-authorized-to-c {
+    height: 40px;
+    width: 313px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.backBtn {
+    height: 48px;
+    width: 114px;
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+
+#nextCleared {
+    color: white;
+    height: 48px;
+    width: 182px;
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+    background: linear-gradient(134.72deg, #19c8cc 0%, #0c91dd 100%);
+    position: relative;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-style: none !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+} */
+
+.pReq h5 {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+.pReq h1 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+}
+.pReq .title p {
+    padding: 10px 40px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 18px;
+}
+
+.pReq .pend-box {
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    padding: 40px 40px 15px;
+    margin-top: 10px;
+}
+.pReq .pend-box h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+.pReq .pend-box p {
+    padding-top: 12px;
+    opacity: 0.8;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.blkColor {
+    color: #181818 !important;
+}
+.pReq .btn-back {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    width: 114px;
+    height: 48px;
+}
+.pReq .btn-back:hover {
+    background: silver;
+}
+.pReq .btn-back span {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+.pReq .btn-prime2 {
+    border-radius: 24px;
+    width: 115px;
+    height: 48px;
+    background: linear-gradient(134.72deg, #19c8cc 0%, #19c8cc 51%, #0c91dd 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-transform: uppercase;
+}
+.pReq .btn-prime2:hover {
+    background-position: right center;
+}
+
+.pReq .btn-prime2 span {
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+.pReq .request h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+.pReq .request p {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+}
+.pReq hr {
+    border-radius: 4px 4px 0 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+}
+.padTop30 {
+    padding-top: 30px !important;
+}
+.pReq .desc p {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+}
+.pReq a {
+    color: #14b4d2;
+}
+.i-am-authorized-to-c {
+    height: 40px;
+    width: 344px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+input:checked {
+    width: 20px;
+    border-radius: 4px;
+    background-color: #14b4d2;
+}
+.ckbox-5 {
+    width: 20px;
+    border-radius: 4px;
+    background-color: #14b4d2;
+}
+
+.form-control {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: none !important;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    line-height: 28px;
+    padding: 0;
+}
+
+.accountLbl {
+    height: 20px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none !important;
+    padding: 0;
+}
+
+input:focus,
+input:form-control:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .pReq .title h1 {
+        font-size: 20px;
+    }
+    .pReq .title p {
+        font-size: 14px;
+        padding: 0px;
+    }
+    .pReq .request h3,
+    .pReq .pend-box h3 {
+        font-size: 16px;
+    }
+    .btnRow {
+        text-align: center;
+    }
+    .pReq .btn-prime2,
+    .pReq .btn-back {
+        display: block;
+        width: 100%;
+    }
+    .pReq .desc p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="row">
+
+
+
+      <div *ngIf="open.length==0"  class="col-12">
+          <div style="position:relative;width: 610px;margin: 0 auto;max-width:100%;margin-top:35px">
+            <div>
+              <div class="row" style="    justify-content: center;">
+
+                <div  class="col-lg-6" style="margin-bottom:35px">
+                  <div (click)="openSection('process')" style="cursor:pointer;padding:35px;width:90%;margin:0 auto;border: 1px solid #00000024;box-shadow:0px 2px 3px 0px #88888840">
+                      <fa-icon  style="color: #584ad8c2;font-size: 50px;margin: 0 auto;display: block;text-align: center;" [icon]="faFileAlt"></fa-icon>
+                      <p style="text-align: center;color: #000000ba;font-weight: bold;">Process File</p>
+                  </div>
+                </div>
+
+
+                <div  class="col-lg-6" style="margin-bottom:35px">
+                  <div (click)="openSection('request')" style="cursor:pointer;padding:35px;width:90%;margin:0 auto;border: 1px solid #00000024;box-shadow:0px 2px 3px 0px #88888840">
+                      <fa-icon  style="color: #584ad8c2;font-size: 50px;margin: 0 auto;display: block;text-align: center;" [icon]="faBoxOpen"></fa-icon>
+                      <p style="text-align: center;color: #000000ba;font-weight: bold;">Create Compliance Request </p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+    <div *ngIf="open.indexOf('process')>=0"  class="col-12">
+      <div style="position:relative;width: 610px;margin: 0 auto;max-width:100%">
+        <h3 class="heading">Process File</h3>
+        <fa-icon (click)="close('process')" style="cursor:pointer;color: #584ad8;font-size: 21px;position: absolute;right: 6px;" [icon]="faTimes"></fa-icon>
+        <div style="border: 1px solid #00000024;padding:45px 35px;box-shadow:0px 2px 3px 0px #88888840">
+           <label for="process" style="display:block;margin-bottom:15px;text-align:left">Enter file UUID</label>
+            <input (ngModelChange)="change($event,'process')" name="process" id="process" type="text" [(ngModel)]="processRequestId" />
+            <button *ngIf="!processLoading" (click)="process()" [disabled]="processRequestId==undefined||processRequestId==null||processRequestId.length==0" >Process</button>
+            <div *ngIf="processLoading" class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+              </div>
+            
+            
+            <div *ngIf="!processLoading&&processRequestId!=undefined&&processRequestId!=null&&processRequestId.length>0&&procesedResponse!=null" class="response">
+                <h5 style="margin-bottom: 15px;color: #000000ab;">Response</h5>
+                <p>{{procesedResponse}}</p>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div *ngIf="open.indexOf('request')>=0"  class="col-12">
+        <div style="position:relative;width: 610px;margin: 0 auto;max-width:100%">
+          <h3 class="heading">Create Compliance Request</h3>
+          <fa-icon (click)="close('request')" style="cursor:pointer;color: #584ad8;font-size: 21px;position: absolute;right: 6px;" [icon]="faTimes"></fa-icon>
+          <div style="border: 1px solid #00000024;padding:45px 35px;box-shadow:0px 2px 3px 0px #88888840">
+             <label for="process" style="display:block;margin-bottom:15px;text-align:left">Enter file UUID</label>
+              <input (ngModelChange)="change($event,'request')" name="process" id="process" type="text" [(ngModel)]="createRequestId" />
+              <button *ngIf="!requestLoading" (click)="createRequest()" [disabled]="createRequestId==undefined||createRequestId==null||createRequestId.length==0" >Create</button>
+              <div *ngIf="requestLoading" class="sk-cube-grid">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+                </div>
+              
+              
+              <div *ngIf="!requestLoading&&createRequestId!=undefined&&createRequestId!=null&&createRequestId.length>0&&createResponse!=null" class="response">
+                  <h5 style="margin-bottom: 15px;color: #000000ab;">Response</h5>
+                  <p>{{createResponse}}</p>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+  </div>
+</div>
+

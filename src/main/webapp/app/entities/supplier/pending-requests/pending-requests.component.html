@@ -1,0 +1,114 @@
+
+<div class="container pReq" *ngIf="PDR!=null">
+    <div class="row" > 
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-center title">
+            <h5>STEP 2 of 3</h5>
+            <h1>Pending Data Requests</h1>
+            <p>{{userDetails.fullName}}, from {{userDetails.companyName}}, has requested your company’s risk information for compliance. Please approve the request below.</p>
+        <div class="row"></div>
+      
+        </div>
+        <div class="col-md-2"></div>
+     
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="alert alert-danger" *ngIf="err" >
+                <strong>Failed!</strong> {{errMsg}}.
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row request">
+                <div class="col-md-7"><h3>Request from {{userDetails.companyName}}.</h3></div>
+                <div class="col-md-5 text-right"><p>Requested {{PDR.requestedDate |niceDateFormatPipe}}</p></div>
+            </div>
+            <div class="pend-box" *ngFor="let item of pendingList" style="display:none;">
+                
+                <div class="row">
+                    <div class="col-md-6 col-8"><h3> {{item.name}}</h3></div>
+                    <div class="col-md-6 text-right col-4"><h3>${{item.price}}</h3></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8"><p class="blkColor">{{item.description}} </p></div>
+                 </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+               <ng-container *ngFor=" let item of pendingListNew">
+                  
+                            <div *ngIf="PDR!=null&&PDR.requestedPackageList!=null&&PDR.requestedPackageList.length>0&&PDR.requestedPackageList[0]!=null&&PDR.requestedPackageList[0].name!=null && PDR.requestedPackageList[0].name == item.reqName" class="card request-box col-md-5">
+                                    <h2 style="text-align:center"> {{item.reqName}}</h2>
+                                    <h3 style="text-align:center">{{item.amout}}</h3>
+                                    <hr />
+                                    <p style="display:none" class="card-text blkColor">{{item.reqDesc}} </p>
+                                    <hr />
+                                    <h3 style="text-align:center">Financial Compliance powered by D&B</h3>
+                                    <p class="feature-item" *ngFor="let feature of item.reqFinancial">
+                                        <span>
+                                            <i-check class="big"></i-check>
+                                        </span> {{feature}}
+                                    </p>
+                                    <hr />
+                                    <h3>Environmental Compliance powered by <ng-container *ngIf="item.reqName!='Base'">CSR Hub and</ng-container> Dow Jones</h3>
+                                    <p class="feature-item" *ngFor="let financial of item.reqEnviormental">
+                                        <span>
+                                            <i-check class="big"></i-check>
+                                        </span> {{financial}}
+                                    </p>
+                                    <hr />
+                                    <h3>Labor, Health and Safety Compliance powered by <ng-container *ngIf="item.reqName!='Base'">Achilles and </ng-container>Dow Jones</h3>
+                                    <p class="feature-item" *ngFor="let labor of item.reqLabor">
+                                        <span>
+                                            <i-check class="big"></i-check>
+                                        </span> {{labor}}
+                                    </p>
+                                    <hr />
+                                    <h3>Ethical Compliance powered by Dow Jones</h3>
+                                    <p class="feature-item" *ngFor="let ethical of item.reqEthical">
+                                        <span>
+                                            <i-check class="big"></i-check>
+                                        </span> {{ethical}}
+                                    </p>
+                                    <div style="display:none;" class="ribbon" *ngIf="item.reqName=='Advantage'"><span>Coming Soon</span></div> 
+                                </div>
+                    
+                    
+                </ng-container>
+            </div>
+            <hr/>
+            <div class="row request">
+                <div class="col-md-6 col-6"><h3>Total Cost:</h3></div>
+                <div class="col-md-6 text-right col-6"><h3>${{PDR.totalPrice}}</h3></div>
+            </div>
+            <div class="row desc padTop30">
+                <div class="col-md-12" ><p style="text-align:center"> <a (click)="gotoFaq()">Check out the FAQs</a> for more information.<br/> If you have any questions, email us at compliance.support@beroe-inc.com</p></div>
+                
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+  
+    <div class="row padTop30 btnRow">
+        <div class="col-md-4 offset-md-2 col-12">
+            <button class="btn btn-back" (click)="viewAllRequest()"><span>View All Requests</span></button>
+        </div>
+        <div class="col-md-4 text-right col-12">
+            <button class="btn btn-prime2" (click)="approveRequest()" ><span>ACCEPT REQUEST</span></button>
+        </div>
+    </div>
+    <div class="row padTop30"></div>
+
+</div>
+<div class="container pReq text-center" *ngIf="PDR==null">
+    <div class="row padTop30"></div>
+    <p >No Request found . Please check dashboard for other requests.
+    <div class="col-md-4 offset-md-4 col-12">
+        <button class="btn btn-back" (click)="viewAllRequest()"><span>View All Requests</span></button>
+    </div>
+    <div class="row padTop30"></div>
+</div>

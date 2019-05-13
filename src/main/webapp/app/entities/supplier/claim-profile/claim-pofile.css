@@ -1,0 +1,176 @@
+.pReq h5 {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+.pReq h1 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+}
+.pReq .title p {
+    padding: 10px 40px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 18px;
+}
+
+.pReq .pend-box {
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    padding: 40px 40px 15px;
+    margin-top: 10px;
+}
+.pReq .pend-box h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+.pReq .pend-box p {
+    padding-top: 12px;
+    opacity: 0.8;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.blkColor {
+    color: #181818 !important;
+}
+.pReq .btn-back {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+}
+.pReq .btn-back:hover {
+    background: silver;
+}
+.pReq .btn-back span {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    padding: 0px 35px;
+}
+
+.pReq .btn-prime2 {
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #19c8cc 0%, #19c8cc 51%, #0c91dd 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-transform: uppercase;
+}
+.pReq .btn-prime2:hover {
+    background-position: right center;
+}
+
+.pReq .btn-prime2 span {
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.pReq .request h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+.pReq .request p {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+}
+.pReq hr {
+    border-radius: 4px 4px 0 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+}
+.padTop30 {
+    padding-top: 30px !important;
+}
+.pReq .desc p {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+}
+.pReq a {
+    color: #14b4d2;
+}
+.i-am-authorized-to-c {
+    height: 40px;
+    width: 344px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+input:checked {
+    width: 20px;
+    border-radius: 4px;
+    background-color: #14b4d2;
+}
+.ckbox-5 {
+    width: 20px;
+    border-radius: 4px;
+    background-color: #14b4d2;
+}
+
+@media (max-width: 768px) {
+    .pReq .title h1 {
+        font-size: 20px;
+    }
+    .pReq .title p {
+        font-size: 14px;
+        padding: 0px;
+    }
+    .pReq .request h3,
+    .pReq .pend-box h3 {
+        font-size: 16px;
+    }
+    .btnRow {
+        text-align: center;
+    }
+    .pReq .btn-prime2,
+    .pReq .btn-back {
+        display: block;
+        width: 100%;
+    }
+    .pReq .desc p {
+        font-size: 13px;
+    }
+}
+btn.disabled,
+.btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}

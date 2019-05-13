@@ -1,0 +1,117 @@
+<div class="container manage-compliance" style="display: none;">
+    <div class="row" style="padding:0px;">
+        <div style="padding:0px;color:#5d4ad8" class="col-12">
+            <h5>
+                Curated File Upload
+            </h5>
+        </div>
+    </div>
+        <div class="row" style="background:#e7e7e74f;margin-bottom:50px">
+        <div class="col-lg-6">
+            <div style="padding:15px 0px;">
+                <form #uploadForm="ngForm">
+                        <p style="font-size:12px;font-weight:bold;margin-bottom:0px;color:#181818">File UUID</p>
+                        <input required [(ngModel)]="fileUUID" style="   box-shadow:none; display: block;margin-bottom: 20px;width: 100%;height: 35px;background: transparent;border: none;
+                        border-bottom: 1px solid #6a4bd8;outline:none" type="text" name="fileUploadRequestId" id="fileUploadRequestId"/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input required (change)="selectFile($event)" style="margin-top:15px;width:100%;display:inline-block" type="file" name="fileUploadFile" id="fileUploadFile">    
+                            </div>
+                            <div   class="col-lg-6">
+                                <button [disabled]="disabled" (click)="uploadFile()" style="margin-top:15px;width: 100%;display: inline-block;border: none;background: #5d4ad8;color: #fff;
+                                font-size: 14px;height: 35px;border-radius: 4px;box-shadow: 0px 2px 5px 1px #b1b0b0;cursor:pointer"  type="submit" value="Upload"> Upload</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+            
+        </div>
+        <div  class="col-lg-6" style="padding:15px;"> 
+            <p style="margin-bottom:4px;font-weight:bold;margin-bottom:0px;">Response:</p>
+                
+            <div style="padding:15px;background:#ffffff;display:block;width:100%;">
+                <span *ngIf="uploadResponse!==undefined">
+                    {{uploadResponse}}
+                </span>
+            </div>
+
+        </div>
+    </div>
+    <div class="row" style="margin-bottom:50px">
+        <div style="padding:0px;color:#5d4ad8" class="col-12">
+            <h5>
+                Create Compliance Request
+            </h5>
+            <div style="padding:15px;background:#e7e7e74f;"  class="row">
+                    <div style="padding:15px;" class="col-lg-6">
+                            <form >
+                                <p style="font-size:12px;font-weight:bold;margin-bottom:0px;color:#181818">File UUID</p>
+                                <input required  [(ngModel)]="requestId" style="width:50%;box-shadow:none;margin-right:15px;display:inline-block;margin-bottom: 20px;height: 35px;background: transparent;border: none;
+                                border-bottom: 1px solid #6a4bd8;outline:none"  type="text" name="createComplianceRequest" id="createComplianceRequest"/>
+                                <input (click)="createCompliance()" style="width:100px;margin-top:15px;display:inline-block;border: none;background: #5d4ad8;color: #fff;
+                                font-size: 14px;height: 35px;border-radius: 4px;box-shadow: 0px 2px 5px 1px #b1b0b0;cursor:pointer" type="submit" value="Submit"> 
+                            </form>
+                        </div>
+                        <div  class="col-lg-6" style="color:#000;padding:15px;"> 
+                                <p style="margin-bottom:4px;font-weight:bold;margin-bottom:0px;">Response:</p>
+                                    
+                                <div style="padding:15px;background:#ffffff;display:block;width:100%;">
+                                    <span *ngIf="createComplianceResponse!==undefined">
+                                        {{createComplianceResponse}}
+                                    </span>
+                                </div>
+                    
+                        </div>
+            </div>
+            
+        </div>
+    </div>
+   
+</div>
+<div class="container manage-compliance" style="min-height: 100vh;">
+    <div class="row" style="margin-bottom:50px">
+        <div style="padding:0px;color:#5d4ad8" class="col-12">
+            <h5>Upload supplier based on company</h5>
+            <div style="padding:15px;background:#e7e7e74f;"  class="row">
+                <div style="padding:15px;" class="col-lg-6">
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="company">Companies</label>
+                                <select class="form-control" id="company" formControlName="company" (change)="companyChange($event)">
+                                    <option value='undefined' selected>Select Company</option>
+                                    <option *ngFor="let company of companies" [value]="company.id">{{company.companyName}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6" >
+                                <label for="user">Users</label>
+                                <select class="form-control" id="user" formControlName="user" (change)="userChange($event)">
+                                    <option value='undefined' selected>Select User</option>
+                                    <option *ngFor="let user of users" [value]="user.userEmail">{{user.userName}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6" >
+                                <input [disabled]="showFileUploadBtn" required (change)="selectFileToUpload($event)" style="margin-top:15px;width:100%;display:inline-block" type="file" name="fileUploadFile" id="fileUploadFile">    
+                            </div>
+                            <div   class="col-lg-6">
+                                <button (click)="uploadSupplierFile()" style="margin-top:15px;width: 100%;display: inline-block;border: none;background: #5d4ad8;color: #fff;
+                                font-size: 14px;height: 35px;border-radius: 4px;box-shadow: 0px 2px 5px 1px #b1b0b0;cursor:pointer"  type="submit" value="Upload"> Upload</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div  class="col-lg-6" style="color:#000;padding:15px;"> 
+                        <p style="margin-bottom:4px;font-weight:bold;margin-bottom:0px;">Response:</p>
+                            <div style="padding:15px;background:#ffffff;display:block;width:100%;">
+                            <span *ngIf="msg!==undefined">
+                                {{msg}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--end of upload supplier row-->
+</div>
+

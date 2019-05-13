@@ -1,0 +1,298 @@
+.pReq h5 {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+.pReq h1 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+}
+.pReq .title p {
+    padding: 10px 40px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 18px;
+}
+
+.pReq .pend-box {
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    padding: 40px 40px 15px;
+    margin-top: 10px;
+}
+.pReq .pend-box h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+.pReq .pend-box p {
+    padding-top: 12px;
+    opacity: 0.8;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.pend-box {
+    width: 360px;
+}
+.blkColor {
+    color: #181818 !important;
+}
+.pReq .btn-back {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    width: 114px;
+    height: 48px;
+}
+.pReq .btn-back:hover {
+    background: silver;
+}
+.pReq .btn-back span {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+.pReq .btn-prime2 {
+    border-radius: 24px;
+    width: 300px;
+    height: 48px;
+    background: linear-gradient(134.72deg, #19c8cc 0%, #19c8cc 51%, #0c91dd 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-transform: uppercase;
+}
+.pReq .btn-prime2:hover {
+    background-position: right center;
+}
+
+.pReq .btn-prime2 span {
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+.pReq .request h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+.pReq .request p {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+}
+.pReq hr {
+    border-radius: 4px 4px 0 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+}
+.padTop30 {
+    padding-top: 30px !important;
+}
+.pReq .desc p {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+}
+.pReq a {
+    color: #14b4d2;
+}
+.i-am-authorized-to-c {
+    height: 40px;
+    width: 344px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+input:checked {
+    width: 20px;
+    border-radius: 4px;
+    background-color: #14b4d2;
+}
+.ckbox-5 {
+    width: 20px;
+    border-radius: 4px;
+    background-color: #14b4d2;
+}
+.form-group {
+    width: 380px;
+}
+.form-control {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: none !important;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.accountLbl {
+    height: 20px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none !important;
+    padding: 0;
+}
+
+input:focus,
+input:form-control:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    padding: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.card-information {
+    height: 24px;
+    width: 161px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+.i-am-authorized-to-c {
+    height: 40px;
+    width: 313px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.requestFrom {
+    height: 20px;
+    width: 178px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 24px;
+}
+.dbDataSet {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.dbReport {
+    height: 24px;
+    width: 184px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+.costLbl {
+    height: 24px;
+    width: 69px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.totalCostLbl {
+    height: 24px;
+    width: 67px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+@media (max-width: 768px) {
+    .pReq .title h1 {
+        font-size: 20px;
+    }
+    .pReq .title p {
+        font-size: 14px;
+        padding: 0px;
+    }
+    .pReq .request h3,
+    .pReq .pend-box h3 {
+        font-size: 16px;
+    }
+    .btnRow {
+        text-align: center;
+    }
+    .pReq .btn-prime2,
+    .pReq .btn-back {
+        display: block;
+        width: 100%;
+    }
+    .pReq .desc p {
+        font-size: 13px;
+    }
+}

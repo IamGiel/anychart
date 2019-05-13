@@ -1,0 +1,187 @@
+<div class="container-fluid pReq" [ngStyle]="{'opacity':'whileLoading()'}">
+    <!-- title container row -->
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-center title">
+            <h5>STEP 2 of 2</h5>
+            <h1>Upload Supplier List</h1>
+            <p>Add suppliers to your dashboard by uploading a CSV or XLS file. We’ll send
+                requests for
+                D&B Data and Comprehensive Reports to these suppliers in the following step.</p>
+            <div class="row"></div>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 col-12">
+            <div class="row request text-center">
+
+
+                <div class="col-md-6 col-6 text-left parTitle">
+                    <i-download class="big" id="i-fthr"></i-download>
+                    <span class="dwnldSample"> Download Sample CSV</span>
+                </div>
+
+                <div class="col-md-6 col-6 text-left parTitle1">
+                    <i-box class="big" id="i-fthr"></i-box>
+                    <span class="dwnldSample"> Help Documentation</span>
+                </div>
+
+                <!-- <div class="col-md-2 col-2"></div> -->
+            </div>
+
+
+
+            <div class="row desc padTop30">
+                <div class="col-md-12 rectangle-4">
+                    <!-- <div class="wrap-cover" [ngClass]="onLoadModal()"></div> -->
+
+                    <!--  =================================================================  -->
+                    <div *ngIf="!fileIshovered" class="dropzone" jhi-dropZone (hovered)="toggleHover($event)" (dropped)="startUpload($event)"
+                        [class.hovering]="isHovering">
+                        <div id="fileTxt">
+                            <i-file-text class="big featherTxt"></i-file-text>
+                        </div>
+                        <div class="wrapInstruction" [hidden]="hideInstruction">
+                            <p class="drag-drop-csv" *ngIf="!enableNxtBtn">Drag and Drop a CSV or XLS file, or select a
+                                file from your computer.</p>
+                        </div>
+                        <!-- uploading ... -->
+                        <div class="wrapInstruction" [hidden]="!hideInstruction">
+                            <span class="or-select1" *ngIf="!enableNxtBtn">
+                                Uploading...
+                            </span>
+                        </div>
+                        <span *ngIf="!slctCorrctFile" class="or-select2 alert alert-warning">
+                            select the correct file (csv or xls files).
+                        </span>
+
+                        <span *ngIf="enableNxtBtn" class="or-select">
+                            Upload complete!
+                        </span>
+                        <div class="file">
+                            <label class="browse-btn" *ngIf="!hideBrowseBtn">BROWSE
+                                <!-- <p class="brwsePar">BROWSE</p> -->
+                                <input style="display:none" class="file-input" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, .csv"
+                                    (change)="startUpload($event.target.files)" #fileUpload>
+                                <!-- {{fileUpload.value}} -->
+                            </label>
+                        </div>
+                        <!-- <div class="col-md-12" *ngIf="percentage | async as pct">
+                            <progress class="progress is-info" style="color: purple!important" [value]="pct" max="100">
+                            </progress>
+                        </div> -->
+                    </div>
+                    <!--  =================================================================  -->
+
+                    <div *ngIf="fileIshovered" class="dropzone" jhi-dropZone (hovered)="toggleHover($event)" (dropped)="startUpload($event)"
+                        [class.hovering]="isHovering">
+                        <div id="fileTxt">
+                            <i-file-text class="big featherTxt"></i-file-text>
+                        </div>
+
+                        <div class="wrapInstruction" [hidden]="hideInstruction">
+                            <p class="drag-drop-csv" *ngIf="!enableNxtBtn">Drag and Drop a CSV or XLS file, or select a
+                                file from your computer.</p>
+                        </div>
+                        <!-- uploading ... -->
+                        <div class="wrapInstruction" [hidden]="!hideInstruction">
+                            <span class="or-select1" *ngIf="!enableNxtBtn">
+                                Uploading...
+                            </span>
+                        </div>
+                        <span *ngIf="!slctCorrctFile" class="or-select2 alert alert-warning">
+                            select the correct file (csv or xls files).
+                        </span>
+
+                        <span *ngIf="enableNxtBtn" class="or-select">
+                            Upload complete!
+                        </span>
+                        <div class="file">
+                            <label class="browse-btn" *ngIf="!hideBrowseBtn">BROWSE
+                                <!-- <p class="brwsePar">BROWSE</p> -->
+                                <input style="display:none" class="file-input" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, .csv"
+                                    (change)="startUpload($event.target.files)" #fileUpload>
+                                <!-- {{fileUpload.value}} -->
+                            </label>
+                        </div>
+                    </div>
+
+                    <!--  =================================================================  -->
+
+                    <!-- progress bar -->
+                    <div class="col-md-12" *ngIf="percentage | async as pct">
+                        <progress class="progress is-info" style="color: purple!important" [value]="pct" max="100">
+                        </progress>
+                    </div>
+                    <!-- bytes and file name -->
+                    <div class="container">
+                        <div class="row text-center" *ngIf="(snapshot | async) as snap">
+                            <div class="col-md-12 fileBytes">
+                                <span class="snap-fileName">{{snap.ref.name}}</span>
+                                <!-- {{ snap.bytesTransferred | fileSize }} of {{ snap.totalBytes | fileSize }} -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <!-- buttons -->
+
+    <div class="row padTop30 btnRow">
+        <div class="col-md-4 offset-md-2 col-12 backItUp">
+            <!-- <button class="btn btn-back"><span>View All Requests</span></button> -->
+            <button [disabled]="hideInstruction" [ngClass]="toggleColor()" action="action" type="button" value="Back"
+                (click)="clickBackBtn()" routerLink="/procurement/login">Back</button>
+        </div>
+        <div *ngIf="!enableNxtBtn" class="col-md-4 text-right col-12 skipItUp">
+            <!-- <button class="btn btn-prime2"><span>Approve Request: {{penidngDataRequest.totalAmount}}</span></button> -->
+            <button class="btn btn-skip" [disabled]="hideInstruction" type="button" value="skip" [hidden]="skipBtn"
+                routerLink="/procurement/dashboard">Skip</button>
+        </div>
+        <div *ngIf="enableNxtBtn" class="col-md-4 text-right col-12 nextUp">
+            <!-- <button class="btn btn-prime2"><span>Approve Request: {{penidngDataRequest.totalAmount}}</span></button> -->
+            <button [disabled]="!enableNxtBtn" class="btn btn-prime2" type="next" routerLink="/procurement/dashboard">next</button>
+        </div>
+    </div>
+    <!-- <div class="row padTop30 btnRow">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8 btnContainer">
+            <div class="col-md-2">
+                <button class="btn btn-back" action="action" type="button" value="Back" onclick="window.history.go(-1); return false;">Back</button>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2 text-left">
+                
+                <button class="btn btn-back" type="button" value="skip" [hidden]="skipBtn" (click)="onSkip()"
+                    routerLink="/upload-csv-procurement">Skip</button>
+
+
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2 text-left">
+                
+                <div class="text-center">
+                    <button [disabled]="!enableNxtBtn" class="btn btn-back" type="next" (click)="onclickUpload()">next</button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div> -->
+
+    <div class="row padTop30"></div>
+
+</div>

@@ -1,0 +1,164 @@
+/* ==========================================================================
+Navbar
+========================================================================== */
+.navbar-version {
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 24px;
+}
+
+.jh-navbar {
+    background-color: #353d47;
+    padding: 0.2em 1em;
+}
+
+.jh-navbar .profile-image {
+    margin: -10px 0px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.jh-navbar .dropdown-item.active,
+.jh-navbar .dropdown-item.active:focus,
+.jh-navbar .dropdown-item.active:hover {
+    background-color: #353d47;
+}
+
+.jh-navbar .dropdown-toggle::after {
+    margin-left: 0.15em;
+}
+
+.jh-navbar ul.navbar-nav {
+    padding: 0.5em;
+}
+
+.jh-navbar .navbar-nav .nav-item {
+    margin-left: 1.5rem;
+}
+
+.jh-navbar a.nav-link {
+    font-weight: 400;
+}
+
+.jh-navbar .jh-navbar-toggler {
+    color: #ccc;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.jh-navbar .jh-navbar-toggler:hover {
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .jh-navbar-toggler {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .jh-logo-container {
+        width: 100%;
+    }
+}
+
+.navbar-title {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: white;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.navbar-brand.logo {
+    padding: 5px 15px;
+}
+
+.logo-img {
+    height: 100%;
+    background: url('../../../content/images/beroe_icon.png') no-repeat center center;
+    background-size: contain;
+    width: 100%;
+}
+
+.logo .logo-img {
+    height: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+}
+/*Header Profiledropdwon */
+.down-click-wrap.newDroppro {
+    left: -110px;
+    text-align: left;
+    top: 55px;
+    right: 0;
+    z-index: 5;
+    width: 280px;
+    padding: 0px;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    border-bottom: 2px solid silver;
+    box-shadow: 5px 2px 23px 0 rgba(0, 0, 0, 0.07);
+}
+.down-click-wrap.newDroppro img.upArr {
+    width: auto !important;
+    height: auto !important;
+    right: 14px;
+    position: absolute;
+    top: -11px;
+}
+.down-click-wrap.newDroppro .down-click-content {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Inter UI';
+    color: #221e39;
+    letter-spacing: 0.19px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+.down-click-wrap.newDroppro .down-click-content span {
+    font-size: 12px;
+    color: #acacac;
+    padding-top: 5px;
+    display: block;
+}
+.down-click-content:hover {
+    background-color: whitesmoke;
+}
+
+.cartDiv .btn-cart {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+}
+.cartDiv .btn-cart:hover {
+    background: transparent;
+}
+.cartDiv .btn-cart span {
+    opacity: 0.8;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: white;
+    padding: 8px 15px;
+}
+.cartDiv span {
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 24px;
+    margin-right: 10px;
+}

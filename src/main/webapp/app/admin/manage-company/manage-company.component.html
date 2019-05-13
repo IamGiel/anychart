@@ -1,0 +1,81 @@
+<div class="dash-container">
+    
+    <div class="row divtitle">
+      <div class="col-md-3 col-12 cust-title">
+          <h4 >Manage Companies</h4>
+      </div>
+      <div class="col-md-6"></div>
+      <div class="col-md-3 col-12">
+        <button class="btn btn-prime" (click)="createCompany('create')" style="float:right;">Add new company <i-arrow-right-circle></button>
+      </div>
+    </div>
+  <hr style="background-color: #E7E7E7;"/>
+  <div class="divtitle">
+      <div class="row">
+        <div class="col-md-4">
+            <div class="form-group has-search">
+                <i-search class="fa fa-search form-control-feedback"></i-search>
+                <input type="text" class="form-control" placeholder="Search company" [ngModel]="searchText" (keydown.enter)="searchData($event)" (keyup)="showOldData($event)">
+              </div>
+            
+          </div>
+        <div class="col-md-8 text-right" *ngIf="total>0">
+          <jhi-my-pagination 
+          (goPage)="goToPage($event)"
+          (goNext)="onNext()"
+          (goPrev)="onPrev()"
+          [pagesToShow]="3"
+          [page]="page+1"
+          [perPage]=size
+          [count]="total"></jhi-my-pagination>
+        </div>
+      </div>
+      <hr style="border-top: 1px dashed #17a2b8;"/>
+      <div  *ngIf="total>0" class="row">
+          <div class="table-responsive">
+              <table sortable-table  (sorted)="onSorted($event)" class="table table-hover table-borderless cust-table" style="width:99%;margin-left: 5px;">
+                  <thead>
+                      <tr class="head-title">
+                          <th sortable-column="companyName" sort-direction = 'desc' style="cursor:pointer;width: 250px !important;">Company Name</th>
+                          <th style="width: 250px !important;">Domains</th>
+                          <th>Created By</th>
+                          <th sortable-column="createdDate"  style="cursor:pointer;">Created Date</th>
+                          <th>Last Modified By</th>
+                          <th>Last Modified Date</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of companies; let i = index ">
+                        <td><a (click)="viewCompany(item.companyId)" style="">{{item.companyName}}</a></td>
+                        <td> <ng-container *ngFor="let domain of item.companyDomainList; let i=index ">
+                                <ng-container *ngIf="i<4"><span class="badge badge-info">{{ domain.domainName }}</span></ng-container>
+                            </ng-container>
+                            <ng-container *ngIf="item.companyDomainList!=null && item.companyDomainList.length>4"><span class="badge badge-info" style="cursor:pointer;" [ngbPopover]="domainListPopop" placement="top" triggers="mouseenter:mouseleave">+{{ item.companyDomainList.length-4 }} More</span></ng-container>
+                            
+                        </td>
+                        <td>{{item.createdBy}}</td>
+                        <td>{{item.createdDate | date: 'dd-MMM-yyyy'}}</td>
+                        <td>{{item.lastUpdatedBy}}</td>
+                        <td>{{item.lastUpdatedDate | date: 'dd-MMM-yyyy'}}</td>
+                        <td>
+                          <ng-container><i-eye class="text-info i-cls" (click)="viewCompany(item.companyId)"></i-eye></ng-container>
+                          <ng-container><i-edit class="text-info i-cls" (click)="createCompany(item)"></i-edit></ng-container>
+                          <ng-container *ngIf="false"><i-x-circle class="text-danger i-cls"></i-x-circle></ng-container>
+                        </td>
+                        <ng-template #domainListPopop>
+                            <ng-container *ngFor="let domain of item.companyDomainList; let i=index ">
+                                <ng-container *ngIf="i>=4"> <span class="badge badge-info">{{ domain.domainName }}</span> </ng-container>
+                            </ng-container>
+                        </ng-template>
+                       </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div *ngIf="total==0" class="d-flex justify-content-center">
+          <p style="font-size: 20px;font-family: 'Inter UI';opacity: .8;padding: 15px 15px;border: 1px dashed;">No search results found.</p>
+      </div>
+    </div>
+</div>
+
+<jhi-alert></jhi-alert>

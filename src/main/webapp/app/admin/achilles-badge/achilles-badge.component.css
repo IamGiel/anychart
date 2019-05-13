@@ -1,0 +1,45 @@
+.btn-prime {
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #804cd9 0%, #804cd9 51%, #544ad8 100%);
+    transition: 0.5s;
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    background-size: 200% auto;
+    text-transform: uppercase;
+}
+
+.btn-prime:hover,
+.achilles-badge-btn:hover {
+    background-position: right center;
+}
+.has-search .form-control {
+    padding-left: 2.75rem;
+    background-image: none !important;
+}
+
+.achilles-badge-btn {
+    margin: 20px auto 0px;
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    font-family: 'Inter UI';
+    transition: 0.5s;
+}
+.achilles-badge-btn p {
+    font-size: 16px;
+    font-weight: 500;
+}
+.achilles-badge-btn i-plus-square {
+    width: 40px;
+    margin: 10px 0px 30px 0px;
+}

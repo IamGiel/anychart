@@ -1,0 +1,79 @@
+<div  id="csr-container">
+                                   
+    <div class="row">
+        <div class="col-12">
+                <div id="dowjones-ame-container" style="margin: 0 !important;">
+                        <div (click)="toggleCollapse()"  class="row align-items-center" style="cursor:pointer;padding-bottom:0px;">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div style="z-index:5" class="col-4 left-col">
+                                        <span class="d-b-rating">
+                                           <span>
+                                                Dow Jones AME
+                                           </span> 
+                                            <span class="xs-float-left" >
+                                                    <i-info  *ngIf="val(data.totalCount)"  class="featherinfo i-sup-details"   ngbPopover="{{info}}" triggers="mouseenter:mouseleave"
+                                                    placement="right" ></i-info>
+                                                    
+                                               </span>
+                                        </span>
+                                    </div>
+                                    <div style="padding:0px;" class="col-8 right-col">
+                                        <span  [class.supplier-color]="!readOnly" *ngIf="val(data.totalCount)" style="display:inline-block" class="appearences">{{data.totalCount}} Appearances</span>
+                                        <span class="chevron-container">
+                                            <span *ngIf="!collapse && val(data.totalCount)" style="margin-left:16px;position:relative;top:-2px; margin-top:8px;color:grey; font-family: 'Inter UI' ; font-size: 16px; font-weight: 500;">
+                                                <span>
+                                                    <i-chevron-up>
+                                                </span>
+                                            </span>
+                                            <span *ngIf="collapse  && val(data.totalCount)" style="margin-left:16px;position:relative;top:-2px;margin-top:8px;color:grey; font-family: 'Inter UI'; font-size: 16px; font-weight: 500; ">
+                                                <span>
+                                                    <i-chevron-down>
+                                                </span>
+                                            </span>
+                                        </span>   
+                                    </div>
+                                </div>
+                                
+                                
+                              
+                                
+                            </div>
+                        </div>
+                        <div   class="row" style="padding:0px 15px;" *ngIf="val(data.totalCount) && val(data.allegations)" [ngbCollapse]="collapse">
+                            <div style="margin-top:24px" class="col-12 dow-jones-content">
+                                <div class="row" style=" padding-bottom:24px;">
+                                        <div class="alert alert-danger" id="err-alert" *ngIf="errLink" style="top: 10px;width: 85%;margin: 0 auto;">
+                                                <button type="button" class="close" data-dismiss="alert">x</button>
+                                                <strong>Error! </strong>
+                                                Something went wrong,please check after sometimes.
+                                        </div>
+                                        <div *ngFor="let i of appearences | keyvalue"  class="col-lg-4 dow-jones-sec">
+                                            <ng-container>
+                                                <p [class.supplier-color]="!readOnly" class="h">{{i.key}}</p> 
+                                                <p  class="expiration" [ngbPopover]='popContent' [disablePopover]="i.value.length<=0" [autoClose]="'outside'"
+                                                placement="bottom" #p="ngbPopover" style="cursor:pointer;display:inline-block;" [ngStyle]="{'text-decoration': i.value.length>0 ?'underline':'none'}">
+                                                   {{i.value.length}} Appearances
+                                                </p>
+                                              
+                                            </ng-container>
+                                            <ng-template #popContent>
+                                                <span  [ngClass]="{'dowjones-pop': true, 'supplier-color': !readOnly}" style="display:block;max-height:200px;overflow-y: auto;overflow-x:hidden;margin: -6px -9px !important;" >
+                                                    <h3 class="custPopover-header">Dow Jones AME Appearances
+                                                        <i-x-circle (click)="closeDOWPop(p)"></i-x-circle>
+                                                     </h3>
+                                                    <ul *ngFor="let data of i.value" class="dowjones-links">
+                                                    <li><i-link-2></i-link-2><a title="{{data.name}}" style="display:inline-block!important;vertical-align:middle; width: 87%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;" (click)="getPDFLink(data.supportingLink)">{{data.name}}</a></li>
+                                                </ul>   
+                                                </span>
+                                            </ng-template>
+                                        </div>
+                                       
+                                </div>
+                               
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,304 @@
+<div class="container-fluid dash-container">
+    <div class="row top-row"></div>
+    <div class="alert alert-danger" *ngIf="errMsg.length>0">
+        <strong> Failed!</strong> <span >{{errMsg}}.</span>
+    </div>
+    <div class="container">
+        <div class="row divtitle">
+            <div class="col-md-3 headleft">
+                <span >Requests</span>
+            </div>
+            <div class="col-md-6 col-9">
+      
+                <ul class="nav nav-tab justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link" rel="tab1" (click)="tabClicked('Pending');selectAll(false);">
+                        <span [ngClass]="activeTab=='Pending' ? 'active' : 'inactive'">Pending</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" rel="tab1" (click)="tabClicked('Shared')">
+                        <span [ngClass]="activeTab=='Shared' ? 'active' : 'inactive'">Shared</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" rel="tab1" (click)="tabClicked('Declined')">
+                        <span [ngClass]="activeTab=='Declined' ? 'active' : 'inactive'">Declined</span></a>
+                    </li>
+                  </ul>            
+                
+            </div>
+        </div>
+        <div class="row" style="height: 40px"> </div>
+        <div>
+                <div *ngIf="activeTab=='Pending'">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                                    <span class="searchIcon">
+                                        <i-search class="featherPagFil2">
+                                    </span>
+                                    <span style="margin-left:16px;">
+                                      <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Companies" (keydown.enter)="searchData($event,'Pending')" (keyup)="showOldDate($event)"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-right">
+                              <jhi-my-pagination *ngIf="total>0"
+                              (goPage)="goToPage($event)"
+                              (goNext)="onNext()"
+                              (goPrev)="onPrev()"
+                              [pagesToShow]="3"
+                              [page]="page"
+                              [perPage]="limit"
+                              [count]="total"></jhi-my-pagination>
+                            </div>
+                        </div><br/>
+                        <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list!=null && list.length>0">
+                            <table class="table table-hover table-striped" style="width:99%;">
+                              <thead>
+                                    <th>
+                                        <label class="pending-select">
+                                        <input (change)="selectAll(isSelectAll)" [(ngModel)]="isSelectAll" type="checkbox" name="selectAll" >
+                                        <span class="checkmark"></span>
+                                        </label> 
+                                    </th>
+                                      <th>Company Name</th>
+                                      <th style="display: none;">COMPREHENSIVE REPORT</th>
+                                      <th>LAST REQUEST</th>
+                                      <th>TOTAL COST</th> 
+                                      <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of list; let i = index ">
+                                    <td>  
+                                        <label class="pending-select">
+                                        <input (change)="updateChecked()" [(ngModel)]="item.checked" type="checkbox" name="selectPending{{item.id}}" >
+                                        <span class="checkmark"></span>
+                                        </label> 
+                                    </td>  
+                                      <td>{{item.userCompany}}</td>
+                                      <td style="display: none;">
+                                        <span *ngIf="item.comprStatus"><i-check style="color: #6B4CD9!important"></i-check>Requested</span>
+                                        <span *ngIf="!item.comprStatus"><i-check style="color: #6B4CD9!important"></i-check>Not Requested</span>
+                                      </td>
+                                      <td><span *ngIf="item.lastRequestedDate!==null">{{item.lastRequestedDate | niceDateFormatPipe}}</span><span *ngIf="item.lastRequestedDate==null">--</span></td>
+                                      <td>{{item.price | currency}}</td>
+                                      <td class="text-right" [hidden]="item.addedToCart || (item.status=='PAYMENT_DONE' || item.status=='PAYMENT_SUCCESS')">
+                                            <div style="cursor:pointer;">
+                                                <span (click)="declineRequest(item)">Decline  <i-x-square class="" title="decline"></i-x-square></span>
+                                                 <span class="mb-1 iconPlus" (click)="onAddCartClicked( item)">&nbsp;Add To Cart &nbsp; 
+                                                    <i-plus-square class="featherupload" title="add to cart"></i-plus-square>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td (click)="removeFromCart(item)" [hidden]="!item.addedToCart || (item.status=='PAYMENT_DONE' || item.status=='PAYMENT_SUCCESS')" class="text-right remove-cart"  >
+                                            Remove from Cart &nbsp;
+                                            <span class="mb-1 iconPlus">
+                                                <i-minus-square class="featheruploadMinus" title="remove from cart"></i-minus-square>
+                                            </span>
+                                        </td>
+                                        <td [hidden]="!item.declined" class="text-right remove-cart"  >
+                                                Declined Successfully.
+                                        </td>
+                                        <td *ngIf="item.status=='PAYMENT_DONE'|| item.status=='PAYMENT_SUCCESS'" class="text-right"  >
+                                            Payment successful. Request in progress.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                             </table>
+                          </div>
+                    </div>
+                    <div *ngIf="activeTab=='Shared'">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                                    <span class="searchIcon">
+                                        <i-search class="featherPagFil2">
+                                    </span>
+                                    <span style="margin-left:16px;">
+                                      <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Companies" (keydown.enter)="searchData($event,'Shared')" (keyup)="showOldDate($event)"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-right">
+                              <jhi-my-pagination *ngIf="total>0"
+                              (goPage)="goToPage($event)"
+                              (goNext)="onNext()"
+                              (goPrev)="onPrev()"
+                              [pagesToShow]="3"
+                              [page]="page"
+                              [perPage]="limit"
+                              [count]="total"></jhi-my-pagination>
+                            </div>
+                        </div><br/>
+                        <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list!=null && list.length>0">
+                            <ng-template #popContent>
+                                <p>D&B Credit Rating consists of two parts:</p>
+                                        <p>·         Rating Classification: A rating of 5A means a business has a worth of $50+ million. HH, on the other end of the scale, indicates that a business is worth up to $4,999.
+                                                This part of the rating is based on a company’s net worth, when available, or issued capital (the value of the company’s shares).</p>
+                            
+                                            <p>
+                                                    ·         Composite Credit Appraisal: This measures the risk of business failure, from 1, indicating “minimal,” to 4, “significant.”
+                                            </p>
+                                            
+                            </ng-template>
+                            <table class="table table-hover table-striped" style="width:99%;">
+                              <thead>
+                                  <tr>
+                                      <th>Company Name</th>
+                                    <!--   <th>DUNS</th> -->
+                                      <th>D&B SER RATING <i-info class="infoFeather" ngbPopover="{{serPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>
+                                      <th>D&B RATING <i-info class="infoFeather" [ngbPopover]="popContent" placement="bottom" triggers="mouseenter:mouseleave"></th>
+                                      <th>D&B PAYDEX <i-info class="infoFeather" ngbPopover="{{paydexPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>
+                                      <th>CSR HUB RATING <i-info class="infoFeather" ngbPopover="CSR Ratings give the perceived performance on an absolute 0-100 scale" placement="bottom" triggers="mouseenter:mouseleave"></th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of list; let i = index ">
+                                      <td class="comp-name" (click)="goToCompanyProfile(item)">{{item.userCompany}}</td>
+<!--                                       <td>{{item.providerKey.DUNSNUMBER}}</td>
+ -->                                      <td>
+                                        <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['Supplier Evaluation Risk']!=null" [ngIfElse]="SERElse">
+                                            {{item.packageResponse.DNB['Supplier Evaluation Risk'].SER.riskScore}}
+                                        </ng-template>
+                                        <ng-template #SERElse>NA</ng-template>
+                                      </td>
+                                      <td>
+                                          <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['D&B Rating Trend']!=null" [ngIfElse]="TrendElse">
+                                            {{item.packageResponse.DNB['D&B Rating Trend'].TrendRating.trendRating}}
+                                            </ng-template>
+                                            <ng-template #TrendElse>NA</ng-template>
+                                        </td>
+                                      <td>
+                                            <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['Payment & Paydex Details']!=null" [ngIfElse]="PaydexElse">
+                                                    {{item.packageResponse.DNB['Payment & Paydex Details'].paydex.paydexScore}}
+                                            </ng-template>
+                                            <ng-template #PaydexElse>NA</ng-template>
+                                      </td>
+
+                                      <td>
+                                            <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.CSRHUB!=null && item.packageResponse.CSRHUB.csrHubRating!=null&& item.packageResponse.CSRHUB.csrHubRating.csrHubRating!=null && item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating!=null" [ngIfElse]="csrHubElse">
+                                                    {{item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating}}
+                                            </ng-template>
+                                            <ng-template #csrHubElse>NA</ng-template>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                             </table>
+                          </div>
+                    </div>
+                    <div *ngIf="activeTab=='Declined'">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                                    <span class="searchIcon">
+                                        <i-search class="featherPagFil2">
+                                    </span>
+                                    <span style="margin-left:16px;">
+                                      <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Companies" (keydown.enter)="searchData($event,'Declined')" (keyup)="showOldDate($event)"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-right">
+                              <jhi-my-pagination *ngIf="total>0"
+                              (goPage)="goToPage($event)"
+                              (goNext)="onNext()"
+                              (goPrev)="onPrev()"
+                              [pagesToShow]="3"
+                              [page]="page"
+                              [perPage]="limit"
+                              [count]="total"></jhi-my-pagination>
+                            </div>
+                        </div><br/>
+                        <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list!=null && list.length>0">
+                            <table class="table table-hover table-striped" style="width:99%;">
+                              <thead>
+                                  <tr>
+                                      <th>Company Name</th>
+                                      <th>DUNS</th>
+                                      <th>DECLINED DATE</th>
+                                      <th>REASON</th>
+                                      <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of list; let i = index ">
+                                      <td>{{item.userCompany}}</td>
+                                      <td>{{item.providerKey.DUNSNUMBER}}</td>
+                                      <td>{{item.declinedDate | date:'dd-MMM-yyyy'}}</td>
+                                      <td>{{item.declineMessage}}</td>
+                                     </tr>
+                                </tbody>
+                             </table>
+                          </div>
+                    </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="noData" id="tab1" *ngIf="!loadingData&&activeTab=='Pending' && list!=undefined && list!=null && list.length<=0 && searchKeyword.length<=0">        
+                    <div class="text-center"> <i-check-circle class="feather"> </i-check-circle> </div>
+                    <div class="nosupdata"><h1>No Pending Requests</h1></div>
+                    <div class="desc">
+                        <span >It doesn’t look like you have any pending data requests at the moment. We’ll let you know if anything changes.</span>
+                    </div>
+                </div>
+                <div class="noData" id="tab2" *ngIf="!loadingData&&activeTab=='Shared' && list!=undefined && list!=null && list.length<=0 && searchKeyword.length<=0">          
+                    <div class="text-center"> <i-share-2 class="feather"> </i-share-2> </div>
+                    <div class="nosupdata"><h1>Share Your Data</h1></div>
+                    <div class="desc">
+                        <span >You have some pending data requests from procurement. Once you complete those requests, you can monitor them here.</span>
+                    </div>
+                    <div class="text-center" style="margin-top: 40px;padding-bottom: 50px">
+                        <button class="btn livex-sup-prime-btn" (click)="onClickPending()">View Pending Requests</button>
+                    </div>  
+                </div>
+                <div class="noData" id="tab3" *ngIf="!loadingData&&activeTab=='Declined' && list!=undefined && list!=null && list.length<=0 && searchKeyword.length<=0">          
+                    <div class="text-center"> <i-x-square class="feather"> </i-x-square></div>
+                    <div class="nosupdata"><h1 >No Requests Declined</h1></div>
+                    <div class="desc">
+                        <span >If you decide to decline a data request it will appear here.</span>
+                    </div>
+                    <div class="text-center" style="margin-top: 40px;padding-bottom: 50px">
+                        <button class="btn livex-sup-prime-btn" (click)="onClickPending()">View Pending Requests</button>
+                    </div>  
+                </div>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="row" *ngIf="searchKeyword.length>0 && list!=undefined && list!=null && list.length<=0">
+        <p class="no-result"><b>No results found.</b> Please adjust your filter criteria. <span class="clear-filter" (click)='clearSearch()'>Clear Filters <i-x-square></i-x-square></span></p>
+    </div>
+
+
+<div *ngIf="checkedCount>0 && activeTab=='Pending'" class="selection-toolbar">
+
+    <span class="selected-count">
+            {{checkedCount}} Request<span *ngIf="checkedCount>1">s</span> Selected
+    </span>
+    
+    <span *ngIf="addedCount !==  checkedCount" (disabled)="checkedCount<1" (click)="addMultipleToCart()" style="cursor:pointer" class="toolbar-section-add">
+        <span class="add-selected-to-cart">
+                Add Selected To Cart
+        </span>
+        <i-plus-square  style="color: #14B4D2;height: 18px;width: 18px;margin-left: 11px;position: relative;top: -1px;" class="featherupload" title="add to cart"></i-plus-square>
+    </span>
+
+    <span  *ngIf="addedCount !==  checkedCount" (disabled)="checkedCount<1" (click)="declineMultiple()" style="cursor:pointer" class="toolbar-section-decline">
+            <span class="decline-selected">
+                   Decline Selected Requests
+            </span>
+            <i-x-square  style="margin-right:46px;color: #181818;height: 18px;width: 18px;margin-left: 11px;position: relative;top: -1px;" class="featherupload" title="add to cart"></i-plus-square>
+    </span>
+    <span  *ngIf="addedCount >0 && 1!=1" (disabled)="checkedCount<1" (click)="removeSelectedFromCart()" style="cursor:pointer" class="toolbar-section-add">
+        <span class="add-selected-to-cart">
+                Remove Selected From Cart
+        </span>
+        <i-plus-square  style="margin-right:46px;color: #14B4D2;height: 18px;width: 18px;margin-left: 11px;position: relative;top: -1px;" class="featherupload" title="add to cart"></i-plus-square>
+    </span>
+</div>
+
+</div>

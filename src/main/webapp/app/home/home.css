@@ -1,0 +1,114 @@
+/* ==========================================================================
+Main page styles
+========================================================================== */
+
+.hipster {
+    display: inline-block;
+    width: 347px;
+    height: 497px;
+    background: url('../../content/images/hipster.png') no-repeat center top;
+    background-size: contain;
+}
+
+.procBtn {
+    color: white;
+    font-size: 18px;
+    height: 48px;
+    width: 172px;
+    border-radius: 24px;
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+}
+.btn-prime2 {
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #19c8cc 0%, #19c8cc 51%, #0c91dd 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-transform: uppercase;
+    max-width: 180px;
+    margin-left: 5px;
+}
+.btn-prime2:hover {
+    background-position: right center;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #0c91dd;
+}
+
+.btn-prime2 span {
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    padding: 8px 35px;
+}
+
+.suppBtn {
+    background-image: linear-gradient(45deg, #19c8cc 0%, #0c91dd 100%);
+    color: white;
+    font-size: 18px;
+    height: 48px;
+    width: 172px;
+    border-radius: 24px;
+}
+
+/* wait autoprefixer update to allow simple generation of high pixel density media query */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    .hipster {
+        background: url('../../content/images/beroe_icon.png') no-repeat center top;
+        background-size: contain;
+    }
+}
+.beroeLogo {
+    width: 200px;
+}
+.intro h1 {
+    color: white;
+    margin-top: 20%;
+    font-family: 'Inter UI';
+}
+.intro p {
+    color: white;
+    margin-top: 20%;
+    font-family: 'Inter UI';
+}
+.img-container img {
+    margin-top: 20%;
+}
+@media (max-width: 768px) {
+    .btn-prime2 {
+        max-width: 100%;
+    }
+    .intro {
+        text-align: center;
+    }
+    .intro h1 {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+    .intro p {
+        margin-top: 10px;
+        font-size: 14px;
+        padding: 20px;
+    }
+    .login .login-box {
+        padding: 30px;
+        min-height: auto;
+    }
+    .img-container img {
+        margin-top: 10px;
+    }
+    .login-container .login-box .login-content-wrap .login-button {
+        top: 10px;
+        margin-left: -17px;
+        width: 100%;
+    }
+    .login .logoImg {
+        margin: 0 auto;
+    }
+}

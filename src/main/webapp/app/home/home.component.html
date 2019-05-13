@@ -1,0 +1,33 @@
+<div class="container-fluid text-center hidden" style="display:none;">
+    <h3>Click the button to go to Onboarding Screen. This can be the login/signup page.</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <button routerLink="./procurement/intro" class="procBtn" (click)="welcome()">Procurement</button>
+        </div>
+        <div class="col-md-6">
+            <button routerLink="./supplier/intro" class="suppBtn" (click)="getStarted()">Supplier</button>
+        </div>
+
+    </div>
+
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 intro">
+            <img class="beroeLogo " src="../../content/images/beroe_icon.png">
+            <h1>Centralized supplier compliance monitoring</h1>
+            <p>Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris.</p>
+            <div class="row">
+                <button routerLink="./procurement/intro" class=" btn btn-prime2 col-md-4 col-12" (click)="welcomeProc()"><span>Procurement</span></button>
+                <button routerLink="./procurement/intro" class="btn btn-prime2 col-md-4 col-12" (click)="welcomeSup()"><span>Supplier</span></button>
+                <button routerLink="./supplier/intro" class="btn btn-prime2 col-md-4 col-12" (click)="welcomeComp()"><span>Compliance</span></button>
+            </div>
+        </div>
+        <div class="col-md-6 img-container">
+            <img class="img-fluid" src="https://spendmatters.com/wp/wp-content/uploads/2015/08/KPMG.png">
+        </div>
+    </div>
+
+</div>

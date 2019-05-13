@@ -1,0 +1,576 @@
+<div class="cdf modal-fixed-header">
+<div style="padding:0px!important;height:124px;" class="modal-header">
+    <h4 style="margin-top:56px!important;margin-left:56px;" class="modal-title">Filters</h4>
+    
+    <span   style="margin-top:56px;margin-right:56px;padding:0px" aria-label="Close" data-dismiss="modal" class="close" (click)="activeModal.dismiss('dismissed')"><i-x></i-x>
+    </span>
+</div>
+<div style="max-height:none!important" class="category-dashboard modal-body">
+
+   
+        
+    <form style="width: 93%;margin: 0 auto;" class="form" role="form" (ngSubmit)="showResult(filterForm)" #filterForm="ngForm" autocomplete="off" >
+        <div class="row justify-content-start">
+            <div class="col-md-4" style="padding: 0px 35px;">
+                
+                <div class="form-group input-wrap">
+                    <label class="suppliername-label" for="suppliername">Supplier Name</label>
+                    <ng-select 
+                        style="font-size:16px!important"
+                        *ngIf="ngSelected.suppliers!=undefined"
+                        class="category-manager-select"
+                        [items]="filters.suppliers"
+                        [multiple]="true"
+                        bindLabel="name"
+                        [closeOnSelect]="false"
+                        [(ngModel)]="ngSelected.suppliers"
+                        bindValue="name"
+                        name="suppliers"
+                        (add)="onAdd($event,'suppliers','name')"
+                        (remove)="onRemove($event,'suppliers','name')"
+                        (clear)="onClear('suppliers')"
+                        [searchable]="false"
+                        placeholder="Select"
+                        [virtualScroll]="true"
+                        [loading]="searching.suppliers"
+                        (scrollToEnd)="onScrollToEnd('suppliers')"> 
+                            <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">   
+                                <div class="ng-value" >
+                                    <span title="{{ngSelected.suppliers}}" class="ng-value-label">{{items.length}} supplier{{items.length>1?'s':''}} selected</span>
+                                </div>
+                            </ng-template> 
+                            <ng-template ng-header-tmp>
+                                <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('suppliers')" [(ngModel)]="filters.search.suppliers"     type="country" class="form-control login-input"  id="suppliersSearch" placeholder="Search"   name="suppliersSearch"> 
+                            </ng-template>                 
+                            <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                <input *ngIf="filters.suppliers[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.suppliers[index].checked"/> {{item.name}}
+                            </ng-template>
+                    </ng-select>
+                </div> 
+            </div>
+
+            <div class="col-md-4" style="padding: 0px 35px;">
+                <div class="form-group input-wrap">
+                    <label class="suppliername-label" for="suppliername">DUNS</label>
+              
+                    <ng-select 
+                    style="font-size:16px!important"
+                    *ngIf="ngSelected.supplierDuns!=undefined"
+                        class="category-manager-select"
+                        [items]="filters.supplierDuns"
+                        [multiple]="true"
+                        bindLabel="name"
+                        [closeOnSelect]="false"
+                        [(ngModel)]="ngSelected.supplierDuns"
+                        bindValue="name"
+                        name="supplierDuns"
+                        (add)="onAdd($event,'supplierDuns','name')"
+                        (remove)="onRemove($event,'supplierDuns','name')"
+                        (clear)="onClear('supplierDuns')"
+                        [searchable]="false"
+                        placeholder="Select"
+                        [virtualScroll]="true"
+                        [loading]="searching.supplierDuns"
+                        (scrollToEnd)="onScrollToEnd('supplierDuns')"
+                        >
+                        <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                               
+                                <div class="ng-value" >
+                                    <span title="{{ngSelected.supplierDuns}}" class="ng-value-label">{{items.length}} DUNS number{{items.length>1?'s':''}} selected</span>
+                                </div>
+                            </ng-template>
+                        
+                        <ng-template ng-header-tmp>
+                                <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('supplierDuns')" [(ngModel)]="filters.search.supplierDuns"     type="company" class="form-control login-input"  id="supplierDunsSearch" placeholder="Search"   name="supplierDunsSearch">
+                                <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                    <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                    font-size: 16px;font-weight: 400;text-transform: none;'>
+                                        <input  name="supplierDunsEmpty" id="supplierDunsEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.supplierDuns"/> Is empty
+                                    </label>
+                                </div>
+                        </ng-template>
+                        <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                            <input *ngIf="filters.supplierDuns[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.supplierDuns[index].checked"/> {{item.name}}
+                        </ng-template>
+                    </ng-select>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-4" style="padding: 0px 35px;">
+                <div class="form-group input-wrap">
+                    <label class="suppliername-label" for="suppliername">Supplier Contact</label>
+              
+                    <ng-select 
+                    style="font-size:16px!important"
+                    *ngIf="ngSelected.supplierContacts!=undefined"
+                        class="category-manager-select"
+                        [items]="filters.supplierContacts"
+                        [multiple]="true"
+                        bindLabel="name"
+                        [closeOnSelect]="false"
+                        [(ngModel)]="ngSelected.supplierContacts"
+                        bindValue="name"
+                        name="supplierContacts"
+                        (add)="onAdd($event,'supplierContacts','name')"
+                        (remove)="onRemove($event,'supplierContacts','name')"
+                        (clear)="onClear('supplierContacts')"
+                        [searchable]="false"
+                        placeholder="Select"
+                        [virtualScroll]="true"
+                        [loading]="searching.supplierContacts"
+                        (scrollToEnd)="onScrollToEnd('supplierContacts')"
+                        >
+                        <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                               
+                                <div class="ng-value" >
+                                    <span title="{{ngSelected.supplierContacts}}" class="ng-value-label">{{items.length}} supplier contact{{items.length>1?'s':''}} selected</span>
+                                </div>
+                            </ng-template>
+                        
+                        <ng-template ng-header-tmp>
+                                <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('supplierContacts')" [(ngModel)]="filters.search.supplierContacts"     type="company" class="form-control login-input"  id="supplierContactsSearch" placeholder="Search"   name="supplierContactsSearch">
+                                <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                    <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                    font-size: 16px;font-weight: 400;text-transform: none;'>
+                                        <input  name="supplierContactsEmpty" id="supplierContactsEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.supplierContacts"/> Is empty
+                                    </label>
+                                </div>
+                        </ng-template>
+                        <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                            <input *ngIf="filters.supplierContacts[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.supplierContacts[index].checked"/> {{item.name}}
+                        </ng-template>
+                    </ng-select>
+                    
+                </div>
+            </div>
+
+          
+            
+            
+           
+           
+        </div>
+
+
+
+        <div class="row justify-content-start">
+
+                <div class="col-md-4" style="padding: 0px 35px;">
+                        <div class="form-group input-wrap">
+                            <label class="suppliername-label" for="suppliername">Supplier Email</label>
+                      
+                            <ng-select 
+                            style="font-size:16px!important"
+                            *ngIf="ngSelected.suppliers!=undefined"
+                                class="category-manager-select"
+                                [items]="filters.supplierEmails"
+                                [multiple]="true"
+                                bindLabel="name"
+                                [closeOnSelect]="false"
+                                [(ngModel)]="ngSelected.supplierEmails"
+                                bindValue="name"
+                                name="supplierEmails"
+                                (add)="onAdd($event,'supplierEmails','name')"
+                                (remove)="onRemove($event,'supplierEmails','name')"
+                                (clear)="onClear('supplierEmails')"
+                                [searchable]="false"
+                                placeholder="Select"
+                                [virtualScroll]="true"
+                                [loading]="searching.supplierEmails"
+                                (scrollToEnd)="onScrollToEnd('supplierEmails')"
+                                >
+                                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                       
+                                        <div class="ng-value" >
+                                            <span title="{{ngSelected.supplierEmails}}" class="ng-value-label">{{items.length}} supplier email{{items.length>1?'s':''}} selected</span>
+                                        </div>
+                                    </ng-template>
+                                
+                                <ng-template ng-header-tmp>
+                                        <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('supplierEmails')" [(ngModel)]="filters.search.supplierEmails"     type="country" class="form-control login-input"  id="supplierEmailsSearch" placeholder="Search"   name="supplierEmailsSearch">
+                                        <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                            <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                            font-size: 16px;font-weight: 400;text-transform: none;'>
+                                                <input  name="supplierEmailsEmpty" id="supplierEmailsEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.supplierEmails"/> Is empty
+                                            </label>
+                                        </div>
+                                </ng-template>
+                                <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                    <input *ngIf="filters.supplierEmails[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.supplierEmails[index].checked"/> {{item.name}}
+                                </ng-template>
+                            </ng-select>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" style="padding: 0px 35px;">
+                            <div class="form-group input-wrap">
+                                <label class="suppliername-label" for="suppliername">Supplier Phone</label>
+                          
+                                <ng-select 
+                                style="font-size:16px!important"
+                                *ngIf="ngSelected.supplierPhones!=undefined"
+                                    class="category-manager-select"
+                                    [items]="filters.supplierPhones"
+                                    [multiple]="true"
+                                    bindLabel="name"
+                                    [closeOnSelect]="false"
+                                    [(ngModel)]="ngSelected.supplierPhones"
+                                    bindValue="name"
+                                    name="supplierPhones"
+                                    (add)="onAdd($event,'supplierPhones','name')"
+                                    (remove)="onRemove($event,'supplierPhones','name')"
+                                    (clear)="onClear('supplierPhones')"
+                                    [searchable]="false"
+                                    placeholder="Select"
+                                    [virtualScroll]="true"
+                                    [loading]="searching.supplierPhones"
+                                    (scrollToEnd)="onScrollToEnd('supplierPhones')"
+                                    >
+                                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                           
+                                            <div class="ng-value" >
+                                                <span title="{{ngSelected.supplierPhones}}" class="ng-value-label">{{items.length}} supplier phone{{items.length>1?'s':''}} selected</span>
+                                            </div>
+                                        </ng-template>
+                                    
+                                    <ng-template ng-header-tmp>
+                                            <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('supplierPhones')" [(ngModel)]="filters.search.supplierPhones"     type="company" class="form-control login-input"  id="supplierPhonesSearch" placeholder="Search"   name="supplierPhonesSearch">
+                                            <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                                <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                                font-size: 16px;font-weight: 400;text-transform: none;'>
+                                                    <input  name="supplierPhonesEmpty" id="supplierPhonesEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.supplierPhones"/> Is empty
+                                                </label>
+                                            </div>
+                                    </ng-template>
+                                    <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                        <input *ngIf="filters.supplierPhones[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.supplierPhones[index].checked"/> {{item.name}}
+                                    </ng-template>
+                                </ng-select>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" style="padding: 0px 35px;">
+                                <div class="form-group input-wrap">
+                                    <label class="suppliername-label" for="suppliername">Supplier Address</label>
+                              
+                                    <ng-select 
+                                    style="font-size:16px!important"
+                                    *ngIf="ngSelected.supplierAddresses!=undefined"
+                                        class="category-manager-select"
+                                        [items]="filters.supplierAddresses"
+                                        [multiple]="true"
+                                        bindLabel="name"
+                                        [closeOnSelect]="false"
+                                        [(ngModel)]="ngSelected.supplierAddresses"
+                                        bindValue="name"
+                                        name="supplierAddresses"
+                                        (add)="onAdd($event,'supplierAddresses','name')"
+                                        (remove)="onRemove($event,'supplierAddresses','name')"
+                                        (clear)="onClear('supplierAddresses')"
+                                        [searchable]="false"
+                                        placeholder="Select"
+                                        [virtualScroll]="true"
+                                        [loading]="searching.supplierAddresses"
+                                        (scrollToEnd)="onScrollToEnd('supplierAddresses')"
+                                        >
+                                        <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                               
+                                                <div class="ng-value" >
+                                                    <span title="{{ngSelected.supplierAddresses}}" class="ng-value-label">{{items.length}} supplier address{{items.length>1?'es':''}} selected</span>
+                                                </div>
+                                            </ng-template>
+                                        
+                                        <ng-template ng-header-tmp>
+                                                <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('supplierAddresses')" [(ngModel)]="filters.search.supplierAddresses"     type="company" class="form-control login-input"  id="supplierAddressesSearch" placeholder="Search"   name="supplierAddressesSearch">
+                                                <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                                    <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                                    font-size: 16px;font-weight: 400;text-transform: none;'>
+                                                        <input  name="supplierAddressesEmpty" id="supplierAddressesEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.supplierAddresses"/> Is empty
+                                                    </label>
+                                                </div>
+                                        </ng-template>
+                                        <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                            <input *ngIf="filters.supplierAddresses[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.supplierAddresses[index].checked"/> {{item.name}}
+                                        </ng-template>
+                                    </ng-select>
+                                    
+                                </div>
+                            </div>
+
+           
+        </div>
+
+
+
+
+        <div class="row justify-content-start">
+                
+
+                <div class="col-md-4" style="padding: 0px 35px;">
+                        <div class="form-group input-wrap">
+                            <label class="suppliername-label" for="suppliername">Supplier Country</label>
+                      
+                            <ng-select 
+                            style="font-size:16px!important"
+                            *ngIf="ngSelected.supplierCountries!=undefined"
+                                class="category-manager-select"
+                                [items]="filters.supplierCountries"
+                                [multiple]="true"
+                                bindLabel="name"
+                                [closeOnSelect]="false"
+                                [(ngModel)]="ngSelected.supplierCountries"
+                                bindValue="name"
+                                name="supplierCountries"
+                                (add)="onAdd($event,'supplierCountries','name')"
+                                (remove)="onRemove($event,'supplierCountries','name')"
+                                (clear)="onClear('supplierCountries')"
+                                [searchable]="false"
+                                placeholder="Select"
+                                [virtualScroll]="true"
+                                [loading]="searching.supplierCountries"
+                                (scrollToEnd)="onScrollToEnd('supplierCountries')"
+                                >
+                                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                       
+                                        <div class="ng-value" >
+                                            <span title="{{ngSelected.supplierCountries}}" class="ng-value-label">{{items.length}} supplier countr{{items.length>1?'ies':'y'}} selected</span>
+                                        </div>
+                                    </ng-template>
+                                
+                                <ng-template ng-header-tmp>
+                                        <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('supplierCountries')" [(ngModel)]="filters.search.supplierCountries"     type="company" class="form-control login-input"  id="supplierCountriesSearch" placeholder="Search"   name="supplierCountriesSearch">
+                                        <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                            <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                            font-size: 16px;font-weight: 400;text-transform: none;'>
+                                                <input  name="supplierCountriesEmpty" id="supplierCountriesEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.supplierCountries"/> Is empty
+                                            </label>
+                                        </div>
+                                </ng-template>
+                                <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                    <input *ngIf="filters.supplierCountries[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.supplierCountries[index].checked"/> {{item.name}}
+                                </ng-template>
+                            </ng-select>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" style="padding: 0px 35px;">
+                            <div class="form-group input-wrap">
+                                <label class="suppliername-label" for="suppliername">Spend</label>
+                          
+                                <ng-select 
+                                style="font-size:16px!important"
+                                *ngIf="ngSelected.supplierSpends!=undefined"
+                                    class="category-manager-select"
+                                    [items]="filters.supplierSpends"
+                                    [multiple]="true"
+                                    bindLabel="name"
+                                    [closeOnSelect]="false"
+                                    [(ngModel)]="ngSelected.supplierSpends"
+                                    bindValue="name"
+                                    name="supplierSpends"
+                                    (add)="onAdd($event,'supplierSpends','name')"
+                                    (remove)="onRemove($event,'supplierSpends','name')"
+                                    (clear)="onClear('supplierSpends')"
+                                    [searchable]="false"
+                                    placeholder="Select"
+                                    [virtualScroll]="true"
+                                    [loading]="searching.supplierSpends"
+                                    (scrollToEnd)="onScrollToEnd('supplierSpends')"
+                                    >
+                                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                           
+                                            <div class="ng-value" >
+                                                <span title="{{ngSelected.supplierSpends}}" class="ng-value-label">{{items.length}} spend{{items.length>1?'s':''}} selected</span>
+                                            </div>
+                                        </ng-template>
+                                    
+                                    <ng-template ng-header-tmp>
+                                            <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('supplierSpends')" [(ngModel)]="filters.search.supplierSpends"     type="company" class="form-control login-input"  id="supplierSpendsSearch" placeholder="Search"   name="supplierSpendsSearch">
+                                            <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                                <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                                font-size: 16px;font-weight: 400;text-transform: none;'>
+                                                    <input  name="supplierSpendsEmpty" id="supplierSpendsEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.supplierSpends"/> Is empty
+                                                </label>
+                                            </div>
+                                    </ng-template>
+                                    <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                        <input *ngIf="filters.supplierSpends[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.supplierSpends[index].checked"/> {{item.name}}
+                                    </ng-template>
+                                </ng-select>
+                                
+                            </div>
+                        </div>
+
+                <div class="col-md-4" style="padding: 0px 35px;">
+                        <div class="form-group input-wrap">
+                            <label class="suppliername-label" for="suppliername">Category</label>
+                      
+                            <ng-select 
+                            style="font-size:16px!important"
+                            *ngIf="ngSelected.supplierCategories!=undefined"
+                                class="category-manager-select"
+                                [items]="filters.supplierCategories"
+                                [multiple]="true"
+                                bindLabel="name"
+                                [closeOnSelect]="false"
+                                [(ngModel)]="ngSelected.supplierCategories"
+                                bindValue="name"
+                                name="supplierCategories"
+                                (add)="onAdd($event,'supplierCategories','name')"
+                                (remove)="onRemove($event,'supplierCategories','name')"
+                                (clear)="onClear('supplierCategories')"
+                                [searchable]="false"
+                                placeholder="Select"
+                                [virtualScroll]="true"
+                                [loading]="searching.supplierCategories"
+                                (scrollToEnd)="onScrollToEnd('supplierCategories')"
+                                >
+                                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                       
+                                        <div class="ng-value" >
+                                            <span title="{{ngSelected.supplierCategories}}" class="ng-value-label">{{items.length}} supplier contact{{items.length>1?'s':''}} selected</span>
+                                        </div>
+                                    </ng-template>
+                                
+                                <ng-template ng-header-tmp>
+                                        <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('supplierCategories')" [(ngModel)]="filters.search.supplierCategories"     type="company" class="form-control login-input"  id="supplierCategoriesSearch" placeholder="Search"   name="supplierCategoriesSearch">
+                                        <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                            <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                            font-size: 16px;font-weight: 400;text-transform: none;'>
+                                                <input  name="supplierCategoriesEmpty" id="supplierCategoriesEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.supplierCategories"/> Is empty
+                                            </label>
+                                        </div>
+                                </ng-template>
+                                <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                    <input *ngIf="filters.supplierCategories[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.supplierCategories[index].checked"/> {{item.name}}
+                                </ng-template>
+                            </ng-select>
+                            
+                        </div>
+                    </div>
+
+                   
+    
+            
+               
+               
+            </div>
+
+
+
+
+
+
+
+        <div class="row justify-content-start">
+                <div class="col-md-4" style="padding: 0px 35px;">
+                        <div class="form-group input-wrap">
+                            <label class="suppliername-label" for="categoryManagers">Category Manager</label>
+                            <ng-select
+                                style="font-size:16px!important"
+                                class="category-manager-select"
+                                [items]="filters.categoryManagers"
+                                [multiple]="true"
+                                bindLabel="categoryManagers"
+                                [closeOnSelect]="false"
+                                [(ngModel)]="ngSelected.categoryManagers"
+                                bindValue="categoryManagers"
+                                name="categoryManagers"
+                                (add)="onAdd($event,'categoryManagers','categoryManagers')"
+                                (remove)="onRemove($event,'categoryManagers','categoryManagers')"
+                                (clear)="onClear('categoryManagers')"
+                                [searchable]="false"
+                                placeholder="Select"
+                                [virtualScroll]="true"
+                                [loading]="searching.categoryManagers"
+                                (scrollToEnd)="onScrollToEnd('categoryManagers')">
+                                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear"> 
+                                        <div class="ng-value" >
+                                            <span title="{{ngSelected.categoryManagers}}" class="ng-value-label">{{items.length}} category manager{{items.length>1?'s':''}} selected</span>
+                                        </div>
+                                    </ng-template>
+                                    <ng-template ng-header-tmp>
+                                        <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('categoryManagers')" [(ngModel)]="filters.search.categoryManagers"     type="country" class="form-control login-input"  id="country" placeholder="Search"   name="categoryManagersSearch">
+                                        <div style="border-top: 1px solid #ccc;padding: 8px 7px 1px 10px;width: calc(100% + 15px);position: relative;left: -7px;" >
+                                            <label style='cursor: pointer;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                                            font-size: 16px;font-weight: 400;text-transform: none;'>
+                                                <input  name="categoryManagerEmpty" id="categoryManagerEmpty" type="checkbox" [(ngModel)]="filters.isEmpty.categoryManagers"/> Is empty
+                                            </label>
+                                        </div>
+                                    </ng-template>
+                                    <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                        <input *ngIf="filters.categoryManagers[index]!=undefined" name="item-{{index}}" id="item-{{index}}" type="checkbox" [ngModel]="filters.categoryManagers[index].checked"/> {{item.categoryManagers}}
+                                    </ng-template>
+                            </ng-select>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4" style="padding: 0px 35px;" *ngIf="isProductsTeam">
+                            <div class="form-group input-wrap">
+                                <label class="suppliername-label" for="suppliername">Procurement Company</label>
+                          
+                                <ng-select 
+                                style="font-size:16px!important"
+                                *ngIf="ngSelected.companies!=undefined"
+                                    class="category-manager-select"
+                                    [items]="filters.companies"
+                                    [multiple]="true"
+                                    bindLabel="name"
+                                    [closeOnSelect]="false"
+                                    [(ngModel)]="ngSelected.companies"
+                                    bindValue="name"
+                                    name="companies"
+                                    (add)="onAdd($event,'companies','name')"
+                                    (remove)="onRemove($event,'companies','name')"
+                                    (clear)="onClear('companies')"
+                                    [searchable]="false"
+                                    placeholder="Select"
+                                    [virtualScroll]="true"
+                                    [loading]="searching.companies"
+                                    (scrollToEnd)="onScrollToEnd('companies')"
+                                    >
+                                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                                           
+                                            <div class="ng-value" >
+                                                <span title="{{ngSelected.companies}}" class="ng-value-label">{{items.length}} companie{{items.length>1?'s':''}} selected</span>
+                                            </div>
+                                        </ng-template>
+                                    
+                                    <ng-template ng-header-tmp>
+                                            <input  (keydown.backspace)="$event.stopPropagation()" style="padding:0px;background:none;" (keyup)="onchange('companies')" [(ngModel)]="filters.search.companies"     type="company" class="form-control login-input"  id="companiesSearch" placeholder="Search"   name="companiesSearch">
+                                    </ng-template>
+                                    <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                                        <input *ngIf="filters.companies[index]!=undefined" name="items-{{index}}" id="items-{{index}}" type="checkbox" [ngModel]="filters.companies[index].checked"/> {{item.name}}
+                                    </ng-template>
+                                </ng-select>
+                                
+                            </div>
+                        </div>
+
+             <!--    <div class="col-md-3 form-group">
+                    <label class="suppliername-label" for="isEmpty">Suppliers with missing data</label>
+                    <ng-select                     style="font-size:16px!important"
+                    placeholder="Select" [ngModelOptions]="{standalone: true}" [items]="selectOptions"  name="select" [(ngModel)]="filters.empty" bindLabel="name" bindValue="value" [searchable]='false'></ng-select>
+                </div>
+                -->
+               
+            </div>
+
+        <div style="width: 100%;
+        margin: 15px 0px;
+        border-top: none;" class="row filter-footer" >
+            <div class="col-lg-3"></div>
+            <div style="text-align:center" class="col-lg-3">
+                <div style="width: auto;padding: 8px 38px;height: auto;" (click)="clear()" class="btn btn-back">Clear</div>
+            </div>
+            <div style="text-align:center" class="col-lg-3">
+                <button style="width: auto;padding: 8px 52px;height: auto;"  class="btn prime-btn" type="submit">Show Results</button>
+            </div>
+        </div>
+    </form> 
+</div>
+</div>

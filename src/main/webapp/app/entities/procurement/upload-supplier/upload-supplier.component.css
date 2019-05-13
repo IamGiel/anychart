@@ -1,0 +1,744 @@
+/* just for drag and drop */
+@import '~ngx-toastr/toastr.css';
+
+/* file upload ng2 */
+
+.my-drop-zone {
+    border: dotted 3px lightgray;
+}
+.my-drop-zone1 {
+    height: 295px;
+}
+
+.nv-file-over {
+    border: dotted 3px #804cd9;
+}
+
+/* Default class applied to drop zones on over */
+.another-file-over-class {
+    border: dotted 3px green;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* end */
+
+.pReq h5 {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.pReq h1 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+}
+
+.pReq .title p {
+    padding: 10px 40px;
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.15rem;
+    height: 100% !important;
+}
+
+/* Title portion */
+.lightGreyFonts {
+    color: grey;
+    margin-bottom: 40px;
+}
+
+.download-csv {
+    height: 28px;
+    width: 173px;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+}
+
+.wrapInstruction {
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+.or-select {
+    position: absolute;
+    top: 211px;
+}
+
+.or-select1 {
+    position: relative;
+    top: 55px;
+    left: 2%;
+}
+
+.or-select2 {
+    position: relative;
+    top: 91px;
+    border-color: mediumpurple;
+}
+
+.browse-btn {
+    border-radius: 24px;
+    background-color: #f0edfb;
+    background-position: left center;
+    border-color: #f0ede0;
+    border-width: 1.5px;
+    padding: 17px 33px;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-left: 41px;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+
+.browse-btn:active {
+    background: linear-gradient(134.72deg, #210d68 0%, #f0edfb 51%, #a694e8 100%);
+    transition: 10s ease;
+    background-position: right center;
+    border-color: silver;
+}
+
+.file {
+    height: 54px;
+    margin-top: 52px;
+}
+
+.brwsePar {
+    height: 24px;
+    width: 81px;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 21%;
+}
+
+/* upload part */
+.rectangle-4 {
+    height: 326px;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    padding-top: 20px;
+}
+
+.wrap-cover {
+    height: 88%;
+    width: 93%;
+    background-color: purple;
+    opacity: 0.2;
+    position: absolute;
+}
+
+.wrap-cover-none {
+    display: none;
+}
+
+/* upload/select file btn */
+.selectFileBtn {
+    color: #6b4cd9;
+    height: 48px;
+    width: 136px;
+    /* opacity: 0.1; */
+    border-radius: 24px;
+    background-color: #f0edfb;
+}
+
+.progress {
+    display: -ms-flexbox;
+    display: flex;
+    height: 5px;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    /* margin-top: 20px; */
+    width: 100%;
+    position: relative;
+}
+
+.show-progress {
+    position: relative;
+    top: 15vh;
+}
+
+/* 
+.snap-fileName {
+    position: relative;
+    top: 20vh;
+    height: 20px;
+    width: 209px;
+    opacity: 0.9;
+    color: #6B4CD9;
+    font-family: "Inter UI";
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    text-align: center;
+} */
+
+.snap-fileName {
+    position: relative;
+    top: -7px;
+    height: 20px;
+    width: 209px;
+    opacity: 0.9;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    text-align: center;
+}
+
+.fileNameSelected {
+    position: relative;
+    height: 37px;
+    top: 0px;
+    font-size: 12px;
+    margin-top: 20px;
+    left: 24%;
+    border-style: solid;
+    border-width: 0.5px;
+    width: 50%;
+    background-color: #f0edfb;
+    border-color: lightgrey;
+}
+
+.bg-success {
+    background-color: #804cd9 !important;
+}
+
+/* file a tag */
+.fileLink {
+    margin-top: 10px !important;
+    line-height: 35px !important;
+}
+
+.dragDrop {
+    height: 10em;
+    margin-top: 118px;
+}
+
+/* drag and drop styles */
+/* uppy drag and drop */
+
+/* feather icons */
+.big {
+    margin-bottom: 19px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #804cd9;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    position: relative;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+.dwnldSample {
+    position: absolute;
+    display: block;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.featherTxt {
+    position: absolute;
+    top: 9vh;
+    left: -2vh;
+}
+
+#fileTxt {
+    position: absolute;
+    top: 0vw;
+}
+
+.parTitle {
+    padding-left: 14%;
+    height: 28px;
+    padding: 0px;
+    /* height: 34px; */
+    position: relative;
+    display: inline-flex;
+    height: 30px;
+}
+
+.parTitle1 {
+    padding-left: 14%;
+    height: 28px;
+    padding-left: 14%;
+    /* height: 34px; */
+    position: relative;
+    display: inline-flex;
+    height: 30px;
+}
+
+/* .svg {
+    color: #6b4cd9;
+} */
+
+.feather-grey {
+    color: #d2c9f3 !important;
+}
+
+/* buttons */
+
+.backItUp {
+    /* back grid container */
+    padding-left: 8%;
+}
+
+.skipItUp {
+    /* back grid container */
+    padding-right: 47%;
+}
+
+.nextUp {
+    /* back grid container */
+    padding-right: 8%;
+}
+
+.pReq .btn-back {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    height: 48px;
+    width: 210px;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    margin-left: 10px;
+}
+.red .progress-bar {
+    background: red !important;
+}
+.blue .progress-bar {
+    background: #6b4cd9 !important;
+}
+.btnDisabled {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    text-transform: uppercase;
+    height: 48px;
+    width: 112px;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.btn-skip {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    text-transform: uppercase;
+    height: 48px;
+    width: 112px;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    opacity: 0.8;
+}
+
+/* .pReq .btn-skip:active {
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #F8F8F8;
+    text-transform: uppercase;
+    height: 48px;
+    width: 112px;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+} */
+
+.btn-back:hover {
+    background: silver;
+}
+
+.btn-back span {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.btn-prime2 {
+    background-size: 200% auto;
+    text-transform: uppercase;
+    height: 48px;
+    width: 210px;
+    border-radius: 24px;
+    background: linear-gradient(134.72deg, #804cd9 0%, #804cd9 51%, #544ad8 100%);
+
+    /* font */
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.btn-prime2:hover {
+    background: linear-gradient(134.72deg, #804cd9 0%, #804cd9 51%, #544ad8 100%);
+    /* transition: 0.5s; */
+    /* transitions */
+    -webkit-transition: background-color 1.2s ease-out;
+    -moz-transition: background-color 1.2s ease-out;
+    -o-transition: background-color 1.2s ease-out;
+    transition: background-color 1.2s ease-out;
+}
+
+/* .pReq .btn-prime2 span {
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+} */
+
+.request {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.pReq .request h3 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+
+.pReq .request p {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.pReq hr {
+    border-radius: 4px 4px 0 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.padTop30 {
+    padding-top: 30px !important;
+}
+
+/* .pReq .desc p {
+    opacity: 0.8;
+    color: #6B4CD9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+} */
+
+.pReq a {
+    color: #14b4d2;
+}
+
+.btnContainer {
+    position: relative;
+    display: inherit;
+}
+
+/* drop zone */
+.drag-drop-csv {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    text-align: center;
+}
+.or-select-a-file-fro {
+    opacity: 0.8;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    line-height: 43px;
+    text-align: center;
+    font-weight: normal;
+}
+.shape {
+    box-sizing: border-box;
+    height: 30px;
+    width: 24px;
+    border: 3px solid #000000;
+}
+.progressRow {
+    margin-top: -247px;
+    width: 100%;
+    margin-left: 0%;
+}
+.progressRow h2 {
+    opacity: 0.9;
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+.progressRow .btnRow {
+    margin: 0 auto;
+}
+.progressRow .progress {
+    margin: 24px 0px;
+}
+.progress-bar {
+    background: #6b4cd9;
+    width: 100%;
+}
+.cancelBtn {
+    height: 48px;
+    width: 134px;
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+    margin-left: 14px;
+}
+.dropzone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 200;
+    height: 75%;
+    width: 100%;
+    border-radius: 5px;
+    margin: 6vh 0;
+}
+
+.fileBytes {
+    position: relative !important;
+    top: -13em !important;
+}
+
+/* .snap-fileName {
+    position: relative;
+    top: -3vw;
+} */
+
+/* .dropzone:hover {
+    border-style: dashed;
+} */
+
+.dropzoneHover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 200;
+    height: 113%;
+    width: 100%;
+    border-radius: 5px;
+    background: white;
+    margin: -279px 0;
+    border: 2px solid linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    top: 58px;
+    color: #dadada !important;
+}
+
+.cancel-upload {
+    height: 48px;
+    width: 134px;
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background-color: #ffffff;
+}
+
+.file-label {
+    font-size: 1.2em;
+}
+
+progress::-webkit-progress-value {
+    transition: width 0.01s ease;
+}
+
+progress::-moz-progress-bar {
+    background: #6b4cd9;
+    width: 100%;
+}
+
+progress::-webkit-progress-value {
+    background: #6b4cd9;
+    width: 100%;
+}
+
+img {
+    width: 250px;
+}
+
+/* media queries */
+
+@media (max-width: 767px) {
+    .btnDisabled {
+        width: 100%;
+    }
+
+    .pReq .btn-skip {
+        border: 1px solid #e7e7e7;
+        border-radius: 24px;
+        text-transform: uppercase;
+        height: 48px;
+        width: 100%;
+        color: #181818;
+        font-family: 'Inter UI';
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+
+    .backItUp {
+        /* back grid container */
+        padding-left: 0%;
+    }
+
+    .skipItUp {
+        /* back grid container */
+        padding-right: 0%;
+        position: relative;
+        left: -14px;
+    }
+
+    .nextUp {
+        /* back grid container */
+        padding-right: 0%;
+        position: relative;
+        left: -14px;
+    }
+
+    .or-select1 {
+        position: relative;
+        top: 17px;
+        left: 2%;
+    }
+
+    .snap-fileNam {
+        position: relative;
+        top: -24px;
+    }
+
+    .progress {
+        display: -ms-flexbox;
+        display: flex;
+        height: 5px;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: 0.25rem;
+        /* margin-top: 20px; */
+        width: 100%;
+        position: relative;
+        top: -155px;
+    }
+
+    #i-fthr {
+        display: none;
+    }
+
+    .parTitle,
+    .parTitle1 {
+        font-size: 12px;
+    }
+
+    .pReq .title h1 {
+        font-size: 20px;
+    }
+
+    .pReq .title p {
+        font-size: 14px;
+        padding: 0px;
+    }
+
+    .pReq .request h3,
+    .pReq .pend-box h3 {
+        font-size: 16px;
+    }
+
+    .btnRow {
+        text-align: center;
+    }
+
+    .pReq .btn-prime2,
+    .pReq .btn-back {
+        display: block;
+        width: 100%;
+    }
+
+    .pReq .desc p {
+        font-size: 13px;
+    }
+}

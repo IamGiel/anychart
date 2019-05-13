@@ -1,0 +1,18 @@
+<div class="container-fluid pReq">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faqs-basicqn-head-wrp"><div class="faqs-specific-head inline-block">PRE-LOGIN</div><div class="beroe-grey-extendor hidden-xs inline-block"></div></div>
+    <div class="faqs-content ">
+        <p class="faqs-qsn " role="button" tabindex="0" >1. I forgot my password/ I want to reset my password.</p>
+    </div>
+    <div class="faqs-content-ans "><p class="faqs-ans " >Ans. Click on the 'Forgot Password' option and the password reset link will be sent to your registered mail.</p></div>
+    <div class="faqs-content "><p class="faqs-qsn " role="button" tabindex="0">2.  I don't have access to an official email address. Can I register and access Beroe Live portal?</p></div>
+    <div class="faqs-content-ans "><p class="faqs-ans " >Ans. Registrations on Beroe Live platform are now made available only to users with an official email address.</p></div>
+    <div *ngFor="let faq of faqList">
+        <div class="faqs-basicqn-head-wrp"><div class="faqs-specific-head inline-block">{{faq.section}}</div><div class="beroe-grey-extendor hidden-xs inline-block"></div></div>
+            <div class="faqs-content faq" *ngFor="let faqs of faq.list;let i = index" >
+                <p class="faqs-qsn" (click)="faqQuestionClicked(i,faq.list)" ngbPopover="{{faqs.answer}}" placement="right" triggers="click">{{faqs.question}}</p>
+        </div>
+    </div>
+   
+</div>
+

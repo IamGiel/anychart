@@ -1,0 +1,220 @@
+.login {
+    margin-top: 50px;
+}
+
+.login .logoImg {
+    background: url('../../../../content/images/beroe_icon.png') no-repeat center center;
+    height: 175px;
+    width: 200px;
+    background-size: contain;
+}
+
+.login .login-box {
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(24, 24, 24, 0.05);
+    padding: 72px 82px;
+    min-height: 620px;
+}
+
+.login .headline {
+    margin-top: 40%;
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+}
+
+.login .supplier-login-info {
+    opacity: 0.9;
+    color: #ffffff;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 24px;
+}
+
+.login .login-box h2 {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+}
+
+.login .login-box .login-text {
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    margin-top: 30px;
+    border-bottom: 2px solid #6b4cd9;
+    width: 50px;
+}
+
+.login .login-box .divider {
+    height: 1px;
+    opacity: 0.1;
+    background-color: #181818;
+}
+
+.form-row {
+    margin-top: 45px;
+}
+
+.custom-file-control {
+    background-image: linear-gradient(0deg, #6b4cd9 2px, rgba(213, 0, 0, 0) 0),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.26) 1px, transparent 0);
+}
+
+.form-control {
+    padding: 0;
+}
+
+.custom-file-control:invalid,
+.form-control:invalid {
+    background-image: linear-gradient(0deg, #6b4cd9 2px, rgba(213, 0, 0, 0) 0),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.26) 1px, transparent 0);
+}
+
+.login-input {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom: 1px #6b4cd9;
+    border-left-width: 0;
+}
+
+.login-input:focus {
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.login-input input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: white !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.login-container .login-box .login-content-wrap {
+    margin-top: 64px;
+}
+
+.login-container .login-box .login-content-wrap .login-credentials .input-wrap {
+    margin-top: 10px;
+}
+
+.login-container .login-box .login-content-wrap .login-credentials .input-wrap .login-input {
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    color: #5d52a8;
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid #979797;
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.login-container .login-box .login-content-wrap .login-credentials .input-wrap .login-input:focus {
+    border-bottom: 2px solid #5d52a8;
+}
+
+.login-container .login-box .login-content-wrap .login-credentials .input-wrap .login-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #f8f8f8 inset !important;
+    -webkit-text-fill-color: #5d52a8 !important;
+}
+
+.login-container .login-box .login-content-wrap .login-credentials .input-wrap label {
+    height: 20px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.login-container .login-box .login-content-wrap .login-credentials .input-wrap .input-title {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    color: #464646;
+    padding: 2px;
+}
+
+.login-container .login-box .login-content-wrap .login-btn-wrap {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.login-container .login-box .login-content-wrap .login-button {
+    height: 48px;
+    width: 105px;
+    border-radius: 24px;
+    background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    color: white;
+    font-family: 'Inter UI';
+}
+
+.login-container .login-box .login-content-wrap .login-links-wrap {
+    text-align: center;
+}
+
+.login-container .login-box .login-content-wrap .login-links-wrap .login-page-links {
+    margin-top: 27px;
+}
+
+.login-container .login-box .login-content-wrap .login-links-wrap .login-page-links img {
+    height: 12px;
+    width: 9px;
+    margin-left: 8px;
+}
+
+.remember-login {
+    height: 20px;
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+@media (max-width: 768px) {
+    .login .headline {
+        margin-top: 1%;
+        font-size: 26px;
+    }
+
+    .login {
+        margin-top: 0px;
+    }
+
+    .login .login-box {
+        padding: 30px;
+        min-height: auto;
+    }
+
+    .login-container .login-box .login-content-wrap .login-button {
+        top: 10px;
+        margin-left: -17px;
+        width: 100%;
+    }
+
+    .login .logoImg {
+        margin: 0 auto;
+    }
+}

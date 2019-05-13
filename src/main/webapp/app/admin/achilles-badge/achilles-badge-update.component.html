@@ -1,0 +1,61 @@
+
+  
+    <div class="modal-header">
+        <h4  class="modal-title" > Assign Badge </h4>
+         <button aria-label="Close" data-dismiss="modal" class="close" type="button" (click)="close()"><span aria-hidden="true">x</span>
+        </button>
+    </div>
+    <div class="modal-body">
+       <div class="d-flex justify-content-center">
+            <div class="alert alert-danger col-md-6" role="alert" *ngIf="errMsg!=undefined && errMsg.length>0">{{errMsg}}</div>
+            <div class="alert alert-success col-md-6" role="alert" *ngIf="successMsg!=undefined && successMsg.length>0">{{successMsg}}</div>
+        </div>
+        <div class="form-group row" *ngIf="1!==1">
+            <label for="Duns Number" class="col-sm-2 col-form-label">DUNS No</label>
+            <span class="col-sm-1" style="position: relative; top: 9px;">:</span>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" placeholder="Enter Duns number" [(ngModel)]='dunsSearch' (ngModelChange)="valuechange($event)"/>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-prime" (click)="searchDuns()" [disabled]="dunsSearch==undefined || dunsSearch==null || dunsSearch.length<1">Search</button>
+            </div>
+        </div>
+        
+         <div class="justify-content-center" style="background: #f2f2f2;padding: 10px;min-height:200px;" *ngIf="successMsg==null || successMsg.length<=0">
+            <form [formGroup]="updateBadgeForm" (ngSubmit)="updateBadge()" >
+                    
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="Duns Number" class="col-form-label">DUNS No</label><br/>
+                            <input type="text" formControlName="dunsNo" class="form-control" placeholder="DUNs Number"  [ngClass]="{ 'is-invalid': f.dunsNo.touched && f.dunsNo.invalid }" />
+                            <div *ngIf=" f.dunsNo.errors" class="invalid-feedback">
+                                <div *ngIf="f.dunsNo.errors.required">DUNs Number is required</div>
+                                <div *ngIf="f.dunsNo.errors.pattern">Number Only</div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <label for="Badge Name" class="col-form-label">Badge Name</label><br/>
+                            <select id="badge-name" formControlName="badgeName" class="form-control" [ngClass]="{ 'is-invalid': f.badgeName.touched && f.badgeName.invalid }" >
+                                <option value=''>Select Badge</option>
+                                <option *ngFor="let badge of badges" [ngValue]="badge.name">{{ badge.name }}</option>
+                            </select>
+                            <div *ngIf=" f.badgeName.errors" class="invalid-feedback">
+                                <div *ngIf="f.badgeName.errors.required">Badge Name is required</div>
+                            </div>
+                        </div>
+                       
+                        <div class="col-md-3">
+                            <label for="Duns Number" class="col-form-label">&nbsp;</label><br/>
+                            <button class="btn btn-prime" type="submit" [disabled]="!updateBadgeForm.valid">Assign Badge</button>
+                        </div>
+                    </div>
+                </form>
+            
+        </div>
+        
+    </div>
+   
+
+   
+ 
+
