@@ -191,7 +191,7 @@
                         </li>
                     </ul>
                 </li>
-                <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer" placement="bottom-right" routerLinkActive="active"
+                <li  ngbDropdown class="nav-item dropdown pointer" placement="bottom-right" routerLinkActive="active"
                     [routerLinkActiveOptions]="{exact: true}">
                     <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
                         <span *ngIf="!getImageUrl()">
@@ -211,7 +211,7 @@
                             role="button" tabindex="0">Login</div>-->
                         <div *ngSwitchCase="true" class="down-click-content bigspans" (click)="resetPassword()"
                             role="button" tabindex="0">Reset Password</div>
-                        <div *ngSwitchCase="true" class="down-click-content bigspans" id="logout" (click)="logout()"
+                        <div class="down-click-content bigspans" id="logout" (click)="logout()"
                             role="button" tabindex="0">Logout</div>
                     </ul>
                     <!-- <ul class="dropdown-menu" ngbDropdownMenu >

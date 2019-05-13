@@ -265,6 +265,11 @@ export class RestEndpointConstants {
                 name: 'badgeUpdate',
                 url: '/compliance/api/data-point-responses/badge',
                 method: 'put'
+            },
+            {
+                name: 'getAllRequest',
+                url: 'api/sharedRequest',
+                method: 'get'
             }
         ]
     };

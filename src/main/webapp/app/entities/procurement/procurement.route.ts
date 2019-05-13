@@ -26,7 +26,7 @@ export const procurementState: Routes = [
     {
         path: 'procurement',
         data: {
-            authorities: ['ROLE_PROCUREMENT_USER', 'ROLE_CM_USER', 'ROLE_PRODUCTS_TEAM_USER']
+            // authorities: ['ROLE_PROCUREMENT_USER', 'ROLE_CM_USER', 'ROLE_PRODUCTS_TEAM_USER']
         },
         children: PROC_ROUTES
     }

@@ -26,7 +26,7 @@ export const supplierState: Routes = [
     {
         path: 'supplier',
         data: {
-            authorities: ['ROLE_SUPPLIER_USER']
+            // authorities: ['ROLE_SUPPLIER_USER']
         },
         children: SUPPLIER_ROUTES
     }

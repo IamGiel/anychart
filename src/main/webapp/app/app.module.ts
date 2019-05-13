@@ -25,38 +25,20 @@ import { IconsModule } from './icons/icons.module';
 
 import { SupplierModule } from './entities/supplier/supplier.module';
 import { ProcurementModule } from './entities/procurement/procurement.module';
-//import { OnboardingModule } from './onboarding-screens/onboarding.module';
 
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
 
-// // procurement stuff
-// import { WelcomeComponent, PincodeComponent, UploadCsvComponent } from './onboarding-screens/procurement-onboarding-screens';
-
-// // supplier stuff
-// import {
-//     WelcomeSupplierComponent,
-//     ClaimProfileComponent,
-//     EnterAccountSupplierComponent,
-//     PendingDataSupplierComponent,
-//     PaymentInfoSupplierComponent
-// } from './onboarding-screens/supplier-onboarding-screens';
-
-// import { UppyModule } from './uppy/uppy.module';
 import { ToastrModule } from 'ngx-toastr';
-//import { AngularFireModule } from '@angular/fire';
-//import { AngularFireStorageModule } from '@angular/fire/storage';
-//import { AngularFirestoreModule } from 'angularfire2/firestore';
-//import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import { environment } from '../environments/environment';
 import { AngularFileUploaderModule } from 'angular-file-uploader';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { TagInputModule } from 'ngx-chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-// import { FileSizePipe } from 'app/file-size.pipe';
-// import { DropZoneDirective } from 'app/drop-zone.directive';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FakeBackendService } from './fake-backend.service';
 
 @NgModule({
     imports: [
@@ -74,45 +56,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         GatewayEntityModule,
         IconsModule,
         ToastrModule.forRoot(),
-        // DndModule.forRoot(),
-        // UppyModule,
-        //OnboardingModule,
+
         SupplierModule,
         ProcurementModule,
-        //  AngularFireStorageModule,
-        // AngularFirestoreModule,
-        // AngularFireAuthModule,
-        //  AngularFireModule.initializeApp(environment.firebase),
+
         FormsModule,
         ReactiveFormsModule,
         AngularFileUploaderModule,
         MatomoModule,
         NgxContentLoadingModule,
         GatewayAppRoutingModule,
-        TagInputModule
+        TagInputModule,
+        InMemoryWebApiModule.forRoot(FakeBackendService)
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
-    declarations: [
-        JhiMainComponent,
-        NavbarComponent,
-        ErrorComponent,
-        PageRibbonComponent,
-        ActiveMenuDirective,
-        FooterComponent
-        // FileSelectDirective,
-        // FileUploader
-        // FileSizePipe,
-        // DropZoneDirective
-
-        // WelcomeComponent,
-        // PincodeComponent,
-        // WelcomeSupplierComponent,
-        // ClaimProfileComponent,
-        // EnterAccountSupplierComponent,
-        // PendingDataSupplierComponent,
-        // PaymentInfoSupplierComponent,
-        // UploadCsvComponent
-    ],
+    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,

@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit, AfterViewInit, AfterContentInit {
     checkRemeber: boolean = false;
     activeTab: string = 'Login';
     pwdToggle: boolean = false;
+    baseClass: any;
     constructor(
         private eventManager: JhiEventManager,
         private loginService: LoginService,
@@ -105,6 +106,9 @@ export class LoginComponent implements OnInit, AfterViewInit, AfterContentInit {
         if (this.href.indexOf('signup') != -1) {
             this.activeTab = 'SignUp';
         }
+        this.loginType = 'proc';
+        this.baseClass = {};
+        this.baseClass.loginCBG = true;
     }
     ngAfterViewInit() {
         setTimeout(() => {
@@ -125,7 +129,7 @@ export class LoginComponent implements OnInit, AfterViewInit, AfterContentInit {
     }
 
     login() {
-        this.loginService
+        /* this.loginService
             .login({
                 username: this.username,
                 password: this.password,
@@ -182,7 +186,8 @@ export class LoginComponent implements OnInit, AfterViewInit, AfterContentInit {
             .catch(() => {
                 event.preventDefault();
                 this.authenticationError = true;
-            });
+            });*/
+        this.router.navigate(['procurement/dashboard']);
     }
     rememberMeCheck() {
         if (this.checkRemeber) {

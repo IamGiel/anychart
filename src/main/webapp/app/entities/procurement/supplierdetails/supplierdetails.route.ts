@@ -6,7 +6,7 @@ import { UserRouteAccessService } from 'app/core';
 export const supdetailsRoute: Routes = [
     {
         path: 'supdetails/:id/:duns',
-        canActivate: [UserRouteAccessService],
+        // canActivate: [UserRouteAccessService],
         data: {
             pageTitle: 'pageTitle.supplier.details'
         },
@@ -14,7 +14,7 @@ export const supdetailsRoute: Routes = [
     },
     {
         path: 'company-info/admin/:id',
-        canActivate: [UserRouteAccessService],
+        // canActivate: [UserRouteAccessService],
         data: {
             pageTitle: 'pageTitle.supplier.details'
         },

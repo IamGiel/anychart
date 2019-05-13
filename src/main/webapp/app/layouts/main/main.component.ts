@@ -63,6 +63,7 @@ export class JhiMainComponent implements OnInit, OnDestroy {
                     this.bcs.setProc('default');
                 }
             }
+            this.bcs.setProc('procurement');
 
             if (event instanceof NavigationEnd) {
                 this.baseClass = {};

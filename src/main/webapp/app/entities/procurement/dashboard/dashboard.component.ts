@@ -8,7 +8,7 @@ import { LocalStoreService } from '../../../core/auth/local-storage.service';
 import { ProcurementFaqModalComponent } from '../../common/modals/procurement-faq-modal/procurement-faq-modal.component';
 import { NgbActiveModal, NgbModalRef, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { faBackspace } from '@fortawesome/free-solid-svg-icons';
-
+import { FetchData } from '../../common/service/fetch-data';
 @Component({
     selector: 'jhi-dashboard',
     templateUrl: './dashboard.component.html',
@@ -44,14 +44,15 @@ export class DashboardComponent implements OnInit {
         private router: Router,
         private data: SharedDataService,
         private lc: LocalStoreService,
-        private modalService: NgbModal
+        private modalService: NgbModal,
+        private fetchData: FetchData
     ) {}
     ngOnInit() {
-        this.recentlyShared();
+        // this.recentlyShared();
         this.tabClicked('Shared');
-        if (this.lc.getLocalInfo('account').authorities.indexOf('ROLE_CM_USER') >= 0) {
+        /*   if (this.lc.getLocalInfo('account').authorities.indexOf('ROLE_CM_USER') >= 0) {
             this.isCatManager = true;
-        }
+        }*/
     }
     goToPage(n: number): void {
         this.page = n;
@@ -204,17 +205,45 @@ export class DashboardComponent implements OnInit {
         let tabData = tab.toLowerCase();
         this.pagesize = (this.page - 1) * this.limit;
         param = '&status=' + tabData + '&search=' + search + '&from=' + this.pagesize + '&size=' + this.limit;
-        this.ds
+        this.fetchData.getAllRequest(param).subscribe(
+            res => {
+                console.log(res);
+                this.list = res.body['data'];
+                this.total = res.body['totalCounts'];
+
+                if (this.list !== null) {
+                    this.tempList = this.list;
+                }
+
+                this.loadingData = false;
+                this.customPiwik.setCustomData(
+                    'userId',
+                    'procurement/dashboard/tab' + tab + '/load/page/' + this.page + '/success',
+                    window.location.href
+                );
+            },
+            err => {
+                console.log(err);
+                this.loadingData = false;
+                this.customPiwik.setCustomData(
+                    'userId',
+                    'procurement/dashboard/tab' + tab + '/load/page/' + this.page + '/fail',
+                    window.location.href
+                );
+            }
+        );
+        /* this.ds
             .getAllRequest(param)
             .toPromise()
             .then(response => {
+                console.log(response);
                 this.list = response.body['data'];
                 this.total = response.body['totalCounts'];
 
                 if (this.list !== null) {
                     this.tempList = this.list;
                 }
-                // console.log(this.list);
+                
                 this.loadingData = false;
                 this.customPiwik.setCustomData(
                     'userId',
@@ -230,7 +259,7 @@ export class DashboardComponent implements OnInit {
                     'procurement/dashboard/tab' + tab + '/load/page/' + this.page + '/fail',
                     window.location.href
                 );
-            });
+            });*/
     }
     searchData(event, type) {
         let searchSharedValue = event.target.value.toLowerCase();

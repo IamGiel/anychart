@@ -8,11 +8,11 @@ import { SERVER_API_URL } from 'app/app.constants';
 export class DashboardService {
     constructor(private http: HttpClient) {}
 
-    getAllRequest(param): Observable<HttpResponse<Request>> {
+    /*getAllRequest(param): Observable<HttpResponse<Request>> {
         return this.http.get<Request>(SERVER_API_URL + 'compliance/api/search/compliance-requests?mode=compliance&action=latest' + param, {
             observe: 'response'
         });
-    }
+    }*/
     getSharedData(param): Observable<HttpResponse<Request>> {
         return this.http.get<Request>(SERVER_API_URL + 'compliance/api/search/compliance-requests?mode=compliance&action=latest' + param, {
             observe: 'response'
@@ -20,6 +20,11 @@ export class DashboardService {
     }
     sendReminder(reqId: any): Observable<HttpResponse<any>> {
         return this.http.post(SERVER_API_URL + 'compliance/api/compliance-requests/' + reqId + '/reminder', null, {
+            observe: 'response'
+        });
+    }
+    getAllRequest(param): Observable<HttpResponse<Request>> {
+        return this.http.get<Request>(SERVER_API_URL + 'api/tasks', {
             observe: 'response'
         });
     }

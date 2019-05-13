@@ -7,6 +7,6 @@ export const dashboardRoute: Route = {
     data: {
         pageTitle: 'pageTitle.compliance.dashboard'
     },
-    canActivate: [UserRouteAccessService],
+    //canActivate: [UserRouteAccessService],
     component: DashboardComponent
 };

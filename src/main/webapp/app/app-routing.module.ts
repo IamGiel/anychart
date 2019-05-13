@@ -49,7 +49,7 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
                 },
                 { path: '**', redirectTo: '/login' }
             ],
-            { enableTracing: true }
+            { enableTracing: true, useHash: true }
         )
     ],
     exports: [RouterModule]

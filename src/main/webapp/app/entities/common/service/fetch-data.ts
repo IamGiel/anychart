@@ -268,4 +268,7 @@ export class FetchData {
     badgeUpdate(payload) {
         return this.serviceEndpoints.init().badgeUpdate.makeRequest(payload, null);
     }
+    getAllRequest(param) {
+        return this.serviceEndpoints.init().getAllRequest.makeRequest(null, param);
+    }
 }

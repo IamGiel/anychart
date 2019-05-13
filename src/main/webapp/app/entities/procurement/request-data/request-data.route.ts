@@ -7,6 +7,6 @@ export const requestDataRoute: Route = {
     data: {
         pageTitle: 'pageTitle.compliance.request-data'
     },
-    canActivate: [UserRouteAccessService],
+    //canActivate: [UserRouteAccessService],
     component: RequestDataComponent
 };

@@ -7,6 +7,6 @@ export const supdetailsSupllierRoute: Route = {
     data: {
         pageTitle: 'pageTitle.supplier.details'
     },
-    canActivate: [UserRouteAccessService],
+    //  canActivate: [UserRouteAccessService],
     component: SupplierdetailsComponent
 };
