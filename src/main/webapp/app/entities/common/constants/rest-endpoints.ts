@@ -268,7 +268,7 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getAllRequest',
-                url: 'api/sharedRequest',
+                url: 'api/data',
                 method: 'get'
             }
         ]

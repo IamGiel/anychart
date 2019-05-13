@@ -231,7 +231,7 @@
       <div class="col-md-2"></div>
       <div class="col-md-8">
             <div class="row pend" *ngIf="!loadingData && activeTab=='Pending' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0" ><p>There are no pending requests.</p></div>
-            <div class="row pend" *ngIf="!loadingData && activeTab=='Declined' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0"><p>No supplier has declined.</p></div>
+            <div class="row pend" *ngIf="!loadingData && activeTab=='Declined' && (total==undefined || total==null || total==0) && searchKeyword.length<=0"><p>No supplier has declined.</p></div>
         <div >
             <div class="divbody" id="tab1" *ngIf="!loadingData && activeTab=='Shared' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0">          
 
@@ -264,7 +264,7 @@
                       <span class="wantaddinformation">Want additional information?</span> <a><span class="faq" (click)="gotoFaq()">Check out the FAQ.</span> </a>
                   </div>      
             </div>
-            <div id="tab3" *ngIf="!loadingData && activeTab=='Declined' && (list==undefined || list.length==null || list.length<=0) && searchKeyword.length<=0" class="divbody">          
+            <div id="tab3" *ngIf="!loadingData && activeTab=='Declined' && (total==undefined || total==null || total==0) && searchKeyword.length<=0" class="divbody">          
                 <div class="text-center"> <i-upload class="feather"></i-upload> </div>
                 <div class="nosupdata">
                     <span > Upload Supplier List </span>
@@ -284,7 +284,7 @@
       </div>
       <div class="col-md-2"></div>
    </div>
-   <div class="row" *ngIf="searchKeyword.length>0 && (list==undefined || (list!=undefined && list==null) || list.length<=0)">
+   <div class="row" *ngIf="(searchKeyword!=null && searchKeyword.length>0) && (total==undefined || total==null || total==0)">
        <p class="no-result"><b>No results found.</b> Please adjust your filter criteria. <span class="clear-filter" (click)='clearSearch()'>Clear Filters <i-x-square></i-x-square></span></p>
     </div>
 

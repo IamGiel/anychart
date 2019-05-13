@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
     isOpen = false;
     viewMode = 'tab1';
     activeTab: string;
-    list: any;
+    list = [];
     tempList: any;
     loadingData: boolean = true;
     topRow: any;
@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
         private fetchData: FetchData
     ) {}
     ngOnInit() {
-        // this.recentlyShared();
+        this.recentlyShared();
         this.tabClicked('Shared');
         /*   if (this.lc.getLocalInfo('account').authorities.indexOf('ROLE_CM_USER') >= 0) {
             this.isCatManager = true;
@@ -78,14 +78,11 @@ export class DashboardComponent implements OnInit {
     recentlyShared() {
         console.log('called');
         let param = '&status=shared&search=&from=0&size=20';
-        this.ds
-            .getSharedData(param)
-            .toPromise()
-            .then(response => {
-                let dataset = response.body['data'];
+        this.fetchData.getAllRequest(param).subscribe(
+            res => {
                 //this.data.shareData(dataset);
 
-                dataset.forEach((value, index, arr) => {
+                res.data.forEach((value, index, arr) => {
                     console.log(value);
                     let temp: any = {};
                     temp.id = value.id;
@@ -183,10 +180,12 @@ export class DashboardComponent implements OnInit {
                 console.log(this.reportData);
                 this.topRow = this.reportData;
                 this.data.shareData(this.reportData);
-            })
-            .catch(err => {});
+            },
+            err => {}
+        );
     }
     tabClicked(tab) {
+        console.log('tabcllicked');
         this.searchKeyword = '';
         this.page = 1;
         if (this.activeTab !== tab) {
@@ -208,8 +207,8 @@ export class DashboardComponent implements OnInit {
         this.fetchData.getAllRequest(param).subscribe(
             res => {
                 console.log(res);
-                this.list = res.body['data'];
-                this.total = res.body['totalCounts'];
+                this.list = res.data;
+                this.total = res.totalCounts;
 
                 if (this.list !== null) {
                     this.tempList = this.list;
