@@ -426,8 +426,8 @@
 
                                         </div>
                                     </div>
-                                    <ng-container *ngIf="aqs.getSavedData().compliancePackages.indexOf('Base')==-1">
-   
+                                    <!--<ng-container *ngIf="aqs.getSavedData().compliancePackages.indexOf('Base')==-1">-->
+                                    <ng-container>
                                     <div  class="col-lg-6">
                                         
                                         <div  class="badge-container" style="margin-bottom:16px;">
@@ -499,7 +499,8 @@
                                 </ng-container>
 <!--                                     [ngbCollapse]="ratings.csrHubRating.collapse"
  -->                                </div>
-                                <div  *ngIf="aqs.getSavedData().compliancePackages.indexOf('Advantage')>=0" style="margin-bottom:40px;" class="row">
+                                <!--<div  *ngIf="aqs.getSavedData().compliancePackages.indexOf('Advantage')>=0" style="margin-bottom:40px;" class="row">-->
+                                    <div style="margin-bottom:40px;" class="row">  
                                     
                                     <div class="col-12">
                                         <div class="badge-container2">

@@ -1,0 +1,654 @@
+{
+  "_embedded": {
+    "ratingTrendCodeDetailses": [
+      {
+        "ratingClassification": "5A",
+        "netWorth": "$50,000,000 and Over",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/1"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/1"
+          }
+        }
+      },
+      {
+        "ratingClassification": "4A",
+        "netWorth": "10,000,000 to 49,999,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/2"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/2"
+          }
+        }
+      },
+      {
+        "ratingClassification": "3A",
+        "netWorth": "1,000,000 to 9,999,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/3"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/3"
+          }
+        }
+      },
+      {
+        "ratingClassification": "2A",
+        "netWorth": "750,000 to 999,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/4"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/4"
+          }
+        }
+      },
+      {
+        "ratingClassification": "1A",
+        "netWorth": "500,000 to 749,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/5"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/5"
+          }
+        }
+      },
+      {
+        "ratingClassification": "BA",
+        "netWorth": "300,000 to 499,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/6"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/6"
+          }
+        }
+      },
+      {
+        "ratingClassification": "BB",
+        "netWorth": "200,000 to 299,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/7"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/7"
+          }
+        }
+      },
+      {
+        "ratingClassification": "CB",
+        "netWorth": "125,000 to 199,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/8"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/8"
+          }
+        }
+      },
+      {
+        "ratingClassification": "CC",
+        "netWorth": "75,000 to 124,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/9"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/9"
+          }
+        }
+      },
+      {
+        "ratingClassification": "DC",
+        "netWorth": "50,000 to 74,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/10"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/10"
+          }
+        }
+      },
+      {
+        "ratingClassification": "DD",
+        "netWorth": "35,000 to 49,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/11"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/11"
+          }
+        }
+      },
+      {
+        "ratingClassification": "EE",
+        "netWorth": "20,000 to 34,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/12"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/12"
+          }
+        }
+      },
+      {
+        "ratingClassification": "FF",
+        "netWorth": "10,000 to 19,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/13"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/13"
+          }
+        }
+      },
+      {
+        "ratingClassification": "GG",
+        "netWorth": "5,000 to 9,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/14"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/14"
+          }
+        }
+      },
+      {
+        "ratingClassification": "HH",
+        "netWorth": "Up to 4,999",
+        "high": "1",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "1",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/15"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/15"
+          }
+        }
+      },
+      {
+        "ratingClassification": "1R",
+        "netWorth": null,
+        "high": "n/a",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": "10 Employees and Over",
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "2",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/16"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/16"
+          }
+        }
+      },
+      {
+        "ratingClassification": "2R",
+        "netWorth": null,
+        "high": "n/a",
+        "good": "2",
+        "fair": "3",
+        "limited": "4",
+        "numberOfEmployess": "1-9 Employees",
+        "employeeRangeSymbol": null,
+        "rating": null,
+        "description": null,
+        "priority": "2",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/17"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/17"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "1,000 or more employees",
+        "employeeRangeSymbol": "ER1",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/18"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/18"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "500-999",
+        "employeeRangeSymbol": "ER2",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/19"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/19"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "100-499",
+        "employeeRangeSymbol": "ER3",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/20"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/20"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "50-99",
+        "employeeRangeSymbol": "ER4",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/21"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/21"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "20-49",
+        "employeeRangeSymbol": "ER5",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/22"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/22"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "10-19",
+        "employeeRangeSymbol": "ER6",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/23"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/23"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "5-9",
+        "employeeRangeSymbol": "ER7",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/24"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/24"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "1-4",
+        "employeeRangeSymbol": "ER8",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/25"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/25"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": "Not available",
+        "employeeRangeSymbol": "ERN",
+        "rating": null,
+        "description": null,
+        "priority": "3",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/26"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/26"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": "IN",
+        "description": "Indicates that D&B is conducting an investigation to gather information for a new report.",
+        "priority": "4",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/27"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/27"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": "DS",
+        "description": "Indicates that the information available does not permit D&B to classify the company within our rating key.",
+        "priority": "4",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/28"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/28"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": "--",
+        "description": "The blank symbol should not be interpreted as indicating that credit should be denied. It simply means that the information available to D&B does not permit us to classify the company within our rating key and that further inquiry should be made before reaching a decision. Some reasons for using a -(blank) symbol include: deficit net worth, bankruptcy proceedings, lack of or insufficient payment information, or incomplete history information.",
+        "priority": "4",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/29"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/29"
+          }
+        }
+      },
+      {
+        "ratingClassification": null,
+        "netWorth": null,
+        "high": null,
+        "good": null,
+        "fair": null,
+        "limited": null,
+        "numberOfEmployess": null,
+        "employeeRangeSymbol": null,
+        "rating": "NQ",
+        "description": "Not quoted. This is generally assigned when a business has been confirmed as no longer active at this location, or when D&B is unable to confirm active operations. It may also appear on some branch reports when the branch is located in the same city as the headquarters.",
+        "priority": "4",
+        "_links": {
+          "self": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/30"
+          },
+          "ratingTrendCodeDetails": {
+            "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/30"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses{&sort}",
+      "templated": true
+    },
+    "profile": {
+      "href": "https://test-compliance.live.beroeinc.com/compliance/api/profile/ratingTrendCodeDetailses"
+    },
+    "search": {
+      "href": "https://test-compliance.live.beroeinc.com/compliance/api/ratingTrendCodeDetailses/search"
+    }
+  },
+  "page": {
+    "size": 50,
+    "totalElements": 30,
+    "totalPages": 1,
+    "number": 0
+  }
+}

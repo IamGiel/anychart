@@ -3,17 +3,17 @@ export class RestEndpointConstants {
         endpoints: [
             {
                 name: 'getDnbRatingTrendCodeDetails',
-                url: '/compliance/api/ratingTrendCodeDetailses?size=50',
+                url: 'api/ratingTrendCode',
                 method: 'get'
             },
             {
                 name: 'getDnbRating',
-                url: '/compliance/api/data-point-responses/{parameter}/DNB',
+                url: 'api/DnB',
                 method: 'get'
             },
             {
                 name: 'getProcurementCompanyInfo',
-                url: '/suppliers/api/search/suppliers?search={parameter}',
+                url: 'api/supplierDetailsbyId',
                 method: 'get'
             },
             {
@@ -68,7 +68,7 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getCSRHubRating',
-                url: '/compliance/api/data-point-responses/{parameter}/CSRHUB',
+                url: 'api/CSRHUB',
                 method: 'get'
             },
             {
@@ -108,7 +108,7 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getDowJonesRating',
-                url: '/compliance/api/data-point-responses/{parameter}/DOW_JONES',
+                url: 'api/DOW_JONES',
                 method: 'get'
             },
             {
@@ -268,7 +268,7 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getAllRequest',
-                url: 'api/data',
+                url: 'api/sharedRequest',
                 method: 'get'
             }
         ]

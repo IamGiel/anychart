@@ -1,8 +1,15 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import * as data from '../app/mock-data/all-comp-request.json';
+import * as sharedRequest from '../app/mock-data/all-comp-request.json';
+import * as CSRHUB from '../app/mock-data/CSRHUB.json';
+import * as DnB from '../app/mock-data/DnB.json';
+import * as DOW_JONES from '../app/mock-data/DOW_JONES.json';
+import * as supplier_details from '../app/mock-data/supplier-details.json';
+import * as ratingTrendCode from '../app/mock-data/ratingTrendCode.json';
+import * as supplierDetailsbyId from '../app/mock-data/supplierDetailsbyId.json';
+
 export class FakeBackendService implements InMemoryDbService {
     createDb() {
-        let sharedRequest = [
+        let demoJson = [
             {
                 id: 1,
                 description: 'Buy Groceries'
@@ -14,7 +21,12 @@ export class FakeBackendService implements InMemoryDbService {
         ];
         return {
             sharedRequest,
-            data
+            CSRHUB,
+            DnB,
+            supplierDetailsbyId,
+            supplier_details,
+            DOW_JONES,
+            ratingTrendCode
         };
     }
 }
