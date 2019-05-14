@@ -25,4 +25,8 @@ export class ResponseModal implements OnInit {
         }
         this.activeModal.close();
     }
+    goToDashboard() {
+        this.router.navigate(['/procurement/dashboard']);
+        this.activeModal.close();
+    }
 }

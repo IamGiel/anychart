@@ -1,98 +1,119 @@
 <div class="container pReq">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 text-center title">
-                <h5>STEP 3 of 4</h5>
-                <h1>Select package</h1>
-                <p><!--Select which data package you would like to request from your suppliers.-->
-                    We shall request the supplier to unlock appropriate package based on your selection.</p>
-            <div class="row"></div>
-          
-            </div>
-            <div class="col-md-2"></div>
-         
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-center title">
+            <h5>STEP 3 of 4</h5>
+            <h1>Select package</h1>
+            <p><!--Select which data package you would like to request from your suppliers.-->
+                We shall request the supplier to unlock appropriate package based on your selection.</p>
+        <div class="row"></div>
+      
         </div>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-               <!-- <div class="pend-box" *ngFor="let item of pendingList" [ngClass]="{'pend-box-selected':item.checked}" style="display: none;">
-                    <div class="row">
-                        <div class="col-md-6 col-8"><h3> {{item.name}}</h3></div>
-                        <div class="col-md-6 text-right col-4"><h3> {{item.priceRange}}</h3><span class="paid-by">Paid by supplier </span></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8"><p class="blkColor">{{item.description}} </p></div>
-                        <div class="col-md-4 reqAmnt">
-                            a<input [disabled]="true" id="c{{item.id}}" type="checkbox" aria-invalid="false" [(ngModel)]="item.checked"  (change)="getData(item)">
-                            <label for="c{{item.id}}">Add {{item.name}}</label>
+        <div class="col-md-2"></div>
+     
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+         
+            <ng-container *ngIf="pendingListNew!=null && pendingListNew.length>3">
+                    <div class=" container scrollerContainers">
+                        <div class="left" (click)="scrollRight($event)">
+                           <img class="rotate180" src="../../../../content/images/chevron-search.svg">
+                        </div>
+        
+                        <div class="right" (click)="scrollLeft($event)" >
+                            <img src="../../../../content/images/chevron-search.svg">
                         </div>
                     </div>
-                </div> -->
-                <div class="row">
-                    <div class=" col-md-4" *ngFor=" let item of pendingListNew">
-                        <div class="card request-box">
-                            <div (click)="getData(item.id)">
-                                    <input *ngIf="selected==item.id" [disabled]="true" id="cst{{item.id}}" type="checkbox" aria-invalid="false"  [checked]='true'  >
-                                    <label for="cst{{item.id}}">&nbsp;</label>
+                </ng-container>
+                <div  #widgetsContent class="card collapsibleContainer overflowAuto">
+                    <div class="d-flex flex-row flex-nowrap">
+                            <div class=" col-md-4" *ngFor=" let item of pendingListNew">
+                                    <div class="card request-box">
+                                        <div (click)="getData(item.id)">
+                                                <input *ngIf="selected==item.id" [disabled]="true" id="cst{{item.id}}" type="checkbox" aria-invalid="false"  [checked]='true'  >
+                                                <label for="cst{{item.id}}">&nbsp;</label>
+            
+                                                <input *ngIf="selected!=item.id" [disabled]="true" id="cst{{item.id}}" type="checkbox" aria-invalid="false"  [checked]='false'  >
+                                                <label for="cst{{item.id}}">&nbsp;</label>
+            
+                                        </div>
+                                        
+            
+                                        <h2 style="text-align:center"> {{item.reqName}}</h2>
+                                        <h3 style="text-align:center">{{item.amout}}</h3>
+                                        <ng-container *ngIf="processFee>0">
+                                            <h3 style="text-align:center">+</h3>
+                                            <h3 style="text-align:center">${{processFee}}<br/><span style="font-size: 13px; margin-left: 10px;font-weight: normal;">( Processing Fee )</span></h3>
+                                        </ng-container>
+                                        <hr />
+                                        <p  style="display:none;" class="card-text blkColor">{{item.reqDesc}}</p>
+                                       
 
-                                    <input *ngIf="selected!=item.id" [disabled]="true" id="cst{{item.id}}" type="checkbox" aria-invalid="false"  [checked]='false'  >
-                                    <label for="cst{{item.id}}">&nbsp;</label>
-
-                            </div>
-                            
-
-                            <h2 style="text-align:center"> {{item.reqName}}</h2>
-                            <h3 style="text-align:center">{{item.amout}}</h3>
-                            <hr />
-                            <p  style="display:none;" class="card-text blkColor">{{item.reqDesc}}</p>
-                           
-                            <h3>Financial Compliance powered by D&B</h3>
-                            <p class="feature-item" *ngFor="let feature of item.reqFinancial">
-                                <span>
-                                    <i-check class="big"></i-check>
-                                </span> {{feature}}
-                            </p>
-                            <hr />
-                            <h3>Environmental Compliance powered by <ng-container *ngIf="item.reqName!='Base'">CSR Hub and</ng-container> Dow Jones</h3>
-                            <p class="feature-item" *ngFor="let financial of item.reqEnviormental">
-                                <span>
-                                    <i-check class="big"></i-check>
-                                </span> {{financial}}
-                            </p>
-                            <hr />
-                            <h3>Labor, Health and Safety Compliance powered by <ng-container *ngIf="item.reqName!='Base'">Achilles and</ng-container> Dow Jones </h3>
-                            <p class="feature-item" *ngFor="let labor of item.reqLabor">
-                                <span>
-                                    <i-check class="big"></i-check>
-                                </span> {{labor}}
-                            </p>
-                            <hr />
-                            <h3>Ethical Compliance powered by Dow Jones</h3>
-                            <p class="feature-item" *ngFor="let ethical of item.reqEthical">
-                                <span>
-                                    <i-check class="big"></i-check>
-                                </span> {{ethical}}
-                            </p>
-                            <div style="display: none;"class="ribbon" *ngIf="item.reqName=='Advantage'"><span>Coming Soon</span></div> 
-                        </div>
+                                        <h3>Questionnaire</h3>
+                                        <p class="feature-item" *ngFor="let feature of item.ques">
+                                            <span>
+                                                <i-check class="big"></i-check>
+                                            </span> {{feature}}
+                                        </p>
+                                        <ng-container *ngIf="item.reqFinancial!=undefined && item.reqFinancial.length>0">
+                                            <hr />
+                                            <h3>Financial Compliance powered by D&B</h3>
+                                            <p class="feature-item" *ngFor="let feature of item.reqFinancial">
+                                                <span>
+                                                    <i-check class="big"></i-check>
+                                                </span> {{feature}}
+                                            </p>
+                                        </ng-container>
+                                        <ng-container *ngIf="item.reqEnviormental!=undefined && item.reqEnviormental.length>0">
+                                            <hr />
+                                            <h3>Environmental Compliance powered by <ng-container *ngIf="item.reqName!='Base'">EcoVadis and</ng-container> Dow Jones</h3>
+                                            <p class="feature-item" *ngFor="let financial of item.reqEnviormental">
+                                                <span>
+                                                    <i-check class="big"></i-check>
+                                                </span> {{financial}}
+                                            </p>
+                                        </ng-container>
+                                        <ng-container *ngIf="item.reqLabor!=undefined && item.reqLabor.length>0">
+                                            <hr />
+                                            <h3>Labor, Health and Safety Compliance powered by <ng-container *ngIf="item.reqName!='Base'">Achilles and</ng-container> Dow Jones </h3>
+                                            <p class="feature-item" *ngFor="let labor of item.reqLabor">
+                                                <span>
+                                                    <i-check class="big"></i-check>
+                                                </span> {{labor}}
+                                            </p>
+                                        </ng-container>
+                                        <ng-container *ngIf="item.reqEthical!=undefined && item.reqEthical.length>0">
+                                            <hr />
+                                            <h3>Ethical Compliance powered by Dow Jones</h3>
+                                            <p class="feature-item" *ngFor="let ethical of item.reqEthical">
+                                                <span>
+                                                    <i-check class="big"></i-check>
+                                                </span> {{ethical}}
+                                            </p>
+                                        </ng-container>
+                                        <div style="display: none;"class="ribbon" *ngIf="item.reqName=='Advantage'"><span>Coming Soon</span></div> 
+                                    </div>
+                                </div>
                     </div>
                 </div>
-                <hr style="margin-top: 3rem;"/>
-            </div>
-            <div class="col-md-2"></div>
+           
+            <hr style="margin-top: 3rem;"/>
         </div>
-
-
-        
-      
-        <div class="row padTop30 btnRow">
-            <div class="col-md-4 offset-md-2 col-12">
-                <button class="btn btn-back" onclick="window.history.go(-1)"><span>Back</span></button>
-            </div>
-            <div class="col-md-4 text-right col-12">
-                <button class="btn btn-prime2" [disabled]="swCategorySelected.length<=0" (click)="sendRequest()"><span>Send Request</span></button>
-            </div>
-        </div>
-        <div class="row padTop30"></div>
-    
+       
     </div>
+
+
+    
+  
+    <div class="row padTop30 btnRow">
+        <div class="col-md-4 offset-md-2 col-12">
+            <button class="btn btn-back" (click)="goBack()"><span>Back</span></button>
+        </div>
+        <div class="col-md-4 text-right col-12">
+            <button class="btn btn-prime2" [disabled]="swCategorySelected.length<=0" (click)="sendRequestNavigate()"><span>Send Request</span></button>
+        </div>
+    </div>
+    <div class="row padTop30"></div>
+
+</div>

@@ -1,1 +1,13 @@
-{"msg":"No Data point Response Available For Passed Agency!"}
+{
+    "CSRHUB": [
+      {
+        "csrHubRating": {
+          "environment": "71",
+          "averageRating": 61.0,
+          "community": "56",
+          "employees": "62",
+          "governance": "53"
+        }
+      }
+    ]
+  }

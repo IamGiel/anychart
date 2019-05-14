@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { RequestDataService } from './request-data.service';
 import { Router } from '@angular/router';
 import { LocalStoreService } from 'app/core/auth/local-storage.service';
@@ -17,7 +17,9 @@ export class RequestDataComponent implements OnInit {
     fileUpload: number;
     pendingListNew: any;
     selected: number;
-
+    processFee = 0;
+    @ViewChild('widgetsContent', { read: ElementRef })
+    public widgetsContent: ElementRef<any>;
     constructor(
         private customPiwik: CustomPiwik,
         private request: RequestDataService,
@@ -33,8 +35,34 @@ export class RequestDataComponent implements OnInit {
     loadAllRequest() {
         this.pendingListNew = [
             {
-                id: 3,
+                id: 4,
                 checked: true,
+                reqName: 'KYS 1',
+                amout: '$19.00',
+                reqDesc: 'This will data will be visible on the supplier’s profile in the dashboard.',
+                reqType: 'Standard Option',
+                reqFinancial: [],
+                reqEnviormental: [],
+                reqLabor: [],
+                reqEthical: [],
+                ques: ['Company Questionnaires & Self Assesment']
+            },
+            {
+                id: 5,
+                checked: false,
+                reqName: 'KYS 2',
+                amout: '$49.00',
+                reqDesc: 'This will data will be visible on the supplier’s profile in the dashboard.',
+                reqType: 'Standard Option',
+                reqFinancial: ['SER (Supplier Evaluation Rating)'],
+                reqEnviormental: [],
+                reqLabor: [],
+                reqEthical: ['Sanctions provided by Dow Jones'],
+                ques: ['Company Questionnaires & Self Assesment']
+            },
+            {
+                id: 3,
+                checked: false,
                 reqName: 'Base',
                 amout: '$99.00',
                 reqDesc: 'This will data will be visible on the supplier’s profile in the dashboard.',
@@ -42,19 +70,21 @@ export class RequestDataComponent implements OnInit {
                 reqFinancial: ['SER (Supplier Evaluation Rating)'],
                 reqEnviormental: ['Dow Jones - Adverse Media Scan for Environment'],
                 reqLabor: ['Dow Jones - Adverse Media Scan for Labor'],
-                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones']
+                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones'],
+                ques: ['Company Questionnaires & Self Assesment']
             },
             {
                 id: 1,
-                checked: true,
+                checked: false,
                 reqName: 'Essential',
                 amout: '$149.00',
                 reqDesc: 'This will data will be visible on the supplier’s profile in the dashboard.',
                 reqType: 'Standard Option',
                 reqFinancial: ['SER (Supplier Evaluation Rating)'],
-                reqEnviormental: ['CSR Hub Overall Rating', 'Dow Jones - Adverse Media Scan for Environment'],
+                reqEnviormental: ['EcoVadis Overall Rating', 'Dow Jones - Adverse Media Scan for Environment'],
                 reqLabor: ['Mini Questionnaire Based Assesment by Achilles', 'Dow Jones - Adverse Media Scan for Labor'],
-                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones']
+                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones'],
+                ques: ['Company Questionnaires & Self Assesment']
             },
             {
                 id: 2,
@@ -65,7 +95,7 @@ export class RequestDataComponent implements OnInit {
                 reqType: 'Add Comprehensive Report',
                 reqFinancial: ['SER (Supplier Evaluation Rating)', 'PAYDEX', 'D & B Rating'],
                 reqEnviormental: [
-                    'CSR Hub Overall Rating',
+                    'EcoVadis Overall Rating',
                     'Category Rating - Community',
                     'Category Rating - Employees',
                     'Category Rating - Environment',
@@ -73,10 +103,12 @@ export class RequestDataComponent implements OnInit {
                     'Dow Jones - Adverse Media Scan for Environment'
                 ],
                 reqLabor: ['Silver Assessment by Achilles', 'Dow Jones - Adverse Media Scan for Labor'],
-                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones']
+                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones'],
+                ques: ['Company Questionnaires & Self Assesment']
             }
         ];
-        this.selected = this.pendingListNew[0].id;
+        // this.selected = this.pendingListNew[0].id;
+        //this.swCategorySelected.push(this.selected);
 
         return this.request
             .getActiveRequest()
@@ -115,13 +147,15 @@ export class RequestDataComponent implements OnInit {
             });
     }
     getData = function(data) {
-        /*  console.log(data);
+        console.log(data);
+
         if (data.checked) {
             this.swCategorySelected.push(data.id);
         } else if (!data.checked) {
             this.swCategorySelected.splice(this.swCategorySelected.indexOf(data.id), 1);
-        } */
+        }
         this.selected = data;
+        this.swCategorySelected.push(data);
     };
     sendRequest() {
         console.log('send req ');
@@ -155,5 +189,18 @@ export class RequestDataComponent implements OnInit {
                     window.location.href
                 );
             });
+    }
+    sendRequestNavigate() {
+        this.modalService.open(ResponseModal, { centered: true, size: 'sm', backdrop: 'static', keyboard: false });
+    }
+    goBack() {
+        this.router.navigate(['/procurement/upload-supplier']);
+    }
+    public scrollLeft(event): void {
+        this.widgetsContent.nativeElement.scrollLeft = this.widgetsContent.nativeElement.scrollLeft + 300;
+    }
+
+    public scrollRight(event): void {
+        this.widgetsContent.nativeElement.scrollLeft = this.widgetsContent.nativeElement.scrollLeft - 300;
     }
 }

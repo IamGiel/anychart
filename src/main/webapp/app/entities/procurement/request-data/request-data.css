@@ -321,3 +321,137 @@
     left: 0;
     top: 10px;
 }
+
+#collapseExample {
+    height: 100%;
+    margin-bottom: -50px;
+    padding-bottom: 50px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 40px;
+    /* border: 1px solid #aaa; */
+    overflow: hidden;
+}
+.majRow {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-top: 30px;
+    position: relative;
+    left: 0%;
+}
+/* isnide the scrolling squares */
+.company-name {
+    padding: 25px 20px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+    height: 40px;
+}
+.company-name:hover {
+    cursor: pointer;
+    color: #6b4cd9;
+}
+.company-rating {
+    padding-top: 32px;
+    line-height: 24px;
+    text-align: center;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.company-rating-title {
+    opacity: 0.5;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.card {
+    box-shadow: none !important;
+    border: 0;
+}
+
+.shared-cards {
+    min-height: 240px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
+    margin-right: 20px !important;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+.carousel-item:hover,
+.carousel:hover {
+    cursor: auto !important;
+}
+
+.overflowAuto {
+    overflow-x: auto;
+    overflow: hidden;
+    border-style: none;
+    width: 100%;
+    /* margin-left: 7%; */
+    box-shadow: 0px -30px 5px 0px white;
+}
+.collapsibleContainer {
+    padding-bottom: 50px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.carousel-item :active {
+    border: none !important;
+}
+.carousel:focus {
+    outline: none !important;
+}
+.carousel {
+    margin: 0px 20px;
+}
+
+.download-report {
+    color: #6b4cd9;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.download-report:hover {
+    text-decoration: underline;
+}
+.scrollerContainers {
+    position: absolute;
+    top: 30%;
+    padding: 0px;
+}
+.scrollerContainers .left {
+    margin-left: -20px;
+    float: left;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+.scrollerContainers .right {
+    margin-right: -20px;
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+.scrollerContainers .left img,
+.scrollerContainers .right img {
+    width: 50px;
+}
+.rotate180 {
+    transform: rotate(180deg);
+}
