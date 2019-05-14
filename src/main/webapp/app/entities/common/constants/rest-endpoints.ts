@@ -267,8 +267,18 @@ export class RestEndpointConstants {
                 method: 'put'
             },
             {
-                name: 'getAllRequest',
+                name: 'getSharedRequest',
                 url: 'api/sharedRequest',
+                method: 'get'
+            },
+            {
+                name: 'getPendingRequest',
+                url: 'api/pendingRequest',
+                method: 'get'
+            },
+            {
+                name: 'getDeclinedRequest',
+                url: 'api/declinedRequest',
                 method: 'get'
             }
         ]

@@ -269,6 +269,12 @@ export class FetchData {
         return this.serviceEndpoints.init().badgeUpdate.makeRequest(payload, null);
     }
     getAllRequest(param) {
-        return this.serviceEndpoints.init().getAllRequest.makeRequest(null, param);
+        if (param.toLowerCase() == 'shared') {
+            return this.serviceEndpoints.init().getSharedRequest.makeRequest(null, param);
+        } else if (param.toLowerCase() == 'pending') {
+            return this.serviceEndpoints.init().getPendingRequest.makeRequest(null, param);
+        } else if (param.toLowerCase() == 'declined') {
+            return this.serviceEndpoints.init().getDeclinedRequest.makeRequest(null, param);
+        }
     }
 }

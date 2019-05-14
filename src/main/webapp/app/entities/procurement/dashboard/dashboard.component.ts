@@ -78,7 +78,7 @@ export class DashboardComponent implements OnInit {
     recentlyShared() {
         console.log('called');
         let param = '&status=shared&search=&from=0&size=20';
-        this.fetchData.getAllRequest(param).subscribe(
+        this.fetchData.getAllRequest('shared').subscribe(
             res => {
                 //this.data.shareData(dataset);
 
@@ -203,8 +203,8 @@ export class DashboardComponent implements OnInit {
         this.loadingData = true;
         let tabData = tab.toLowerCase();
         this.pagesize = (this.page - 1) * this.limit;
-        param = '&status=' + tabData + '&search=' + search + '&from=' + this.pagesize + '&size=' + this.limit;
-        this.fetchData.getAllRequest(param).subscribe(
+        // param = '&status=' + tabData + '&search=' + search + '&from=' + this.pagesize + '&size=' + this.limit;
+        this.fetchData.getAllRequest(tabData).subscribe(
             res => {
                 console.log(res);
                 this.list = res.data;

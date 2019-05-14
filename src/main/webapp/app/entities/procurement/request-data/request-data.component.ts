@@ -31,6 +31,7 @@ export class RequestDataComponent implements OnInit {
         this.loadAllRequest();
         this.fileUpload = this.lc.getLocalInfo('fileUpload').uploadedFileId;
         //this.sendtestRequest();
+        this.processFee = 10;
     }
     loadAllRequest() {
         this.pendingListNew = [

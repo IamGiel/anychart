@@ -1,0 +1,123 @@
+{
+  "data": [
+    {
+      "id": 71460,
+      "requestId": "f04af37ed64043e2b107e9b3916d18ce",
+      "supplierName": "Supplier11",
+      "providerKey": {
+        "DUNSNUMBER": "12345",
+        "ISIN": "CSRISIN123"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 1,
+      "lastRequest": 5,
+      "status": "PENDING",
+      "regionName": "Global",
+      "price": "49.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-04-20T12:31:19.000+0000",
+      "requestedDate": "2019-04-20T12:31:19.000+0000",
+      "packageResponse": {
+        
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    },
+    {
+      "id": 71461,
+      "requestId": "85a0877f6bc84fd8b0c67219066b5228",
+      "supplierName": "Supplier21",
+      "providerKey": {
+        "DUNSNUMBER": "56789"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 1,
+      "lastRequest": 5,
+      "status": "PENDING",
+      "regionName": "Global",
+      "price": "49.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-04-20T12:31:19.000+0000",
+      "requestedDate": "2019-04-20T12:31:19.000+0000",
+      "packageResponse": {
+        
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    },
+    {
+      "id": 71457,
+      "requestId": "a0ac439fb3384ffe9bf2d15e3d287d54",
+      "supplierName": "Supplier20",
+      "providerKey": {
+        "DUNSNUMBER": "56789",
+        "ISIN": ""
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 1,
+      "lastRequest": 5,
+      "status": "PENDING",
+      "regionName": "Global",
+      "price": "19.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-04-20T11:42:27.000+0000",
+      "requestedDate": "2019-04-20T11:42:27.000+0000",
+      "packageResponse": {
+        
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    },
+    {
+      "id": 6,
+      "requestId": "e9a009cfc97a4bda8b91a52f56b1fde4",
+      "supplierName": "BASF AG",
+      "providerKey": {
+        "DUNSNUMBER": "315000554"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 2,
+      "lastRequest": 72,
+      "status": "PENDING",
+      "regionName": "Global",
+      "price": "399.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-02-12T20:16:35.000+0000",
+      "requestedDate": "2019-01-30T13:12:54.000+0000",
+      "packageResponse": {
+        
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    },
+    {
+      "id": 5,
+      "requestId": "f445737cc4d747e28bed6471e5e34d1e",
+      "supplierName": "Saudi Basic Industries Corp",
+      "providerKey": {
+        "DUNSNUMBER": "631206240",
+        "ISIN": "US8835561023"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 2,
+      "lastRequest": 85,
+      "status": "PENDING",
+      "regionName": "Global",
+      "price": "399.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-01-30T13:46:42.000+0000",
+      "requestedDate": "2019-01-30T11:41:07.000+0000",
+      "packageResponse": {
+        
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    }
+  ],
+  "totalCounts": 5
+}
