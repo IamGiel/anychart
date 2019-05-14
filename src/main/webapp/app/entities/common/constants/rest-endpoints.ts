@@ -8,12 +8,12 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getDnbRating',
-                url: 'api/DnB',
+                url: 'api/DnB_{parameter}',
                 method: 'get'
             },
             {
                 name: 'getProcurementCompanyInfo',
-                url: 'api/supplierDetailsbyId',
+                url: 'api/supplierDetailsbyId_{parameter}',
                 method: 'get'
             },
             {
@@ -68,7 +68,7 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getCSRHubRating',
-                url: 'api/CSRHUB',
+                url: 'api/CSRHUB_{parameter}',
                 method: 'get'
             },
             {
@@ -108,7 +108,7 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getDowJonesRating',
-                url: 'api/DOW_JONES',
+                url: 'api/DOW_JONES_{parameter}',
                 method: 'get'
             },
             {

@@ -718,10 +718,10 @@
                                              
                                                         <div class="badge-container" style="min-height:264px;margin-bottom:16px;">
                                                            <ng-container  >
-                                                                <img style="width: 30%;margin: 0 auto;display: block;margin-top: 10%;" src="{{getAchillesBadge(aqs.getSavedData().dataPointResponseList[0].processedResponse)}}" alt="">
+                                                                <img style="width: 30%;margin: 0 auto;display: block;margin-top: 10%;" src="{{getAchillesBadge('silver')}}" alt="">
                                                                 
                                                                 <p style="text-transform:uppercase;margin-top:5%;text-align:center" class="overall-rating">
-                                                                    {{getAchillesLabel(aqs.getSavedData().dataPointResponseList[0].processedResponse)}}  
+                                                                    {{getAchillesLabel('silver')}}  
                                                                 </p>
                                                            </ng-container>
                                                           
@@ -739,7 +739,7 @@
                                                             <p style="font-size:14px;margin-top:8px;line-height:24px;color:#181818;opacity:0.8;font-family: Inter UI">
                                                                     We collect and validate supplier data and mitigate risks globally. This data-driven insight builds more secure, sustainable, better performing supply chains.</p>
                                                     
-                                                             <button   *ngIf="aqs.getSavedData().compliancePackages.indexOf('Essential')>-1" (click)="openAchillesQuestionnaireModal()" style="margin-top:84px;font-size:16px!important;   cursor:pointer; background: none;border: none;outline: none;" [class.supplier-color]="!readOnly" [disabled]="readOnly&&!submitted"  class="launch">{{isSupplier?'Launch Questionnaire':'View Questionnaire'}}</button>
+                                                             <button    (click)="openAchillesQuestionnaireModal()" style="margin-top:84px;font-size:16px!important;   cursor:pointer; background: none;border: none;outline: none;" [class.supplier-color]="!readOnly" [disabled]="readOnly&&!submitted"  class="launch">{{isSupplier?'Launch Questionnaire':'View Questionnaire'}}</button>
                                                    </div>
                                                 </ng-container>
                                                 </div>

@@ -494,7 +494,7 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
     }
 
     initCompanyInfo() {
-        this.fetchData.getProcurementCompanyInfo(this.dunsRequest + '&from=0&size=1').subscribe(
+        this.fetchData.getProcurementCompanyInfo(this.complianceRequestId).subscribe(
             res => {
                 if (this.validate(res) && this.validate(res.data) && res.data.length > 0 && this.validate(res.data[0])) {
                     this.companyInfo = new ProcurementCompanyInfo(res.data[0]);

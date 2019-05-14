@@ -1,0 +1,67 @@
+{
+  "DOW_JONES": [
+    {
+      "DOWJones": [
+        {
+          "issueName": "Regulatory",
+          "allegations": {
+            "Corruption Issues": [
+              
+            ],
+            "Regulatory Issues": [
+              {
+                "allegationDate": "25-10-2018",
+                "name": "Finwire News",
+                "supportingLink": "https://api.dowjones.com/api/public/2.0/Content/article/articleRef/Xml?articleRef=FINSMALL20181025eeap00cyp&encryptedToken=S00YcVo1sV72Gbt1HmnOHmnNTUqNDUrMpUq5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA"
+              }
+            ],
+            "Fraud Issues": [
+              
+            ],
+            "Sanctions": [
+              
+            ]
+          },
+          "totalCount": 1
+        },
+        {
+          "issueName": "Environment/Production",
+          "allegations": {
+            "Product/Service Issues": [
+              {
+                "allegationDate": "25-10-2018",
+                "name": "Finwire News",
+                "supportingLink": "https://api.dowjones.com/api/public/2.0/Content/article/articleRef/Xml?articleRef=FINSMALL20181025eeap00cyp&encryptedToken=S00YcVo1sV72Gbt1HmnOHmnNTUqNDUrMpUq5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA"
+              }
+            ],
+            "Production/Supply Chain Issues": [
+              
+            ],
+            "Environmental Issues": [
+              
+            ]
+          },
+          "totalCount": 1
+        },
+        {
+          "issueName": "Social/Labour",
+          "allegations": {
+            "Workforce Disputes": [
+              
+            ],
+            "Discrimination/Workforce Rights Issues": [
+              
+            ],
+            "Workforce Health/Safety Issues": [
+              
+            ],
+            "Human Rights Issues": [
+              
+            ]
+          },
+          "totalCount": 0
+        }
+      ]
+    }
+  ]
+}
