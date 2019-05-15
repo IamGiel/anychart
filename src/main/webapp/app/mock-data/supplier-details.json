@@ -1,8 +1,7 @@
 {
-  "supplierErpId": null,
-  "complianceRequestId": 98,
-  "supplierName": "Microsoft",
-  "uploadedSupplierId": 205,
-  "supplierPrimaryContactName": "shashank ",
-  "supplierContactEmail": "shashank@microsoftshashank.com"
+  "1":{},
+  "2":{"supplierErpId":null,"complianceRequestId":9,"supplierName":"Recipharm","uploadedSupplierId":7,"supplierPrimaryContactName":"demo6 ","supplierContactEmail":"demo@suppliercompanyrechi.com"},
+  "3":{"supplierErpId":null,"complianceRequestId":8,"supplierName":"Berry Plastics Group, Inc.","uploadedSupplierId":3,"supplierPrimaryContactName":"demo5 ","supplierContactEmail":"demo@suppliercompanyberry.com"},
+  "4":{"supplierErpId":null,"complianceRequestId":4,"supplierName":"Siemens AG","uploadedSupplierId":9,"supplierPrimaryContactName":"demo2 ","supplierContactEmail":"demo@suppliercompanysieag.com"},
+  "5":{"supplierErpId":"ERPNA2","complianceRequestId":1,"supplierName":"AptarGroup, Inc.","uploadedSupplierId":1,"supplierPrimaryContactName":"demo7 ","supplierContactEmail":"demo@suppliercompanysmu.com"}
 }

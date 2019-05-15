@@ -1,0 +1,27 @@
+<ng-container *ngIf="typeToShow=='square'">
+	<span *ngIf="customClass==undefined || customClass==null " class="ratingBox" [ngClass]="getRatingClass(ratingValue,dataPoint)">{{ratingValue}}</span>
+	<span *ngIf="customClass!=undefined && customClass=='a2' " class="ratingBoxA2" [ngClass]="getRatingClass(ratingValue,dataPoint)">{{ratingValue}}</span>
+</ng-container>
+
+<ng-container *ngIf="typeToShow=='circle'">
+
+		<circle-progress
+		[responsive]="true"
+		[percent]="ratingValue"
+		[title]="ratingValue"
+		[outerStrokeWidth]="10"
+		[innerStrokeWidth]="10"
+		[space]="-10"
+		[outerStrokeColor]="getRadialColor(ratingValue)"
+		[innerStrokeColor]="'#1818182a'"
+		[animation]="true"
+		[animationDuration]="300"
+		[showSubtitle]="false"
+		[radius]="60"
+		[showUnits]="false"
+		[titleFontSize]="40"
+		class="ratingBoxCircle"
+	></circle-progress>
+	
+</ng-container>
+

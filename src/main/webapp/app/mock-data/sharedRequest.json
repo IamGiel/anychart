@@ -1,29 +1,6 @@
 {
   "data": [
-    {
-      "id": 71458,
-      "requestId": "95480d27f5a94468ae2ee8f6ff89d99d",
-      "supplierName": "Supplier12",
-      "providerKey": {
-        "DUNSNUMBER": "12345",
-        "ISIN": "CSRISIN123"
-      },
-      "packages": null,
-      "userCompany": "J&J",
-      "requestCount": 1,
-      "lastRequest": 5,
-      "status": "SHARED",
-      "regionName": "Global",
-      "price": "19.0",
-      "comprStatus": false,
-      "lastRequestedDate": "2019-04-20T11:42:27.000+0000",
-      "requestedDate": "2019-04-20T11:42:27.000+0000",
-      "packageResponse": {
-        
-      },
-      "declineMessage": null,
-      "declinedDate": null
-    },
+    
     {
       "id": 1,
       "requestId": "eb0c10e789e44eb6a8bbc5a90000af61",
@@ -145,7 +122,7 @@
       "declinedDate": null
     },
     {
-      "id": 8,
+      "id": 3,
       "requestId": "025e237ae4854630832bfde27a4bdfa1",
       "supplierName": "Berry Plastics Group, Inc.",
       "providerKey": {
@@ -228,72 +205,7 @@
       "declineMessage": null,
       "declinedDate": null
     },
-    {
-      "id": 7,
-      "requestId": "dcda568b12754c75885f541641dc40a5",
-      "supplierName": "CCL Industries Inc",
-      "providerKey": {
-        "DUNSNUMBER": "205510605",
-        "ISIN": "IE00B1RR8406\t"
-      },
-      "packages": null,
-      "userCompany": "J&J",
-      "requestCount": 1,
-      "lastRequest": 85,
-      "status": "SHARED",
-      "regionName": "Global",
-      "price": "399.0",
-      "comprStatus": false,
-      "lastRequestedDate": "2019-01-30T13:13:08.000+0000",
-      "requestedDate": "2019-01-30T13:13:08.000+0000",
-      "packageResponse": {
-        "DOW_JONES": {
-          "Dow Jones Basic": {
-            "DOWJones": [
-              {
-                "issueName": "Regulatory",
-                "totalCount": 0
-              },
-              {
-                "issueName": "Environment/Production",
-                "totalCount": 0
-              },
-              {
-                "issueName": "Social/Labour",
-                "totalCount": 0
-              }
-            ]
-          }
-        },
-        "DNB": {
-          "Payment & Paydex Details": {
-            "paydex": {
-              "months": "up to 24 months",
-              "paydexScore": 72
-            }
-          },
-          "Supplier Evaluation Risk": {
-            "SER": {
-              "riskScore": "1"
-            },
-            "purchaseDate": "2019-01-30"
-          }
-        },
-        "CSRHUB": {
-          "csrHubRating": {
-            "csrHubRating": {
-              "environment": "64",
-              "averageRating": 63.0,
-              "community": "63",
-              "employees": "65",
-              "governance": "58"
-            }
-          }
-        }
-      },
-      "declineMessage": null,
-      "declinedDate": null
-    },
+  
     {
       "id": 4,
       "requestId": "6ccef659f20b4d9c94568de8dbbaa054",
@@ -340,114 +252,6 @@
               "employees": "65",
               "governance": "58"
             }
-          }
-        }
-      },
-      "declineMessage": null,
-      "declinedDate": null
-    },
-    {
-      "id": 3,
-      "requestId": "7608b4d000904ebb8a7b63a4ac2601eb",
-      "supplierName": "Croda International Plc",
-      "providerKey": {
-        "DUNSNUMBER": "212408447",
-        "ISIN": "IE00BBGT3753"
-      },
-      "packages": null,
-      "userCompany": "J&J",
-      "requestCount": 1,
-      "lastRequest": 86,
-      "status": "SHARED",
-      "regionName": "Global",
-      "price": "399.0",
-      "comprStatus": false,
-      "lastRequestedDate": "2019-01-30T11:27:43.000+0000",
-      "requestedDate": "2019-01-30T11:27:43.000+0000",
-      "packageResponse": {
-        "DOW_JONES": {
-          "Dow Jones Basic": {
-            "DOWJones": [
-              {
-                "issueName": "Regulatory",
-                "totalCount": 0
-              },
-              {
-                "issueName": "Environment/Production",
-                "totalCount": 1
-              },
-              {
-                "issueName": "Social/Labour",
-                "totalCount": 0
-              }
-            ]
-          }
-        },
-        "DNB": {
-          "Supplier Evaluation Risk": {
-            "SER": {
-              "riskScore": "1"
-            },
-            "purchaseDate": "2019-01-30"
-          }
-        },
-        "CSRHUB": {
-          "csrHubRating": {
-            "csrHubRating": {
-              "environment": "45",
-              "averageRating": 45.0,
-              "community": "42",
-              "employees": "51",
-              "governance": "42"
-            }
-          }
-        }
-      },
-      "declineMessage": null,
-      "declinedDate": null
-    },
-    {
-      "id": 2,
-      "requestId": "6ddc6742553c4922b09c93258aa7e079",
-      "supplierName": "Deloitte",
-      "providerKey": {
-        "DUNSNUMBER": "014127109"
-      },
-      "packages": null,
-      "userCompany": "J&J",
-      "requestCount": 1,
-      "lastRequest": 86,
-      "status": "SHARED",
-      "regionName": "Global",
-      "price": "399.0",
-      "comprStatus": false,
-      "lastRequestedDate": "2019-01-30T11:08:15.000+0000",
-      "requestedDate": "2019-01-30T11:08:15.000+0000",
-      "packageResponse": {
-        "DOW_JONES": {
-          "Dow Jones Basic": {
-            "DOWJones": [
-              {
-                "issueName": "Regulatory",
-                "totalCount": 0
-              },
-              {
-                "issueName": "Environment/Production",
-                "totalCount": 0
-              },
-              {
-                "issueName": "Social/Labour",
-                "totalCount": 0
-              }
-            ]
-          }
-        },
-        "DNB": {
-          "Supplier Evaluation Risk": {
-            "SER": {
-              "riskScore": "4"
-            },
-            "purchaseDate": "2019-04-05"
           }
         }
       },
@@ -539,5 +343,5 @@
       "declinedDate": null
     }
   ],
-  "totalCounts": 9
+  "totalCounts": 19
 }

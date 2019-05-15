@@ -1,0 +1,55 @@
+.ratingBox {
+    border-radius: 4px;
+    padding: 6px 10px;
+    height: 32px;
+    font-weight: 900;
+    line-height: 24px;
+    color: #000000;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    background-color: #f2f2f2;
+    border-color: #f2f2f2;
+    display: inline-block;
+}
+.ratingBoxA2 {
+    border-radius: 4px;
+    padding: 8px 17px;
+    background-color: #f2f2f2;
+    border-color: #f2f2f2;
+    display: inline-block;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 44px;
+    text-align: center;
+}
+.r-E7F {
+    background: #e7f7fa;
+    color: #14b4d2;
+}
+.r-EAF {
+    background: #eafaf3;
+    color: #31d490;
+}
+.r-FFF {
+    background: #fff8ec;
+    color: #ffbe45;
+}
+.r-FD7 {
+    background: #fd7c433d;
+    color: #fd7c43;
+}
+.r-FFE {
+    background: #ffedef;
+    color: #ff4f61;
+}
+.r-dow {
+    background-color: #f0edfb;
+    color: #6b4cd9;
+}
+.r-default {
+    background: #2ae02a;
+    color: #2ae02a;
+}

@@ -1159,3 +1159,39 @@ button:focus {
         display: block !important;
     }
 }
+.filter-column {
+    position: absolute;
+    background: #f2f2f2;
+    height: 250px;
+    right: 12px;
+    top: 30px;
+    z-index: 2;
+    padding: 10px;
+    width: 265px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05), 0 6px 12px 0 rgba(24, 24, 24, 0.1);
+}
+.filter-column1 {
+    display: block;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.filter-column1 .custom-control-input {
+    opacity: 0;
+}
+.filter-column1 .custom-checkbox {
+    padding: 5px 0px;
+    cursor: pointer;
+}
+.filter-column1 .custom-checkbox:hover {
+    background: #fff;
+    color: #804cd9;
+}
+.filter-column1 .custom-control-label {
+    cursor: pointer;
+    line-height: unset;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #804cd9;
+}

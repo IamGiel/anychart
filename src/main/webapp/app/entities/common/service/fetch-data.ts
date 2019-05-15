@@ -277,4 +277,7 @@ export class FetchData {
             return this.serviceEndpoints.init().getDeclinedRequest.makeRequest(null, param);
         }
     }
+    getERPDetails(param) {
+        return this.serviceEndpoints.init().getERPDetails.makeRequest(null, param);
+    }
 }

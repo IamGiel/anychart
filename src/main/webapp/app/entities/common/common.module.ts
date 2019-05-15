@@ -1,9 +1,11 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GatewaySharedModule } from 'app/shared';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { CarouselComponent } from './components/carousel.component';
 import { niceDateFormatPipe } from './pipes/date.pipe';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { RatingBoxComponent } from './components/rating-box/rating-box.component';
 import { TermsConditionsComponent } from './components/terms-conditions/terms-conditions.component';
 import { PaymentProcessingComponent, PrivacyPolicyComponent, commonState, FAQComponent } from './';
 import { SelectComponent } from './components/select/select.component';
@@ -22,7 +24,7 @@ import { AchillesQuestionsComponent } from '../../achilles/achilles-questions/ac
 import { AchillesFormComponent } from '../../achilles/achilles-form/achilles-form.component';
 import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achilles-questionnaire-modal.component';
 @NgModule({
-    imports: [GatewaySharedModule, RouterModule.forChild(commonState), NgSelectModule, FormsModule],
+    imports: [GatewaySharedModule, RouterModule.forChild(commonState), NgSelectModule, FormsModule, NgCircleProgressModule.forRoot()],
     declarations: [
         FileNamePipe,
         PaymentProcessingComponent,
@@ -42,7 +44,8 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         SupplierFaqModalComponent,
         AchillesQuestionnaireModalComponent,
         AchillesQuestionsComponent,
-        AchillesFormComponent
+        AchillesFormComponent,
+        RatingBoxComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     entryComponents: [
@@ -70,7 +73,8 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         SupplierFaqModalComponent,
         AchillesQuestionnaireModalComponent,
         AchillesQuestionsComponent,
-        AchillesFormComponent
+        AchillesFormComponent,
+        RatingBoxComponent
     ]
 })
 export class GatewayCommonModule {}

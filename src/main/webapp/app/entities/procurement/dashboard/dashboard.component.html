@@ -103,21 +103,33 @@
                         <td >{{item.providerKey.DUNSNUMBER}}</td>
                         <td >
                             <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['Supplier Evaluation Risk']!=null" [ngIfElse]="SERElse">
-                                {{item.packageResponse.DNB['Supplier Evaluation Risk'].SER.riskScore}}
+                              <rating-box
+                                typeToShow="square"
+                                [ratingValue]="item.packageResponse.DNB['Supplier Evaluation Risk'].SER.riskScore"
+                                dataPoint="SER"
+                                ></rating-box>
                             </ng-template>
-                            <ng-template #SERElse>NA</ng-template>
+                            <ng-template #SERElse>--</ng-template>
                         </td>
                         <td >
                             <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.CSRHUB!=null && item.packageResponse.CSRHUB.csrHubRating!=null && item.packageResponse.CSRHUB.csrHubRating.csrHubRating!=null&& item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating!=null" [ngIfElse]="CSRHUBElse">
-                                    {{item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating}}
-                                </ng-template>
-                                <ng-template #CSRHUBElse>NA</ng-template>
+                                <rating-box
+                                typeToShow="circle"
+                                [ratingValue]="item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating"
+                                dataPoint="CSRHUB"
+                                ></rating-box>
+                            </ng-template>
+                                <ng-template #CSRHUBElse>--</ng-template>
                             </td>
                             <td >
                                 <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DOW_JONES!=null && item.packageResponse.DOW_JONES['Dow Jones Basic']!=null && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones!=undefined && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones!=null && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones.length>0" [ngIfElse]="dowElse">
-                                   {{getDowJonesCount(item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones)}}
+                                    <rating-box
+                                    typeToShow="square"
+                                    [ratingValue]="getDowJonesCount(item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones)"
+                                    dataPoint="DOW_JONES"
+                                    ></rating-box>  
                                 </ng-template>
-                                <ng-template #dowElse>0</ng-template>
+                                <ng-template #dowElse>--</ng-template>
                             </td>
                        <!-- <td >
                             <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['D&B Rating Trend']!=null" [ngIfElse]="TrendElse">

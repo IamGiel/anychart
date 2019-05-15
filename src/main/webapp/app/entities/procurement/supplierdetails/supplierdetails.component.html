@@ -15,10 +15,11 @@
            
             <div *ngIf="companyInfo!=undefined&&companyInfo.business_name!==undefined && companyInfo.business_name!==null"  class="company-name ">{{companyInfo.business_name}}</div>
             <div *ngIf="dunsRequest!==undefined" class="duns">DUNS # {{ dunsRequest}}</div>
+            <div *ngIf="ERPID!=undefined && ERPID!=null" class="duns">ERP ID # {{ ERPID}}</div>
 
             <!-- Company Info Tab -->
-
-            <div *ngIf="viewMode == 'tab1'" style="position:relative;" [class.supplier-color]="!readOnly"  class="summary-container ">
+        <ng-container *ngIf="viewMode == 'tab1'">
+            <div  style="position:relative;" [class.supplier-color]="!readOnly"  class="summary-container ">
                 <span *ngIf="!readOnly && !editSummary && companyInfo!==undefined && companyInfo!==null" title="Edit"  (click)="toggleEdit('summary')" style="border-top-right-radius:0px!important;cursor:pointer; font-size: 10px;display: inline-block;position: absolute;right: 0px;padding: 12px 13px 13px 15px;background-color: #E7E7E7;border-radius: 0 4px 0 4px;top: 0px;">
                     <i-edit style="display:inline-block;width:12.8px; height:12.8px;"></i-edit>
                 </span>
@@ -72,6 +73,12 @@
                     </div> 
                 </form>    
          </div>
+         <div class="col-md-12 contact-box" *ngIf="(supplierPrimaryContactName!==undefined && supplierPrimaryContactName!=null) || (supplierPrimaryContacEmail!==undefined && supplierPrimaryContacEmail!=null)">
+            <h3>Supplier Primary Contact</h3>
+           <div *ngIf="supplierPrimaryContactName!==undefined && supplierPrimaryContactName!=null" class="supContact">Name # {{ supplierPrimaryContactName}}</div>
+           <div *ngIf="supplierPrimaryContacEmail!==undefined && supplierPrimaryContacEmail!=null" class="supContact">Email ID # {{ supplierPrimaryContacEmail}}</div>
+        </div>
+        </ng-container>
          <div *ngIf="viewMode == 'tab2'">
                 <div  style="padding:40px;min-height:160px;margin-top:40px;border-radius: 4px;	background-color: #F8F8F8;display: block">
                             <p *ngIf="validate(ratings.dnbSerRating.riskScore)" style='opacity: 0.9;color: #181818;font-family: "Inter UI";

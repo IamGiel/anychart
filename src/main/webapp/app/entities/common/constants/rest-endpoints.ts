@@ -8,12 +8,12 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getDnbRating',
-                url: 'api/DnB_{parameter}',
+                url: 'api/DnB',
                 method: 'get'
             },
             {
                 name: 'getProcurementCompanyInfo',
-                url: 'api/supplierDetailsbyId_{parameter}',
+                url: 'api/supplierDetailsbyId',
                 method: 'get'
             },
             {
@@ -68,7 +68,7 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getCSRHubRating',
-                url: 'api/CSRHUB_{parameter}',
+                url: 'api/CSRHUB',
                 method: 'get'
             },
             {
@@ -108,7 +108,7 @@ export class RestEndpointConstants {
             },
             {
                 name: 'getDowJonesRating',
-                url: 'api/DOW_JONES_{parameter}',
+                url: 'api/DOW_JONES',
                 method: 'get'
             },
             {
@@ -188,12 +188,14 @@ export class RestEndpointConstants {
             },
             {
                 name: 'companyInfoQuestionnaireSections',
-                url: '/compliance/api/companyQuestionSection/{parameter}',
+                // url: '/compliance/api/companyQuestionSection/{parameter}',
+                url: 'api/companyQuestionSection',
                 method: 'get'
             },
             {
                 name: 'companyInfoQuestionnaireQuestions',
-                url: '/compliance/api/companyQuestion/{parameter}',
+                //url: '/compliance/api/companyQuestion/{parameter}',
+                url: 'api/companyQuestion',
                 method: 'get'
             },
             {
@@ -203,7 +205,8 @@ export class RestEndpointConstants {
             },
             {
                 name: 'companyInfoQuestionnaireQuestionChild',
-                url: '/compliance/api/companyQuestion/child/{parameter}',
+                // url: '/compliance/api/companyQuestion/child/{parameter}',
+                url: 'api/companyChildQuestion',
                 method: 'get'
             },
             {
@@ -279,6 +282,11 @@ export class RestEndpointConstants {
             {
                 name: 'getDeclinedRequest',
                 url: 'api/declinedRequest',
+                method: 'get'
+            },
+            {
+                name: 'getERPDetails',
+                url: 'api/erpDetails',
                 method: 'get'
             }
         ]

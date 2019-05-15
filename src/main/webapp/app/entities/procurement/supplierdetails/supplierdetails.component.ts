@@ -53,6 +53,9 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
     isOpen = false;
     submitted = false;
     package: string = null;
+    ERPID: string = null;
+    supplierPrimaryContactName: string = null;
+    supplierPrimaryContacEmail: string = null;
 
     constructor(
         private customPiwik: CustomPiwik,
@@ -181,12 +184,32 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
                     this.aqs.saveData(r);
                     this.updateQuestionnaire(r);
                 });
+                if (!this.isSupplier) {
+                    this.getERPDetails();
+                }
             }
         });
     }
-
+    getERPDetails() {
+        /* this.ERPID = 'AG591467';
+        this.supplierPrimaryContactName = 'Ranjan Kumar Patra';
+        this.supplierPrimaryContacEmail = 'ranjan.patra@altran.com';*/
+        this.fetchData.getERPDetails(this.complianceRequestId).subscribe(response => {
+            let res = response[this.complianceRequestId];
+            if (res.supplierErpId != undefined && res.supplierErpId != null) {
+                this.ERPID = res.supplierErpId;
+            }
+            if (res.supplierPrimaryContactName != undefined && res.supplierPrimaryContactName != null) {
+                this.supplierPrimaryContactName = res.supplierPrimaryContactName;
+            }
+            if (res.supplierContactEmail != undefined && res.supplierContactEmail != null) {
+                this.supplierPrimaryContacEmail = res.supplierContactEmail;
+            }
+        });
+    }
     initDowJones() {
-        this.fetchData.getDowJonesRating(this.complianceRequestId).subscribe(res => {
+        this.fetchData.getDowJonesRating(this.complianceRequestId).subscribe(response => {
+            let res = response[this.complianceRequestId];
             if (this.validate(res.DOW_JONES) && this.validate(res.DOW_JONES[0]) && this.validate(res.DOW_JONES[0].DOWJones)) {
                 const data = res.DOW_JONES[0];
                 if (this.validate(data) && this.validate(data.DOWJones) && data.DOWJones.length > 0) {
@@ -219,7 +242,9 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
 
     initCSRHub() {
         this.fetchData.getCSRHubRating(this.complianceRequestId).subscribe(
-            res => {
+            response => {
+                let res = response[this.complianceRequestId];
+                // console.log(response[this.complianceRequestId])
                 if (
                     this.validate(res.CSRHUB) &&
                     res.CSRHUB.length > 0 &&
@@ -495,7 +520,8 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
 
     initCompanyInfo() {
         this.fetchData.getProcurementCompanyInfo(this.complianceRequestId).subscribe(
-            res => {
+            response => {
+                let res = response[this.complianceRequestId];
                 if (this.validate(res) && this.validate(res.data) && res.data.length > 0 && this.validate(res.data[0])) {
                     this.companyInfo = new ProcurementCompanyInfo(res.data[0]);
                     this.customPiwik.setCustomData(
@@ -608,7 +634,8 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
     getDnbRatings() {
         this.loading = true;
         this.fetchData.getDnbRating(this.complianceRequestId).subscribe(
-            res => {
+            response => {
+                let res = response[this.complianceRequestId];
                 if (this.validate(res.DNB) && res.DNB.length > 0) {
                     let o: any;
                     let color: string;

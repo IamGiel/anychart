@@ -27,7 +27,7 @@ export class DowJonesComponent implements AfterViewInit, OnDestroy {
     constructor(private router: Router, private http: HttpClient) {}
 
     ngAfterViewInit() {
-        console.log(this.data);
+        // console.log(this.data);
 
         if (this.router.url.indexOf('/supplier/') >= 0) {
             this.readOnly = false;
@@ -38,7 +38,7 @@ export class DowJonesComponent implements AfterViewInit, OnDestroy {
         if (this.val(this.data) && this.val(this.data.allegations)) {
             this.appearences = this.data.allegations;
         }
-        console.log(this.appearences);
+        //  console.log(this.appearences);
         this.errLink = false;
     }
     ngOnDestroy() {}

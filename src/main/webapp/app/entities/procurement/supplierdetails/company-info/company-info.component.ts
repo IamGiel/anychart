@@ -35,14 +35,18 @@ export class CompanyInfoComponent implements OnInit {
         this.checkIfSupplier();
         this.fetchData.companyInfoQuestionnaireSections(this.requestId).subscribe(
             res => {
+                //console.log(res)
                 this.sections = res.map(section => {
                     this.processSections(section);
                     const param = section.id.toString() + '/' + this.requestId;
-                    this.fetchData.companyInfoQuestionnaireQuestions(param).subscribe(res => {
-                        this.processQuestions(res);
-                        section.questions = this.createQuestions(res);
-                        this.addControls(section.questions);
-                        this.processChildren(section.questions, section);
+                    this.fetchData.companyInfoQuestionnaireQuestions(param).subscribe(response => {
+                        if (response != undefined && response != null) {
+                            let res = response[this.requestId][section.id.toString()];
+                            this.processQuestions(res);
+                            section.questions = this.createQuestions(res);
+                            this.addControls(section.questions);
+                            this.processChildren(section.questions, section);
+                        }
                     });
                     return section;
                 });
@@ -396,7 +400,8 @@ export class CompanyInfoComponent implements OnInit {
         });
         clone.map(q => {
             if (q.hasChild) {
-                this.fetchData.companyInfoQuestionnaireQuestionChild(`${q.questionId}/${this.requestId}`).subscribe(res => {
+                this.fetchData.companyInfoQuestionnaireQuestionChild(`${q.questionId}/${this.requestId}`).subscribe(response => {
+                    let res = response[q.questionId];
                     let children: IQuestion<any>[] = res;
                     children.sort(function(a, b) {
                         return a.displayOrder - b.displayOrder;
@@ -407,7 +412,7 @@ export class CompanyInfoComponent implements OnInit {
                             c.row = q.row;
                         }
                         this.createAncestorMap(section, c, q);
-                        console.log(section.ancestorMap);
+                        // console.log(section.ancestorMap);
                         return c;
                     });
                     let ix: number;
