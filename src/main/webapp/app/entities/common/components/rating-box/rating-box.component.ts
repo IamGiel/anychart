@@ -15,9 +15,9 @@ export class RatingBoxComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        console.log(this.typeToShow);
-        console.log(this.ratingValue);
-        console.log(this.customClass);
+        // console.log(this.typeToShow);
+        // console.log(this.ratingValue);
+        // console.log(this.customClass);
     }
     getRadialColor(val) {
         if (val >= 0 && val <= 29) {

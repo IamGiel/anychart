@@ -32,12 +32,15 @@ export class DowJonesComponent implements AfterViewInit, OnDestroy {
         if (this.router.url.indexOf('/supplier/') >= 0) {
             this.readOnly = false;
         }
-        if (this.val(this.data) && this.val(this.data.collapse)) {
-            this.collapse = this.data.collapse;
-        }
-        if (this.val(this.data) && this.val(this.data.allegations)) {
-            this.appearences = this.data.allegations;
-        }
+        setTimeout(() => {
+            if (this.val(this.data) && this.val(this.data.collapse)) {
+                this.collapse = this.data.collapse;
+            }
+
+            if (this.val(this.data) && this.val(this.data.allegations)) {
+                this.appearences = this.data.allegations;
+            }
+        });
         //  console.log(this.appearences);
         this.errLink = false;
     }

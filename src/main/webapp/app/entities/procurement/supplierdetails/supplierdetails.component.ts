@@ -37,7 +37,7 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
     dnbScale: any[];
     dnbScaleValue: number;
     complianceRequestId: string;
-    dunsRequest: string;
+    dunsRequest: string = '';
     companyInfo: any;
     sliderColors2: any = {};
     sliderColors: any = {};
@@ -164,7 +164,9 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
         this.routerSubscription = this.activeRoute.params.subscribe(res => {
             if (this.validate(res) && this.validate(res.id) && this.validate(res.duns)) {
                 this.complianceRequestId = res.id;
-                this.dunsRequest = res.duns;
+                setTimeout(() => {
+                    this.dunsRequest = res.duns;
+                });
 
                 if (this.validate(this.oldRequest) && this.oldRequest != this.complianceRequestId + '-' + this.dunsRequest) {
                     this.zone.runOutsideAngular(() => {

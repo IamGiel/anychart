@@ -14,7 +14,7 @@
         <div class="col-12 col-lg-3 text-left">
            
             <div *ngIf="companyInfo!=undefined&&companyInfo.business_name!==undefined && companyInfo.business_name!==null"  class="company-name ">{{companyInfo.business_name}}</div>
-            <div *ngIf="dunsRequest!==undefined" class="duns">DUNS # {{ dunsRequest}}</div>
+            <div *ngIf="dunsRequest!=undefined && dunsRequest!=null" class="duns">DUNS # {{ dunsRequest}}</div>
             <div *ngIf="ERPID!=undefined && ERPID!=null" class="duns">ERP ID # {{ ERPID}}</div>
 
             <!-- Company Info Tab -->

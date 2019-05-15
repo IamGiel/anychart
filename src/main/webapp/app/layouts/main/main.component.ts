@@ -24,7 +24,7 @@ export class JhiMainComponent implements OnInit, OnDestroy {
         private principal: Principal
     ) {
         // this.matomoInjector.init('http://52.214.108.202/piwik/', 1);
-        console.log('main comp');
+        // console.log('main comp');
     }
 
     private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {
@@ -37,7 +37,7 @@ export class JhiMainComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.router.events.subscribe(event => {
-            console.log(this.bcs.isProc());
+            // console.log(this.bcs.isProc());
             this.baseModule = this.bcs.isProc();
             this.fullurl = window.location.hostname;
             if (window.location.href.indexOf(':8080') == -1) {
@@ -82,8 +82,8 @@ export class JhiMainComponent implements OnInit, OnDestroy {
                 }
                 this.baseClass[this.baseModule] = true;
                 this.jhiLanguageHelper.updateTitle(this.getPageTitle(this.router.routerState.snapshot.root));
-                (<any>window).ga('set', 'page', event.urlAfterRedirects);
-                (<any>window).ga('send', 'pageview');
+                //(<any>window).ga('set', 'page', event.urlAfterRedirects);
+                // (<any>window).ga('send', 'pageview');
             }
         });
     }
