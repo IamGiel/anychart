@@ -153,7 +153,9 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        this.routerSubscription.unsubscribe();
+        if (this.routerSubscription != undefined) {
+            this.routerSubscription.unsubscribe();
+        }
     }
 
     ngAfterViewInit() {
