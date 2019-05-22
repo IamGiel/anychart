@@ -1,3 +1,34 @@
+<div class="container">
+    <div class="row overview-box">
+        <div class="col-md-8">
+            <div class="row">
+                <h3>Response overview</h3>
+                <div class="col-md-4" style="display:inline-flex;">
+                    <div class="icon-sec green"><i-check></i-check></div>
+                    <div class="type-sec">
+                        <p>Shared</p>
+                        <p  class="rating"><span>86</span> <span>12%</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4"  style="display:inline-flex;">
+                    <div class="icon-sec warn"><i-rotate-ccw></i-rotate-ccw></div>
+                    <div class="type-sec">
+                        <p>Pending</p>
+                        <p class="rating"><span>86</span> <span>12%</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4"  style="display:inline-flex;">
+                    <div class="icon-sec red"><i-x></i-x></div>
+                    <div class="type-sec">
+                        <p>Declined</p>
+                        <p class="rating"><span>86</span> <span>12%</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
 <div class="container" *ngIf="topRow!=undefined && topRow!=null && topRow.length>0">
     <div class="row topRow" >
         <div class="col-md-4"><span class="recent-share"> Recently Shared</span></div>

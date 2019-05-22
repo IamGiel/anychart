@@ -34,7 +34,9 @@ import {
     IconArrowRightCircle,
     IconXCircle,
     IconX,
-    IconLink2
+    IconLink2,
+    IconRotateCcw,
+    IconRotateCw
 } from 'angular-feather';
 /* import { IconX } from 'angular-feather/feather/x'; */
 
@@ -74,7 +76,9 @@ const icons = [
     IconArrowRightCircle,
     IconXCircle,
     IconX,
-    IconLink2
+    IconLink2,
+    IconRotateCcw,
+    IconRotateCw
 ];
 
 @NgModule({
