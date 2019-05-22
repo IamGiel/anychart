@@ -126,3 +126,23 @@
     width: 40px;
     height: 40px;
 }
+.goog-te-combo {
+    padding: 0px 10px;
+}
+.goog-te-combo option {
+    font-size: 14px;
+    padding: 25px 20px;
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+    height: 40px;
+}
+.goog-te-combo option:hover {
+    background-color: #804cd9;
+    color: #ffffff;
+    font-family: 'Inter UI';
+}
