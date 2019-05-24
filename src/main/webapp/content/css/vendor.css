@@ -146,3 +146,6 @@
     color: #ffffff;
     font-family: 'Inter UI';
 }
+.anychart-credits {
+    display: none;
+}

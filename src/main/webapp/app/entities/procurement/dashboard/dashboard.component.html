@@ -1,35 +1,56 @@
-<div class="container">
-    <div class="row overview-box">
-        <div class="col-md-8">
-            <div class="row">
-                <h3>Response overview</h3>
-                <div class="col-md-4" style="display:inline-flex;">
-                    <div class="icon-sec green"><i-check></i-check></div>
-                    <div class="type-sec">
-                        <p>Shared</p>
-                        <p  class="rating"><span>86</span> <span>12%</span></p>
+<div class="container" *ngIf="resOverview">
+        <div class="row overview-box">
+                   <div class="col-md-9">
+                       <div class="row">
+                           <h3 style="margin-bottom: 15px;">Response overview</h3>
+                           <div class="col-md-4" style="display:inline-flex;margin-bottom:10px;">
+                               <div class="icon-sec green"><i-check></i-check></div>
+                               <div class="type-sec">
+                                   <p>Shared</p>
+                                   <p  class="rating"><span>{{resOverview.sharedCount}}</span> <span>{{resOverview.sharedPercentage}}%</span></p>
+                               </div>
+                           </div>
+                           <div class="col-md-4"  style="display:inline-flex;margin-bottom:10px;">
+                               <div class="icon-sec warn"><i-rotate-ccw></i-rotate-ccw></div>
+                               <div class="type-sec">
+                                   <p>Pending</p>
+                                   <p class="rating"><span>{{resOverview.pendingCount}}</span> <span>{{resOverview.pendigPercentage}}%</span></p>
+                               </div>
+                           </div>
+                           <div class="col-md-4"  style="display:inline-flex;margin-bottom:10px;">
+                               <div class="icon-sec red"><i-x></i-x></div>
+                               <div class="type-sec">
+                                   <p>Declined</p>
+                                   <p class="rating"><span>{{resOverview.declinedCount}}</span> <span>{{resOverview.declinedPercentage}}%</span></p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-3">
+                       <jhi-pie-chart *ngIf="chartData" [chartData]="chartData" hideTooltipPerct='true'></jhi-pie-chart>
+                   </div>
+                   <div class="analytics-btn" (click)="toggleSuplierOverview()" aria-controls="SupplierOverview">
+                        <span *ngIf="isSupplierOverviewCollapsed"> <i-chevron-down style="width:20px;height:20px;"></i-chevron-down></span>
+                        <span *ngIf="!isSupplierOverviewCollapsed"><i-chevron-up style="width:20px;height:20px;"></i-chevron-up></span>
+                    </div>
+               <div  [ngbCollapse]="isSupplierOverviewCollapsed" id="SupplierOverview">
+                   <div class="row supplier-overview" style="display:flex;">
+                        <h3>Supplier information </h3>
+                        <div class="col-md-4">
+                            <jhi-pie-chart *ngIf="financialData" [chartData]="financialData" chartTitle='Financial risk' heightValue='300'></jhi-pie-chart>
+                        </div>
+                        <div class="col-md-4">
+                            <jhi-pie-chart *ngIf="dowData" [chartData]="dowData" chartTitle='Dow Jones AME' heightValue='300' showValue='true'></jhi-pie-chart>
+                        </div>
+                        <div class="col-md-4">
+                            <jhi-pie-chart *ngIf="cocData" [chartData]="cocData" chartTitle='Code of conduct' heightValue='300'></jhi-pie-chart>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4"  style="display:inline-flex;">
-                    <div class="icon-sec warn"><i-rotate-ccw></i-rotate-ccw></div>
-                    <div class="type-sec">
-                        <p>Pending</p>
-                        <p class="rating"><span>86</span> <span>12%</span></p>
-                    </div>
-                </div>
-                <div class="col-md-4"  style="display:inline-flex;">
-                    <div class="icon-sec red"><i-x></i-x></div>
-                    <div class="type-sec">
-                        <p>Declined</p>
-                        <p class="rating"><span>86</span> <span>12%</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4"></div>
+             </div>
+              
     </div>
-</div>
-<div class="container" *ngIf="topRow!=undefined && topRow!=null && topRow.length>0">
+<!--<div class="container" *ngIf="topRow!=undefined && topRow!=null && topRow.length>0">
     <div class="row topRow" >
         <div class="col-md-4"><span class="recent-share"> Recently Shared</span></div>
         <div class="col-md-4"></div>
@@ -43,7 +64,7 @@
         </div>
     </div>
     <jhi-custom-carousel [ngbCollapse]="isCollapsed"></jhi-custom-carousel>
- </div>
+ </div>-->
 <div class="container dash-container">
         <div style="border-bottom:none;margin:0px;" class="row divtitle">
                 <div class="col-md-3 headleft">

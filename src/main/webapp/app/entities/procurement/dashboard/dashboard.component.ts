@@ -15,6 +15,12 @@ import { FetchData } from '../../common/service/fetch-data';
     styleUrls: ['../dashboard/dashboard.css']
 })
 export class DashboardComponent implements OnInit {
+    chartData: any;
+    financialData: any;
+    dowData: any;
+    cocData: any;
+    isSupplierOverviewCollapsed: boolean = true;
+    resOverview: any;
     backup: any = {};
     isOpen = false;
     viewMode = 'tab1';
@@ -31,6 +37,7 @@ export class DashboardComponent implements OnInit {
     limit = 10;
     searchKeyword: string;
     isCatManager: boolean = false;
+
     serPop = 'The Supplier Evaluation Risk Rating (SER) is risk metric that helps supply management professionals evaluate the long term risk of doing business with a supplier. The SER score is based on a scale of 1-9, with 1 representing the lowest level of risk and 9 implying the highest level of risk. For suppliers whose headquarters are located outside the United States and Canada, the SER predicts the likelihood that a supplier will cease operations or reorganize without paying all creditors in full, or obtain relief from creditors under state/federal law over the next 12 months.The SER provides a consistent risk ranking across the globe.';
     paydexPop = `PAYDEX is Dun & Bradstreet's unique dollar-weighted numerical indicator of how a firm paid its bills over the    past year, based on trade experiences reported to D&B by various vendors. The D&B PAYDEX Score ranges
     from 1 to 100, with higher scores indicating better payment performance. The tables below demonstrate how
@@ -53,6 +60,40 @@ export class DashboardComponent implements OnInit {
         /*   if (this.lc.getLocalInfo('account').authorities.indexOf('ROLE_CM_USER') >= 0) {
             this.isCatManager = true;
         }*/
+        this.resOverview = {
+            pendingCount: 12,
+            sharedCount: 40,
+            declinedCount: 4,
+            total: 56,
+            sharedPercentage: 71,
+            pendigPercentage: 21,
+            declinedPercentage: 8
+        };
+        this.chartData = [
+            { x: 'Shared', value: 40, fill: '#51D370' },
+            { x: 'Pending', value: 12, fill: '#FFCB70' },
+            { x: 'Declined', value: 4, fill: '#FF7272' }
+        ];
+        this.financialData = [
+            { x: 'Risky', value: 4, fill: '#FF7272' },
+            { x: 'Unsafe', value: 11, fill: '#FFCB70' },
+            { x: 'Moderate', value: 17, fill: '#B4E66D' },
+            { x: 'Healthy ', value: 68, fill: '#51D370' }
+        ];
+        this.dowData = [
+            { x: 'Sanctions', value: 2, fill: '#FF7272' },
+            { x: 'Environmental', value: 9, fill: '#35C7CD' },
+            { x: 'Social', value: 13, fill: '#4285f4' }
+        ];
+        this.cocData = [{ x: 'Accepted', value: 33, fill: '#AD7CEE' }, { x: 'Not responded', value: 27, fill: '#F76693' }];
+    }
+    toggleSuplierOverview() {
+        console.log(this.isSupplierOverviewCollapsed);
+        if (this.isSupplierOverviewCollapsed) {
+            this.isSupplierOverviewCollapsed = false;
+        } else {
+            this.isSupplierOverviewCollapsed = true;
+        }
     }
     goToPage(n: number): void {
         this.page = n;

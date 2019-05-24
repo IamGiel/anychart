@@ -1198,11 +1198,14 @@ button:focus {
 
 /*resposnse overview box*/
 .overview-box {
-    border: 1px solid grey;
+    border: 1px solid hsla(0, 0%, 41%, 0.29);
     padding: 20px;
     border-radius: 4px;
+    margin-bottom: 20px;
+    position: relative;
 }
-.overview-box h3 {
+.overview-box h3,
+.supplier-overview h3 {
     opacity: 0.7;
     color: #181818;
     font-family: 'Inter UI';
@@ -1210,8 +1213,8 @@ button:focus {
     font-weight: 900;
     line-height: 24px;
     width: 100%;
-    margin-bottom: 15px;
     padding-left: 15px;
+    letter-spacing: 1px;
 }
 
 .overview-box .icon-sec {
@@ -1222,13 +1225,13 @@ button:focus {
     margin-right: 10px;
 }
 .green {
-    background: #7fb748;
+    background: #51d370;
 }
 .red {
-    background: #f4a1a8;
+    background: #ff7272;
 }
 .warn {
-    background: #f2d57d;
+    background: #ffcb70;
 }
 .overview-box .type-sec {
     width: 100%;
@@ -1242,6 +1245,7 @@ button:focus {
     line-height: 24px;
     width: 100%;
     margin-bottom: 0px;
+    letter-spacing: 1px;
 }
 .type-sec p:nth-child(2) {
     color: #181818;
@@ -1252,6 +1256,7 @@ button:focus {
     width: 100%;
     margin-bottom: 0px;
     margin-top: 10px;
+    letter-spacing: normal;
 }
 .type-sec .rating span:nth-child(1) {
     opacity: 0.9;
@@ -1265,4 +1270,33 @@ button:focus {
     color: #181818;
     font-family: 'Inter UI';
     font-size: 14px;
+}
+.analytics-btn {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #f5f5f5;
+    padding: 0px 10px;
+    /*background: linear-gradient(315deg, #544ad8 0%, #804cd9 100%);
+    color: #ffffff;*/
+    color: #544ad8;
+    font-family: 'Inter UI';
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.analytics-btn:hover {
+    color: #544ad8;
+    text-decoration: none;
+}
+.supplier-overview {
+    border-top: 1px solid hsla(0, 0%, 41%, 0.29);
+    padding: 10px 0px 0px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    margin: auto;
 }
