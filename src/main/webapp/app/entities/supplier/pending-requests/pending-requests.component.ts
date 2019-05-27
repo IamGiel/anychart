@@ -21,6 +21,7 @@ export class PendingRequestsComponent implements OnInit, OnDestroy {
     userDetails: any;
     pendingListNew: any;
     isOpen = false;
+    processFee = 0;
     constructor(
         private customPiwik: CustomPiwik,
         private router: Router,
@@ -59,6 +60,31 @@ export class PendingRequestsComponent implements OnInit, OnDestroy {
         };*/
         this.pendingListNew = [
             {
+                id: 4,
+                checked: true,
+                reqName: 'KYS Basic',
+                amout: '$19.00',
+                reqDesc: 'This will data will be visible on the supplier’s profile in the dashboard.',
+                reqType: 'Standard Option',
+                reqFinancial: [],
+                reqEnviormental: [],
+                reqLabor: [],
+                reqEthical: [],
+                ques: ['Company Questionnaires & Self Assesment']
+            },
+            {
+                id: 5,
+                reqName: 'KYS Essential',
+                amout: '$49.00',
+                reqDesc: 'This will data will be visible on the supplier’s profile in the dashboard.',
+                reqType: 'Standard Option',
+                reqFinancial: ['SER (Supplier Evaluation Rating)'],
+                reqEnviormental: [],
+                reqLabor: [],
+                reqEthical: ['Sanctions provided by Dow Jones'],
+                ques: ['Company Questionnaires & Self Assesment']
+            },
+            {
                 id: 3,
                 checked: true,
                 reqName: 'Base',
@@ -68,7 +94,8 @@ export class PendingRequestsComponent implements OnInit, OnDestroy {
                 reqFinancial: ['SER (Supplier Evaluation Rating)'],
                 reqEnviormental: ['Dow Jones - Adverse Media Scan for Environment'],
                 reqLabor: ['Dow Jones - Adverse Media Scan for Labor'],
-                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones']
+                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones'],
+                ques: ['Company Questionnaires & Self Assesment']
             },
             {
                 reqName: 'Essential',
@@ -78,7 +105,8 @@ export class PendingRequestsComponent implements OnInit, OnDestroy {
                 reqFinancial: ['SER (Supplier Evaluation Rating)'],
                 reqEnviormental: ['CSR Hub Overall Rating', 'Dow Jones - Adverse Media Scan for Environment'],
                 reqLabor: ['Mini Questionnaire Based Assesment by Achilles', 'Dow Jones - Adverse Media Scan for Labor'],
-                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones']
+                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones'],
+                ques: ['Company Questionnaires & Self Assesment']
             },
             {
                 reqName: 'Advantage',
@@ -95,7 +123,8 @@ export class PendingRequestsComponent implements OnInit, OnDestroy {
                     'Dow Jones - Adverse Media Scan for Environment'
                 ],
                 reqLabor: ['Silver Assessment by Achilles', 'Dow Jones - Adverse Media Scan for Labor'],
-                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones']
+                reqEthical: ['Ethical & Regulatory Scan against company and top executives provided by Dow Jones'],
+                ques: ['Company Questionnaires & Self Assesment']
             }
         ];
 

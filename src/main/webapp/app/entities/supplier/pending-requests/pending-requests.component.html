@@ -46,6 +46,12 @@
                                     <h3 style="text-align:center">{{item.amout}}</h3>
                                     <hr />
                                     <p style="display:none" class="card-text blkColor">{{item.reqDesc}} </p>
+                                    <ng-container *ngIf="processFee>0">
+                                        <h3 style="text-align:center">+</h3>
+                                        <h3 style="text-align:center">${{processFee}}<br /><span jhiTranslate="pendReq.procFee"
+                                                style="font-size: 13px; margin-left: 10px;font-weight: normal;">( Processing Fee
+                                                )</span></h3>
+                                    </ng-container>
                                     <hr />
                                     <h3 style="text-align:center">Financial Compliance powered by D&B</h3>
                                     <p class="feature-item" *ngFor="let feature of item.reqFinancial">
