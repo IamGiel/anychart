@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit {
     cocData: any;
     isSupplierOverviewCollapsed: boolean = true;
     resOverview: any;
+    checkedMap: any = {};
     backup: any = {};
     isOpen = false;
     viewMode = 'tab1';
@@ -45,6 +46,11 @@ export class DashboardComponent implements OnInit {
     noPop = `This is placeholder`;
     csrPop = `CSR Ratings give the perceived performance on an absolute 0-100 scale`;
     dowPop = `A company’s brand reputation is among its most valuable assets. And regulators, especially those of financial institutions, are now requiring “adverse media” coverage as part of due diligence and compliance matters. By knowing the illegal, immoral or unethical conduct of a third party, companies can better evaluate the cost/benefit balance of proposed business relationships.`;
+    trendPop = `D&B Rating consists of two parts:
+    (1) Rating Classification: A rating of 5A means a business has a worth of $50+ million. HH, on the other end of the scale, indicates that a business is worth up to $4,999.
+    This part of the rating is based on a company’s net worth, when available, or issued capital (the value of the company’s shares).
+    (2)Composite Credit Appraisal: This measures the risk of business failure, from 1, indicating "minimal," to 4, "significant."`;
+
     constructor(
         private customPiwik: CustomPiwik,
         private ds: DashboardService,
@@ -54,7 +60,55 @@ export class DashboardComponent implements OnInit {
         private modalService: NgbModal,
         private fetchData: FetchData
     ) {}
+    public columnList: any = [
+        /* {
+            id:1,
+            name:'Company Name',
+            order:1,
+            checked:true
+        },*/
+        {
+            id: 2,
+            name: 'DUNS',
+            order: 1,
+            checked: false
+        },
+        {
+            id: 3,
+            name: 'D&B SER RATING',
+            order: 1,
+            checked: true
+        },
+        {
+            id: 4,
+            name: 'D&B RATING',
+            order: 4,
+            checked: true
+        },
+        {
+            id: 5,
+            name: 'D&B PAYDEX',
+            order: 5,
+            checked: true
+        },
+        {
+            id: 6,
+            name: 'EcoVadis',
+            order: 5,
+            checked: true
+        },
+        {
+            id: 7,
+            name: 'DOW JONES AME',
+            order: 6,
+            checked: true
+        }
+    ];
     ngOnInit() {
+        this.columnList.map(m => {
+            this.checkedMap[m.name] = m.checked;
+            return m;
+        });
         this.recentlyShared();
         this.tabClicked('Shared');
         /*   if (this.lc.getLocalInfo('account').authorities.indexOf('ROLE_CM_USER') >= 0) {
@@ -62,30 +116,84 @@ export class DashboardComponent implements OnInit {
         }*/
         this.resOverview = {
             pendingCount: 12,
-            sharedCount: 40,
-            declinedCount: 4,
-            total: 56,
-            sharedPercentage: 71,
-            pendigPercentage: 21,
-            declinedPercentage: 8
+            sharedCount: 25,
+            declinedCount: 0,
+            total: 37,
+            sharedPercentage: 68,
+            pendigPercentage: 32,
+            declinedPercentage: 0
         };
         this.chartData = [
-            { x: 'Shared', value: 40, fill: '#51D370' },
+            { x: 'Shared', value: 25, fill: '#31d490' },
             { x: 'Pending', value: 12, fill: '#FFCB70' },
-            { x: 'Declined', value: 4, fill: '#FF7272' }
+            { x: 'Declined', value: 0, fill: '#FF7272' }
         ];
+
         this.financialData = [
-            { x: 'Risky', value: 4, fill: '#FF7272' },
-            { x: 'Unsafe', value: 11, fill: '#FFCB70' },
-            { x: 'Moderate', value: 17, fill: '#B4E66D' },
-            { x: 'Healthy ', value: 68, fill: '#51D370' }
+            { x: 'High', value: 4, fill: '#FF7272' },
+            { x: 'Medium', value: 28, fill: '#FFCB70' },
+            { x: 'Low', value: 68, fill: '#31d490' }
         ];
         this.dowData = [
-            { x: 'Sanctions', value: 2, fill: '#FF7272' },
-            { x: 'Environmental', value: 9, fill: '#35C7CD' },
-            { x: 'Social', value: 13, fill: '#4285f4' }
+            {
+                x: 'Sanctions',
+                value: 2,
+                normal: {
+                    fill: '#FF7272',
+                    stroke: null,
+                    label: { enabled: true }
+                },
+                hovered: {
+                    fill: '#FF7272',
+                    stroke: null,
+                    label: { enabled: true }
+                },
+                selected: {
+                    fill: '#FF7272',
+                    stroke: null,
+                    label: { enabled: true }
+                }
+            },
+            {
+                x: 'Environmental',
+                value: 9,
+                normal: {
+                    fill: '#35C7CD',
+                    stroke: null,
+                    label: { enabled: true }
+                },
+                hovered: {
+                    fill: '#35C7CD',
+                    stroke: null,
+                    label: { enabled: true }
+                },
+                selected: {
+                    fill: '#35C7CD',
+                    stroke: null,
+                    label: { enabled: true }
+                }
+            },
+            {
+                x: 'Social',
+                value: 13,
+                normal: {
+                    fill: '#4285f4',
+                    stroke: null,
+                    label: { enabled: true }
+                },
+                hovered: {
+                    fill: '#4285f4',
+                    stroke: null,
+                    label: { enabled: true }
+                },
+                selected: {
+                    fill: '#4285f4',
+                    stroke: null,
+                    label: { enabled: true }
+                }
+            }
         ];
-        this.cocData = [{ x: 'Accepted', value: 33, fill: '#AD7CEE' }, { x: 'Not responded', value: 27, fill: '#F76693' }];
+        this.cocData = [{ x: 'Accepted', value: 28, fill: '#AD7CEE' }, { x: 'Not responded', value: 12, fill: '#F76693' }];
     }
     toggleSuplierOverview() {
         console.log(this.isSupplierOverviewCollapsed);
@@ -407,5 +515,17 @@ export class DashboardComponent implements OnInit {
         //  {{item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones[0].totalCount}}
         // console.log(totalcount);
         return totalcount;
+    }
+    showHideColumn(col: any) {
+        if (col.checked == true) {
+            col.checked = false;
+        } else {
+            col.checked = true;
+        }
+
+        this.columnList.map(m => {
+            this.checkedMap[m.name] = m.checked;
+            return m;
+        });
     }
 }

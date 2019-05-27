@@ -4,6 +4,7 @@ import { GatewaySharedModule } from 'app/shared';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { CarouselComponent } from './components/carousel.component';
 import { PieChartComponent } from './components/charts/pie/pie-chart.component';
+import { ColumnChartComponent } from './components/charts/column/column-chart.component';
 import { niceDateFormatPipe } from './pipes/date.pipe';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { RatingBoxComponent } from './components/rating-box/rating-box.component';
@@ -47,7 +48,8 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         AchillesQuestionsComponent,
         AchillesFormComponent,
         RatingBoxComponent,
-        PieChartComponent
+        PieChartComponent,
+        ColumnChartComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     entryComponents: [
@@ -77,7 +79,8 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         AchillesQuestionsComponent,
         AchillesFormComponent,
         RatingBoxComponent,
-        PieChartComponent
+        PieChartComponent,
+        ColumnChartComponent
     ]
 })
 export class GatewayCommonModule {}

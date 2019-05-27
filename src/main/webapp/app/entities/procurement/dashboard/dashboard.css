@@ -190,6 +190,7 @@ table th:nth-child(1) {
     color: #181818;
     opacity: 0.8;
     border: none;
+    height: 65px !important;
 }
 
 .table-hover tbody tr:hover {
@@ -571,6 +572,10 @@ input {
     letter-spacing: 1px;
     line-height: 24px;
     text-align: center;
+}
+
+.buttoncsv:hover {
+    color: white !important;
 }
 
 .divbody {
@@ -1132,6 +1137,7 @@ button:focus {
 }
 .infoFeather {
     width: 17px !important;
+    vertical-align: bottom;
 }
 .pend p {
     text-align: center;
@@ -1194,6 +1200,14 @@ button:focus {
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #804cd9;
+}
+.paydex-span {
+    opacity: 0.7;
+    color: #181818;
+    font-family: 'Inter UI';
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 24px;
 }
 
 /*resposnse overview box*/

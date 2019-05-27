@@ -15,9 +15,9 @@ export class RatingBoxComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        // console.log(this.typeToShow);
-        // console.log(this.ratingValue);
-        // console.log(this.customClass);
+        console.log(this.typeToShow);
+        console.log(this.ratingValue);
+        console.log(this.customClass);
     }
     getRadialColor(val) {
         if (val >= 0 && val <= 29) {
@@ -74,6 +74,21 @@ export class RatingBoxComponent implements OnInit {
             }
         } else if (ratingType == 'DOW_JONES') {
             return 'r-dow';
+        } else if (ratingType == 'RATING_FINANCIAL') {
+            return 'r-dow';
+        } else if (ratingType == 'RATING_CCA') {
+            if (rating == 1) {
+                return 'r-high';
+            }
+            if (rating == 2) {
+                return 'r-good';
+            }
+            if (rating == 3) {
+                return 'r-fair';
+            }
+            if (rating == 4) {
+                return 'r-limited';
+            }
         } else {
             return 'r-default';
         }

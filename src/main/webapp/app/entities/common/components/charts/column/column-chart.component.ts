@@ -2,13 +2,12 @@ import { Component, OnInit, Input, ElementRef, ViewChild, AfterViewInit } from '
 import 'anychart';
 
 @Component({
-    selector: 'jhi-pie-chart',
-    templateUrl: './pie-chart.component.html',
-    styleUrls: ['./pie-chart.css']
+    selector: 'jhi-column-chart',
+    templateUrl: './column-chart.component.html'
 })
-export class PieChartComponent implements OnInit, AfterViewInit {
+export class ColumnChartComponent implements OnInit, AfterViewInit {
     @ViewChild('chartContainer') container;
-    chart: anychart.charts.Pie = null;
+    chart: any;
     @Input() chartData: string;
     @Input() chartTitle: string;
     @Input() hideTooltipPerct: string;
@@ -18,30 +17,16 @@ export class PieChartComponent implements OnInit, AfterViewInit {
     constructor() {}
 
     ngOnInit() {
-        this.chart = anychart.pie(this.chartData);
+        this.chart = anychart.column();
+        var series = this.chart.column(this.chartData);
     }
     ngAfterViewInit() {
         this.chart.container(this.container.nativeElement);
-        this.chart.innerRadius('50%');
-        // set the position of labels
-        //this.chart.labels().position("outside");
-        /*  var label = anychart.standalones.label();
-        label.text('100');
-        label.width('100%');
-        label.height('100%');
-        label.adjustFontSize(true);
-        label.fontColor('#60727b');
-        label.fontFamily('Inter UI');
-        label.hAlign('center');
-        label.vAlign('middle');
 
-        this.chart.center().content(label);*/
         this.chart.title(this.chartTitle);
         //this.chart.title().letterSpacing('1px');
         // set font family
         this.chart.title().fontFamily('Inter UI');
-        // configure connectors
-        this.chart.connectorStroke({ color: '#595959', thickness: 2, dash: '2 2' });
 
         // get chart tooltip
         this.chart.tooltip().useHtml(true);
@@ -58,21 +43,22 @@ export class PieChartComponent implements OnInit, AfterViewInit {
         }
         if (this.hideTooltipPerct == 'true') {
             // set the position of the legend
-            // this.chart.legend().itemsLayout('vertical');
-            //this.chart.legend().position('right');
+            this.chart.legend().itemsLayout('vertical');
+            this.chart.legend().position('right');
             // set the alignment of the legend
-            this.chart.legend(false);
+            this.chart.legend().align('center');
         }
         if (this.showValue == 'true') {
             this.chart.labels().format('{%value}');
         }
-        this.chart.legend().fontSize(12);
+        this.chart.legend().fontSize(9);
         //this.chart.legend().maxHeight("30%");
         // this.chart.legend().maxWidth("100%");
-
+        this.chart.normal().stroke(null);
         // set the layout of the legend
         // this.chart.legend().itemsLayout("horizontal-expandable")
         this.chart.legend().fontFamily('Inter UI');
+        this.chart.yAxis().title('No. of suppliers');
         this.chart.draw();
     }
 }
