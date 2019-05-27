@@ -38,7 +38,7 @@ export class RequestDataComponent implements OnInit {
             {
                 id: 4,
                 checked: true,
-                reqName: 'KYS 1',
+                reqName: 'KYS Basic',
                 amout: '$19.00',
                 reqDesc: 'This will data will be visible on the supplier’s profile in the dashboard.',
                 reqType: 'Standard Option',
@@ -51,7 +51,7 @@ export class RequestDataComponent implements OnInit {
             {
                 id: 5,
                 checked: false,
-                reqName: 'KYS 2',
+                reqName: 'KYS Essential',
                 amout: '$49.00',
                 reqDesc: 'This will data will be visible on the supplier’s profile in the dashboard.',
                 reqType: 'Standard Option',
