@@ -136,7 +136,7 @@
         </div><br/>
         <div class="row">
             <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
-              <table class="table table-hover table-striped tex-center1" style="width:99%;">
+              <table class="table table-hover table-striped1 tex-center1" style="width:99%;">
                 <thead>
                     <tr class="text-center1">
                         <th class="text-left">COMPANY NAME</th>
@@ -149,7 +149,7 @@
                       </tr>
                   </thead>
                   <tbody>
-                      <tr *ngFor="let item of list; let i = index " class="text-center1" >
+                      <tr *ngFor="let item of list; let i = index " class="text-center1 top-border" >
                         <td class="text-left" style="max-width:200px;"><span class="comp-name" (click)="goToCompanyProfile(item)">{{item.supplierName}}</span></td>
                         <td *ngIf="checkedMap['DUNS']">{{item.providerKey.DUNSNUMBER}}</td>
                         <td *ngIf="checkedMap['D&B SER RATING']">

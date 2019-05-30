@@ -53,3 +53,19 @@
     background: #2ae02a;
     color: #2ae02a;
 }
+.r-high {
+    background: #e7f7fa;
+    color: #14b4d2;
+}
+.r-good {
+    background: #eafaf3;
+    color: #31d490;
+}
+.r-fair {
+    background: #fff8ec;
+    color: #ffbe45;
+}
+.r-limited {
+    background: #ffedef;
+    color: #ff4f61;
+}
