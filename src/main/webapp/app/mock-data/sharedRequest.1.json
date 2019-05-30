@@ -1,0 +1,347 @@
+{
+  "data": [
+    
+    {
+      "id": 1,
+      "requestId": "eb0c10e789e44eb6a8bbc5a90000af61",
+      "supplierName": "Smurfit Kappa Group plc",
+      "providerKey": {
+        "DUNSNUMBER": "896666653",
+        "ISIN": "US31428X1063"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 1,
+      "lastRequest": 85,
+      "status": "SHARED",
+      "regionName": "Global",
+      "price": "399.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-01-30T13:48:37.000+0000",
+      "requestedDate": "2019-01-30T13:48:37.000+0000",
+      "packageResponse": {
+        "DOW_JONES": {
+          "Dow Jones Basic": {
+            "DOWJones": [
+              {
+                "issueName": "Regulatory",
+                "totalCount": 0
+              },
+              {
+                "issueName": "Environment/Production",
+                "totalCount": 0
+              },
+              {
+                "issueName": "Social/Labour",
+                "totalCount": 0
+              }
+            ]
+          }
+        },
+        "DNB": {
+          "Supplier Evaluation Risk": {
+            "SER": {
+              "riskScore": "4"
+            },
+            "purchaseDate": "2019-01-30"
+          }
+        },
+        "CSRHUB": {
+          "csrHubRating": {
+            "csrHubRating": {
+              "environment": "65",
+              "averageRating": 55.0,
+              "community": "50",
+              "employees": "53",
+              "governance": "50"
+            }
+          }
+        }
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    },
+    {
+      "id": 2,
+      "requestId": "ad143c64cd2b49c7abaf73565822d42a",
+      "supplierName": "Recipharm",
+      "providerKey": {
+        "DUNSNUMBER": "508619434",
+        "ISIN": "US9113121068"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 1,
+      "lastRequest": 85,
+      "status": "SHARED",
+      "regionName": "Global",
+      "price": "399.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-01-30T13:23:20.000+0000",
+      "requestedDate": "2019-01-30T13:23:20.000+0000",
+      "packageResponse": {
+        "DOW_JONES": {
+          "Dow Jones Basic": {
+            "DOWJones": [
+              {
+                "issueName": "Regulatory",
+                "totalCount": 1
+              },
+              {
+                "issueName": "Environment/Production",
+                "totalCount": 1
+              },
+              {
+                "issueName": "Social/Labour",
+                "totalCount": 0
+              }
+            ]
+          }
+        },
+        "DNB": {
+          "Supplier Evaluation Risk": {
+            "SER": {
+              "riskScore": "1"
+            },
+            "purchaseDate": "2019-01-30"
+          }
+        },
+        "CSRHUB": {
+          "csrHubRating": {
+            "csrHubRating": {
+              "environment": "71",
+              "averageRating": 61.0,
+              "community": "56",
+              "employees": "62",
+              "governance": "53"
+            }
+          }
+        }
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    },
+    {
+      "id": 3,
+      "requestId": "025e237ae4854630832bfde27a4bdfa1",
+      "supplierName": "Berry Plastics Group, Inc.",
+      "providerKey": {
+        "DUNSNUMBER": "795448062",
+        "ISIN": "US9113121068"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 1,
+      "lastRequest": 85,
+      "status": "SHARED",
+      "regionName": "Global",
+      "price": "399.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-01-30T13:18:59.000+0000",
+      "requestedDate": "2019-01-30T13:18:59.000+0000",
+      "packageResponse": {
+        "DOW_JONES": {
+          "Dow Jones Basic": {
+            "DOWJones": [
+              {
+                "issueName": "Regulatory",
+                "totalCount": 0
+              },
+              {
+                "issueName": "Environment/Production",
+                "totalCount": 0
+              },
+              {
+                "issueName": "Social/Labour",
+                "totalCount": 0
+              }
+            ]
+          }
+        },
+        "DNB": {
+          "D&B Rating Trend": {
+            "purchaseDate": "2019-01-30",
+            "TrendRating": {
+              "trendRating": "5A2",
+              "ratingTrendCodeDetails": {
+                "high": "1",
+                "limited": "4",
+                "netWorth": "$50,000,000 and Over",
+                "rating": null,
+                "description": null,
+                "fair": "3",
+                "good": "2",
+                "numberOfEmployess": null,
+                "ratingClassification": "5A",
+                "employeeRangeSymbol": null
+              }
+            }
+          },
+          "Payment & Paydex Details": {
+            "paydex": {
+              "months": "up to 24 months",
+              "paydexScore": 69
+            }
+          },
+          "Supplier Evaluation Risk": {
+            "SER": {
+              "riskScore": "1"
+            },
+            "purchaseDate": "2019-01-30"
+          }
+        },
+        "CSRHUB": {
+          "csrHubRating": {
+            "csrHubRating": {
+              "environment": "71",
+              "averageRating": 61.0,
+              "community": "56",
+              "employees": "62",
+              "governance": "53"
+            }
+          }
+        }
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    },
+  
+    {
+      "id": 4,
+      "requestId": "6ccef659f20b4d9c94568de8dbbaa054",
+      "supplierName": "Siemens AG",
+      "providerKey": {
+        "DUNSNUMBER": "316067164",
+        "ISIN": "IE00B1RR8406"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 1,
+      "lastRequest": 86,
+      "status": "SHARED",
+      "regionName": "Global",
+      "price": "399.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-01-30T11:32:51.000+0000",
+      "requestedDate": "2019-01-30T11:32:51.000+0000",
+      "packageResponse": {
+        "DOW_JONES": {
+          "Dow Jones Basic": {
+            "DOWJones": [
+              {
+                "issueName": "Regulatory",
+                "totalCount": 28
+              },
+              {
+                "issueName": "Environment/Production",
+                "totalCount": 22
+              },
+              {
+                "issueName": "Social/Labour",
+                "totalCount": 23
+              }
+            ]
+          }
+        },
+        "CSRHUB": {
+          "csrHubRating": {
+            "csrHubRating": {
+              "environment": "64",
+              "averageRating": 63.0,
+              "community": "63",
+              "employees": "65",
+              "governance": "58"
+            }
+          }
+        }
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    },
+    {
+      "id": 5,
+      "requestId": "9f07b556176e48a0964d1b3c3a84dba1",
+      "supplierName": "AptarGroup, Inc.",
+      "providerKey": {
+        "DUNSNUMBER": "805619681",
+        "ISIN": "US31428X1063"
+      },
+      "packages": null,
+      "userCompany": "J&J",
+      "requestCount": 1,
+      "lastRequest": 86,
+      "status": "SHARED",
+      "regionName": "Global",
+      "price": "399.0",
+      "comprStatus": false,
+      "lastRequestedDate": "2019-01-30T11:06:15.000+0000",
+      "requestedDate": "2019-01-30T11:06:15.000+0000",
+      "packageResponse": {
+        "DOW_JONES": {
+          "Dow Jones Basic": {
+            "DOWJones": [
+              {
+                "issueName": "Regulatory",
+                "totalCount": 0
+              },
+              {
+                "issueName": "Environment/Production",
+                "totalCount": 0
+              },
+              {
+                "issueName": "Social/Labour",
+                "totalCount": 0
+              }
+            ]
+          }
+        },
+        "DNB": {
+          "D&B Rating Trend": {
+            "purchaseDate": "2019-01-30",
+            "TrendRating": {
+              "trendRating": "5A2",
+              "ratingTrendCodeDetails": {
+                "high": "1",
+                "limited": "4",
+                "netWorth": "$50,000,000 and Over",
+                "rating": null,
+                "description": null,
+                "fair": "3",
+                "good": "2",
+                "numberOfEmployess": null,
+                "ratingClassification": "5A",
+                "employeeRangeSymbol": null
+              }
+            }
+          },
+          "Payment & Paydex Details": {
+            "paydex": {
+              "months": "up to 24 months",
+              "paydexScore": 73
+            }
+          },
+          "Supplier Evaluation Risk": {
+            "SER": {
+              "riskScore": "1"
+            },
+            "purchaseDate": "2019-01-30"
+          }
+        },
+        "CSRHUB": {
+          "csrHubRating": {
+            "csrHubRating": {
+              "environment": "65",
+              "averageRating": 55.0,
+              "community": "50",
+              "employees": "53",
+              "governance": "50"
+            }
+          }
+        }
+      },
+      "declineMessage": null,
+      "declinedDate": null
+    }
+  ],
+  "totalCounts": 5
+}

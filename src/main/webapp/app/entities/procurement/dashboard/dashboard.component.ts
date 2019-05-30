@@ -356,7 +356,9 @@ export class DashboardComponent implements OnInit {
         this.fetchData.getAllRequest(tabData).subscribe(
             res => {
                 console.log(res);
-                this.list = res.data;
+
+                this.list = res.data.slice(this.pagesize, this.limit + this.pagesize);
+                // this.list = res.data;
                 this.total = res.totalCounts;
 
                 if (this.list !== null) {
