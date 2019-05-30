@@ -95,6 +95,6 @@ import { FakeBackendService } from './fake-backend.service';
 })
 export class GatewayAppModule {
     constructor(private dpConfig: NgbDatepickerConfig) {
-        this.dpConfig.minDate = { year: moment().year() - 100, month: 1, day: 1 };
+        //this.dpConfig.minDate = { year: moment().year() - 100, month: 1, day: 1 };
     }
 }

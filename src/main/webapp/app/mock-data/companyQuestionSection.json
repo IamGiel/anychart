@@ -1,1 +1,51 @@
-[{"id":1,"section_name":"Basic Information","sectionOrder":1,"numberOfRows":100,"metadata":null},{"id":2,"section_name":"Site Information","sectionOrder":2,"numberOfRows":100,"metadata":null},{"id":3,"section_name":"Self-Assessment","sectionOrder":3,"numberOfRows":100,"metadata":null}]
+[
+    {
+      "id": 1,
+      "section_name": "Basic Information",
+      "sectionOrder": 1,
+      "numberOfRows": 100,
+      "metadata": null
+    },
+    {
+      "id": 2,
+      "section_name": "Site Information",
+      "sectionOrder": 2,
+      "numberOfRows": 100,
+      "metadata": null
+    },
+    {
+      "id": 3,
+      "section_name": "Self-Assessment",
+      "sectionOrder": 3,
+      "numberOfRows": 100,
+      "metadata": null
+    },
+    {
+      "id": 4,
+      "section_name": "Financial",
+      "sectionOrder": 4,
+      "numberOfRows": 100,
+      "metadata": null
+    },
+    {
+      "id": 5,
+      "section_name": "Responsible Sourcing",
+      "sectionOrder": 5,
+      "numberOfRows": 100,
+      "metadata": null
+    },
+    {
+      "id": 6,
+      "section_name": "Food Safety and Quality",
+      "sectionOrder": 6,
+      "numberOfRows": 100,
+      "metadata": null
+    },
+    {
+      "id": 7,
+      "section_name": "Technical / Ensuring Supply / R&D",
+      "sectionOrder": 7,
+      "numberOfRows": 100,
+      "metadata": null
+    }
+  ]
