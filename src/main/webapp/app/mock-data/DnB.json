@@ -1,7 +1,133 @@
 {
-  "1":{"DNB":[{"SER":{"riskScore":"1"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"5A1","ratingTrendCodeDetails":{"high":"1","limited":"4","netWorth":"$50,000,000 and Over","rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":null,"ratingClassification":"5A","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":69}}]},
-  "2":{"DNB":[{"SER":{"riskScore":"1"},"purchaseDate":"2019-01-30"}]},
-  "3":{"DNB":[{"SER":{"riskScore":"1"},"purchaseDate":"2019-01-30"},{"purchaseDate":"2019-01-30","TrendRating":{"trendRating":"5A2","ratingTrendCodeDetails":{"high":"1","limited":"4","netWorth":"$50,000,000 and Over","rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":null,"ratingClassification":"5A","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":69}}]},
-  "4":{"msg":"No Data point Response Available For Passed Agency!"},
-  "5":{"DNB":[{"SER":{"riskScore":"1"},"purchaseDate":"2019-01-30"},{"purchaseDate":"2019-01-30","TrendRating":{"trendRating":"5A2","ratingTrendCodeDetails":{"high":"1","limited":"4","netWorth":"$50,000,000 and Over","rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":null,"ratingClassification":"5A","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":73}}]}
+    "1": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "1"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "5A1",
+                "ratingTrendCodeDetails": {
+                    "high": "1",
+                    "limited": "4",
+                    "netWorth": "$50,000,000 and Over",
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": null,
+                    "ratingClassification": "5A",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 69
+            }
+        }]
+    },
+    "2": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "1"
+            },
+            "purchaseDate": "2019-01-30"
+        }]
+    },
+    "3": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "1"
+            },
+            "purchaseDate": "2019-01-30"
+        }, {
+            "purchaseDate": "2019-01-30",
+            "TrendRating": {
+                "trendRating": "5A2",
+                "ratingTrendCodeDetails": {
+                    "high": "1",
+                    "limited": "4",
+                    "netWorth": "$50,000,000 and Over",
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": null,
+                    "ratingClassification": "5A",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 69
+            }
+        }]
+    },
+    "4": {
+        "msg": "No Data point Response Available For Passed Agency!"
+    },
+    "5": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "1"
+            },
+            "purchaseDate": "2019-01-30"
+        }, {
+            "purchaseDate": "2019-01-30",
+            "TrendRating": {
+                "trendRating": "5A2",
+                "ratingTrendCodeDetails": {
+                    "high": "1",
+                    "limited": "4",
+                    "netWorth": "$50,000,000 and Over",
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": null,
+                    "ratingClassification": "5A",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 73
+            }
+        }]
+    },
+    "6": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "2"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "1R2",
+                "ratingTrendCodeDetails": {
+                    "high": "n/a",
+                    "limited": "4",
+                    "netWorth": null,
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": "10 Employees and Over",
+                    "ratingClassification": "1R",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 80
+            }
+        }]
+    }
 }
