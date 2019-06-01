@@ -127,5 +127,175 @@
                 "totalCount": 0
             }]
         }]
-    }
+    },
+    "10": {
+        "DOW_JONES": [{
+            "DOWJones": [{
+                "issueName": "Regulatory",
+                "allegations": {
+                    "Corruption Issues": [],
+                    "Regulatory Issues": [],
+                    "Fraud Issues": [],
+                    "Sanctions": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Environment/Production",
+                "allegations": {
+                    "Product/Service Issues": [],
+                    "Production/Supply Chain Issues": [],
+                    "Environmental Issues": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Social/Labour",
+                "allegations": {
+                    "Workforce Disputes": [],
+                    "Discrimination/Workforce Rights Issues": [],
+                    "Workforce Health/Safety Issues": [],
+                    "Human Rights Issues": []
+                },
+                "totalCount": 0
+            }]
+        }]
+    },
+    "11": {
+        "DOW_JONES": [{
+            "DOWJones": [{
+                "issueName": "Regulatory",
+                "allegations": {
+                    "Corruption Issues": [],
+                    "Regulatory Issues": [],
+                    "Fraud Issues": [],
+                    "Sanctions": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Environment/Production",
+                "allegations": {
+                    "Product/Service Issues": [],
+                    "Production/Supply Chain Issues": [],
+                    "Environmental Issues": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Social/Labour",
+                "allegations": {
+                    "Workforce Disputes": [],
+                    "Discrimination/Workforce Rights Issues": [],
+                    "Workforce Health/Safety Issues": [],
+                    "Human Rights Issues": []
+                },
+                "totalCount": 0
+            }]
+        }]
+    },
+    "12": {
+        "DOW_JONES": [{
+            "DOWJones": [{
+                "issueName": "Regulatory",
+                "allegations": {
+                    "Corruption Issues": [],
+                    "Regulatory Issues": [],
+                    "Fraud Issues": [],
+                    "Sanctions": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Environment/Production",
+                "allegations": {
+                    "Product/Service Issues": [{
+                        "allegationDate": "01-12-2016",
+                        "name": "Herald-Journal (Tribune Content Agency)",
+                        "supportingLink": "https://api.dowjones.com/api/public/2.0/Content/article/articleRef/Xml?articleRef=KRTSG00020161201ecc10002x&encryptedToken=S00YcVo1sV72Gbt1HmnOHmnNTUuOTQsNpIr5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA"
+                    }, {
+                        "allegationDate": "03-01-2017",
+                        "name": "Aurora Banner",
+                        "supportingLink": "https://api.dowjones.com/api/public/2.0/Content/article/articleRef/Xml?articleRef=AURB000020170104ed1300004&encryptedToken=S00YcVo1sV72Gbt1HmnOHmnNTUuOTQsNpIr5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA"
+                    }],
+                    "Production/Supply Chain Issues": [],
+                    "Environmental Issues": []
+                },
+                "totalCount": 2
+            }, {
+                "issueName": "Social/Labour",
+                "allegations": {
+                    "Workforce Disputes": [],
+                    "Discrimination/Workforce Rights Issues": [],
+                    "Workforce Health/Safety Issues": [],
+                    "Human Rights Issues": []
+                },
+                "totalCount": 0
+            }]
+        }]
+    },
+    "13": {
+        "DOW_JONES": [{
+            "DOWJones": [{
+                "issueName": "Regulatory",
+                "allegations": {
+                    "Corruption Issues": [],
+                    "Regulatory Issues": [],
+                    "Fraud Issues": [],
+                    "Sanctions": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Environment/Production",
+                "allegations": {
+                    "Product/Service Issues": [],
+                    "Production/Supply Chain Issues": [],
+                    "Environmental Issues": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Social/Labour",
+                "allegations": {
+                    "Workforce Disputes": [],
+                    "Discrimination/Workforce Rights Issues": [],
+                    "Workforce Health/Safety Issues": [],
+                    "Human Rights Issues": []
+                },
+                "totalCount": 0
+            }]
+        }]
+    },
+    "14": {
+        "DOW_JONES": [{
+            "DOWJones": [{
+                "issueName": "Regulatory",
+                "allegations": {
+                    "Corruption Issues": [],
+                    "Regulatory Issues": [],
+                    "Fraud Issues": [],
+                    "Sanctions": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Environment/Production",
+                "allegations": {
+                    "Product/Service Issues": [],
+                    "Production/Supply Chain Issues": [],
+                    "Environmental Issues": []
+                },
+                "totalCount": 0
+            }, {
+                "issueName": "Social/Labour",
+                "allegations": {
+                    "Workforce Disputes": [],
+                    "Discrimination/Workforce Rights Issues": [],
+                    "Workforce Health/Safety Issues": [],
+                    "Human Rights Issues": []
+                },
+                "totalCount": 0
+            }]
+        }]
+    },
+    "15":{"DOW_JONES":[{"DOWJones":[{"issueName":"Regulatory","allegations":{"Corruption Issues":[],"Regulatory Issues":[],"Fraud Issues":[],"Sanctions":[]},"totalCount":0},{"issueName":"Environment/Production","allegations":{"Product/Service Issues":[],"Production/Supply Chain Issues":[],"Environmental Issues":[]},"totalCount":0},{"issueName":"Social/Labour","allegations":{"Workforce Disputes":[],"Discrimination/Workforce Rights Issues":[],"Workforce Health/Safety Issues":[],"Human Rights Issues":[]},"totalCount":0}]}]},
+    "16":{"DOW_JONES":[{"DOWJones":[{"issueName":"Regulatory","allegations":{"Corruption Issues":[],"Regulatory Issues":[],"Fraud Issues":[],"Sanctions":[]},"totalCount":0},{"issueName":"Environment/Production","allegations":{"Product/Service Issues":[],"Production/Supply Chain Issues":[],"Environmental Issues":[]},"totalCount":0},{"issueName":"Social/Labour","allegations":{"Workforce Disputes":[],"Discrimination/Workforce Rights Issues":[],"Workforce Health/Safety Issues":[],"Human Rights Issues":[]},"totalCount":0}]}]},
+    "17":{"DOW_JONES":[{"DOWJones":[{"issueName":"Regulatory","allegations":{"Corruption Issues":[],"Regulatory Issues":[],"Fraud Issues":[],"Sanctions":[]},"totalCount":0},{"issueName":"Environment/Production","allegations":{"Product/Service Issues":[],"Production/Supply Chain Issues":[],"Environmental Issues":[]},"totalCount":0},{"issueName":"Social/Labour","allegations":{"Workforce Disputes":[],"Discrimination/Workforce Rights Issues":[],"Workforce Health/Safety Issues":[],"Human Rights Issues":[]},"totalCount":0}]}]},
+    "18":{"DOW_JONES":[{"DOWJones":[{"issueName":"Regulatory","allegations":{"Corruption Issues":[],"Regulatory Issues":[],"Fraud Issues":[],"Sanctions":[]},"totalCount":0},{"issueName":"Environment/Production","allegations":{"Product/Service Issues":[],"Production/Supply Chain Issues":[],"Environmental Issues":[]},"totalCount":0},{"issueName":"Social/Labour","allegations":{"Workforce Disputes":[],"Discrimination/Workforce Rights Issues":[],"Workforce Health/Safety Issues":[],"Human Rights Issues":[]},"totalCount":0}]}]},
+    "19":{"DOW_JONES":[{"DOWJones":[{"issueName":"Regulatory","allegations":{"Corruption Issues":[],"Regulatory Issues":[],"Fraud Issues":[],"Sanctions":[]},"totalCount":0},{"issueName":"Environment/Production","allegations":{"Product/Service Issues":[{"allegationDate":"13-12-2013","name":"The Free Press","supportingLink":"https://api.dowjones.com/api/public/2.0/Content/article/articleRef/Xml?articleRef=MANKFP0020131214e9cd00005&encryptedToken=S00YcVo1sV72Gbt1HmnOHmnNTUuOTQsNpIr5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA"},{"allegationDate":"20-09-2012","name":"MarketLine News and Comment","supportingLink":"https://api.dowjones.com/api/public/2.0/Content/article/articleRef/Xml?articleRef=DTMNTR0020120921e89k0004k&encryptedToken=S00YcVo1sV72Gbt1HmnOHmnNTUuOTQsNpIr5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA"},{"allegationDate":"28-03-2018","name":"Associated Press Newswires","supportingLink":"https://api.dowjones.com/api/public/2.0/Content/article/articleRef/Xml?articleRef=APRS000020180328ee3s00o8b&encryptedToken=S00YcVo1sV72Gbt1HmnOHmnNTUuOTQsNpIr5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA"}],"Production/Supply Chain Issues":[],"Environmental Issues":[]},"totalCount":3},{"issueName":"Social/Labour","allegations":{"Workforce Disputes":[],"Discrimination/Workforce Rights Issues":[],"Workforce Health/Safety Issues":[],"Human Rights Issues":[]},"totalCount":0}]}]},
+    "20":{"DOW_JONES":[{"DOWJones":[{"issueName":"Regulatory","allegations":{"Corruption Issues":[],"Regulatory Issues":[],"Fraud Issues":[],"Sanctions":[]},"totalCount":0},{"issueName":"Environment/Production","allegations":{"Product/Service Issues":[],"Production/Supply Chain Issues":[],"Environmental Issues":[]},"totalCount":0},{"issueName":"Social/Labour","allegations":{"Workforce Disputes":[],"Discrimination/Workforce Rights Issues":[],"Workforce Health/Safety Issues":[],"Human Rights Issues":[]},"totalCount":0}]}]},
+    "21":{"DOW_JONES":[{"DOWJones":[{"issueName":"Regulatory","allegations":{"Corruption Issues":[],"Regulatory Issues":[],"Fraud Issues":[],"Sanctions":[]},"totalCount":0},{"issueName":"Environment/Production","allegations":{"Product/Service Issues":[],"Production/Supply Chain Issues":[],"Environmental Issues":[]},"totalCount":0},{"issueName":"Social/Labour","allegations":{"Workforce Disputes":[],"Discrimination/Workforce Rights Issues":[],"Workforce Health/Safety Issues":[],"Human Rights Issues":[]},"totalCount":0}]}]}
 }

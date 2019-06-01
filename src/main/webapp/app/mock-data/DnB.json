@@ -219,5 +219,135 @@
                 "paydexScore": 80
             }
         }]
-    }
-}
+    },
+    "10": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "1"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "5A2",
+                "ratingTrendCodeDetails": {
+                    "high": "1",
+                    "limited": "4",
+                    "netWorth": "$50,000,000 and Over",
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": null,
+                    "ratingClassification": "5A",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 74
+            }
+        }]
+    },
+    "11": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "2"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "1R2",
+                "ratingTrendCodeDetails": {
+                    "high": "n/a",
+                    "limited": "4",
+                    "netWorth": null,
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": "10 Employees and Over",
+                    "ratingClassification": "1R",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 67
+            }
+        }]
+    },
+    "12": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "4"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "1R3",
+                "ratingTrendCodeDetails": {
+                    "high": "n/a",
+                    "limited": "4",
+                    "netWorth": null,
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": "10 Employees and Over",
+                    "ratingClassification": "1R",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 75
+            }
+        }]
+    },
+    "13": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "4"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "1R3",
+                "ratingTrendCodeDetails": {
+                    "high": "n/a",
+                    "limited": "4",
+                    "netWorth": null,
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": "10 Employees and Over",
+                    "ratingClassification": "1R",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 75
+            }
+        }]
+    },
+    "14":{"DNB":[{"SER":{"riskScore":"4"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"1R2","ratingTrendCodeDetails":{"high":"n/a","limited":"4","netWorth":null,"rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":"10 Employees and Over","ratingClassification":"1R","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":75}}]},
+    "15":{"DNB":[{"SER":{"riskScore":"2"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"1R2","ratingTrendCodeDetails":{"high":"n/a","limited":"4","netWorth":null,"rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":"10 Employees and Over","ratingClassification":"1R","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":80}}]},
+    "16":{"DNB":[{"SER":{"riskScore":"8"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"1R3","ratingTrendCodeDetails":{"high":"n/a","limited":"4","netWorth":null,"rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":"10 Employees and Over","ratingClassification":"1R","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":66}}]},
+    "17":{"DNB":[{"SER":{"riskScore":"8"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"1R3","ratingTrendCodeDetails":{"high":"n/a","limited":"4","netWorth":null,"rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":"10 Employees and Over","ratingClassification":"1R","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":71}}]},
+    "18":{"DNB":[{"SER":{"riskScore":"6"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"1R3","ratingTrendCodeDetails":{"high":"n/a","limited":"4","netWorth":null,"rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":"10 Employees and Over","ratingClassification":"1R","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":80}}]},
+    "19":{"DNB":[{"SER":{"riskScore":"3"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"1R2","ratingTrendCodeDetails":{"high":"n/a","limited":"4","netWorth":null,"rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":"10 Employees and Over","ratingClassification":"1R","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":68}}]},    
+    "20":{"DNB":[{"SER":{"riskScore":"3"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"1R2","ratingTrendCodeDetails":{"high":"n/a","limited":"4","netWorth":null,"rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":"10 Employees and Over","ratingClassification":"1R","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":73}}]},
+    "21":{"DNB":[{"SER":{"riskScore":"3"},"purchaseDate":"2019-05-27"},{"purchaseDate":"2019-05-27","TrendRating":{"trendRating":"1R2","ratingTrendCodeDetails":{"high":"n/a","limited":"4","netWorth":null,"rating":null,"description":null,"fair":"3","good":"2","numberOfEmployess":"10 Employees and Over","ratingClassification":"1R","employeeRangeSymbol":null}}},{"paydex":{"months":"up to 24 months","paydexScore":73}}]}
+  
+  
+  }
