@@ -58,6 +58,39 @@
                 "governance": "53"
             }
         }]
+    },
+    "7": {
+        "CSRHUB": [{
+            "csrHubRating": {
+                "environment": "64",
+                "averageRating": "60",
+                "community": "70",
+                "employees": "59",
+                "governance": "46"
+            }
+        }]
+    },
+    "8": {
+        "CSRHUB": [{
+            "csrHubRating": {
+                "environment": "68",
+                "averageRating": "51",
+                "community": "31",
+                "employees": "56",
+                "governance": "50"
+            }
+        }]
+    },
+    "9": {
+        "CSRHUB": [{
+            "csrHubRating": {
+                "environment": "32",
+                "averageRating": "54",
+                "community": "68",
+                "employees": "49",
+                "governance": "67"
+            }
+        }]
     }
 
 }

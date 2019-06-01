@@ -56,6 +56,7 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
     ERPID: string = null;
     supplierPrimaryContactName: string = null;
     supplierPrimaryContacEmail: string = null;
+    businessName: any;
 
     constructor(
         private customPiwik: CustomPiwik,
@@ -163,9 +164,16 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
             this.readOnly = false;
             this.viewType = 'supplier';
         } */
+
         this.routerSubscription = this.activeRoute.params.subscribe(res => {
             if (this.validate(res) && this.validate(res.id) && this.validate(res.duns)) {
                 this.complianceRequestId = res.id;
+                let thisId = res.id;
+                this.fetchData.getProcurementCompanyInfo(this.complianceRequestId).subscribe(response => {
+                    console.log('response[thisId] ', response[thisId].data[0].business_name);
+                    this.businessName = response[thisId].data[0].business_name;
+                });
+                console.log('res.id ', res.id);
                 setTimeout(() => {
                     this.dunsRequest = res.duns;
                 });
@@ -526,6 +534,7 @@ export class SupplierdetailsComponent implements AfterViewInit, OnDestroy {
         this.fetchData.getProcurementCompanyInfo(this.complianceRequestId).subscribe(
             response => {
                 let res = response[this.complianceRequestId];
+
                 if (this.validate(res) && this.validate(res.data) && res.data.length > 0 && this.validate(res.data[0])) {
                     this.companyInfo = new ProcurementCompanyInfo(res.data[0]);
                     this.customPiwik.setCustomData(

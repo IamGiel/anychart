@@ -129,5 +129,95 @@
                 "paydexScore": 80
             }
         }]
+    },
+    "7": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "4"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "3A2",
+                "ratingTrendCodeDetails": {
+                    "high": "1",
+                    "limited": "4",
+                    "netWorth": "1,000,000 to 9,999,999",
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": null,
+                    "ratingClassification": "3A",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 80
+            }
+        }]
+    },
+    "8": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "5"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "1R3",
+                "ratingTrendCodeDetails": {
+                    "high": "n/a",
+                    "limited": "4",
+                    "netWorth": null,
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": "10 Employees and Over",
+                    "ratingClassification": "1R",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 66
+            }
+        }]
+    },
+    "9": {
+        "DNB": [{
+            "SER": {
+                "riskScore": "6"
+            },
+            "purchaseDate": "2019-05-27"
+        }, {
+            "purchaseDate": "2019-05-27",
+            "TrendRating": {
+                "trendRating": "1R3",
+                "ratingTrendCodeDetails": {
+                    "high": "n/a",
+                    "limited": "4",
+                    "netWorth": null,
+                    "rating": null,
+                    "description": null,
+                    "fair": "3",
+                    "good": "2",
+                    "numberOfEmployess": "10 Employees and Over",
+                    "ratingClassification": "1R",
+                    "employeeRangeSymbol": null
+                }
+            }
+        }, {
+            "paydex": {
+                "months": "up to 24 months",
+                "paydexScore": 80
+            }
+        }]
     }
 }
