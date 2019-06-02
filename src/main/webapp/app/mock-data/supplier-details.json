@@ -117,9 +117,10 @@
     "18":{"supplierErpId":"STU007","complianceRequestId":320,"supplierName":"SQC, LLC","uploadedSupplierId":509,"supplierPrimaryContactName":"sq sq","supplierContactEmail":"demo@suppliercompanysqc.com"},
     "19":{"supplierErpId":"UTS016","complianceRequestId":309,"supplierName":"TONY DOWNS FOODS CO.","uploadedSupplierId":518,"supplierPrimaryContactName":"Tony ","supplierContactEmail":"demo@suppliercompanytony.com"},
     "20":{"supplierErpId":"PQR006","complianceRequestId":319,"supplierName":"TRANSPERFECT, INC.","uploadedSupplierId":508,"supplierPrimaryContactName":"tr tr","supplierContactEmail":"demo@suppliercompanyctrans.com"},
-    "21":{"supplierErpId":"BCA019","complianceRequestId":312,"supplierName":"Thompsons Limited","uploadedSupplierId":521,"supplierPrimaryContactName":"Thompsons ","supplierContactEmail":"demo@suppliercompanythompsons.com"}
-
-    
+    "21":{"supplierErpId":"BCA019","complianceRequestId":312,"supplierName":"Thompsons Limited","uploadedSupplierId":521,"supplierPrimaryContactName":"Thompsons ","supplierContactEmail":"demo@suppliercompanythompsons.com"},
+    "22":{"supplierErpId":null,"complianceRequestId":53,"supplierName":"Kelly Services (Parent)","uploadedSupplierId":47,"supplierPrimaryContactName":"Kelly Services (Parent) Demo","supplierContactEmail":"demo@suppliercompanykes.com"},
+    "23":{"supplierErpId":null,"complianceRequestId":48,"supplierName":"Thermo Fisher Scientific","uploadedSupplierId":51,"supplierPrimaryContactName":"TFS Demo","supplierContactEmail":"demo@suppliercompanytfs.com"},
+    "24":{"supplierErpId":null,"complianceRequestId":49,"supplierName":"UPS","uploadedSupplierId":52,"supplierPrimaryContactName":"UPS Demo","supplierContactEmail":"demo@suppliercompanyups.com"}    
 
 
   }
