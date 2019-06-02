@@ -120,7 +120,7 @@
     "21":{"supplierErpId":"BCA019","complianceRequestId":312,"supplierName":"Thompsons Limited","uploadedSupplierId":521,"supplierPrimaryContactName":"Thompsons ","supplierContactEmail":"demo@suppliercompanythompsons.com"},
     "22":{"supplierErpId":null,"complianceRequestId":53,"supplierName":"Kelly Services (Parent)","uploadedSupplierId":47,"supplierPrimaryContactName":"Kelly Services (Parent) Demo","supplierContactEmail":"demo@suppliercompanykes.com"},
     "23":{"supplierErpId":null,"complianceRequestId":48,"supplierName":"Thermo Fisher Scientific","uploadedSupplierId":51,"supplierPrimaryContactName":"TFS Demo","supplierContactEmail":"demo@suppliercompanytfs.com"},
-    "24":{"supplierErpId":null,"complianceRequestId":49,"supplierName":"UPS","uploadedSupplierId":52,"supplierPrimaryContactName":"UPS Demo","supplierContactEmail":"demo@suppliercompanyups.com"}    
-
+    "24":{"supplierErpId":null,"complianceRequestId":49,"supplierName":"UPS","uploadedSupplierId":52,"supplierPrimaryContactName":"UPS Demo","supplierContactEmail":"demo@suppliercompanyups.com"},    
+    "25":{"supplierErpId":null,"complianceRequestId":43,"supplierName":"CBRE Group Inc.","uploadedSupplierId":43,"supplierPrimaryContactName":"CBRE User test","supplierContactEmail":"demo@suppliercompanycbre.com"}
 
   }

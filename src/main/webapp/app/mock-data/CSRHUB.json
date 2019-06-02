@@ -156,5 +156,6 @@
     "21":{"CSRHUB":[{"csrHubRating":{"environment":"51","averageRating":"62","community":"52","employees":"63","governance":"81"}}]},
     "22":{"CSRHUB":[{"csrHubRating":{"environment":"51","averageRating":"49","community":"46","employees":"58","governance":"42"}}]},
     "23":{"CSRHUB":[{"csrHubRating":{"environment":"69","averageRating":"58","community":"51","employees":"60","governance":"51"}}]},
-    "24":{"CSRHUB":[{"csrHubRating":{"environment":"71","averageRating":"61","community":"56","employees":"62","governance":"53"}}]}
+    "24":{"CSRHUB":[{"csrHubRating":{"environment":"71","averageRating":"61","community":"56","employees":"62","governance":"53"}}]},
+    "25":{"CSRHUB":[{"csrHubRating":{"environment":"67","averageRating":"60","community":"60","employees":"67","governance":"47"}}]}
   }
