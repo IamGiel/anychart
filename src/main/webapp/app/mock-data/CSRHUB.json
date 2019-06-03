@@ -4,50 +4,10 @@
             "csrHubRating": null
         }]
     },
-    "2": {
-        "CSRHUB": [{
-            "csrHubRating": {
-                "environment": "71",
-                "averageRating": 61.0,
-                "community": "56",
-                "employees": "62",
-                "governance": "53"
-            }
-        }]
-    },
-    "3": {
-        "CSRHUB": [{
-            "csrHubRating": {
-                "environment": "71",
-                "averageRating": 61.0,
-                "community": "56",
-                "employees": "62",
-                "governance": "53"
-            }
-        }]
-    },
-    "4": {
-        "CSRHUB": [{
-            "csrHubRating": {
-                "environment": "64",
-                "averageRating": 63.0,
-                "community": "63",
-                "employees": "65",
-                "governance": "58"
-            }
-        }]
-    },
-    "5": {
-        "CSRHUB": [{
-            "csrHubRating": {
-                "environment": "51",
-                "averageRating": 11.0,
-                "community": "56",
-                "employees": "62",
-                "governance": "53"
-            }
-        }]
-    },
+    "2": {"CSRHUB":[{"csrHubRating":null}]},
+    "3": {"CSRHUB":[{"csrHubRating":{"environment":"71","averageRating":"61","community":"56","employees":"62","governance":"53"}}]},
+    "4": {"CSRHUB":[{"csrHubRating":{"environment":"57","averageRating":"52","community":"47","employees":"56","governance":"47"}}]},
+    "5": {"CSRHUB":[{"csrHubRating":{"environment":"40","averageRating":"59","community":"50","employees":"81","governance":"64"}}]},
     "6": {
         "CSRHUB": [{
             "csrHubRating": {

@@ -52,7 +52,7 @@ export class NavbarComponent implements OnInit {
         link.rel = 'stylesheet';
         link.id = 'widget_styles';
         headID.appendChild(link);
-        link.href = '../navbar/navbar-supplier.css';
+        // link.href = '../navbar/navbar-supplier.css';
     }
 
     ngOnInit() {

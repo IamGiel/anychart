@@ -7,38 +7,10 @@
         "supplierPrimaryContactName": "VP Sales Sample",
         "supplierContactEmail": "vp.salessample@cargillmetest.com"
     },
-    "2": {
-        "supplierErpId": null,
-        "complianceRequestId": 9,
-        "supplierName": "Recipharm",
-        "uploadedSupplierId": 7,
-        "supplierPrimaryContactName": "demo6 ",
-        "supplierContactEmail": "demo@suppliercompanyrechi.com"
-    },
-    "3": {
-        "supplierErpId": null,
-        "complianceRequestId": 8,
-        "supplierName": "Berry Plastics Group, Inc.",
-        "uploadedSupplierId": 3,
-        "supplierPrimaryContactName": "demo5 ",
-        "supplierContactEmail": "demo@suppliercompanyberry.com"
-    },
-    "4": {
-        "supplierErpId": null,
-        "complianceRequestId": 4,
-        "supplierName": "Siemens AG",
-        "uploadedSupplierId": 9,
-        "supplierPrimaryContactName": "demo2 ",
-        "supplierContactEmail": "demo@suppliercompanysieag.com"
-    },
-    "5": {
-        "supplierErpId": "ERPNA2",
-        "complianceRequestId": 1,
-        "supplierName": "AptarGroup, Inc.",
-        "uploadedSupplierId": 1,
-        "supplierPrimaryContactName": "demo7 ",
-        "supplierContactEmail": "demo@suppliercompanysmu.com"
-    },
+    "2": {"supplierErpId":"PP832","complianceRequestId":326,"supplierName":"CARGILL, INCORPORATED","uploadedSupplierId":528,"supplierPrimaryContactName":"Global VP Sales Sample","supplierContactEmail":"glovpsalestest@cargillcheckvp.com"},
+    "3": {"supplierErpId":null,"complianceRequestId":56,"supplierName":"Berry Plastics Group, Inc.","uploadedSupplierId":56,"supplierPrimaryContactName":"Berry User","supplierContactEmail":"demo@suppliercompanyberry.com"},
+    "4": {"supplierErpId":null,"complianceRequestId":52,"supplierName":"IPG","uploadedSupplierId":46,"supplierPrimaryContactName":"IPG Demo","supplierContactEmail":"demo@suppliercompanyipg.com"},
+    "5": {"supplierErpId":"CBA010","complianceRequestId":304,"supplierName":"AT&T CORP.","uploadedSupplierId":512,"supplierPrimaryContactName":"at at","supplierContactEmail":"demo@suppliercompanyat.com"},
     "6": {
         "supplierErpId": "ABC001",
         "complianceRequestId": 314,
