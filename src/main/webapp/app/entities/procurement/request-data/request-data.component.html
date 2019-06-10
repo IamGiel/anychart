@@ -18,11 +18,14 @@
             <ng-container *ngIf="pendingListNew!=null && pendingListNew.length>3">
                     <div class=" container scrollerContainers">
                         <div class="left" (click)="scrollRight($event)">
-                           <img class="rotate180" src="../../../../content/images/chevron-search.svg">
+                           <!--<img class="rotate180" src="../../../../content/images/chevron-search.svg">-->
+						   <i-arrow-left-circle></i-arrow-left-circle>
+						   
                         </div>
         
                         <div class="right" (click)="scrollLeft($event)" >
-                            <img src="../../../../content/images/chevron-search.svg">
+                           <!-- <img src="../../../../content/images/chevron-search.svg">-->
+							<i-arrow-right-circle></i-arrow-right-circle>
                         </div>
                     </div>
                 </ng-container>
@@ -30,14 +33,29 @@
                     <div class="d-flex flex-row flex-nowrap">
                             <div class=" col-md-4" *ngFor=" let item of pendingListNew">
                                     <div class="card request-box">
-                                        <div (click)="getData(item.id)">
+                                        <!--<div (click)="getData(item.id)">
                                                 <input *ngIf="selected==item.id" [disabled]="true" id="cst{{item.id}}" type="checkbox" aria-invalid="false"  [checked]='true'  >
                                                 <label for="cst{{item.id}}">&nbsp;</label>
             
                                                 <input *ngIf="selected!=item.id" [disabled]="true" id="cst{{item.id}}" type="checkbox" aria-invalid="false"  [checked]='false'  >
                                                 <label for="cst{{item.id}}">&nbsp;</label>
             
+                                        </div>-->
+										 <div (click)="getData(item.id)">
+                                                <input *ngIf="selected==item.id" [disabled]="true" id="cst{{item.id}}" type="checkbox" aria-invalid="false" [checked]='true'>
+                                                <label for="cst{{item.id}}">
+												<i-check-square  class="request-box-check" *ngIf="selected==item.id"></i-check-square>
+													
+												</label>
+												 <input *ngIf="selected!=item.id" [disabled]="true" id="cst{{item.id}}" type="checkbox" aria-invalid="false" [checked]='false'>
+                                                <label for="cst{{item.id}}">
+													<i-square class="request-box-check" *ngIf="selected!=item.id"></i-square> 
+													</label>
+            
+                                               
+            
                                         </div>
+										
                                         
             
                                         <h2 style="text-align:center"> {{item.reqName}}</h2>

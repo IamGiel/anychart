@@ -182,7 +182,7 @@
 .request-box input[type='checkbox'] {
     display: none;
 }
-.pend-box input[type='checkbox'] + label,
+/*.pend-box input[type='checkbox'] + label,
 .request-box input[type='checkbox'] + label {
     cursor: pointer;
     background: url('../../../../content/images/unselected.svg') no-repeat;
@@ -201,7 +201,7 @@
     background: url('../../../../content/images/selected.svg') no-repeat;
     background-position: 100% 5px;
     opacity: 1;
-}
+}*/
 .pend-box-selected {
     background-color: #f0edfb !important;
 }
@@ -433,6 +433,7 @@
     position: absolute;
     top: 30%;
     padding: 0px;
+    color: #804cd9;
 }
 .scrollerContainers .left {
     margin-left: -20px;
@@ -454,4 +455,8 @@
 }
 .rotate180 {
     transform: rotate(180deg);
+}
+.request-box-check {
+    color: #804cd9;
+    cursor: pointer;
 }

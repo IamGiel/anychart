@@ -58,7 +58,7 @@ export class DowJonesComponent implements AfterViewInit, OnDestroy {
     }
     getPDFLink(link) {
         //link="https://api.dowjones.com/api/public/2.0/Content/article/articleRef/Xml?articleRef=VOZPOPU020151027ebar0000b&encryptedToken=S00YcVo1sV72Gbt1HmnOHmnNTUqM92pODMn5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA";
-        this.http.get(link, { responseType: 'text' }).subscribe(
+        /*this.http.get(link, { responseType: 'text' }).subscribe(
             response => {
                 let parser = new DOMParser();
                 let xmlDoc = parser.parseFromString(response, 'text/xml');
@@ -89,7 +89,11 @@ export class DowJonesComponent implements AfterViewInit, OnDestroy {
                 this.errLink = true;
                 console.log(err);
             }
-        );
+			
+        );*/
+        let url =
+            'https://api.dowjones.com/api/public/2.0/Content/PDF/articleRef/Xml?articleRef=article:archive/RLCL000020140925ea9n0000d&encryptedtoken=S00YcVo1sV72Gbt1HmnOHmnNTUuOTUoODar5DByWWNW1pFpV92oRsJqMUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA';
+        window.open(url, '_blank');
         setTimeout(function() {
             this.errLink = false;
         }, 3000);
