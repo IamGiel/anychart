@@ -1,0 +1,49 @@
+.divtitle {
+    width: 100%;
+    border-bottom: 1px solid rgba(24, 24, 24, 0.1);
+}
+
+.headleft {
+    opacity: 0.9;
+    color: #181818;
+    font-family: 'Inter UI';
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 20px;
+    text-align: left;
+    padding-bottom: 16px;
+}
+
+.nav-link {
+    text-transform: capitalize;
+}
+
+.iconPlus a {
+    font-size: 16px;
+    font-family: 'Inter UI';
+}
+
+a:hover {
+    color: #6b4cd9 !important;
+}
+
+a.active {
+    color: #6b4cd9;
+}
+
+span.active {
+    padding-bottom: 17px;
+    color: #6b4cd9;
+    border-bottom: 3px solid #6b4cd9 !important;
+}
+
+.active-main {
+    color: #6b4cd9;
+    border-top: 3px solid #6b4cd9 !important;
+    padding-top: 36px;
+}
+
+.row-padd {
+    padding: 28px 0px 40px 0px;
+}

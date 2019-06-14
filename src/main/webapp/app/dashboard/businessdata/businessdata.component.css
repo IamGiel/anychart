@@ -1,0 +1,53 @@
+.spacing {
+    list-style: none;
+    line-height: 27px;
+    padding: 0;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.table td,
+.table th {
+    padding: 5px !important;
+    vertical-align: none;
+    border-top: none !important;
+}
+
+.table td:nth-child(1),
+.table th:nth-child(1) {
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.spanPerc {
+    font-size: 12px;
+    margin-left: 3px;
+    color: #808080ab;
+}
+
+.bg-success {
+    background-color: #6b4cd9 !important;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.filter {
+    float: right;
+}
+
+.progress {
+    display: -ms-flexbox;
+    display: flex;
+    height: 1.6rem !important;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}

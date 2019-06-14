@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import 'anychart';
+import { serializePaths } from '@angular/router/src/url_tree';
 
 @Component({
     selector: 'jhi-column-chart',
@@ -18,16 +19,42 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.chart = anychart.column();
-        var series = this.chart.column(this.chartData);
+    }
+    ngOnchanges() {
+        console.log(this.chartTitle);
     }
     ngAfterViewInit() {
+        const series = this.chart.column(this.chartData);
         this.chart.container(this.container.nativeElement);
-
-        this.chart.title(this.chartTitle);
+        series.fill('rgb(231, 231, 231)');
+        series.stroke('rgb(231, 231, 231)');
+        this.chart.yAxis().stroke('#ffff');
+        this.chart.yAxis().labels(false);
+        this.chart
+            .yAxis()
+            .ticks()
+            .stroke('#ffff');
+        this.chart
+            .xAxis()
+            .ticks()
+            .stroke('#ffff');
+        this.chart.xAxis().stroke('#ffff');
+        // this.chart.xAxis().labels(false);
+        this.chart
+            .xAxis()
+            .ticks()
+            .stroke('#ffff');
+        this.chart
+            .xAxis()
+            .ticks()
+            .stroke('#ffff');
+        // const title = this.chart.xAxis().title();
+        // title.text(this.chartTitle);
+        // title.fontWeight(400);
+        // title.enabled(true);
         //this.chart.title().letterSpacing('1px');
         // set font family
         this.chart.title().fontFamily('Inter UI');
-
         // get chart tooltip
         this.chart.tooltip().useHtml(true);
         var tooltip = this.chart.tooltip();
@@ -58,7 +85,7 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
         // set the layout of the legend
         // this.chart.legend().itemsLayout("horizontal-expandable")
         this.chart.legend().fontFamily('Inter UI');
-        this.chart.yAxis().title('No. of suppliers');
+        // this.chart.yAxis().title('No. of suppliers');
         this.chart.draw();
     }
 }

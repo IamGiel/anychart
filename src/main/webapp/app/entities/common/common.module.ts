@@ -25,6 +25,8 @@ import { AchillesQuestionnaireModalComponent } from './modals/achilles-questionn
 import { AchillesQuestionsComponent } from '../../achilles/achilles-questions/achilles-questions.component';
 import { AchillesFormComponent } from '../../achilles/achilles-form/achilles-form.component';
 import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achilles-questionnaire-modal.component';
+import { BarComponent } from './components/charts/bar/bar.component';
+import { TreemapComponent } from './components/charts/treemap/treemap.component';
 @NgModule({
     imports: [GatewaySharedModule, RouterModule.forChild(commonState), NgSelectModule, FormsModule, NgCircleProgressModule.forRoot()],
     declarations: [
@@ -49,7 +51,9 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         AchillesFormComponent,
         RatingBoxComponent,
         PieChartComponent,
-        ColumnChartComponent
+        ColumnChartComponent,
+        BarComponent,
+        TreemapComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     entryComponents: [
@@ -80,7 +84,9 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         AchillesFormComponent,
         RatingBoxComponent,
         PieChartComponent,
-        ColumnChartComponent
+        ColumnChartComponent,
+        BarComponent,
+        TreemapComponent
     ]
 })
 export class GatewayCommonModule {}

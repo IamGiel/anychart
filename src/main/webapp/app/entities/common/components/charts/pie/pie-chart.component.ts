@@ -25,17 +25,18 @@ export class PieChartComponent implements OnInit, AfterViewInit {
         this.chart.innerRadius('50%');
         // set the position of labels
         //this.chart.labels().position("outside");
-        /*  var label = anychart.standalones.label();
+        var label = anychart.standalones.label();
         label.text('100');
         label.width('100%');
         label.height('100%');
         label.adjustFontSize(true);
-        label.fontColor('#60727b');
-        label.fontFamily('Inter UI');
+        // label.fontSize(14);
+        // label.fontColor('#60727b');
+        // label.fontFamily('Inter UI');
         label.hAlign('center');
         label.vAlign('middle');
 
-        this.chart.center().content(label);*/
+        this.chart.center().content(label);
         this.chart.title(this.chartTitle);
         //this.chart.title().letterSpacing('1px');
         // set font family

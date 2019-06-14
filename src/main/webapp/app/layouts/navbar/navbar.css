@@ -154,6 +154,7 @@ Logo styles
     color: white;
     padding: 8px 15px;
 }
+
 .cartDiv span {
     color: #ffffff;
     font-family: 'Inter UI';
@@ -161,4 +162,35 @@ Logo styles
     font-weight: 900;
     line-height: 24px;
     margin-right: 10px;
+}
+
+.procure {
+    color: #ffffff;
+    /* font-family: Poppins; */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: left;
+    display: inline-block;
+    border-left: 1px solid #ffffff;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-text {
+    color: #ffffff !important;
+    /* font-family: Poppins; */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.fa-angle-down {
+    color: white;
 }
