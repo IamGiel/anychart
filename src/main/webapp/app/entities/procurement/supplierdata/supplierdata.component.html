@@ -1,0 +1,384 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 pl-0" style="position: relative">
+        <div class="card" [ngClass]="{'card-active , card1': showMore !== ''}">
+          <div class="card-body">
+            <span class="card-title">Financial Data</span>
+            <img class="filter" (click)="onClick()" src="" />
+            <div *ngIf="drop" class="map-dropdown-contents">
+              <ul class="spacing">
+                <li>Groups</li>
+                <li>Flags</li>
+                <li>Response</li>
+                <li>Advanced</li>
+                <li>Saved</li>
+              </ul>
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">D&B SER Rating</button>
+              <i class="fa">&#xf107;</i>
+              <div class="dropdown-content">
+                <a href="#">D&B Rating</a>
+                <a href="#">D&B SER Rating</a>
+                <a href="#">D&B Paydex</a>
+              </div>
+            </div>
+          </div>
+          <div class="padd25">
+            <jhi-column-chart [chartData]="columnData"></jhi-column-chart>
+            <div class="rectangle">
+            </div>
+            <div class="risk">
+              <p>Low Risk</p>
+              <p>High Risk</p>
+            </div>
+          </div>
+          <div class="card-body flex" [ngClass]="{'textDown' : financialdetails == 'Hide details'}">
+            <span class="details" (click)="showHideFinancialData()">{{ financialdetails }}</span>
+            <i *ngIf="financialdetails == 'More details'" class="fa fsubcarda-angle-down color"></i>
+            <i *ngIf="financialdetails == 'Hide details'" class="fa fa-angle-up color"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 pl-0" style="position: relative">
+        <div class="card" [ngClass]="{'card-active , card1': showEnv !== ''}">
+          <div class="card-body">
+            <span class="card-title">Environmental Data</span>
+            <img class="filter" (click)="onClick1()" />
+            <div *ngIf="drop1" class="map-dropdown-contents">
+              <ul class="spacing">
+                <li>Groups</li>
+                <li>Flags</li>
+                <li>Response</li>
+                <li>Advanced</li>
+                <li>Saved</li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">D&B SER Rating</button>
+              <i class="fa fa-angle-down color"></i>
+              <div class="dropdown-content">
+                <a href="#">Overall Rating</a>
+                <a href="#">Labour& Human rights</a>
+                <a href="#">Ethics</a>
+                <a href="#">Environment</a>
+                <a href="#">Sustainable procurem..</a>
+              </div>
+            </div>
+          </div>
+          <div class="padd25">
+            <jhi-column-chart [chartData]="columnDatas"></jhi-column-chart>
+            <span class="rectangle1">
+            </span>
+            <span class="rectangle2"></span>
+            <span class="rectangle3"></span>
+            <span class="rectangle4"></span>
+            <span class="rectangle5"></span>
+            <div class="risk">
+              <p>High Risk</p>
+              <p>Low Risk</p>
+
+            </div>
+          </div>
+          <!-- <div>
+            <jhi-column-chart [chartData]="columnDatas"></jhi-column-chart>
+          </div> -->
+          <div class="card-body flex" [ngClass]="{'textDown' : environmentdetails == 'Hide details'}">
+            <span class="details" (click)="showHideEnivornData()">{{ environmentdetails }}</span>
+            <i *ngIf="environmentdetails == 'More details'" class="fa fa-angle-down color"></i>
+            <i *ngIf="environmentdetails == 'Hide details'" class="fa fa-angle-up color"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Ethical and Regulatory Data</span>
+            <img class="filter" (click)="onClick2()"  />
+            <div *ngIf="drop2" class="map-dropdown-contents">
+              <ul class="spacing">
+                <li>Groups</li>
+                <li>Flags</li>
+                <li>Response</li>
+                <li>Advanced</li>
+                <li>Saved</li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Overall Appearance</button>
+              <i class="fa">&#xf107;</i>
+              <div class="dropdown-content">
+                <a href="#">Overall appearance</a>
+                <a href="#">Corruption issue</a>
+                <a href="#">Fraud issues</a>
+                <a href="#">Regulatory issues</a>
+                <a href="#">Sanctions</a>
+              </div>
+            </div>
+          </div>
+          <div class="padd25">
+            <jhi-column-chart [chartData]="ethicaldata"></jhi-column-chart>
+            <span class="rectangle1">
+            </span>
+            <span class="rectangle2"></span>
+            <span class="rectangle3"></span>
+            <span class="rectangle4"></span>
+            <span class="rectangle5"></span>
+            <!-- <div class="rectangle">
+            </div> -->
+            <div class="risk risk-appearance">
+              <p> APPEARANCE</p>
+            </div>
+          </div>
+          <!-- <div>
+            <jhi-column-chart [chartData]="ethicaldata" [chartTitle]="APPEARANCE"></jhi-column-chart>
+          </div> -->
+          <div class="card-body flex" [ngClass]="{'textDown' : ethicaldetails == 'Hide details'}">
+            <span class="details" (click)="showHideEthicalData()">{{ ethicaldetails }}</span>
+            <i *ngIf="ethicaldetails == 'More details'" class="fa fa-angle-down color"></i>
+            <i *ngIf="ethicaldetails == 'Hide details'" class="fa fa-angle-up color"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Labor, Health & Safety Data</span>
+            <img class="filter" (click)="onClick3()" />
+            <div *ngIf="drop3" class="map-dropdown-contents">
+              <ul class="spacing">
+                <li>Groups</li>
+                <li>Flags</li>
+                <li>Response</li>
+                <li>Advanced</li>
+                <li>Saved</li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Overall Appearance</button>
+              <i class="fa">&#xf107;</i>
+              <div class="dropdown-content">
+                <a href="#">Overall appearance</a>
+                <a href="#">Discrimanation/workforce..</a>
+                <a href="#">Human Right Issues</a>
+                <a href="#">Workforce Disputes</a>
+                <a href="#">Workforcehealthy/Saftey Is</a>
+              </div>
+            </div>
+          </div>
+          <div class="padd25">
+            <jhi-column-chart [chartData]="ethicaldata"></jhi-column-chart>
+            <span class="rectangle1">
+            </span>
+            <span class="rectangle2"></span>
+            <span class="rectangle3"></span>
+            <span class="rectangle4"></span>
+            <span class="rectangle5"></span>
+            <!-- <div class="rectangle">
+            </div> -->
+            <div class="risk risk-appearance">
+              <p>APPEARANCE</p>
+            </div>
+          </div>
+          <!-- <div>
+            <jhi-column-chart [chartData]="ethicaldata" [chartTitle]="APPEARANCE"></jhi-column-chart>
+          </div> -->
+          <div class="card-body flex" [ngClass]="{'textDown' : labordetails == 'Hide details'}">
+            <span class="details" (click)="showHideLaborData()">{{ labordetails }}</span>
+            <i *ngIf="labordetails == 'More details'" class="fa fa-angle-down color"></i>
+            <i *ngIf="labordetails == 'Hide details'" class="fa fa-angle-up color"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr *ngIf=" showMore != '' || showEnv != '' " class="border-full" color="#7B4BD8">
+</div>
+<div class="bg-color" *ngIf="showSubCards">
+  <div class="container">
+    <div class="row" #myDiv>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">D&B Rating</span>
+            <img class="filter" />
+            <div>
+              <jhi-column-chart [chartData]="datas"></jhi-column-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">D&B SER Rating</span>
+            <img class="filter"  />
+            <!-- <div>
+                <jhi-column-chart [chartData]="labourData"></jhi-column-chart>
+              </div> -->
+            <div class="padd25">
+              <jhi-column-chart [chartData]="columnData"></jhi-column-chart>
+              <div class="rectangle">
+              </div>
+              <div class="risk">
+                <p>Low Risk</p>
+                <p>High Risk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">D&B Paydex</span>
+            <img class="filter"  />
+            <!-- <div>
+                <jhi-column-chart [chartData]="labourData"></jhi-column-chart>
+              </div> -->
+            <div class="padd25">
+              <jhi-column-chart [chartData]="columnData"></jhi-column-chart>
+              <div class="rectangle">
+              </div>
+              <div class="risk">
+                <p>Low Risk</p>
+                <p>High Risk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="container">
+  <div class="row Custom margin-owner">
+    <div class="col-md-6 pl-0">
+      <div class="card">
+        <div class="card-body pb-0">
+          <span class="card-title">Ownership Type</span>
+          <img class="filter" />
+          <div class="row">
+            <div class="col-md-4">
+              <jhi-pie-chart [chartData]="chartData" hideTooltipPerct='true'></jhi-pie-chart>
+            </div>
+            <div class="col-md-3">
+              <ul class="spacing">
+                <li *ngFor="let data of chartData">
+                  <span>{{data.label}}</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="spacing">
+                <li *ngFor="let data of chartData">
+                  <span><b>{{data.value}}</b></span>
+                  <span class="spanPerc">{{data.value}}%</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 pl-0">
+      <div class="card">
+        <div class="card-body pb-0">
+          <span class="card-title">Response Funnel</span>
+          <jhi-bar [chartData]="treeData"></jhi-bar>
+          <!-- <jhi-treemap [chartData]="treeData"></jhi-treemap> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-map">
+    <div class="col-md-9 Custom col-map pl-0">
+      <div class="float-L">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">HQ location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Site location</a>
+          </li>
+        </ul>
+      </div>
+      <div class="float-R pt-3">
+        <img  />
+      </div>
+      <div class="map-container">
+        <img class="image" *ngIf="mapdropdown == 'Basic Map'" src="../../../../content/images/basicmap.png" />
+        <img class="image" *ngIf="mapdropdown == 'Water Scarcity area'"
+          src="../../../../content/images/waterscarcity.png" />
+        <img class="image" *ngIf="mapdropdown == 'Terror prone area'" src="../../../../content/images/terrorprone.png" />
+        <div class="dropdown">
+          <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
+            <i class="fa fa-angle-up"></i>
+          </button>
+          <div *ngIf="mapdrop" class="map-dropdown-content">
+            <a (click)="selectMap('Water Scarcity area')"><i *ngIf="mapdropdown == 'Water Scarcity area'"
+                class="fa fa-check"></i> Water Scarcity Area</a>
+            <a><i *ngIf="mapdropdown == 'Earthquake prone area'" class="fa fa-check"></i>Earthquake Prone Area</a>
+            <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
+                class="fa fa-check"></i>Terror Prone Area</a>
+            <a (click)="selectMap('Basic Map')"><i *ngIf="mapdropdown == 'Basic Map'" class="fa fa-check"></i> Basic
+              Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 pl-0 pr-0">
+      <div>
+        <ul class="nav nav-tab justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" rel="tab1">
+              <span class="active">Countries</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tab1">
+              <span class="inactive">Suppliers list</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="table-div">
+        <div class="grid-table border-top">
+          <p class="country">India</p>
+          <p><span class="number">43</span><span class="percent">43%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">China</p>
+          <p><span class="number">21</span><span class="percent">21%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">India</p>
+          <p><span class="number">43</span><span class="percent">43%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">USA</p>
+          <p><span class="number">18</span><span class="percent">18%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">UAE</p>
+          <p><span class="number">12</span><span class="percent">12%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Germany</p>
+          <p><span class="number">4</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">France</p>
+          <p><span class="number">2</span><span class="percent">2%</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

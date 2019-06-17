@@ -1,0 +1,300 @@
+<div style="margin-bottom: 20px;" class="row divtitle">
+  <div class="col-md-3 headleft">
+      <span >Suppliers</span>
+  </div>
+  <div class="col-md-6 col-12">
+
+      <ul style="height:45px" class="nav nav-tab justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" rel="tab1" (click)="tabClicked('Shared')">
+              <span [ngClass]="activeTab=='Shared' ? 'active' : 'inactive'">Shared</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tab1" (click)="tabClicked('Pending')">
+              <span [ngClass]="activeTab=='Pending' ? 'active' : 'inactive'">Pending</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tab1" (click)="tabClicked('Declined')">
+              <span [ngClass]="activeTab=='Declined' ? 'active' : 'inactive'">Declined</span></a>
+          </li>
+        </ul>
+
+  </div>
+
+  <div class="col-md-3 col-12 ">
+       <button style="width:190px;margin:0px auto" class="btn buttoncsv md-only" routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+   </div>
+</div>
+<div>
+    <div *ngIf="activeTab=='Shared'">
+        
+                <div class="row">
+                  <div class="col-md-5">
+                      <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                          <span class="searchIcon">
+                              <i-search class="featherPagFil2">
+                          </span>
+                          <span style="margin-left:16px;">
+                            <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Suppliers" (keydown.enter)="searchData($event,'shared')" (keyup)="showOldDate($event)"/>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <jhi-my-pagination *ngIf="total>0"
+                    (goPage)="goToPage($event)"
+                    (goNext)="onNext()"
+                    (goPrev)="onPrev()"
+                    [pagesToShow]="3"
+                    [page]="page"
+                    [perPage]="limit"
+                    [count]="total"></jhi-my-pagination>
+                  </div>
+                  <div class="col-md-1 text-right">
+                        <p *ngIf="total>0" class="expiration" [ngbPopover]='popContent'  [autoClose]="'outside'"
+                        placement="bottom" #p="ngbPopover" style="display:inline-block;"  >
+                            <i-settings style="height: 16px;width: 16px;color: #6b4cd9;cursor:pointer;" title="Show/Hide Columns"></i-settings>
+                        </p>
+                       <ng-template #popContent>
+                            <div class="filter-column1">
+                                <div class="custom-control custom-checkbox" *ngFor="let item of columnList ">
+                                        <input type="checkbox" class="custom-control-input" id="col{{item.id}}" (click)="showHideColumn(item)" [checked]="item.checked">
+                                        <label class="custom-control-label" for="col{{item.id}}" >{{item.name}}</label>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
+                      <table class="table table-hover table-striped1 tex-center1" style="width:99%;">
+                        <thead>
+                            <tr class="text-center1">
+                                <th class="text-left">COMPANY NAME</th>
+                                <th *ngIf="checkedMap['DUNS']">DUNS</th>
+                                <th *ngIf="checkedMap['D&B SER RATING']" >D&B SER RATING <i-info class="infoFeather" ngbPopover="{{serPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>
+                                <th *ngIf="checkedMap['D&B RATING']">D&B RATING <i-info class="infoFeather" ngbPopover="{{trendPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>
+                                <th *ngIf="checkedMap['D&B PAYDEX']">D&B PAYDEX <i-info class="infoFeather" ngbPopover="{{paydexPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>
+                                <th *ngIf="checkedMap['EcoVadis']">ECOVADIS <i-info class="infoFeather" ngbPopover="{{csrPop}}" placement="bottom" triggers="mouseenter:mouseleave"></i-info></th>
+                                <th *ngIf="checkedMap['DOW JONES AME']">DOW JONES AME <i-info class="infoFeather" ngbPopover="{{dowPop}}" placement="bottom" triggers="mouseenter:mouseleave"></i-info></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let item of list; let i = index " class="text-center1 top-border" >
+                                <td class="text-left" style="max-width:200px;"><span class="comp-name" (click)="goToCompanyProfile(item)">{{item.supplierName}}</span></td>
+                                <td *ngIf="checkedMap['DUNS']">{{item.providerKey.DUNSNUMBER}}</td>
+                                <td *ngIf="checkedMap['D&B SER RATING']">
+                                    <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['Supplier Evaluation Risk']!=null" [ngIfElse]="SERElse">
+                                        <rating-box
+                                        typeToShow="square"
+                                        [ratingValue]="item.packageResponse.DNB['Supplier Evaluation Risk'].SER.riskScore"
+                                        dataPoint="SER"
+                                        ></rating-box>
+                                     </ng-template>
+                                    <ng-template #SERElse>--</ng-template>
+                                </td>
+                                <td *ngIf="checkedMap['D&B RATING']">
+                                    <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['D&B Rating Trend']!=null" [ngIfElse]="TrendElse">
+                                       <ng-container *ngIf="item.packageResponse.DNB['D&B Rating Trend'].TrendRating.trendRating.length>=2">
+                                            <rating-box
+                                            typeToShow="square"
+                                            [ratingValue]="item.packageResponse.DNB['D&B Rating Trend'].TrendRating.trendRating.substring(0,2)"
+                                            dataPoint="RATING_FINANCIAL"
+                                            ></rating-box>
+                                            <rating-box *ngIf="item.packageResponse.DNB['D&B Rating Trend'].TrendRating.trendRating.substring(2,3)!=undefined && item.packageResponse.DNB['D&B Rating Trend'].TrendRating.trendRating.substring(2,3)!=null"
+                                            typeToShow="square"
+                                            [ratingValue]="item.packageResponse.DNB['D&B Rating Trend'].TrendRating.trendRating.substring(2,3)"
+                                            dataPoint="RATING_CCA"
+                                            ></rating-box>
+                                       </ng-container>
+                                    </ng-template>
+                                    <ng-template #TrendElse>--</ng-template>
+                                 </td>
+                                 <td *ngIf="checkedMap['D&B PAYDEX']">
+                                    <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DNB!=null && item.packageResponse.DNB['Payment & Paydex Details']!=null" [ngIfElse]="PaydexElse">
+                                        <rating-box
+                                        typeToShow="square"
+                                        [ratingValue]="item.packageResponse.DNB['Payment & Paydex Details'].paydex.paydexScore"
+                                        dataPoint="PAYDEX"
+                                        ></rating-box>
+                                        <span class="paydex-span">/ 100</span>
+                                    </ng-template>
+                                    <ng-template #PaydexElse>--</ng-template>
+                                </td>
+                                <td *ngIf="checkedMap['EcoVadis']">
+                                    <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.CSRHUB!=null && item.packageResponse.CSRHUB.csrHubRating!=null && item.packageResponse.CSRHUB.csrHubRating.csrHubRating!=null&& item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating!=null" [ngIfElse]="CSRHUBElse">
+                                         <rating-box
+                                            typeToShow="circle"
+                                            [ratingValue]="item.packageResponse.CSRHUB.csrHubRating.csrHubRating.averageRating"
+                                            dataPoint="CSRHUB"
+                                        ></rating-box>
+                                        </ng-template>
+                                        <ng-template #CSRHUBElse>-- </ng-template>
+                                    </td>
+                                    <td *ngIf="checkedMap['DOW JONES AME']">
+                                        <ng-template [ngIf]="item.packageResponse!=undefined && item.packageResponse!=null && item.packageResponse.DOW_JONES!=null && item.packageResponse.DOW_JONES['Dow Jones Basic']!=null && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones!=undefined && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones!=null && item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones.length>0" [ngIfElse]="dowElse">
+                                            <rating-box
+                                            typeToShow="square"
+                                            [ratingValue]="getDowJonesCount(item.packageResponse.DOW_JONES['Dow Jones Basic'].DOWJones)"
+                                            dataPoint="DOW_JONES"
+                                            ></rating-box>
+                                        </ng-template>
+                                        <ng-template #dowElse>--</ng-template>
+                                    </td>
+        
+        
+                            </tr>
+                          </tbody>
+                       </table>
+                    </div>
+                </div>
+              </div>
+    <div *ngIf="activeTab=='Pending'">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                              <span class="searchIcon">
+                                  <i-search class="featherPagFil2">
+                              </span>
+                              <span style="margin-left:16px;">
+                                <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Suppliers" (keydown.enter)="searchData($event,'Pending')" (keyup)="showOldDate($event)"/>
+                              </span>
+                          </div>
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <jhi-my-pagination *ngIf="total>0"
+                        (goPage)="goToPage($event)"
+                        (goNext)="onNext()"
+                        (goPrev)="onPrev()"
+                        [pagesToShow]="3"
+                        [page]="page"
+                        [perPage]="limit"
+                        [count]="total"></jhi-my-pagination>
+                      </div>
+                  </div><br/>
+                  <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
+                      <table class="table table-hover table-striped" style="width:99%;">
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>DUNS</th>
+                                <th>REQUEST SENT</th>
+                                <th>LAST REQUEST</th>
+                                <th></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let item of list; let i = index ">
+                                <td style="max-width:250px;">{{item.supplierName}}</td>
+                                <td>{{item.providerKey.DUNSNUMBER}}</td>
+                                <td>{{item.requestedDate | date:'dd-MMM-yyyy'}}</td>
+                                <td><span *ngIf="item.lastRequestedDate!==null">{{item.lastRequestedDate | niceDateFormatPipe}}</span><span *ngIf="item.lastRequestedDate==null">--</span></td>
+                                <td ><span (click)="sendReminder(item);" class="send-reminder" *ngIf="item.reminder!='sent' && item.reminder!='not-sent'">Send Reminder <i-send></i-send></span><span *ngIf="item.reminder=='sent' " style="color:#0c91dd;">Reminder Sent</span><span *ngIf="item.reminder=='not-sent'" style="color:red;">Not Sent</span></td>
+                              </tr>
+                          </tbody>
+                       </table>
+                    </div>
+              </div>
+     <div *ngIf="activeTab=='Declined'">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                              <span class="searchIcon">
+                                  <i-search class="featherPagFil2">
+                              </span>
+                              <span style="margin-left:16px;">
+                                <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Suppliers" (keydown.enter)="searchData($event,'Declined')" (keyup)="showOldDate($event)"/>
+                              </span>
+                          </div>
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <jhi-my-pagination *ngIf="total>0"
+                        (goPage)="goToPage($event)"
+                        (goNext)="onNext()"
+                        (goPrev)="onPrev()"
+                        [pagesToShow]="3"
+                        [page]="page"
+                        [perPage]="limit"
+                        [count]="total"></jhi-my-pagination>
+                      </div>
+                  </div><br/>
+                  <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
+                      <table class="table table-hover table-striped" style="width:99%;">
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>DATE DECLINED</th>
+                                <th>REASON</th>
+                               </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let item of list; let i = index ">
+                                  <td style="max-width:250px;">{{item.supplierName}}</td>
+                                  <td>{{item.declinedDate | date:'dd-MMM-yyyy'}}</td>
+                                  <td>{{item.declineMessage}}</td>
+                              </tr>
+                          </tbody>
+                       </table>
+                    </div>
+              </div>
+           </div>
+           <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                    <div class="row pend" *ngIf="!loadingData && activeTab=='Pending' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0" ><p>There are no pending requests.</p></div>
+                    <div class="row pend" *ngIf="!loadingData && activeTab=='Declined' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0"><p>No supplier has declined.</p></div>
+                <div >
+                    <div class="divbody" id="tab1" *ngIf="!loadingData && activeTab=='Shared' && (list==undefined || list==null || list.length<=0) && searchKeyword.length<=0">
+        
+                        <div class="text-center"><i-upload class="feather"></i-upload> </div>
+                        <div class="nosupdata">
+                            <span > Upload Supplier List </span>
+                          </div>
+                          <div class="description">
+                            <span > It does not look like any of your data requests have been completed yet. Check the Pending tab to send Reminders, or upload a new list of suppliers.</span>
+                          </div>
+                          <div class="text-center" style="margin-top: 40px;padding-bottom: 50px">
+                            <button class="btn buttoncsv" routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+                          </div>
+                          <div class="text-center" style="margin-top: 40px;margin-bottom: 30px;display: none;">
+                              <span class="wantaddinformation">Want additional information?</span> <a><span class="faq" (click)="gotoFaq()">Check out the FAQ.</span> </a>
+                          </div>
+                    </div>
+                    <div id="tab2" *ngIf="!loadingData && activeTab=='Pending' && (list==undefined || list.length==null || list.length<=0) && searchKeyword.length<=0" class="divbody" >
+                        <div class="text-center"><i-upload class="feather"></i-upload></div>
+                        <div class="nosupdata">
+                            <span > Upload Supplier List </span>
+                          </div>
+                          <div class="description">
+                            <span > You can send requests for supplier data once you have upload a list of your suppliers to the dashboard.</span>
+                          </div>
+                          <div class="text-center" style="margin-top: 40px;padding-bottom: 50px">
+                            <button class="btn buttoncsv" routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+                          </div>
+                          <div class="text-center" style="margin-top: 40px;margin-bottom: 30px;display: none;">
+                              <span class="wantaddinformation">Want additional information?</span> <a><span class="faq" (click)="gotoFaq()">Check out the FAQ.</span> </a>
+                          </div>
+                    </div>
+                    <div id="tab3" *ngIf="!loadingData && activeTab=='Declined' && (list==undefined || list.length==null || list.length<=0) && searchKeyword.length<=0" class="divbody">
+                        <div class="text-center"> <i-upload class="feather"></i-upload> </div>
+                        <div class="nosupdata">
+                            <span > Upload Supplier List </span>
+                          </div>
+                          <div class="description">
+                            <span > If a supplier denies your data request it will appear here.</span>
+                          </div>
+                          <div class="text-center" style="margin-top: 40px;padding-bottom: 50px">
+                            <button class="btn buttoncsv"  routerLink='/procurement/upload-supplier'>UPLOAD SUPPLIER LIST</button>
+                          </div>
+                          <div class="text-center" style="margin-top: 40px;margin-bottom: 30px;display: none;">
+                              <span  class="wantaddinformation">Want additional information?</span> <a><span class="faq" (click)="gotoFaq()" >Check out the FAQ.</span> </a>
+                          </div>
+                    </div>
+        
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+           </div>
+           <div class="row" *ngIf="searchKeyword.length>0 && (list==undefined || (list!=undefined && list==null) || list.length<=0)">
+               <p class="no-result"><b>No results found.</b> Please adjust your filter criteria. <span class="clear-filter" (click)='clearSearch()'>Clear Filters <i-x-square></i-x-square></span></p>
+    </div>
+</div>
