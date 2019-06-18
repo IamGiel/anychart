@@ -104,7 +104,7 @@
         </div>
       </div>
       <div class="col-md-3 pl-0">
-        <div class="card">
+          <div class="card" [ngClass]="{'card-active , card1': showEthical !== ''}">
           <div class="card-body">
             <span class="card-title">Ethical and Regulatory Data</span>
             <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
@@ -154,7 +154,7 @@
         </div>
       </div>
       <div class="col-md-3 pl-0">
-        <div class="card">
+          <div class="card" [ngClass]="{'card-active , card1': showLabor !== ''}">
           <div class="card-body">
             <span class="card-title">Labor, Health & Safety Data</span>
             <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />

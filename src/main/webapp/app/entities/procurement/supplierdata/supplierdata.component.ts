@@ -99,15 +99,27 @@ export class SupplierdataComponent implements OnInit {
     }
     onClickdrop() {
         this.drop = !this.drop;
+        this.drop1 = false;
+        this.drop2 = false;
+        this.drop3 = false;
     }
     onClick1() {
         this.drop1 = !this.drop1;
+        this.drop = false;
+        this.drop2 = false;
+        this.drop3 = false;
     }
     onClick2() {
         this.drop2 = !this.drop2;
+        this.drop = false;
+        this.drop1 = false;
+        this.drop3 = false;
     }
     onClick3() {
         this.drop3 = !this.drop3;
+        this.drop = false;
+        this.drop1 = false;
+        this.drop2 = false;
     }
 
     showHideFinancialData() {
