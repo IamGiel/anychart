@@ -5,7 +5,7 @@
         <div class="card" [ngClass]="{'card-active , card1': showMore !== ''}">
           <div class="card-body">
             <span class="card-title">Financial Data</span>
-            <img class="filter" (click)="onClick()" src="" />
+             <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
             <div *ngIf="drop" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -14,7 +14,7 @@
                 <li>Advanced</li>
                 <li>Saved</li>
               </ul>
-            </div>
+            </div>  
             <div id="myDropdown" class="dropdown-content">
               <a href="#home">Home</a>
               <a href="#about">About</a>
@@ -23,15 +23,17 @@
             <div class="dropdown">
               <button class="dropbtn">D&B SER Rating</button>
               <i class="fa">&#xf107;</i>
-              <div class="dropdown-content">
-                <a href="#">D&B Rating</a>
-                <a href="#">D&B SER Rating</a>
-                <a href="#">D&B Paydex</a>
+              <div id="env" class="dropdown-content">
+                <a (click)="clickFinancial('D&B Rating')">D&B Rating</a>
+                <a (click)="clickFinancial('D&B SER Rating')">D&B SER Rating</a>
+                <a (click)="clickFinancial('D&B Paydex')">D&B Paydex</a>
               </div>
             </div>
           </div>
           <div class="padd25">
-            <jhi-column-chart [chartData]="columnData"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickfinance==='D&B Rating'" [chartData]="columnData"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickfinance==='D&B SER Rating'" [chartData]="columnData"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickfinance==='D&B Paydex'" [chartData]="columnData"></jhi-column-chart>
             <div class="rectangle">
             </div>
             <div class="risk">
@@ -50,7 +52,7 @@
         <div class="card" [ngClass]="{'card-active , card1': showEnv !== ''}">
           <div class="card-body">
             <span class="card-title">Environmental Data</span>
-            <img class="filter" (click)="onClick1()" />
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
             <div *ngIf="drop1" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -65,16 +67,20 @@
               <button class="dropbtn">D&B SER Rating</button>
               <i class="fa fa-angle-down color"></i>
               <div class="dropdown-content">
-                <a href="#">Overall Rating</a>
-                <a href="#">Labour& Human rights</a>
-                <a href="#">Ethics</a>
-                <a href="#">Environment</a>
-                <a href="#">Sustainable procurem..</a>
+                <a (click)="environmental('Overall Rating')">Overall Rating</a>
+                <a (click)="environmental('Labour& Human rights')">Labour& Human rights</a>
+                <a (click)="environmental('Ethics')">Ethics</a>
+                <a (click)="environmental('Environment')">Environment</a>
+                <a (click)="environmental('Sustainable procurem..')">Sustainable procurem..</a>
               </div>
             </div>
           </div>
           <div class="padd25">
-            <jhi-column-chart [chartData]="columnDatas"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEnvironmental==='Overall Rating'"[chartData]="columnDatas"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEnvironmental==='Labour& Human rights'" [chartData]="columnDatas"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEnvironmental==='Ethics'" [chartData]="columnDatas"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEnvironmental==='Environment'" [chartData]="columnDatas"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEnvironmental==='Sustainable procurem..'" [chartData]="columnDatas"></jhi-column-chart>
             <span class="rectangle1">
             </span>
             <span class="rectangle2"></span>
@@ -101,7 +107,7 @@
         <div class="card">
           <div class="card-body">
             <span class="card-title">Ethical and Regulatory Data</span>
-            <img class="filter" (click)="onClick2()"  />
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
             <div *ngIf="drop2" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -151,7 +157,7 @@
         <div class="card">
           <div class="card-body">
             <span class="card-title">Labor, Health & Safety Data</span>
-            <img class="filter" (click)="onClick3()" />
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
             <div *ngIf="drop3" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -208,9 +214,10 @@
         <div class="card">
           <div class="card-body">
             <span class="card-title">D&B Rating</span>
-            <img class="filter" />
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
             <div>
-              <jhi-column-chart [chartData]="datas"></jhi-column-chart>
+              <!-- <jhi-column-chart [chartData]="datas"></jhi-column-chart> -->
+              <jhi-bar [chartData]="treeData" ></jhi-bar>
             </div>
           </div>
         </div>
@@ -219,7 +226,7 @@
         <div class="card">
           <div class="card-body">
             <span class="card-title">D&B SER Rating</span>
-            <img class="filter"  />
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
             <!-- <div>
                 <jhi-column-chart [chartData]="labourData"></jhi-column-chart>
               </div> -->
@@ -239,7 +246,7 @@
         <div class="card">
           <div class="card-body">
             <span class="card-title">D&B Paydex</span>
-            <img class="filter"  />
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
             <!-- <div>
                 <jhi-column-chart [chartData]="labourData"></jhi-column-chart>
               </div> -->
@@ -265,7 +272,7 @@
       <div class="card">
         <div class="card-body pb-0">
           <span class="card-title">Ownership Type</span>
-          <img class="filter" />
+          <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
           <div class="row">
             <div class="col-md-4">
               <jhi-pie-chart [chartData]="chartData" hideTooltipPerct='true'></jhi-pie-chart>
@@ -307,18 +314,20 @@
             <a class="nav-link active" href="#">HQ location</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Site location</a>
+            <a class="nav-link">Site location</a>
           </li>
         </ul>
       </div>
       <div class="float-R pt-3">
-        <img  />
+        <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
       </div>
       <div class="map-container">
-        <img class="image" *ngIf="mapdropdown == 'Basic Map'" src="../../../../content/images/basicmap.png" />
+        <jhi-map></jhi-map>
+      </div>
+        <!-- <img class="image" *ngIf="mapdropdown == 'Basic Map'" src="../../../content/images/basicmap.png" />
         <img class="image" *ngIf="mapdropdown == 'Water Scarcity area'"
-          src="../../../../content/images/waterscarcity.png" />
-        <img class="image" *ngIf="mapdropdown == 'Terror prone area'" src="../../../../content/images/terrorprone.png" />
+          src="../../../content/images/waterscarcity.png" />
+        <img class="image" *ngIf="mapdropdown == 'Terror prone area'" src="../../../content/images/terrorprone.png" /> -->
         <div class="dropdown">
           <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
             <i class="fa fa-angle-up"></i>
@@ -334,51 +343,51 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-3 pl-0 pr-0">
-      <div>
-        <ul class="nav nav-tab justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link" rel="tab1">
-              <span class="active">Countries</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tab1">
-              <span class="inactive">Suppliers list</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="table-div">
-        <div class="grid-table border-top">
-          <p class="country">India</p>
-          <p><span class="number">43</span><span class="percent">43%</span></p>
+      <div class="col-md-3 pl-0 pr-0">
+          <div>
+            <ul class="nav nav-tab justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" rel="tab1">
+                  <span class="active">Countries</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" rel="tab1">
+                  <span class="inactive">Suppliers list</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="table-div">
+            <div class="grid-table border-top">
+              <p class="country">India</p>
+              <p><span class="number">43</span><span class="percent">43%</span></p>
+            </div>
+            <div class="grid-table">
+              <p class="country">China</p>
+              <p><span class="number">21</span><span class="percent">21%</span></p>
+            </div>
+            <div class="grid-table">
+              <p class="country">India</p>
+              <p><span class="number">43</span><span class="percent">43%</span></p>
+            </div>
+            <div class="grid-table">
+              <p class="country">USA</p>
+              <p><span class="number">18</span><span class="percent">18%</span></p>
+            </div>
+            <div class="grid-table">
+              <p class="country">UAE</p>
+              <p><span class="number">12</span><span class="percent">12%</span></p>
+            </div>
+            <div class="grid-table">
+              <p class="country">Germany</p>
+              <p><span class="number">4</span><span class="percent">4%</span></p>
+            </div>
+            <div class="grid-table">
+              <p class="country">France</p>
+              <p><span class="number">2</span><span class="percent">2%</span></p>
+            </div>
+          </div>
         </div>
-        <div class="grid-table">
-          <p class="country">China</p>
-          <p><span class="number">21</span><span class="percent">21%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">India</p>
-          <p><span class="number">43</span><span class="percent">43%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">USA</p>
-          <p><span class="number">18</span><span class="percent">18%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">UAE</p>
-          <p><span class="number">12</span><span class="percent">12%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Germany</p>
-          <p><span class="number">4</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">France</p>
-          <p><span class="number">2</span><span class="percent">2%</span></p>
-        </div>
-      </div>
     </div>
   </div>
 </div>

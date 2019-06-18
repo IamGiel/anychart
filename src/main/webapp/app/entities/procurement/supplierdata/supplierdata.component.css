@@ -75,6 +75,10 @@
     text-align: left;
 }
 
+/* .dropdown .dropdown-content a:active{
+    display: none;
+} */
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -165,6 +169,8 @@ button:focus {
 
 .filter {
     float: right;
+    cursor: pointer;
+    width: 14px;
 }
 
 .card-details {
@@ -188,6 +194,7 @@ button:focus {
     font-size: 17px;
     color: #8b8b8b;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .color {
@@ -381,14 +388,15 @@ span.inactive {
 .rectangle {
     background-image: linear-gradient(90deg, #56dd38 0%, #e5b64f 50.01%, #ec3838 100%);
     border-radius: 2px;
-    width: 80%;
+    width: 86%;
     position: absolute;
     height: 4px;
     bottom: 40px;
+    left: 17px;
 }
 
 .padd25 {
-    padding: 0 25px;
+    /* padding: 0 25px; */
     position: relative;
 }
 
@@ -405,6 +413,7 @@ span.inactive {
     font-weight: 500;
     letter-spacing: 0.67px;
     line-height: 10px;
+    left: 20px;
     /* text-align: left; */
 }
 
@@ -417,48 +426,48 @@ span.inactive {
 }
 .rectangle1 {
     background-color: #ec413a;
-    width: 38px;
+    width: 45px;
     height: 3px;
     display: flex;
     position: absolute;
-    left: 38px;
+    left: 18px;
     bottom: 40px;
 }
 .rectangle2 {
     background-color: #f7b75f;
-    width: 38px;
+    width: 45px;
     height: 3px;
     display: flex;
     bottom: 40px;
     position: absolute;
-    left: 76px;
+    left: 64px;
 }
 .rectangle3 {
     background-color: #ffe835;
-    width: 38px;
+    width: 45px;
     height: 3px;
     display: flex;
     bottom: 40px;
     position: absolute;
-    left: 113px;
+    left: 107px;
 }
 .rectangle4 {
     background-color: #52d67b;
-    width: 38px;
+    width: 52px;
     height: 3px;
     display: flex;
     bottom: 40px;
     position: absolute;
-    left: 151px;
+    left: 152px;
 }
 .rectangle5 {
     background-color: #52a8d6;
-    width: 38px;
+    width: 45px;
     height: 3px;
     display: flex;
     bottom: 40px;
     position: absolute;
-    left: 190px;
+    left: 204px;
 }
 .line {
     border-bottom: 1px solid #212529de;

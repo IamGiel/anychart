@@ -17,36 +17,54 @@ export class BarComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         console.log(this.chartData);
         // create a data set
-        const series = this.chart.column(this.chartData);
-        var data = anychart.data.set(this.chartData);
-        series.fill('rgb(231, 231, 231)');
-        series.stroke('rgb(231, 231, 231)');
-        this.chart.yAxis().stroke('#ffff');
-        this.chart.yAxis().labels(false);
-        this.chart
+        const series = this.chart.column();
+        const data = anychart.data.set(this.chartData);
+        //      series.fill('rgb(231, 231, 231)');
+        //     series.stroke('rgb(231, 231, 231)');
+
+        const seriesData_1 = data.mapAs({ x: 0, value: 1 });
+        const seriesData_2 = data.mapAs({ x: 0, value: 2 });
+        const seriesData_3 = data.mapAs({ x: 0, value: 3 });
+        const seriesData_4 = data.mapAs({ x: 0, value: 4 });
+
+        // create a chart
+        const chart = anychart.column();
+
+        // enable the value stacking mode
+        chart.yScale().stackMode('value');
+
+        // create area series, set the data
+        const series1 = chart
+            .column(seriesData_1)
+            .fill('#FFD8AB')
+            .stroke('rgb(231, 231, 231)');
+        const series2 = chart
+            .column(seriesData_2)
+            .fill('rgb(231, 231, 231)')
+            .stroke('rgb(231, 231, 231)');
+        const series3 = chart.column(seriesData_3);
+        // const series4 = chart.column(seriesData_3);
+
+        chart.yAxis().labels(false);
+        chart.yAxis().stroke('#ffff');
+        chart.xAxis().stroke('#ffff');
+        chart.yAxis().stroke('#ffff');
+        chart
             .yAxis()
             .ticks()
             .stroke('#ffff');
-        this.chart
+        chart
             .xAxis()
             .ticks()
             .stroke('#ffff');
-        // map the data
-        var seriesData_1 = data.mapAs({ x: 0, value: 1 });
-        var seriesData_2 = data.mapAs({ x: 0, value: 2 });
-        var seriesData_3 = data.mapAs({ x: 0, value: 3 });
+        // configure tooltips
+        chart.tooltip().format('{%value} ({%yPercentOfCategory}{decimalsCount:2}%)');
 
-        // create a chart
-        var chart = anychart.column();
-
-        /* enable the value stacking mode
-      on the default primary value scale*/
-        chart.yScale().stackMode('value');
-
-        // create column series
-        chart.column(seriesData_1);
-        chart.column(seriesData_2);
-        chart.column(seriesData_3);
+        // configure labels on the y-axis
+        chart
+            .yAxis()
+            .labels()
+            .format('{%value}');
 
         // set the container id
         chart.container('bargraph');

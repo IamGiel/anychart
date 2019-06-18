@@ -27,6 +27,7 @@ import { AchillesFormComponent } from '../../achilles/achilles-form/achilles-for
 import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achilles-questionnaire-modal.component';
 import { BarComponent } from './components/charts/bar/bar.component';
 import { TreemapComponent } from './components/charts/treemap/treemap.component';
+import { MapComponent } from './components/map/map.component';
 @NgModule({
     imports: [GatewaySharedModule, RouterModule.forChild(commonState), NgSelectModule, FormsModule, NgCircleProgressModule.forRoot()],
     declarations: [
@@ -53,7 +54,8 @@ import { TreemapComponent } from './components/charts/treemap/treemap.component'
         PieChartComponent,
         ColumnChartComponent,
         BarComponent,
-        TreemapComponent
+        TreemapComponent,
+        MapComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     entryComponents: [
@@ -86,6 +88,7 @@ import { TreemapComponent } from './components/charts/treemap/treemap.component'
         PieChartComponent,
         ColumnChartComponent,
         BarComponent,
+        MapComponent,
         TreemapComponent
     ]
 })
