@@ -28,6 +28,7 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
 import { BarComponent } from './components/charts/bar/bar.component';
 import { TreemapComponent } from './components/charts/treemap/treemap.component';
 import { MapComponent } from './components/map/map.component';
+import { SplineChartComponent } from './components/charts/spline-chart/spline-chart.component';
 @NgModule({
     imports: [GatewaySharedModule, RouterModule.forChild(commonState), NgSelectModule, FormsModule, NgCircleProgressModule.forRoot()],
     declarations: [
@@ -55,7 +56,8 @@ import { MapComponent } from './components/map/map.component';
         ColumnChartComponent,
         BarComponent,
         TreemapComponent,
-        MapComponent
+        MapComponent,
+        SplineChartComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     entryComponents: [
@@ -89,6 +91,7 @@ import { MapComponent } from './components/map/map.component';
         ColumnChartComponent,
         BarComponent,
         MapComponent,
+        SplineChartComponent,
         TreemapComponent
     ]
 })
