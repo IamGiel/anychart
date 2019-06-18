@@ -60,7 +60,7 @@ export class SupplierdataComponent implements OnInit {
             { label: '4', value: 3, fill: '#E7E7E7', stroke: '#E7E7E7' },
             { label: '5', value: 2, fill: '#E7E7E7', stroke: '#E7E7E7' }
         ];
-        this.treeData = [['LIMITED', 0, 5], ['FAIR', 0, 10], ['GOOD', 20, 10], ['HIGH', 17, 13]];
+        this.treeData = [['LIMITED', 0, 5], ['FAIR', 0, 10], ['GOOD', 5, 10], ['HIGH', 2, 13]];
     }
     clickFinancial(data) {
         console.log(data);
@@ -123,7 +123,7 @@ export class SupplierdataComponent implements OnInit {
     }
 
     showHideFinancialData() {
-        if (this.financialdetails == 'More details') {
+        if (this.financialdetails === 'More details') {
             this.showSubCards = true;
             this.financialdetails = 'Hide details';
             this.ethicaldetails = 'More details';
@@ -133,10 +133,6 @@ export class SupplierdataComponent implements OnInit {
             this.showEnv = '';
             this.showEthical = '';
             this.showLabor = '';
-
-            // this.ngAfterViewChecked();
-            // const elmnt = document.getElementById('receipt');
-            // elmnt.scrollIntoView();
         } else {
             this.showSubCards = false;
             this.financialdetails = 'More details';
@@ -150,7 +146,7 @@ export class SupplierdataComponent implements OnInit {
     }
 
     showHideEnivornData() {
-        if (this.environmentdetails == 'More details') {
+        if (this.environmentdetails === 'More details') {
             this.showSubCards = true;
             this.environmentdetails = 'Hide details';
             this.financialdetails = 'More details';
@@ -166,7 +162,7 @@ export class SupplierdataComponent implements OnInit {
     }
 
     showHideEthicalData() {
-        if (this.ethicaldetails == 'More details') {
+        if (this.ethicaldetails === 'More details') {
             this.showSubCards = true;
             this.ethicaldetails = 'Hide details';
 
@@ -186,7 +182,7 @@ export class SupplierdataComponent implements OnInit {
     }
 
     showHideLaborData() {
-        if (this.labordetails == 'More details') {
+        if (this.labordetails === 'More details') {
             this.showSubCards = true;
 
             this.labordetails = 'Hide details';

@@ -172,6 +172,8 @@ button:focus {
     cursor: pointer;
     width: 14px;
 }
+.abc {
+}
 
 .card-details {
     display: grid;
@@ -424,50 +426,48 @@ span.inactive {
 .text {
     text-align: center;
 }
-.rectangle1 {
-    background-color: #ec413a;
-    width: 45px;
+.abc {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    justify-content: center;
+}
+.abc div {
+    width: 90%;
     height: 3px;
     display: flex;
-    position: absolute;
-    left: 18px;
-    bottom: 40px;
+}
+.rectangle1 {
+    background-color: #ec413a;
+    flex: 1;
+    height: 3px;
+}
+.rectangle6 {
+    background-color: #ec413a7d;
+    flex: 1;
+    height: 3px;
 }
 .rectangle2 {
     background-color: #f7b75f;
-    width: 45px;
+    flex: 1;
     height: 3px;
-    display: flex;
-    bottom: 40px;
-    position: absolute;
-    left: 64px;
 }
 .rectangle3 {
     background-color: #ffe835;
-    width: 45px;
+    flex: 1;
     height: 3px;
-    display: flex;
-    bottom: 40px;
-    position: absolute;
-    left: 107px;
 }
 .rectangle4 {
     background-color: #52d67b;
-    width: 52px;
+    flex: 1;
     height: 3px;
-    display: flex;
-    bottom: 40px;
-    position: absolute;
-    left: 152px;
 }
 .rectangle5 {
     background-color: #52a8d6;
-    width: 45px;
+    flex: 1;
     height: 3px;
-    display: flex;
-    bottom: 40px;
-    position: absolute;
-    left: 204px;
 }
 .line {
     border-bottom: 1px solid #212529de;

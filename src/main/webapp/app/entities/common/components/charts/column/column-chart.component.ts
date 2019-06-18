@@ -14,6 +14,7 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
     @Input() hideTooltipPerct: string;
     @Input() heightValue: string;
     @Input() showValue: string;
+    @Input() labels: boolean;
 
     constructor() {}
 
@@ -30,6 +31,9 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
         series.stroke('rgb(231, 231, 231)');
         this.chart.yAxis().stroke('#ffff');
         this.chart.yAxis().labels(false);
+        if (this.labels !== true) {
+            this.chart.xAxis().labels(false);
+        }
         this.chart
             .yAxis()
             .ticks()

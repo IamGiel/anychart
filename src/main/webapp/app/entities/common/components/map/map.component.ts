@@ -16,7 +16,7 @@ export class MapComponent implements OnInit {
         // The data used in this sample can be obtained from the CDN
         // https://cdn.anychart.com/samples/maps-general-features/world-bubble-map/data.json
         anychart.data.loadJsonFile('https://cdn.anychart.com/samples/maps-general-features/world-bubble-map/data.json', function(data) {
-            var map = anychart.map();
+            const map = anychart.map();
             map
                 .credits()
                 .enabled(true)
@@ -37,15 +37,15 @@ export class MapComponent implements OnInit {
             map.interactivity().selectionMode('none');
             map.padding(0);
 
-            var dataSet = anychart.data.set(data);
-            var density_data = dataSet.mapAs({ size: 'population' });
+            const dataSet = anychart.data.set(data);
+            const density_data = dataSet.mapAs({ size: 'population' });
 
-            var series = map.bubble(density_data);
+            const series = map.bubble(density_data);
             // set chart bubble settings
             map.maxBubbleSize('7%').minBubbleSize('0.3%');
 
             series.labels(false).selectionMode('none');
-            var series_choropleth = map.choropleth(density_data);
+            const series_choropleth = map.choropleth(density_data);
             series_choropleth
                 .selectionMode('none')
                 .fill('#eaeaea')
@@ -74,7 +74,7 @@ export class MapComponent implements OnInit {
                 });
 
             // create zoom controls
-            var zoomController = anychart.ui.zoom();
+            const zoomController = anychart.ui.zoom();
             zoomController.render(map);
             // set container id for the chart
             map.container('worldmap');
