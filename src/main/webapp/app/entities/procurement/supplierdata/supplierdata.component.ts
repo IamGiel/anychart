@@ -149,9 +149,7 @@ export class SupplierdataComponent implements OnInit {
             this.ownershipfilter = !this.ownershipfilter;
             this.resfilter = false;
         } else if (type == 'response') {
-            alert(this.resfilter);
             this.resfilter = !this.resfilter;
-            alert(this.resfilter);
             this.laborfilter = false;
             this.ffilter = false;
             this.envfilter = false;

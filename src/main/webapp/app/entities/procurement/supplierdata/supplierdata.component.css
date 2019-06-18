@@ -117,12 +117,12 @@ button:focus {
     min-width: 240px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    bottom: 78px;
+    top: 36px;
     right: 10px;
 }
 
 .map-dropdown-content {
-    /* display: none; */
+    display: none;
     position: absolute;
     background-color: white;
     min-width: 240px;
