@@ -63,7 +63,7 @@
             </div>
             <div class="dropdown">
               <button class="dropbtn" (click)="showdropdown('env')">Overall Rating</button>
-              <i class="fa fa-angle-down color"></i>
+              <i class="fa fa-angle-down color" (click)="showdropdown('env')"`></i>
               <div class="dropdown-content" *ngIf="showEnvdropdown">
                 <a (click)="environmental('Overall Rating')">Overall Rating</a>
                 <a (click)="environmental('Labour& Human rights')">Labour& Human rights</a>
@@ -206,7 +206,7 @@
       </div>
     </div>
   </div>
-  <hr *ngIf=" showMore != '' || showEnv != '' " class="border-full" color="#7B4BD8">
+  <hr *ngIf=" showMore != '' || showEnv != '' || showLabor != '' || showEthical != '' " class="border-full" color="#7B4BD8">
 </div>
 <div class="bg-color" *ngIf="showSubCards">
   <div class="container">
