@@ -43,7 +43,7 @@
           </div>
           <div class="card-body flex" [ngClass]="{'textDown' : financialdetails == 'Hide details'}">
             <span class="details" (click)="showHideFinancialData()">{{ financialdetails }}</span>
-            <i *ngIf="financialdetails == 'More details'" class="fa fsubcarda-angle-down color"></i>
+            <i *ngIf="financialdetails == 'More details'" class="fa fa-angle-down color"></i>
             <i *ngIf="financialdetails == 'Hide details'" class="fa fa-angle-up color"></i>
           </div>
         </div>
@@ -300,6 +300,7 @@
       <div class="card">
         <div class="card-body pb-0">
           <span class="card-title">Response Funnel</span>
+          <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
           <jhi-bar [chartData]="treeData"></jhi-bar>
           <!-- <jhi-treemap [chartData]="treeData"></jhi-treemap> -->
         </div>
