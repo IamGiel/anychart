@@ -1,12 +1,12 @@
 <div>
   <div class="container">
-    <div class="row">
-      <div class="col-md-3 pl-0" style="position: relative">
+    <div class="row" #target>
+      <div class="col-md-3 pl-0">
         <div class="card" [ngClass]="{'card-active , card1': showMore !== ''}">
           <div class="card-body">
             <span class="card-title">Financial Data</span>
-            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
-            <div *ngIf="drop" class="map-dropdown-contents">
+            <img class="filter" (click)="openFilterDetails('financial');" src="../../../../content/images/filter.svg" />
+            <div *ngIf="ffilter" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
                 <li>Flags</li>
@@ -15,15 +15,10 @@
                 <li>Saved</li>
               </ul>
             </div>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#contact">Contact</a>
-            </div>
             <div class="dropdown">
-              <button class="dropbtn">D&B SER Rating</button>
+              <button class="dropbtn" (click)="showdropdown('financial')">D&B SER Rating</button>
               <i class="fa">&#xf107;</i>
-              <div id="env" class="dropdown-content">
+              <div id="env" class="dropdown-content" *ngIf="showFinancialdropdown">
                 <a (click)="clickFinancial('D&B Rating')">D&B Rating</a>
                 <a (click)="clickFinancial('D&B SER Rating')">D&B SER Rating</a>
                 <a (click)="clickFinancial('D&B Paydex')">D&B Paydex</a>
@@ -55,8 +50,8 @@
         <div class="card" [ngClass]="{'card-active , card1': showEnv !== ''}">
           <div class="card-body">
             <span class="card-title">Environmental Data</span>
-            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
-            <div *ngIf="drop1" class="map-dropdown-contents">
+            <img class="filter" (click)="openFilterDetails('environment');" src="../../../../content/images/filter.svg" />
+            <div *ngIf="envfilter" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
                 <li>Flags</li>
@@ -65,11 +60,10 @@
                 <li>Saved</li>
               </ul>
             </div>
-
             <div class="dropdown">
-              <button class="dropbtn">D&B SER Rating</button>
+              <button class="dropbtn" (click)="showdropdown('env')">D&B SER Rating</button>
               <i class="fa fa-angle-down color"></i>
-              <div class="dropdown-content">
+              <div class="dropdown-content" *ngIf="showEnvdropdown">
                 <a (click)="environmental('Overall Rating')">Overall Rating</a>
                 <a (click)="environmental('Labour& Human rights')">Labour& Human rights</a>
                 <a (click)="environmental('Ethics')">Ethics</a>
@@ -120,8 +114,8 @@
         <div class="card" [ngClass]="{'card-active , card1': showEthical !== ''}">
           <div class="card-body">
             <span class="card-title">Ethical and Regulatory Data</span>
-            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
-            <div *ngIf="drop2" class="map-dropdown-contents">
+            <img class="filter" (click)="openFilterDetails('ethical')" src="../../../../content/images/filter.svg" />
+            <div *ngIf="ethicalfilter" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
                 <li>Flags</li>
@@ -131,14 +125,14 @@
               </ul>
             </div>
             <div class="dropdown">
-              <button class="dropbtn">Overall Appearance</button>
+              <button class="dropbtn" (click)="showdropdown('ethical')">Overall Appearance</button>
               <i class="fa">&#xf107;</i>
-              <div class="dropdown-content">
-                <a href="#">Overall appearance</a>
-                <a href="#">Corruption issue</a>
-                <a href="#">Fraud issues</a>
-                <a href="#">Regulatory issues</a>
-                <a href="#">Sanctions</a>
+              <div class="dropdown-content" *ngIf="showEthicaldropdown">
+                <a (click)="showEthicalGraphs('overall')">Overall appearance</a>
+                <a (click)="showEthicalGraphs('corruption')">Corruption issue</a>
+                <a (click)="showEthicalGraphs('fraud')">Fraud issues</a>
+                <a (click)="showEthicalGraphs('regulatory')">Regulatory issues</a>
+                <a (click)="showEthicalGraphs('sanctions')">Sanctions</a>
               </div>
             </div>
           </div>
@@ -174,8 +168,8 @@
         <div class="card" [ngClass]="{'card-active , card1': showLabor !== ''}">
           <div class="card-body">
             <span class="card-title">Labor, Health & Safety Data</span>
-            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
-            <div *ngIf="drop3" class="map-dropdown-contents">
+            <img class="filter" (click)="openFilterDetails('labor')" src="../../../../content/images/filter.svg" />
+            <div *ngIf="laborfilter" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
                 <li>Flags</li>
@@ -185,10 +179,10 @@
               </ul>
             </div>
             <div class="dropdown">
-              <button class="dropbtn">Overall Appearance</button>
+              <button class="dropbtn" (click)="showdropdown('labor')">Overall Appearance</button>
               <i class="fa">&#xf107;</i>
-              <div class="dropdown-content">
-                <a href="#">Overall appearance</a>
+              <div class="dropdown-content" *ngIf="showlabordropdown">
+                <a (click)="showLaborGraphs()">Overall appearance</a>
                 <a href="#">Discrimanation/workforce..</a>
                 <a href="#">Human Right Issues</a>
                 <a href="#">Workforce Disputes</a>
@@ -233,6 +227,15 @@
           <div class="card-body">
             <span class="card-title">D&B Rating</span>
             <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div *ngIf="financialdb" class="map-dropdown-contents">
+              <ul class="spacing">
+                <li>Groups</li>
+                <li>Flags</li>
+                <li>Response</li>
+                <li>Advanced</li>
+                <li>Saved</li>
+              </ul>
+            </div>
             <div>
               <!-- <jhi-column-chart [chartData]="datas"></jhi-column-chart> -->
               <jhi-bar [chartData]="treeData"></jhi-bar>
@@ -287,12 +290,21 @@
 
 </div>
 <div class="container">
-  <div class="row Custom margin-owner">
+  <div class="row Custom margin-owner" #owner>
     <div class="col-md-6 pl-0">
       <div class="card">
         <div class="card-body pb-0">
           <span class="card-title">Ownership Type</span>
-          <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+          <img class="filter" (click)="openFilterDetails('ownership')" src="../../../../content/images/filter.svg" />
+          <div *ngIf="ownershipfilter" class="map-dropdown-contents">
+            <ul class="spacing">
+              <li>Groups</li>
+              <li>Flags</li>
+              <li>Response</li>
+              <li>Advanced</li>
+              <li>Saved</li>
+            </ul>
+          </div>
           <div class="row">
             <div class="col-md-4">
               <jhi-pie-chart [chartData]="chartData" hideTooltipPerct='true'></jhi-pie-chart>
@@ -317,10 +329,19 @@
       </div>
     </div>
     <div class="col-md-6 pl-0">
-      <div class="card">
+      <div class="card" #response>
         <div class="card-body pb-0">
           <span class="card-title">Response Funnel</span>
-          <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+          <img class="filter" (click)="openFilterDetails('response')" src="../../../../content/images/filter.svg" />
+          <div *ngIf="resfilter" class="map-dropdown-contents">
+            <ul class="spacing">
+              <li>Groups</li>
+              <li>Flags</li>
+              <li>Response</li>
+              <li>Advanced</li>
+              <li>Saved</li>
+            </ul>
+          </div>
           <jhi-bar [chartData]="treeData"></jhi-bar>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'anychart';
 
@@ -8,6 +8,34 @@ import 'anychart';
     styleUrls: ['./supplierdata.component.css']
 })
 export class SupplierdataComponent implements OnInit {
+    @ViewChild('target') container;
+    @ViewChild('owner') second;
+    @ViewChild('response') response;
+
+    constructor() {
+        document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
+    }
+
+    offClickHandler(event: any) {
+        if (!this.container.nativeElement.contains(event.target)) {
+            // check click origin
+            this.ffilter = false;
+            this.envfilter = false;
+            this.ethicalfilter = false;
+            this.laborfilter = false;
+
+            this.showFinancialdropdown = false;
+            this.showEthicaldropdown = false;
+            this.showEnvdropdown = false;
+            this.showlabordropdown = false;
+        }
+        if (!this.second.nativeElement.contains(event.target)) {
+            // check click origin
+            this.ownershipfilter = false;
+            this.resfilter = false;
+        }
+    }
+
     chartData = [];
     financialdetails = 'More details';
     environmentdetails = 'More details';
@@ -28,18 +56,96 @@ export class SupplierdataComponent implements OnInit {
     showLabor = '';
     mapdropdown = 'Basic Map';
     mapdrop: boolean;
-    drop = false;
-    drop1 = false;
-    drop2 = false;
-    drop3 = false;
+    ffilter = false;
+    envfilter = false;
+    ethicalfilter = false;
+    laborfilter = false;
+    ownershipfilter = false;
+    resfilter = false;
+    financialdb: boolean = false;
     clickfinance = 'D&B Rating';
     clickEnvironmental = 'Overall Rating';
     lidata = ['Groups', 'Flags', 'Response', 'Advanced', 'Saved filters'];
+    showFinancialdropdown = false;
+    showEnvdropdown = false;
+    showEthicaldropdown = false;
+    showlabordropdown = false;
     @ViewChild('myDiv') myDivRef: ElementRef;
     // host: {
     //     '(document:click)': 'onClick($event)',
     // };
-    constructor(private http: HttpClient, private _eref: ElementRef) {}
+
+    showdropdown(type: string) {
+        if (type == 'financial') {
+            this.showFinancialdropdown = !this.showFinancialdropdown;
+            this.showEnvdropdown = false;
+            this.showEthicaldropdown = false;
+            this.showlabordropdown = false;
+        } else if (type == 'env') {
+            this.showEnvdropdown = !this.showEnvdropdown;
+            this.showFinancialdropdown = false;
+            this.showEthicaldropdown = false;
+            this.showlabordropdown = false;
+        } else if (type == 'ethical') {
+            this.showEthicaldropdown = !this.showEthicaldropdown;
+            this.showFinancialdropdown = false;
+            this.showEnvdropdown = false;
+            this.showlabordropdown = false;
+        } else if (type == 'labor') {
+            this.showlabordropdown = !this.showlabordropdown;
+            this.showFinancialdropdown = false;
+            this.showEnvdropdown = false;
+            this.showEthicaldropdown = false;
+        }
+    }
+    openFilterDetails(type: string) {
+        if (type == 'financial') {
+            this.ffilter = !this.ffilter;
+            this.envfilter = false;
+            this.ethicalfilter = false;
+            this.laborfilter = false;
+            this.ownershipfilter = false;
+            this.resfilter = false;
+        } else if (type == 'environment') {
+            this.envfilter = !this.envfilter;
+            this.ffilter = false;
+            this.ethicalfilter = false;
+            this.laborfilter = false;
+            this.ownershipfilter = false;
+            this.resfilter = false;
+        } else if (type == 'ethical') {
+            this.ethicalfilter = !this.ethicalfilter;
+            this.ffilter = false;
+            this.envfilter = false;
+            this.laborfilter = false;
+            this.ownershipfilter = false;
+            this.resfilter = false;
+        } else if (type == 'labor') {
+            this.laborfilter = !this.laborfilter;
+            this.ffilter = false;
+            this.envfilter = false;
+            this.ethicalfilter = false;
+            this.ownershipfilter = false;
+            this.resfilter = false;
+        } else if (type == 'ownership') {
+            this.laborfilter = false;
+            this.ffilter = false;
+            this.envfilter = false;
+            this.ethicalfilter = false;
+            this.ownershipfilter = !this.ownershipfilter;
+            this.resfilter = false;
+        } else if (type == 'response') {
+            alert(this.resfilter);
+            this.resfilter = !this.resfilter;
+            alert(this.resfilter);
+            this.laborfilter = false;
+            this.ffilter = false;
+            this.envfilter = false;
+            this.ethicalfilter = false;
+            this.ownershipfilter = false;
+        }
+    } // openFilterDetails
+
     ngOnInit() {
         this.clickfinance = 'D&B Rating';
         this.clickEnvironmental = 'Overall Rating';
@@ -63,7 +169,6 @@ export class SupplierdataComponent implements OnInit {
         this.treeData = [['LIMITED', 0, 5], ['FAIR', 0, 10], ['GOOD', 5, 10], ['HIGH', 2, 13]];
     }
     clickFinancial(data) {
-        console.log(data);
         if (data === 'D&B Rating') {
             this.clickfinance = 'D&B Rating';
             this.columnData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
@@ -74,6 +179,8 @@ export class SupplierdataComponent implements OnInit {
             this.clickfinance = 'D&B Paydex';
             this.columnData = this.treeData;
         }
+
+        this.showFinancialdropdown = false;
     }
     environmental(data) {
         if (data === 'Overall Rating') {
@@ -92,34 +199,12 @@ export class SupplierdataComponent implements OnInit {
             this.clickEnvironmental = 'Sustainable procurem..';
             this.columnDatas = [['0-29', 13], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 17]];
         }
+
+        this.showEnvdropdown = false;
     }
 
-    showMapDropDown() {
-        this.mapdrop = !this.mapdrop;
-    }
-    onClickdrop() {
-        this.drop = !this.drop;
-        this.drop1 = false;
-        this.drop2 = false;
-        this.drop3 = false;
-    }
-    onClick1() {
-        this.drop1 = !this.drop1;
-        this.drop = false;
-        this.drop2 = false;
-        this.drop3 = false;
-    }
-    onClick2() {
-        this.drop2 = !this.drop2;
-        this.drop = false;
-        this.drop1 = false;
-        this.drop3 = false;
-    }
-    onClick3() {
-        this.drop3 = !this.drop3;
-        this.drop = false;
-        this.drop1 = false;
-        this.drop2 = false;
+    showEthicalGraphs(type: string) {
+        this.showEthicaldropdown = false;
     }
 
     showHideFinancialData() {
