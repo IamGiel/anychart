@@ -42,7 +42,7 @@ export class MapComponent implements OnInit {
 
             const series = map.bubble(density_data);
             // set chart bubble settings
-            map.maxBubbleSize('7%').minBubbleSize('0.3%');
+            map.maxBubbleSize('2%').minBubbleSize('0.5%');
 
             series.labels(false).selectionMode('none');
             const series_choropleth = map.choropleth(density_data);

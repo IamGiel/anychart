@@ -70,6 +70,20 @@ export class SupplierdataComponent implements OnInit {
     showEnvdropdown = false;
     showEthicaldropdown = false;
     showlabordropdown = false;
+    showEnvGraph = false;
+    showEthicGraph = false;
+    showLabourGraph = false;
+    splineData = [
+        { x: 'January', value: 0 },
+        { x: 'February', value: 9 },
+        { x: 'March', value: 8 },
+        { x: 'April', value: 11 },
+        { x: 'May', value: 9 },
+        { x: 'june', value: 5 },
+        { x: 'july', value: 7 },
+        { x: 'august', value: 2 },
+        { x: 'sept', value: 0 }
+    ];
     @ViewChild('myDiv') myDivRef: ElementRef;
     // host: {
     //     '(document:click)': 'onClick($event)',
@@ -177,7 +191,7 @@ export class SupplierdataComponent implements OnInit {
             this.columnData = [['1', 10], ['2', 60], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 20], ['8', 25], ['9', 10]];
         } else if (data === 'D&B Paydex') {
             this.clickfinance = 'D&B Paydex';
-            this.columnData = this.treeData;
+            this.columnData = this.splineData;
         }
 
         this.showFinancialdropdown = false;
@@ -218,6 +232,9 @@ export class SupplierdataComponent implements OnInit {
             this.showEnv = '';
             this.showEthical = '';
             this.showLabor = '';
+            this.showEnvGraph = false;
+            this.showEthicGraph = false;
+            this.showLabourGraph = false;
         } else {
             this.showSubCards = false;
             this.financialdetails = 'More details';
@@ -232,13 +249,16 @@ export class SupplierdataComponent implements OnInit {
 
     showHideEnivornData() {
         if (this.environmentdetails === 'More details') {
-            this.showSubCards = true;
+            this.showSubCards = false;
             this.environmentdetails = 'Hide details';
             this.financialdetails = 'More details';
             this.showEnv = 'show';
             this.showMore = '';
             this.showEthical = '';
             this.showLabor = '';
+            this.showEnvGraph = true;
+            this.showEthicGraph = false;
+            this.showLabourGraph = false;
         } else {
             this.showSubCards = false;
             this.environmentdetails = 'More details';
@@ -248,7 +268,7 @@ export class SupplierdataComponent implements OnInit {
 
     showHideEthicalData() {
         if (this.ethicaldetails === 'More details') {
-            this.showSubCards = true;
+            this.showSubCards = false;
             this.ethicaldetails = 'Hide details';
 
             this.financialdetails = 'More details';
@@ -259,6 +279,9 @@ export class SupplierdataComponent implements OnInit {
             this.showMore = '';
             this.showEnv = '';
             this.showLabor = '';
+            this.showEnvGraph = false;
+            this.showEthicGraph = true;
+            this.showLabourGraph = false;
         } else {
             this.showSubCards = false;
             this.ethicaldetails = 'More details';
@@ -268,7 +291,7 @@ export class SupplierdataComponent implements OnInit {
 
     showHideLaborData() {
         if (this.labordetails === 'More details') {
-            this.showSubCards = true;
+            this.showSubCards = false;
 
             this.labordetails = 'Hide details';
             this.financialdetails = 'More details';
@@ -279,6 +302,9 @@ export class SupplierdataComponent implements OnInit {
             this.showLabor = 'show';
             this.showEnv = '';
             this.showEthical = '';
+            this.showEnvGraph = false;
+            this.showEthicGraph = false;
+            this.showLabourGraph = true;
         } else {
             this.showSubCards = false;
             this.labordetails = 'More details';

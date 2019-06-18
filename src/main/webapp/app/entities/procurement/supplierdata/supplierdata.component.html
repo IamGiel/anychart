@@ -30,13 +30,17 @@
             </jhi-column-chart>
             <jhi-column-chart *ngIf="clickfinance==='D&B SER Rating'" [chartData]="columnData" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickfinance==='D&B Paydex'" [chartData]="columnData" [labels]="true">
-            </jhi-column-chart>
-            <div class="rectangle">
+            <jhi-spline-chart *ngIf="clickfinance==='D&B Paydex'" [chartData]="columnData" [labels]="false">
+            </jhi-spline-chart>
+            <div class="rectangle" [ngStyle]="{'bottom':clickfinance==='D&B Paydex' ? '17px' : '40px' }">
             </div>
-            <div class="risk">
+            <div *ngIf="clickfinance!=='D&B Paydex'" class="risk">
               <p>Low Risk</p>
               <p>High Risk</p>
+            </div>
+            <div *ngIf="clickfinance==='D&B Paydex'" class="risk">
+              <p>0</p>
+              <p>100</p>
             </div>
           </div>
           <div class="card-body flex" [ngClass]="{'textDown' : financialdetails == 'Hide details'}">
@@ -237,7 +241,6 @@
               </ul>
             </div>
             <div>
-              <!-- <jhi-column-chart [chartData]="datas"></jhi-column-chart> -->
               <jhi-bar [chartData]="treeData"></jhi-bar>
             </div>
           </div>
@@ -252,7 +255,7 @@
                 <jhi-column-chart [chartData]="labourData"></jhi-column-chart>
               </div> -->
             <div class="padd25">
-              <jhi-column-chart [chartData]="columnData" [labels]="false" >
+              <jhi-column-chart [chartData]="columnData" [labels]="false">
               </jhi-column-chart>
               <div class="rectangle" [ngStyle]="{'bottom': '17px'}">
               </div>
@@ -269,17 +272,242 @@
           <div class="card-body">
             <span class="card-title">D&B Paydex</span>
             <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
-            <!-- <div>
-                <jhi-column-chart [chartData]="labourData"></jhi-column-chart>
-              </div> -->
             <div class="padd25">
-              <jhi-column-chart [chartData]="columnData" [labels]="false" >
-              </jhi-column-chart>
+              <jhi-spline-chart [chartData]="splineData" [labels]="false">
+              </jhi-spline-chart>
               <div class="rectangle" [ngStyle]="{'bottom': '17px'}">
               </div>
               <div class="risk">
-                <p>Low Risk</p>
-                <p>High Risk</p>
+                <p>0</p>
+                <p>100</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="bg-color" *ngIf="showEnvGraph">
+  <div class="container">
+    <div class="row" #myDiv>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Overall Rating</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Labour& Human rights</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Ethics</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="bg-color" *ngIf="showEthicGraph">
+  <div class="container">
+    <div class="row" #myDiv>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Overall Appearances</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Corruption Issues</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Fraud Issues</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="bg-color" *ngIf="showLabourGraph">
+  <div class="container">
+    <div class="row" #myDiv>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Overall Appearances</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Discrimanation/workforce.</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Human Right  Issues</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
               </div>
             </div>
           </div>
@@ -406,10 +634,6 @@
         <div class="grid-table">
           <p class="country">China</p>
           <p><span class="number">21</span><span class="percent">21%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">India</p>
-          <p><span class="number">43</span><span class="percent">43%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">USA</p>
