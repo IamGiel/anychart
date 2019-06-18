@@ -30,13 +30,17 @@
             </jhi-column-chart>
             <jhi-column-chart *ngIf="clickfinance==='D&B SER Rating'" [chartData]="columnData" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickfinance==='D&B Paydex'" [chartData]="columnData" [labels]="true">
-            </jhi-column-chart>
-            <div class="rectangle">
+            <jhi-spline-chart *ngIf="clickfinance==='D&B Paydex'" [chartData]="columnData" [labels]="false">
+            </jhi-spline-chart>
+            <div class="rectangle" [ngStyle]="{'bottom': clickfinance==='D&B Paydex'? '17px':'40px'}">
             </div>
-            <div class="risk">
+            <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
               <p>Low Risk</p>
               <p>High Risk</p>
+            </div>
+            <div class="risk" *ngIf="clickfinance==='D&B Paydex'">
+              <p>0</p>
+              <p>100</p>
             </div>
           </div>
           <div class="card-body flex" [ngClass]="{'textDown' : financialdetails == 'Hide details'}">
@@ -63,7 +67,7 @@
             </div>
             <div class="dropdown">
               <button class="dropbtn" (click)="showdropdown('env')">Overall Rating</button>
-              <i class="fa fa-angle-down color" (click)="showdropdown('env')"`></i>
+              <i class="fa fa-angle-down color" (click)="showdropdown('env')"></i>
               <div class="dropdown-content" *ngIf="showEnvdropdown">
                 <a (click)="environmental('Overall Rating')">Overall Rating</a>
                 <a (click)="environmental('Labour& Human rights')">Labour& Human rights</a>
@@ -259,11 +263,15 @@
                 <jhi-column-chart [chartData]="labourData"></jhi-column-chart>
               </div> -->
             <div class="padd25">
-              <jhi-column-chart [chartData]="columnData" [labels]="false" >
-              </jhi-column-chart>
-              <div class="rectangle" [ngStyle]="{'bottom': '17px'}">
+              <jhi-spline-chart [chartData]="columnData" [labels]="false" >
+              </jhi-spline-chart>
+              <div class="rectangle" [ngStyle]="{'bottom': showSubCards==='true'? '17px':'17px'}">
               </div>
-              <div class="risk">
+              <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
+                <p>Low Risk</p>
+                <p>High Risk</p>
+              </div>
+              <div class="risk" *ngIf="clickfinance==='D&B Paydex'">
                 <p>0</p>
                 <p>100</p>
               </div>
@@ -582,7 +590,7 @@
       <div class="map-container">
         <jhi-map></jhi-map>
       </div>
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
           <i class="fa fa-angle-up" (click)="showMapDropDown()"></i>
         </button>
@@ -595,7 +603,7 @@
           <a (click)="selectMap('Basic Map')"><i *ngIf="mapdropdown == 'Basic Map'" class="fa fa-check"></i> Basic
             Map</a>
         </div>
-      </div> -->
+      </div>  -->
     </div>
     <div class="col-md-3 pl-0 pr-0">
       <div>
