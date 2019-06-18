@@ -50,7 +50,8 @@
         <div class="card" [ngClass]="{'card-active , card1': showEnv !== ''}">
           <div class="card-body">
             <span class="card-title">Environmental Data</span>
-            <img class="filter" (click)="openFilterDetails('environment');" src="../../../../content/images/filter.svg" />
+            <img class="filter" (click)="openFilterDetails('environment');"
+              src="../../../../content/images/filter.svg" />
             <div *ngIf="envfilter" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -61,8 +62,8 @@
               </ul>
             </div>
             <div class="dropdown">
-              <button class="dropbtn" (click)="showdropdown('env')">D&B SER Rating</button>
-              <i  (click)="showdropdown('env')" class="fa fa-angle-down color"></i>
+              <button class="dropbtn" (click)="showdropdown('env')">Overall Rating</button>
+              <i class="fa fa-angle-down color"></i>
               <div class="dropdown-content" *ngIf="showEnvdropdown">
                 <a (click)="environmental('Overall Rating')">Overall Rating</a>
                 <a (click)="environmental('Labour& Human rights')">Labour& Human rights</a>
@@ -100,9 +101,6 @@
 
             </div>
           </div>
-          <!-- <div>
-            <jhi-column-chart [chartData]="columnDatas"></jhi-column-chart>
-          </div> -->
           <div class="card-body flex" [ngClass]="{'textDown' : environmentdetails == 'Hide details'}">
             <span class="details" (click)="showHideEnivornData()">{{ environmentdetails }}</span>
             <i *ngIf="environmentdetails == 'More details'" (click)="showHideEnivornData()" class="fa fa-angle-down color"></i>
@@ -147,16 +145,10 @@
                 <span class="rectangle6"></span>
               </div>
             </div>
-
-            <!-- <div class="rectangle">
-            </div> -->
             <div class="risk risk-appearance">
               <p> APPEARANCE</p>
             </div>
           </div>
-          <!-- <div>
-            <jhi-column-chart [chartData]="ethicaldata" [chartTitle]="APPEARANCE"></jhi-column-chart>
-          </div> -->
           <div class="card-body flex" [ngClass]="{'textDown' : ethicaldetails == 'Hide details'}">
             <span class="details" (click)="showHideEthicalData()">{{ ethicaldetails }}</span>
             <i *ngIf="ethicaldetails == 'More details'" (click)="showHideEthicalData()" class="fa fa-angle-down color"></i>
@@ -182,11 +174,11 @@
               <button class="dropbtn" (click)="showdropdown('labor')">Overall Appearance</button>
               <i class="fa" (click)="showdropdown('labor')">&#xf107;</i>
               <div class="dropdown-content" *ngIf="showlabordropdown">
-                <a (click)="showLaborGraphs()">Overall appearance</a>
-                <a href="#">Discrimanation/workforce..</a>
-                <a href="#">Human Right Issues</a>
-                <a href="#">Workforce Disputes</a>
-                <a href="#">Workforcehealthy/Saftey Is</a>
+                <a (click)="showLaborGraphs('overall')">Overall appearance</a>
+                <a (click)="showLaborGraphs('discrimanation')">Discrimanation/workforce..</a>
+                <a (click)="showLaborGraphs('human')">Human Right Issues</a>
+                <a (click)="showLaborGraphs('work')">Workforce Disputes</a>
+                <a (click)="showLaborGraphs('workforce')">Workforcehealthy/Saftey Is</a>
               </div>
             </div>
           </div>
@@ -205,9 +197,6 @@
               <p>APPEARANCE</p>
             </div>
           </div>
-          <!-- <div>
-            <jhi-column-chart [chartData]="ethicaldata" [chartTitle]="APPEARANCE"></jhi-column-chart>
-          </div> -->
           <div class="card-body flex" [ngClass]="{'textDown' : labordetails == 'Hide details'}">
             <span class="details" (click)="showHideLaborData()">{{ labordetails }}</span>
             <i *ngIf="labordetails == 'More details'" (click)="showHideLaborData()" class="fa fa-angle-down color"></i>
@@ -248,9 +237,6 @@
           <div class="card-body">
             <span class="card-title">D&B SER Rating</span>
             <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
-            <!-- <div>
-                <jhi-column-chart [chartData]="labourData"></jhi-column-chart>
-              </div> -->
             <div class="padd25">
               <jhi-column-chart [chartData]="columnData" [labels]="false" >
               </jhi-column-chart>
@@ -278,8 +264,239 @@
               <div class="rectangle" [ngStyle]="{'bottom': '17px'}">
               </div>
               <div class="risk">
-                <p>Low Risk</p>
+                <p>0</p>
+                <p>100</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="bg-color" *ngIf="showEnvGraph">
+  <div class="container">
+    <div class="row" #myDiv>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Overall Rating</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle1"> </span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle5"></span>
+                </div>
+              </div>
+              <div class="risk">
                 <p>High Risk</p>
+                <p>Low Risk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Labour& Human rights</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle1"> </span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle5"></span>
+                </div>
+              </div>
+              <div class="risk">
+                <p>High Risk</p>
+                <p>Low Risk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Ethics</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle1"> </span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle5"></span>
+                </div>
+              </div>
+              <div class="risk">
+                <p>High Risk</p>
+                <p>Low Risk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="bg-color" *ngIf="showEthicGraph">
+  <div class="container">
+    <div class="row" #myDiv>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Overall Appearances</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Corruption Issues</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Fraud Issues</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="bg-color" *ngIf="showLabourGraph">
+  <div class="container">
+    <div class="row" #myDiv>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Overall Appearances</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Discrimanation/workforce.</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card">
+          <div class="card-body">
+            <span class="card-title">Human Right Issues</span>
+            <img class="filter" (click)="onClickdrop()" src="../../../../content/images/filter.svg" />
+            <div class="padd25">
+              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+              <div class="abc">
+                <div>
+                  <span class="rectangle4"></span>
+                  <span class="rectangle3"></span>
+                  <span class="rectangle2"></span>
+                  <span class="rectangle1"></span>
+                  <span class="rectangle6"></span>
+                </div>
+              </div>
+              <div class="risk risk-appearance">
+                <p>APPEARANCE</p>
               </div>
             </div>
           </div>
@@ -294,7 +511,7 @@
     <div class="col-md-6 pl-0">
       <div class="card">
         <div class="card-body pb-0">
-          <span class="card-title">Ownership Type</span>
+          <span class="card-title">Response Stats</span>
           <img class="filter" (click)="openFilterDetails('ownership')" src="../../../../content/images/filter.svg" />
           <div *ngIf="ownershipfilter" class="map-dropdown-contents">
             <ul class="spacing">
@@ -342,7 +559,7 @@
               <li>Saved</li>
             </ul>
           </div>
-          <jhi-bar [chartData]="treeData"></jhi-bar>
+          <jhi-bar [chartData]="responseFunnelData"></jhi-bar>
         </div>
       </div>
     </div>
@@ -365,12 +582,12 @@
       <div class="map-container">
         <jhi-map></jhi-map>
       </div>
-      <!-- <div class="dropdown">
+      <div class="dropdown">
         <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
           <i class="fa fa-angle-up" (click)="showMapDropDown()"></i>
         </button>
         <div *ngIf="mapdrop" class="map-dropdown-content">
-          <a (click)="selectMap('Water Scarcity area')"><i *ngIf="mapdropdown == 'Water Scarcity area'"
+          <a (click)="selectMap('Water Sca  rcity area')"><i *ngIf="mapdropdown == 'Water Scarcity area'"
               class="fa fa-check"></i> Water Scarcity Area</a>
           <a><i *ngIf="mapdropdown == 'Earthquake prone area'" class="fa fa-check"></i>Earthquake Prone Area</a>
           <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
@@ -384,17 +601,17 @@
       <div>
         <ul class="nav nav-tab justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" rel="tab1">
-              <span class="active">Countries</span>
+            <a class="nav-link" rel="tab1" (click)="maintabClicked('Countries')">
+              <span [ngClass]="activeTab =='Countries'? 'active' : 'inactive'">Countries</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tab1">
-              <span class="inactive">Suppliers list</span></a>
+            <a class="nav-link" rel="tab1" (click)="maintabClicked('Cities')">
+              <span [ngClass]="activeTab =='Cities'? 'active' : 'inactive'">Cities</span></a>
           </li>
         </ul>
       </div>
-      <div class="table-div">
+      <div class="table-div" *ngIf="activeTab =='Countries'">
         <div class="grid-table border-top">
           <p class="country">India</p>
           <p><span class="number">43</span><span class="percent">43%</span></p>
@@ -422,6 +639,24 @@
         <div class="grid-table">
           <p class="country">France</p>
           <p><span class="number">2</span><span class="percent">2%</span></p>
+        </div>
+      </div>
+      <div class="table-div" *ngIf="activeTab =='Cities'">
+        <div class="grid-table border-top">
+          <p class="country">Bangalore</p>
+          <p><span class="number">43</span><span class="percent">43%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Shangai</p>
+          <p><span class="number">21</span><span class="percent">21%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Los Angeles</p>
+          <p><span class="number">18</span><span class="percent">18%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Dubai</p>
+          <p><span class="number">12</span><span class="percent">12%</span></p>
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@ export class SupplierdataComponent implements OnInit {
             this.resfilter = false;
         }
     }
-
+    activeTab = 'Countries';
     chartData = [];
     financialdetails = 'More details';
     environmentdetails = 'More details';
@@ -73,16 +73,17 @@ export class SupplierdataComponent implements OnInit {
     showEnvGraph = false;
     showEthicGraph = false;
     showLabourGraph = false;
+    responseFunnelData = [];
     splineData = [
-        { x: 'January', value: 0 },
-        { x: 'February', value: 9 },
-        { x: 'March', value: 8 },
-        { x: 'April', value: 11 },
-        { x: 'May', value: 9 },
-        { x: 'june', value: 5 },
-        { x: 'july', value: 7 },
-        { x: 'august', value: 2 },
-        { x: 'sept', value: 0 }
+        { x: '1', value: 0 },
+        { x: '2', value: 9 },
+        { x: '3', value: 8 },
+        { x: '4', value: 11 },
+        { x: '5', value: 9 },
+        { x: '6', value: 5 },
+        { x: '7', value: 7 },
+        { x: '8', value: 2 },
+        { x: '9', value: 0 }
     ];
     @ViewChild('myDiv') myDivRef: ElementRef;
     // host: {
@@ -179,6 +180,7 @@ export class SupplierdataComponent implements OnInit {
             { label: '5', value: 2, fill: '#E7E7E7', stroke: '#E7E7E7' }
         ];
         this.treeData = [['LIMITED', 0, 5], ['FAIR', 0, 10], ['GOOD', 5, 10], ['HIGH', 2, 13]];
+        this.responseFunnelData = [['Request', 0, 5], ['Response', 0, 10], ['Response Health', 5, 10]];
     }
     clickFinancial(data) {
         if (data === 'D&B Rating') {
@@ -217,6 +219,9 @@ export class SupplierdataComponent implements OnInit {
 
     showEthicalGraphs(type: string) {
         this.showEthicaldropdown = false;
+    }
+    showLaborGraphs(type: string) {
+        this.showlabordropdown = false;
     }
 
     showHideFinancialData() {
@@ -258,7 +263,7 @@ export class SupplierdataComponent implements OnInit {
             this.showEthicGraph = false;
             this.showLabourGraph = false;
         } else {
-            this.showSubCards = false;
+            this.showEnvGraph = false;
             this.environmentdetails = 'More details';
             this.showEnv = '';
         }
@@ -281,7 +286,7 @@ export class SupplierdataComponent implements OnInit {
             this.showEthicGraph = true;
             this.showLabourGraph = false;
         } else {
-            this.showSubCards = false;
+            this.showEthicGraph = false;
             this.ethicaldetails = 'More details';
             this.showEthical = '';
         }
@@ -304,9 +309,12 @@ export class SupplierdataComponent implements OnInit {
             this.showEthicGraph = false;
             this.showLabourGraph = true;
         } else {
-            this.showSubCards = false;
+            this.showLabourGraph = false;
             this.labordetails = 'More details';
             this.showLabor = '';
         }
+    }
+    maintabClicked(tab: string) {
+        this.activeTab = tab;
     }
 }
