@@ -222,6 +222,9 @@ export class SupplierdataComponent implements OnInit {
     showEthicalGraphs(type: string) {
         this.showEthicaldropdown = false;
     }
+    showLaborGraphs(type: string) {
+        this.showlabordropdown = false;
+    }
 
     showHideFinancialData() {
         if (this.financialdetails === 'More details') {
