@@ -90,6 +90,13 @@ button:focus {
     background-color: white;
 }
 
+.dropdown-map {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    padding-top: 45px;
+}
+
 .dropdown-content {
     /* display: none; */
     position: absolute;
@@ -122,13 +129,13 @@ button:focus {
 }
 
 .map-dropdown-content {
-    display: none;
+    /* kdisplay: none; */
     position: absolute;
     background-color: white;
     min-width: 240px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    bottom: 78px;
+    bottom: 45px;
 }
 
 .fa-angle-up,

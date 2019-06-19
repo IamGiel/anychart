@@ -77,6 +77,9 @@ export class SupplierdataComponent implements OnInit {
     showLabourGraph = false;
     activeTab = 'Countries';
     subtab = 'HQ location';
+    financialrating = false;
+    financialserrating = false;
+
     splineData = [
         { x: 'January', value: 0 },
         { x: 'February', value: 9 },
@@ -98,6 +101,10 @@ export class SupplierdataComponent implements OnInit {
     }
     subtabClicked(tab: string) {
         this.subtab = tab;
+    }
+
+    showMapDropDown() {
+        this.mapdrop = !this.mapdrop;
     }
 
     showdropdown(type: string) {
@@ -123,6 +130,7 @@ export class SupplierdataComponent implements OnInit {
             this.showEthicaldropdown = false;
         }
     }
+
     openFilterDetails(type: string) {
         if (type == 'financial') {
             this.ffilter = !this.ffilter;
@@ -166,6 +174,11 @@ export class SupplierdataComponent implements OnInit {
             this.envfilter = false;
             this.ethicalfilter = false;
             this.ownershipfilter = false;
+        } else if (type == 'financialrating') {
+            alert(1);
+            this.financialrating = !this.financialrating;
+        } else if (type == 'financialserrating') {
+            this.financialserrating = !this.financialserrating;
         }
     } // openFilterDetails
 
