@@ -387,6 +387,9 @@ span.inactive {
     border-bottom: 1px solid #e7e7e7;
     height: 25px;
 }
+.grid-table p:nth-child(2) {
+    text-align: right;
+}
 
 .border-top {
     border-top: 1px solid #e7e7e7;
@@ -479,6 +482,6 @@ span.inactive {
 .nav-link {
     text-transform: capitalize;
 }
-.mar50 {
+/* .mar50 {
     margin-left: 50px;
-}
+} */
