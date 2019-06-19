@@ -178,8 +178,6 @@ button:focus {
     cursor: pointer;
     width: 14px;
 }
-.abc {
-}
 
 .card-details {
     display: grid;
@@ -250,8 +248,8 @@ button:focus {
     /* margin-left: 0px; */
     padding: 0px 0px 0px 16px;
     margin-right: 0px;
-    margin-bottom: 58px;
-    height: 500px;
+    /* margin-bottom: 58px; */
+    height: 470px;
 }
 
 .col-map {
@@ -405,7 +403,6 @@ span.inactive {
 }
 
 .padd25 {
-    /* padding: 0 25px; */
     position: relative;
 }
 
@@ -478,4 +475,10 @@ span.inactive {
 }
 .line {
     border-bottom: 1px solid #212529de;
+}
+.nav-link {
+    text-transform: capitalize;
+}
+.mar50 {
+    margin-left: 50px;
 }

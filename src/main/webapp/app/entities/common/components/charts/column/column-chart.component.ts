@@ -21,9 +21,6 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
     ngOnInit() {
         this.chart = anychart.column();
     }
-    ngOnchanges() {
-        console.log(this.chartTitle);
-    }
     // ngAfterViewInit() {
     //     const series = this.chart.column(this.chartData);
     //     this.chart.container(this.container.nativeElement);

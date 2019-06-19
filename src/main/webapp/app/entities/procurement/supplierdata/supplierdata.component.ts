@@ -65,6 +65,8 @@ export class SupplierdataComponent implements OnInit {
     financialdb: boolean = false;
     clickfinance = 'D&B Rating';
     clickEnvironmental = 'Overall Rating';
+    clickEthical = 'Overall Appearance';
+    clickLabour = 'Overall Appearance';
     lidata = ['Groups', 'Flags', 'Response', 'Advanced', 'Saved filters'];
     showFinancialdropdown = false;
     showEnvdropdown = false;
@@ -74,6 +76,7 @@ export class SupplierdataComponent implements OnInit {
     showEthicGraph = false;
     showLabourGraph = false;
     activeTab = 'Countries';
+    subtab = 'HQ location';
     splineData = [
         { x: 'January', value: 0 },
         { x: 'February', value: 9 },
@@ -92,6 +95,9 @@ export class SupplierdataComponent implements OnInit {
 
     maintabClicked(tab: string) {
         this.activeTab = tab;
+    }
+    subtabClicked(tab: string) {
+        this.subtab = tab;
     }
 
     showdropdown(type: string) {
@@ -187,6 +193,7 @@ export class SupplierdataComponent implements OnInit {
 
         this.responseFunnelData = [['Request', 0, 5], ['Response', 0, 10], ['Response Health', 5, 10]];
     }
+
     clickFinancial(data) {
         if (data === 'D&B Rating') {
             this.clickfinance = 'D&B Rating';
@@ -196,34 +203,58 @@ export class SupplierdataComponent implements OnInit {
             this.columnData = [['1', 10], ['2', 60], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 20], ['8', 25], ['9', 10]];
         } else if (data === 'D&B Paydex') {
             this.clickfinance = 'D&B Paydex';
-            this.columnData = this.splineData;
         }
-
         this.showFinancialdropdown = false;
     }
-    environmental(data) {
-        if (data === 'Overall Rating') {
+
+    showEthicalGraphs(data) {
+        if (data === 'Overall appearance') {
+            this.clickEthical = 'Overall appearance';
+        } else if (data === 'Corruption issue') {
+            this.clickEthical = 'Corruption issue';
+        } else if (data === 'Fraud issue') {
+            this.clickEthical = 'Fraud issue';
+        } else if (data === 'Regulatory issue') {
+            this.clickEthical = 'Regulatory issue';
+        } else if (data === 'Sanctions') {
+            this.clickEthical = 'Sanctions';
+        }
+        this.showEthicaldropdown = false;
+    }
+
+    showLaborGraphs(data) {
+        if (data === 'Overall appearance') {
+            this.clickLabour = 'Overall appearance';
+        } else if (data === 'Discrimanation/workforce..') {
+            this.clickLabour = 'Discrimanation/workforce..';
+        } else if (data === 'Human Right Issue') {
+            this.clickLabour = 'Human Right Issue';
+        } else if (data === 'Workforce Disputes') {
+            this.clickLabour = 'Workforce Disputes';
+        } else if (data === 'Workforcehealthy/Saftey Is') {
+            this.clickLabour = 'Workforcehealthy/Saftey Is';
+        }
+        this.showlabordropdown = false;
+    }
+
+    environmental(type: string) {
+        if (type === 'Overall Rating') {
             this.clickEnvironmental = 'Overall Rating';
             this.columnDatas = [['0-29', 13], ['30-49', 10], ['50-69', 19], ['70-89', 14], ['90-100', 17]];
-        } else if (data === 'Ethics') {
+        } else if (type === 'Ethics') {
             this.clickEnvironmental = 'Ethics';
             this.columnDatas = [['0-29', 6], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 12]];
-        } else if (data === 'Environment') {
+        } else if (type === 'Environment') {
             this.clickEnvironmental = 'Environment';
             this.columnDatas = [['0-29', 10], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
-        } else if (data === 'Labour& Human rights') {
+        } else if (type === 'Labour& Human rights') {
             this.clickEnvironmental = 'Labour& Human rights';
             this.columnDatas = [['0-29', 13], ['30-49', 9], ['50-69', 13], ['70-89', 15], ['90-100', 17]];
-        } else if (data === 'Sustainable procurem..') {
+        } else if (type === 'Sustainable procurem..') {
             this.clickEnvironmental = 'Sustainable procurem..';
             this.columnDatas = [['0-29', 13], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 17]];
         }
-
         this.showEnvdropdown = false;
-    }
-
-    showEthicalGraphs(type: string) {
-        this.showEthicaldropdown = false;
     }
 
     showHideFinancialData() {

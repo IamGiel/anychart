@@ -8,6 +8,7 @@ import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 export class SplineChartComponent implements OnInit, AfterViewInit {
     chart: any;
     @Input() chartData: string;
+    @Input() id: string;
     @Input() chartTitle: string;
     @Input() hideTooltipPerct: string;
     @Input() heightValue: string;
@@ -52,7 +53,7 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
             .ticks()
             .stroke('#ffff');
         // set the container id
-        chart.container('container');
+        chart.container(this.id);
 
         // initiate drawing the chart
         chart.draw();

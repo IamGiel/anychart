@@ -9,13 +9,15 @@ export class BarComponent implements OnInit, AfterViewInit {
     // @ViewChild('barchartContainer') container;
     chart: any = null;
     @Input() chartData: any;
+    @Input() id: string;
     constructor() {}
 
     ngOnInit() {
         this.chart = anychart.column();
+        console.log(this.id);
     }
     ngAfterViewInit() {
-        console.log(this.chartData);
+        console.log(this.id);
         // create a data set
         const series = this.chart.column();
         const data = anychart.data.set(this.chartData);
@@ -67,7 +69,7 @@ export class BarComponent implements OnInit, AfterViewInit {
             .format('{%value}');
 
         // set the container id
-        chart.container('bargraph');
+        chart.container(this.id);
 
         // initiate drawing the chart
         chart.draw();
