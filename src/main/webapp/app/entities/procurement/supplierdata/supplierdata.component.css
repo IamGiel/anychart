@@ -251,6 +251,7 @@ button:focus {
     padding: 0px 0px 0px 16px;
     margin-right: 0px;
     margin-bottom: 58px;
+    height: 500px;
 }
 
 .col-map {
@@ -261,9 +262,9 @@ button:focus {
     padding-top: 17px;
 }
 
-.map-container {
+/* .map-container {
     padding: 7px 40px 10px 0px;
-}
+} */
 
 span.active {
     padding-top: 20px;
