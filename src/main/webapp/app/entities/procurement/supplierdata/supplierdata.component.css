@@ -16,7 +16,14 @@
 .spacing {
     list-style: none;
     line-height: 27px;
-    /* padding: 22px; */
+}
+
+.filter-div {
+    margin: 8px 0px 10px 27px;
+}
+
+.saved-filters {
+    margin: 21px 0px 26px 27px;
 }
 
 .border-full {
@@ -94,7 +101,7 @@ button:focus {
     position: relative;
     display: inline-block;
     background-color: white;
-    padding-top: 45px;
+    padding: 45px 0px 21px 0px;
 }
 
 .dropdown-content {
@@ -249,14 +256,10 @@ button:focus {
 }
 
 .row-map {
-    margin-top: 20px;
+    margin: 20px 0px 92px 0px;
     border: 1px solid #e7e7e7;
     border-radius: 5px;
-    /* margin-left: 0px; */
     padding: 0px 0px 0px 16px;
-    margin-right: 0px;
-    /* margin-bottom: 58px; */
-    height: 470px;
 }
 
 .col-map {
@@ -518,6 +521,31 @@ span.inactive1 {
 .nav-link {
     text-transform: capitalize;
 }
-/* .mar50 {
-    margin-left: 50px;
-} */
+
+/deep/ .carousel-control-prev {
+    position: absolute !important;
+    top: 50% !important;
+    left: -5% !important;
+    width: 20px;
+    height: 20px;
+}
+
+/deep/ .carousel-control-next {
+    position: absolute;
+    right: -5%;
+    width: 20px;
+    top: 50%;
+    height: 20px;
+}
+
+/deep/ .carousel-control-prev-icon {
+    background-image: url(../../../../content/images/next.png);
+}
+
+/deep/ .carousel-control-next-icon {
+    background-image: url(../../../../content/images/next.png);
+}
+
+.ngb-carousel {
+    outline: none;
+}

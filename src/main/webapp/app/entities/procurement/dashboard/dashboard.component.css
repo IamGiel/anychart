@@ -41,9 +41,9 @@ span.active {
 .active-main {
     color: #6b4cd9;
     border-top: 3px solid #6b4cd9 !important;
-    padding-top: 60px;
+    padding-top: 32px;
 }
 
 .row-padd {
-    padding: 28px 0px 40px 0px;
+    padding: 0px 0px 40px 0px;
 }
