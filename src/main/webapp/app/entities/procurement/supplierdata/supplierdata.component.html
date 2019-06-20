@@ -320,7 +320,7 @@
                 <div class="padd25">
                   <jhi-spline-chart [chartData]="columnData" [id]="'paydexid2'" [labels]="false">
                   </jhi-spline-chart>
-                  <div class="rectangle" [ngStyle]="{'bottom': showSubCards==='true'? '17px':'17px'}">
+                  <div class="rectangle" [ngStyle]="{'bottom': showSubCards? '17px':'17px'}">
                   </div>
                   <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
                     <p>Low Risk</p>
