@@ -518,6 +518,34 @@ span.inactive1 {
 .nav-link {
     text-transform: capitalize;
 }
-/* .mar50 {
-    margin-left: 50px;
-} */
+.modal-outline {
+    border: 1px solid #e7e7e7;
+    padding: 15px;
+}
+#modal-basic-title {
+    color: #5f4bc4;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: left;
+}
+.modal-outline span:nth-child(1) {
+    color: #494949;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: left;
+}
+.browser-default,
+.custom-select {
+    border: 0 !important;
+    width: 40% !important;
+    outline-color: none;
+}
+.btn {
+    background-color: #5f4bc4;
+    border-radius: 19.5px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}

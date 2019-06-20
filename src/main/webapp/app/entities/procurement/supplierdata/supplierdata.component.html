@@ -5,6 +5,7 @@
         <div class="card" [ngClass]="{'card-active , card1': showMore !== ''}">
           <div class="card-body">
             <span class="card-title">Financial Data</span>
+            <!-- <i-feather name="filter" class="small"></i-feather> -->
             <img class="filter" (click)="openFilterDetails('financial');" src="../../../../content/images/filter.svg" />
             <div *ngIf="ffilter" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
@@ -12,7 +13,7 @@
                 <li class="filtertext">Groups</li>
                 <li class="filtertext">Flags</li>
                 <li class="filtertext">Response</li>
-                <li class="filtertext">Advanced</li>
+                <li (click)="open(content)" class="filtertext">Advanced</li>
                 <li class="filtertext">Saved</li>
               </ul>
             </div>
@@ -228,7 +229,8 @@
         <div class="card" #dbrating>
           <div class="card-body">
             <span class="card-title">D&B Rating</span>
-            <img class="filter" (click)="openFilterDetails('financialrating')" src="../../../../content/images/filter.svg" />
+            <img class="filter" (click)="openFilterDetails('financialrating')"
+              src="../../../../content/images/filter.svg" />
             <div *ngIf="financialrating" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -240,7 +242,7 @@
             </div>
             <div>
               <!-- <jhi-column-chart [chartData]="datas"></jhi-column-chart> -->
-              <jhi-bar [chartData]="treeData" [id]="'treeGraph'"></jhi-bar>
+              <jhi-stack-bar [chartData]="treeData" [id]="'treeGraph'"></jhi-stack-bar>
             </div>
           </div>
         </div>
@@ -249,7 +251,8 @@
         <div class="card" #dbserrating>
           <div class="card-body">
             <span class="card-title">D&B SER Rating</span>
-            <img class="filter" (click)="openFilterDetails('financialserrating')" src="../../../../content/images/filter.svg" />
+            <img class="filter" (click)="openFilterDetails('financialserrating')"
+              src="../../../../content/images/filter.svg" />
             <div *ngIf="financialserrating" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -314,7 +317,8 @@
         <div class="card" #eoverallrating>
           <div class="card-body">
             <span class="card-title">Overall Rating</span>
-            <img class="filter" (click)="openFilterDetails('overallrating')" src="../../../../content/images/filter.svg" />
+            <img class="filter" (click)="openFilterDetails('overallrating')"
+              src="../../../../content/images/filter.svg" />
             <div *ngIf="overallrating" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -420,7 +424,8 @@
         <div class="card" #eappearances>
           <div class="card-body">
             <span class="card-title">Overall Appearances</span>
-            <img class="filter" (click)="openFilterDetails('appearances')" src="../../../../content/images/filter.svg" />
+            <img class="filter" (click)="openFilterDetails('appearances')"
+              src="../../../../content/images/filter.svg" />
             <div *ngIf="appearances" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -523,7 +528,8 @@
         <div class="card" #overallapperances>
           <div class="card-body">
             <span class="card-title">Overall Appearances</span>
-            <img class="filter" (click)="openFilterDetails('laborapperances')" src="../../../../content/images/filter.svg" />
+            <img class="filter" (click)="openFilterDetails('laborapperances')"
+              src="../../../../content/images/filter.svg" />
             <div *ngIf="laborapperances" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -555,7 +561,8 @@
         <div class="card" #ldiscrimination>
           <div class="card-body">
             <span class="card-title">Discrimanation/workforce.</span>
-            <img class="filter" (click)="openFilterDetails('discrimination')" src="../../../../content/images/filter.svg" />
+            <img class="filter" (click)="openFilterDetails('discrimination')"
+              src="../../../../content/images/filter.svg" />
             <div *ngIf="discrimination" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -587,7 +594,8 @@
         <div class="card" #lhumanrights>
           <div class="card-body">
             <span class="card-title">Human Right Issues</span>
-            <img class="filter" (click)="openFilterDetails('humanrights')" src="../../../../content/images/filter.svg" />
+            <img class="filter" (click)="openFilterDetails('humanrights')"
+              src="../../../../content/images/filter.svg" />
             <div *ngIf="humanrights" class="map-dropdown-contents">
               <ul class="spacing">
                 <li>Groups</li>
@@ -625,7 +633,8 @@
       <div class="card">
         <div class="card-body pb-0">
           <span class="card-title">Response Stats</span>
-          <img class="filter" #owner  (click)="openFilterDetails('ownership')" src="../../../../content/images/filter.svg" />
+          <img class="filter" #owner (click)="openFilterDetails('ownership')"
+            src="../../../../content/images/filter.svg" />
           <div *ngIf="ownershipfilter" class="map-dropdown-contents">
             <ul class="spacing">
               <li>Groups</li>
@@ -662,7 +671,8 @@
       <div class="card">
         <div class="card-body pb-0">
           <span class="card-title">Response Funnel</span>
-          <img class="filter" #responsefunnel (click)="openFilterDetails('responsefunnel')" src="../../../../content/images/filter.svg" />
+          <img class="filter" #responsefunnel (click)="openFilterDetails('responsefunnel')"
+            src="../../../../content/images/filter.svg" />
           <div *ngIf="resfilter" class="map-dropdown-contents">
             <ul class="spacing">
               <li>Groups</li>
@@ -674,7 +684,7 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <jhi-bar [chartData]="responseFunnelData" [id]="'responseGraph'"></jhi-bar>
+              <jhi-stack-bar [chartData]="responseFunnelData" [id]="'responseGraph'"></jhi-stack-bar>
             </div>
           </div>
         </div>
@@ -691,13 +701,15 @@
             </a>
           </li>
           <li class="nav-item" (click)="subtabClicked('Site Location')">
-            <a class="nav-link"><span [ngClass]="subtab =='Site Location'? 'nav-link active' : 'inactive1'">Site Location</span>
+            <a class="nav-link"><span [ngClass]="subtab =='Site Location'? 'nav-link active' : 'inactive1'">Site
+                Location</span>
             </a>
           </li>
         </ul>
       </div>
       <div class="float-R pt-3">
-        <img class="filter" #basicmap (click)="openFilterDetails('mapfilter')" src="../../../../content/images/filter.svg" />
+        <img class="filter" #basicmap (click)="openFilterDetails('mapfilter')"
+          src="../../../../content/images/filter.svg" />
         <div *ngIf="mapfilter" class="map-dropdown-contents">
           <ul class="spacing">
             <li>Groups</li>
@@ -712,19 +724,19 @@
         <jhi-map></jhi-map>
       </div>
       <div class="dropdown-map">
-          <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
-            <i class="fa fa-angle-up"></i>
-          </button>
-          <div *ngIf="mapdrop" class="map-dropdown-content">
-            <a (click)="selectMap('Water Scarcity area')"><i *ngIf="mapdropdown == 'Water Scarcity area'"
-                class="fa fa-check"></i> Water Scarcity Area</a>
-            <a><i *ngIf="mapdropdown == 'Earthquake prone area'" class="fa fa-check"></i>Earthquake Prone Area</a>
-            <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
-                class="fa fa-check"></i>Terror Prone Area</a>
-            <a (click)="selectMap('Basic Map')"><i *ngIf="mapdropdown == 'Basic Map'" class="fa fa-check"></i> Basic
-              Map</a>
-          </div>
+        <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
+          <i class="fa fa-angle-up"></i>
+        </button>
+        <div *ngIf="mapdrop" class="map-dropdown-content">
+          <a (click)="selectMap('Water Scarcity area')"><i *ngIf="mapdropdown == 'Water Scarcity area'"
+              class="fa fa-check"></i> Water Scarcity Area</a>
+          <a><i *ngIf="mapdropdown == 'Earthquake prone area'" class="fa fa-check"></i>Earthquake Prone Area</a>
+          <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
+              class="fa fa-check"></i>Terror Prone Area</a>
+          <a (click)="selectMap('Basic Map')"><i *ngIf="mapdropdown == 'Basic Map'" class="fa fa-check"></i> Basic
+            Map</a>
         </div>
+      </div>
     </div>
     <div class="col-md-3 pl-0 pr-0">
       <div>
@@ -743,23 +755,23 @@
       <div class="table-div" *ngIf="activeTab =='Countries'">
         <div class="grid-table border-top">
           <p class="country">India</p>
-          <p ><span class="number">43</span><span class="percent">43%</span></p>
+          <p><span class="number">43</span><span class="percent">43%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">China</p>
-          <p ><span class="number">21</span><span class="percent">21%</span></p>
+          <p><span class="number">21</span><span class="percent">21%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">India</p>
-          <p ><span class="number">43</span><span class="percent">43%</span></p>
+          <p><span class="number">43</span><span class="percent">43%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">USA</p>
-          <p ><span class="number">18</span><span class="percent">18%</span></p>
+          <p><span class="number">18</span><span class="percent">18%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">UAE</p>
-          <p ><span class="number">12</span><span class="percent">12%</span></p>
+          <p><span class="number">12</span><span class="percent">12%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">Germany</p>
@@ -791,3 +803,56 @@
     </div>
   </div>
 </div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Filter</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-outline">
+      <span>Add Filters</span>
+      <div>
+        <!-- <select class="browser-default custom-select" [(ngModel)]="item1">
+          <option *ngFor="let item of filter1">
+            {{item.value}}
+          </option>
+        </select> -->
+        <select class="browser-default custom-select" [(ngModel)]="item2">
+          <option *ngFor="let item of filter2">
+            {{item.value}}
+          </option>
+        </select>
+      </div>
+      <hr>
+      <div>
+        <select class="browser-default custom-select" [(ngModel)]="item3">
+          <option *ngFor="let item of filter3">
+            {{item.value}}
+          </option>
+        </select>
+        <select class="browser-default custom-select" [(ngModel)]="item4">
+          <option *ngFor="let item of filter4">
+            {{item.value}}
+          </option>
+        </select>
+        <button type="button" class="btn float-R">Add</button>
+        <div>
+            <!-- <button type="button" class="btn float-R">Add</button> -->
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <span>
+        <button type="button" class="btn float-L">Save Filter</button>
+    </span>
+    <span>
+        <button type="button" class=" ">Cancel</button>
+    </span>
+    <span>
+        <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+    </span>
+  </div>
+</ng-template>
