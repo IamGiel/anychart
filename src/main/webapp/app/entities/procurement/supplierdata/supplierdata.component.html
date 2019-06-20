@@ -325,7 +325,7 @@
                 <div class="padd25">
                   <jhi-spline-chart [chartData]="columnData" [id]="'paydexid2'" [labels]="false">
                   </jhi-spline-chart>
-                  <div class="rectangle" [ngStyle]="{'bottom': showSubCards==='true'? '17px':'17px'}">
+                  <div class="rectangle" [ngStyle]="{'bottom': showSubCards? '17px':'17px'}">
                   </div>
                   <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
                     <p>Low Risk</p>
@@ -468,12 +468,12 @@
       <ng-template ngbSlide class="ngb-carousel">
         <div class="row">
           <div class="col-md-4">
-            <div class="card" #eoverallrating>
+            <div class="card" #eenvironmnt>
               <div class="card-body">
                 <span class="card-title">Environment</span>
-                <img class="filter" (click)="openFilterDetails('overallrating')"
+                <img class="filter" (click)="openFilterDetails('eenv')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="overallrating" class="map-dropdown-contents">
+                <div *ngIf="eenv" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
@@ -506,12 +506,12 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card" #elaborhuman>
+            <div class="card" #esustanable>
               <div class="card-body">
                 <span class="card-title">Sustainable procurem..</span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
+                <img class="filter" (click)="openFilterDetails('sustainable')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="laborhuman" class="map-dropdown-contents">
+                <div *ngIf="sustainable" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
@@ -544,12 +544,12 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card" #elaborhuman>
+            <div class="card" #edowjones>
               <div class="card-body">
                 <span class="card-title">Dow Jones AME </span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
+                <img class="filter" (click)="openFilterDetails('dowjones')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="laborhuman" class="map-dropdown-contents">
+                <div *ngIf="dowjones" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
@@ -632,9 +632,9 @@
             <div class="card" #ecorruption>
               <div class="card-body">
                 <span class="card-title">Corruption Issues</span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
+                <img class="filter" (click)="openFilterDetails('corruption')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="laborhuman" class="map-dropdown-contents">
+                <div *ngIf="corruption" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
@@ -670,9 +670,9 @@
             <div class="card" #efraud>
               <div class="card-body">
                 <span class="card-title">Fraud Issues </span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
+                <img class="filter" (click)="openFilterDetails('fraud')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="laborhuman" class="map-dropdown-contents">
+                <div *ngIf="fraud" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
@@ -709,12 +709,12 @@
       <ng-template ngbSlide class="ngb-carousel">
         <div class="row">
           <div class="col-md-6">
-            <div class="card" #elaborhuman>
+            <div class="card" #eregulatory>
               <div class="card-body">
                 <span class="card-title">Regulatory Issues</span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
+                <img class="filter" (click)="openFilterDetails('regulatory')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="laborhuman" class="map-dropdown-contents">
+                <div *ngIf="regulatory" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
@@ -747,12 +747,12 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card" #elaborhuman>
+            <div class="card" #esanctions>
               <div class="card-body">
                 <span class="card-title">Sanctions</span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
+                <img class="filter" (click)="openFilterDetails('sanctions')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="laborhuman" class="map-dropdown-contents">
+                <div *ngIf="sanctions" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
@@ -910,12 +910,12 @@
       <ng-template ngbSlide class="ngb-carousel">
         <div class="row">
           <div class="col-md-6">
-            <div class="card" #elaborhuman>
+            <div class="card" #eworkspace>
               <div class="card-body">
                 <span class="card-title">Workforce Disputes</span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
+                <img class="filter" (click)="openFilterDetails('workspace')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="laborhuman" class="map-dropdown-contents">
+                <div *ngIf="workspace" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
@@ -948,12 +948,12 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card" #elaborhuman>
+            <div class="card" #lhealthspace>
               <div class="card-body">
                 <span class="card-title">Workforce Health/Safety Is..</span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
+                <img class="filter" (click)="openFilterDetails('healthsafety')"
                   src="../../../../content/images/filter.svg" />
-                <div *ngIf="laborhuman" class="map-dropdown-contents">
+                <div *ngIf="healthsafety" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext">Groups</p>
