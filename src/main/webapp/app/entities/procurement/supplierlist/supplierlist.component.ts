@@ -9,6 +9,7 @@ import { ProcurementFaqModalComponent } from '../../common/modals/procurement-fa
 import { NgbActiveModal, NgbModalRef, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { faBackspace } from '@fortawesome/free-solid-svg-icons';
 import { FetchData } from '../../common/service/fetch-data';
+import { PreviousRouteService } from '../../common/service/previous-route.service';
 @Component({
     selector: 'jhi-supplierlist',
     templateUrl: './supplierlist.component.html',
@@ -58,7 +59,8 @@ export class SupplierlistComponent implements OnInit {
         private data: SharedDataService,
         private lc: LocalStoreService,
         private modalService: NgbModal,
-        private fetchData: FetchData
+        private fetchData: FetchData,
+        private prs: PreviousRouteService
     ) {}
     public columnList: any = [
         /* {
@@ -109,8 +111,8 @@ export class SupplierlistComponent implements OnInit {
             this.checkedMap[m.name] = m.checked;
             return m;
         });
-        this.recentlyShared();
-        this.tabClicked('Shared');
+        //this.recentlyShared();
+        // this.tabClicked('Shared');
         /*   if (this.lc.getLocalInfo('account').authorities.indexOf('ROLE_CM_USER') >= 0) {
             this.isCatManager = true;
         }*/
@@ -194,6 +196,19 @@ export class SupplierlistComponent implements OnInit {
             }
         ];
         this.cocData = [{ x: 'Accepted', value: 28, fill: '#AD7CEE' }, { x: 'Not responded', value: 12, fill: '#F76693' }];
+        if (
+            this.prs.getPreviousUrl() != undefined &&
+            this.prs.getPreviousUrl() != null &&
+            this.prs.getPreviousUrl().indexOf('/procurement/supdetails/') >= 0
+        ) {
+            this.page = parseInt(this.lc.getLocalInfo('prevousPageNo'));
+            this.searchKeyword = '';
+            this.activeTab = 'Shared';
+            this.getData('Shared', '', true);
+        } else {
+            this.page = 1;
+            this.tabClicked('Shared');
+        }
     }
     toggleSuplierOverview() {
         console.log(this.isSupplierOverviewCollapsed);
@@ -348,6 +363,7 @@ export class SupplierlistComponent implements OnInit {
         if (search.length == 0 && savebackUp && this.backup.page != undefined) {
             this.backup.page = this.page;
         }
+        this.lc.storeLocalInfo('prevousPageNo', this.page);
         let param;
         this.loadingData = true;
         let tabData = tab.toLowerCase();
@@ -439,7 +455,9 @@ export class SupplierlistComponent implements OnInit {
         this.getData(this.activeTab, this.searchKeyword, savebackUp);
     }
     sendReminder(item) {
-        console.log(item);
+        item.reminder = 'sent';
+        item.lastRequestedDate = new Date().toISOString();
+        this.pushToArray(this.list, item);
         /* this.ds
             .sendReminder(item.id)
             .toPromise()

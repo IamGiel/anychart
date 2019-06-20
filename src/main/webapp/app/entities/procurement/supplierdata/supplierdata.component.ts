@@ -32,6 +32,8 @@ export class SupplierdataComponent implements OnInit {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
     closeResult: string;
+
+    images = [1, 2, 3, 4, 5, 6].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
     responseFunnelData = [];
     chartData = [];
     financialdetails = 'More details';
