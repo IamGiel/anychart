@@ -10,31 +10,27 @@ import 'anychart';
 export class SupplierdataComponent implements OnInit {
     @ViewChild('target') container;
     @ViewChild('owner') second;
-    @ViewChild('response') response;
+    @ViewChild('responsefunnel') responsefunnel;
+    @ViewChild('dbrating') dbrating;
+    @ViewChild('dbserrating') dbserrating;
+    @ViewChild('fdbpayindex') fdbpayindex;
+    @ViewChild('eoverallrating') eoverallrating;
+    @ViewChild('elaborhuman') elaborhuman;
+    @ViewChild('eethics') eethics;
+    @ViewChild('eappearances') eappearances;
+    @ViewChild('efraud') efraud;
+    @ViewChild('ecorruption') ecorruption;
+
+    @ViewChild('overallapperances') overallapperances;
+    @ViewChild('ldiscrimination') ldiscrimination;
+    @ViewChild('lhumanrights') lhumanrights;
+
+    @ViewChild('basicmap') basicmap;
 
     constructor() {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
 
-    offClickHandler(event: any) {
-        if (!this.container.nativeElement.contains(event.target)) {
-            // check click origin
-            this.ffilter = false;
-            this.envfilter = false;
-            this.ethicalfilter = false;
-            this.laborfilter = false;
-
-            this.showFinancialdropdown = false;
-            this.showEthicaldropdown = false;
-            this.showEnvdropdown = false;
-            this.showlabordropdown = false;
-        }
-        if (!this.second.nativeElement.contains(event.target)) {
-            // check click origin
-            this.ownershipfilter = false;
-            this.resfilter = false;
-        }
-    }
     responseFunnelData = [];
     chartData = [];
     financialdetails = 'More details';
@@ -79,6 +75,11 @@ export class SupplierdataComponent implements OnInit {
     subtab = 'HQ location';
     financialrating = false;
     financialserrating = false;
+    dbpayindex = false;
+    overallrating = false;
+    laborhuman = false;
+    ethics = false;
+    appearances = false;
 
     splineData = [
         { x: 'January', value: 0 },
@@ -91,10 +92,70 @@ export class SupplierdataComponent implements OnInit {
         { x: 'august', value: 2 },
         { x: 'sept', value: 0 }
     ];
-    @ViewChild('myDiv') myDivRef: ElementRef;
-    // host: {
-    //     '(document:click)': 'onClick($event)',
-    // };
+
+    offClickHandler(event: any) {
+        if (!this.container.nativeElement.contains(event.target)) {
+            // check click origin
+            this.ffilter = false;
+            this.envfilter = false;
+            this.ethicalfilter = false;
+            this.laborfilter = false;
+
+            this.showFinancialdropdown = false;
+            this.showEthicaldropdown = false;
+            this.showEnvdropdown = false;
+            this.showlabordropdown = false;
+        }
+        if (!this.second.nativeElement.contains(event.target)) {
+            // check click origin
+            this.ownershipfilter = false;
+            // this.resfilter = false;
+        }
+        if (!this.responsefunnel.nativeElement.contains(event.target)) {
+            this.resfilter = false;
+        }
+
+        if (!this.dbrating.nativeElement.contains(event.target)) {
+            this.financialrating = false;
+        }
+        if (!this.dbserrating.nativeElement.contains(event.target)) {
+            this.financialserrating = false;
+        }
+        if (!this.fdbpayindex.nativeElement.contains(event.target)) {
+            this.dbpayindex = false;
+        }
+        if (!this.eoverallrating.nativeElement.contains(event.target)) {
+            this.overallrating = false;
+        }
+        if (!this.elaborhuman.nativeElement.contains(event.target)) {
+            this.laborhuman = false;
+        }
+        if (!this.eethics.nativeElement.contains(event.target)) {
+            this.ethics = false;
+        }
+        if (!this.eappearances.nativeElement.contains(event.target)) {
+            this.appearances = false;
+        }
+        if (!this.ecorruption.nativeElement.contains(event.target)) {
+            this.corruption = false;
+        }
+        if (!this.efraud.nativeElement.contains(event.target)) {
+            this.fraud = false;
+        }
+
+        if (!this.overallapperances.nativeElement.contains(event.target)) {
+            this.laborapperances = false;
+        }
+        if (!this.ldiscrimination.nativeElement.contains(event.target)) {
+            this.discrimination = false;
+        }
+        if (!this.lhumanrights.nativeElement.contains(event.target)) {
+            this.humanrights = false;
+        }
+        if (!this.basicmap.nativeElement.contains(event.target)) {
+            this.mapfilter = false;
+        }
+    }
 
     maintabClicked(tab: string) {
         this.activeTab = tab;
@@ -167,20 +228,49 @@ export class SupplierdataComponent implements OnInit {
             this.ethicalfilter = false;
             this.ownershipfilter = !this.ownershipfilter;
             this.resfilter = false;
-        } else if (type == 'response') {
+        } else if (type == 'responsefunnel') {
             this.resfilter = !this.resfilter;
+            console.log(this.resfilter, type, 'khk');
             this.laborfilter = false;
             this.ffilter = false;
             this.envfilter = false;
             this.ethicalfilter = false;
             this.ownershipfilter = false;
         } else if (type == 'financialrating') {
-            alert(1);
             this.financialrating = !this.financialrating;
         } else if (type == 'financialserrating') {
             this.financialserrating = !this.financialserrating;
+        } else if (type == 'dbpayindex') {
+            this.dbpayindex = !this.dbpayindex;
+        } else if (type == 'overallrating') {
+            this.overallrating = !this.overallrating;
+        } else if (type == 'laborhuman') {
+            this.laborhuman = !this.laborhuman;
+        } else if (type == 'ethics') {
+            this.ethics = !this.ethics;
+        } else if (type == 'appearances') {
+            this.appearances = !this.appearances;
+        } else if (type == 'corruption') {
+            this.corruption = !this.corruption;
+        } else if (type == 'fraud') {
+            this.fraud = !this.fraud;
+        } else if (type == 'laborapperances') {
+            this.laborapperances = !this.laborapperances;
+        } else if (type == 'discrimination') {
+            this.discrimination = !this.discrimination;
+        } else if (type == 'humanrights') {
+            this.humanrights = !this.humanrights;
+        } else if (type == 'mapfilter') {
+            this.mapfilter = !this.mapfilter;
         }
     } // openFilterDetails
+
+    fraud = false;
+    corruption = false;
+    laborapperances = false;
+    discrimination = false;
+    humanrights = false;
+    mapfilter = false;
 
     ngOnInit() {
         this.clickfinance = 'D&B Rating';
