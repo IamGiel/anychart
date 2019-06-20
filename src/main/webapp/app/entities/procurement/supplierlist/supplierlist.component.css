@@ -1315,5 +1315,5 @@ button:focus {
     margin: auto;
 }
 .top-border {
-    border-top: 1px solid hsla(0, 0%, 41%, 0.29) !important;
+    border-top: 1px solid #f2f2f2 !important;
 }
