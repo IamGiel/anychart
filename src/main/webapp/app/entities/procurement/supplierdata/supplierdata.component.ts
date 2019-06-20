@@ -28,6 +28,11 @@ export class SupplierdataComponent implements OnInit {
 
     @ViewChild('basicmap') basicmap;
 
+    @ViewChild('eenvironmnt') eenvironmnt;
+    @ViewChild('esustanable') esustanable;
+    @ViewChild('lhealthspace') lhealthspace;
+    // @ViewChild('basicmap') basicmap;
+
     constructor(private modalService: NgbModal) {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
@@ -181,7 +186,33 @@ export class SupplierdataComponent implements OnInit {
         if (!this.basicmap.nativeElement.contains(event.target)) {
             this.mapfilter = false;
         }
+        if (!this.eenvironmnt.nativeElement.contains(event.target)) {
+            this.eenv = false;
+        }
+        if (!this.esustanable.nativeElement.contains(event.target)) {
+            this.sustainable = false;
+        }
+        if (!this.edowjones.nativeElement.contains(event.target)) {
+            this.dowjones = false;
+        }
+        if (!this.eregulatory.nativeElement.contains(event.target)) {
+            this.regulatory = false;
+        }
+        if (!this.esanctions.nativeElement.contains(event.target)) {
+            this.sanctions = false;
+        }
+        if (!this.lhealthspace.nativeElement.contains(event.target)) {
+            this.healthsafety = false;
+        }
+        if (!this.eworkspace.nativeElement.contains(event.target)) {
+            this.workspace = false;
+        }
     }
+
+    @ViewChild('edowjones') edowjones;
+    @ViewChild('eregulatory') eregulatory;
+    @ViewChild('esanctions') esanctions;
+    @ViewChild('eworkspace') eworkspace;
 
     maintabClicked(tab: string) {
         this.activeTab = tab;
@@ -288,6 +319,20 @@ export class SupplierdataComponent implements OnInit {
             this.humanrights = !this.humanrights;
         } else if (type == 'mapfilter') {
             this.mapfilter = !this.mapfilter;
+        } else if (type == 'eenv') {
+            this.eenv = !this.eenv;
+        } else if (type == 'sustainable') {
+            this.sustainable = !this.sustainable;
+        } else if (type == 'dowjones') {
+            this.dowjones = !this.dowjones;
+        } else if (type == 'sanctions') {
+            this.sanctions = !this.sanctions;
+        } else if (type == 'regulatory') {
+            this.regulatory = !this.regulatory;
+        } else if (type == 'workspace') {
+            this.workspace = !this.workspace;
+        } else if (type == 'healthsafety') {
+            this.healthsafety = !this.healthsafety;
         }
     } // openFilterDetails
 
@@ -297,6 +342,13 @@ export class SupplierdataComponent implements OnInit {
     discrimination = false;
     humanrights = false;
     mapfilter = false;
+    eenv = false;
+    sustainable = false;
+    dowjones = false;
+    regulatory = false;
+    sanctions = false;
+    workspace = false;
+    healthsafety = false;
 
     ngOnInit() {
         this.clickfinance = 'D&B Rating';
