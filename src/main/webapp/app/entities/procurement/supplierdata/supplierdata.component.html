@@ -1,5 +1,6 @@
 <div>
   <div class="container">
+      <i-feather name="IconFileText" class="big"></i-feather>
     <div class="row" #target>
       <div class="col-md-3 pl-0">
         <div class="card" [ngClass]="{'card-active , card1': showMore !== ''}">
@@ -12,7 +13,7 @@
                 <p class="filtertext">Groups</p>
                 <p class="filtertext">Flags</p>
                 <p class="filtertext">Response</p>
-                <p class="filtertext">Advanced</p>
+                <p  (click)="open(content)" class="filtertext">Advanced</p>
               </div>
               <hr>
               <div class="saved-filters">
@@ -244,8 +245,9 @@
             <div class="card" #dbserrating>
               <div class="card-body">
                 <span class="card-title">D&B SER Rating</span>
-                <img class="filter" (click)="openFilterDetails('financialserrating')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('financialserrating');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('financialserrating')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="financialserrating" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -276,8 +278,9 @@
             <div class="card" #dbrating>
               <div class="card-body">
                 <span class="card-title">D&B Financial Strength</span>
-                <img class="filter" (click)="openFilterDetails('financialrating')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('financialrating');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('financialrating')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="financialrating" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -292,8 +295,9 @@
                   </div>
                 </div>
                 <div>
-                  <!-- <jhi-column-chart [chartData]="datas"></jhi-column-chart> -->
-                  <jhi-bar [chartData]="treeData" [id]="'treeGraph'"></jhi-bar>
+                    <jhi-stack-bar [chartData]="treeData" [id]="'treeGraph'"></jhi-stack-bar>
+                  <!-- <jhi-column-chart [chartData]="treeData"></jhi-column-chart> -->
+                  <!-- <jhi-bar [chartData]="treeData" [id]="'treeGraph'"></jhi-bar> -->
                 </div>
               </div>
             </div>
@@ -302,8 +306,9 @@
             <div class="card" #fdbpayindex>
               <div class="card-body">
                 <span class="card-title">D&B Paydex</span>
-                <img class="filter" (click)="openFilterDetails('dbpayindex')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('dbpayindex');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('dbpayindex')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="dbpayindex" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -624,7 +629,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card" #elaborhuman>
+            <div class="card" #ecorruption>
               <div class="card-body">
                 <span class="card-title">Corruption Issues</span>
                 <img class="filter" (click)="openFilterDetails('laborhuman')"
@@ -662,7 +667,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card" #elaborhuman>
+            <div class="card" #efraud>
               <div class="card-body">
                 <span class="card-title">Fraud Issues </span>
                 <img class="filter" (click)="openFilterDetails('laborhuman')"
@@ -783,121 +788,6 @@
       </ng-template>
     </ngb-carousel>
   </div>
-
-  <!-- <div class="container">
-    <div class="row" #myDiv>
-      <div class="col-md-4 pl-0">
-        <div class="card" #eappearances>
-          <div class="card-body">
-            <span class="card-title">Overall Appearances</span>
-            <img class="filter" (click)="openFilterDetails('appearances')"
-              src="../../../../content/images/filter.svg" />
-            <div *ngIf="appearances" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext">Groups</p>
-                <p class="filtertext">Flags</p>
-                <p class="filtertext">Response</p>
-                <p class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-              <div class="abc">
-                <div>
-                  <span class="rectangle4"></span>
-                  <span class="rectangle3"></span>
-                  <span class="rectangle2"></span>
-                  <span class="rectangle1"></span>
-                  <span class="rectangle6"></span>
-                </div>
-              </div>
-              <div class="risk risk-appearance">
-                <p>APPEARANCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 pl-0">
-        <div class="card" #ecorruption>
-          <div class="card-body">
-            <span class="card-title">Corruption Issues</span>
-            <span (click)="openFilterDetails('corruption')"><i-filter class="filter"></i-filter></span>
-            <div *ngIf="corruption" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext">Groups</p>
-                <p class="filtertext">Flags</p>
-                <p class="filtertext">Response</p>
-                <p class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-              <div class="abc">
-                <div>
-                  <span class="rectangle4"></span>
-                  <span class="rectangle3"></span>
-                  <span class="rectangle2"></span>
-                  <span class="rectangle1"></span>
-                  <span class="rectangle6"></span>
-                </div>
-              </div>
-              <div class="risk risk-appearance">
-                <p>APPEARANCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 pl-0">
-        <div class="card" #efraud>
-          <div class="card-body">
-            <span class="card-title">Fraud Issues</span>
-            <span (click)="openFilterDetails('fraud')" ><i-filter class="filter"></i-filter></span>
-            <div *ngIf="fraud" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext">Groups</p>
-                <p class="filtertext">Flags</p>
-                <p class="filtertext">Response</p>
-                <p class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-              <div class="abc">
-                <div>
-                  <span class="rectangle4"></span>
-                  <span class="rectangle3"></span>
-                  <span class="rectangle2"></span>
-                  <span class="rectangle1"></span>
-                  <span class="rectangle6"></span>
-                </div>
-              </div>
-              <div class="risk risk-appearance">
-                <p>APPEARANCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
 </div>
 <div class="bg-color" [hidden]="!showLabourGraph">
   <div class="container">
@@ -1098,119 +988,6 @@
         </div>
       </ng-template>
     </ngb-carousel>
-    <!-- <div class="row">
-      <div class="col-md-4 pl-0">
-        <div class="card" #overallapperances>
-          <div class="card-body">
-            <span class="card-title">Overall Appearances</span>
-            <img class="filter" (click)="openFilterDetails('laborapperances')"
-              src="../../../../content/images/filter.svg" />
-            <div *ngIf="laborapperances" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext">Groups</p>
-                <p class="filtertext">Flags</p>
-                <p class="filtertext">Response</p>
-                <p class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-              <div class="abc">
-                <div>
-                  <span class="rectangle4"></span>
-                  <span class="rectangle3"></span>
-                  <span class="rectangle2"></span>
-                  <span class="rectangle1"></span>
-                  <span class="rectangle6"></span>
-                </div>
-              </div>
-              <div class="risk risk-appearance">
-                <p>APPEARANCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 pl-0">
-        <div class="card" #ldiscrimination>
-          <div class="card-body">
-            <span class="card-title">Discrimanation/workforce.</span>
-            <img class="filter" (click)="openFilterDetails('discrimination')"
-              src="../../../../content/images/filter.svg" />
-            <div *ngIf="discrimination" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext">Groups</p>
-                <p class="filtertext">Flags</p>
-                <p class="filtertext">Response</p>
-                <p class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-              <div class="abc">
-                <div>
-                  <span class="rectangle4"></span>
-                  <span class="rectangle3"></span>
-                  <span class="rectangle2"></span>
-                  <span class="rectangle1"></span>
-                  <span class="rectangle6"></span>
-                </div>
-              </div>
-              <div class="risk risk-appearance">
-                <p>APPEARANCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 pl-0">
-        <div class="card" #lhumanrights>
-          <div class="card-body">
-            <span class="card-title">Human Right Issues</span>
-            <img class="filter" (click)="openFilterDetails('humanrights')"
-              src="../../../../content/images/filter.svg" />
-            <div *ngIf="humanrights" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext">Groups</p>
-                <p class="filtertext">Flags</p>
-                <p class="filtertext">Response</p>
-                <p class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-              <div class="abc">
-                <div>
-                  <span class="rectangle4"></span>
-                  <span class="rectangle3"></span>
-                  <span class="rectangle2"></span>
-                  <span class="rectangle1"></span>
-                  <span class="rectangle6"></span>
-                </div>
-              </div>
-              <div class="risk risk-appearance">
-                <p>APPEARANCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 
 </div>
@@ -1413,11 +1190,11 @@
     <div class="modal-outline">
       <span>Add Filters</span>
       <div>
-        <!-- <select class="browser-default custom-select" [(ngModel)]="item1">
+        <select class="browser-default custom-select" [(ngModel)]="item1">
           <option *ngFor="let item of filter1">
             {{item.value}}
           </option>
-        </select> -->
+        </select>
         <select class="browser-default custom-select" [(ngModel)]="item2">
           <option *ngFor="let item of filter2">
             {{item.value}}
@@ -1436,22 +1213,29 @@
             {{item.value}}
           </option>
         </select>
-        <button type="button" class="btn float-R">Add</button>
+        <!-- <button type="button" class="btn float-R">Add</button> -->
         <div>
-            <!-- <button type="button" class="btn float-R">Add</button> -->
+            <button type="button" class="btn float-R">Add</button>
           </div>
       </div>
     </div>
   </div>
-  <div class="modal-footer">
-    <span>
+
+  <div>
+    <!-- <span>
         <button type="button" class="btn float-L">Save Filter</button>
-    </span>
-    <span>
-        <button type="button" class=" ">Cancel</button>
-    </span>
-    <span>
-        <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
-    </span>
+    </span> -->
+    <div class="def">
+        <span>
+            <button type="button" class="btn float-L">Save Filter</button>
+        </span>
+        <span>
+            <button type="button" class="cancelbtn">Cancel</button>
+        </span>
+        <span>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+        </span>
+    </div>
+   
   </div>
 </ng-template>
