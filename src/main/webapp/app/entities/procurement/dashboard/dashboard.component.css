@@ -46,4 +46,10 @@ span.active {
 
 .row-padd {
     padding: 28px 0px 40px 0px;
+    margin-top: -22px;
+}
+@media only screen and (max-width: 768px) {
+    .row-padd {
+        margin-top: -12px;
+    }
 }
