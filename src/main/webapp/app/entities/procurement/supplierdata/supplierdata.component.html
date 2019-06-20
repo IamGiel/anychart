@@ -245,9 +245,9 @@
             <div class="card" #dbserrating>
               <div class="card-body">
                 <span class="card-title">D&B SER Rating</span>
-                <i-filter class="filter" (click)="openFilterDetails('financialserrating');"></i-filter>
-                <!-- <img class="filter" (click)="openFilterDetails('financialserrating')"
-                  src="../../../../content/images/filter.svg" /> -->
+                <!-- <i-filter class="filter" (click)="openFilterDetails('financialserrating');"></i-filter> -->
+                <img class="filter" (click)="openFilterDetails('financialserrating')"
+                  src="../../../../content/images/filter.svg" />
                 <div *ngIf="financialserrating" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -354,8 +354,9 @@
             <div class="card" #eoverallrating>
               <div class="card-body">
                 <span class="card-title">Overall Rating</span>
-                <img class="filter" (click)="openFilterDetails('overallrating')"
-                  src="../../../../content/images/filter.svg" />
+                <!-- <img class="filter" (click)="openFilterDetails('overallrating')"
+                  src="../../../../content/images/filter.svg" /> -->
+                  <i-filter class="filter" (click)="openFilterDetails('overallrating');"></i-filter>
                 <div *ngIf="overallrating" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -392,8 +393,9 @@
             <div class="card" #elaborhuman>
               <div class="card-body">
                 <span class="card-title">Labour& Human rights</span>
-                <img class="filter" (click)="openFilterDetails('laborhuman')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('laborhuman');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('laborhuman')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="laborhuman" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -430,7 +432,8 @@
             <div class="card" #eethics>
               <div class="card-body">
                 <span class="card-title">Ethics</span>
-                <img class="filter" (click)="openFilterDetails('ethics')" src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('ethics');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('ethics')" src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="ethics" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -471,8 +474,9 @@
             <div class="card" #eenvironmnt>
               <div class="card-body">
                 <span class="card-title">Environment</span>
-                <img class="filter" (click)="openFilterDetails('eenv')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('eenv');"></i-filter>  
+                <!-- <img class="filter" (click)="openFilterDetails('eenv')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="eenv" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -509,8 +513,9 @@
             <div class="card" #esustanable>
               <div class="card-body">
                 <span class="card-title">Sustainable procurem..</span>
-                <img class="filter" (click)="openFilterDetails('sustainable')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('sustainable');"></i-filter>  
+                <!-- <img class="filter" (click)="openFilterDetails('sustainable')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="sustainable" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -547,8 +552,9 @@
             <div class="card" #edowjones>
               <div class="card-body">
                 <span class="card-title">Dow Jones AME </span>
-                <img class="filter" (click)="openFilterDetails('dowjones')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('dowjones');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('dowjones')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="dowjones" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -595,8 +601,9 @@
             <div class="card" #eappearances>
               <div class="card-body">
                 <span class="card-title">Overall Appearances</span>
-                <img class="filter" (click)="openFilterDetails('appearances')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('appearances');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('appearances')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="appearances" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -632,8 +639,9 @@
             <div class="card" #ecorruption>
               <div class="card-body">
                 <span class="card-title">Corruption Issues</span>
-                <img class="filter" (click)="openFilterDetails('corruption')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('corruption');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('corruption')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="corruption" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -670,8 +678,9 @@
             <div class="card" #efraud>
               <div class="card-body">
                 <span class="card-title">Fraud Issues </span>
-                <img class="filter" (click)="openFilterDetails('fraud')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('corruption');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('fraud')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="fraud" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -712,8 +721,9 @@
             <div class="card" #eregulatory>
               <div class="card-body">
                 <span class="card-title">Regulatory Issues</span>
-                <img class="filter" (click)="openFilterDetails('regulatory')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('regulatory');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('regulatory')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="regulatory" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -750,8 +760,9 @@
             <div class="card" #esanctions>
               <div class="card-body">
                 <span class="card-title">Sanctions</span>
-                <img class="filter" (click)="openFilterDetails('sanctions')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('sanctions');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('sanctions')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="sanctions" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -798,8 +809,9 @@
             <div class="card" #overallapperances>
               <div class="card-body">
                 <span class="card-title">Overall Appearances</span>
-                <img class="filter" (click)="openFilterDetails('laborapperances')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('laborapperances');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('laborapperances')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="laborapperances" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -835,8 +847,9 @@
             <div class="card" #ldiscrimination>
               <div class="card-body">
                 <span class="card-title">Discrimanation/workforce.</span>
-                <img class="filter" (click)="openFilterDetails('discrimination')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('discrimination');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('discrimination')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="discrimination" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -872,8 +885,9 @@
             <div class="card" #lhumanrights>
               <div class="card-body">
                 <span class="card-title">Human Right Issues</span>
-                <img class="filter" (click)="openFilterDetails('humanrights')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('humanrights');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('humanrights')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="humanrights" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -913,8 +927,9 @@
             <div class="card" #eworkspace>
               <div class="card-body">
                 <span class="card-title">Workforce Disputes</span>
-                <img class="filter" (click)="openFilterDetails('workspace')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('workspace');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('workspace')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="workspace" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -951,8 +966,9 @@
             <div class="card" #lhealthspace>
               <div class="card-body">
                 <span class="card-title">Workforce Health/Safety Is..</span>
-                <img class="filter" (click)="openFilterDetails('healthsafety')"
-                  src="../../../../content/images/filter.svg" />
+                <i-filter class="filter" (click)="openFilterDetails('healthsafety');"></i-filter>
+                <!-- <img class="filter" (click)="openFilterDetails('healthsafety')"
+                  src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="healthsafety" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
@@ -997,8 +1013,9 @@
       <div class="card">
         <div class="card-body pb-0">
           <span class="card-title">Response Stats</span>
-          <img class="filter" #owner (click)="openFilterDetails('ownership')"
-            src="../../../../content/images/filter.svg" />
+          <i-filter class="filter" (click)="openFilterDetails('ownership');"></i-filter>
+          <!-- <img class="filter" #owner (click)="openFilterDetails('ownership')"
+            src="../../../../content/images/filter.svg" /> -->
           <div *ngIf="ownershipfilter" class="map-dropdown-contents">
             <p class="filterby">FILTER BY</p>
             <div class="filter-div">
@@ -1039,8 +1056,9 @@
       <div class="card">
         <div class="card-body pb-0">
           <span class="card-title">Response Funnel</span>
-          <img class="filter" #responsefunnel (click)="openFilterDetails('responsefunnel')"
-            src="../../../../content/images/filter.svg" />
+          <i-filter class="filter" (click)="openFilterDetails('responsefunnel');"></i-filter>
+          <!-- <img class="filter" #responsefunnel (click)="openFilterDetails('responsefunnel')"
+            src="../../../../content/images/filter.svg" /> -->
           <div *ngIf="resfilter" class="map-dropdown-contents">
             <p class="filterby">FILTER BY</p>
             <div class="filter-div">
@@ -1080,8 +1098,9 @@
         </ul>
       </div>
       <div class="float-R pt-4">
-        <img class="filter" #basicmap (click)="openFilterDetails('mapfilter')"
-          src="../../../../content/images/filter.svg" />
+          <i-filter class="filter"  #basicmap (click)="openFilterDetails('mapfilter')"></i-filter>
+        <!-- <img class="filter" #basicmap (click)="openFilterDetails('mapfilter')"
+          src="../../../../content/images/filter.svg" /> -->
         <div *ngIf="mapfilter" class="map-dropdown-contents">
           <p class="filterby">FILTER BY</p>
           <div class="filter-div">
