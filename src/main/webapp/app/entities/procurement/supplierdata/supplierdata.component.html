@@ -320,7 +320,7 @@
                 <div class="padd25">
                   <jhi-spline-chart [chartData]="columnData" [id]="'paydexid2'" [labels]="false">
                   </jhi-spline-chart>
-                  <div class="rectangle" [ngStyle]="{'bottom': showSubCards==='true'? '17px':'17px'}">
+                  <div class="rectangle" [ngStyle]="{'bottom': showSubCards? '17px':'17px'}">
                   </div>
                   <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
                     <p>Low Risk</p>
@@ -1279,7 +1279,7 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <jhi-bar [chartData]="responseFunnelData" [id]="'responseGraph'"></jhi-bar>
+              <jhi-stack-bar [chartData]="responseFunnelData" [id]="'responseGraph'"></jhi-stack-bar>
             </div>
           </div>
         </div>
@@ -1402,3 +1402,56 @@
     </div>
   </div>
 </div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Filter</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-outline">
+      <span>Add Filters</span>
+      <div>
+        <!-- <select class="browser-default custom-select" [(ngModel)]="item1">
+          <option *ngFor="let item of filter1">
+            {{item.value}}
+          </option>
+        </select> -->
+        <select class="browser-default custom-select" [(ngModel)]="item2">
+          <option *ngFor="let item of filter2">
+            {{item.value}}
+          </option>
+        </select>
+      </div>
+      <hr>
+      <div>
+        <select class="browser-default custom-select" [(ngModel)]="item3">
+          <option *ngFor="let item of filter3">
+            {{item.value}}
+          </option>
+        </select>
+        <select class="browser-default custom-select" [(ngModel)]="item4">
+          <option *ngFor="let item of filter4">
+            {{item.value}}
+          </option>
+        </select>
+        <button type="button" class="btn float-R">Add</button>
+        <div>
+            <!-- <button type="button" class="btn float-R">Add</button> -->
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <span>
+        <button type="button" class="btn float-L">Save Filter</button>
+    </span>
+    <span>
+        <button type="button" class=" ">Cancel</button>
+    </span>
+    <span>
+        <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+    </span>
+  </div>
+</ng-template>

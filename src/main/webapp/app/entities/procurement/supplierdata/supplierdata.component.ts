@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'anychart';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'jhi-supplierdata',
@@ -27,9 +28,10 @@ export class SupplierdataComponent implements OnInit {
 
     @ViewChild('basicmap') basicmap;
 
-    constructor() {
+    constructor(private modalService: NgbModal) {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
+    closeResult: string;
 
     images = [1, 2, 3, 4, 5, 6].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
     responseFunnelData = [];
@@ -81,6 +83,29 @@ export class SupplierdataComponent implements OnInit {
     laborhuman = false;
     ethics = false;
     appearances = false;
+    item1 = 'Financial Data';
+    item2 = 'D&B Rating';
+    item3 = 'Higher than';
+    item4 = '1';
+    filter1 = [
+        { id: '1', value: 'Financial Data' },
+        { id: '2', value: 'Environmental Data' },
+        { id: '3', value: 'Ethical & Regulatory Data' },
+        { id: '4', value: 'Labour,Health & Saftey' }
+    ];
+    filter2 = [{ id: '1', value: 'D&B Rating' }, { id: '2', value: 'D&B SER Rating' }, { id: '3', value: 'D&B Paydex' }];
+    filter3 = [{ id: '1', value: 'Higher than' }, { id: '2', value: 'Lower than' }, { id: '3', value: 'Between' }];
+    filter4 = [
+        { id: '1', value: '1' },
+        { id: '2', value: '2' },
+        { id: '3', value: '3' },
+        { id: '4', value: '4' },
+        { id: '5', value: '5' },
+        { id: '6', value: '6' },
+        { id: '7', value: '7' },
+        { id: '8', value: '8' },
+        { id: '9', value: '9' }
+    ];
 
     splineData = [
         { x: 'January', value: 0 },
@@ -449,6 +474,26 @@ export class SupplierdataComponent implements OnInit {
             this.showLabourGraph = false;
             this.labordetails = 'More details';
             this.showLabor = '';
+        }
+    }
+    open(content) {
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+            result => {
+                this.closeResult = `Closed with: ${result}`;
+            },
+            reason => {
+                this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+            }
+        );
+    }
+
+    private getDismissReason(reason: any): string {
+        if (reason === ModalDismissReasons.ESC) {
+            return 'by pressing ESC';
+        } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        } else {
+            return `with: ${reason}`;
         }
     }
 }
