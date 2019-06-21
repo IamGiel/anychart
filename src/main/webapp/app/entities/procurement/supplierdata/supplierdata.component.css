@@ -524,6 +524,7 @@ span.inactive1 {
 .modal-outline {
     border: 1px solid #e7e7e7;
     padding: 15px;
+    height: 200px;
 }
 #modal-basic-title {
     color: #5f4bc4;
@@ -552,8 +553,16 @@ span.inactive1 {
     font-size: 13px;
     font-weight: 700;
 }
+.cancelbtn {
+    background-color: #ffffff;
+    color: #5f4bc4;
+    font-size: 13px;
+    font-weight: 700;
+    outline: none;
+    border: 0;
+}
 
-/deep/ .carousel-control-prev {
+::ng-deep .carousel-control-prev {
     position: absolute !important;
     top: 50% !important;
     left: -5% !important;
@@ -561,7 +570,7 @@ span.inactive1 {
     height: 20px;
 }
 
-/deep/ .carousel-control-next {
+::ng-deep .carousel-control-next {
     position: absolute;
     right: -5%;
     width: 20px;
@@ -569,14 +578,26 @@ span.inactive1 {
     height: 20px;
 }
 
-/deep/ .carousel-control-prev-icon {
+::ng-deep .carousel-control-prev-icon {
     background-image: url(../../../../content/images/next.png);
 }
 
-/deep/ .carousel-control-next-icon {
+::ng-deep .carousel-control-next-icon {
     background-image: url(../../../../content/images/next.png);
 }
 
 .ngb-carousel {
     outline: none;
+}
+
+.def {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.def span {
+    margin-left: 20px;
+}
+.def span:nth-child(3) {
+    margin-right: 20px;
 }

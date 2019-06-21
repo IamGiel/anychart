@@ -31,6 +31,7 @@ export class SupplierdataComponent implements OnInit {
     @ViewChild('eenvironmnt') eenvironmnt;
     @ViewChild('esustanable') esustanable;
     @ViewChild('lhealthspace') lhealthspace;
+    @ViewChild('maptest') maptest;
     // @ViewChild('basicmap') basicmap;
 
     constructor(private modalService: NgbModal) {
@@ -59,7 +60,7 @@ export class SupplierdataComponent implements OnInit {
     showEthical = '';
     showLabor = '';
     mapdropdown = 'Basic Map';
-    mapdrop: boolean;
+    mapdrop = false;
     ffilter = false;
     envfilter = false;
     ethicalfilter = false;
@@ -183,8 +184,11 @@ export class SupplierdataComponent implements OnInit {
         if (!this.lhumanrights.nativeElement.contains(event.target)) {
             this.humanrights = false;
         }
-        if (!this.basicmap.nativeElement.contains(event.target)) {
+        if (!this.maptest.nativeElement.contains(event.target)) {
             this.mapfilter = false;
+        }
+        if (!this.basicmap.nativeElement.contains(event.target)) {
+            this.mapdrop = false;
         }
         if (!this.eenvironmnt.nativeElement.contains(event.target)) {
             this.eenv = false;
@@ -375,6 +379,11 @@ export class SupplierdataComponent implements OnInit {
         this.responseFunnelData = [['Request', 0, 5], ['Response', 0, 10], ['Response Health', 5, 10]];
     }
 
+    selectMap(maptype: string) {
+        this.mapdropdown = maptype;
+        this.mapdrop = false;
+    }
+
     clickFinancial(data) {
         if (data === 'D&B Rating') {
             this.clickfinance = 'D&B Rating';
@@ -457,11 +466,6 @@ export class SupplierdataComponent implements OnInit {
             this.financialdetails = 'More details';
             this.showMore = '';
         }
-    }
-
-    selectMap(maptype: string) {
-        this.mapdropdown = maptype;
-        this.mapdrop = !this.mapdrop;
     }
 
     showHideEnivornData() {
