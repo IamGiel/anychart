@@ -112,6 +112,8 @@ export class SupplierdataComponent implements OnInit {
         { id: '8', value: '8' },
         { id: '9', value: '9' }
     ];
+    totalSelectFilterList = [];
+    sletectedFilter = '';
 
     splineData = [
         { x: 'January', value: 0 },
@@ -533,6 +535,8 @@ export class SupplierdataComponent implements OnInit {
         }
     }
     open(content) {
+        this.totalSelectFilterList = [];
+        console.log(content);
         this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
             result => {
                 this.closeResult = `Closed with: ${result}`;
@@ -551,5 +555,14 @@ export class SupplierdataComponent implements OnInit {
         } else {
             return `with: ${reason}`;
         }
+    }
+
+    addFilterList() {
+        this.totalSelectFilterList.push(this.item2 + ' ' + this.item3 + ' ' + this.item4);
+        this.sletectedFilter = this.totalSelectFilterList[0];
+    }
+
+    removeSelectedFilter(index) {
+        this.totalSelectFilterList.splice(index, 1);
     }
 }
