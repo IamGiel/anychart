@@ -40,6 +40,10 @@ export class SupplierlistComponent implements OnInit {
     searchKeyword: string;
     isCatManager: boolean = false;
 
+    showAddToGroupDropdown: boolean = false;
+    showCategoryDropdown: boolean = false;
+    showFlagDropdown: boolean = false;
+
     serPop = 'The Supplier Evaluation Risk Rating (SER) is risk metric that helps supply management professionals evaluate the long term risk of doing business with a supplier. The SER score is based on a scale of 1-9, with 1 representing the lowest level of risk and 9 implying the highest level of risk. For suppliers whose headquarters are located outside the United States and Canada, the SER predicts the likelihood that a supplier will cease operations or reorganize without paying all creditors in full, or obtain relief from creditors under state/federal law over the next 12 months.The SER provides a consistent risk ranking across the globe.';
     paydexPop = `PAYDEX is Dun & Bradstreet's unique dollar-weighted numerical indicator of how a firm paid its bills over the    past year, based on trade experiences reported to D&B by various vendors. The D&B PAYDEX Score ranges
     from 1 to 100, with higher scores indicating better payment performance. The tables below demonstrate how
