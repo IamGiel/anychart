@@ -626,7 +626,7 @@ span.inactive1 {
     list-style: none;
 }
 .savedFilterList li {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #e7e7e7;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -636,4 +636,46 @@ span.inactive1 {
     color: #615ec4;
     font-size: 15px;
     text-align: right;
+}
+
+.filterGroup {
+    margin: 0 0 -1em;
+    padding: 0;
+}
+
+.filterGroup li {
+    list-style: none;
+    padding-bottom: 1em;
+}
+
+.filterGroup li input[type='checkbox'] {
+    visibility: hidden;
+}
+.filterGroup li label {
+    cursor: pointer;
+}
+.filterGroup li input[type='checkbox'] + label:before {
+    border: 1px solid #e7e7e7;
+    content: '\00a0';
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 1em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 16px;
+}
+.filterGroup li input[type='checkbox']:checked + label:before {
+    background: #615ec4;
+    border: 1px solid #615ec4;
+    color: white;
+    content: '\2713';
+    text-align: center;
+}
+.filterGroup li input[type='checkbox']:checked + label:after {
+    font-weight: bold;
+}
+
+.filterGroup li input[type='checkbox']:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
 }

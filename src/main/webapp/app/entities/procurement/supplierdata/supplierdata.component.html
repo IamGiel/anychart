@@ -10,7 +10,7 @@
             <div *ngIf="ffilter" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
               <div class="filter-div">
-                <p class="filtertext">Groups</p>
+                <p class="filtertext" (click)="open(content3)">Groups</p>
                 <p class="filtertext">Flags</p>
                 <p class="filtertext">Response</p>
                 <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -66,7 +66,7 @@
             <div *ngIf="envfilter" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
               <div class="filter-div">
-                <p class="filtertext">Groups</p>
+                <p class="filtertext" (click)="open(content3)">Groups</p>
                 <p class="filtertext">Flags</p>
                 <p class="filtertext">Response</p>
                 <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -133,7 +133,7 @@
             <div *ngIf="ethicalfilter" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
               <div class="filter-div">
-                <p class="filtertext">Groups</p>
+                <p class="filtertext" (click)="open(content3)">Groups</p>
                 <p class="filtertext">Flags</p>
                 <p class="filtertext">Response</p>
                 <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -187,7 +187,7 @@
             <div *ngIf="laborfilter" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
               <div class="filter-div">
-                <p class="filtertext">Groups</p>
+                <p class="filtertext" (click)="open(content3)">Groups</p>
                 <p class="filtertext">Flags</p>
                 <p class="filtertext">Response</p>
                 <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -250,7 +250,7 @@
                 <div *ngIf="financialserrating" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -283,7 +283,7 @@
                 <div *ngIf="financialrating" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -311,7 +311,7 @@
                 <div *ngIf="dbpayindex" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -359,7 +359,7 @@
                 <div *ngIf="overallrating" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -398,7 +398,7 @@
                 <div *ngIf="laborhuman" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -436,7 +436,7 @@
                 <div *ngIf="ethics" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -479,7 +479,7 @@
                 <div *ngIf="eenv" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -518,7 +518,7 @@
                 <div *ngIf="sustainable" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -557,7 +557,7 @@
                 <div *ngIf="dowjones" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -606,7 +606,7 @@
                 <div *ngIf="appearances" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -644,7 +644,7 @@
                 <div *ngIf="corruption" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -683,7 +683,7 @@
                 <div *ngIf="fraud" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -726,7 +726,7 @@
                 <div *ngIf="regulatory" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -765,7 +765,7 @@
                 <div *ngIf="sanctions" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -814,7 +814,7 @@
                 <div *ngIf="laborapperances" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -852,7 +852,7 @@
                 <div *ngIf="discrimination" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -890,7 +890,7 @@
                 <div *ngIf="humanrights" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -932,7 +932,7 @@
                 <div *ngIf="workspace" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -971,7 +971,7 @@
                 <div *ngIf="healthsafety" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
-                    <p class="filtertext">Groups</p>
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext">Flags</p>
                     <p class="filtertext">Response</p>
                     <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -1018,7 +1018,7 @@
           <div *ngIf="ownershipfilter" class="map-dropdown-contents">
             <p class="filterby">FILTER BY</p>
             <div class="filter-div">
-              <p class="filtertext">Groups</p>
+              <p class="filtertext" (click)="open(content3)">Groups</p>
               <p class="filtertext">Flags</p>
               <p class="filtertext">Response</p>
               <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -1061,7 +1061,7 @@
           <div *ngIf="resfilter" class="map-dropdown-contents">
             <p class="filterby">FILTER BY</p>
             <div class="filter-div">
-              <p class="filtertext">Groups</p>
+              <p class="filtertext" (click)="open(content3)">Groups</p>
               <p class="filtertext">Flags</p>
               <p class="filtertext">Response</p>
               <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -1105,7 +1105,7 @@
         <div *ngIf="mapfilter" class="map-dropdown-contents">
           <p class="filterby">FILTER BY</p>
           <div class="filter-div">
-            <p class="filtertext">Groups</p>
+            <p class="filtertext" (click)="open(content3)">Groups</p>
             <p class="filtertext">Flags</p>
             <p class="filtertext">Response</p>
             <p  (click)="open(content)" class="filtertext">Advanced</p>
@@ -1296,29 +1296,75 @@
   </ng-template>
 
 <ng-template #content2 let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Saved Filter</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <span>Name of the filter</span>
-      <div>
-        <ul class="savedFilterList">
-          <li> D&B paydex higher than 5 <span>APPLY</span></li>
-          <li> sanction apperence more than 2 <span>APPLY</span></li>
-          <li> Ethics rating heigher than 20 <span>APPLY</span></li>
-          <li> D&B rating between 6 and 8 <span>APPLY</span></li>
-        </ul>
-      </div>
-    </div>
-  
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Saved Filter</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span>Name of the filter</span>
     <div>
-      <div class="def" style="padding-top: 0;">
-          <span>
-              <button type="button" class="btn float-R" (click)="modal.close('Save click')">CANCEL</button>
-          </span>
-      </div>
+      <ul class="savedFilterList">
+        <li> D&B paydex higher than 5 <span>APPLY</span></li>
+        <li> sanction apperence more than 2 <span>APPLY</span></li>
+        <li> Ethics rating heigher than 20 <span>APPLY</span></li>
+        <li> D&B rating between 6 and 8 <span>APPLY</span></li>
+      </ul>
     </div>
-  </ng-template>
+  </div>
+
+  <div>
+    <div class="def" style="padding-top: 0;">
+        <span>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click')">CANCEL</button>
+        </span>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #content3 let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Filter by group</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div>
+      <ul class="filterGroup">
+        <li>
+          <input type="checkbox" id="c1" name="cb">
+          <label for="c1">Group A</label>
+        </li>
+        <li>
+          <input type="checkbox" id="c2" name="cb">
+          <label for="c2">Group B</label>
+        </li>
+        <li>
+          <input type="checkbox" id="c3" name="cb">
+          <label for="c3">Group C</label>
+        </li>
+        <li>
+          <input type="checkbox" id="c4" name="cb">
+          <label for="c4">Group D</label>
+        </li>
+        <li>
+          <input type="checkbox" id="c5" name="cb">
+          <label for="c5">Group E</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div class="def" style="padding-top: 0;">
+      <span>
+        <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+      </span>
+      <span>
+          <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+      </span>
+    </div>
+  </div>
+</ng-template>
