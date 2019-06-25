@@ -59,6 +59,16 @@ export class SupplierlistComponent implements OnInit {
     (2)Composite Credit Appraisal: This measures the risk of business failure, from 1, indicating "minimal," to 4, "significant."`;
     selectedpendingItem: any;
     selectedSharedItem: any;
+    totalSelectFilterList = [];
+    sletectedFilter: any;
+    item1: any;
+    item2: any;
+    item3: any;
+    item4: any;
+    filter1: any;
+    filter2: any;
+    filter3: any;
+    filter4: any;
     constructor(
         private customPiwik: CustomPiwik,
         // private ds: DashboardService,
@@ -565,4 +575,7 @@ export class SupplierlistComponent implements OnInit {
             return m;
         });
     }
+    removeSelectedFilter(data: any) {}
+    open(data: any) {}
+    addFilterList() {}
 }
