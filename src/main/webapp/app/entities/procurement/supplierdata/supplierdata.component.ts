@@ -59,7 +59,7 @@ export class SupplierdataComponent implements OnInit {
     showEnv = '';
     showEthical = '';
     showLabor = '';
-    mapdropdown = 'Basic Map';
+    mapdropdown = 'Environmental PI';
     mapdrop = false;
     ffilter = false;
     envfilter = false;
@@ -232,7 +232,12 @@ export class SupplierdataComponent implements OnInit {
     }
 
     showdropdown(type: string) {
-        if (type == 'financial') {
+        if (type == 'default') {
+            this.showlabordropdown = false;
+            this.showFinancialdropdown = false;
+            this.showEnvdropdown = false;
+            this.showEthicaldropdown = false;
+        } else if (type == 'financial') {
             this.showFinancialdropdown = !this.showFinancialdropdown;
             this.showEnvdropdown = false;
             this.showEthicaldropdown = false;
@@ -256,6 +261,7 @@ export class SupplierdataComponent implements OnInit {
     }
 
     openFilterDetails(type: string) {
+        this.showdropdown('default');
         if (type == 'financial') {
             this.ffilter = !this.ffilter;
             this.envfilter = false;

@@ -30,7 +30,7 @@
         
                 <div class="row">
                   <div class="col-md-5">
-                      <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                      <div class="col-md-8 separator2 float-L" style="margin-left:0px;" *ngIf="total>0">
                           <span class="searchIcon">
                               <i-search class="featherPagFil2">
                           </span>
@@ -38,6 +38,25 @@
                             <input [ngModel]="searchKeyword" class="searchInput" style="color: grey;width: 134px" type="text" placeholder="Search Suppliers" (keydown.enter)="searchData($event,'shared')" (keyup)="showOldDate($event)"/>
                           </span>
                       </div>
+
+                      <!-- <div class="col-md-4 float-L">
+                        <span #supplierfilter>
+                          <i-filter class="filter" style="cursor: pointer;" (click)="globalFilterSubMenu = !globalFilterSubMenu"></i-filter>
+                            <div *ngIf="globalFilterSubMenu" class="map-dropdown-contents">
+                              <p class="filterby">FILTER BY</p>
+                              <div class="filter-div">
+                                <p class="filtertext" (click)="open(content3)">Groups</p>
+                                <p class="filtertext" (click)="open(content4)">Flags</p>
+                                <p class="filtertext" (click)="open(content5)">Response</p>
+                                <p  (click)="open(content)" class="filtertext">Advanced</p>
+                              </div>
+                              <hr>
+                              <div class="saved-filters" (click)="open(content2)">
+                                <p class="filtertext">Saved Filters</p>
+                              </div>
+                            </div>
+                        </span>
+                      </div> -->
                   </div>
                   <div class="col-md-6 text-right">
                     <jhi-my-pagination *ngIf="total>0"
@@ -366,3 +385,255 @@
                <p class="no-result"><b>No results found.</b> Please adjust your filter criteria. <span class="clear-filter" (click)='clearSearch()'>Clear Filters <i-x-square></i-x-square></span></p>
     </div>
 </div>
+
+
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Filter</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <ul class="selected">
+          <li *ngFor="let filter of totalSelectFilterList; let index = index">
+            {{filter}} &nbsp; <span (click)="removeSelectedFilter(index)">x</span>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-outline">
+        <span>Add Filters</span>
+        <div>
+          <select class="browser-default custom-select" [(ngModel)]="item1">
+            <option *ngFor="let item of filter1">
+              {{item.value}}
+            </option>
+          </select>
+          <select class="browser-default custom-select" [(ngModel)]="item2">
+            <option *ngFor="let item of filter2">
+              {{item.value}}
+            </option>
+          </select>
+        </div>
+        <hr>
+        <div>
+          <select class="browser-default custom-select" [(ngModel)]="item3">
+            <option *ngFor="let item of filter3">
+              {{item.value}}
+            </option>
+          </select>
+          <select class="browser-default custom-select" style="width: 18% !important" [(ngModel)]="item4">
+            <option *ngFor="let item of filter4">
+              {{item.value}}
+            </option>
+          </select>
+          <!-- <button type="button" class="btn float-R">Add</button> -->
+          <div>
+              <button type="button" class="btn float-R" (click)="addFilterList()">Add</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <!-- <span>
+          <button type="button" class="btn float-L">Save Filter</button>
+      </span> -->
+      <div class="def">
+          <span>
+              <button type="button" class="btn float-L" (click)="open(content1)">Save Filter</button>
+          </span>
+          <span>
+              <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+          </span>
+          <span>
+              <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+          </span>
+      </div>
+      
+    </div>
+  </ng-template>
+    
+  <ng-template #content1 let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Filter</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <span>Name of the filter</span>
+      <div>
+        <div>
+            <input type="text" class="filterInput" [(ngModel)]="sletectedFilter" placeholder="filter">
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <div class="def">
+          <span>
+              <button type="button" class="btn float-R" (click)="modal.close('Save click')">Save Filter</button>
+          </span>
+          <span>
+              <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+          </span>
+      </div>
+    </div>
+  </ng-template>
+  
+  <ng-template #content2 let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Saved Filter</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <span>Name of the filter</span>
+      <div>
+        <ul class="savedFilterList">
+          <li> D&B paydex higher than 5 <span>APPLY</span></li>
+          <li> sanction apperence more than 2 <span>APPLY</span></li>
+          <li> Ethics rating heigher than 20 <span>APPLY</span></li>
+          <li> D&B rating between 6 and 8 <span>APPLY</span></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div>
+      <div class="def" style="padding-top: 0;">
+          <span>
+              <button type="button" class="btn float-R" (click)="modal.close('Save click')">CANCEL</button>
+          </span>
+      </div>
+    </div>
+    </ng-template>
+    
+    <ng-template #content3 let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Filter by group</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <ul class="filterGroup">
+            <li>
+              <input type="checkbox" id="c1" name="cb">
+              <label for="c1">Group A</label>
+            </li>
+            <li>
+              <input type="checkbox" id="c2" name="cb">
+              <label for="c2">Group B</label>
+            </li>
+            <li>
+              <input type="checkbox" id="c3" name="cb">
+              <label for="c3">Group C</label>
+            </li>
+            <li>
+              <input type="checkbox" id="c4" name="cb">
+              <label for="c4">Group D</label>
+            </li>
+            <li>
+              <input type="checkbox" id="c5" name="cb">
+              <label for="c5">Group E</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+      <div>
+        <div class="def" style="padding-top: 0;">
+          <span>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+          </span>
+          <span>
+              <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+          </span>
+        </div>
+      </div>
+    </ng-template>
+  
+    <ng-template #content4 let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Filter by flags</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <ul class="filterGroup">
+            <li>
+              <input type="checkbox" id="f1" name="cb">
+              <label for="f1">Red Flag</label>
+            </li>
+            <li>
+              <input type="checkbox" id="f2" name="cb">
+              <label for="f2">Yellow Flag</label>
+            </li>
+            <li>
+              <input type="checkbox" id="f3" name="cb">
+              <label for="f3">Blue Flag</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+      <div>
+        <div class="def" style="padding-top: 0;">
+          <span>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+          </span>
+          <span>
+              <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+          </span>
+        </div>
+      </div>
+    </ng-template>
+  
+  
+    <ng-template #content5 let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Filter by response</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <ul class="filterGroup">
+            <li>
+              <input type="checkbox" id="r1" name="cb">
+              <label for="r1">Shared</label>
+            </li>
+            <li>
+              <input type="checkbox" id="r2" name="cb">
+              <label for="r2">Pending</label>
+            </li>
+            <li>
+              <input type="checkbox" id="r3" name="cb">
+              <label for="r3">Declined</label>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+      <div>
+        <div class="def" style="padding-top: 0;">
+          <span>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+          </span>
+          <span>
+              <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+          </span>
+        </div>
+      </div>
+    </ng-template>

@@ -1125,10 +1125,10 @@
         </button>
         <div *ngIf="mapdrop" class="map-dropdown-content">
           <a (click)="selectMap('Water Scarcity area')"><i *ngIf="mapdropdown == 'Water Scarcity area'"
-              class="fa fa-check"></i> Water Scarcity Area</a>
-          <a><i *ngIf="mapdropdown == 'Earthquake prone area'" class="fa fa-check"></i>Earthquake Prone Area</a>
+              class="fa fa-check"></i> Environmental PI</a>
+          <!-- <a><i *ngIf="mapdropdown == 'Earthquake prone area'" class="fa fa-check"></i>Earthquake Prone Area</a>
           <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
-              class="fa fa-check"></i>Terror Prone Area</a>
+              class="fa fa-check"></i>Terror Prone Area</a> -->
           <a (click)="selectMap('Basic Map')"><i *ngIf="mapdropdown == 'Basic Map'" class="fa fa-check"></i> Basic
             Map</a>
         </div>
@@ -1150,51 +1150,115 @@
       </div>
       <div class="table-div" *ngIf="activeTab =='Countries'">
         <div class="grid-table border-top">
-          <p class="country">India</p>
-          <p><span class="number">43</span><span class="percent">43%</span></p>
+          <p class="country">USA</p>
+          <p><span class="number">42</span><span class="percent">21%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">China</p>
-          <p><span class="number">21</span><span class="percent">21%</span></p>
+          <p><span class="number">40</span><span class="percent">20%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">UK</p>
+          <p><span class="number">30</span><span class="percent">15%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Japan</p>
+          <p><span class="number">28</span><span class="percent">14%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">India</p>
-          <p><span class="number">43</span><span class="percent">43%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">USA</p>
-          <p><span class="number">18</span><span class="percent">18%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">UAE</p>
-          <p><span class="number">12</span><span class="percent">12%</span></p>
+          <p><span class="number">18</span><span class="percent">9%</span></p>
         </div>
         <div class="grid-table">
           <p class="country">Germany</p>
-          <p><span class="number">4</span><span class="percent">4%</span></p>
+          <p><span class="number">12</span><span class="percent">6%</span></p>
         </div>
         <div class="grid-table">
-          <p class="country">France</p>
-          <p><span class="number">2</span><span class="percent">2%</span></p>
+          <p class="country">South Korea</p>
+          <p><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Russia</p>
+          <p><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Ghana</p>
+          <p><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Morocco</p>
+          <p><span class="number">8</span><span class="percent">4%</span></p>
         </div>
       </div>
       <div class="table-div" *ngIf="activeTab =='Cities'">
         <div class="grid-table border-top">
-          <p class="country">Bangalore</p>
-          <p class="mar50"><span class="number">43</span><span class="percent">43%</span></p>
+          <p class="country">Hongkong</p>
+          <p class="mar50"><span class="number">24</span><span class="percent">12%</span></p>
         </div>
         <div class="grid-table">
-          <p class="country">Shangai</p>
-          <p class="mar50"><span class="number">21</span><span class="percent">21%</span></p>
+          <p class="country">New York</p>
+          <p class="mar50"><span class="number">24</span><span class="percent">12%</span></p>
         </div>
         <div class="grid-table">
-          <p class="country">Los Angeles</p>
-          <p class="mar50"><span class="number">18</span><span class="percent">18%</span></p>
+          <p class="country">Yokohama</p>
+          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
         </div>
         <div class="grid-table">
-          <p class="country">Dubai</p>
-          <p class="mar50"><span class="number">12</span><span class="percent">12%</span></p>
+          <p class="country">Liverpool</p>
+          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
         </div>
+        <div class="grid-table">
+          <p class="country">San Fransisco</p>
+          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Bangalore </p>
+          <p class="mar50"><span class="number">12</span><span class="percent">6%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Beijing</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Frankfurt</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">London</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">New Delhi </p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Osaka</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Moscow </p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Berlin</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Accra </p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Fukuoka</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <!-- <div class="grid-table">
+          <p class="country">Casablanca </p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Milan</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div> -->
       </div>
     </div>
   </div>
