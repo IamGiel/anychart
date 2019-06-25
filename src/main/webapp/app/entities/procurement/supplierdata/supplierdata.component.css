@@ -16,6 +16,7 @@
 .spacing {
     list-style: none;
     line-height: 27px;
+    padding: 0px;
 }
 
 .filter-div {

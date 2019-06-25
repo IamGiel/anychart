@@ -366,9 +366,9 @@ export class SupplierdataComponent implements OnInit {
         this.clickfinance = 'D&B Rating';
         this.clickEnvironmental = 'Overall Rating';
         this.chartData = [
-            { label: 'Shared', value: 86, fill: '#31d490' },
-            { label: 'Pending', value: 12, fill: '#FFCB70' },
-            { label: 'Declined', value: 2, fill: '#FF7272' }
+            { label: 'Shared', value: 172, fill: '#31d490' },
+            { label: 'Pending', value: 24, fill: '#FFCB70' },
+            { label: 'Declined', value: 4, fill: '#FF7272' }
         ];
         // this.columnData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
         this.columnData = [

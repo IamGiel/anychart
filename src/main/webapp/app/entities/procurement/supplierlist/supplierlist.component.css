@@ -1521,3 +1521,84 @@ button:focus {
     padding: 20px 24px 24px;
     display: flow-root;
 }
+
+.selected {
+    padding: 0px;
+    display: flow-root;
+}
+.selected li {
+    width: auto;
+    list-style: none;
+    float: left;
+    background-color: black;
+    padding: 2px 10px;
+    color: white;
+    border-radius: 15px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.selected li span {
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+}
+
+.filterGroup {
+    margin: 0 0 -1em;
+    padding: 0;
+}
+
+.filterGroup li {
+    list-style: none;
+    padding-bottom: 1em;
+}
+
+.filterGroup li input[type='checkbox'] {
+    visibility: hidden;
+}
+.filterGroup li label {
+    cursor: pointer;
+}
+.filterGroup li input[type='checkbox'] + label:before {
+    border: 1px solid #e7e7e7;
+    content: '\00a0';
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 1em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 16px;
+}
+.filterGroup li input[type='checkbox']:checked + label:before {
+    background: #615ec4;
+    border: 1px solid #615ec4;
+    color: white;
+    content: '\2713';
+    text-align: center;
+}
+.filterGroup li input[type='checkbox']:checked + label:after {
+    font-weight: bold;
+}
+
+.filterGroup li input[type='checkbox']:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+.savedFilterList {
+    padding: 0px;
+    list-style: none;
+}
+.savedFilterList li {
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.savedFilterList li span {
+    color: #615ec4;
+    font-size: 15px;
+    text-align: right;
+}

@@ -6,7 +6,7 @@ import { analyzeAndValidateNgModules, toTypeScript } from '@angular/compiler';
 import { CustomPiwik } from '../../common/service/custom-piwik';
 import { LocalStoreService } from '../../../core/auth/local-storage.service';
 import { ProcurementFaqModalComponent } from '../../common/modals/procurement-faq-modal/procurement-faq-modal.component';
-import { NgbActiveModal, NgbModalRef, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModalRef, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { faBackspace } from '@fortawesome/free-solid-svg-icons';
 import { FetchData } from '../../common/service/fetch-data';
 import { PreviousRouteService } from '../../common/service/previous-route.service';
@@ -46,6 +46,35 @@ export class SupplierlistComponent implements OnInit {
     showFlagDropdown: boolean = false;
     globalFilterSubMenu: boolean = false;
 
+    closeResult: string;
+    filterSubMenu: boolean = false;
+
+    item1 = 'Financial Data';
+    item2 = 'D&B Rating';
+    item3 = 'Higher than';
+    item4 = '1';
+    filter1 = [
+        { id: '1', value: 'Financial Data' },
+        { id: '2', value: 'Environmental Data' },
+        { id: '3', value: 'Ethical & Regulatory Data' },
+        { id: '4', value: 'Labour,Health & Saftey' }
+    ];
+    filter2 = [{ id: '1', value: 'D&B Rating' }, { id: '2', value: 'D&B SER Rating' }, { id: '3', value: 'D&B Paydex' }];
+    filter3 = [{ id: '1', value: 'Higher than' }, { id: '2', value: 'Lower than' }, { id: '3', value: 'Between' }];
+    filter4 = [
+        { id: '1', value: '1' },
+        { id: '2', value: '2' },
+        { id: '3', value: '3' },
+        { id: '4', value: '4' },
+        { id: '5', value: '5' },
+        { id: '6', value: '6' },
+        { id: '7', value: '7' },
+        { id: '8', value: '8' },
+        { id: '9', value: '9' }
+    ];
+    totalSelectFilterList = [];
+    sletectedFilter = '';
+
     serPop = 'The Supplier Evaluation Risk Rating (SER) is risk metric that helps supply management professionals evaluate the long term risk of doing business with a supplier. The SER score is based on a scale of 1-9, with 1 representing the lowest level of risk and 9 implying the highest level of risk. For suppliers whose headquarters are located outside the United States and Canada, the SER predicts the likelihood that a supplier will cease operations or reorganize without paying all creditors in full, or obtain relief from creditors under state/federal law over the next 12 months.The SER provides a consistent risk ranking across the globe.';
     paydexPop = `PAYDEX is Dun & Bradstreet's unique dollar-weighted numerical indicator of how a firm paid its bills over the    past year, based on trade experiences reported to D&B by various vendors. The D&B PAYDEX Score ranges
     from 1 to 100, with higher scores indicating better payment performance. The tables below demonstrate how
@@ -75,7 +104,7 @@ export class SupplierlistComponent implements OnInit {
     offClickHandlerss(event: any) {
         //this.filterSubMenu = false;
 
-        if (!this.supplierfilter.nativeElement.contains(event.target) && !this.supplierfilter.nativeElement == undefined) {
+        if (this.supplierfilter.nativeElement != undefined && !this.supplierfilter.nativeElement.contains(event.target)) {
             this.globalFilterSubMenu = false;
         }
     }
@@ -564,5 +593,38 @@ export class SupplierlistComponent implements OnInit {
             this.checkedMap[m.name] = m.checked;
             return m;
         });
+    }
+
+    private getDismissReason(reason: any): string {
+        if (reason === ModalDismissReasons.ESC) {
+            return 'by pressing ESC';
+        } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        } else {
+            return `with: ${reason}`;
+        }
+    }
+
+    open(content) {
+        //console.log(content);
+        //this.filterSubMenu = false;
+        this.totalSelectFilterList = [];
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+            result => {
+                this.closeResult = `Closed with: ${result}`;
+            },
+            reason => {
+                this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+            }
+        );
+    }
+
+    addFilterList() {
+        this.totalSelectFilterList.push(this.item2 + ' ' + this.item3 + ' ' + this.item4);
+        this.sletectedFilter = this.totalSelectFilterList[0];
+    }
+
+    removeSelectedFilter(index) {
+        this.totalSelectFilterList.splice(index, 1);
     }
 }

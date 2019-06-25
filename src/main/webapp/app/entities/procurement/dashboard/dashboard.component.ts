@@ -50,7 +50,7 @@ export class DashboardComponent implements OnInit {
     offClickHandlers(event: any) {
         //this.filterSubMenu = false;
 
-        if (!this.dashboardfilter.nativeElement.contains(event.target)) {
+        if (this.dashboardfilter.nativeElement != undefined && !this.dashboardfilter.nativeElement.contains(event.target)) {
             this.filterSubMenu = false;
         }
     }
