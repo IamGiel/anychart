@@ -49,6 +49,7 @@
                     [perPage]="limit"
                     [count]="total"></jhi-my-pagination>
                   </div>
+                  
                   <div class="col-md-1 text-right">
                         <p *ngIf="total>0" class="expiration" [ngbPopover]='popContent'  [autoClose]="'outside'"
                         placement="bottom" #p="ngbPopover" style="display:inline-block;"  >
@@ -63,12 +64,56 @@
                             </div>
                         </ng-template>
                     </div>
+                    <div class="col-md-8" *ngIf="selectedSharedItem">
+                      <div class="row reactangle">
+                        <div class="col-md-3 border-right">
+                            <div class="dropdown">
+                                <button class="dropbtn" (click)="showAddToGroupDropdown = !showAddToGroupDropdown">Add to Group <i class="fa">&#xf107;</i></button>
+                                 <div id="env" class="dropdown-content" *ngIf="showAddToGroupDropdown">
+                                  <a (click)="showAddToGroupDropdown = !showAddToGroupDropdown">Group A</a>
+                                  <a (click)="showAddToGroupDropdown = !showAddToGroupDropdown">Group B</a>
+                                  <a (click)="showAddToGroupDropdown = !showAddToGroupDropdown">Group C</a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-md-3 border-right">
+                            <div class="dropdown">
+                                <button class="dropbtn" (click)="showCategoryDropdown = !showCategoryDropdown">Add to category <i class="fa">&#xf107;</i></button>
+                                 <div id="env" class="dropdown-content" *ngIf="showCategoryDropdown">
+                                  <a (click)="showCategoryDropdown = !showCategoryDropdown">PCB</a>
+                                  <a (click)="showCategoryDropdown = !showCategoryDropdown">Battery</a>
+                                  <a (click)="showCategoryDropdown = !showCategoryDropdown">Camera</a>
+                                  <a (click)="showCategoryDropdown = !showCategoryDropdown">Display</a>
+                                  <a (click)="showCategoryDropdown = !showCategoryDropdown">Processor</a>
+                                  <a (click)="showCategoryDropdown = !showCategoryDropdown">Memory Unit</a>
+                                  <a (click)="showCategoryDropdown = !showCategoryDropdown">Others</a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-md-3 border-right">
+                            <div class="dropdown">
+                                <button class="dropbtn" (click)="showFlagDropdown = !showFlagDropdown">Flag supplier <i class="fa">&#xf107;</i></button>
+                                 <div id="env" class="dropdown-content" *ngIf="showFlagDropdown">
+                                  <a (click)="showFlagDropdown = !showFlagDropdown">Red Flag</a>
+                                  <a (click)="showFlagDropdown = !showFlagDropdown">Yellow Flag</a>
+                                  <a (click)="showFlagDropdown = !showFlagDropdown">Blue Flag</a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dropdown">
+                                <button class="dropbtn">Send message</button>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
                 </div><br/>
                 <div class="row">
                     <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
                       <table class="table table-hover table-striped1 tex-center1" style="width:99%;">
                         <thead>
                             <tr class="text-center1">
+                                <th></th>
                                 <th class="text-left">COMPANY NAME</th>
                                 <th *ngIf="checkedMap['DUNS']">DUNS</th>
                                 <th *ngIf="checkedMap['D&B SER RATING']" >D&B SER RATING <i-info class="infoFeather" ngbPopover="{{serPop}}" placement="bottom" triggers="mouseenter:mouseleave"></th>
@@ -79,7 +124,12 @@
                               </tr>
                           </thead>
                           <tbody>
+                            <!-- {{list[0] | json}} -->
                               <tr *ngFor="let item of list; let i = index " class="text-center1 top-border" >
+                                <td style="text-align: right;">
+                                    <input type="checkbox" id="c1{{i}}" name="name">
+                                    <label for="c1{{i}}" (click)="selectedSharedItem = true"></label>
+                                </td>
                                 <td class="text-left" style="max-width:200px;"><span class="comp-name" (click)="goToCompanyProfile(item)">{{item.supplierName}}</span></td>
                                 <td *ngIf="checkedMap['DUNS']">{{item.providerKey.DUNSNUMBER}}</td>
                                 <td *ngIf="checkedMap['D&B SER RATING']">
@@ -151,7 +201,7 @@
     <div *ngIf="activeTab=='Pending'">
                   <div class="row">
                       <div class="col-md-6">
-                          <div class="separator2" style="margin-left:0px;" *ngIf="total>0">
+                          <div class="separator2" style="margin-left:0px;margin-bottom:10px;" *ngIf="total>0">
                               <span class="searchIcon">
                                   <i-search class="featherPagFil2">
                               </span>
@@ -170,11 +220,25 @@
                         [perPage]="limit"
                         [count]="total"></jhi-my-pagination>
                       </div>
-                  </div><br/>
+                      
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3" *ngIf="selectedpendingItem">
+                        <div class="row reactangle">
+                          <div class="col-md-12">
+                              <div class="dropdown">
+                                  <button class="dropbtn">Send message</button>
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <br/>
                   <div class="table-responsive" *ngIf="!loadingData && list!=undefined && list.length!=null && list.length>0">
                       <table class="table table-hover table-striped" style="width:99%;">
                         <thead>
                             <tr>
+                                <th></th>
                                 <th>Company Name</th>
                                 <th>DUNS</th>
                                 <th>REQUEST SENT</th>
@@ -184,6 +248,10 @@
                           </thead>
                           <tbody>
                               <tr *ngFor="let item of list; let i = index ">
+                                <td style="text-align: right;">
+                                    <input type="checkbox" id="c1{{i}}" name="name">
+                                    <label for="c1{{i}}" (click)="selectedpendingItem = true"></label>
+                                </td>
                                 <td style="max-width:250px;">{{item.supplierName}}</td>
                                 <td>{{item.providerKey.DUNSNUMBER}}</td>
                                 <td>{{item.requestedDate | date:'dd-MMM-yyyy'}}</td>
