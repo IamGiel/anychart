@@ -1,6 +1,6 @@
 <div>
   <div class="container">
-      <i-feather name="IconFileText" class="big"></i-feather>
+    <i-feather name="IconFileText" class="big"></i-feather>
     <div class="row" #target>
       <div class="col-md-3 pl-0">
         <div class="card" [ngClass]="{'card-active , card1': showMore !== ''}">
@@ -13,7 +13,7 @@
                 <p class="filtertext" (click)="open(content3)">Groups</p>
                 <p class="filtertext" (click)="open(content4)">Flags</p>
                 <p class="filtertext" (click)="open(content5)">Response</p>
-                <p  (click)="open(content)" class="filtertext">Advanced</p>
+                <p (click)="open(content)" class="filtertext">Advanced</p>
               </div>
               <hr>
               <div class="saved-filters" (click)="open(content2)">
@@ -35,7 +35,7 @@
             </jhi-column-chart>
             <jhi-column-chart *ngIf="clickfinance==='D&B SER Rating'" [chartData]="columnData" [labels]="true">
             </jhi-column-chart>
-            <jhi-spline-chart *ngIf="clickfinance==='D&B Paydex'" [id]="'paydexid'" [chartData]="columnData"
+            <jhi-spline-chart *ngIf="clickfinance==='D&B Paydex'" [id]="'paydexid'" [chartData]="spliceData"
               [labels]="false">
             </jhi-spline-chart>
             <div class="rectangle" [ngStyle]="{'bottom': clickfinance==='D&B Paydex'? '17px':'40px'}">
@@ -69,7 +69,7 @@
                 <p class="filtertext" (click)="open(content3)">Groups</p>
                 <p class="filtertext" (click)="open(content4)">Flags</p>
                 <p class="filtertext" (click)="open(content5)">Response</p>
-                <p  (click)="open(content)" class="filtertext">Advanced</p>
+                <p (click)="open(content)" class="filtertext">Advanced</p>
               </div>
               <hr>
               <div class="saved-filters" (click)="open(content2)">
@@ -136,7 +136,7 @@
                 <p class="filtertext" (click)="open(content3)">Groups</p>
                 <p class="filtertext" (click)="open(content4)">Flags</p>
                 <p class="filtertext" (click)="open(content5)">Response</p>
-                <p  (click)="open(content)" class="filtertext">Advanced</p>
+                <p (click)="open(content)" class="filtertext">Advanced</p>
               </div>
               <hr>
               <div class="saved-filters" (click)="open(content2)">
@@ -156,7 +156,16 @@
             </div>
           </div>
           <div class="padd25">
-            <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEthical === 'Overall Appearance'" [chartData]="ethicaldata" [labels]="true">
+            </jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEthical === 'Corruption issue'" [chartData]="ethicaldata" [labels]="true">
+            </jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEthical === 'Fraud issues'" [chartData]="ethicaldata" [labels]="true">
+            </jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEthical === 'Regulatory issues'" [chartData]="ethicaldata" [labels]="true">
+            </jhi-column-chart>
+            <jhi-column-chart *ngIf="clickEthical === 'Sanctions'" [chartData]="ethicaldata" [labels]="true">
+            </jhi-column-chart>
             <div class="abc">
               <div>
                 <span class="rectangle4"></span>
@@ -190,7 +199,7 @@
                 <p class="filtertext" (click)="open(content3)">Groups</p>
                 <p class="filtertext" (click)="open(content4)">Flags</p>
                 <p class="filtertext" (click)="open(content5)">Response</p>
-                <p  (click)="open(content)" class="filtertext">Advanced</p>
+                <p (click)="open(content)" class="filtertext">Advanced</p>
               </div>
               <hr>
               <div class="saved-filters" (click)="open(content2)">
@@ -201,7 +210,7 @@
               <button class="dropbtn" (click)="showdropdown('labor')">{{clickLabour}}</button>
               <i class="fa" (click)="showdropdown('labor')">&#xf107;</i>
               <div class="dropdown-content" *ngIf="showlabordropdown">
-                <a (click)="showLaborGraphs('Overall appearance')">Overall appearance</a>
+                <a (click)="showLaborGraphs('Overall Appearance')">Overall Appearance</a>
                 <a (click)="showLaborGraphs('Discrimanation/workforce..')">Discrimanation/workforce..</a>
                 <a (click)="showLaborGraphs('Human Right Issues')">Human Right Issues</a>
                 <a (click)="showLaborGraphs('Workforce Disputes')">Workforce Disputes</a>
@@ -210,7 +219,18 @@
             </div>
           </div>
           <div class="padd25">
-            <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+            <!-- <jhi-column-chart [chartData]="labourData" [labels]="true"></jhi-column-chart> -->
+            <jhi-column-chart *ngIf="clickLabour === 'Overall Appearance'" [chartData]="labourData" [labels]="true">
+            </jhi-column-chart>
+            <jhi-column-chart *ngIf="clickLabour === 'Discrimanation/workforce..'" [chartData]="labourData"
+              [labels]="true"></jhi-column-chart>
+            <jhi-column-chart *ngIf="clickLabour === 'Human Right Issues'" [chartData]="labourData" [labels]="true">
+            </jhi-column-chart>
+            <jhi-column-chart *ngIf="clickLabour === 'Workforce Disputes'" [chartData]="labourData" [labels]="true">
+            </jhi-column-chart>
+            <jhi-column-chart *ngIf="clickLabour === 'Workforcehealthy/Saftey Is'" [chartData]="labourData"
+              [labels]="true"></jhi-column-chart>
+
             <div class="abc">
               <div>
                 <span class="rectangle4"></span>
@@ -233,7 +253,8 @@
       </div>
     </div>
   </div>
-  <hr *ngIf=" showMore != '' || showEnv != '' || showLabor != '' || showEthical != '' " class="border-full" color="#7B4BD8">
+  <hr *ngIf=" showMore != '' || showEnv != '' || showLabor != '' || showEthical != '' " class="border-full"
+    color="#7B4BD8">
 </div>
 <div class="bg-color" [hidden]="!showSubCards">
   <div class="container">
@@ -246,14 +267,14 @@
                 <span class="card-title">D&B SER Rating</span>
                 <!-- <img class="filter" (click)="openFilterDetails('financialserrating')"
                   src="../../../../content/images/filter.svg" /> -->
-                  <i-filter class="filter" (click)="openFilterDetails('financialserrating');"></i-filter>
+                <i-filter class="filter" (click)="openFilterDetails('financialserrating');"></i-filter>
                 <div *ngIf="financialserrating" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -261,13 +282,10 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnData" [labels]="false">
-                  </jhi-column-chart>
-                  <div class="rectangle" [ngStyle]="{'bottom': '17px'}">
-                  </div>
-                  <div class="risk">
-                    <p>Low Risk</p>
-                    <p>High Risk</p>
+                  <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
+                  <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
+                  </jhi-column-chart> -->
+                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
                   </div>
                 </div>
               </div>
@@ -286,18 +304,25 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
                     <p class="filtertext">Saved Filters</p>
                   </div>
                 </div>
-                <div>
-                    <jhi-stack-bar [chartData]="treeData" [id]="'treeGraph'"></jhi-stack-bar>
-                  <!-- <jhi-column-chart [chartData]="treeData"></jhi-column-chart> -->
-                  <!-- <jhi-bar [chartData]="treeData" [id]="'treeGraph'"></jhi-bar> -->
+                <div class="padd25">
+                  <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
+                  <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
+                    </jhi-column-chart> -->
+                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  </div>
                 </div>
+                <!-- <div>
+                  <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
+                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -307,14 +332,14 @@
                 <span class="card-title">D&B Paydex</span>
                 <!-- <img class="filter" (click)="openFilterDetails('dbpayindex')"
                   src="../../../../content/images/filter.svg" /> -->
-                  <i-filter class="filter" (click)="openFilterDetails('dbpayindex');"></i-filter>  
+                <i-filter class="filter" (click)="openFilterDetails('dbpayindex');"></i-filter>
                 <div *ngIf="dbpayindex" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
                   <div class="filter-div">
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -322,7 +347,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-spline-chart [chartData]="columnData" [id]="'paydexid2'" [labels]="false">
+                  <jhi-spline-chart [chartData]="spliceData" [id]="'paydexid2'" [labels]="false">
                   </jhi-spline-chart>
                   <div class="rectangle" [ngStyle]="{'bottom': showSubCards? '17px':'17px'}">
                   </div>
@@ -353,7 +378,7 @@
             <div class="card" #eoverallrating>
               <div class="card-body">
                 <span class="card-title">Overall Rating</span>
-                <i-filter class="filter" (click)="openFilterDetails('overallrating');"></i-filter>  
+                <i-filter class="filter" (click)="openFilterDetails('overallrating');"></i-filter>
                 <!-- <img class="filter" (click)="openFilterDetails('overallrating')"
                   src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="overallrating" class="map-dropdown-contents">
@@ -362,7 +387,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -371,6 +396,14 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
+                      </jhi-column-chart> -->
+                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  </div>
+                </div>
+                <!-- <div class="padd25">
+                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}"></div>
                   <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -384,7 +417,7 @@
                     <p>High Risk</p>
                     <p>Low Risk</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -392,7 +425,7 @@
             <div class="card" #elaborhuman>
               <div class="card-body">
                 <span class="card-title">Labour& Human rights</span>
-                <i-filter class="filter" (click)="openFilterDetails('laborhuman');"></i-filter>  
+                <i-filter class="filter" (click)="openFilterDetails('laborhuman');"></i-filter>
                 <!-- <img class="filter" (click)="openFilterDetails('laborhuman')"
                   src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="laborhuman" class="map-dropdown-contents">
@@ -401,7 +434,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -409,6 +442,13 @@
                   </div>
                 </div>
                 <div class="padd25">
+                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
+                        </jhi-column-chart> -->
+                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  </div>
+                </div>
+                <!-- <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
                   <div class="abc">
                     <div>
@@ -423,7 +463,7 @@
                     <p>High Risk</p>
                     <p>Low Risk</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -431,7 +471,7 @@
             <div class="card" #eethics>
               <div class="card-body">
                 <span class="card-title">Ethics</span>
-                <i-filter class="filter" (click)="openFilterDetails('ethics');"></i-filter>  
+                <i-filter class="filter" (click)="openFilterDetails('ethics');"></i-filter>
                 <!-- <img class="filter" (click)="openFilterDetails('ethics')" src="../../../../content/images/filter.svg" /> -->
                 <div *ngIf="ethics" class="map-dropdown-contents">
                   <p class="filterby">FILTER BY</p>
@@ -439,7 +479,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -482,7 +522,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -521,7 +561,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -560,7 +600,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -609,7 +649,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -647,7 +687,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -686,7 +726,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -729,7 +769,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -768,7 +808,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -817,7 +857,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -855,7 +895,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -893,7 +933,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -935,7 +975,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -974,7 +1014,7 @@
                     <p class="filtertext" (click)="open(content3)">Groups</p>
                     <p class="filtertext" (click)="open(content4)">Flags</p>
                     <p class="filtertext" (click)="open(content5)">Response</p>
-                    <p  (click)="open(content)" class="filtertext">Advanced</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
                   </div>
                   <hr>
                   <div class="saved-filters" (click)="open(content2)">
@@ -1012,7 +1052,7 @@
       <div class="card" #owner>
         <div class="card-body pb-0">
           <span class="card-title">Response Stats</span>
-          <i-filter class="filter"  (click)="openFilterDetails('ownership');"></i-filter>
+          <i-filter class="filter" (click)="openFilterDetails('ownership');"></i-filter>
           <!-- <img class="filter" #owner (click)="openFilterDetails('ownership')"
             src="../../../../content/images/filter.svg" /> -->
           <div *ngIf="ownershipfilter" class="map-dropdown-contents">
@@ -1021,7 +1061,7 @@
               <p class="filtertext" (click)="open(content3)">Groups</p>
               <p class="filtertext" (click)="open(content4)">Flags</p>
               <p class="filtertext" (click)="open(content5)">Response</p>
-              <p  (click)="open(content)" class="filtertext">Advanced</p>
+              <p (click)="open(content)" class="filtertext">Advanced</p>
             </div>
             <hr>
             <div class="saved-filters" (click)="open(content2)">
@@ -1064,7 +1104,7 @@
               <p class="filtertext" (click)="open(content3)">Groups</p>
               <p class="filtertext" (click)="open(content4)">Flags</p>
               <p class="filtertext" (click)="open(content5)">Response</p>
-              <p  (click)="open(content)" class="filtertext">Advanced</p>
+              <p (click)="open(content)" class="filtertext">Advanced</p>
             </div>
             <hr>
             <div class="saved-filters" (click)="open(content2)">
@@ -1108,7 +1148,7 @@
             <p class="filtertext" (click)="open(content3)">Groups</p>
             <p class="filtertext" (click)="open(content4)">Flags</p>
             <p class="filtertext" (click)="open(content5)">Response</p>
-            <p  (click)="open(content)" class="filtertext">Advanced</p>
+            <p (click)="open(content)" class="filtertext">Advanced</p>
           </div>
           <hr>
           <div class="saved-filters" (click)="open(content2)">
@@ -1306,8 +1346,8 @@
         </select>
         <!-- <button type="button" class="btn float-R">Add</button> -->
         <div>
-            <button type="button" class="btn float-R" (click)="addFilterList()">Add</button>
-          </div>
+          <button type="button" class="btn float-R" (click)="addFilterList()">Add</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1317,47 +1357,47 @@
         <button type="button" class="btn float-L">Save Filter</button>
     </span> -->
     <div class="def">
-        <span>
-            <button type="button" class="btn float-L" (click)="open(content1)">Save Filter</button>
-        </span>
-        <span>
-            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
-        </span>
-        <span>
-            <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
-        </span>
+      <span>
+        <button type="button" class="btn float-L" (click)="open(content1)">Save Filter</button>
+      </span>
+      <span>
+        <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+      </span>
+      <span>
+        <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+      </span>
     </div>
-   
+
   </div>
 </ng-template>
 
 <ng-template #content1 let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Filter</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <span>Name of the filter</span>
-      <div>
-        <div>
-            <input type="text" class="filterInput" [(ngModel)]="sletectedFilter" placeholder="filter">
-        </div>
-      </div>
-    </div>
-  
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Filter</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span>Name of the filter</span>
     <div>
-      <div class="def">
-          <span>
-              <button type="button" class="btn float-R" (click)="modal.close('Save click')">Save Filter</button>
-          </span>
-          <span>
-              <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
-          </span>
+      <div>
+        <input type="text" class="filterInput" [(ngModel)]="sletectedFilter" placeholder="filter">
       </div>
     </div>
-  </ng-template>
+  </div>
+
+  <div>
+    <div class="def">
+      <span>
+        <button type="button" class="btn float-R" (click)="modal.close('Save click')">Save Filter</button>
+      </span>
+      <span>
+        <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+      </span>
+    </div>
+  </div>
+</ng-template>
 
 <ng-template #content2 let-modal>
   <div class="modal-header">
@@ -1380,9 +1420,9 @@
 
   <div>
     <div class="def" style="padding-top: 0;">
-        <span>
-            <button type="button" class="btn float-R" (click)="modal.close('Save click')">CANCEL</button>
-        </span>
+      <span>
+        <button type="button" class="btn float-R" (click)="modal.close('Save click')">CANCEL</button>
+      </span>
     </div>
   </div>
 </ng-template>
@@ -1427,7 +1467,7 @@
         <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
       </span>
       <span>
-          <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+        <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
       </span>
     </div>
   </div>
@@ -1465,7 +1505,7 @@
         <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
       </span>
       <span>
-          <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+        <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
       </span>
     </div>
   </div>
@@ -1505,7 +1545,7 @@
         <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
       </span>
       <span>
-          <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+        <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
       </span>
     </div>
   </div>
