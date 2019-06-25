@@ -57,9 +57,32 @@ export class SupplierdataComponent implements OnInit {
             { label: 'Pending', value: 12, fill: '#FFCB70' },
             { label: 'Declined', value: 2, fill: '#FF7272' }
         ];
-        this.columnData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
-        this.columnDatas = [['0-29', 3], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
-        this.columnDatass = [3, 4, 9, 8, 7];
+
+        this.columnData = [
+            { x: '1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+            { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+            { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+            { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+            { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 },
+            { x: '6', perc: 8, avgval: 8, name: 'Rating 6', risk: 'Medium Risk', num: 8 },
+            { x: '7', perc: 12, avgval: 12, name: 'Rating 7', risk: 'Medium Risk', num: 12 },
+            { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9 },
+            { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6 }
+        ];
+
+        this.columnDatass = [
+            { x: '0-1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 3 },
+            { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 4 },
+            { x: '50-69', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 9 },
+            { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 8 },
+            { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 7 }
+        ];
+
+        // this.columnData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
+        // this.columnDatas = [['0-29', 3], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
+
+        // this.columnDatass = [3, 4, 9, 8, 7];
+
         this.datas = [['Limited', 3], ['Fair', 4], ['Good', 9], ['High', 9]];
         this.ethicaldata = [['0', 6], ['1-10', 3], ['11-20', 2.8], ['21-30', 2], ['30+', 1.8]];
         this.labourData = [
@@ -69,6 +92,7 @@ export class SupplierdataComponent implements OnInit {
             { label: '4', value: 3, fill: '#E7E7E7', stroke: '#E7E7E7' },
             { label: '5', value: 2, fill: '#E7E7E7', stroke: '#E7E7E7' }
         ];
+
         this.treeData = [['LIMITED', 0, 5], ['FAIR', 0, 10], ['GOOD', 20, 10], ['HIGH', 17, 13]];
     }
     clickFinancial(data) {

@@ -429,13 +429,29 @@ export class SupplierdataComponent implements OnInit {
     clickFinancial(data) {
         if (data === 'D&B Rating') {
             this.clickfinance = 'D&B Rating';
-            this.columnData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
+            this.columnData = [
+                { x: '1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 },
+                { x: '6', perc: 8, avgval: 8, name: 'Rating 6', risk: 'Medium Risk', num: 8 },
+                { x: '7', perc: 12, avgval: 12, name: 'Rating 7', risk: 'Medium Risk', num: 12 },
+                { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9 },
+                { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6 }
+            ];
         } else if (data === 'D&B SER Rating') {
             this.clickfinance = 'D&B SER Rating';
-            this.columnData = [['1', 10], ['2', 60], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 20], ['8', 25], ['9', 10]];
+            this.columnData = [
+                { x: '1', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 5 },
+                { x: '2', perc: 5, avgval: 5, name: 'Rating 2', risk: 'Low Risk', num: 6 },
+                { x: '3', perc: 15, avgval: 15, name: 'Rating 3', risk: 'Low Risk', num: 7 },
+                { x: '4', perc: 8, avgval: 8, name: 'Rating 4', risk: 'Medium Risk', num: 8 }
+            ];
         } else if (data === 'D&B Paydex') {
             this.clickfinance = 'D&B Paydex';
         }
+
         this.showFinancialdropdown = false;
     }
 
@@ -472,18 +488,53 @@ export class SupplierdataComponent implements OnInit {
     environmental(type: string) {
         if (type === 'Overall Rating') {
             this.clickEnvironmental = 'Overall Rating';
-            this.columnDatas = [['0-29', 13], ['30-49', 10], ['50-69', 19], ['70-89', 14], ['90-100', 17]];
+            this.columnDatas = [
+                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '50-69', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
+            // this.columnDatas = [['0-29', 13], ['30-49', 10], ['50-69', 19], ['70-89', 14], ['90-100', 17]];
         } else if (type === 'Ethics') {
             this.clickEnvironmental = 'Ethics';
-            this.columnDatas = [['0-29', 6], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 12]];
+            this.columnDatas = [
+                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 6 },
+                { x: '30-49', perc: 1, avgval: 1, name: 'Rating 2', risk: 'Low Risk', num: 14 },
+                { x: '50-69', perc: 10, avgval: 10, name: 'Rating 3', risk: 'Low Risk', num: 19 },
+                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 19 },
+                { x: '90-100', perc: 9, avgval: 9, name: 'Rating 5', risk: 'Medium Risk', num: 21 }
+            ];
+            // this.columnDatas = [['0-29', 6], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 12]];
         } else if (type === 'Environment') {
             this.clickEnvironmental = 'Environment';
-            this.columnDatas = [['0-29', 10], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
+            this.columnDatas = [
+                { x: '0-29', perc: 12, avgval: 12, name: 'Rating 1', risk: 'Low Risk', num: 10 },
+                { x: '30-49', perc: 8, avgval: 8, name: 'Rating 2', risk: 'Low Risk', num: 4 },
+                { x: '50-69', perc: 1, avgval: 1, name: 'Rating 3', risk: 'Low Risk', num: 9 },
+                { x: '70-89', perc: 10, avgval: 10, name: 'Rating 4', risk: 'Medium Risk', num: 9 },
+                { x: '90-100', perc: 15, avgval: 15, name: 'Rating 5', risk: 'Medium Risk', num: 7 }
+            ];
+            // this.columnDatas = [['0-29', 10], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
         } else if (type === 'Labour& Human rights') {
             this.clickEnvironmental = 'Labour& Human rights';
-            this.columnDatas = [['0-29', 13], ['30-49', 9], ['50-69', 13], ['70-89', 15], ['90-100', 17]];
+            this.columnDatas = [
+                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 13 },
+                { x: '30-49', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 9 },
+                { x: '50-69', perc: 5, avgval: 5, name: 'Rating 3', risk: 'Low Risk', num: 13 },
+                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 17 }
+            ];
+            // this.columnDatas = [['0-29', 13], ['30-49', 9], ['50-69', 13], ['70-89', 15], ['90-100', 17]];
         } else if (type === 'Sustainable procurem..') {
             this.clickEnvironmental = 'Sustainable procurem..';
+            this.columnDatas = [
+                { x: '0-29', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 13 },
+                { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 14 },
+                { x: '50-69', perc: 8, avgval: 8, name: 'Rating 3', risk: 'Low Risk', num: 19 },
+                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 19 },
+                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 17 }
+            ];
             this.columnDatas = [['0-29', 13], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 17]];
         }
         this.showEnvdropdown = false;
