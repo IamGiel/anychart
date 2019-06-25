@@ -57,7 +57,8 @@ export class SupplierlistComponent implements OnInit {
     (1) Rating Classification: A rating of 5A means a business has a worth of $50+ million. HH, on the other end of the scale, indicates that a business is worth up to $4,999.
     This part of the rating is based on a company’s net worth, when available, or issued capital (the value of the company’s shares).
     (2)Composite Credit Appraisal: This measures the risk of business failure, from 1, indicating "minimal," to 4, "significant."`;
-
+    selectedpendingItem: any;
+    selectedSharedItem: any;
     constructor(
         private customPiwik: CustomPiwik,
         // private ds: DashboardService,
