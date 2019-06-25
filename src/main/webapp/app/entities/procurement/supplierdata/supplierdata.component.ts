@@ -355,7 +355,7 @@ export class SupplierdataComponent implements OnInit {
     sanctions = false;
     workspace = false;
     healthsafety = false;
-
+    spliceData: any;
     ngOnInit() {
         this.clickfinance = 'D&B Rating';
         this.clickEnvironmental = 'Overall Rating';
@@ -376,6 +376,8 @@ export class SupplierdataComponent implements OnInit {
             { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9 },
             { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6 }
         ];
+
+        this.spliceData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
 
         // this.columnDatas = [['0-29', 3], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
 
@@ -403,7 +405,7 @@ export class SupplierdataComponent implements OnInit {
             { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
         ];
 
-        this.columnDatass = [3, 4, 9, 8, 7];
+        // this.columnDatass = [3, 4, 9, 8, 7];
         this.datas = [['Limited', 3], ['Fair', 4], ['Good', 9], ['High', 9]];
 
         // this.ethicaldata = [['0', 6], ['1-10', 3], ['11-20', 2.8], ['21-30', 2], ['30+', 1.8]];
@@ -457,30 +459,100 @@ export class SupplierdataComponent implements OnInit {
 
     showEthicalGraphs(data) {
         if (data === 'Overall appearance') {
-            this.clickEthical = 'Overall appearance';
+            this.clickEthical = 'Overall Appearance';
+            this.ethicaldata = [
+                { x: '0', perc: 1, avgval: 1, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '1-10', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '21-30', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
+            alert(3);
         } else if (data === 'Corruption issue') {
             this.clickEthical = 'Corruption issue';
+            this.ethicaldata = [
+                { x: '0', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '1-10', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '11-20', perc: 12, avgval: 13, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '21-30', perc: 5, avgval: 5, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         } else if (data === 'Fraud issue') {
-            this.clickEthical = 'Fraud issue';
+            this.clickEthical = 'Fraud issues';
+            this.ethicaldata = [
+                { x: '0', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '1-10', perc: 18, avgval: 18, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '11-20', perc: 6, avgval: 6, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '21-30', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '30+', perc: 10, avgval: 10, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         } else if (data === 'Regulatory issue') {
-            this.clickEthical = 'Regulatory issue';
+            this.clickEthical = 'Regulatory issues';
+            this.ethicaldata = [
+                { x: '0', perc: 5, avgval: 5, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '1-10', perc: 10, avgval: 10, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '21-30', perc: 1, avgval: 1, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         } else if (data === 'Sanctions') {
-            this.clickEthical = 'Sanctions';
+            this.ethicaldata = [
+                { x: '0', perc: 5, avgval: 5, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '1-10', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '11-20', perc: 17, avgval: 17, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '21-30', perc: 5, avgval: 5, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         }
         this.showEthicaldropdown = false;
     }
 
     showLaborGraphs(data) {
-        if (data === 'Overall appearance') {
-            this.clickLabour = 'Overall appearance';
+        if (data === 'Overall Appearance') {
+            this.clickLabour = 'Overall Appearance';
+            this.labourData = [
+                { x: '0-10', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         } else if (data === 'Discrimanation/workforce..') {
             this.clickLabour = 'Discrimanation/workforce..';
+            this.labourData = [
+                { x: '0-10', perc: 16, avgval: 16, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '3', perc: 6, avgval: 6, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '5', perc: 10, avgval: 10, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         } else if (data === 'Human Right Issue') {
             this.clickLabour = 'Human Right Issue';
+            this.labourData = [
+                { x: '0-10', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '2', perc: 2, avgval: 2, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '4', perc: 12, avgval: 12, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '5', perc: 8, avgval: 8, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         } else if (data === 'Workforce Disputes') {
             this.clickLabour = 'Workforce Disputes';
+            this.labourData = [
+                { x: '0-10', perc: 18, avgval: 18, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '3', perc: 15, avgval: 15, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '4', perc: 6, avgval: 6, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         } else if (data === 'Workforcehealthy/Saftey Is') {
             this.clickLabour = 'Workforcehealthy/Saftey Is';
+            this.labourData = [
+                { x: '0-10', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+                { x: '2', perc: 2, avgval: 2, name: 'Rating 2', risk: 'Low Risk', num: 12 },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
+                { x: '4', perc: 10, avgval: 10, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            ];
         }
         this.showlabordropdown = false;
     }
@@ -535,7 +607,7 @@ export class SupplierdataComponent implements OnInit {
                 { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 19 },
                 { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 17 }
             ];
-            this.columnDatas = [['0-29', 13], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 17]];
+            // this.columnDatas = [['0-29', 13], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 17]];
         }
         this.showEnvdropdown = false;
     }

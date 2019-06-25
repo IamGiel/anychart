@@ -50,7 +50,8 @@ export class PieChartComponent implements OnInit, AfterViewInit {
         tooltip.title(false);
         tooltip.separator(false);
         tooltip.fontFamily('Inter UI');
-        tooltip.format('<b>{%x}</b>: <b>{%value}</b>');
+        tooltip.format('<b>{%label}</b>: <b>{%value}</b>');
+
         //this.chart.labels().position('outside');
         // disable the legend
         //this.chart.legend(false);

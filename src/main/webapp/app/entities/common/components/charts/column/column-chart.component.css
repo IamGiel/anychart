@@ -1,0 +1,18 @@
+.anychart-tooltip {
+    border-radius: 4px;
+    background: #fff;
+    font-family: 'Inter-UI', Helvetica, Arial, 'sans-serif';
+    color: #222;
+    padding: 10px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.15);
+    width: 180px;
+}
+
+.anychart-tooltip-separator {
+    height: 0px;
+    margin: 0;
+}
+
+.anychart-tooltip-title {
+    font-size: 28px;
+}

@@ -4,7 +4,10 @@ import { serializePaths } from '@angular/router/src/url_tree';
 
 @Component({
     selector: 'jhi-column-chart',
-    templateUrl: './column-chart.component.html'
+    templateUrl: './column-chart.component.html',
+    styles: [
+        '.anychart-tooltip {border-radius: 4px;background: #fff;color:#222;padding:10px;box-shadow:2px 4px 15px rgba(0,0,0,0.15);width: 180px;}'
+    ]
 })
 export class ColumnChartComponent implements OnInit, AfterViewInit {
     @ViewChild('chartContainer') container;
@@ -38,44 +41,20 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
         series1.xPointPosition(0.5);
         series2.xPointPosition(0.5);
 
+        chart.tooltip().title(false);
+        chart.tooltip().useHtml(true);
+        chart.tooltip().background('#FFF');
         chart
-            .hovered()
-            .labels()
-            .enabled(true)
-            .width(180)
-            .position('top')
-            .anchor('top')
-            .offsetY(-51)
-            .useHtml(true)
-            .fontWeight('normal')
-            .format(function() {
-                //return("okok");
-                return (
-                    '<span style="font-size:12px; color:#000"">' +
-                    this.getData('name') +
-                    ':&emsp&emsp&emsp&emsp&emsp</span><span style="font-size:12px; color:#000">' +
-                    this.getData('num') +
-                    '&emsp</span><span style="font-size:10px; color:#aaa">' +
-                    this.getData('value') +
-                    '%</span><br/><span>(' +
-                    this.getData('risk') +
-                    ")</span><br/><br/><span>Avg among buyers <span style='font-weight:600'>" +
-                    this.getData('avgval') +
-                    '%</span></span>'
-                );
-            });
+            .tooltip()
+            .format(
+                '<span style="font-size:14px;color:#FFF;">{%name}</span>' +
+                    '<span style="font-size:12px; color:#FFF; float:right; padding:6px 0px 0px 10px;">{%perc}%</span>' +
+                    '<span style="font-size:16px; color:#FFF; float:right;  padding:4px 0px 0px 10px;">{%num}  </span><br/>' +
+                    '<span style="font-size:12px; color:#FFF;">({%risk})</span><br/><br/>' +
+                    '<span style="font-size:12px; color:#FFF; ">Avg among buyers ' +
+                    "<span style='font-weight:600'>{%avgval}%</span></span>"
+            );
 
-        chart
-            .hovered()
-            .labels()
-            .background()
-            .enabled(true)
-            .fill('#fff')
-            .stroke('1 #eee')
-            .corners(3)
-            .cornerType('ROUND');
-
-        chart.tooltip(false);
         chart.yAxis().labels(false);
         chart.yAxis().stroke('#ffff');
         chart.yAxis().stroke('#ffff');
