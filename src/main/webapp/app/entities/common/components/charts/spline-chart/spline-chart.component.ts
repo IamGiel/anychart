@@ -24,6 +24,7 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
         // create a spline area series and set the data
         const series = chart.splineArea(this.chartData);
         const tooltip = chart.tooltip().enabled(true);
+
         // set the titles of the axes
         const xAxis = chart.xAxis();
         const yAxis = chart.yAxis();

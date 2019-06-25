@@ -377,7 +377,7 @@ export class SupplierdataComponent implements OnInit {
             { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6 }
         ];
 
-        this.spliceData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
+        this.spliceData = [['1', 30], , ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
 
         // this.columnDatas = [['0-29', 3], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
 
