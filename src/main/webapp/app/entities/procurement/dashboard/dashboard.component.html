@@ -32,21 +32,21 @@
       </ul>
     </div>
     <div class="col-md-3 text-right">
-        <span>
+        <span #dashboardfilter>
           <i-filter class="filter" (click)="filterSubMenu = !filterSubMenu"></i-filter>
             <div *ngIf="filterSubMenu" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
               <div class="filter-div">
-                <!-- <p class="filtertext" (click)="open(content3)">Groups</p> -->
-                <p class="filtertext">Groups</p>
-                <p class="filtertext">Flags</p>
-                <p class="filtertext">Response</p>
-                <!-- <p  (click)="open(content)" class="filtertext">Advanced</p> -->
-                <p class="filtertext">Advanced</p>
+                <p class="filtertext" (click)="open(content3)">Groups</p>
+                <!-- <p class="filtertext">Groups</p> -->
+                <p class="filtertext" (click)="open(content4)">Flags</p>
+                <p class="filtertext" (click)="open(content5)">Response</p>
+                <p  (click)="open(content)" class="filtertext">Advanced</p>
+                <!-- <p class="filtertext">Advanced</p> -->
               </div>
               <hr>
-              <!-- <div class="saved-filters" (click)="open(content2)"> -->
-              <div class="saved-filters">
+              <div class="saved-filters" (click)="open(content2)">
+              <!-- <div class="saved-filters"> -->
                 <p class="filtertext">Saved Filters</p>
               </div>
             </div>
@@ -221,6 +221,85 @@
           <li>
             <input type="checkbox" id="c5" name="cb">
             <label for="c5">Group E</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div>
+      <div class="def" style="padding-top: 0;">
+        <span>
+          <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+        </span>
+        <span>
+            <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+        </span>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #content4 let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Filter by flags</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <ul class="filterGroup">
+          <li>
+            <input type="checkbox" id="f1" name="cb">
+            <label for="f1">Red Flag</label>
+          </li>
+          <li>
+            <input type="checkbox" id="f2" name="cb">
+            <label for="f2">Yellow Flag</label>
+          </li>
+          <li>
+            <input type="checkbox" id="f3" name="cb">
+            <label for="f3">Blue Flag</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div>
+      <div class="def" style="padding-top: 0;">
+        <span>
+          <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+        </span>
+        <span>
+            <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
+        </span>
+      </div>
+    </div>
+  </ng-template>
+
+
+  <ng-template #content5 let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Filter by response</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <ul class="filterGroup">
+          <li>
+            <input type="checkbox" id="r1" name="cb">
+            <label for="r1">Shared</label>
+          </li>
+          <li>
+            <input type="checkbox" id="r2" name="cb">
+            <label for="r2">Pending</label>
+          </li>
+          <li>
+            <input type="checkbox" id="r3" name="cb">
+            <label for="r3">Declined</label>
+          </li>
+          <li>
           </li>
         </ul>
       </div>
