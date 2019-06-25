@@ -33,7 +33,7 @@
     </div>
     <div class="col-md-3 text-right">
         <span #dashboardfilter>
-          <i-filter class="filter" (click)="filterSubMenu = !filterSubMenu"></i-filter>
+          <i-filter class="filter" style="cursor: pointer;" (click)="filterSubMenu = !filterSubMenu"></i-filter>
             <div *ngIf="filterSubMenu" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
               <div class="filter-div">

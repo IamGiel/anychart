@@ -463,6 +463,7 @@ span.inactive1 {
     font-weight: 400;
     line-height: 17px;
     text-align: left;
+    cursor: pointer;
 }
 
 .risk-appearance {
@@ -614,6 +615,8 @@ span.inactive1 {
 
 .selected li span {
     cursor: pointer;
+    color: white;
+    font-size: 14px;
 }
 
 .filterInput {
