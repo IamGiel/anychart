@@ -1427,3 +1427,97 @@ input[type='checkbox']:focus + label::before {
 .dropdown:hover .dropbtn {
     background-color: #ffff;
 }
+
+.map-dropdown-contents {
+    /* display: none; */
+    position: absolute;
+    background-color: white;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 36px;
+    right: 10px;
+}
+
+.filter {
+    width: 16px;
+}
+
+.filterby {
+    color: #494949;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.67px;
+    line-height: 10px;
+    text-align: left;
+    padding: 20px 0px 0px 21px;
+}
+
+.filter-div {
+    margin: 8px 0px 10px 27px;
+}
+.saved-filters {
+    margin: 21px 0px 26px 27px;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.filtertext {
+    color: #494949;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #5f4bc4;
+    border-radius: 19.5px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+.cancelbtn {
+    background-color: #ffffff;
+    color: #5f4bc4;
+    font-size: 13px;
+    font-weight: 700;
+    outline: none;
+    border: 0;
+}
+
+.float-L {
+    float: left;
+}
+
+.float-R {
+    float: right;
+}
+
+.modal-outline {
+    border: 1px solid #e7e7e7;
+    padding: 15px;
+    height: 200px;
+}
+.modal-body span:nth-child(1),
+.modal-outline span:nth-child(1) {
+    color: #494949;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: left;
+}
+.browser-default,
+.custom-select {
+    border: 0 !important;
+    width: 40% !important;
+    outline-color: none;
+}
+
+.def {
+    padding: 20px 24px 24px;
+    display: flow-root;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 //import { DashboardService } from './dashboard.service';
 import { Router } from '@angular/router';
 import { SharedDataService } from '../../../shared/service/shared-data-service';
@@ -40,9 +40,11 @@ export class SupplierlistComponent implements OnInit {
     searchKeyword: string;
     isCatManager: boolean = false;
 
+    @ViewChild('supplierfilter') supplierfilter;
     showAddToGroupDropdown: boolean = false;
     showCategoryDropdown: boolean = false;
     showFlagDropdown: boolean = false;
+    globalFilterSubMenu: boolean = false;
 
     serPop = 'The Supplier Evaluation Risk Rating (SER) is risk metric that helps supply management professionals evaluate the long term risk of doing business with a supplier. The SER score is based on a scale of 1-9, with 1 representing the lowest level of risk and 9 implying the highest level of risk. For suppliers whose headquarters are located outside the United States and Canada, the SER predicts the likelihood that a supplier will cease operations or reorganize without paying all creditors in full, or obtain relief from creditors under state/federal law over the next 12 months.The SER provides a consistent risk ranking across the globe.';
     paydexPop = `PAYDEX is Dun & Bradstreet's unique dollar-weighted numerical indicator of how a firm paid its bills over the    past year, based on trade experiences reported to D&B by various vendors. The D&B PAYDEX Score ranges
@@ -55,7 +57,8 @@ export class SupplierlistComponent implements OnInit {
     (1) Rating Classification: A rating of 5A means a business has a worth of $50+ million. HH, on the other end of the scale, indicates that a business is worth up to $4,999.
     This part of the rating is based on a company’s net worth, when available, or issued capital (the value of the company’s shares).
     (2)Composite Credit Appraisal: This measures the risk of business failure, from 1, indicating "minimal," to 4, "significant."`;
-
+    selectedpendingItem: any;
+    selectedSharedItem: any;
     constructor(
         private customPiwik: CustomPiwik,
         // private ds: DashboardService,
@@ -65,7 +68,17 @@ export class SupplierlistComponent implements OnInit {
         private modalService: NgbModal,
         private fetchData: FetchData,
         private prs: PreviousRouteService
-    ) {}
+    ) {
+        document.addEventListener('click', this.offClickHandlerss.bind(this));
+    }
+
+    offClickHandlerss(event: any) {
+        //this.filterSubMenu = false;
+
+        if (!this.supplierfilter.nativeElement.contains(event.target) && !this.supplierfilter.nativeElement == undefined) {
+            this.globalFilterSubMenu = false;
+        }
+    }
     public columnList: any = [
         /* {
             id:1,
