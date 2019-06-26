@@ -26,39 +26,34 @@ export class MapComponent implements OnInit, OnChanges {
     ngOnChanges() {
         switch (this.locationData) {
             case 'Site Location':
-                this.countryData = [];
                 this.locations = this.mapService.locationData.SiteLocations;
                 break;
 
             case 'HQ Location':
-                this.countryData = [];
                 this.locations = this.mapService.locationData.HQLocations;
+                break;
+
+            default:
+                this.locations = this.mapService.locationData.HQLocations;
+                break;
+        }
+        switch (this.chartData) {
+            case 'Basic Map':
+                this.countryData = [];
+                break;
+
+            case 'Environmental PI':
+                this.countryData = this.mapService.mapData.data;
+                break;
+
+            case 'Earthquake prone area':
+                this.countryData = this.mapService.earthquakeData.data;
                 break;
 
             default:
                 this.countryData = [];
                 this.locations = this.mapService.locationData.HQLocations;
                 break;
-        }
-        if (this.locationData == 'HQ Location') {
-            switch (this.chartData) {
-                case 'Basic Map':
-                    this.countryData = [];
-                    break;
-
-                case 'Environmental PI':
-                    this.countryData = this.mapService.mapData.data;
-                    break;
-
-                case 'Earthquake prone area':
-                    this.countryData = this.mapService.earthquakeData.data;
-                    break;
-
-                default:
-                    this.countryData = [];
-                    this.locations = this.mapService.locationData.HQLocations;
-                    break;
-            }
         }
         this.map.dispose();
         this.map = null;
