@@ -86,7 +86,7 @@ export class StackBarComponent implements OnInit {
 
         var chart = anychart.mekko();
 
-        chart.yAxis().labels(false);
+        //chart.yAxis().labels(false);
         chart.yAxis().stroke('#ffff');
 
         var series1 = chart.mekko(seriesData_1);
@@ -109,10 +109,19 @@ export class StackBarComponent implements OnInit {
         series3.normal().stroke('#FFF');
         series4.normal().stroke('#FFF');
 
-        chart.tooltip().title(false);
+        //chart.tooltip().title(false);
         chart.tooltip().useHtml(true);
         chart.tooltip().background('#FFF');
-        chart.tooltip().format('<span style="font-size:14px;color:#FFF;">{%data}</span>');
+        chart.tooltip().format('<span style="font-size:14px;color:#FFF;">{%value}</span>');
+
+        chart
+            .yAxis()
+            .ticks()
+            .stroke('#ffff');
+        chart
+            .xAxis()
+            .ticks()
+            .stroke('#ffff');
 
         // set the container id
         chart.container(this.id);
