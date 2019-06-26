@@ -81,7 +81,7 @@ export class SupplierdataComponent implements OnInit {
     showEthicGraph = false;
     showLabourGraph = false;
     activeTab = 'Countries';
-    subtab = 'HQ location';
+    subtab = 'HQ Location';
     financialrating = false;
     financialserrating = false;
     dbpayindex = false;

@@ -1125,8 +1125,8 @@
       <div class="float-L">
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link" (click)="subtabClicked('HQ location')">
-              <span [ngClass]="subtab =='HQ location'? 'nav-link active' : 'inactive1'">HQ location</span>
+            <a class="nav-link" (click)="subtabClicked('HQ Location')">
+              <span [ngClass]="subtab =='HQ Location'? 'nav-link active' : 'inactive1'">HQ Location</span>
             </a>
           </li>
           <li class="nav-item" (click)="subtabClicked('Site Location')">
@@ -1157,7 +1157,7 @@
         </div>
       </div>
       <div class="map-container">
-        <jhi-map></jhi-map>
+        <jhi-map [chartData]="mapdropdown" [locationData]= "subtab"></jhi-map>
       </div>
       <div class="dropdown-map">
         <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
@@ -1166,8 +1166,9 @@
         <div *ngIf="mapdrop" class="map-dropdown-content">
           <a (click)="selectMap('Environmental PI')"><i *ngIf="mapdropdown == 'Environmental PI'"
               class="fa fa-check"></i> Environmental PI</a>
-          <!-- <a><i *ngIf="mapdropdown == 'Earthquake prone area'" class="fa fa-check"></i>Earthquake Prone Area</a>
-          <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
+          <a (click)="selectMap('Earthquake prone area')"><i *ngIf="mapdropdown == 'Earthquake prone area'"
+              class="fa fa-check"></i>Earthquake Prone Area</a>
+          <!-- <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
               class="fa fa-check"></i>Terror Prone Area</a> -->
           <a (click)="selectMap('Basic Map')"><i *ngIf="mapdropdown == 'Basic Map'" class="fa fa-check"></i> Basic
             Map</a>

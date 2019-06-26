@@ -1,5 +1,5 @@
 {
-    "data" : [
+    "HQLocations" : [
         { "id": "Bangalore", "size": 6, "lat": 12.9743882, "long": 77.5882343 },
         { "id": "New Delhi", "size": 3, "lat": 28.6139391, "long": 77.2090212 },
         { "id": "San Fransisco", "size": 9, "lat": 37.7712408, "long": -122.5389803 },
@@ -13,6 +13,15 @@
         { "id": "London", "size": 9, "lat": 51.5285582, "long": -0.2416797 },
         { "id": "Liverpool", "size": 4, "lat": 53.4121569, "long": -2.9860979 },
         { "id": "", "size": 2, "lat": 45.4627124, "long": 9.1076929 },
+        { "id": "Casablanca", "size": 2, "lat": 33.5722678, "long": -7.6570322 }
+    ],
+    "SiteLocations" : [
+        { "id": "Bangalore", "size": 6, "lat": 12.9743882, "long": 77.5882343 },
+        { "id": "New Delhi", "size": 3, "lat": 28.6139391, "long": 77.2090212 },
+        { "id": "San Fransisco", "size": 9, "lat": 37.7712408, "long": -122.5389803 },
+        { "id": "New York", "size": 12, "lat": 40.6611314, "long": -74.3096548 },
+        { "id": "Hongkong", "size": 12, "lat": 22.1287591, "long": 114.2396604 },
+        { "id": "Xi'an", "size": 4, "lat": 34.2590616, "long": 108.6870282 },
         { "id": "Casablanca", "size": 2, "lat": 33.5722678, "long": -7.6570322 }
     ]
 }

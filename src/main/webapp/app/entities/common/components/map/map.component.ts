@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { MapService } from './map.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,20 +7,68 @@ import { HttpClient } from '@angular/common/http';
     templateUrl: './map.component.html',
     styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements OnInit, OnChanges {
     //countryData: any;
     @Input('chartData') chartData;
+    @Input('locationData') locationData;
+    map = anychart.map();
+
+    mapdata: any[] = [];
 
     locations: any[] = [];
 
     countryData: any[] = [];
 
-    constructor(private http: HttpClient, private mapService: MapService) {}
+    earthquakeData: any[] = [];
+
+    constructor(private mapService: MapService) {}
+
+    ngOnChanges() {
+        switch (this.locationData) {
+            case 'Site Location':
+                this.countryData = [];
+                this.locations = this.mapService.locationData.SiteLocations;
+                break;
+
+            case 'HQ Location':
+                this.countryData = [];
+                this.locations = this.mapService.locationData.HQLocations;
+                break;
+
+            default:
+                this.countryData = [];
+                this.locations = this.mapService.locationData.HQLocations;
+                break;
+        }
+        if (this.locationData == 'HQ Location') {
+            switch (this.chartData) {
+                case 'Basic Map':
+                    this.countryData = [];
+                    break;
+
+                case 'Environmental PI':
+                    this.countryData = this.mapService.mapData.data;
+                    break;
+
+                case 'Earthquake prone area':
+                    this.countryData = this.mapService.earthquakeData.data;
+                    break;
+
+                default:
+                    this.countryData = [];
+                    this.locations = this.mapService.locationData.HQLocations;
+                    break;
+            }
+        }
+        this.map.dispose();
+        this.map = null;
+
+        this.map = anychart.map();
+        this.basicMap();
+    }
 
     ngOnInit() {
-        this.countryData = this.mapService.mapData.data;
-        this.locations = this.mapService.locationData.data;
-        this.basicMap();
+        // this.basicMap();
     }
 
     basicMap() {
@@ -93,10 +141,9 @@ export class MapComponent implements OnInit {
         //     map.draw();
         // });
 
-        var map = anychart.map();
-        map.geoData('anychart.maps.world');
-        var series1 = map.bubble(this.locations);
-        var series2 = map.choropleth(this.countryData);
+        this.map.geoData('anychart.maps.world');
+        var series1 = this.map.bubble(this.locations);
+        var series2 = this.map.choropleth(this.countryData);
 
         series1.labels().format('{%id}');
         series1.tooltip().format('{%size}');
@@ -106,16 +153,16 @@ export class MapComponent implements OnInit {
         series2.tooltip().format('{%indicator}: {%value}');
         series2.tooltip().titleFormat('{%name}');
 
-        map.maxBubbleSize(8);
-        map.minBubbleSize(2);
-        var colorRange = map.colorRange();
+        this.map.maxBubbleSize(8);
+        this.map.minBubbleSize(2);
+        var colorRange = this.map.colorRange();
         colorRange.enabled(true);
         series2.colorScale(anychart.scales.linearColor('#B4E8C8', '#FDEC84', '#FFA7A5'));
         series2.stroke('#000 .1');
 
         var zoomController = anychart.ui.zoom();
-        zoomController.render(map);
-        map.container('worldmap');
-        map.draw();
+        zoomController.render(this.map);
+        this.map.container('worldmap');
+        this.map.draw();
     }
 }
