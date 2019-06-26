@@ -12,7 +12,7 @@ export class TreemapComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        const chart = anychart.treeMap(this.chartData, 'as-tree');
+        var chart = anychart.treeMap(this.chartData, 'as-tree');
         const customColorScale = anychart.scales.linearColor();
         customColorScale.colors(['#00ccff', '#ffcc00']);
 
