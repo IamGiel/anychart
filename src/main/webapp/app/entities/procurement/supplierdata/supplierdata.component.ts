@@ -426,7 +426,7 @@ export class SupplierdataComponent implements OnInit {
 
         this.treeData = [['LIMITED', 0, 5], ['FAIR', 0, 10], ['GOOD', 5, 10], ['HIGH', 2, 13]];
 
-        this.responseFunnelData = [['Request', 0, 5, 10, 8], ['Response', 0, 10, 5, 7], ['Response Health', 5, 10, 10, 5]];
+        this.responseFunnelData = [['REQUEST', 0, 5, 10, 8], ['RESPONSE', 0, 10, 5, 7], ['RESPONSE HEALTH', 5, 10, 10, 5]];
     }
 
     selectMap(maptype: string) {

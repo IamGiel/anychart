@@ -5,9 +5,7 @@ import { serializePaths } from '@angular/router/src/url_tree';
 @Component({
     selector: 'jhi-column-chart',
     templateUrl: './column-chart.component.html',
-    styles: [
-        '.anychart-tooltip {border-radius: 4px;background: #fff;color:#222;padding:10px;box-shadow:2px 4px 15px rgba(0,0,0,0.15);width: 180px;}'
-    ]
+    styleUrls: ['./column-chart.component.css']
 })
 export class ColumnChartComponent implements OnInit, AfterViewInit {
     @ViewChild('chartContainer') container;
@@ -57,8 +55,6 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
 
         chart.yAxis().labels(false);
         chart.yAxis().stroke('#ffff');
-        chart.yAxis().stroke('#ffff');
-        chart.yAxis().labels(false);
         chart
             .yAxis()
             .ticks()
