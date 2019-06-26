@@ -145,7 +145,19 @@ export class MapComponent implements OnInit, OnChanges {
         series1.tooltip().titleFormat('{%id}');
 
         series2.labels().format('{%name}');
-        series2.tooltip().format('{%indicator}: {%value}');
+
+        this.countryData.forEach(ele => {
+            series2.tooltip().format(function(e) {
+                var text = '';
+                for (var i = 0; i < e.getData('indicator').length; i++) {
+                    text += e.getData('indicator')[i].label + ' : ' + e.getData('indicator')[i].value + '\n';
+                }
+                return text;
+            });
+        });
+
+        series2.tooltip().titleFormat('{%name}');
+
         series2.tooltip().titleFormat('{%name}');
 
         this.map.maxBubbleSize(8);
