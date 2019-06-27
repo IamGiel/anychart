@@ -333,13 +333,16 @@
             <i class="fa fa-angle-up"></i>
           </button>
           <div *ngIf="mapdrop" class="map-dropdown-content">
-            <!-- <a (click)="selectMap('Water Scarcity area')"><i *ngIf="mapdropdown == 'Water Scarcity area'"
-                class="fa fa-check"></i> Water Scarcity Area</a> -->
             <a><i *ngIf="mapdropdown == 'Earthquake prone area'" class="fa fa-check"></i>More..</a>
             <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
                 class="fa fa-check"></i>Environment PI</a>
             <a (click)="selectMap('Basic Map')"><i *ngIf="mapdropdown == 'Basic Map'" class="fa fa-check"></i> Basic
               Map</a>
+              <a (click)="selectMap('Country Risk')"><i *ngIf="mapdropdown == 'Country Risk'" class="fa fa-check"></i> Country Risk</a>
+              <a (click)="selectMap('Business Integrity')"><i *ngIf="mapdropdown == 'Business Integrity'" class="fa fa-check"></i> Business Integrity</a>
+              <a (click)="selectMap('Environmental Compliance')"><i *ngIf="mapdropdown == 'Environmental Compliance'" class="fa fa-check"></i> Environmental Compliance</a>
+              <a (click)="selectMap('Financial Integrity')"><i *ngIf="mapdropdown == 'Financial Integrity'" class="fa fa-check"></i> Financial Integrity</a>
+              <a (click)="selectMap('Social Compliance')"><i *ngIf="mapdropdown == 'Social Compliance'" class="fa fa-check"></i> Social Compliance</a>
           </div>
         </div>
       </div>

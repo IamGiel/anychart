@@ -24,6 +24,7 @@ export class MapComponent implements OnInit, OnChanges {
     constructor(private mapService: MapService) {}
 
     ngOnChanges() {
+        console.log('whats in chartdata ', this.chartData);
         switch (this.locationData) {
             case 'Site Location':
                 this.locations = this.mapService.locationData.SiteLocations;
@@ -48,6 +49,10 @@ export class MapComponent implements OnInit, OnChanges {
 
             case 'Country Risk':
                 this.countryData = this.mapService.earthquakeData.data;
+                break;
+
+            case 'Social Compliance':
+                this.countryData = this.mapService.socialData.data;
                 break;
 
             default:
@@ -164,7 +169,7 @@ export class MapComponent implements OnInit, OnChanges {
         this.map.minBubbleSize(2);
         var colorRange = this.map.colorRange();
         colorRange.enabled(true);
-        series2.colorScale(anychart.scales.linearColor('#B4E8C8', '#FDEC84', '#FFA7A5'));
+        series2.colorScale(anychart.scales.linearColor('black', 'red', 'green'));
         series2.stroke('#000 .1');
 
         var zoomController = anychart.ui.zoom();
