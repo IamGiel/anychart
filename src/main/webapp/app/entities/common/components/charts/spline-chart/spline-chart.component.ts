@@ -56,6 +56,8 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
         // set the container id
         chart.container(this.id);
 
+        chart.tooltip().format('{%value}');
+
         // initiate drawing the chart
         chart.draw();
     }
