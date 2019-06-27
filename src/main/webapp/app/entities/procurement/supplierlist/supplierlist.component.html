@@ -87,7 +87,7 @@
                       <div class="row reactangle">
                         <div class="col-md-3 border-right">
                             <div class="dropdown">
-                                <button class="dropbtn" (click)="showAddToGroupDropdown = !showAddToGroupDropdown">Add to Group <i class="fa">&#xf107;</i></button>
+                                <button class="dropbtn" (click)="showAddToGroupDropdown = !showAddToGroupDropdown;showCategoryDropdown = false;showFlagDropdown = false">Add to Group <i class="fa">&#xf107;</i></button>
                                  <div id="env" class="dropdown-content" *ngIf="showAddToGroupDropdown">
                                   <a (click)="showAddToGroupDropdown = !showAddToGroupDropdown">Group A</a>
                                   <a (click)="showAddToGroupDropdown = !showAddToGroupDropdown">Group B</a>
@@ -97,7 +97,7 @@
                         </div>
                         <div class="col-md-3 border-right">
                             <div class="dropdown">
-                                <button class="dropbtn" (click)="showCategoryDropdown = !showCategoryDropdown">Add to category <i class="fa">&#xf107;</i></button>
+                                <button class="dropbtn" (click)="showCategoryDropdown = !showCategoryDropdown; showAddToGroupDropdown = false; showFlagDropdown= false">Add to category <i class="fa">&#xf107;</i></button>
                                  <div id="env" class="dropdown-content" *ngIf="showCategoryDropdown">
                                   <a (click)="showCategoryDropdown = !showCategoryDropdown">PCB</a>
                                   <a (click)="showCategoryDropdown = !showCategoryDropdown">Battery</a>
@@ -111,7 +111,7 @@
                         </div>
                         <div class="col-md-3 border-right">
                             <div class="dropdown">
-                                <button class="dropbtn" (click)="showFlagDropdown = !showFlagDropdown">Flag supplier <i class="fa">&#xf107;</i></button>
+                                <button class="dropbtn" (click)="showFlagDropdown = !showFlagDropdown; showAddToGroupDropdown= false;showCategoryDropdown = false;">Flag supplier <i class="fa">&#xf107;</i></button>
                                  <div id="env" class="dropdown-content" *ngIf="showFlagDropdown">
                                   <a (click)="showFlagDropdown = !showFlagDropdown">Red Flag</a>
                                   <a (click)="showFlagDropdown = !showFlagDropdown">Yellow Flag</a>

@@ -42,11 +42,11 @@ export class MapComponent implements OnInit, OnChanges {
                 this.countryData = [];
                 break;
 
-            case 'Environmental PI':
+            case 'Environmental Risk':
                 this.countryData = this.mapService.mapData.data;
                 break;
 
-            case 'Earthquake prone area':
+            case 'Country Risk':
                 this.countryData = this.mapService.earthquakeData.data;
                 break;
 

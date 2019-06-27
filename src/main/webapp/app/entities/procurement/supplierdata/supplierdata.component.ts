@@ -59,7 +59,7 @@ export class SupplierdataComponent implements OnInit {
     showEnv = '';
     showEthical = '';
     showLabor = '';
-    mapdropdown = 'Environmental PI';
+    mapdropdown = 'Environmental Risk';
     mapdrop = false;
     ffilter = false;
     envfilter = false;
