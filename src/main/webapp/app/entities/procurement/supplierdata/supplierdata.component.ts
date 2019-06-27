@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import 'anychart';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardService } from '../dashboard/dashboard.service';
+import { MapService } from 'app/entities/common/components/map/map.service';
 
 @Component({
     selector: 'jhi-supplierdata',
@@ -35,10 +36,12 @@ export class SupplierdataComponent implements OnInit {
     @ViewChild('maptest') maptest;
     // @ViewChild('basicmap') basicmap;
 
-    constructor(private modalService: NgbModal, private dashboardService: DashboardService) {
+    constructor(private mapService: MapService, private modalService: NgbModal, private dashboardService: DashboardService) {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
     closeResult: string;
+
+    socialData = [];
 
     images = [1, 2, 3, 4, 5, 6].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
     responseFunnelData = [];
@@ -364,6 +367,8 @@ export class SupplierdataComponent implements OnInit {
     healthsafety = false;
     spliceData: any;
     ngOnInit() {
+        this.socialData = this.mapService.socialData.data;
+        console.log('>>>>>>> ', this.socialData);
         this.clickfinance = 'D&B Rating';
         this.clickEnvironmental = 'Overall Rating';
         this.chartData = [

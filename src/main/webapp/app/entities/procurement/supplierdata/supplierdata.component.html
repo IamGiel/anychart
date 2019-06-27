@@ -1210,6 +1210,12 @@
         </ul>
       </div>
       <div class="table-div" *ngIf="activeTab =='Countries'">
+        <div *ngFor="let data of socialData">
+            <div class="grid-table border-top">
+                <p class="country">{{data.id}}</p>
+                <p><span class="number">42</span><span class="percent">21%</span></p>
+              </div>
+        </div>
         <div class="grid-table border-top">
           <p class="country">USA</p>
           <p><span class="number">42</span><span class="percent">21%</span></p>
