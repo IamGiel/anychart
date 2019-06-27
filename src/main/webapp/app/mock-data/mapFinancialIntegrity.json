@@ -1,0 +1,962 @@
+[
+    {
+        "Country": "AFGHANISTAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ALBANIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ALGERIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ANGOLA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ARMENIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "AZERBAIJAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "BANGLADESH",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "BELARUS",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "BURKINA FASO",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "BURUNDI",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "CAMBODIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "CAMEROON",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "CENTRAL AFRICAN REPUBLIC",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "CHAD",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "CONGO",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "CUBA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "DJIBOUTI",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ECUADOR",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ERITREA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ETHIOPIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "GABON",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "GUATEMALA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "GUINEA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "GUYANA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "HAITI",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "HONDURAS",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "IRAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "IRAQ",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "KYRGYZSTAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "LAOS",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "LEBANON",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "LIBERIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "LIBYA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MADAGASCAR",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MALAWI",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MALDIVES",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MALI",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MAURITANIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MOLDOVA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MONGOLIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MOZAMBIQUE",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "MYANMAR",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "NEPAL",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "NICARAGUA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "NIGER",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "NIGERIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "PAKISTAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "PALESTINE",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "PARAGUAY",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "SAO TOME AND PRINCIPE",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "SIERRA LEONE",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "SUDAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "SURINAME",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "SYRIAN ARAB REPUBLIC",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "TAJIKISTAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "TANZANIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "THE DEMOCRATIC REPUBLIC OF THE CONGO",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "TIMOR-LESTE",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "TOGO",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "TURKMENISTAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "UGANDA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "UKRAINE",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "UZBEKISTAN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "VENEZUELA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "YEMEN",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ZAMBIA",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "ZIMBABWE",
+        "Country risk Assessment": "High",
+        "Business climate": "High",
+        "Final Score": "High"
+    },
+    {
+        "Country": "CHILE",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "HUNGARY",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "KUWAIT",
+        "Country risk Assessment": "Low",
+        "Business climate": "Medium",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "MALAYSIA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "CANADA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "IRELAND",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "LATVIA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "LITHUANIA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "POLAND",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "SLOVAKIA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "SLOVENIA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "UNITED KINGDOM",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "AUSTRALIA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "AUSTRIA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "BELGIUM",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "CZECH REPUBLIC",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "DENMARK",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "ESTONIA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "FINLAND",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "FRANCE",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "GERMANY",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "HONG KONG",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "ICELAND",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "ISRAEL",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "JAPAN",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "LUXEMBOURG",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "MALTA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "NETHERLANDS",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "NEW ZEALAND",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "NORWAY",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "PORTUGAL",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "SINGAPORE",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "SOUTH KOREA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "SPAIN",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "SWEDEN",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "SWITZERLAND",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "TAIWAN",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "UNITED STATES OF AMERICA",
+        "Country risk Assessment": "Low",
+        "Business climate": "Low",
+        "Final Score": "Low"
+    },
+    {
+        "Country": "ITALY",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "UNITED ARAB EMIRATES",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "BENIN",
+        "Country risk Assessment": "Medium",
+        "Business climate": "High",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "CAPE VERDE",
+        "Country risk Assessment": "Medium",
+        "Business climate": "High",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "DOMINICAN REPUBLIC",
+        "Country risk Assessment": "Medium",
+        "Business climate": "High",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "EGYPT",
+        "Country risk Assessment": "Medium",
+        "Business climate": "High",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "PAPUA NEW GUINEA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "High",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "RUSSIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "High",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "BOTSWANA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "BRAZIL",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "BULGARIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "CHINA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "COLOMBIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "COSTA RICA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "CROATIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "CYPRUS",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "GEORGIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "GHANA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "GREECE",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "INDIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "INDONESIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "IVORY COAST",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "JAMAICA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "KAZAKHSTAN",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "KENYA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "MACEDONIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "MAURITIUS",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "MEXICO",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "MOROCCO",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "NAMIBIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "OMAN",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "PANAMA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "PERU",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "PHILIPPINES",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "QATAR",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "ROMANIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "RWANDA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "SENEGAL",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "SERBIA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "SOUTH AFRICA",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "THAILAND",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "URUGUAY",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Low",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "VIETNAM",
+        "Country risk Assessment": "Medium",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "ARGENTINA",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "BAHRAIN",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "BOLIVIA",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "BOSNIA AND HERZEGOVINA",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "EL SALVADOR",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "JORDAN",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "MONTENEGRO",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "SAUDI ARABIA",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "SRI LANKA",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "TRINIDAD AND TOBAGO",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "TUNISIA",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    },
+    {
+        "Country": "TURKEY",
+        "Country risk Assessment": "High",
+        "Business climate": "Medium",
+        "Final Score": "Medium"
+    }
+]
