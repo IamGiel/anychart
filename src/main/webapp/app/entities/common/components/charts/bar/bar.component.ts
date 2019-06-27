@@ -28,6 +28,8 @@ export class BarComponent implements OnInit, AfterViewInit {
         chart.yAxis().labels(false);
         chart.yAxis().stroke('#ffff');
         chart.xAxis().stroke('#ffff');
+
+        chart.tooltip().format('{%value}');
         // create a bar series and set the data
         const series = chart.bar(this.chartData);
         series.fill('rgb(231, 231, 231)');
