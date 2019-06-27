@@ -126,7 +126,7 @@
             <button type="button" class="btn float-L" (click)="open(content1)">Save Filter</button>
         </span>
         <span>
-            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
         </span>
         <span>
             <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
@@ -229,7 +229,7 @@
     <div>
       <div class="def" style="padding-top: 0;">
         <span>
-          <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+          <button type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
         </span>
         <span>
             <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
@@ -267,7 +267,7 @@
     <div>
       <div class="def" style="padding-top: 0;">
         <span>
-          <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+          <button type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
         </span>
         <span>
             <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
@@ -308,7 +308,7 @@
     <div>
       <div class="def" style="padding-top: 0;">
         <span>
-          <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+          <button type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
         </span>
         <span>
             <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>

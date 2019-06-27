@@ -684,3 +684,16 @@ span.inactive1 {
 .filterGroup li input[type='checkbox']:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
 }
+
+.filtered-count {
+    color: #494949;
+    margin-right: 15px;
+}
+.save-filter,
+.clear-filter {
+    color: #6b4cd9;
+    cursor: pointer;
+}
+.clear-filter {
+    margin-right: 15px;
+}

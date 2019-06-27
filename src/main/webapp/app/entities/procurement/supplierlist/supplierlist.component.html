@@ -27,6 +27,20 @@
 </div>
 <div>
     <div *ngIf="activeTab=='Shared'">
+        <div class="row" *ngIf="filteredApplied == true">
+            <div class="col-md-6 p-0 float-L">
+              <ul class="selected">
+                <li style="background-color: transparent"><span style="color: #494949;">Filters applied </span></li>
+                <li> D&B paydex higher than 5 <span (click)="removeSelectedFilter(index)">x</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 p-o float-L">
+              <span class="float-R save-filter">save filter</span>
+              <span class="float-R clear-filter" (click)="filteredApplied = false">Clear filter</span>
+              <span class="float-R filtered-count">Filtered 10 of 100</span>
+            </div>
+          </div>
         
                 <div class="row">
                   <div class="col-md-5">
@@ -447,7 +461,7 @@
               <button type="button" class="btn float-L" (click)="open(content1)">Save Filter</button>
           </span>
           <span>
-              <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+              <button type="button" class="btn float-R" (click)="modal.close('Save click'); filteredApplied = true">Apply Filter</button>
           </span>
           <span>
               <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
@@ -550,7 +564,7 @@
       <div>
         <div class="def" style="padding-top: 0;">
           <span>
-            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click'); filteredApplied = true">Apply Filter</button>
           </span>
           <span>
               <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
@@ -588,7 +602,7 @@
       <div>
         <div class="def" style="padding-top: 0;">
           <span>
-            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click'); filteredApplied = true">Apply Filter</button>
           </span>
           <span>
               <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
@@ -629,7 +643,7 @@
       <div>
         <div class="def" style="padding-top: 0;">
           <span>
-            <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+            <button type="button" class="btn float-R" (click)="modal.close('Save click'); filteredApplied = true">Apply Filter</button>
           </span>
           <span>
               <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>

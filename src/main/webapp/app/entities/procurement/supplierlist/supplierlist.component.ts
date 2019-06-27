@@ -48,6 +48,7 @@ export class SupplierlistComponent implements OnInit {
 
     closeResult: string;
     filterSubMenu: boolean = false;
+    filteredApplied: boolean = false;
 
     item1 = 'Financial Data';
     item2 = 'D&B Rating';

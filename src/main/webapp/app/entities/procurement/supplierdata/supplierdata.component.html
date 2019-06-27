@@ -1,5 +1,20 @@
 <div>
+  
   <div class="container">
+      <div class="row" *ngIf="dashboardService.getFiltersAppliedOrNot() == true">
+        <div class="col-md-6 p-0 float-L">
+          <ul class="selected">
+            <li style="background-color: transparent"><span style="color: #494949;">Filters applied </span></li>
+            <li> D&B paydex higher than 5 <span (click)="removeSelectedFilter(index)">x</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 p-o float-L">
+          <span class="float-R save-filter">save filter</span>
+          <span class="float-R clear-filter" (click)="dashboardService.clearFilterApplied()">Clear filter</span>
+          <span class="float-R filtered-count">Filtered 10 of 100</span>
+        </div>
+      </div>
     <i-feather name="IconFileText" class="big"></i-feather>
     <div class="row" #target>
       <div class="col-md-3 pl-0">
