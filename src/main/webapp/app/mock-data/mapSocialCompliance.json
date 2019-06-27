@@ -2,7 +2,7 @@
     "data": [
         {
             "name": "Dominica",
-            "id": "DMA",
+            "id": "DM",
             "value": "2.1",
             "indicator": [
                 {
@@ -21,7 +21,7 @@
         },
         {
             "name": "Seychelles",
-            "id": "SYC",
+            "id": "SC",
             "value": "5.1",
             "indicator": [
                 {
@@ -40,7 +40,7 @@
         },
         {
             "name": "China",
-            "id": "CHN",
+            "id": "CN",
             "value": "8.1",
             "indicator": [
                 {
