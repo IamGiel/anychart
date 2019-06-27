@@ -111,7 +111,10 @@ export class StackBarComponent implements OnInit {
 
         //chart.tooltip().title(false);
         chart.tooltip().useHtml(true);
+        chart.yAxis().labels(false);
+        chart.yAxis().stroke('#ffff');
         chart.tooltip().background('#FFF');
+        chart.tooltip().separator(false);
         chart.tooltip().format('<span style="font-size:14px;color:#FFF;">{%value}</span>');
 
         chart

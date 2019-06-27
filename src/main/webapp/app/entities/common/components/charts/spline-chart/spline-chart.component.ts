@@ -53,6 +53,12 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
             .xAxis()
             .ticks()
             .stroke('#ffff');
+
+        chart.tooltip().useHtml(true);
+        chart.tooltip().zIndex(100);
+        chart.tooltip().separator(false);
+        chart.tooltip().format('<span style="font-size:14px;color:#FFF;">{%value}</span>');
+
         // set the container id
         chart.container(this.id);
 

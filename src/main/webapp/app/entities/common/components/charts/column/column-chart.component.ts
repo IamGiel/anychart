@@ -42,6 +42,7 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
         chart.tooltip().title(false);
         chart.tooltip().useHtml(true);
         chart.tooltip().background('#FFF');
+        chart.tooltip().zIndex(101);
         chart
             .tooltip()
             .format(
@@ -53,8 +54,11 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
                     "<span style='font-weight:600'>{%avgval}%</span></span>"
             );
 
+        chart.tooltip().background('#FFF');
+        chart.tooltip().zIndex(100);
         chart.yAxis().labels(false);
         chart.yAxis().stroke('#ffff');
+        chart.xAxis().stroke(false);
         chart
             .yAxis()
             .ticks()
