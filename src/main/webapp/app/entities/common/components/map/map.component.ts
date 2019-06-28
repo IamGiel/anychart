@@ -77,12 +77,12 @@ export class MapComponent implements OnInit, OnChanges {
 
     basicMap() {
         this.map.geoData('anychart.maps.world');
-        // var series1 = this.map.bubble(this.locations);
+        var series1 = this.map.bubble(this.locations);
         var series2 = this.map.choropleth(this.countryData);
 
-        // series1.labels().format('{%id}');
-        // series1.tooltip().format('{%size}');
-        // series1.tooltip().titleFormat('{%id}');
+        series1.labels().format('{%id}');
+        series1.tooltip().format('{%size}');
+        series1.tooltip().titleFormat('{%id}');
 
         series2.labels().format('{%name}');
 
