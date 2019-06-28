@@ -23,6 +23,7 @@ export class PieChartComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         this.chart.container(this.container.nativeElement);
         this.chart.innerRadius('50%');
+
         // set the position of labels
         //this.chart.labels().position("outside");
         var label = anychart.standalones.label();

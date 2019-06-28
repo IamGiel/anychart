@@ -378,15 +378,15 @@ export class SupplierdataComponent implements OnInit {
         ];
         // this.columnData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
         this.columnData = [
-            { x: '1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-            { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-            { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-            { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-            { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 },
-            { x: '6', perc: 8, avgval: 8, name: 'Rating 6', risk: 'Medium Risk', num: 8 },
-            { x: '7', perc: 12, avgval: 12, name: 'Rating 7', risk: 'Medium Risk', num: 12 },
-            { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9 },
-            { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6 }
+            { x: '1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#55D184' },
+            { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#8ECB6F' },
+            { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#ADC662' },
+            { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#D6C355' },
+            { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FEA344' },
+            { x: '6', perc: 8, avgval: 8, name: 'Rating 6', risk: 'Medium Risk', num: 8, fill: '#FEA344' },
+            { x: '7', perc: 12, avgval: 12, name: 'Rating 7', risk: 'Medium Risk', num: 12, fill: '#FD8443' },
+            { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9, fill: '#FF5C5C' },
+            { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6, fill: '#FF5C5C' }
         ];
 
         this.spliceData = [['1', 30], , ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
@@ -394,27 +394,27 @@ export class SupplierdataComponent implements OnInit {
         // this.columnDatas = [['0-29', 3], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
 
         this.columnDatas = [
-            { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-            { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-            { x: '50-69', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-            { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-            { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+            { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+            { x: '50-69', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+            { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+            { x: '90+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
         ];
 
         this.ethicaldata = [
-            { x: '0', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-            { x: '1-10', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-            { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-            { x: '21-30', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-            { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            { x: '0', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+            { x: '1-10', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+            { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+            { x: '21-30', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+            { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
         ];
 
         this.labourData = [
-            { x: '0-10', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-            { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-            { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-            { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-            { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+            { x: '0', perc: 2, avgval: 2, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+            { x: '1-10', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+            { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+            { x: '21-30', perc: 5, avgval: 5, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+            { x: '30+', perc: 10, avgval: 10, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
         ];
 
         // this.columnDatass = [3, 4, 9, 8, 7];
@@ -449,25 +449,26 @@ export class SupplierdataComponent implements OnInit {
         if (data === 'D&B Rating') {
             this.clickfinance = 'D&B Rating';
             this.columnData = [
-                { x: '1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 },
-                { x: '6', perc: 8, avgval: 8, name: 'Rating 6', risk: 'Medium Risk', num: 8 },
-                { x: '7', perc: 12, avgval: 12, name: 'Rating 7', risk: 'Medium Risk', num: 12 },
-                { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9 },
-                { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6 }
+                { x: '1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#FF99CC' },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FF99CC' },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FF99CC' },
+                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF99CC' },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF99CC' },
+                { x: '6', perc: 8, avgval: 8, name: 'Rating 6', risk: 'Medium Risk', num: 8, fill: '#FF99CC' },
+                { x: '7', perc: 12, avgval: 12, name: 'Rating 7', risk: 'Medium Risk', num: 12, fill: '#FF99CC' },
+                { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9, fill: '#FF99CC' },
+                { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6, fill: '#FF99CC' }
             ];
         } else if (data === 'D&B SER Rating') {
             this.clickfinance = 'D&B SER Rating';
             this.columnData = [
-                { x: '1', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 5 },
-                { x: '2', perc: 5, avgval: 5, name: 'Rating 2', risk: 'Low Risk', num: 6 },
-                { x: '3', perc: 15, avgval: 15, name: 'Rating 3', risk: 'Low Risk', num: 7 },
-                { x: '4', perc: 8, avgval: 8, name: 'Rating 4', risk: 'Medium Risk', num: 8 }
+                { x: '1', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 5, fill: '#FF99CC' },
+                { x: '2', perc: 5, avgval: 5, name: 'Rating 2', risk: 'Low Risk', num: 6, fill: '#FF99CC' },
+                { x: '3', perc: 15, avgval: 15, name: 'Rating 3', risk: 'Low Risk', num: 7, fill: '#FF99CC' },
+                { x: '4', perc: 8, avgval: 8, name: 'Rating 4', risk: 'Medium Risk', num: 8, fill: '#FF99CC' }
             ];
         } else if (data === 'D&B Paydex') {
+            this.spliceData = [['1', 30], , ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
             this.clickfinance = 'D&B Paydex';
         }
 

@@ -1,20 +1,5 @@
 <div>
-  
   <div class="container">
-      <div class="row" *ngIf="dashboardService.getFiltersAppliedOrNot() == true">
-        <div class="col-md-6 p-0 float-L">
-          <ul class="selected">
-            <li style="background-color: transparent"><span style="color: #494949;">Filters applied </span></li>
-            <li> D&B paydex higher than 5 <span (click)="removeSelectedFilter(index)">x</span>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6 p-o float-L">
-          <span class="float-R save-filter">save filter</span>
-          <span class="float-R clear-filter" (click)="dashboardService.clearFilterApplied()">Clear filter</span>
-          <span class="float-R filtered-count">Filtered 10 of 100</span>
-        </div>
-      </div>
     <i-feather name="IconFileText" class="big"></i-feather>
     <div class="row" #target>
       <div class="col-md-3 pl-0">
@@ -53,8 +38,8 @@
             <jhi-spline-chart *ngIf="clickfinance==='D&B Paydex'" [id]="'paydexid'" [chartData]="spliceData"
               [labels]="false">
             </jhi-spline-chart>
-            <div class="rectangle" [ngStyle]="{'bottom': clickfinance==='D&B Paydex'? '17px':'40px'}">
-            </div>
+            <!-- <div class="rectangle" [ngStyle]="{'bottom': clickfinance==='D&B Paydex'? '17px':'40px'}">
+            </div> -->
             <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
               <p>Low Risk</p>
               <p>High Risk</p>
@@ -116,7 +101,7 @@
             <jhi-column-chart *ngIf="clickEnvironmental==='Sustainable procurem..'" [chartData]="columnDatas"
               [labels]="true">
             </jhi-column-chart>
-            <div class="abc">
+            <!-- <div class="abc">
               <div>
                 <span class="rectangle1"> </span>
                 <span class="rectangle2"></span>
@@ -124,7 +109,7 @@
                 <span class="rectangle4"></span>
                 <span class="rectangle5"></span>
               </div>
-            </div>
+            </div> -->
             <div class="risk">
               <p>High Risk</p>
               <p>Low Risk</p>
@@ -181,7 +166,7 @@
             </jhi-column-chart>
             <jhi-column-chart *ngIf="clickEthical === 'Sanctions'" [chartData]="ethicaldata" [labels]="true">
             </jhi-column-chart>
-            <div class="abc">
+            <!-- <div class="abc">
               <div>
                 <span class="rectangle4"></span>
                 <span class="rectangle3"></span>
@@ -189,7 +174,7 @@
                 <span class="rectangle1"></span>
                 <span class="rectangle6"></span>
               </div>
-            </div>
+            </div> -->
             <div class="risk risk-appearance">
               <p> APPEARANCE</p>
             </div>
@@ -245,8 +230,7 @@
             </jhi-column-chart>
             <jhi-column-chart *ngIf="clickLabour === 'Workforcehealthy/Saftey Is'" [chartData]="labourData"
               [labels]="true"></jhi-column-chart>
-
-            <div class="abc">
+            <!-- <div class="abc">
               <div>
                 <span class="rectangle4"></span>
                 <span class="rectangle3"></span>
@@ -254,7 +238,7 @@
                 <span class="rectangle1"></span>
                 <span class="rectangle6"></span>
               </div>
-            </div>
+            </div> -->
             <div class="risk risk-appearance">
               <p>APPEARANCE</p>
             </div>
@@ -298,10 +282,8 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
-                  <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
-                  </jhi-column-chart> -->
-                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
-                  </div>
+                  <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -330,8 +312,8 @@
                   <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
                   <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
                     </jhi-column-chart> -->
-                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
-                  </div>
+                  <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  </div> -->
                 </div>
                 <!-- <div>
                   <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
@@ -364,8 +346,8 @@
                 <div class="padd25">
                   <jhi-spline-chart [chartData]="spliceData" [id]="'paydexid2'" [labels]="false">
                   </jhi-spline-chart>
-                  <div class="rectangle" [ngStyle]="{'bottom': showSubCards? '17px':'17px'}">
-                  </div>
+                  <!-- <div class="rectangle" [ngStyle]="{'bottom': showSubCards? '17px':'17px'}">
+                  </div> -->
                   <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
                     <p>Low Risk</p>
                     <p>High Risk</p>
@@ -413,8 +395,8 @@
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
                   <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
                       </jhi-column-chart> -->
-                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
-                  </div>
+                  <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  </div> -->
                 </div>
                 <!-- <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
@@ -460,8 +442,8 @@
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
                   <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
                         </jhi-column-chart> -->
-                  <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
-                  </div>
+                  <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  </div> -->
                 </div>
                 <!-- <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
@@ -503,7 +485,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -511,7 +493,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -546,7 +528,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -554,7 +536,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -585,7 +567,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -593,7 +575,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -624,7 +606,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -632,7 +614,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -673,7 +655,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle4"></span>
                       <span class="rectangle3"></span>
@@ -681,7 +663,7 @@
                       <span class="rectangle1"></span>
                       <span class="rectangle6"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk risk-appearance">
                     <p>APPEARANCE</p>
                   </div>
@@ -711,7 +693,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -719,7 +701,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -750,7 +732,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -758,7 +740,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -793,7 +775,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -801,7 +783,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -832,7 +814,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -840,7 +822,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -881,7 +863,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle4"></span>
                       <span class="rectangle3"></span>
@@ -889,7 +871,7 @@
                       <span class="rectangle1"></span>
                       <span class="rectangle6"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk risk-appearance">
                     <p>APPEARANCE</p>
                   </div>
@@ -919,7 +901,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle4"></span>
                       <span class="rectangle3"></span>
@@ -927,7 +909,7 @@
                       <span class="rectangle1"></span>
                       <span class="rectangle6"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk risk-appearance">
                     <p>APPEARANCE</p>
                   </div>
@@ -957,7 +939,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle4"></span>
                       <span class="rectangle3"></span>
@@ -965,7 +947,7 @@
                       <span class="rectangle1"></span>
                       <span class="rectangle6"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk risk-appearance">
                     <p>APPEARANCE</p>
                   </div>
@@ -999,7 +981,7 @@
                 </div>
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
+                  <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
@@ -1007,7 +989,7 @@
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -1039,14 +1021,14 @@
                 <div class="padd25">
                   <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
                   <div class="abc">
-                    <div>
+                    <!-- <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
                       <span class="rectangle3"></span>
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="risk">
                     <p>High Risk</p>
                     <p>Low Risk</p>
@@ -1090,7 +1072,8 @@
             <div class="col-md-3">
               <ul class="spacing">
                 <li *ngFor="let data of chartData">
-                  <span>{{data.label}}</span>
+                  <span class="label" [ngStyle]="{'background-color': data.fill}"></span>
+                  <span class="label-data">{{data.label}}</span>
                 </li>
               </ul>
             </div>
@@ -1098,7 +1081,7 @@
               <ul class="spacing">
                 <li *ngFor="let data of chartData">
                   <span><b> {{data.value}}</b></span>
-                  <span class="spanPerc">{{data.value / 2}}%</span>
+                  <!-- <span class="spanPerc">{{data.value / 2}}%</span> -->
                 </li>
               </ul>
             </div>
@@ -1195,7 +1178,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-3 pl-0 pr-0">
+    <div class="col-md-3 pl-0 pr-0" style="overflow:auto">
       <div>
         <ul class="nav nav-tab justify-content-center">
           <li class="nav-item">
