@@ -28,7 +28,7 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
         // set the titles of the axes
         const xAxis = chart.xAxis();
         const yAxis = chart.yAxis();
-        series.fill('rgb(231, 231, 231)');
+        // series.fill('rgb(231, 231, 231)');
         series.stroke('rgb(231, 231, 231)');
         chart.yAxis().stroke('#ffff');
         chart.yAxis().labels(false);
@@ -43,7 +43,8 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
             .xAxis()
             .ticks()
             .stroke('#ffff');
-        chart.xAxis().stroke('#ffff');
+
+        // chart.xAxis().stroke('#ffff');
         // this.chart.xAxis().labels(false);
         chart
             .xAxis()

@@ -54,3 +54,9 @@
 .bars {
     height: 360px;
 }
+
+.label {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+}

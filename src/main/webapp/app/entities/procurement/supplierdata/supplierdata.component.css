@@ -17,6 +17,7 @@
     list-style: none;
     line-height: 27px;
     padding: 0px;
+    padding-top: 20px;
 }
 
 .filter-div {
@@ -582,8 +583,9 @@ span.inactive1 {
     height: 20px;
 }
 
-::ng-deep .carousel-control-prev-icon {
-    background-image: url(../../../../content/images/next.png);
+::ng-deep /deep/ .carousel-control-prev-icon {
+    background-image: url(../../../../content/images/next.png) !important;
+    background-image: none !important;
 }
 
 ::ng-deep .carousel-control-next-icon {
@@ -683,4 +685,19 @@ span.inactive1 {
 
 .filterGroup li input[type='checkbox']:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
+}
+
+.label-data {
+    color: #494949;
+    /* font-family: Poppins; */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+}
+
+.label {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
 }

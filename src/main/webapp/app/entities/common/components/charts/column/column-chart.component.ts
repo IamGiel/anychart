@@ -25,16 +25,21 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
 
         var originalData = dataSet.mapAs({ x: 0, value: 'perc' });
         var benchmark = dataSet.mapAs({ x: 0, value: 'avgval' });
+        var color = dataSet.mapAs({ x: 0, value: 'color' });
 
         var chart = anychart.column();
 
         var series1 = chart.column(originalData);
-        series1.normal().fill('#FBCDC1', 1);
-        series1.normal().stroke('#FBCDC1', 1);
+        series1.stroke(null);
+
+        // series1.normal().fill('#FBCDC1', 1);
+        // series1.normal().stroke('#FBCDC1', 1);
 
         var series2 = chart.column(benchmark);
-        series2.normal().fill('#E7E7E7', 1);
-        series2.normal().stroke('#E7E7E7', 1);
+        series2.normal().stroke('#FBCDC1', 1);
+        series2.stroke(null);
+
+        // series2.normal().stroke('#E7E7E7', 1);
 
         series1.xPointPosition(0.5);
         series2.xPointPosition(0.5);
@@ -58,7 +63,7 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
         chart.tooltip().zIndex(100);
         chart.yAxis().labels(false);
         chart.yAxis().stroke('#ffff');
-        chart.xAxis().stroke(false);
+        // chart.xAxis().stroke(false);
         chart
             .yAxis()
             .ticks()

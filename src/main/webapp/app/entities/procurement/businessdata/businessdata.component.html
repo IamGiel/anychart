@@ -60,6 +60,7 @@
             <div class="col-md-4">
               <ul class="spacing">
                 <li *ngFor="let data of ownershipData">
+                  <span class="label" [ngStyle]="{'background-color': data.fill}"></span>
                   <span>{{data.label}}</span>
                 </li>
               </ul>
@@ -68,7 +69,7 @@
               <ul class="spacing">
                 <li *ngFor="let data of ownershipData">
                   <span><b>{{data.value}}</b></span>
-                  <span class="spanPerc">{{data.value}}%</span>
+                  <!-- <span class="spanPerc">{{data.value}}%</span> -->
                 </li>
               </ul>
             </div>
@@ -88,6 +89,7 @@
             <div class="col-md-4">
               <ul class="spacing">
                 <li *ngFor="let data of businessData">
+                    <span class="label" [ngStyle]="{'background-color': data.fill}"></span>
                   <span>{{data.label}}</span>
                 </li>
               </ul>
@@ -96,7 +98,7 @@
               <ul class="spacing">
                 <li *ngFor="let data of businessData">
                   <span><b>{{data.value}}</b></span>
-                  <span class="spanPerc">{{data.value}}%</span>
+                  <!-- <span class="spanPerc">{{data.value}}%</span> -->
                 </li>
               </ul>
             </div>
