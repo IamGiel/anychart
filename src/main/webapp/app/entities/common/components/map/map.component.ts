@@ -167,12 +167,12 @@ export class MapComponent implements OnInit, OnChanges {
 
         this.map.maxBubbleSize(8);
         this.map.minBubbleSize(2);
-        var colorRange = this.map.colorRange();
+        let colorRange = this.map.colorRange();
         colorRange.enabled(true);
-        series2.colorScale(anychart.scales.linearColor('black', 'red', 'green'));
-        series2.stroke('#000 .1');
+        series2.colorScale(anychart.scales.linearColor('#32D490', '#FFCB70', '#FF7273'));
+        series2.stroke('#999 .1');
 
-        var zoomController = anychart.ui.zoom();
+        let zoomController = anychart.ui.zoom();
         zoomController.render(this.map);
         this.map.container('worldmap');
         this.map.draw();

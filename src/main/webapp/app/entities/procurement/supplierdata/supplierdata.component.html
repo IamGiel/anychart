@@ -1213,7 +1213,7 @@
         <div *ngFor="let data of socialData">
             <div class="grid-table border-top">
                 <p class="country">{{data.id}}</p>
-                <p><span class="number">42</span><span class="percent">21%</span></p>
+                <p><span class="number">{{data.value}}</span><span class="percent">{{data.indicator.value}}</span></p>
               </div>
         </div>
         <div class="grid-table border-top">

@@ -1,176 +1,680 @@
 {"data": [
-              {"id":"AF","indicator":[{
+              {"id":"AF","indicator":{
                   "label":"Final Score:",
                   "value":"High"
-              }],"value":0},
-              {"id":"AO","value":1},
-              {"id":"AL","value":2},
-              {"id":"AE","value":3},
-              {"id":"AR","value":4},
-              {"id":"AM","value":5},
-              {"id":"TF","value":6},
-              {"id":"AU","value":7},
-              {"id":"AT","value":8},
-              {"id":"AZ","value":9},
-              {"id":"BI","value":10},
-              {"id":"BE","value":11},
-              {"id":"BJ","value":12},
-              {"id":"BF","value":13},
-              {"id":"BD","value":14},
-              {"id":"BG","value":15},
-              {"id":"BA","value":16},
-              {"id":"BY","value":17},
-              {"id":"BZ","value":18},
-              {"id":"BO","value":19},
-              {"id":"BR","value":20},
-              {"id":"BN","value":21},
-              {"id":"BT","value":22},
-              {"id":"BW","value":23},
-              {"id":"CF","value":24},
-              {"id":"CA","value":25},
-              {"id":"CH","value":26},
-              {"id":"CL","value":27},
-              {"id":"CN","value":28},
-              {"id":"CI","value":29},
-              {"id":"CM","value":30},
-              {"id":"Cyprus_U.N._Buffer_Zone","value":31},
-              {"id":"CD","value":32},
-              {"id":"CG","value":33},
-              {"id":"CO","value":34},
-              {"id":"CR","value":35},
-              {"id":"CU","value":36},
-              {"id":"N._Cyprus","value":37},
-              {"id":"CY","value":38},
-              {"id":"CZ","value":39},
-              {"id":"DE","value":40},
-              {"id":"DJ","value":41},
-              {"id":"DK","value":42},
-              {"id":"DO","value":43},
-              {"id":"DZ","value":44},
-              {"id":"EC","value":45},
-              {"id":"EG","value":46},
-              {"id":"ER","value":47},
-              {"id":"ES","value":48},
-              {"id":"EE","value":49},
-              {"id":"ET","value":50},
-              {"id":"FI","value":51},
-              {"id":"FJ","value":52},
-              {"id":"FR","value":53},
-              {"id":"GA","value":54},
-              {"id":"GB","value":55},
-              {"id":"GE","value":56},
-              {"id":"GH","value":57},
-              {"id":"GN","value":58},
-              {"id":"GW","value":59},
-              {"id":"GQ","value":60},
-              {"id":"GR","value":61},
-              {"id":"GL","value":62},
-              {"id":"GT","value":63},
-              {"id":"GY","value":64},
-              {"id":"HN","value":65},
-              {"id":"HR","value":66},
-              {"id":"HT","value":67},
-              {"id":"HU","value":68},
-              {"id":"ID","value":69},
-              {"id":"IN","value":70},
-              {"id":"IE","value":71},
-              {"id":"IR","value":72},
-              {"id":"IQ","value":73},
-              {"id":"IS","value":74},
-              {"id":"IL","value":75},
-              {"id":"IT","value":76},
-              {"id":"JO","value":77},
-              {"id":"JP","value":78},
-              {"id":"KZ","value":79},
-              {"id":"KE","value":80},
-              {"id":"KG","value":81},
-              {"id":"KH","value":82},
-              {"id":"KR","value":83},
-              {"id":"Kosovo","value":84},
-              {"id":"KW","value":85},
-              {"id":"LA","value":86},
-              {"id":"LB","value":87},
-              {"id":"LR","value":88},
-              {"id":"LY","value":89},
-              {"id":"LK","value":90},
-              {"id":"LS","value":91},
-              {"id":"LT","value":92},
-              {"id":"LV","value":93},
-              {"id":"MA","value":94},
-              {"id":"MD","value":95},
-              {"id":"MG","value":96},
-              {"id":"MX","value":97},
-              {"id":"MK","value":98},
-              {"id":"ML","value":99},
-              {"id":"MM","value":100},
-              {"id":"ME","value":101},
-              {"id":"MN","value":102},
-              {"id":"MZ","value":103},
-              {"id":"MR","value":104},
-              {"id":"MW","value":105},
-              {"id":"MY","value":106},
-              {"id":"NA","value":107},
-              {"id":"NC","value":108},
-              {"id":"NE","value":109},
-              {"id":"NG","value":110},
-              {"id":"NI","value":111},
-              {"id":"NL","value":112},
-              {"id":"NO","value":113},
-              {"id":"NP","value":114},
-              {"id":"NZ","value":115},
-              {"id":"OM","value":116},
-              {"id":"PK","value":117},
-              {"id":"PA","value":118},
-              {"id":"PE","value":119},
-              {"id":"PH","value":120},
-              {"id":"PG","value":121},
-              {"id":"PL","value":122},
-              {"id":"PR","value":123},
-              {"id":"KP","value":124},
-              {"id":"PT","value":125},
-              {"id":"PY","value":126},
-              {"id":"PS","value":127},
-              {"id":"QA","value":128},
-              {"id":"RO","value":129},
-              {"id":"RW","value":130},
-              {"id":"EH","value":131},
-              {"id":"SA","value":132},
-              {"id":"SD","value":133},
-              {"id":"SS","value":134},
-              {"id":"SN","value":135},
-              {"id":"SL","value":136},
-              {"id":"SV","value":137},
-              {"id":"Somaliland","value":138},
-              {"id":"SO","value":139},
-              {"id":"RS","value":140},
-              {"id":"SR","value":141},
-              {"id":"SK","value":142},
-              {"id":"SI","value":143},
-              {"id":"SE","value":144},
-              {"id":"SZ","value":145},
-              {"id":"SY","value":146},
-              {"id":"TD","value":147},
-              {"id":"TG","value":148},
-              {"id":"TH","value":149},
-              {"id":"TJ","value":150},
-              {"id":"TM","value":151},
-              {"id":"TL","value":152},
-              {"id":"TN","value":153},
-              {"id":"TR","value":154},
-              {"id":"TW","value":155},
-              {"id":"TZ","value":156},
-              {"id":"UG","value":157},
-              {"id":"UA","value":158},
-              {"id":"UY","value":159},
-              {"id":"US","value":160},
-              {"id":"UZ","value":161},
-              {"id":"VE","value":162},
-              {"id":"VN","value":163},
-              {"id":"YE","value":164},
-              {"id":"ZA","value":165},
-              {"id":"ZM","value":166},
-              {"id":"ZW","value":167},
-              {"id":"RU","value":168}
+              },"value":0},
+              {"id":"AO","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":1},
+              {"id":"AL","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":2},
+              {"id":"AE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":3},
+              {"id":"AR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":4},
+              {"id":"AM","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":5},
+              {"id":"TF","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":6},
+              {"id":"AU","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":7},
+              {"id":"AT","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":8},
+              {"id":"AZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":9},
+              {"id":"BI","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":10},
+              {"id":"BE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":11},
+              {"id":"BJ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":12},
+              {"id":"BF","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":13},
+              {"id":"BD","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":14},
+              {"id":"BG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":15},
+              {"id":"BA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":16},
+              {"id":"BY","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":17},
+              {"id":"BZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":18},
+              {"id":"BO","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":19},
+              {"id":"BR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":20},
+              {"id":"BN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":21},
+              {"id":"BT","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":22},
+              {"id":"BW","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":23},
+              {"id":"CF","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":24},
+              {"id":"CA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":25},
+              {"id":"CH","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":26},
+              {"id":"CL","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":27},
+              {"id":"CN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":28},
+              {"id":"CI","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":29},
+              {"id":"CM","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":30},
+              {"id":"Cyprus_U.N._Buffer_Zone","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":31},
+              {"id":"CD","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":32},
+              {"id":"CG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":33},
+              {"id":"CO","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":34},
+              {"id":"CR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":35},
+              {"id":"CU","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":36},
+              {"id":"N._Cyprus","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":37},
+              {"id":"CY","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":38},
+              {"id":"CZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":39},
+              {"id":"DE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":40},
+              {"id":"DJ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":41},
+              {"id":"DK","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":42},
+              {"id":"DO","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":43},
+              {"id":"DZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":44},
+              {"id":"EC","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":45},
+              {"id":"EG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":46},
+              {"id":"ER","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":47},
+              {"id":"ES","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":48},
+              {"id":"EE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":49},
+              {"id":"ET","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":50},
+              {"id":"FI","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":51},
+              {"id":"FJ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":52},
+              {"id":"FR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":53},
+              {"id":"GA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":54},
+              {"id":"GB","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":55},
+              {"id":"GE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":56},
+              {"id":"GH","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":57},
+              {"id":"GN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":58},
+              {"id":"GW","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":59},
+              {"id":"GQ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":60},
+              {"id":"GR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":61},
+              {"id":"GL","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":62},
+              {"id":"GT","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":63},
+              {"id":"GY","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":64},
+              {"id":"HN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":65},
+              {"id":"HR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":66},
+              {"id":"HT","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":67},
+              {"id":"HU","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":68},
+              {"id":"ID","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":69},
+              {"id":"IN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":70},
+              {"id":"IE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":71},
+              {"id":"IR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":72},
+              {"id":"IQ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":73},
+              {"id":"IS","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":74},
+              {"id":"IL","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":75},
+              {"id":"IT","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":76},
+              {"id":"JO","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":77},
+              {"id":"JP","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":78},
+              {"id":"KZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":79},
+              {"id":"KE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":80},
+              {"id":"KG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":81},
+              {"id":"KH","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":82},
+              {"id":"KR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":83},
+              {"id":"Kosovo","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":84},
+              {"id":"KW","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":85},
+              {"id":"LA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":86},
+              {"id":"LB","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":87},
+              {"id":"LR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":88},
+              {"id":"LY","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":89},
+              {"id":"LK","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":90},
+              {"id":"LS","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":91},
+              {"id":"LT","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":92},
+              {"id":"LV","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":93},
+              {"id":"MA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":94},
+              {"id":"MD","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":95},
+              {"id":"MG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":96},
+              {"id":"MX","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":97},
+              {"id":"MK","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":98},
+              {"id":"ML","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":99},
+              {"id":"MM","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":100},
+              {"id":"ME","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":101},
+              {"id":"MN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":102},
+              {"id":"MZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":103},
+              {"id":"MR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":104},
+              {"id":"MW","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":105},
+              {"id":"MY","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":106},
+              {"id":"NA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":107},
+              {"id":"NC","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":108},
+              {"id":"NE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":109},
+              {"id":"NG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":110},
+              {"id":"NI","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":111},
+              {"id":"NL","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":112},
+              {"id":"NO","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":113},
+              {"id":"NP","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":114},
+              {"id":"NZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":115},
+              {"id":"OM","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":116},
+              {"id":"PK","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":117},
+              {"id":"PA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":118},
+              {"id":"PE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":119},
+              {"id":"PH","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":120},
+              {"id":"PG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":121},
+              {"id":"PL","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":122},
+              {"id":"PR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":123},
+              {"id":"KP","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":124},
+              {"id":"PT","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":125},
+              {"id":"PY","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":126},
+              {"id":"PS","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":127},
+              {"id":"QA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":128},
+              {"id":"RO","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":129},
+              {"id":"RW","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":130},
+              {"id":"EH","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":131},
+              {"id":"SA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":132},
+              {"id":"SD","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":133},
+              {"id":"SS","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":134},
+              {"id":"SN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":135},
+              {"id":"SL","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":136},
+              {"id":"SV","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":137},
+              {"id":"Somaliland","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":138},
+              {"id":"SO","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":139},
+              {"id":"RS","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":140},
+              {"id":"SR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":141},
+              {"id":"SK","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":142},
+              {"id":"SI","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":143},
+              {"id":"SE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":144},
+              {"id":"SZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":145},
+              {"id":"SY","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":146},
+              {"id":"TD","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":147},
+              {"id":"TG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":148},
+              {"id":"TH","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":149},
+              {"id":"TJ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":150},
+              {"id":"TM","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":151},
+              {"id":"TL","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":152},
+              {"id":"TN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":153},
+              {"id":"TR","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":154},
+              {"id":"TW","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":155},
+              {"id":"TZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":156},
+              {"id":"UG","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":157},
+              {"id":"UA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":158},
+              {"id":"UY","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":159},
+              {"id":"US","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":160},
+              {"id":"UZ","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":161},
+              {"id":"VE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":162},
+              {"id":"VN","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":163},
+              {"id":"YE","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":164},
+              {"id":"ZA","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":165},
+              {"id":"ZM","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":166},
+              {"id":"ZW","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":167},
+              {"id":"RU","indicator":{
+                  "label":"Final Score:",
+                  "value":"High"
+              },"value":168}
 
            
 ]}
