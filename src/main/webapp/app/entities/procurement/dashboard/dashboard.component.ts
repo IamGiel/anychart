@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
         private prs: PreviousRouteService,
         private lc: LocalStoreService,
         private modalService: NgbModal,
-        private dashboardService: DashboardService
+        public dashboardService: DashboardService
     ) {
         document.addEventListener('click', this.offClickHandlers.bind(this));
     }

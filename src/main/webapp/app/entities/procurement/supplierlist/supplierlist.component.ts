@@ -39,6 +39,7 @@ export class SupplierlistComponent implements OnInit {
     limit = 10;
     searchKeyword: string;
     isCatManager: boolean = false;
+    index: any;
 
     @ViewChild('supplierfilter') supplierfilter;
     showAddToGroupDropdown: boolean = false;
