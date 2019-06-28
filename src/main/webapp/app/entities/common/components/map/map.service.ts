@@ -11,6 +11,7 @@ export class MapService {
     environmentData: any;
     financialData: any;
     mapCountryRisk: any;
+    mapBusinessIntegrity: any;
 
     constructor() {
         this.mapData = require('../../../../mock-data/mapEnvironmentPI.json');
@@ -20,5 +21,6 @@ export class MapService {
         this.environmentData = require('../../../../mock-data/mapEnviormentalCompliance.json');
         this.financialData = require('../../../../mock-data/mapFinancialIntegrity.json');
         this.mapCountryRisk = require('../../../../mock-data/mapCountryRisk.json');
+        this.mapBusinessIntegrity = require('../../../../mock-data/mapBusinessIntegrity.json');
     }
 }

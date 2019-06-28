@@ -12,6 +12,7 @@ export class MapComponent implements OnInit, OnChanges {
     @Input('chartData') chartData;
     @Input('locationData') locationData;
     map = anychart.map();
+    text;
 
     mapdata: any[] = [];
 
@@ -54,6 +55,9 @@ export class MapComponent implements OnInit, OnChanges {
             case 'Financial Integrity':
                 this.countryData = this.mapService.financialData.data;
                 break;
+            case 'Business Integrity':
+                this.countryData = this.mapService.mapBusinessIntegrity.data;
+                break;
 
             default:
             case 'Country Risk':
@@ -82,14 +86,21 @@ export class MapComponent implements OnInit, OnChanges {
 
         series2.labels().format('{%name}');
 
+        // this.countryData.forEach(ele => {
+        //     series2.tooltip().format(function(e) {
+        //         // let text;
+
+        //         for (let i = 0; i < e.getData('indicator').length; i++) {
+        //             this.text += e.getData('indicator')[i].label + ' : ' + e.getData('indicator')[i].value + '\n';
+        //         }
+        //         return this.text;
+        //     });
+        //     console.log(ele);
+        // });
+
         this.countryData.forEach(ele => {
-            series2.tooltip().format(function(e) {
-                var text = '';
-                for (var i = 0; i < e.getData('indicator').length; i++) {
-                    text += e.getData('indicator')[i].label + ' : ' + e.getData('indicator')[i].value + '\n';
-                }
-                return text;
-            });
+            series2.tooltip().format('Risk: {%RISK} \nValue: {%value}');
+            console.log('whats in ele ', ele);
         });
 
         series2.tooltip().titleFormat('{%name}');

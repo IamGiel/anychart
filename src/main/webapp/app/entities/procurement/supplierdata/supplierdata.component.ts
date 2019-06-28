@@ -45,6 +45,8 @@ export class SupplierdataComponent implements OnInit {
     environmentData = [];
     financialData = [];
     mapCountryRisk = [];
+    mapBusinessIntegrity = [];
+    thisObjMapBusiness = {};
 
     images = [1, 2, 3, 4, 5, 6].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
     responseFunnelData = [];
@@ -375,6 +377,7 @@ export class SupplierdataComponent implements OnInit {
         this.environmentData = this.mapService.environmentData.data;
         this.financialData = this.mapService.financialData.data;
         this.mapCountryRisk = this.mapService.mapCountryRisk.data;
+        this.mapBusinessIntegrity = this.mapService.mapBusinessIntegrity.data;
         console.log('>>>>>>> ', this.socialData);
         this.clickfinance = 'D&B Rating';
         this.clickEnvironmental = 'Overall Rating';
@@ -445,6 +448,12 @@ export class SupplierdataComponent implements OnInit {
         // ];
 
         this.responseFunnelData = [['REQUEST', 0, 5, 10, 8], ['RESPONSE', 0, 10, 5, 7], ['RESPONSE HEALTH', 5, 10, 10, 5]];
+    }
+
+    trackId(index: number, item: any) {
+        item = this.mapService.mapBusinessIntegrity;
+        console.log('this item ', item);
+        return item.id;
     }
 
     selectMap(maptype: string) {

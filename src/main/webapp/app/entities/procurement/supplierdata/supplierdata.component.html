@@ -1221,6 +1221,15 @@
               </div>
         </div>
       </div>
+      <!-- BUSINESS INTEGIRTY DATA -->
+      <div class="table-div" *ngIf="mapdropdown == 'Business Integrity'">
+        <div *ngFor="let data of mapBusinessIntegrity.slice().reverse();">
+            <div class="grid-table border-top">
+                <p class="country">{{data["name"]}}</p>
+                <p><span class="percent">{{data["value"]}}</span></p>
+              </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
