@@ -1188,7 +1188,7 @@
       <!-- SOCIAL RISK DATA -->
       <div class="table-div" *ngIf="mapdropdown == 'Social Compliance'">
         <div *ngFor="let data of socialData">
-            <div class="grid-table border-top">
+            <div class="grid-table border-top countryPane">
                 <p class="country">{{data.id}}</p>
                 <p><span class="number">{{data.value}}</span><span class="percent">{{data.indicator.value}}</span></p>
               </div>
@@ -1197,7 +1197,7 @@
       <!-- ENVIRONMENTAL RISK DATA -->
       <div class="table-div" *ngIf="mapdropdown == 'Environmental Compliance'">
         <div *ngFor="let data of environmentData">
-            <div class="grid-table border-top">
+            <div class="grid-table border-top countryPane">
                 <p class="country">{{data["Country Name"]}}</p>
                 <p><span class="number">{{data["FINAL SCORE"]}}</span><span class="percent">{{data["value"]}}</span></p>
               </div>
@@ -1206,7 +1206,7 @@
       <!-- FINANCIAL RISK DATA -->
       <div class="table-div" *ngIf="mapdropdown == 'Financial Integrity'">
         <div *ngFor="let data of financialData">
-            <div class="grid-table border-top">
+            <div class="grid-table border-top countryPane">
                 <p class="country">{{data["Country"]}}</p>
                 <p><span class="number">{{data["id"]}}</span><span class="percent">{{data["value"]}}</span></p>
               </div>
@@ -1215,7 +1215,7 @@
       <!-- COUNTRY RISK DATA -->
       <div class="table-div" *ngIf="mapdropdown == 'Country Risk'">
         <div *ngFor="let data of mapCountryRisk">
-            <div class="grid-table border-top">
+            <div class="grid-table border-top countryPane">
                 <p class="country">{{data["Country Name"]}}</p>
                 <p><span class="number">{{data["RISK"]}}</span><span class="percent">{{data["value"]}}</span></p>
               </div>
@@ -1224,7 +1224,7 @@
       <!-- BUSINESS INTEGIRTY DATA -->
       <div class="table-div" *ngIf="mapdropdown == 'Business Integrity'">
         <div *ngFor="let data of mapBusinessIntegrity.slice().reverse();">
-            <div class="grid-table border-top">
+            <div class="grid-table border-top countryPane">
                 <p class="country">{{data["name"]}}</p>
                 <p><span class="percent">{{data["value"]}}</span></p>
               </div>

@@ -714,3 +714,9 @@ span.inactive1 {
 .clear-filter {
     margin-right: 15px;
 }
+
+/* map stuff - country pane */
+
+.countryPane {
+    height: auto;
+}
