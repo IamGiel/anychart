@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { PreviousRouteService } from '../../common/service/previous-route.service';
 import { LocalStoreService } from '../../../core/auth/local-storage.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardService } from './dashboard.service';
 
 @Component({
     selector: 'jhi-dashboard',
@@ -43,7 +44,12 @@ export class DashboardComponent implements OnInit {
     totalSelectFilterList = [];
     sletectedFilter = '';
 
-    constructor(private prs: PreviousRouteService, private lc: LocalStoreService, private modalService: NgbModal) {
+    constructor(
+        private prs: PreviousRouteService,
+        private lc: LocalStoreService,
+        private modalService: NgbModal,
+        private dashboardService: DashboardService
+    ) {
         document.addEventListener('click', this.offClickHandlers.bind(this));
     }
 

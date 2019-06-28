@@ -701,3 +701,16 @@ span.inactive1 {
     width: 6px;
     height: 6px;
 }
+
+.filtered-count {
+    color: #494949;
+    margin-right: 15px;
+}
+.save-filter,
+.clear-filter {
+    color: #6b4cd9;
+    cursor: pointer;
+}
+.clear-filter {
+    margin-right: 15px;
+}

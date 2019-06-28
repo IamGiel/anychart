@@ -1602,3 +1602,16 @@ button:focus {
     font-size: 15px;
     text-align: right;
 }
+
+.filtered-count {
+    color: #494949;
+    margin-right: 15px;
+}
+.save-filter,
+.clear-filter {
+    color: #6b4cd9;
+    cursor: pointer;
+}
+.clear-filter {
+    margin-right: 15px;
+}

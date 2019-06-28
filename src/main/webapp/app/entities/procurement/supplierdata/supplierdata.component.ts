@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular
 import { HttpClient } from '@angular/common/http';
 import 'anychart';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardService } from '../dashboard/dashboard.service';
 
 @Component({
     selector: 'jhi-supplierdata',
@@ -34,7 +35,7 @@ export class SupplierdataComponent implements OnInit {
     @ViewChild('maptest') maptest;
     // @ViewChild('basicmap') basicmap;
 
-    constructor(private modalService: NgbModal) {
+    constructor(private modalService: NgbModal, private dashboardService: DashboardService) {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
     closeResult: string;
