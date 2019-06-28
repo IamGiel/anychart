@@ -1162,153 +1162,64 @@
           <i class="fa fa-angle-up"></i>
         </button>
         <div *ngIf="mapdrop" class="map-dropdown-content">
-          <a (click)="selectMap('Environmental Risk')"><i *ngIf="mapdropdown == 'Environmental Risk'"
-              class="fa fa-check"></i> Environmental Risk</a>
-          <a (click)="selectMap('Country Risk')"><i *ngIf="mapdropdown == 'Country Risk'"
-              class="fa fa-check"></i>Country Risk</a>
-          <!-- <a (click)="selectMap('Terror prone area')"><i *ngIf="mapdropdown == 'Terror prone area'"
-              class="fa fa-check"></i>Terror Prone Area</a> -->
-          <a (click)="selectMap('Basic Map')"><i *ngIf="mapdropdown == 'Basic Map'" class="fa fa-check"></i> Basic
-            Map</a>
-            <a (click)="selectMap('Country Risk')"><i *ngIf="mapdropdown == 'Country Risk'" class="fa fa-check"></i> Country Risk</a>
-            <a (click)="selectMap('Business Integrity')"><i *ngIf="mapdropdown == 'Business Integrity'" class="fa fa-check"></i> Business Integrity</a>
-            <a (click)="selectMap('Environmental Compliance')"><i *ngIf="mapdropdown == 'Environmental Compliance'" class="fa fa-check"></i> Environmental Compliance</a>
-            <a (click)="selectMap('Financial Integrity')"><i *ngIf="mapdropdown == 'Financial Integrity'" class="fa fa-check"></i> Financial Integrity</a>
-            <a (click)="selectMap('Social Compliance')"><i *ngIf="mapdropdown == 'Social Compliance'" class="fa fa-check"></i> Social Compliance</a>
+          <a (click)="selectMap('Country Risk')"><i *ngIf="mapdropdown == 'Country Risk'" class="fa fa-check"></i> Country Risk</a>
+          <a (click)="selectMap('Business Integrity')"><i *ngIf="mapdropdown == 'Business Integrity'" class="fa fa-check"></i> Business Integrity</a>
+          <a (click)="selectMap('Environmental Compliance')"><i *ngIf="mapdropdown == 'Environmental Compliance'" class="fa fa-check"></i> Environmental Compliance</a>
+          <a (click)="selectMap('Financial Integrity')"><i *ngIf="mapdropdown == 'Financial Integrity'" class="fa fa-check"></i> Financial Integrity</a>
+          <a (click)="selectMap('Social Compliance')"><i *ngIf="mapdropdown == 'Social Compliance'" class="fa fa-check"></i> Social Compliance</a>
         </div>
       </div>
     </div>
     <div class="col-md-3 pl-0 pr-0" style="overflow:auto">
-      <div>
-        <ul class="nav nav-tab justify-content-center">
+      <div style="display:inline-flex">
+        <ul class="nav nav-tab">
           <li class="nav-item">
             <a class="nav-link" rel="tab1" (click)="maintabClicked('Countries')">
               <span [ngClass]="activeTab =='Countries'? 'active' : 'inactive'">Countries</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" [style.visibility]="'hidden'">
             <a class="nav-link" rel="tab1" (click)="maintabClicked('Cities')">
               <span [ngClass]="activeTab =='Cities'? 'active' : 'inactive'">Cities</span></a>
           </li>
         </ul>
       </div>
-      <div class="table-div" *ngIf="activeTab =='Countries'">
+      <!-- map and table info display-->
+      <!-- SOCIAL RISK DATA -->
+      <div class="table-div" *ngIf="mapdropdown == 'Social Compliance'">
         <div *ngFor="let data of socialData">
             <div class="grid-table border-top">
                 <p class="country">{{data.id}}</p>
                 <p><span class="number">{{data.value}}</span><span class="percent">{{data.indicator.value}}</span></p>
               </div>
         </div>
-        <div class="grid-table border-top">
-          <p class="country">USA</p>
-          <p><span class="number">42</span><span class="percent">21%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">China</p>
-          <p><span class="number">40</span><span class="percent">20%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">UK</p>
-          <p><span class="number">30</span><span class="percent">15%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Japan</p>
-          <p><span class="number">28</span><span class="percent">14%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">India</p>
-          <p><span class="number">18</span><span class="percent">9%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Germany</p>
-          <p><span class="number">12</span><span class="percent">6%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">South Korea</p>
-          <p><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Russia</p>
-          <p><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Ghana</p>
-          <p><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Morocco</p>
-          <p><span class="number">8</span><span class="percent">4%</span></p>
+      </div>
+      <!-- ENVIRONMENTAL RISK DATA -->
+      <div class="table-div" *ngIf="mapdropdown == 'Environmental Compliance'">
+        <div *ngFor="let data of environmentData">
+            <div class="grid-table border-top">
+                <p class="country">{{data["Country Name"]}}</p>
+                <p><span class="number">{{data["FINAL SCORE"]}}</span><span class="percent">{{data["value"]}}</span></p>
+              </div>
         </div>
       </div>
-      <div class="table-div" *ngIf="activeTab =='Cities'">
-        <div class="grid-table border-top">
-          <p class="country">Hongkong</p>
-          <p class="mar50"><span class="number">24</span><span class="percent">12%</span></p>
+      <!-- FINANCIAL RISK DATA -->
+      <div class="table-div" *ngIf="mapdropdown == 'Financial Integrity'">
+        <div *ngFor="let data of financialData">
+            <div class="grid-table border-top">
+                <p class="country">{{data["Country"]}}</p>
+                <p><span class="number">{{data["id"]}}</span><span class="percent">{{data["value"]}}</span></p>
+              </div>
         </div>
-        <div class="grid-table">
-          <p class="country">New York</p>
-          <p class="mar50"><span class="number">24</span><span class="percent">12%</span></p>
+      </div>
+      <!-- COUNTRY RISK DATA -->
+      <div class="table-div" *ngIf="mapdropdown == 'Country Risk'">
+        <div *ngFor="let data of mapCountryRisk">
+            <div class="grid-table border-top">
+                <p class="country">{{data["Country Name"]}}</p>
+                <p><span class="number">{{data["RISK"]}}</span><span class="percent">{{data["value"]}}</span></p>
+              </div>
         </div>
-        <div class="grid-table">
-          <p class="country">Yokohama</p>
-          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Liverpool</p>
-          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">San Fransisco</p>
-          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Bangalore </p>
-          <p class="mar50"><span class="number">12</span><span class="percent">6%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Beijing</p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Frankfurt</p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">London</p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">New Delhi </p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Osaka</p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Moscow </p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Berlin</p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Accra </p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Fukuoka</p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <!-- <div class="grid-table">
-          <p class="country">Casablanca </p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
-        <div class="grid-table">
-          <p class="country">Milan</p>
-          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
-        </div> -->
       </div>
     </div>
   </div>

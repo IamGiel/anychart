@@ -1,7 +1,7 @@
-[
+{"data": [
     {
         "Country Name": "Sweden",
-        "Country code": "SWE",
+        "id": "SW",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -14,12 +14,12 @@
         "Nb Medium": "11%",
         "Nb Low": "78%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Uruguay",
-        "Country code": "URY",
+        "id": "UR",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -32,12 +32,12 @@
         "Nb Medium": "11%",
         "Nb Low": "67%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Iceland",
-        "Country code": "ISL",
+        "id": "IS",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -50,12 +50,12 @@
         "Nb Medium": "22%",
         "Nb Low": "67%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Latvia",
-        "Country code": "LVA",
+        "id": "LV",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -68,12 +68,12 @@
         "Nb Medium": "22%",
         "Nb Low": "67%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Norway",
-        "Country code": "NOR",
+        "id": "NO",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -86,12 +86,12 @@
         "Nb Medium": "22%",
         "Nb Low": "67%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Switzerland",
-        "Country code": "CHE",
+        "id": "CH",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -104,12 +104,12 @@
         "Nb Medium": "22%",
         "Nb Low": "67%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Gambia",
-        "Country code": "GMB",
+        "id": "GM",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -122,12 +122,12 @@
         "Nb Medium": "0%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Lithuania",
-        "Country code": "LTU",
+        "id": "LT",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -140,12 +140,12 @@
         "Nb Medium": "33%",
         "Nb Low": "56%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Costa Rica",
-        "Country code": "CRI",
+        "id": "CR",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -158,12 +158,12 @@
         "Nb Medium": "22%",
         "Nb Low": "56%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Finland",
-        "Country code": "FIN",
+        "id": "FI",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -176,12 +176,12 @@
         "Nb Medium": "22%",
         "Nb Low": "56%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Paraguay",
-        "Country code": "PRY",
+        "id": "PR",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -194,12 +194,12 @@
         "Nb Medium": "22%",
         "Nb Low": "56%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "New Zealand",
-        "Country code": "NZL",
+        "id": "NZ",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -212,12 +212,12 @@
         "Nb Medium": "11%",
         "Nb Low": "56%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Gabon",
-        "Country code": "GAB",
+        "id": "GA",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -230,12 +230,12 @@
         "Nb Medium": "22%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Low"
     },
     {
         "Country Name": "Congo",
-        "Country code": "COG",
+        "id": "CO",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -248,12 +248,12 @@
         "Nb Medium": "11%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Ghana",
-        "Country code": "GHA",
+        "id": "GH",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -266,12 +266,12 @@
         "Nb Medium": "11%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Luxembourg",
-        "Country code": "LUX",
+        "id": "LU",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -284,12 +284,12 @@
         "Nb Medium": "11%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Niger",
-        "Country code": "NER",
+        "id": "NE",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -302,12 +302,12 @@
         "Nb Medium": "0%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Denmark",
-        "Country code": "DNK",
+        "id": "DN",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -320,12 +320,12 @@
         "Nb Medium": "44%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Hungary",
-        "Country code": "HUN",
+        "id": "HU",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -338,12 +338,12 @@
         "Nb Medium": "44%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Romania",
-        "Country code": "ROU",
+        "id": "RO",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -356,12 +356,12 @@
         "Nb Medium": "44%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Brazil",
-        "Country code": "BRA",
+        "id": "BR",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -374,12 +374,12 @@
         "Nb Medium": "33%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Canada",
-        "Country code": "CAN",
+        "id": "CA",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -392,12 +392,12 @@
         "Nb Medium": "33%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Estonia",
-        "Country code": "EST",
+        "id": "ES",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -410,12 +410,12 @@
         "Nb Medium": "33%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Nicaragua",
-        "Country code": "NIC",
+        "id": "NI",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -428,12 +428,12 @@
         "Nb Medium": "33%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Slovenia",
-        "Country code": "SVN",
+        "id": "SV",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -446,12 +446,12 @@
         "Nb Medium": "33%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "France",
-        "Country code": "FRA",
+        "id": "FR",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -464,12 +464,12 @@
         "Nb Medium": "22%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Ireland",
-        "Country code": "IRL",
+        "id": "IR",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -482,12 +482,12 @@
         "Nb Medium": "22%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Slovakia",
-        "Country code": "SVK",
+        "id": "SV",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -500,12 +500,12 @@
         "Nb Medium": "22%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Tajikistan",
-        "Country code": "TJK",
+        "id": "TJ",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -518,12 +518,12 @@
         "Nb Medium": "22%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Belarus",
-        "Country code": "BLR",
+        "id": "BL",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -536,12 +536,12 @@
         "Nb Medium": "11%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Netherlands",
-        "Country code": "NLD",
+        "id": "NL",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -554,12 +554,12 @@
         "Nb Medium": "11%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Cambodia",
-        "Country code": "KHM",
+        "id": "KH",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -572,12 +572,12 @@
         "Nb Medium": "0%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Cyprus",
-        "Country code": "CYP",
+        "id": "CY",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -590,12 +590,12 @@
         "Nb Medium": "0%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Poland",
-        "Country code": "POL",
+        "id": "PO",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -608,12 +608,12 @@
         "Nb Medium": "0%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Sudan",
-        "Country code": "SDN",
+        "id": "SD",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -626,12 +626,12 @@
         "Nb Medium": "0%",
         "Nb Low": "44%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Central African Republic",
-        "Country code": "CAF",
+        "id": "CA",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -644,12 +644,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Eritrea",
-        "Country code": "ERI",
+        "id": "ER",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -662,12 +662,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Rwanda",
-        "Country code": "RWA",
+        "id": "RW",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -680,12 +680,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Burkina Faso",
-        "Country code": "BFA",
+        "id": "BF",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -698,12 +698,12 @@
         "Nb Medium": "0%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Guinea Bissau",
-        "Country code": "GNB",
+        "id": "GN",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -716,12 +716,12 @@
         "Nb Medium": "0%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Laos",
-        "Country code": "LAO",
+        "id": "LA",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -734,12 +734,12 @@
         "Nb Medium": "0%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Lesotho",
-        "Country code": "LSO",
+        "id": "LS",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -752,12 +752,12 @@
         "Nb Medium": "0%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "El Salvador",
-        "Country code": "SLV",
+        "id": "SL",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -770,12 +770,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Montenegro",
-        "Country code": "MNE",
+        "id": "MN",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -788,12 +788,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Bhutan",
-        "Country code": "BTN",
+        "id": "BT",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -806,12 +806,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Côte D'Ivoire",
-        "Country code": "CIV",
+        "id": "CI",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -824,12 +824,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "South Sudan",
-        "Country code": "SSD",
+        "id": "SS",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -842,12 +842,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Sri Lanka",
-        "Country code": "LKA",
+        "id": "LK",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -860,12 +860,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Angola",
-        "Country code": "AGO",
+        "id": "AG",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -878,12 +878,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Bahrain",
-        "Country code": "BHR",
+        "id": "BH",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -896,12 +896,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Belgium",
-        "Country code": "BEL",
+        "id": "BE",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -914,12 +914,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Cameroon",
-        "Country code": "CMR",
+        "id": "CM",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -932,12 +932,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Democratic Republic of the Congo",
-        "Country code": "COD",
+        "id": "CO",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -950,12 +950,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Mali",
-        "Country code": "MLI",
+        "id": "ML",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -968,12 +968,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Senegal",
-        "Country code": "SEN",
+        "id": "SE",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -986,12 +986,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Uzbekistan",
-        "Country code": "UZB",
+        "id": "UZ",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1004,12 +1004,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Zambia",
-        "Country code": "ZMB",
+        "id": "ZM",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1022,12 +1022,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Israel",
-        "Country code": "ISR",
+        "id": "IS",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1040,12 +1040,12 @@
         "Nb Medium": "0%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Myanmar",
-        "Country code": "MMR",
+        "id": "MM",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1058,12 +1058,12 @@
         "Nb Medium": "0%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Uganda",
-        "Country code": "UGA",
+        "id": "UG",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1076,12 +1076,12 @@
         "Nb Medium": "0%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Croatia",
-        "Country code": "HRV",
+        "id": "HR",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1094,12 +1094,12 @@
         "Nb Medium": "56%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Bosnia and Herzegovina",
-        "Country code": "BIH",
+        "id": "BI",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1112,12 +1112,12 @@
         "Nb Medium": "44%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Macedonia",
-        "Country code": "MKD",
+        "id": "MK",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1130,12 +1130,12 @@
         "Nb Medium": "44%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Serbia",
-        "Country code": "SRB",
+        "id": "SR",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1148,12 +1148,12 @@
         "Nb Medium": "44%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Bulgaria",
-        "Country code": "BGR",
+        "id": "BG",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1166,12 +1166,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Chile",
-        "Country code": "CHL",
+        "id": "CH",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1184,12 +1184,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Colombia",
-        "Country code": "COL",
+        "id": "CO",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1202,12 +1202,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Czech Republic",
-        "Country code": "CZE",
+        "id": "CZ",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1220,12 +1220,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Greece",
-        "Country code": "GRC",
+        "id": "GR",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1238,12 +1238,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Italy",
-        "Country code": "ITA",
+        "id": "IT",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1256,12 +1256,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Mozambique",
-        "Country code": "MOZ",
+        "id": "MO",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1274,12 +1274,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Panama",
-        "Country code": "PAN",
+        "id": "PA",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1292,12 +1292,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Spain",
-        "Country code": "ESP",
+        "id": "ES",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1310,12 +1310,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Ukraine",
-        "Country code": "UKR",
+        "id": "UK",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1328,12 +1328,12 @@
         "Nb Medium": "33%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Ethiopia",
-        "Country code": "ETH",
+        "id": "ET",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1346,12 +1346,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Guatemala",
-        "Country code": "GTM",
+        "id": "GT",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1364,12 +1364,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Kenya",
-        "Country code": "KEN",
+        "id": "KE",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1382,12 +1382,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Nepal",
-        "Country code": "NPL",
+        "id": "NP",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1400,12 +1400,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Nigeria",
-        "Country code": "NGA",
+        "id": "NG",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1418,12 +1418,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Russia",
-        "Country code": "RUS",
+        "id": "RU",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1436,12 +1436,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "United Kingdom",
-        "Country code": "GBR",
+        "id": "GB",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1454,12 +1454,12 @@
         "Nb Medium": "22%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Haiti",
-        "Country code": "HTI",
+        "id": "HT",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1472,12 +1472,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Pakistan",
-        "Country code": "PAK",
+        "id": "PA",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1490,12 +1490,12 @@
         "Nb Medium": "11%",
         "Nb Low": "33%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Cabo Verde",
-        "Country code": "CPV",
+        "id": "CP",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1508,12 +1508,12 @@
         "Nb Medium": "44%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Barbados",
-        "Country code": "BRB",
+        "id": "BR",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1526,12 +1526,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Papua New Guinea",
-        "Country code": "PNG",
+        "id": "PN",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1544,12 +1544,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Sierra Leone",
-        "Country code": "SLE",
+        "id": "SL",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1562,12 +1562,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Bahamas",
-        "Country code": "BHS",
+        "id": "BH",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1580,12 +1580,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Burundi",
-        "Country code": "BDI",
+        "id": "BD",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1598,12 +1598,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Chad",
-        "Country code": "TCD",
+        "id": "TC",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1616,12 +1616,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Guinea",
-        "Country code": "GIN",
+        "id": "GI",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1634,12 +1634,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Malawi",
-        "Country code": "MWI",
+        "id": "MW",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1652,12 +1652,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Mauritania",
-        "Country code": "MRT",
+        "id": "MR",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1670,12 +1670,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Somalia",
-        "Country code": "SOM",
+        "id": "SO",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1688,12 +1688,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Comoros",
-        "Country code": "COM",
+        "id": "CO",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1706,12 +1706,12 @@
         "Nb Medium": "0%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Sao Tome and Principe",
-        "Country code": "STP",
+        "id": "ST",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1724,12 +1724,12 @@
         "Nb Medium": "0%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Solomon Islands",
-        "Country code": "SLB",
+        "id": "SL",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1742,12 +1742,12 @@
         "Nb Medium": "0%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Honduras",
-        "Country code": "HND",
+        "id": "HN",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1760,12 +1760,12 @@
         "Nb Medium": "33%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Maldives",
-        "Country code": "MDV",
+        "id": "MD",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1778,12 +1778,12 @@
         "Nb Medium": "33%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Syria",
-        "Country code": "SYR",
+        "id": "SY",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1796,12 +1796,12 @@
         "Nb Medium": "33%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Benin",
-        "Country code": "BEN",
+        "id": "BE",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1814,12 +1814,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Kuwait",
-        "Country code": "KWT",
+        "id": "KW",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1832,12 +1832,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Singapore",
-        "Country code": "SGP",
+        "id": "SG",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1850,12 +1850,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Togo",
-        "Country code": "TGO",
+        "id": "TG",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1868,12 +1868,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "United Arab Emirates",
-        "Country code": "ARE",
+        "id": "AR",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1886,12 +1886,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Brunei Darussalam",
-        "Country code": "BRN",
+        "id": "BR",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1904,12 +1904,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Madagascar",
-        "Country code": "MDG",
+        "id": "MD",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -1922,12 +1922,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Suriname",
-        "Country code": "SUR",
+        "id": "SU",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1940,12 +1940,12 @@
         "Nb Medium": "67%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Austria",
-        "Country code": "AUT",
+        "id": "AU",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1958,12 +1958,12 @@
         "Nb Medium": "56%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Georgia",
-        "Country code": "GEO",
+        "id": "GE",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -1976,12 +1976,12 @@
         "Nb Medium": "56%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Portugal",
-        "Country code": "PRT",
+        "id": "PR",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -1994,12 +1994,12 @@
         "Nb Medium": "56%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "United States of America",
-        "Country code": "USA",
+        "id": "US",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2012,12 +2012,12 @@
         "Nb Medium": "44%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Australia",
-        "Country code": "AUS",
+        "id": "AU",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2030,12 +2030,12 @@
         "Nb Medium": "33%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Dominican Republic",
-        "Country code": "DOM",
+        "id": "DO",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2048,12 +2048,12 @@
         "Nb Medium": "33%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Germany",
-        "Country code": "DEU",
+        "id": "DE",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2066,12 +2066,12 @@
         "Nb Medium": "33%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Tunisia",
-        "Country code": "TUN",
+        "id": "TU",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2084,12 +2084,12 @@
         "Nb Medium": "33%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Turkey",
-        "Country code": "TUR",
+        "id": "TU",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2102,12 +2102,12 @@
         "Nb Medium": "33%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Argentina",
-        "Country code": "ARG",
+        "id": "AR",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2120,12 +2120,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Bangladesh",
-        "Country code": "BGD",
+        "id": "BG",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -2138,12 +2138,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Malta",
-        "Country code": "MLT",
+        "id": "ML",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2156,12 +2156,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Mongolia",
-        "Country code": "MNG",
+        "id": "MN",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2174,12 +2174,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Trinidad and Tobago",
-        "Country code": "TTO",
+        "id": "TT",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2192,12 +2192,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Venezuela",
-        "Country code": "VEN",
+        "id": "VE",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2210,12 +2210,12 @@
         "Nb Medium": "22%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Japan",
-        "Country code": "JPN",
+        "id": "JP",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2228,12 +2228,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Zimbabwe",
-        "Country code": "ZWE",
+        "id": "ZW",
         "Fossil fuel energy consumption  \nConversion Score": "Low",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2246,12 +2246,12 @@
         "Nb Medium": "11%",
         "Nb Low": "22%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Afghanistan",
-        "Country code": "AFG",
+        "id": "AF",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -2264,12 +2264,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Turkmenistan",
-        "Country code": "TKM",
+        "id": "TK",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2282,12 +2282,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Djibouti",
-        "Country code": "DJI",
+        "id": "DJ",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -2300,12 +2300,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Liberia",
-        "Country code": "LBR",
+        "id": "LB",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Low",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2318,12 +2318,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Seychelles",
-        "Country code": "SYC",
+        "id": "SY",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2336,12 +2336,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Timor-Leste",
-        "Country code": "TLS",
+        "id": "TL",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -2354,12 +2354,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Vanuatu",
-        "Country code": "VUT",
+        "id": "VU",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -2372,12 +2372,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Guyana",
-        "Country code": "GUY",
+        "id": "GU",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2390,12 +2390,12 @@
         "Nb Medium": "56%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Botswana",
-        "Country code": "BWA",
+        "id": "BW",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2408,12 +2408,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Grenada",
-        "Country code": "GRD",
+        "id": "GR",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2426,12 +2426,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Saint Vincent and the Grenadines",
-        "Country code": "VCT",
+        "id": "VC",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2444,12 +2444,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Vietnam",
-        "Country code": "VNM",
+        "id": "VN",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2462,12 +2462,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Lebanon",
-        "Country code": "LBN",
+        "id": "LB",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2480,12 +2480,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Mauritius",
-        "Country code": "MUS",
+        "id": "MU",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2498,12 +2498,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Namibia",
-        "Country code": "NAM",
+        "id": "NA",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2516,12 +2516,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Oman",
-        "Country code": "OMN",
+        "id": "OM",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2534,12 +2534,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Qatar",
-        "Country code": "QAT",
+        "id": "QA",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2552,12 +2552,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Saint Lucia",
-        "Country code": "LCA",
+        "id": "LC",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2570,12 +2570,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Ecuador",
-        "Country code": "ECU",
+        "id": "EC",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2588,12 +2588,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Korea, South",
-        "Country code": "KOR",
+        "id": "KO",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2606,12 +2606,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Malaysia",
-        "Country code": "MYS",
+        "id": "MY",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2624,12 +2624,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Yemen",
-        "Country code": "YEM",
+        "id": "YE",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Low",
@@ -2642,12 +2642,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Albania",
-        "Country code": "ALB",
+        "id": "AL",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2660,12 +2660,12 @@
         "Nb Medium": "78%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Armenia",
-        "Country code": "ARM",
+        "id": "AR",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2678,12 +2678,12 @@
         "Nb Medium": "67%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Jamaica",
-        "Country code": "JAM",
+        "id": "JA",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2696,12 +2696,12 @@
         "Nb Medium": "56%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Peru",
-        "Country code": "PER",
+        "id": "PE",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2714,12 +2714,12 @@
         "Nb Medium": "56%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Thailand",
-        "Country code": "THA",
+        "id": "TH",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2732,12 +2732,12 @@
         "Nb Medium": "56%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Azerbaijan",
-        "Country code": "AZE",
+        "id": "AZ",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2750,12 +2750,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Bolivia",
-        "Country code": "BOL",
+        "id": "BO",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2768,12 +2768,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Cuba",
-        "Country code": "CUB",
+        "id": "CU",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2786,12 +2786,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Egypt",
-        "Country code": "EGY",
+        "id": "EG",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2804,12 +2804,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Kyrgyzstan",
-        "Country code": "KGZ",
+        "id": "KG",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2822,12 +2822,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Morocco",
-        "Country code": "MAR",
+        "id": "MA",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2840,12 +2840,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Philippines",
-        "Country code": "PHL",
+        "id": "PH",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -2858,12 +2858,12 @@
         "Nb Medium": "44%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Algeria",
-        "Country code": "DZA",
+        "id": "DZ",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2876,12 +2876,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Jordan",
-        "Country code": "JOR",
+        "id": "JO",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2894,12 +2894,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Libya",
-        "Country code": "LBY",
+        "id": "LB",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2912,12 +2912,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Saudi Arabia",
-        "Country code": "SAU",
+        "id": "SA",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2930,12 +2930,12 @@
         "Nb Medium": "33%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "China",
-        "Country code": "CHN",
+        "id": "CH",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2948,12 +2948,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "India",
-        "Country code": "IND",
+        "id": "IN",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2966,12 +2966,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Kazakhstan",
-        "Country code": "KAZ",
+        "id": "KA",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -2984,12 +2984,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Mexico",
-        "Country code": "MEX",
+        "id": "ME",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -3002,12 +3002,12 @@
         "Nb Medium": "22%",
         "Nb Low": "11%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Korea, North",
-        "Country code": "PRK",
+        "id": "PR",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -3020,12 +3020,12 @@
         "Nb Medium": "56%",
         "Nb Low": "0%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "Medium"
     },
     {
         "Country Name": "Indonesia",
-        "Country code": "IDN",
+        "id": "ID",
         "Fossil fuel energy consumption  \nConversion Score": "Medium",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -3038,12 +3038,12 @@
         "Nb Medium": "44%",
         "Nb Low": "0%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Iraq",
-        "Country code": "IRQ",
+        "id": "IR",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -3056,12 +3056,12 @@
         "Nb Medium": "33%",
         "Nb Low": "0%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "South Africa",
-        "Country code": "ZAF",
+        "id": "ZA",
         "Fossil fuel energy consumption  \nConversion Score": "High",
         "Renewable energy consumption \nConversion Score": "Medium",
         "Carbon dioxide emissions\nconversion score": "High",
@@ -3074,12 +3074,12 @@
         "Nb Medium": "33%",
         "Nb Low": "0%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Dominica",
-        "Country code": "DMA",
+        "id": "DM",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -3092,12 +3092,12 @@
         "Nb Medium": "22%",
         "Nb Low": "0%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     },
     {
         "Country Name": "Equatorial Guinea",
-        "Country code": "GNQ",
+        "id": "GN",
         "Fossil fuel energy consumption  \nConversion Score": "",
         "Renewable energy consumption \nConversion Score": "High",
         "Carbon dioxide emissions\nconversion score": "Medium",
@@ -3110,7 +3110,8 @@
         "Nb Medium": "11%",
         "Nb Low": "0%",
         "Nb N/a": "0",
-        "Nb ratings with a score": "9",
+        "value": "9",
         "FINAL SCORE": "High"
     }
 ]
+}

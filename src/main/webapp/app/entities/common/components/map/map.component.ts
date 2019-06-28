@@ -43,21 +43,21 @@ export class MapComponent implements OnInit, OnChanges {
                 this.countryData = [];
                 break;
 
-            case 'Environmental Risk':
-                this.countryData = this.mapService.mapData.data;
-                break;
-
-            case 'Country Risk':
-                this.countryData = this.mapService.earthquakeData.data;
+            case 'Environmental Compliance':
+                this.countryData = this.mapService.environmentData.data;
                 break;
 
             case 'Social Compliance':
                 this.countryData = this.mapService.socialData.data;
                 break;
 
+            case 'Financial Integrity':
+                this.countryData = this.mapService.financialData.data;
+                break;
+
             default:
-                this.countryData = [];
-                this.locations = this.mapService.locationData.HQLocations;
+            case 'Country Risk':
+                this.countryData = this.mapService.mapCountryRisk.data;
                 break;
         }
         this.map.dispose();
@@ -73,12 +73,12 @@ export class MapComponent implements OnInit, OnChanges {
 
     basicMap() {
         this.map.geoData('anychart.maps.world');
-        var series1 = this.map.bubble(this.locations);
+        // var series1 = this.map.bubble(this.locations);
         var series2 = this.map.choropleth(this.countryData);
 
-        series1.labels().format('{%id}');
-        series1.tooltip().format('{%size}');
-        series1.tooltip().titleFormat('{%id}');
+        // series1.labels().format('{%id}');
+        // series1.tooltip().format('{%size}');
+        // series1.tooltip().titleFormat('{%id}');
 
         series2.labels().format('{%name}');
 

@@ -8,10 +8,17 @@ export class MapService {
     locationData: any;
     earthquakeData: any;
     socialData: any;
+    environmentData: any;
+    financialData: any;
+    mapCountryRisk: any;
+
     constructor() {
         this.mapData = require('../../../../mock-data/mapEnvironmentPI.json');
         this.locationData = require('../../../../mock-data/mapLocationsData.json');
         this.earthquakeData = require('../../../../mock-data/mapEarthQuake.json');
         this.socialData = require('../../../../mock-data/mapSocialCompliance.json');
+        this.environmentData = require('../../../../mock-data/mapEnviormentalCompliance.json');
+        this.financialData = require('../../../../mock-data/mapFinancialIntegrity.json');
+        this.mapCountryRisk = require('../../../../mock-data/mapCountryRisk.json');
     }
 }
