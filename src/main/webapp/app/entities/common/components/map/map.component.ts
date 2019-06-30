@@ -70,51 +70,72 @@ export class MapComponent implements OnInit, OnChanges {
         this.map = anychart.map();
         this.basicMap();
     }
+    num;
+    arr = [];
 
     ngOnInit() {
+        for (let i = 1; i < 122; i++) {
+            this.num = i;
+            this.getRandomInRange(8.7832, 55.4915, 3);
+            console.log('hers random lat and long', this.arr);
+        }
+
         // this.basicMap();
+    }
+    getRandomInRange(from, to, fixed) {
+        let randomLatLong1 = (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+        let randomLatLong2 = (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+        let result;
+        this.arr = [];
+        let level = ['Low', 'Medium', 'High'];
+        let score = [1, 5, 10];
+
+        // console.log(this.num)
+        let rand = level[Math.floor(Math.random() * level.length)];
+        // result = `{${randomLatLong1}, "long": ${randomLatLong2}, "name": "Supplier #${this.num}",  "city":"Some City", "value": ${this.num}}`;
+        // this.arr.push(result);
+        this.arr.push(rand);
+        // this.arr.push(score);
+        return this.arr;
+        // .toFixed() returns string, so ' * 1' is a trick to convert to number
     }
 
     basicMap() {
         this.map.geoData('anychart.maps.world');
-        var series1 = this.map.bubble(this.locations);
-        var series2 = this.map.choropleth(this.countryData);
+        // let series2 = this.map.choropleth(this.countryData);
+        let dotMarkers = this.map.marker(this.mapService.suppliersOnMap.data[0].suppliers);
+        let mapCountryColors = this.map.choropleth(this.countryData);
+        dotMarkers.labels(false);
+        // set the colors of the CITRUS series
+        dotMarkers.stroke('gold');
+        dotMarkers.fill('#7B4DD9');
 
-        series1.labels().format('{%id}');
-        series1.tooltip().format('{%size}');
-        series1.tooltip().titleFormat('{%id}');
+        // set the size of CITRUS markers
+        dotMarkers.normal().size(2);
+        dotMarkers.hovered().size(4);
+        dotMarkers.selected().size(10);
+        console.log('this is series 3 ', this.mapService.suppliersOnMap.data[0].suppliers);
 
-        series2.labels().format('{%name}');
-
-        // this.countryData.forEach(ele => {
-        //     series2.tooltip().format(function(e) {
-        //         // let text;
-
-        //         for (let i = 0; i < e.getData('indicator').length; i++) {
-        //             this.text += e.getData('indicator')[i].label + ' : ' + e.getData('indicator')[i].value + '\n';
-        //         }
-        //         return this.text;
-        //     });
-        //     console.log(ele);
-        // });
+        mapCountryColors.labels().format('{%name}');
 
         this.countryData.forEach(ele => {
-            series2.tooltip().format('Risk: {%RISK} \nValue: {%value}');
-            console.log('whats in ele ', ele);
+            mapCountryColors
+                .tooltip()
+                .format(
+                    'Risk: {%RISK} \nCompany Integrity: {%CorrectedRating}  \nNo of Suppliers: {%numSuppliers} \nISO: {%id}  \nRating: {%value}'
+                );
+            dotMarkers.tooltip().format('Location: {%city} \nRating: {%Value}');
         });
 
-        series2.tooltip().titleFormat('{%name}');
+        mapCountryColors.tooltip().titleFormat('{%name}');
 
-        series2.tooltip().titleFormat('{%name}');
-
-        this.map.maxBubbleSize(8);
-        this.map.minBubbleSize(2);
         let colorRange = this.map.colorRange();
         colorRange.enabled(true);
-        series2.colorScale(anychart.scales.linearColor('#32D490', '#FFCB70', '#FF7273'));
-        series2.stroke('#999 .1');
+        mapCountryColors.colorScale(anychart.scales.linearColor('#2EEEF0', '#FEA500', '#F63B01'));
+        mapCountryColors.stroke('#999 .1');
 
         this.map.container('worldmap');
+        this.map.title('Suppliers Around The World');
         this.map.draw();
 
         var zoomController = anychart.ui.zoom();

@@ -46,6 +46,7 @@ export class SupplierdataComponent implements OnInit {
     financialData = [];
     mapCountryRisk = [];
     mapBusinessIntegrity = [];
+    suppliersOnMap = [];
     thisObjMapBusiness = {};
 
     images = [1, 2, 3, 4, 5, 6].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
@@ -371,14 +372,18 @@ export class SupplierdataComponent implements OnInit {
     workspace = false;
     healthsafety = false;
     spliceData: any;
+    supplierList = [];
     ngOnInit() {
         this.mapdropdown = 'Country Risk';
         this.socialData = this.mapService.socialData.data;
         this.environmentData = this.mapService.environmentData.data;
         this.financialData = this.mapService.financialData.data;
         this.mapCountryRisk = this.mapService.mapCountryRisk.data;
+        this.suppliersOnMap = this.mapService.suppliersOnMap.data;
+        console.log(this.mapCountryRisk);
+        // this.supplierList = this.mapCountryRisk.map(a => a.compName);
         this.mapBusinessIntegrity = this.mapService.mapBusinessIntegrity.data;
-        console.log('>>>>>>> ', this.socialData);
+        // console.log('>>>>>>> ', this.socialData);
         this.clickfinance = 'D&B Rating';
         this.clickEnvironmental = 'Overall Rating';
         this.chartData = [
