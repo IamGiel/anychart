@@ -1,14 +1,5 @@
-{"data" : [
-  {
-    "suppliers":[
-      {"lat": 37.322998, "long": -122.032181, "name": "Supplier #1",  "city":"Coldelf", "value": 293},
-      {"lat":39.50250064, "long": -109.23673915, "name": "Supplier #2",  "city":"Tucson", "value": 293},
-      {"lat":48.11484768, "long": -92.51444825, "name": "Supplier #3",  "city":"Trujillo Alto", "value": 293},
-      {"lat":29.9182411, "long": -108.39680634, "name": "Supplier #4",  "city":"Bearden", "value": 293},
-      {"lat":49.9568486, "long": -97.90472229, "name": "Supplier #6",  "city":"Washington Heights", "value": 293},
-      {"lat":38.72997859, "long": -84.11219353, "name": "Supplier #7",  "city":"Des Plaines", "value": 293},
-      {"lat":50.73833032, "long": -101.51437939, "name": "Supplier #8",  "city":"Garland", "value": 293},
-      {"lat":49.75396758, "long": -104.95668203, "name": "Supplier #9",  "city":"Waterloo", "value": 293},
+{
+    "SiteLocations":[
       {"lat":28.23409968, "long": -97.78318015, "name": "Supplier #10",  "city":"Southpark Mall", "value": 293},
       {"lat":47.1240028, "long": -88.17559971, "name": "Supplier #11",  "city":"Timbuktu", "value": 293},
       {"lat":38.79720966, "long": -88.68874866, "name": "Supplier #12",  "city":"Flour Bluff", "value": 293},
@@ -26,9 +17,6 @@
       {"lat":-16.2808033, "long": -52.5075302, "name": "Supplier #24",  "city":"Orem", "value": 293},
       {"lat":-14.22926448, "long": -53.47451347, "name": "Supplier #25",  "city":"Inglewood", "value": 293},
       {"lat":0.03483369, "long": -55.62318953, "name": "Supplier #26",  "city":"Sunrise", "value": 293},
-      {"lat":-7.53370693, "long": -51.67286413, "name": "Supplier #27",  "city":"Ponce", "value": 293},
-      {"lat":0.264888, "long": -56.14168501, "name": "Supplier #28",  "city":"Los Serranos", "value": 293},
-      {"lat":-8.48208786, "long": -55.99729839, "name": "Supplier #29",  "city":"Hamilton", "value": 293},
       {"lat":-20.14802224, "long": -49.94023374, "name": "Supplier #30",  "city":"Dayton", "value": 293},
       {"lat":-2.85425454, "long": -67.15501699, "name": "Supplier #32",  "city":"Providence", "value": 293},
       {"lat":1.53675179, "long": -59.04880491, "name": "Supplier #33",  "city":"Santo Domingo", "value": 293},
@@ -80,21 +68,11 @@
       {"lat":60.72275933, "long": 6.5669651, "name": "Supplier #89",  "city":"Dayton", "value": 293},
       {"lat":52.46349377, "long": 18.03972954, "name": "Supplier #90",  "city":"Farmington", "value": 293},
       {"lat":56.75161173, "long": 40.52158985, "name": "Supplier #97",  "city":"Chisinau", "value": 293},
-      {"lat":45.804732, "long": 21.56570144, "name": "Supplier #98",  "city":"Honolulu", "value": 293},
-      {"lat":60.08386493, "long": 17.29481292, "name": "Supplier #99",  "city":"Flagstaff", "value": 293},
-      {"lat":47.8099983, "long": 21.08852899, "name": "Supplier #101",  "city":"Brazzaville", "value": 293},
-      {"lat":51.75836752, "long": 115.08580458, "name": "Supplier #102",  "city":"Delray Beach", "value": 293},
-      {"lat":50.51568678, "long": 98.8337146, "name": "Supplier #103",  "city":"Battery Point", "value": 293},
-      {"lat":69.08305419, "long": 113.78227326, "name": "Supplier #104",  "city":"Meriden", "value": 293},
-      {"lat":68.83024697, "long": 110.60354876, "name": "Supplier #105",  "city":"Clifton", "value": 293},
       {"lat":70.5562756, "long": 98.30315647, "name": "Supplier #106",  "city":"Harlem", "value": 293},
       {"lat":70.15676441, "long": 113.26068056, "name": "Supplier #107",  "city":"Columbia", "value": 293},
       {"lat":61.52789182, "long": 92.7701364, "name": "Supplier #108",  "city":"Montgomery", "value": 293},
       {"lat":49.44228726, "long": 96.30035648, "name": "Supplier #109",  "city":"Nicosia", "value": 293},
       {"lat":52.55302695, "long": 86.69120966, "name": "Supplier #110",  "city":"Willoughby Spit", "value": 293},
-      {"lat":53.4713225, "long": 118.56723447, "name": "Supplier #111",  "city":"Park Heights", "value": 293},
-      {"lat":52.36282032, "long": 99.3313009, "name": "Supplier #112",  "city":"Simpson", "value": 293},
-      {"lat":51.59354554, "long": 122.12025086, "name": "Supplier #113",  "city":"Chula Vista", "value": 293},
       {"lat":59.5030497, "long": 129.76375876, "name": "Supplier #114",  "city":"Ventura", "value": 293},
       {"lat":50.39561532, "long": 114.66592479, "name": "Supplier #115",  "city":"Carlsbad", "value": 293},
       {"lat":67.8281556, "long": 92.20586382, "name": "Supplier #116",  "city":"Santa Clarita", "value": 293},
@@ -103,9 +81,46 @@
       {"lat":73.06296101, "long": 97.92837295, "name": "Supplier #119",  "city":"La Crosse", "value": 293},
       {"lat":51.65566143, "long": 91.41653184, "name": "Supplier #120",  "city":"Kahala", "value": 293},
       {"lat":51.92373776, "long": 115.43265672, "name": "Supplier #121",  "city":"Todt Hill", "value": 293}
+    ],
+
+  
+    "HQLocations":[
+      {"lat": 37.322998, "long": -122.032181, "name": "HQ Location #1",  "city":"Coldelf", "value": 293},
+      {"lat":39.50250064, "long": -109.23673915, "name": "HQ Location #2",  "city":"Tucson", "value": 293},
+      {"lat":48.11484768, "long": -92.51444825, "name": "HQ Location #3",  "city":"Trujillo Alto", "value": 293},
+      {"lat":29.9182411, "long": -108.39680634, "name": "HQ Location #4",  "city":"Bearden", "value": 293},
+      {"lat":40.08012974, "long": -106.41858725, "name": "HQ Location #14",  "city":"Ames", "value": 293},
+      {"lat":34.74671597, "long": -96.48470964, "name": "HQ Location #15",  "city":"Gibraltar", "value": 293},
+      {"lat":39.98835983, "long": -105.89872451, "name": "HQ Location #16",  "city":"Nampa", "value": 293},
+      {"lat":32.23399108, "long": -97.61311575, "name": "HQ Location #17",  "city":"Nairobi", "value": 293},
+      {"lat":31.80775656, "long": -93.13079895, "name": "HQ Location #18",  "city":"Sigma", "value": 293},
+      {"lat":41.55116964, "long": -86.394941, "name": "HQ Location #19",  "city":"Sheldon", "value": 293},
+      {"lat":37.12721106, "long": -80.01549238, "name": "HQ Location #20",  "city":"Ottawa", "value": 293},
+      {"lat":27.63418381, "long": -104.01396081, "name": "HQ Location #21",  "city":"Mackville", "value": 293},
+      {"lat":25.63311747, "long": 87.58399047, "name": "HQ Location #58",  "city":"Richardson", "value": 293},
+      {"lat":24.46781875, "long": 34.23178557, "name": "HQ Location #65",  "city":"Washington Heights", "value": 293},
+      {"lat":44.87800264, "long": 10.8330245, "name": "HQ Location #83",  "city":"Orem", "value": 293},
+      {"lat":41.05856972, "long": 11.02522775, "name": "HQ Location #84",  "city":"Inglewood", "value": 293},
+      {"lat":50.8646969, "long": 12.73677906, "name": "HQ Location #86",  "city":"Ponce", "value": 293},
+      {"lat":56.31677988, "long": -3.04012178, "name": "HQ Location #87",  "city":"Los Serranos", "value": 293},
+      {"lat":55.60486438, "long": 22.75973377, "name": "HQ Location #88",  "city":"Hamilton", "value": 293},
+      {"lat":60.72275933, "long": 6.5669651, "name": "HQ Location #89",  "city":"Dayton", "value": 293},
+      {"lat":52.46349377, "long": 18.03972954, "name": "HQ Location #90",  "city":"Farmington", "value": 293},
+      {"lat":56.75161173, "long": 40.52158985, "name": "HQ Location #97",  "city":"Chisinau", "value": 293},
+      {"lat":45.804732, "long": 21.56570144, "name": "HQ Location #98",  "city":"Honolulu", "value": 293},
+      {"lat":60.08386493, "long": 17.29481292, "name": "HQ Location #99",  "city":"Flagstaff", "value": 293},
+      {"lat":53.4713225, "long": 118.56723447, "name": "HQ Location #111",  "city":"Park Heights", "value": 293},
+      {"lat":52.36282032, "long": 99.3313009, "name": "HQ Location #112",  "city":"Simpson", "value": 293},
+      {"lat":51.59354554, "long": 122.12025086, "name": "HQ Location #113",  "city":"Chula Vista", "value": 293},
+      {"lat":59.5030497, "long": 129.76375876, "name": "HQ Location #114",  "city":"Ventura", "value": 293},
+      {"lat":50.39561532, "long": 114.66592479, "name": "HQ Location #115",  "city":"Carlsbad", "value": 293},
+      {"lat":67.8281556, "long": 92.20586382, "name": "HQ Location #116",  "city":"Santa Clarita", "value": 293},
+      {"lat":50.22673429, "long": 92.3900583, "name": "HQ Location #117",  "city":"Asheville", "value": 293},
+      {"lat":49.27829807, "long": 110.48519148, "name": "HQ Location #118",  "city":"Chino Hills", "value": 293},
+      {"lat":73.06296101, "long": 97.92837295, "name": "HQ Location #119",  "city":"La Crosse", "value": 293},
+      {"lat":51.65566143, "long": 91.41653184, "name": "HQ Location #120",  "city":"Kahala", "value": 293},
+      {"lat":51.92373776, "long": 115.43265672, "name": "HQ Location #121",  "city":"Todt Hill", "value": 293}
     ]
-  }
-]
 }
 
   

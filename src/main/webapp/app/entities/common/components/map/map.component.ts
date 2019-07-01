@@ -25,18 +25,21 @@ export class MapComponent implements OnInit, OnChanges {
     constructor(private mapService: MapService) {}
 
     ngOnChanges() {
-        console.log('whats in chartdata ', this.chartData);
+        console.log('whats in chartdata ', this.locationData);
         switch (this.locationData) {
             case 'Site Location':
-                this.locations = this.mapService.locationData.SiteLocations;
+                // this.locations = this.mapService.locationData.SiteLocations;
+                this.locations = this.mapService.suppliersOnMap.SiteLocations;
                 break;
 
             case 'HQ Location':
-                this.locations = this.mapService.locationData.HQLocations;
+                // this.locations = this.mapService.locationData.HQLocations;
+                this.locations = this.mapService.suppliersOnMap.HQLocations;
                 break;
 
             default:
-                this.locations = this.mapService.locationData.HQLocations;
+                // this.locations = this.mapService.locationData.HQLocations;
+                this.locations = this.mapService.suppliersOnMap.HQLocations;
                 break;
         }
         switch (this.chartData) {
@@ -74,47 +77,25 @@ export class MapComponent implements OnInit, OnChanges {
     arr = [];
 
     ngOnInit() {
-        // for (let i = 1; i < 122; i++) {
-        //     this.num = i;
-        //     this.getRandomInRange(8.7832, 55.4915, 3);
         console.log('hers random lat and long', this.arr);
-        // }
-
-        // this.basicMap();
     }
-    // getRandomInRange(from, to, fixed) {
-    //     let randomLatLong1 = (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-    //     let randomLatLong2 = (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-    //     let result;
-    //     this.arr = [];
-    //     let level = ['Low', 'Medium', 'High'];
-    //     let score = [1, 5, 10];
-
-    //     // console.log(this.num)
-    //     let rand = level[Math.floor(Math.random() * level.length)];
-    //     // result = `{${randomLatLong1}, "long": ${randomLatLong2}, "name": "Supplier #${this.num}",  "city":"Some City", "value": ${this.num}}`;
-    //     // this.arr.push(result);
-    //     this.arr.push(rand);
-    //     // this.arr.push(score);
-    //     return this.arr;
-    //     // .toFixed() returns string, so ' * 1' is a trick to convert to number
-    // }
 
     basicMap() {
         this.map.geoData('anychart.maps.world');
         // let series2 = this.map.choropleth(this.countryData);
-        let dotMarkers = this.map.marker(this.mapService.suppliersOnMap.data[0].suppliers);
+        // let dotMarkers = this.map.marker(this.mapService.suppliersOnMap.data[0].suppliers);
+        let dotMarkers = this.map.marker(this.locations);
         let mapCountryColors = this.map.choropleth(this.countryData);
         dotMarkers.labels(false);
         // set the colors of the CITRUS series
         dotMarkers.stroke('#6B4CD9');
-        dotMarkers.fill('#6B4CD9');
+        dotMarkers.fill('#F0EDFB');
 
         // set the size of CITRUS markers
         dotMarkers.normal().size(1);
         dotMarkers.hovered().size(4);
         dotMarkers.selected().size(10);
-        console.log('this is series 3 ', this.mapService.suppliersOnMap.data[0].suppliers);
+        // console.log('this is series 3 ', this.mapService.suppliersOnMap.data[0].suppliers);
 
         mapCountryColors.labels().format('{%name}');
 
