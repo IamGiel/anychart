@@ -7,6 +7,7 @@
           <div class="card-body">
             <span class="card-title">Financial Data</span>
             <i-filter class="filter" (click)="openFilterDetails('financial');"></i-filter>
+            <span>{{filtertext}}</span>
             <div *ngIf="ffilter" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
               <div class="filter-div">
@@ -1155,12 +1156,12 @@
         </div>
       </div>
       <div class="map-container">
-        <jhi-map [chartData]="mapdropdown" [locationData]= "subtab"></jhi-map>
+        <jhi-map [chartData]="mapdropdown" [locationData]= "subtab" [id]="'worldmap'"></jhi-map>
       </div>
       <div class="dropdown-map">
         <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
           <i class="fa fa-angle-up"></i>
-        </button>
+        </button>      
         <div *ngIf="mapdrop" class="map-dropdown-content">
           <a (click)="selectMap('Environmental Risk')"><i *ngIf="mapdropdown == 'Environmental Risk'"
               class="fa fa-check"></i> Environmental Risk</a>
@@ -1176,6 +1177,9 @@
             <a (click)="selectMap('Financial Integrity')"><i *ngIf="mapdropdown == 'Financial Integrity'" class="fa fa-check"></i> Financial Integrity</a>
             <a (click)="selectMap('Social Compliance')"><i *ngIf="mapdropdown == 'Social Compliance'" class="fa fa-check"></i> Social Compliance</a>
         </div>
+      </div>
+      <div class="icon-p">
+          <img class="map-icon" (click)="open(mapcontent, 'mapcontent')" src="../../../../content/images/full-screen.png"/>
       </div>
     </div>
     <div class="col-md-3 pl-0 pr-0" style="overflow:auto">
@@ -1196,10 +1200,10 @@
         <div *ngFor="let data of socialData">
             <div class="grid-table border-top">
                 <p class="country">{{data.id}}</p>
-                <p><span class="number">{{data.value}}</span><span class="percent">{{data.indicator.value}}</span></p>
-              </div>
+                <p class="country-num"><span class="number">{{data.value}}</span><span class="percent">{{data.indicator.value}}</span></p>
+            </div>
         </div>
-        <div class="grid-table border-top">
+        <!-- <div class="grid-table border-top">
           <p class="country">USA</p>
           <p><span class="number">42</span><span class="percent">21%</span></p>
         </div>
@@ -1238,7 +1242,7 @@
         <div class="grid-table">
           <p class="country">Morocco</p>
           <p><span class="number">8</span><span class="percent">4%</span></p>
-        </div>
+        </div> -->
       </div>
       <div class="table-div" *ngIf="activeTab =='Cities'">
         <div class="grid-table border-top">
@@ -1371,7 +1375,7 @@
         <button type="button" class="btn float-L" (click)="open(content1)">Save Filter</button>
       </span>
       <span>
-        <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+        <button type="button" class="btn float-R" (click)="applyfilter();modal.close('Save click')">Apply Filter</button>
       </span>
       <span>
         <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
@@ -1436,7 +1440,18 @@
     </div>
   </div>
 </ng-template>
-
+<ng-template #mapcontent let-modal>
+    <div class="modal-header">
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+          <jhi-map [chartData]="mapdropdown" [locationData]= "subtab" [id]="'mapdialog'"></jhi-map>
+      </div>
+    </div>x
+  </ng-template>
 <ng-template #content3 let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Filter by group</h4>

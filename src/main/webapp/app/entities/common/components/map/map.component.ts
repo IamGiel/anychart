@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, AfterViewInit } from '@angular/core';
 import { MapService } from './map.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,10 +7,12 @@ import { HttpClient } from '@angular/common/http';
     templateUrl: './map.component.html',
     styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnInit, OnChanges {
+export class MapComponent implements OnInit, OnChanges, AfterViewInit {
     //countryData: any;
     @Input('chartData') chartData;
     @Input('locationData') locationData;
+    @Input() id: string;
+
     map = anychart.map();
 
     mapdata: any[] = [];
@@ -24,7 +26,6 @@ export class MapComponent implements OnInit, OnChanges {
     constructor(private mapService: MapService) {}
 
     ngOnChanges() {
-        console.log('whats in chartdata ', this.chartData);
         switch (this.locationData) {
             case 'Site Location':
                 this.locations = this.mapService.locationData.SiteLocations;
@@ -64,14 +65,14 @@ export class MapComponent implements OnInit, OnChanges {
         this.map = null;
 
         this.map = anychart.map();
-        this.basicMap();
+        this.ngAfterViewInit();
     }
 
     ngOnInit() {
         // this.basicMap();
     }
 
-    basicMap() {
+    ngAfterViewInit() {
         this.map.geoData('anychart.maps.world');
         var series1 = this.map.bubble(this.locations);
         var series2 = this.map.choropleth(this.countryData);
@@ -103,7 +104,7 @@ export class MapComponent implements OnInit, OnChanges {
         series2.colorScale(anychart.scales.linearColor('#32D490', '#FFCB70', '#FF7273'));
         series2.stroke('#999 .1');
 
-        this.map.container('worldmap');
+        this.map.container(this.id);
         this.map.draw();
 
         var zoomController = anychart.ui.zoom();

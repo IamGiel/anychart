@@ -4,6 +4,8 @@ import 'anychart';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardService } from '../dashboard/dashboard.service';
 import { MapService } from 'app/entities/common/components/map/map.service';
+import { FileSizePipe } from 'app/file-size.pipe';
+import { stringify } from 'querystring';
 
 @Component({
     selector: 'jhi-supplierdata',
@@ -366,6 +368,12 @@ export class SupplierdataComponent implements OnInit {
     workspace = false;
     healthsafety = false;
     spliceData: any;
+
+    filtertext: string = 'Two filters applied';
+    applyfilter() {
+        this.filtertext = 'Two filters applied';
+    }
+
     ngOnInit() {
         this.socialData = this.mapService.socialData.data;
         console.log('>>>>>>> ', this.socialData);
@@ -449,23 +457,23 @@ export class SupplierdataComponent implements OnInit {
         if (data === 'D&B Rating') {
             this.clickfinance = 'D&B Rating';
             this.columnData = [
-                { x: '1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#FF99CC' },
-                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FF99CC' },
-                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FF99CC' },
-                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF99CC' },
-                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF99CC' },
-                { x: '6', perc: 8, avgval: 8, name: 'Rating 6', risk: 'Medium Risk', num: 8, fill: '#FF99CC' },
-                { x: '7', perc: 12, avgval: 12, name: 'Rating 7', risk: 'Medium Risk', num: 12, fill: '#FF99CC' },
-                { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9, fill: '#FF99CC' },
-                { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6, fill: '#FF99CC' }
+                { x: '1', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#55D184' },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#8ECB6F' },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#ADC662' },
+                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#D6C355' },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FEA344' },
+                { x: '6', perc: 8, avgval: 8, name: 'Rating 6', risk: 'Medium Risk', num: 8, fill: '#FEA344' },
+                { x: '7', perc: 12, avgval: 12, name: 'Rating 7', risk: 'Medium Risk', num: 12, fill: '#FD8443' },
+                { x: '8', perc: 9, avgval: 4, name: 'Rating 8', risk: 'High Risk', num: 9, fill: '#FF5C5C' },
+                { x: '9', perc: 6, avgval: 3, name: 'Rating 9', risk: 'High Risk', num: 6, fill: '#FF5C5C' }
             ];
         } else if (data === 'D&B SER Rating') {
             this.clickfinance = 'D&B SER Rating';
             this.columnData = [
-                { x: '1', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 5, fill: '#FF99CC' },
-                { x: '2', perc: 5, avgval: 5, name: 'Rating 2', risk: 'Low Risk', num: 6, fill: '#FF99CC' },
-                { x: '3', perc: 15, avgval: 15, name: 'Rating 3', risk: 'Low Risk', num: 7, fill: '#FF99CC' },
-                { x: '4', perc: 8, avgval: 8, name: 'Rating 4', risk: 'Medium Risk', num: 8, fill: '#FF99CC' }
+                { x: '1', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 5, fill: '#FF4F61' },
+                { x: '2', perc: 5, avgval: 5, name: 'Rating 2', risk: 'Low Risk', num: 6, fill: '#FD7C43' },
+                { x: '3', perc: 15, avgval: 15, name: 'Rating 3', risk: 'Low Risk', num: 7, fill: '#FFBE45' },
+                { x: '4', perc: 8, avgval: 8, name: 'Rating 4', risk: 'Medium Risk', num: 8, fill: '#31D490' }
             ];
         } else if (data === 'D&B Paydex') {
             this.spliceData = [['1', 30], , ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
@@ -478,48 +486,48 @@ export class SupplierdataComponent implements OnInit {
     showEthicalGraphs(data) {
         if (data === 'Overall appearance') {
             this.clickEthical = 'Overall Appearance';
+
             this.ethicaldata = [
-                { x: '0', perc: 1, avgval: 1, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '1-10', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '21-30', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0', perc: 1, avgval: 1, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '1-10', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '21-30', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
-            alert(3);
         } else if (data === 'Corruption issue') {
             this.clickEthical = 'Corruption issue';
             this.ethicaldata = [
-                { x: '0', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '1-10', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '11-20', perc: 12, avgval: 13, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '21-30', perc: 5, avgval: 5, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '1-10', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '11-20', perc: 12, avgval: 13, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '21-30', perc: 5, avgval: 5, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         } else if (data === 'Fraud issue') {
             this.clickEthical = 'Fraud issues';
             this.ethicaldata = [
-                { x: '0', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '1-10', perc: 18, avgval: 18, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '11-20', perc: 6, avgval: 6, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '21-30', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '30+', perc: 10, avgval: 10, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '1-10', perc: 18, avgval: 18, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '11-20', perc: 6, avgval: 6, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '21-30', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '30+', perc: 10, avgval: 10, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         } else if (data === 'Regulatory issue') {
             this.clickEthical = 'Regulatory issues';
             this.ethicaldata = [
-                { x: '0', perc: 5, avgval: 5, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '1-10', perc: 10, avgval: 10, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '21-30', perc: 1, avgval: 1, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0', perc: 5, avgval: 5, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '1-10', perc: 10, avgval: 10, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '11-20', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '21-30', perc: 1, avgval: 1, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         } else if (data === 'Sanctions') {
             this.ethicaldata = [
-                { x: '0', perc: 5, avgval: 5, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '1-10', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '11-20', perc: 17, avgval: 17, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '21-30', perc: 5, avgval: 5, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0', perc: 5, avgval: 5, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '1-10', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '11-20', perc: 17, avgval: 17, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '21-30', perc: 5, avgval: 5, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FD7C43' },
+                { x: '30+', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         }
         this.showEthicaldropdown = false;
@@ -529,47 +537,47 @@ export class SupplierdataComponent implements OnInit {
         if (data === 'Overall Appearance') {
             this.clickLabour = 'Overall Appearance';
             this.labourData = [
-                { x: '0-10', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0-10', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         } else if (data === 'Discrimanation/workforce..') {
             this.clickLabour = 'Discrimanation/workforce..';
             this.labourData = [
-                { x: '0-10', perc: 16, avgval: 16, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '3', perc: 6, avgval: 6, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '5', perc: 10, avgval: 10, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0-10', perc: 16, avgval: 16, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '3', perc: 6, avgval: 6, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '4', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '5', perc: 10, avgval: 10, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         } else if (data === 'Human Right Issue') {
             this.clickLabour = 'Human Right Issue';
             this.labourData = [
-                { x: '0-10', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '2', perc: 2, avgval: 2, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '4', perc: 12, avgval: 12, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '5', perc: 8, avgval: 8, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0-10', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '2', perc: 2, avgval: 2, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '4', perc: 12, avgval: 12, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '5', perc: 8, avgval: 8, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         } else if (data === 'Workforce Disputes') {
             this.clickLabour = 'Workforce Disputes';
             this.labourData = [
-                { x: '0-10', perc: 18, avgval: 18, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '3', perc: 15, avgval: 15, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '4', perc: 6, avgval: 6, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0-10', perc: 18, avgval: 18, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '2', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '3', perc: 15, avgval: 15, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '4', perc: 6, avgval: 6, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         } else if (data === 'Workforcehealthy/Saftey Is') {
             this.clickLabour = 'Workforcehealthy/Saftey Is';
             this.labourData = [
-                { x: '0-10', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '2', perc: 2, avgval: 2, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '4', perc: 10, avgval: 10, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0-10', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '2', perc: 2, avgval: 2, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '3', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '4', perc: 10, avgval: 10, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '5', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
         }
         this.showlabordropdown = false;
@@ -579,51 +587,51 @@ export class SupplierdataComponent implements OnInit {
         if (type === 'Overall Rating') {
             this.clickEnvironmental = 'Overall Rating';
             this.columnDatas = [
-                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
-                { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12 },
-                { x: '50-69', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16 },
-                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13 }
+                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8, fill: '#31D490' },
+                { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 12, fill: '#FFBE45' },
+                { x: '50-69', perc: 16, avgval: 16, name: 'Rating 3', risk: 'Low Risk', num: 16, fill: '#FD7C43' },
+                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
             // this.columnDatas = [['0-29', 13], ['30-49', 10], ['50-69', 19], ['70-89', 14], ['90-100', 17]];
         } else if (type === 'Ethics') {
             this.clickEnvironmental = 'Ethics';
             this.columnDatas = [
-                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 6 },
-                { x: '30-49', perc: 1, avgval: 1, name: 'Rating 2', risk: 'Low Risk', num: 14 },
-                { x: '50-69', perc: 10, avgval: 10, name: 'Rating 3', risk: 'Low Risk', num: 19 },
-                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 19 },
-                { x: '90-100', perc: 9, avgval: 9, name: 'Rating 5', risk: 'Medium Risk', num: 21 }
+                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 6, fill: '#31D490' },
+                { x: '30-49', perc: 1, avgval: 1, name: 'Rating 2', risk: 'Low Risk', num: 14, fill: '#FFBE45' },
+                { x: '50-69', perc: 10, avgval: 10, name: 'Rating 3', risk: 'Low Risk', num: 19, fill: '#FD7C43' },
+                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 19, fill: '#FF4F61' },
+                { x: '90-100', perc: 9, avgval: 9, name: 'Rating 5', risk: 'Medium Risk', num: 21, fill: '#FF4F61' }
             ];
             // this.columnDatas = [['0-29', 6], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 12]];
         } else if (type === 'Environment') {
             this.clickEnvironmental = 'Environment';
             this.columnDatas = [
-                { x: '0-29', perc: 12, avgval: 12, name: 'Rating 1', risk: 'Low Risk', num: 10 },
-                { x: '30-49', perc: 8, avgval: 8, name: 'Rating 2', risk: 'Low Risk', num: 4 },
-                { x: '50-69', perc: 1, avgval: 1, name: 'Rating 3', risk: 'Low Risk', num: 9 },
-                { x: '70-89', perc: 10, avgval: 10, name: 'Rating 4', risk: 'Medium Risk', num: 9 },
-                { x: '90-100', perc: 15, avgval: 15, name: 'Rating 5', risk: 'Medium Risk', num: 7 }
+                { x: '0-29', perc: 12, avgval: 12, name: 'Rating 1', risk: 'Low Risk', num: 10, fill: '#31D490' },
+                { x: '30-49', perc: 8, avgval: 8, name: 'Rating 2', risk: 'Low Risk', num: 4, fill: '#FFBE45' },
+                { x: '50-69', perc: 1, avgval: 1, name: 'Rating 3', risk: 'Low Risk', num: 9, fill: '#FD7C43' },
+                { x: '70-89', perc: 10, avgval: 10, name: 'Rating 4', risk: 'Medium Risk', num: 9, fill: '#FF4F61' },
+                { x: '90-100', perc: 15, avgval: 15, name: 'Rating 5', risk: 'Medium Risk', num: 7, fill: '#FF4F61' }
             ];
             // this.columnDatas = [['0-29', 10], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
         } else if (type === 'Labour& Human rights') {
             this.clickEnvironmental = 'Labour& Human rights';
             this.columnDatas = [
-                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 13 },
-                { x: '30-49', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 9 },
-                { x: '50-69', perc: 5, avgval: 5, name: 'Rating 3', risk: 'Low Risk', num: 13 },
-                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15 },
-                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 17 }
+                { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 13, fill: '#31D490' },
+                { x: '30-49', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 9, fill: '#FFBE45' },
+                { x: '50-69', perc: 5, avgval: 5, name: 'Rating 3', risk: 'Low Risk', num: 13, fill: '#FD7C43' },
+                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 15, fill: '#FF4F61' },
+                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 17, fill: '#FF4F61' }
             ];
             // this.columnDatas = [['0-29', 13], ['30-49', 9], ['50-69', 13], ['70-89', 15], ['90-100', 17]];
         } else if (type === 'Sustainable procurem..') {
             this.clickEnvironmental = 'Sustainable procurem..';
             this.columnDatas = [
-                { x: '0-29', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 13 },
-                { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 14 },
-                { x: '50-69', perc: 8, avgval: 8, name: 'Rating 3', risk: 'Low Risk', num: 19 },
-                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 19 },
-                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 17 }
+                { x: '0-29', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 13, fill: '#31D490' },
+                { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 14, fill: '#FFBE45' },
+                { x: '50-69', perc: 8, avgval: 8, name: 'Rating 3', risk: 'Low Risk', num: 19, fill: '#FD7C43' },
+                { x: '70-89', perc: 15, avgval: 15, name: 'Rating 4', risk: 'Medium Risk', num: 19, fill: '#FF4F61' },
+                { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 17, fill: '#FF4F61' }
             ];
             // this.columnDatas = [['0-29', 13], ['30-49', 14], ['50-69', 19], ['70-89', 19], ['90-100', 17]];
         }
@@ -715,10 +723,14 @@ export class SupplierdataComponent implements OnInit {
             this.showLabor = '';
         }
     }
-    open(content) {
+    open(content, id) {
         this.totalSelectFilterList = [];
-        console.log(content);
-        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+
+        let size;
+        if (id == 'mapcontent') size = 'lg';
+        else size = '';
+
+        this.modalService.open(content, { size: size, ariaLabelledBy: 'modal-basic-title' }).result.then(
             result => {
                 this.closeResult = `Closed with: ${result}`;
             },

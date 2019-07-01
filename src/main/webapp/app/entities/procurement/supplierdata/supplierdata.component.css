@@ -328,7 +328,12 @@ span.inactive1 {
     line-height: 14px;
     text-align: left;
     display: inline-block;
-    padding-top: 5px;
+    padding: 5px 0px;
+    margin: 0px;
+}
+
+.country-num {
+    margin: 0px;
 }
 
 .number {
@@ -339,7 +344,8 @@ span.inactive1 {
     line-height: 17px;
     text-align: center;
     display: inline-block;
-    padding-top: 5px;
+    padding: 5px 0px;
+    margin: 0px;
 }
 
 .percent {
@@ -409,8 +415,8 @@ span.inactive1 {
     display: grid;
     grid-template-columns: 50% 50%;
     border-bottom: 1px solid #e7e7e7;
-    height: 25px;
 }
+
 .grid-table p:nth-child(2) {
     text-align: right;
 }
@@ -585,7 +591,6 @@ span.inactive1 {
 
 ::ng-deep /deep/ .carousel-control-prev-icon {
     background-image: url(../../../../content/images/next.png) !important;
-    background-image: none !important;
 }
 
 ::ng-deep .carousel-control-next-icon {
@@ -713,4 +718,15 @@ span.inactive1 {
 }
 .clear-filter {
     margin-right: 15px;
+}
+
+.map-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.icon-p {
+    position: relative;
 }
