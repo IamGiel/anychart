@@ -74,31 +74,31 @@ export class MapComponent implements OnInit, OnChanges {
     arr = [];
 
     ngOnInit() {
-        for (let i = 1; i < 122; i++) {
-            this.num = i;
-            this.getRandomInRange(8.7832, 55.4915, 3);
-            console.log('hers random lat and long', this.arr);
-        }
+        // for (let i = 1; i < 122; i++) {
+        //     this.num = i;
+        //     this.getRandomInRange(8.7832, 55.4915, 3);
+        console.log('hers random lat and long', this.arr);
+        // }
 
         // this.basicMap();
     }
-    getRandomInRange(from, to, fixed) {
-        let randomLatLong1 = (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-        let randomLatLong2 = (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-        let result;
-        this.arr = [];
-        let level = ['Low', 'Medium', 'High'];
-        let score = [1, 5, 10];
+    // getRandomInRange(from, to, fixed) {
+    //     let randomLatLong1 = (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+    //     let randomLatLong2 = (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+    //     let result;
+    //     this.arr = [];
+    //     let level = ['Low', 'Medium', 'High'];
+    //     let score = [1, 5, 10];
 
-        // console.log(this.num)
-        let rand = level[Math.floor(Math.random() * level.length)];
-        // result = `{${randomLatLong1}, "long": ${randomLatLong2}, "name": "Supplier #${this.num}",  "city":"Some City", "value": ${this.num}}`;
-        // this.arr.push(result);
-        this.arr.push(rand);
-        // this.arr.push(score);
-        return this.arr;
-        // .toFixed() returns string, so ' * 1' is a trick to convert to number
-    }
+    //     // console.log(this.num)
+    //     let rand = level[Math.floor(Math.random() * level.length)];
+    //     // result = `{${randomLatLong1}, "long": ${randomLatLong2}, "name": "Supplier #${this.num}",  "city":"Some City", "value": ${this.num}}`;
+    //     // this.arr.push(result);
+    //     this.arr.push(rand);
+    //     // this.arr.push(score);
+    //     return this.arr;
+    //     // .toFixed() returns string, so ' * 1' is a trick to convert to number
+    // }
 
     basicMap() {
         this.map.geoData('anychart.maps.world');
@@ -119,11 +119,10 @@ export class MapComponent implements OnInit, OnChanges {
         mapCountryColors.labels().format('{%name}');
 
         this.countryData.forEach(ele => {
-            mapCountryColors
-                .tooltip()
-                .format(
-                    'Risk: {%RISK} \nCompany Integrity: {%CorrectedRating}  \nNo of Suppliers: {%numSuppliers} \nISO: {%id}  \nRating: {%value}'
-                );
+            mapCountryColors.tooltip().format(
+                `Risk: {%RISK} 
+                    \nSuppliers: {%numSuppliers}`
+            );
             dotMarkers.tooltip().format('Location: {%city} \nRating: {%Value}');
         });
 
