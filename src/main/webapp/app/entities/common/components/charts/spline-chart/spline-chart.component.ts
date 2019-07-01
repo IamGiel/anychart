@@ -29,7 +29,7 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
         const xAxis = chart.xAxis();
         const yAxis = chart.yAxis();
         // series.fill('rgb(231, 231, 231)');
-        series.stroke('rgb(231, 231, 231)');
+        // series.stroke('rgb(231, 231, 231)');
         chart.yAxis().stroke('#ffff');
         chart.yAxis().labels(false);
         if (this.labels !== true) {
@@ -54,6 +54,16 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
             .xAxis()
             .ticks()
             .stroke('#ffff');
+
+        // series.fill({
+        //     keys: ["#fff", "#eee"],
+        //         angle: 45
+        // });
+
+        // series.stroke({
+        //     keys: ["#56DD38", "#FCDC5D", "#EC3B39"],
+        //         angle: -0
+        // });
 
         chart.tooltip().useHtml(true);
         chart.tooltip().zIndex(100);
