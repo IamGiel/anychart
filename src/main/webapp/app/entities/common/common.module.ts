@@ -6,6 +6,7 @@ import { CarouselComponent } from './components/carousel.component';
 import { PieChartComponent } from './components/charts/pie/pie-chart.component';
 import { ColumnChartComponent } from './components/charts/column/column-chart.component';
 import { niceDateFormatPipe } from './pipes/date.pipe';
+import { searchPipe } from './pipes/search.pipe';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { RatingBoxComponent } from './components/rating-box/rating-box.component';
 import { TermsConditionsComponent } from './components/terms-conditions/terms-conditions.component';
@@ -38,6 +39,7 @@ import { StackBarComponent } from './components/charts/stack-bar/stack-bar.compo
         PrivacyPolicyComponent,
         CarouselComponent,
         niceDateFormatPipe,
+        searchPipe,
         PaginationComponent,
         TermsConditionsComponent,
         FAQComponent,
@@ -75,6 +77,7 @@ import { StackBarComponent } from './components/charts/stack-bar/stack-bar.compo
     exports: [
         CarouselComponent,
         niceDateFormatPipe,
+        searchPipe,
         PaginationComponent,
         TermsConditionsComponent,
         SortableTableDirective,
