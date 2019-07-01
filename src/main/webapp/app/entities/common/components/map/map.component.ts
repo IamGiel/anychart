@@ -130,7 +130,7 @@ export class MapComponent implements OnInit, OnChanges {
 
         let colorRange = this.map.colorRange();
         colorRange.enabled(true);
-        mapCountryColors.colorScale(anychart.scales.linearColor('#2EEEF0', '#FEA500', '#F63B01'));
+        mapCountryColors.colorScale(anychart.scales.linearColor('#31D490', '#FFBE45', '#FF4F61'));
         mapCountryColors.stroke('#999 .1');
 
         this.map.container('worldmap');
