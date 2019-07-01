@@ -107,11 +107,11 @@ export class MapComponent implements OnInit, OnChanges {
         let mapCountryColors = this.map.choropleth(this.countryData);
         dotMarkers.labels(false);
         // set the colors of the CITRUS series
-        dotMarkers.stroke('gold');
-        dotMarkers.fill('#7B4DD9');
+        dotMarkers.stroke('#6B4CD9');
+        dotMarkers.fill('#6B4CD9');
 
         // set the size of CITRUS markers
-        dotMarkers.normal().size(2);
+        dotMarkers.normal().size(1);
         dotMarkers.hovered().size(4);
         dotMarkers.selected().size(10);
         console.log('this is series 3 ', this.mapService.suppliersOnMap.data[0].suppliers);
@@ -131,7 +131,8 @@ export class MapComponent implements OnInit, OnChanges {
         let colorRange = this.map.colorRange();
         colorRange.enabled(true);
         mapCountryColors.colorScale(anychart.scales.linearColor('#31D490', '#FFBE45', '#FF4F61'));
-        mapCountryColors.stroke('#999 .1');
+        mapCountryColors.stroke('#D2C9F3 .5');
+        mapCountryColors.hovered().fill('#D2C9F3');
 
         this.map.container('worldmap');
         this.map.title('Suppliers Around The World');
