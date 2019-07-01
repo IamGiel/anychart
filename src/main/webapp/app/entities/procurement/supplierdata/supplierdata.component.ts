@@ -44,6 +44,12 @@ export class SupplierdataComponent implements OnInit {
     closeResult: string;
 
     socialData = [];
+    environmentData = [];
+    financialData = [];
+    mapCountryRisk = [];
+    mapBusinessIntegrity = [];
+    suppliersOnMap = [];
+    thisObjMapBusiness = {};
 
     images = [1, 2, 3, 4, 5, 6].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
     responseFunnelData = [];
@@ -375,8 +381,16 @@ export class SupplierdataComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.mapdropdown = 'Country Risk';
         this.socialData = this.mapService.socialData.data;
-        console.log('>>>>>>> ', this.socialData);
+        this.environmentData = this.mapService.environmentData.data;
+        this.financialData = this.mapService.financialData.data;
+        this.mapCountryRisk = this.mapService.mapCountryRisk.data;
+        this.suppliersOnMap = this.mapService.suppliersOnMap.data;
+        console.log(this.mapCountryRisk);
+        // this.supplierList = this.mapCountryRisk.map(a => a.compName);
+        this.mapBusinessIntegrity = this.mapService.mapBusinessIntegrity.data;
+        // console.log('>>>>>>> ', this.socialData);
         this.clickfinance = 'D&B Rating';
         this.clickEnvironmental = 'Overall Rating';
         this.chartData = [
@@ -446,6 +460,12 @@ export class SupplierdataComponent implements OnInit {
         // ];
 
         this.responseFunnelData = [['REQUEST', 0, 5, 10, 8], ['RESPONSE', 0, 10, 5, 7], ['RESPONSE HEALTH', 5, 10, 10, 5]];
+    }
+
+    trackId(index: number, item: any) {
+        item = this.mapService.mapBusinessIntegrity;
+        console.log('this item ', item);
+        return item.id;
     }
 
     selectMap(maptype: string) {
