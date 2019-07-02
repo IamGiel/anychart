@@ -82,9 +82,6 @@ export class MapComponent implements OnInit, OnChanges {
 
     basicMap() {
         this.map.geoData('anychart.maps.world');
-
-        // set the stage as a container
-        let stage = anychart.graphics.create('container');
         // let series2 = this.map.choropleth(this.countryData);
         // let dotMarkers = this.map.marker(this.mapService.suppliersOnMap.data[0].suppliers);
         let dotMarkers = this.map.marker(this.locations);
@@ -102,11 +99,6 @@ export class MapComponent implements OnInit, OnChanges {
 
         mapCountryColors.labels().format('{%name}');
 
-        // disable all interactivity
-        this.map.interactivity(false);
-        // set the container
-        this.map.container(stage);
-
         this.countryData.forEach(ele => {
             mapCountryColors.tooltip().format(
                 `Risk: {%RISK} 
@@ -115,7 +107,7 @@ export class MapComponent implements OnInit, OnChanges {
             dotMarkers.tooltip().format('Location: {%city}');
         });
 
-        mapCountryColors.tooltip().titleFormat('{%name}');
+        mapCountryColors.tooltip().titleFormat('{%Name}');
 
         let colorRange = this.map.colorRange();
         colorRange.enabled(true);
@@ -133,15 +125,16 @@ export class MapComponent implements OnInit, OnChanges {
         zoomController.render();
 
         // set zoom
-        let clicked = true;
-        this.map.listen('click', ($event: MouseEvent) => {
-            if (clicked) {
-                console.log(`test `);
-                this.map.zoomTo(3, $event.clientX, $event.clientY);
-            } else {
-                this.map.zoomTo(0, $event.clientX, $event.clientY);
-            }
-            clicked = !clicked;
-        });
+        // let clicked = true;
+        // this.map.listen("click", ($event:MouseEvent) => {
+        //     if (clicked) {
+        //         console.log(`test `)
+        //         this.map.zoomTo(3, $event.clientX, $event.clientY);
+        //     }
+        //     else {
+        //         this.map.zoomTo(0, $event.clientX, $event.clientY);
+        //     }
+        //     clicked = !clicked;
+        // });
     }
 }
