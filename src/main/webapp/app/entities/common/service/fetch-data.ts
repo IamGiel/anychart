@@ -280,4 +280,7 @@ export class FetchData {
     getERPDetails(param) {
         return this.serviceEndpoints.init().getERPDetails.makeRequest(null, param);
     }
+    getAllDataPoint() {
+        return this.serviceEndpoints.init().getAllDataPoint.makeRequest(null, null);
+    }
 }

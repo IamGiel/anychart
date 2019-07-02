@@ -23,6 +23,7 @@ var supplierDetailsbyId = require('../app/mock-data/supplierDetailsbyId.json');
 var companyQuestionSection = require('../app/mock-data/companyQuestionSection.json');
 var companyQuestion = require('../app/mock-data/companyQuestion.json');
 var companyChildQuestion = require('../app/mock-data/companyChildQuestion.json');
+var getAllDataPoint = require('../app/mock-data/allDataPoints.json');
 export class FakeBackendService implements InMemoryDbService {
     createDb() {
         let demoJson = [
@@ -47,7 +48,8 @@ export class FakeBackendService implements InMemoryDbService {
             erpDetails,
             companyQuestionSection,
             companyQuestion,
-            companyChildQuestion
+            companyChildQuestion,
+            getAllDataPoint
         };
     }
 }

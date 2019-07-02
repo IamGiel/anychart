@@ -6,6 +6,7 @@ import { DashboardService } from '../dashboard/dashboard.service';
 import { MapService } from 'app/entities/common/components/map/map.service';
 import { FileSizePipe } from 'app/file-size.pipe';
 import { stringify } from 'querystring';
+import { FetchData } from '../../common/service/fetch-data';
 
 @Component({
     selector: 'jhi-supplierdata',
@@ -38,7 +39,12 @@ export class SupplierdataComponent implements OnInit {
     @ViewChild('maptest') maptest;
     // @ViewChild('basicmap') basicmap;
 
-    constructor(private mapService: MapService, private modalService: NgbModal, public dashboardService: DashboardService) {
+    constructor(
+        private mapService: MapService,
+        private modalService: NgbModal,
+        public dashboardService: DashboardService,
+        private fetchData: FetchData
+    ) {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
     closeResult: string;
@@ -381,6 +387,10 @@ export class SupplierdataComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.fetchData.getAllDataPoint().subscribe(res => {
+            console.log(res);
+            this.extractData(res);
+        });
         this.mapdropdown = 'Country Risk';
         this.socialData = this.mapService.socialData.data;
         this.environmentData = this.mapService.environmentData.data;
@@ -807,5 +817,119 @@ export class SupplierdataComponent implements OnInit {
 
     removeSelectedFilter(index) {
         this.totalSelectFilterList.splice(index, 1);
+    }
+    SERRating: any;
+    TrendRating: any;
+    PaydexRating: any;
+    CSRaverage: any;
+    CSRcommunity: any;
+    CSRenvironment: any;
+    CSRemployees: any;
+    CSRgovernance: any;
+    ethicalCorruption: any;
+    ethicalFraud: any;
+    ethicalRegulatory: any;
+    ethicalSanctions: any;
+    laborDiscrimination: any;
+    laborHumanRights: any;
+    laborWorkDisputes: any;
+    laborHealthSafety: any;
+    FinancialDataSet: any;
+    extractData(data: any) {
+        /*Financial DnB Data*/
+        let paydexRange = [[0, 30], [31, 50], [51, 70], [71, 90], [91, 100]];
+        this.TrendRating = this.getCountValue(data.DnBRating.trendRating, 9);
+        this.SERRating = this.getCountValue(data.DnBRating.ser, 9);
+        this.PaydexRating = this.getCountWithinRange(data.DnBRating.paydex, paydexRange);
+        // console.log(this.SERRating)
+        /*Environmental Data*/
+        let csrRange = [[0, 30], [31, 50], [51, 70], [71, 90], [91, 100]];
+        this.CSRaverage = this.getCountWithinRange(data.csrHubRating.average, csrRange);
+        this.CSRcommunity = this.getCountWithinRange(data.csrHubRating.community, csrRange);
+        this.CSRenvironment = this.getCountWithinRange(data.csrHubRating.environment, csrRange);
+        this.CSRemployees = this.getCountWithinRange(data.csrHubRating.employees, csrRange);
+        this.CSRgovernance = this.getCountWithinRange(data.csrHubRating.governance, csrRange);
+        //console.log(this.CSRcommunity)
+        /*Ethical and Regulatory data*/
+        let ethicalRange = [[0], [1, 10], [11, 20], [21, 30], [31]];
+        this.ethicalCorruption = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Regulatory_Issues, ethicalRange);
+        this.ethicalFraud = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Fraud_Issues, ethicalRange);
+        this.ethicalRegulatory = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Regulatory_Issues, ethicalRange);
+        this.ethicalSanctions = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Sanctions, ethicalRange);
+
+        /*laabour health safty*/
+        let laborRange = [[0], [1, 10], [11, 20], [21, 30], [31]];
+        this.laborDiscrimination = this.getCountWithinRange(
+            data.DowJones.LaborHealthSafety.Discrimination_Workforce_Rights_Issue,
+            ethicalRange
+        );
+        this.laborHumanRights = this.getCountWithinRange(data.DowJones.LaborHealthSafety.Human_Rights_Issues, ethicalRange);
+        this.laborWorkDisputes = this.getCountWithinRange(data.DowJones.LaborHealthSafety.Workforce_Disputes, ethicalRange);
+        this.laborHealthSafety = this.getCountWithinRange(data.DowJones.LaborHealthSafety.Workforce_Health_Safety_Issues, ethicalRange);
+
+        this.FinancialDataSet = [
+            { name: 'D&B Rating', selected: true, hashmap: 'trend', funValue: 'financialrating', graphData: this.SERRating },
+            { name: 'D&B SER Rating', selected: false, hashmap: 'ser', funValue: 'financialserrating', graphData: this.TrendRating },
+            { name: 'D&B Paydex', selected: false, hashmap: 'paydex', funValue: 'dbpayindex', graphData: this.PaydexRating }
+        ];
+    }
+    getCountWithinRange(arr, input) {
+        let res = input.map(i => arr.filter(f => f >= i[0] && f <= i[1]).length);
+        var result = [];
+        var colorList2 = ['#31D490', '#FFBE45', '#FD7C43', '#FF4F61', '#FF4F61'];
+        input.map((x, i) => {
+            var ins = '' + input[i].join('-') + '';
+            var temp = {};
+            temp['x'] = ins;
+            temp['perc'] = res[i];
+            temp['avgval'] = res[i];
+            temp['name'] = 'Rating' + i;
+            temp['risk'] = res[i];
+            temp['num'] = res[i];
+            temp['fill'] = colorList2[i];
+            result.push(temp);
+            //result.push([ins,res[i]]);
+        });
+        return result;
+    }
+    getCountValue(data: any, indexArr: any) {
+        let arr = data.reduce(function(acc, curr) {
+            if (typeof acc[curr] == 'undefined') {
+                acc[curr] = 1;
+            } else {
+                acc[curr] += 1;
+            }
+
+            return acc;
+        }, {});
+        for (let i = 1; i <= indexArr; i++) {
+            if (arr[i] == undefined || arr[i] == null) {
+                arr[i] = 0;
+            }
+        }
+        var colorList = ['#55D184', '#8ECB6F', '#ADC662', '#D6C355', '#FEA344', '#FEA344', '#FD8443', '#FF5C5C', '#FF5C5C'];
+        var result = [];
+        for (var i in arr) {
+            // console.log(arr)
+            //{ x: '0-10', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 8 },
+            var riskValue;
+            if (parseInt(i) <= 4) {
+                riskValue = 'Low Risk';
+            } else if (parseInt(i) >= 5 && parseInt(i) <= 7) {
+                riskValue = 'Medium Risk';
+            } else if (parseInt(i) >= 8 && parseInt(i) <= 9) {
+                riskValue = 'High Risk';
+            }
+            var temp = {};
+            temp['x'] = i;
+            temp['perc'] = arr[i];
+            temp['avgval'] = arr[i];
+            temp['name'] = 'Rating' + i;
+            temp['risk'] = riskValue;
+            temp['num'] = arr[i];
+            temp['fill'] = colorList[parseInt(i) - 1];
+            result.push(temp);
+        }
+        return result;
     }
 }

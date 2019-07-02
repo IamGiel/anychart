@@ -46,9 +46,9 @@
             </div>
           </div>
           <div class="padd25">
-            <jhi-column-chart *ngIf="clickfinance==='D&B Rating'" [chartData]="columnData" [labels]="true">
+            <jhi-column-chart *ngIf="clickfinance==='D&B Rating' &&  TrendRating" [chartData]="TrendRating" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickfinance==='D&B SER Rating'" [chartData]="columnData" [labels]="true">
+            <jhi-column-chart *ngIf="clickfinance==='D&B SER Rating' && SERRating" [chartData]="SERRating" [labels]="true">
             </jhi-column-chart>
             <jhi-spline-chart *ngIf="clickfinance==='D&B Paydex'" [id]="'paydexid'" [chartData]="spliceData"
               [labels]="false">
@@ -104,16 +104,16 @@
             </div>
           </div>
           <div class="padd25">
-            <jhi-column-chart *ngIf="clickEnvironmental==='Overall Rating'" [chartData]="columnDatas" [labels]="true">
+            <jhi-column-chart *ngIf="clickEnvironmental==='Overall Rating'  && CSRaverage" [chartData]="CSRaverage" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickEnvironmental==='Labour& Human rights'" [chartData]="columnDatas"
+            <jhi-column-chart *ngIf="clickEnvironmental==='Labour& Human rights' && CSRemployees" [chartData]="CSRemployees"
               [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickEnvironmental==='Ethics'" [chartData]="columnDatas" [labels]="true">
+            <jhi-column-chart *ngIf="clickEnvironmental==='Ethics' && CSRcommunity" [chartData]="CSRcommunity" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickEnvironmental==='Environment'" [chartData]="columnDatas" [labels]="true">
+            <jhi-column-chart *ngIf="clickEnvironmental==='Environment' && CSRenvironment" [chartData]="CSRenvironment" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickEnvironmental==='Sustainable procurem..'" [chartData]="columnDatas"
+            <jhi-column-chart *ngIf="clickEnvironmental==='Sustainable procurem..' && CSRgovernance" [chartData]="CSRgovernance"
               [labels]="true">
             </jhi-column-chart>
             <!-- <div class="abc">
@@ -173,13 +173,13 @@
           <div class="padd25">
             <jhi-column-chart *ngIf="clickEthical === 'Overall Appearance'" [chartData]="ethicaldata" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickEthical === 'Corruption issue'" [chartData]="ethicaldata" [labels]="true">
+            <jhi-column-chart *ngIf="clickEthical === 'Corruption issue' && ethicalCorruption" [chartData]="ethicalCorruption" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickEthical === 'Fraud issues'" [chartData]="ethicaldata" [labels]="true">
+            <jhi-column-chart *ngIf="clickEthical === 'Fraud issues' && ethicalFraud" [chartData]="ethicalFraud" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickEthical === 'Regulatory issues'" [chartData]="ethicaldata" [labels]="true">
+            <jhi-column-chart *ngIf="clickEthical === 'Regulatory issues' && ethicalRegulatory" [chartData]="ethicalRegulatory" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickEthical === 'Sanctions'" [chartData]="ethicaldata" [labels]="true">
+            <jhi-column-chart *ngIf="clickEthical === 'Sanctions' && ethicalSanctions" [chartData]="ethicalSanctions" [labels]="true">
             </jhi-column-chart>
             <!-- <div class="abc">
               <div>
@@ -237,13 +237,13 @@
             <!-- <jhi-column-chart [chartData]="labourData" [labels]="true"></jhi-column-chart> -->
             <jhi-column-chart *ngIf="clickLabour === 'Overall Appearance'" [chartData]="labourData" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickLabour === 'Discrimanation/workforce..'" [chartData]="labourData"
+            <jhi-column-chart *ngIf="clickLabour === 'Discrimanation/workforce..' && laborDiscrimination" [chartData]="laborDiscrimination"
               [labels]="true"></jhi-column-chart>
-            <jhi-column-chart *ngIf="clickLabour === 'Human Right Issues'" [chartData]="labourData" [labels]="true">
+            <jhi-column-chart *ngIf="clickLabour === 'Human Right Issues' && laborHumanRights" [chartData]="laborHumanRights" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickLabour === 'Workforce Disputes'" [chartData]="labourData" [labels]="true">
+            <jhi-column-chart *ngIf="clickLabour === 'Workforce Disputes' && laborWorkDisputes" [chartData]="laborWorkDisputes" [labels]="true">
             </jhi-column-chart>
-            <jhi-column-chart *ngIf="clickLabour === 'Workforcehealthy/Saftey Is'" [chartData]="labourData"
+            <jhi-column-chart *ngIf="clickLabour === 'Workforcehealthy/Saftey Is' && laborHealthSafety" [chartData]="laborHealthSafety"
               [labels]="true"></jhi-column-chart>
             <!-- <div class="abc">
               <div>
@@ -296,7 +296,7 @@
               </div>
             </div>
             <div class="padd25">
-              <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
+              <jhi-column-chart *ngIf="SERRating" [chartData]="SERRating" [labels]="true"></jhi-column-chart>
               <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
                   </div> -->
             </div>
@@ -324,7 +324,7 @@
               </div>
             </div>
             <div class="padd25">
-              <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
+              <jhi-column-chart *ngIf="TrendRating" [chartData]="TrendRating" [labels]="true"></jhi-column-chart>
               <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
                     </jhi-column-chart> -->
               <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
@@ -407,7 +407,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="CSRaverage" [chartData]="CSRaverage" [labels]="true"></jhi-column-chart>
                   <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
                       </jhi-column-chart> -->
                   <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
@@ -454,7 +454,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="CSRemployees" [chartData]="CSRemployees" [labels]="true"></jhi-column-chart>
                   <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
                         </jhi-column-chart> -->
                   <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
@@ -499,7 +499,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="CSRcommunity" [chartData]="CSRcommunity" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -542,7 +542,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="CSRenvironment" [chartData]="CSRenvironment" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -581,7 +581,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="CSRgovernance" [chartData]="CSRgovernance" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -707,7 +707,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="ethicalCorruption" [chartData]="ethicalCorruption" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -746,7 +746,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="ethicalFraud" [chartData]="ethicalFraud" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -789,7 +789,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="ethicalRegulatory" [chartData]="ethicalRegulatory" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -828,7 +828,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="ethicalSanctions" [chartData]="ethicalSanctions" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -915,7 +915,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="laborDiscrimination" [chartData]="laborDiscrimination" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle4"></span>
@@ -953,7 +953,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="ethicaldata" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="laborHumanRights" [chartData]="laborHumanRights" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle4"></span>
@@ -995,7 +995,7 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
+                  <jhi-column-chart *ngIf="laborWorkDisputes" [chartData]="laborWorkDisputes" [labels]="true"></jhi-column-chart>
                   <!-- <div class="abc">
                     <div>
                       <span class="rectangle1"> </span>
@@ -1005,9 +1005,8 @@
                       <span class="rectangle5"></span>
                     </div>
                   </div> -->
-                  <div class="risk">
-                    <p>High Risk</p>
-                    <p>Low Risk</p>
+                  <div class="risk risk-appearance">
+                    <p>APPEARANCE</p>
                   </div>
                 </div>
               </div>
@@ -1034,20 +1033,23 @@
                   </div>
                 </div>
                 <div class="padd25">
-                  <jhi-column-chart [chartData]="columnDatas" [labels]="true"></jhi-column-chart>
-                  <div class="abc">
-                    <!-- <div>
+                  <jhi-column-chart *ngIf="laborHealthSafety" [chartData]="laborHealthSafety" [labels]="true"></jhi-column-chart>
+                   <!--<div class="abc">
+                    <div>
                       <span class="rectangle1"> </span>
                       <span class="rectangle2"></span>
                       <span class="rectangle3"></span>
                       <span class="rectangle4"></span>
                       <span class="rectangle5"></span>
                     </div>
-                  </div> -->
+                  </div> 
                     <div class="risk">
                       <p>High Risk</p>
                       <p>Low Risk</p>
                     </div>
+                  </div>-->
+                  <div class="risk risk-appearance">
+                    <p>APPEARANCE</p>
                   </div>
                 </div>
               </div>

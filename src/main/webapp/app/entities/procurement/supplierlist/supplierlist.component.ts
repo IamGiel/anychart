@@ -447,6 +447,7 @@ export class SupplierlistComponent implements OnInit {
                 );
             }
         );
+
         /* this.ds
             .getAllRequest(param)
             .toPromise()
@@ -476,6 +477,7 @@ export class SupplierlistComponent implements OnInit {
                 );
             });*/
     }
+
     searchData(event, type) {
         let searchSharedValue = event.target.value.toLowerCase();
         this.searchKeyword = searchSharedValue;
