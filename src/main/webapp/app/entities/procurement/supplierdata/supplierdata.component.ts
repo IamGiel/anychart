@@ -38,7 +38,7 @@ export class SupplierdataComponent implements OnInit {
     @ViewChild('maptest') maptest;
     // @ViewChild('basicmap') basicmap;
 
-    constructor(private mapService: MapService, private modalService: NgbModal, private dashboardService: DashboardService) {
+    constructor(private mapService: MapService, private modalService: NgbModal, public dashboardService: DashboardService) {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
     closeResult: string;
