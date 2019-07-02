@@ -1,90 +1,758 @@
 {
     "SiteLocations":[
-      {"lat":-23.548670, "long": -46.638248, "name": "ESSENTRA INDUSTRIA E COMERCIO LTDA",  "city":"SÃO PAULO", "value": 293},
-      {"lat":23.050831, "long": 113.742783, "name": "EWES Asia Pacific HK Ltd",  "city":"Dongguan City", "value": 293},
-      {"lat":-23.187080, "long": -46.884048, "name": "FLORICULTURA VILLA BELLA LTDA ME",  "city":"JUNDIAI", "value": 293},
-      {"lat":42.466590, "long": -83.474700, "name": "POTBELLY SANDWICH SHOP (POTBELLY  CORPORATION)",  "city":"NOVI", "value": 293},
-      {"lat":42.652400, "long": -83.132560, "name": "3 DIMENSIONAL SERVICES",  "city":"ROCHESTER HILLS", "value": 293},
-      {"lat":59.762280, "long": 10.093800, "name": "3A PRODUKTER ASBJØRN ANTONSEN",  "city":"SOLBERGELVA", "value": 293},
-      {"lat":48.221050, "long": 14.237120, "name": "3D - Messtechnik GmbH",  "city":"Traun", "value": 293},
-      {"lat":53.682968, "long": -1.499100, "name": "5 STAR LOCAL CARS",  "city":"WAKEFIELD", "value": 293},
-      {"lat":46.015150, "long": 2.640430, "name": "A RAYMOND FLUID CONNECTION FRANCE",  "city":"Chadonnet", "value": 293},
-      {"lat":48.015210, "long": 15.441230, "name": "A. RAYMOND GMBH & CO. KG",  "city":"Teichstrasse", "value": 293},
-      {"lat":56.138480, "long": 8.973180, "name": "A/S JYDSK ALUMINIUM INDUSTRI",  "city":"HERNING", "value": 293},
-      {"lat":55.603310, "long": 13.001310, "name": "IPENDO AB",  "city":"MALMOE", "value": 293},
-      {"lat":59.697940, "long": -54.68276055, "name": "JARLE HUSEBY GRAVESERVICE",  "city":"DARBU", "value": 293},
-      {"lat":30.3130406, "long": -95.458138, "name": "JESSE HENRIKSON",  "city":"CONROE", "value": 293},
-
-      {"lat":-16.2808033, "long": -52.5075302, "name": "Supplier #24",  "city":"Orem", "value": 293},
-      {"lat":-14.22926448, "long": -53.47451347, "name": "Supplier #25",  "city":"Inglewood", "value": 293},
-      {"lat":0.03483369, "long": -55.62318953, "name": "Supplier #26",  "city":"Sunrise", "value": 293},
-      {"lat":-20.14802224, "long": -49.94023374, "name": "Supplier #30",  "city":"Dayton", "value": 293},
-      {"lat":-2.85425454, "long": -67.15501699, "name": "Supplier #32",  "city":"Providence", "value": 293},
-      {"lat":1.53675179, "long": -59.04880491, "name": "Supplier #33",  "city":"Santo Domingo", "value": 293},
-      {"lat":0.24880335, "long": -60.15527867, "name": "Supplier #34",  "city":"Wilshire Park", "value": 293},
-      {"lat":-8.89932057, "long": -48.17229583, "name": "Supplier #36",  "city":"Four Corners", "value": 293},
-      {"lat":1.39350634, "long": -52.49923041, "name": "Supplier #37",  "city":"Bern", "value": 293},
-      {"lat":-8.51703135, "long": -46.15223241, "name": "Supplier #38",  "city":"Chisinau", "value": 293},
-      {"lat":-12.11119553, "long": -49.52819547, "name": "Supplier #39",  "city":"Honolulu", "value": 293},
-      {"lat":-19.82691148, "long": -55.16539442, "name": "Supplier #41",  "city":"Bishkek", "value": 293},
-      {"lat":25.3977796, "long": 97.21345051, "name": "Supplier #42",  "city":"Astoria", "value": 293},
-      {"lat":36.47535794, "long": 102.92880082, "name": "Supplier #43",  "city":"Sawgrass Mills Mal", "value": 293},
-      {"lat":48.05293826, "long": 98.68713686, "name": "Supplier #44",  "city":"Alofi", "value": 293},
-      {"lat":26.15922483, "long": 96.38050102, "name": "Supplier #45",  "city":"Alta", "value": 293},
-      {"lat":42.73964022, "long": 106.47842557, "name": "Supplier #46",  "city":"Back Bay", "value": 293},
-      {"lat":44.28391016, "long": 96.57541846, "name": "Supplier #47",  "city":"Port-au-Prince", "value": 293},
-      {"lat":32.1074647, "long": 91.64259272, "name": "Supplier #48",  "city":"Richmond", "value": 293},
-      {"lat":29.35981331, "long": 93.37341118, "name": "Supplier #49",  "city":"Renton", "value": 293},
-      {"lat":31.89071701, "long": 106.70469965, "name": "Supplier #50",  "city":"New Rochelle", "value": 293},
-      {"lat":38.90942586, "long": 92.32478523, "name": "Supplier #51",  "city":"San Bernardino", "value": 293},
-      {"lat":25.55493909, "long": 89.17619584, "name": "Supplier #52",  "city":"Tokyo", "value": 293},
-      {"lat":33.15984257, "long": 107.72177199, "name": "Supplier #53",  "city":"Beaverton", "value": 293},
-      {"lat":22.01318726, "long": 101.24760147, "name": "Supplier #54",  "city":"Manoa", "value": 293},
-      {"lat":22.16958554, "long": 93.45191316, "name": "Supplier #55",  "city":"Gastonia", "value": 293},
-      {"lat":27.65966822, "long": 101.85577309, "name": "Supplier #56",  "city":"Jackson", "value": 293},
-      {"lat":25.90909436, "long": 91.91286582, "name": "Supplier #57",  "city":"Mesquite", "value": 293},
-      {"lat":25.63311747, "long": 87.58399047, "name": "Supplier #58",  "city":"Richardson", "value": 293},
-      {"lat":42.44323814, "long": 105.15448349, "name": "Supplier #59",  "city":"Grafton", "value": 293},
-      {"lat":21.23164395, "long": 95.18462931, "name": "Supplier #60",  "city":"Reno", "value": 293},
-      {"lat":22.94450882, "long": 99.20976316, "name": "Supplier #61",  "city":"Tucson", "value": 293},
-      {"lat":28.93620881, "long": 12.83267198, "name": "Supplier #63",  "city":"Bearden", "value": 293},
-      {"lat":24.46781875, "long": 34.23178557, "name": "Supplier #65",  "city":"Washington Heights", "value": 293},
-      {"lat":39.12729355, "long": 19.98003495, "name": "Supplier #66",  "city":"Des Plaines", "value": 293},
-      {"lat":36.74943138, "long": 34.61028458, "name": "Supplier #68",  "city":"Waterloo", "value": 293},
-      {"lat":39.61078732, "long": 36.29381765, "name": "Supplier #69",  "city":"Southpark Mall", "value": 293},
-      {"lat":16.35109437, "long": 20.32736636, "name": "Supplier #70",  "city":"Timbuktu", "value": 293},
-      {"lat":30.88092816, "long": 24.96397433, "name": "Supplier #71",  "city":"Flour Bluff", "value": 293},
-      {"lat":40.91068006, "long": 17.15113254, "name": "Supplier #72",  "city":"Palmyra", "value": 293},
-      {"lat":26.69150369, "long": 9.91408673, "name": "Supplier #73",  "city":"Ames", "value": 293},
-      {"lat":23.37385853, "long": 32.58125015, "name": "Supplier #75",  "city":"Nampa", "value": 293},
-      {"lat":17.13052565, "long": 17.1182369, "name": "Supplier #76",  "city":"Nairobi", "value": 293},
-      {"lat":17.62265624, "long": 29.6111666, "name": "Supplier #77",  "city":"Sigma", "value": 293},
-      {"lat":21.77301589, "long": 21.08243462, "name": "Supplier #80",  "city":"Mackville", "value": 293},
-      {"lat":19.87043693, "long": 15.40694363, "name": "Supplier #81",  "city":"Mission Viejo", "value": 293},
-      {"lat":44.87800264, "long": 10.8330245, "name": "Supplier #83",  "city":"Orem", "value": 293},
-      {"lat":41.05856972, "long": 11.02522775, "name": "Supplier #84",  "city":"Inglewood", "value": 293},
-      {"lat":50.8646969, "long": 12.73677906, "name": "Supplier #86",  "city":"Ponce", "value": 293},
-      {"lat":56.31677988, "long": -3.04012178, "name": "Supplier #87",  "city":"Los Serranos", "value": 293},
-      {"lat":55.60486438, "long": 22.75973377, "name": "Supplier #88",  "city":"Hamilton", "value": 293},
-      {"lat":60.72275933, "long": 6.5669651, "name": "Supplier #89",  "city":"Dayton", "value": 293},
-      {"lat":52.46349377, "long": 18.03972954, "name": "Supplier #90",  "city":"Farmington", "value": 293},
-      {"lat":56.75161173, "long": 40.52158985, "name": "Supplier #97",  "city":"Chisinau", "value": 293},
-      {"lat":70.5562756, "long": 98.30315647, "name": "Supplier #106",  "city":"Harlem", "value": 293},
-      {"lat":70.15676441, "long": 113.26068056, "name": "Supplier #107",  "city":"Columbia", "value": 293},
-      {"lat":61.52789182, "long": 92.7701364, "name": "Supplier #108",  "city":"Montgomery", "value": 293},
-      {"lat":49.44228726, "long": 96.30035648, "name": "Supplier #109",  "city":"Nicosia", "value": 293},
-      {"lat":52.55302695, "long": 86.69120966, "name": "Supplier #110",  "city":"Willoughby Spit", "value": 293},
-      {"lat":59.5030497, "long": 129.76375876, "name": "Supplier #114",  "city":"Ventura", "value": 293},
-      {"lat":50.39561532, "long": 114.66592479, "name": "Supplier #115",  "city":"Carlsbad", "value": 293},
-      {"lat":67.8281556, "long": 92.20586382, "name": "Supplier #116",  "city":"Santa Clarita", "value": 293},
-      {"lat":50.22673429, "long": 92.3900583, "name": "Supplier #117",  "city":"Asheville", "value": 293},
-      {"lat":49.27829807, "long": 110.48519148, "name": "Supplier #118",  "city":"Chino Hills", "value": 293},
-      {"lat":73.06296101, "long": 97.92837295, "name": "Supplier #119",  "city":"La Crosse", "value": 293},
-      {"lat":51.65566143, "long": 91.41653184, "name": "Supplier #120",  "city":"Kahala", "value": 293},
-      {"lat":51.92373776, "long": 115.43265672, "name": "Supplier #121",  "city":"Todt Hill", "value": 293}
+        {
+            "Name": "CARGILL GHANA LTD",
+            "city": "SÃO PAULO",
+            "lat": -23.54867,
+            "long": -46.638248
+        },
+        {
+            "Name": "CARGILL, INCORPORATED",
+            "city": "Dongguan City",
+            "lat": 23.050831,
+            "long": 113.742783
+        },
+        {
+            "Name": "Berry Plastics Group, Inc.",
+            "city": "JUNDIAI",
+            "lat": -23.18708,
+            "long": -46.884048
+        },
+        {
+            "Name": "IPG",
+            "city": "NOVI",
+            "lat": 42.46659,
+            "long": -83.4747
+        },
+        {
+            "Name": "AT&T CORP.",
+            "city": "ROCHESTER HILLS",
+            "lat": 42.6524,
+            "long": -83.13256
+        },
+        {
+            "Name": "CLYDE MACHINES, INC.",
+            "city": "SOLBERGELVA",
+            "lat": 59.76228,
+            "long": 10.0938
+        },
+        {
+            "Name": "ESRP ADVISORY DALLAS, LLC",
+            "city": "Traun",
+            "lat": 48.22105,
+            "long": 14.23712
+        },
+        {
+            "Name": "GLOBAL GROUND SUPPORT, LLC",
+            "city": "WAKEFIELD",
+            "lat": 53.682968,
+            "long": -1.4991
+        },
+        {
+            "Name": "HARRIS & FORD, LLC",
+            "city": "Chadonnet",
+            "lat": 46.01515,
+            "long": 2.64043
+        },
+        {
+            "Name": "INTERFACE, INC.",
+            "city": "Teichstrasse",
+            "lat": 48.01521,
+            "long": 15.44123
+        },
+        {
+            "Name": "JOHN BEAN TECHNOLOGIES CORPORATION",
+            "city": "HERNING",
+            "lat": 56.13848,
+            "long": 8.97318
+        },
+        {
+            "Name": "MILLIKEN & COMPANY",
+            "city": "MALMOE",
+            "lat": 55.60331,
+            "long": 13.00131
+        },
+        {
+            "Name": "PURECIRCLE USA INC.",
+            "city": "DARBU",
+            "lat": 59.69794,
+            "long": -54.68276055
+        },
+        {
+            "Name": "QUALITY SAUSAGE COMPANY, INC.",
+            "city": "CONROE",
+            "lat": 30.3130406,
+            "long": -95.458138
+        },
+        {
+            "Name": "RECORD PRINTING CO., INC. OF STORY CITY",
+            "city": "Orem",
+            "lat": -16.2808033,
+            "long": -52.5075302
+        },
+        {
+            "Name": "Rousselot Dubuque Inc.",
+            "city": "Inglewood",
+            "lat": -14.22926448,
+            "long": -53.47451347
+        },
+        {
+            "Name": "SAGE PARTS PLUS, INC.",
+            "city": "Sunrise",
+            "lat": 0.03483369,
+            "long": -55.62318953
+        },
+        {
+            "Name": "SQC, LLC",
+            "city": "Dayton",
+            "lat": -20.14802224,
+            "long": -49.94023374
+        },
+        {
+            "Name": "TONY DOWNS FOODS CO.",
+            "city": "Providence",
+            "lat": -2.85425454,
+            "long": -67.15501699
+        },
+        {
+            "Name": "TRANSPERFECT, INC.",
+            "city": "Santo Domingo",
+            "lat": 1.53675179,
+            "long": -59.04880491
+        },
+        {
+            "Name": "Thompsons Limited",
+            "city": "Wilshire Park",
+            "lat": 0.24880335,
+            "long": -60.15527867
+        },
+        {
+            "Name": "Kelly Services (Parent)",
+            "city": "Four Corners",
+            "lat": -8.89932057,
+            "long": -48.17229583
+        },
+        {
+            "Name": "Thermo Fisher Scientific",
+            "city": "Bern",
+            "lat": 1.39350634,
+            "long": -52.49923041
+        },
+        {
+            "Name": "UPS",
+            "city": "Chisinau",
+            "lat": -8.51703135,
+            "long": -46.15223241
+        },
+        {
+            "Name": "CBRE Group Inc.",
+            "city": "Honolulu",
+            "lat": -12.11119553,
+            "long": -49.52819547
+        },
+        {
+            "Name": "Gel",
+            "city": "Bishkek",
+            "lat": -19.82691148,
+            "long": -55.16539442
+        },
+        {
+            "Name": "ESSENTRA INDUSTRIA E COMERCIO LTDA",
+            "city": "Astoria",
+            "lat": 25.3977796,
+            "long": 97.21345051
+        },
+        {
+            "Name": "EWES Asia Pacific HK Ltd",
+            "city": "Sawgrass Mills Mal",
+            "lat": 36.47535794,
+            "long": 102.92880082
+        },
+        {
+            "Name": "FLORICULTURA VILLA BELLA LTDA ME",
+            "city": "Alofi",
+            "lat": 48.05293826,
+            "long": 98.68713686
+        },
+        {
+            "Name": "POTBELLY SANDWICH SHOP (POTBELLY  CORPORATION)",
+            "city": "Alta",
+            "lat": 26.15922483,
+            "long": 96.38050102
+        },
+        {
+            "Name": "3 DIMENSIONAL SERVICES",
+            "city": "Back Bay",
+            "lat": 42.73964022,
+            "long": 106.47842557
+        },
+        {
+            "Name": "3A PRODUKTER ASBJØRN ANTONSEN",
+            "city": "Port-au-Prince",
+            "lat": 44.28391016,
+            "long": 96.57541846
+        },
+        {
+            "Name": "3D - Messtechnik GmbH",
+            "city": "Richmond",
+            "lat": 32.1074647,
+            "long": 91.64259272
+        },
+        {
+            "Name": "5 STAR LOCAL CARS",
+            "city": "Renton",
+            "lat": 29.35981331,
+            "long": 93.37341118
+        },
+        {
+            "Name": "A RAYMOND FLUID CONNECTION FRANCE",
+            "city": "New Rochelle",
+            "lat": 31.89071701,
+            "long": 106.70469965
+        },
+        {
+            "Name": "A. RAYMOND GMBH & CO. KG",
+            "city": "San Bernardino",
+            "lat": 38.90942586,
+            "long": 92.32478523
+        },
+        {
+            "Name": "A/S JYDSK ALUMINIUM INDUSTRI",
+            "city": "Tokyo",
+            "lat": 25.55493909,
+            "long": 89.17619584
+        },
+        {
+            "Name": "JARLE HUSEBY GRAVESERVICE",
+            "city": "Beaverton",
+            "lat": 33.15984257,
+            "long": 107.72177199
+        },
+        {
+            "Name": "JESSE HENRIKSON",
+            "city": "Manoa",
+            "lat": 22.01318726,
+            "long": 101.24760147
+        },
+        {
+            "Name": "I.T. SUPRIMENTOS LTDA.-EPP",
+            "city": "Gastonia",
+            "lat": 22.16958554,
+            "long": 93.45191316
+        },
+        {
+            "Name": "MONS BRYNILDSRUD MASKIN",
+            "city": "Jackson",
+            "lat": 27.65966822,
+            "long": 101.85577309
+        },
+        {
+            "Name": "MULT COMERCIAL LTDA",
+            "city": "Mesquite",
+            "lat": 25.90909436,
+            "long": 91.91286582
+        },
+        {
+            "Name": "PPO SK s.r.o.",
+            "city": "Richardson",
+            "lat": 25.63311747,
+            "long": 87.58399047
+        },
+        {
+            "Name": "QT-BRIGHTEK CORPORATION",
+            "city": "Grafton",
+            "lat": 42.44323814,
+            "long": 105.15448349
+        },
+        {
+            "Name": "RL SISTEMAS DE HIGIENE LTDA.",
+            "city": "Reno",
+            "lat": 21.23164395,
+            "long": 95.18462931
+        },
+        {
+            "Name": "Schuchart Tief- und Straßenbau",
+            "city": "Tucson",
+            "lat": 22.94450882,
+            "long": 99.20976316
+        },
+        {
+            "Name": "SERTHI HIDRAULICA LTDA",
+            "city": "Bearden",
+            "lat": 28.93620881,
+            "long": 12.83267198
+        },
+        {
+            "Name": "STOLBERGER INCORPORATED DBA",
+            "city": "Washington Heights",
+            "lat": 24.46781875,
+            "long": 34.23178557
+        },
+        {
+            "Name": "TERUKO TANAKA - ME",
+            "city": "Des Plaines",
+            "lat": 39.12729355,
+            "long": 19.98003495
+        },
+        {
+            "Name": "Texcentrum s. r. o",
+            "city": "Waterloo",
+            "lat": 36.74943138,
+            "long": 34.61028458
+        },
+        {
+            "Name": "Geld Inc",
+            "city": "Southpark Mall",
+            "lat": 39.61078732,
+            "long": 36.29381765
+        },
+        {
+            "Name": "Bankkártyás fizetés",
+            "city": "Timbuktu",
+            "lat": 16.35109437,
+            "long": 20.32736636
+        },
+        {
+            "Name": "DER GEGENPOL",
+            "city": "Flour Bluff",
+            "lat": 30.88092816,
+            "long": 24.96397433
+        },
+        {
+            "Name": "(HWL) Chongqing Hengweilin Automotive",
+            "city": "Palmyra",
+            "lat": 40.91068006,
+            "long": 17.15113254
+        },
+        {
+            "Name": "(Shanghai Pudong) PULU Hardware",
+            "city": "Ames",
+            "lat": 26.69150369,
+            "long": 9.91408673
+        },
+        {
+            "Name": "(Shanghai Pudong) PUYU Industry",
+            "city": "Nampa",
+            "lat": 23.37385853,
+            "long": 32.58125015
+        },
+        {
+            "Name": "(Shijiazhuang Yecheng) DAYING",
+            "city": "Nairobi",
+            "lat": 17.13052565,
+            "long": 17.1182369
+        },
+        {
+            "Name": "(Yancheng Economic Devlp. Zone)",
+            "city": "Sigma",
+            "lat": 17.62265624,
+            "long": 29.6111666
+        },
+        {
+            "Name": "(Zhejiang Cixi) JINGFENG",
+            "city": "Mackville",
+            "lat": 21.77301589,
+            "long": 21.08243462
+        },
+        {
+            "Name": "(Zhejiang Yuhuan County) XIANDAI",
+            "city": "Mission Viejo",
+            "lat": 19.87043693,
+            "long": 15.40694363
+        },
+        {
+            "Name": "1 STOP JETTING LIMITED",
+            "city": "Orem",
+            "lat": 44.87800264,
+            "long": 10.8330245
+        },
+        {
+            "Name": "1&1 Internet Inc",
+            "city": "Inglewood",
+            "lat": 41.05856972,
+            "long": 11.02522775
+        },
+        {
+            "Name": "1. Plastcompany, spol. s.r.o.",
+            "city": "Ponce",
+            "lat": 50.8646969,
+            "long": 12.73677906
+        },
+        {
+            "Name": "1000 MARCAS LTDA",
+            "city": "Los Serranos",
+            "lat": 56.31677988,
+            "long": -3.04012178
+        },
+        {
+            "Name": "1001 SERVIÇOS FECILITES EIRELI-ME",
+            "city": "Hamilton",
+            "lat": 55.60486438,
+            "long": 22.75973377
+        },
+        {
+            "Name": "123 preklady.eu Slovakia, s.r.o.",
+            "city": "Dayton",
+            "lat": 60.72275933,
+            "long": 6.5669651
+        },
+        {
+            "Name": "24 FIRE AND SECURITY LTD",
+            "city": "Farmington",
+            "lat": 52.46349377,
+            "long": 18.03972954
+        },
+        {
+            "Name": "247 LOGISTIC AB",
+            "city": "Chisinau",
+            "lat": 56.75161173,
+            "long": 40.52158985
+        },
+        {
+            "Name": "2a CAD GLOBAL GROUP SL",
+            "city": "Harlem",
+            "lat": 70.5562756,
+            "long": 98.30315647
+        },
+        {
+            "Name": "2Am Group LLC",
+            "city": "Columbia",
+            "lat": 70.15676441,
+            "long": 113.26068056
+        },
+        {
+            "Name": "2CPRINT",
+            "city": "Montgomery",
+            "lat": 61.52789182,
+            "long": 92.7701364
+        },
+        {
+            "Name": "2Mservices s.r.o..",
+            "city": "Nicosia",
+            "lat": 49.44228726,
+            "long": 96.30035648
+        },
+        {
+            "Name": "2R SRL",
+            "city": "Willoughby Spit",
+            "lat": 52.55302695,
+            "long": 86.69120966
+        },
+        {
+            "Name": "3D - Messtechnik GmbH",
+            "city": "Ventura",
+            "lat": 59.5030497,
+            "long": 129.76375876
+        },
+        {
+            "Name": "3D METRISOFT SA DE CV",
+            "city": "Carlsbad",
+            "lat": 50.39561532,
+            "long": 114.66592479
+        },
+        {
+            "Name": "Cognizant Technology Solutions Lithuania UAB",
+            "city": "Santa Clarita",
+            "lat": 67.8281556,
+            "long": 92.20586382
+        },
+        {
+            "Name": "3D prototipai, UAB",
+            "city": "Asheville",
+            "lat": 50.22673429,
+            "long": 92.3900583
+        },
+        {
+            "Name": "3D SCANNERS (UK) LTD.",
+            "city": "Chino Hills",
+            "lat": 49.27829807,
+            "long": 110.48519148
+        },
+        {
+            "Name": "3D SCANTECH LTD",
+            "city": "La Crosse",
+            "lat": 73.06296101,
+            "long": 97.92837295
+        },
+        {
+            "Name": "3D SORTING",
+            "city": "Kahala",
+            "lat": 51.65566143,
+            "long": 91.41653184
+        },
+        {
+            "Name": "3d Systems  Inc",
+            "city": "Todt Hill",
+            "lat": 51.92373776,
+            "long": 115.43265672
+        },
+        {
+            "Name": "3D Systems Corp",
+            "city": "LANE, FRESHFIELD, FORMBYMERSEYSIDE      ",
+            "lat": 51.024,
+            "long": -0.01506
+        },
+        {
+            "Name": "3d Systems  Inc",
+            "city": "SÃO PAULO",
+            "lat": -23.54867,
+            "long": -46.638248
+        },
+        {
+            "Name": "Three-Dimensional Services Inc",
+            "city": "Dongguan City",
+            "lat": 23.050831,
+            "long": 113.742783
+        },
+        {
+            "Name": "3J-3D int, s.r.o.",
+            "city": "JUNDIAI",
+            "lat": -23.18708,
+            "long": -46.884048
+        },
+        {
+            "Name": "3L HOTMELT AB",
+            "city": "NOVI",
+            "lat": 42.46659,
+            "long": -83.4747
+        },
+        {
+            "Name": "3m Svenska AB",
+            "city": "ROCHESTER HILLS",
+            "lat": 42.6524,
+            "long": -83.13256
+        },
+        {
+            "Name": "3m Svenska AB",
+            "city": "SOLBERGELVA",
+            "lat": 59.76228,
+            "long": 10.0938
+        },
+        {
+            "Name": "3M Gulf Ltd (Dubai Branch)",
+            "city": "Traun",
+            "lat": 48.22105,
+            "long": 14.23712
+        },
+        {
+            "Name": "3M Poland sp. z o.o.",
+            "city": "WAKEFIELD",
+            "lat": 53.682968,
+            "long": -1.4991
+        },
+        {
+            "Name": "3P",
+            "city": "Chadonnet",
+            "lat": 46.01515,
+            "long": 2.64043
+        },
+        {
+            "Name": "3PACK group a.s.",
+            "city": "Teichstrasse",
+            "lat": 48.01521,
+            "long": 15.44123
+        },
+        {
+            "Name": "3ST AB",
+            "city": "HERNING",
+            "lat": 56.13848,
+            "long": 8.97318
+        },
+        {
+            "Name": "4 ELEMENTS,INC",
+            "city": "MALMOE",
+            "lat": 55.60331,
+            "long": 13.00131
+        },
+        {
+            "Name": "Marks and Spencer Hungary Kft",
+            "city": "DARBU",
+            "lat": 59.69794,
+            "long": -54.68276055
+        },
+        {
+            "Name": "407 ETR Concession Company Ltd",
+            "city": "CONROE",
+            "lat": 30.3130406,
+            "long": -95.458138
+        },
+        {
+            "Name": "42 THE BAKE HOUSE",
+            "city": "Orem",
+            "lat": -16.2808033,
+            "long": -52.5075302
+        },
+        {
+            "Name": "444 plus s.r.o.",
+            "city": "Inglewood",
+            "lat": -14.22926448,
+            "long": -53.47451347
+        },
+        {
+            "Name": "48:ANS TAXI",
+            "city": "Sunrise",
+            "lat": 0.03483369,
+            "long": -55.62318953
+        },
+        {
+            "Name": "4CE",
+            "city": "Dayton",
+            "lat": -20.14802224,
+            "long": -49.94023374
+        },
+        {
+            "Name": "EKOSTAVBY s.r.o.",
+            "city": "Providence",
+            "lat": -2.85425454,
+            "long": -67.15501699
+        },
+        {
+            "Name": "ELAN NORGE AS",
+            "city": "Santo Domingo",
+            "lat": 1.53675179,
+            "long": -59.04880491
+        },
+        {
+            "Name": "eMAG SOLUTIONS",
+            "city": "Wilshire Park",
+            "lat": 0.24880335,
+            "long": -60.15527867
+        },
+        {
+            "Name": "EMS-GRIVORY",
+            "city": "Four Corners",
+            "lat": -8.89932057,
+            "long": -48.17229583
+        },
+        {
+            "Name": "ENVIROCARE TECHNICAL CONS.",
+            "city": "Bern",
+            "lat": 1.39350634,
+            "long": -52.49923041
+        },
+        {
+            "Name": "ESPINOSA CASTILLO ARMANDO",
+            "city": "Chisinau",
+            "lat": -8.51703135,
+            "long": -46.15223241
+        },
+        {
+            "Name": "ES-RA Vertriebs GmbH",
+            "city": "Honolulu",
+            "lat": -12.11119553,
+            "long": -49.52819547
+        },
+        {
+            "Name": "EXPEDITORS INTL/NEW YORK",
+            "city": "Bishkek",
+            "lat": -19.82691148,
+            "long": -55.16539442
+        },
+        {
+            "Name": "FASTEN GROUP IMP. & EXP. CO., LTD.",
+            "city": "Astoria",
+            "lat": 25.3977796,
+            "long": 97.21345051
+        },
+        {
+            "Name": "FATATI-BTR-SWEDEN AB",
+            "city": "Sawgrass Mills Mal",
+            "lat": 36.47535794,
+            "long": 102.92880082
+        },
+        {
+            "Name": "FEDEX",
+            "city": "Alofi",
+            "lat": 48.05293826,
+            "long": 98.68713686
+        },
+        {
+            "Name": "FIRST HORIZON INS GRP-TN",
+            "city": "Alta",
+            "lat": 26.15922483,
+            "long": 96.38050102
+        },
+        {
+            "Name": "Fong Chen Plastic Technology Ind.",
+            "city": "Back Bay",
+            "lat": 42.73964022,
+            "long": 106.47842557
+        },
+        {
+            "Name": "FURNITURE WORLD",
+            "city": "Port-au-Prince",
+            "lat": 44.28391016,
+            "long": 96.57541846
+        },
+        {
+            "Name": "G B SERVICES",
+            "city": "Richmond",
+            "lat": 32.1074647,
+            "long": 91.64259272
+        },
+        {
+            "Name": "GLOBAL OPERATION TEXAS LP",
+            "city": "Renton",
+            "lat": 29.35981331,
+            "long": 93.37341118
+        },
+        {
+            "Name": "GOBEL & PARTNER",
+            "city": "New Rochelle",
+            "lat": 31.89071701,
+            "long": 106.70469965
+        },
+        {
+            "Name": "HANTZ BENEFIT SERVICES",
+            "city": "San Bernardino",
+            "lat": 38.90942586,
+            "long": 92.32478523
+        },
+        {
+            "Name": "HELLERMANN TYTON AB",
+            "city": "Tokyo",
+            "lat": 25.55493909,
+            "long": 89.17619584
+        },
+        {
+            "Name": "HORN TECALEMIT GMBH & CO. KG",
+            "city": "Beaverton",
+            "lat": 33.15984257,
+            "long": 107.72177199
+        },
+        {
+            "Name": "HUSQVARNA FLYTT & MÖBEL TRANS.",
+            "city": "Manoa",
+            "lat": 22.01318726,
+            "long": 101.24760147
+        },
+        {
+            "Name": "Ing. Jan Mendek",
+            "city": "Gastonia",
+            "lat": 22.16958554,
+            "long": 93.45191316
+        },
+        {
+            "Name": "INTELECTOOLS B. I. INFORMATICA LTDA",
+            "city": "Jackson",
+            "lat": 27.65966822,
+            "long": 101.85577309
+        },
+        {
+            "Name": "IPRO AS",
+            "city": "Mesquite",
+            "lat": 25.90909436,
+            "long": 91.91286582
+        },
+        {
+            "Name": "PRECIALP",
+            "city": "Richardson",
+            "lat": 25.63311747,
+            "long": 87.58399047
+        }
     ],
 
-  
+
     "HQLocations":[
       {"lat": 35.779591, "long": -78.638176, "name": "Beroe Inc",  "city":"Raleigh", "value": 293},
       {"lat":39.50250064, "long": -109.23673915, "name": "HQ Location #2",  "city":"Tucson", "value": 293},
