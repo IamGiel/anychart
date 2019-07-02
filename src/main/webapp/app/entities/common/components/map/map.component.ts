@@ -114,13 +114,27 @@ export class MapComponent implements OnInit, OnChanges {
         mapCountryColors.colorScale(anychart.scales.linearColor('#31D490', '#FFBE45', '#FF4F61'));
         mapCountryColors.stroke('#D2C9F3 .5');
         mapCountryColors.hovered().fill('#D2C9F3');
+        mapCountryColors.selected().fill('#6F4CD9');
 
         this.map.container('worldmap');
-        this.map.title('Suppliers Around The World');
+        // this.map.title('Suppliers Around The World');
         this.map.draw();
 
         var zoomController = anychart.ui.zoom();
         zoomController.target(this.map);
         zoomController.render();
+
+        // set zoom
+        // let clicked = true;
+        // this.map.listen("click", ($event:MouseEvent) => {
+        //     if (clicked) {
+        //         console.log(`test `)
+        //         this.map.zoomTo(3, $event.clientX, $event.clientY);
+        //     }
+        //     else {
+        //         this.map.zoomTo(0, $event.clientX, $event.clientY);
+        //     }
+        //     clicked = !clicked;
+        // });
     }
 }
