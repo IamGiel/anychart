@@ -1,20 +1,5 @@
 <div>
-
   <div class="container">
-    <div class="row" *ngIf="dashboardService.getFiltersAppliedOrNot() == true">
-      <div class="col-md-6 p-0 float-L">
-        <ul class="selected">
-          <li style="background-color: transparent"><span style="color: #494949;">Filters applied </span></li>
-          <li> D&B paydex higher than 5 <span (click)="removeSelectedFilter(index)">x</span>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-6 p-o float-L">
-        <span class="float-R save-filter">save filter</span>
-        <span class="float-R clear-filter" (click)="dashboardService.clearFilterApplied()">Clear filter</span>
-        <span class="float-R filtered-count">Filtered 10 of 100</span>
-      </div>
-    </div>
     <i-feather name="IconFileText" class="big"></i-feather>
     <div class="row" #target>
       <div class="col-md-3 pl-0">
@@ -22,6 +7,7 @@
           <div class="card-body">
             <span class="card-title">Financial Data</span>
             <i-filter class="filter" (click)="openFilterDetails('financial');"></i-filter>
+            <span>{{filtertext}}</span>
             <div *ngIf="ffilter" class="map-dropdown-contents">
               <p class="filterby">FILTER BY</p>
               <div class="filter-div">
@@ -274,109 +260,109 @@
   <div class="container">
     <!-- <ngb-carousel *ngIf="images" class="ngb-carousel" [interval]="false">
       <ng-template ngbSlide> -->
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card" #dbserrating>
-          <div class="card-body">
-            <span class="card-title">D&B SER Rating</span>
-            <!-- <img class="filter" (click)="openFilterDetails('financialserrating')"
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" #dbserrating>
+              <div class="card-body">
+                <span class="card-title">D&B SER Rating</span>
+                <!-- <img class="filter" (click)="openFilterDetails('financialserrating')"
                   src="../../../../content/images/filter.svg" /> -->
-            <i-filter class="filter" (click)="openFilterDetails('financialserrating');"></i-filter>
-            <div *ngIf="financialserrating" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext" (click)="open(content3)">Groups</p>
-                <p class="filtertext" (click)="open(content4)">Flags</p>
-                <p class="filtertext" (click)="open(content5)">Response</p>
-                <p (click)="open(content)" class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters" (click)="open(content2)">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
-              <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                <i-filter class="filter" (click)="openFilterDetails('financialserrating');"></i-filter>
+                <div *ngIf="financialserrating" class="map-dropdown-contents">
+                  <p class="filterby">FILTER BY</p>
+                  <div class="filter-div">
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
+                    <p class="filtertext" (click)="open(content4)">Flags</p>
+                    <p class="filtertext" (click)="open(content5)">Response</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
+                  </div>
+                  <hr>
+                  <div class="saved-filters" (click)="open(content2)">
+                    <p class="filtertext">Saved Filters</p>
+                  </div>
+                </div>
+                <div class="padd25">
+                  <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
+                  <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
                   </div> -->
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card" #dbrating>
-          <div class="card-body">
-            <span class="card-title">D&B Financial Strength</span>
-            <!-- <img class="filter" (click)="openFilterDetails('financialrating')"
+          <div class="col-md-4">
+            <div class="card" #dbrating>
+              <div class="card-body">
+                <span class="card-title">D&B Financial Strength</span>
+                <!-- <img class="filter" (click)="openFilterDetails('financialrating')"
                   src="../../../../content/images/filter.svg" /> -->
-            <i-filter class="filter" (click)="openFilterDetails('financialrating');"></i-filter>
-            <div *ngIf="financialrating" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext" (click)="open(content3)">Groups</p>
-                <p class="filtertext" (click)="open(content4)">Flags</p>
-                <p class="filtertext" (click)="open(content5)">Response</p>
-                <p (click)="open(content)" class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters" (click)="open(content2)">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
-              <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
+                <i-filter class="filter" (click)="openFilterDetails('financialrating');"></i-filter>
+                <div *ngIf="financialrating" class="map-dropdown-contents">
+                  <p class="filterby">FILTER BY</p>
+                  <div class="filter-div">
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
+                    <p class="filtertext" (click)="open(content4)">Flags</p>
+                    <p class="filtertext" (click)="open(content5)">Response</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
+                  </div>
+                  <hr>
+                  <div class="saved-filters" (click)="open(content2)">
+                    <p class="filtertext">Saved Filters</p>
+                  </div>
+                </div>
+                <div class="padd25">
+                  <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
+                  <!-- <jhi-column-chart [chartData]="columnData" [labels]="false">
                     </jhi-column-chart> -->
-              <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
+                  <!-- <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
                   </div> -->
-            </div>
-            <!-- <div>
+                </div>
+                <!-- <div>
                   <jhi-column-chart [chartData]="columnData" [labels]="true"></jhi-column-chart>
                   <div class="rectangle" [ngStyle]="{'bottom': '41px'}">
                   </div>
                 </div> -->
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card" #fdbpayindex>
-          <div class="card-body">
-            <span class="card-title">D&B Paydex</span>
-            <!-- <img class="filter" (click)="openFilterDetails('dbpayindex')"
+          <div class="col-md-4">
+            <div class="card" #fdbpayindex>
+              <div class="card-body">
+                <span class="card-title">D&B Paydex</span>
+                <!-- <img class="filter" (click)="openFilterDetails('dbpayindex')"
                   src="../../../../content/images/filter.svg" /> -->
-            <i-filter class="filter" (click)="openFilterDetails('dbpayindex');"></i-filter>
-            <div *ngIf="dbpayindex" class="map-dropdown-contents">
-              <p class="filterby">FILTER BY</p>
-              <div class="filter-div">
-                <p class="filtertext" (click)="open(content3)">Groups</p>
-                <p class="filtertext" (click)="open(content4)">Flags</p>
-                <p class="filtertext" (click)="open(content5)">Response</p>
-                <p (click)="open(content)" class="filtertext">Advanced</p>
-              </div>
-              <hr>
-              <div class="saved-filters" (click)="open(content2)">
-                <p class="filtertext">Saved Filters</p>
-              </div>
-            </div>
-            <div class="padd25">
-              <jhi-spline-chart [chartData]="spliceData" [id]="'paydexid2'" [labels]="false">
-              </jhi-spline-chart>
-              <!-- <div class="rectangle" [ngStyle]="{'bottom': showSubCards? '17px':'17px'}">
+                <i-filter class="filter" (click)="openFilterDetails('dbpayindex');"></i-filter>
+                <div *ngIf="dbpayindex" class="map-dropdown-contents">
+                  <p class="filterby">FILTER BY</p>
+                  <div class="filter-div">
+                    <p class="filtertext" (click)="open(content3)">Groups</p>
+                    <p class="filtertext" (click)="open(content4)">Flags</p>
+                    <p class="filtertext" (click)="open(content5)">Response</p>
+                    <p (click)="open(content)" class="filtertext">Advanced</p>
+                  </div>
+                  <hr>
+                  <div class="saved-filters" (click)="open(content2)">
+                    <p class="filtertext">Saved Filters</p>
+                  </div>
+                </div>
+                <div class="padd25">
+                  <jhi-spline-chart [chartData]="spliceData" [id]="'paydexid2'" [labels]="false">
+                  </jhi-spline-chart>
+                  <!-- <div class="rectangle" [ngStyle]="{'bottom': showSubCards? '17px':'17px'}">
                   </div> -->
-              <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
-                <p>Low Risk</p>
-                <p>High Risk</p>
-              </div>
-              <div class="risk" *ngIf="clickfinance==='D&B Paydex'">
-                <p>0</p>
-                <p>100</p>
+                  <div class="risk" *ngIf="clickfinance!=='D&B Paydex'">
+                    <p>Low Risk</p>
+                    <p>High Risk</p>
+                  </div>
+                  <div class="risk" *ngIf="clickfinance==='D&B Paydex'">
+                    <p>0</p>
+                    <p>100</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- </ng-template>
+      <!-- </ng-template>
     </ngb-carousel> -->
   </div>
 
@@ -1044,15 +1030,15 @@
                       <span class="rectangle5"></span>
                     </div>
                   </div> -->
-                    <div class="risk">
-                      <p>High Risk</p>
-                      <p>Low Risk</p>
-                    </div>
+                  <div class="risk">
+                    <p>High Risk</p>
+                    <p>Low Risk</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </ng-template>
     </ngb-carousel>
   </div>
@@ -1134,7 +1120,7 @@
     </div>
   </div>
   <div class="row row-map">
-    <div class="col-md-9 Custom col-map pl-0">
+    <div class="col-md-12 Custom col-map pl-0">
       <div class="float-L">
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -1170,28 +1156,22 @@
         </div>
       </div>
       <div class="map-container">
-        <jhi-map [chartData]="mapdropdown" [locationData]="subtab" [id]="'worldmap'"></jhi-map>
+        <jhi-map [chartData]="mapdropdown" [locationData]= "subtab" [id]="'worldmap'"></jhi-map>
       </div>
       <div class="dropdown-map">
         <button class="map-dropbtn" (click)="showMapDropDown()">{{mapdropdown}}
           <i class="fa fa-angle-up"></i>
-        </button>
+        </button>      
         <div *ngIf="mapdrop" class="map-dropdown-content">
-          <a (click)="selectMap('Country Risk')"><i *ngIf="mapdropdown == 'Country Risk'" class="fa fa-check"></i>
-            Country Risk</a>
-          <a (click)="selectMap('Business Integrity')"><i *ngIf="mapdropdown == 'Business Integrity'"
-              class="fa fa-check"></i> Business Integrity</a>
-          <a (click)="selectMap('Environmental Compliance')"><i *ngIf="mapdropdown == 'Environmental Compliance'"
-              class="fa fa-check"></i> Environmental Compliance</a>
-          <a (click)="selectMap('Financial Integrity')"><i *ngIf="mapdropdown == 'Financial Integrity'"
-              class="fa fa-check"></i> Financial Integrity</a>
-          <a (click)="selectMap('Social Compliance')"><i *ngIf="mapdropdown == 'Social Compliance'"
-              class="fa fa-check"></i> Social Compliance</a>
+          <a (click)="selectMap('Country Risk')"><i *ngIf="mapdropdown == 'Country Risk'" class="fa fa-check"></i> Country Risk</a>
+          <a (click)="selectMap('Business Integrity')"><i *ngIf="mapdropdown == 'Business Integrity'" class="fa fa-check"></i> Business Integrity</a>
+          <a (click)="selectMap('Environmental Compliance')"><i *ngIf="mapdropdown == 'Environmental Compliance'" class="fa fa-check"></i> Environmental Compliance</a>
+          <a (click)="selectMap('Financial Integrity')"><i *ngIf="mapdropdown == 'Financial Integrity'" class="fa fa-check"></i> Financial Integrity</a>
+          <a (click)="selectMap('Social Compliance')"><i *ngIf="mapdropdown == 'Social Compliance'" class="fa fa-check"></i> Social Compliance</a>
         </div>
       </div>
       <div class="icon-p">
-        <img class="map-icon" (click)="open(mapcontent, 'mapcontent')"
-          src="../../../../content/images/full-screen.png" />
+          <img class="map-icon" (click)="open(mapcontent, 'mapcontent')" src="../../../../content/images/full-screen.png"/>
       </div>
     </div>
     <div class="col-md-3 pl-0 pr-0" style="overflow:auto">
@@ -1209,13 +1189,11 @@
         </ul>
       </div>
       <div class="table-div" *ngIf="activeTab =='Countries'">
-        <div *ngFor="let data of environmentData">
-          <div class="grid-table border-top">
-            <p>{{data.id}}</p>
-            <p class="country-num"><span class="number">{{data.value}}</span></p>
-            <!-- <p><span class="number">42</span><span class="percent">21%</span></p> -->
-            <!-- <p class="country-num"><span class="number">{{data.value}}</span><span class="percent">{{data.indicator.value}}</span></p> -->
-          </div>
+        <div *ngFor="let data of socialData">
+            <div class="grid-table border-top">
+                <p class="country">{{data.id}}</p>
+                <p class="country-num"><span class="number">{{data.value}}</span><span class="percent">{{data.indicator.value}}</span></p>
+            </div>
         </div>
         <!-- <div class="grid-table border-top">
           <p class="country">USA</p>
@@ -1258,53 +1236,75 @@
           <p><span class="number">8</span><span class="percent">4%</span></p>
         </div> -->
       </div>
-      <!-- map and table info display-->
-      <!-- SOCIAL RISK DATA -->
-      <div class="table-div" *ngIf="mapdropdown == 'Cities'">
-        <div *ngFor="let data of socialData">
-          <div class="grid-table border-top countryPane">
-            <p class="country">{{data.id}}</p>
-            <p class="country-num"><span class="number">{{data.value}}</span><span
-                class="percent">{{data.indicator.value}}</span></p>
-          </div>
+      <div class="table-div" *ngIf="activeTab =='Cities'">
+        <div class="grid-table border-top">
+          <p class="country">Hongkong</p>
+          <p class="mar50"><span class="number">24</span><span class="percent">12%</span></p>
         </div>
-      </div>
-      <!-- ENVIRONMENTAL RISK DATA -->
-      <div class="table-div" *ngIf="mapdropdown == 'Countries'">
-        <div *ngFor="let data of environmentData">
-          <div class="grid-table border-top countryPane">
-            <p class="country">{{data["Country Name"]}}</p>
-            <p><span class="number">{{data["FINAL SCORE"]}}</span><span class="percent">{{data["value"]}}</span></p>
-          </div>
+        <div class="grid-table">
+          <p class="country">New York</p>
+          <p class="mar50"><span class="number">24</span><span class="percent">12%</span></p>
         </div>
-      </div>
-      <!-- FINANCIAL RISK DATA -->
-      <div class="table-div" *ngIf="mapdropdown == 'Financial Integrity'">
-        <div *ngFor="let data of financialData">
-          <div class="grid-table border-top countryPane">
-            <p class="country">{{data["name"]}}</p>
-            <p><span class="number">{{data["indicator"][2].label}}</span><span class="percent">{{data["value2"]}}</span>
-            </p>
-          </div>
+        <div class="grid-table">
+          <p class="country">Yokohama</p>
+          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
         </div>
-      </div>
-      <!-- COUNTRY RISK DATA -->
-      <div class="table-div" *ngIf="mapdropdown == 'Country Risk'">
-        <div *ngFor="let data of mapCountryRisk">
-          <div class="grid-table border-top countryPane">
-            <p class="country">{{data.compName}}</p>
-            <p><span class="number">{{data.location}}</span></p>
-          </div>
+        <div class="grid-table">
+          <p class="country">Liverpool</p>
+          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
         </div>
-      </div>
-      <!-- BUSINESS INTEGIRTY DATA -->
-      <div class="table-div" *ngIf="mapdropdown == 'Business Integrity'">
-        <div *ngFor="let data of mapBusinessIntegrity.slice().reverse();">
-          <div class="grid-table border-top countryPane">
-            <p class="country">{{data["name"]}}</p>
-            <p><span class="percent">{{data["value"]}}</span></p>
-          </div>
+        <div class="grid-table">
+          <p class="country">San Fransisco</p>
+          <p class="mar50"><span class="number">18</span><span class="percent">9%</span></p>
         </div>
+        <div class="grid-table">
+          <p class="country">Bangalore </p>
+          <p class="mar50"><span class="number">12</span><span class="percent">6%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Beijing</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Frankfurt</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">London</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">New Delhi </p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Osaka</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Moscow </p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Berlin</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Accra </p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Fukuoka</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <!-- <div class="grid-table">
+          <p class="country">Casablanca </p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div>
+        <div class="grid-table">
+          <p class="country">Milan</p>
+          <p class="mar50"><span class="number">8</span><span class="percent">4%</span></p>
+        </div> -->
       </div>
     </div>
   </div>
@@ -1367,12 +1367,13 @@
         <button type="button" class="btn float-L" (click)="open(content1)">Save Filter</button>
       </span>
       <span>
-        <button type="button" class="btn float-R" (click)="modal.close('Save click')">Apply Filter</button>
+        <button type="button" class="btn float-R" (click)="applyfilter();modal.close('Save click')">Apply Filter</button>
       </span>
       <span>
         <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
       </span>
     </div>
+
   </div>
 </ng-template>
 
@@ -1432,17 +1433,17 @@
   </div>
 </ng-template>
 <ng-template #mapcontent let-modal>
-  <div class="modal-header">
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <div>
-      <jhi-map [chartData]="mapdropdown" [locationData]="subtab" [id]="'mapdialog'"></jhi-map>
+    <div class="modal-header">
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-  </div>x
-</ng-template>
+    <div class="modal-body">
+      <div>
+          <jhi-map [chartData]="mapdropdown" [locationData]= "subtab" [id]="'mapdialog'"></jhi-map>
+      </div>
+    </div>x
+  </ng-template>
 <ng-template #content3 let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Filter by group</h4>

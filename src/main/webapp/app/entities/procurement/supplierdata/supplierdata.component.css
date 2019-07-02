@@ -330,6 +330,7 @@ span.inactive1 {
     display: inline-block;
     padding: 5px 0px;
     margin: 0px;
+    border: none;
 }
 
 .country-num {
@@ -418,7 +419,8 @@ span.inactive1 {
 }
 
 .grid-table p:nth-child(2) {
-    text-align: right;
+    text-align: center;
+    padding-left: 20px;
 }
 
 .border-top {

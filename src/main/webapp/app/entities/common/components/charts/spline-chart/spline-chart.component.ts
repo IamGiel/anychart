@@ -55,15 +55,15 @@ export class SplineChartComponent implements OnInit, AfterViewInit {
             .ticks()
             .stroke('#ffff');
 
-        // series.fill({
-        //     keys: ["#fff", "#eee"],
-        //         angle: 45
-        // });
+        series.fill({
+            keys: ['#fff', '#eee'],
+            angle: 45
+        });
 
-        // series.stroke({
-        //     keys: ["#56DD38", "#FCDC5D", "#EC3B39"],
-        //         angle: -0
-        // });
+        series.stroke({
+            keys: ['#56DD38', '#FCDC5D', '#EC3B39'],
+            angle: -0
+        });
 
         chart.tooltip().useHtml(true);
         chart.tooltip().zIndex(100);
