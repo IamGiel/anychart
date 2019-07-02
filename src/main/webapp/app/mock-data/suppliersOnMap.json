@@ -1,19 +1,20 @@
 {
     "SiteLocations":[
-      {"lat":28.23409968, "long": -97.78318015, "name": "Supplier #10",  "city":"Southpark Mall", "value": 293},
-      {"lat":47.1240028, "long": -88.17559971, "name": "Supplier #11",  "city":"Timbuktu", "value": 293},
-      {"lat":38.79720966, "long": -88.68874866, "name": "Supplier #12",  "city":"Flour Bluff", "value": 293},
-      {"lat":34.78103207, "long": -102.90563556, "name": "Supplier #13",  "city":"Palmyra", "value": 293},
-      {"lat":40.08012974, "long": -106.41858725, "name": "Supplier #14",  "city":"Ames", "value": 293},
-      {"lat":34.74671597, "long": -96.48470964, "name": "Supplier #15",  "city":"Gibraltar", "value": 293},
-      {"lat":39.98835983, "long": -105.89872451, "name": "Supplier #16",  "city":"Nampa", "value": 293},
-      {"lat":32.23399108, "long": -97.61311575, "name": "Supplier #17",  "city":"Nairobi", "value": 293},
-      {"lat":31.80775656, "long": -93.13079895, "name": "Supplier #18",  "city":"Sigma", "value": 293},
-      {"lat":41.55116964, "long": -86.394941, "name": "Supplier #19",  "city":"Sheldon", "value": 293},
-      {"lat":37.12721106, "long": -80.01549238, "name": "Supplier #20",  "city":"Ottawa", "value": 293},
-      {"lat":27.63418381, "long": -104.01396081, "name": "Supplier #21",  "city":"Mackville", "value": 293},
-      {"lat":-20.86391048, "long": -54.68276055, "name": "Supplier #22",  "city":"Mission Viejo", "value": 293},
-      {"lat":0.16187136, "long": -61.59451056, "name": "Supplier #23",  "city":"Sunnyvale", "value": 293},
+      {"lat":-23.548670, "long": -46.638248, "name": "ESSENTRA INDUSTRIA E COMERCIO LTDA",  "city":"SÃO PAULO", "value": 293},
+      {"lat":23.050831, "long": 113.742783, "name": "EWES Asia Pacific HK Ltd",  "city":"Dongguan City", "value": 293},
+      {"lat":-23.187080, "long": -46.884048, "name": "FLORICULTURA VILLA BELLA LTDA ME",  "city":"JUNDIAI", "value": 293},
+      {"lat":42.466590, "long": -83.474700, "name": "POTBELLY SANDWICH SHOP (POTBELLY  CORPORATION)",  "city":"NOVI", "value": 293},
+      {"lat":42.652400, "long": -83.132560, "name": "3 DIMENSIONAL SERVICES",  "city":"ROCHESTER HILLS", "value": 293},
+      {"lat":59.762280, "long": 10.093800, "name": "3A PRODUKTER ASBJØRN ANTONSEN",  "city":"SOLBERGELVA", "value": 293},
+      {"lat":48.221050, "long": 14.237120, "name": "3D - Messtechnik GmbH",  "city":"Traun", "value": 293},
+      {"lat":53.682968, "long": -1.499100, "name": "5 STAR LOCAL CARS",  "city":"WAKEFIELD", "value": 293},
+      {"lat":46.015150, "long": 2.640430, "name": "A RAYMOND FLUID CONNECTION FRANCE",  "city":"Chadonnet", "value": 293},
+      {"lat":48.015210, "long": 15.441230, "name": "A. RAYMOND GMBH & CO. KG",  "city":"Teichstrasse", "value": 293},
+      {"lat":56.138480, "long": 8.973180, "name": "A/S JYDSK ALUMINIUM INDUSTRI",  "city":"HERNING", "value": 293},
+      {"lat":55.603310, "long": 13.001310, "name": "IPENDO AB",  "city":"MALMOE", "value": 293},
+      {"lat":59.697940, "long": -54.68276055, "name": "JARLE HUSEBY GRAVESERVICE",  "city":"DARBU", "value": 293},
+      {"lat":30.3130406, "long": -95.458138, "name": "JESSE HENRIKSON",  "city":"CONROE", "value": 293},
+
       {"lat":-16.2808033, "long": -52.5075302, "name": "Supplier #24",  "city":"Orem", "value": 293},
       {"lat":-14.22926448, "long": -53.47451347, "name": "Supplier #25",  "city":"Inglewood", "value": 293},
       {"lat":0.03483369, "long": -55.62318953, "name": "Supplier #26",  "city":"Sunrise", "value": 293},
@@ -85,7 +86,7 @@
 
   
     "HQLocations":[
-      {"lat": 37.322998, "long": -122.032181, "name": "HQ Location #1",  "city":"Coldelf", "value": 293},
+      {"lat": 35.779591, "long": -78.638176, "name": "Beroe Inc",  "city":"Raleigh", "value": 293},
       {"lat":39.50250064, "long": -109.23673915, "name": "HQ Location #2",  "city":"Tucson", "value": 293},
       {"lat":48.11484768, "long": -92.51444825, "name": "HQ Location #3",  "city":"Trujillo Alto", "value": 293},
       {"lat":29.9182411, "long": -108.39680634, "name": "HQ Location #4",  "city":"Bearden", "value": 293},
@@ -123,6 +124,5 @@
     ]
 }
 
-  
   
   
