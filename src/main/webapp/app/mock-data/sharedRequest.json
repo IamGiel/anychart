@@ -8352,7 +8352,2095 @@
       },
       "declineMessage": null,
       "declinedDate": null
-    }
+    },
+      {
+          "id": 1,
+          "requestId": "200a0aa5f9854dffaed05cd1ddc04077",
+          "supplierName": "EKOSTAVBY s.r.o.",
+          "providerKey": {
+              "DUNSNUMBER": "954574930",
+              "ISIN": "US12504L1998"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T10:47:25.000+0000",
+          "requestedDate": "2019-05-27T10:47:25.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "5A1",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 69
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "1"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": null
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 2,
+          "requestId": "f9d4b57292664c5683884f8eedde2d90",
+          "supplierName": "ELAN NORGE AS",
+          "providerKey": {
+              "DUNSNUMBER": "006249189",
+              "ISIN": "US12504L1974"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T10:47:25.000+0000",
+          "requestedDate": "2019-05-27T10:47:25.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 8
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 15
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 6
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "5A1",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 69
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "1"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": null
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 3,
+          "requestId": "94e7b208a8394284a09287fe843d63fd",
+          "supplierName": "eMAG SOLUTIONS",
+          "providerKey": {
+              "DUNSNUMBER": "795448062",
+              "ISIN": "US9113121068"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T10:19:00.000+0000",
+          "requestedDate": "2019-05-27T10:19:00.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-04-26",
+                      "TrendRating": {
+                          "trendRating": "5A2",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 72
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "1"
+                      },
+                      "purchaseDate": "2019-04-26"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "71",
+                          "averageRating": "61",
+                          "community": "56",
+                          "employees": "62",
+                          "governance": "53"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 4,
+          "requestId": "7eeabdb377964976bf1bb1c076ac55be",
+          "supplierName": "EMS-GRIVORY",
+          "providerKey": {
+              "DUNSNUMBER": "006985790",
+              "ISIN": "US4606901001"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T10:19:00.000+0000",
+          "requestedDate": "2019-05-27T10:19:00.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 4
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 1
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 2
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-04-25",
+                      "TrendRating": {
+                          "trendRating": "5A2",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 70
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "2"
+                      },
+                      "purchaseDate": "2019-04-25"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "57",
+                          "averageRating": "52",
+                          "community": "47",
+                          "employees": "56",
+                          "governance": "47"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 5,
+          "requestId": "198441301d7b4bcdb56ea703f2473768",
+          "supplierName": "ENVIROCARE TECHNICAL CONS.",
+          "providerKey": {
+              "DUNSNUMBER": "078819801",
+              "ISIN": "BeroeCSR177360"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 75
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "5"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "40",
+                          "averageRating": "59",
+                          "community": "50",
+                          "employees": "81",
+                          "governance": "64"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 6,
+          "requestId": "12ac5a4d05b3489fbacb48c618e9a730",
+          "supplierName": "ESPINOSA CASTILLO ARMANDO",
+          "providerKey": {
+              "DUNSNUMBER": "058321290",
+              "ISIN": "BeroeCSR229195"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R2",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 80
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "2"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "71",
+                          "averageRating": "61",
+                          "community": "56",
+                          "employees": "62",
+                          "governance": "53"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 7,
+          "requestId": "2a9d6b0094ae4215a6c8f77980030fe8",
+          "supplierName": "ES-RA Vertriebs GmbH",
+          "providerKey": {
+              "DUNSNUMBER": "062503926",
+              "ISIN": "BeroeCSR270492"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "3A2",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "1,000,000 to 9,999,999",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "3A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 80
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "4"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "64",
+                          "averageRating": "60",
+                          "community": "70",
+                          "employees": "59",
+                          "governance": "46"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 8,
+          "requestId": "f892b7f552f1401d8aa2fe8fc2b2c8c5",
+          "supplierName": "EXPEDITORS INTL/NEW YORK",
+          "providerKey": {
+              "DUNSNUMBER": "176866937",
+              "ISIN": "BeroeCSR99081"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 66
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "5"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "68",
+                          "averageRating": "51",
+                          "community": "31",
+                          "employees": "56",
+                          "governance": "50"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 9,
+          "requestId": "b9cafc46cc424119ab57a0fc8e2edbea",
+          "supplierName": "FASTEN GROUP IMP. & EXP. CO., LTD.",
+          "providerKey": {
+              "DUNSNUMBER": "824623003",
+              "ISIN": "BeroeCSR514200"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 80
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "6"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "32",
+                          "averageRating": "54",
+                          "community": "68",
+                          "employees": "49",
+                          "governance": "67"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 10,
+          "requestId": "acd7756f3af94da2ac632ef6566e7b7f",
+          "supplierName": "FATATI-BTR-SWEDEN AB",
+          "providerKey": {
+              "DUNSNUMBER": "064539372",
+              "ISIN": "BeroeCSR928613"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "5A2",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 74
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "1"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "83",
+                          "averageRating": "77",
+                          "community": "80",
+                          "employees": "66",
+                          "governance": "79"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 11,
+          "requestId": "48ef34ac3b7e4f54b909c3359dd409b2",
+          "supplierName": "FEDEX",
+          "providerKey": {
+              "DUNSNUMBER": "031804839",
+              "ISIN": "BeroeCSR781959"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R2",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 67
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "2"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "34",
+                          "averageRating": "58",
+                          "community": "85",
+                          "employees": "82",
+                          "governance": "32"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 12,
+          "requestId": "f7c8b5e3e8314697a80d580a11db4a70",
+          "supplierName": "FIRST HORIZON INS GRP-TN",
+          "providerKey": {
+              "DUNSNUMBER": "002017440",
+              "ISIN": "BeroeCSR525439"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 2
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 75
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "4"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "67",
+                          "averageRating": "50",
+                          "community": "40",
+                          "employees": "48",
+                          "governance": "46"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 13,
+          "requestId": "c4ac39bb49414a9482036e8e2f1a0b84",
+          "supplierName": "Fong Chen Plastic Technology Ind.",
+          "providerKey": {
+              "DUNSNUMBER": "831776757",
+              "ISIN": "BeroeCSR707805"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 73
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "8"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "31",
+                          "averageRating": "55",
+                          "community": "70",
+                          "employees": "37",
+                          "governance": "81"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 14,
+          "requestId": "978e8b993f73463cb22ef7bb242df3cf",
+          "supplierName": "FURNITURE WORLD",
+          "providerKey": {
+              "DUNSNUMBER": "059769414",
+              "ISIN": "BeroeCSR684430"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R2",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 75
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "4"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "54",
+                          "averageRating": "45",
+                          "community": "56",
+                          "employees": "33",
+                          "governance": "35"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 15,
+          "requestId": "a645713c6f20437983992b9dd5dfe45d",
+          "supplierName": "G B SERVICES",
+          "providerKey": {
+              "DUNSNUMBER": "085377984",
+              "ISIN": "BeroeCSR621206"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R2",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 80
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "2"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "59",
+                          "averageRating": "55",
+                          "community": "34",
+                          "employees": "71",
+                          "governance": "56"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 16,
+          "requestId": "7b8550b5ec494b0b9c5aa85526850da5",
+          "supplierName": "GLOBAL OPERATION TEXAS LP",
+          "providerKey": {
+              "DUNSNUMBER": "117949011",
+              "ISIN": "BeroeCSR572819"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 66
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "8"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "60",
+                          "averageRating": "52",
+                          "community": "38",
+                          "employees": "64",
+                          "governance": "45"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 17,
+          "requestId": "1711a0d3b8c34f5b978417f244eabc8c",
+          "supplierName": "GOBEL & PARTNER",
+          "providerKey": {
+              "DUNSNUMBER": "009181731",
+              "ISIN": "BeroeCSR70347"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 71
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "8"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "62",
+                          "averageRating": "61",
+                          "community": "63",
+                          "employees": "69",
+                          "governance": "51"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 18,
+          "requestId": "20c090d926d94cfb80e0ff5048408236",
+          "supplierName": "HANTZ BENEFIT SERVICES",
+          "providerKey": {
+              "DUNSNUMBER": "116950368",
+              "ISIN": "BeroeCSR971739"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 80
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "6"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "71",
+                          "averageRating": "65",
+                          "community": "65",
+                          "employees": "63",
+                          "governance": "61"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 19,
+          "requestId": "046d5287401d4cd3be18069aea72c30a",
+          "supplierName": "HELLERMANN TYTON AB",
+          "providerKey": {
+              "DUNSNUMBER": "006160642",
+              "ISIN": "BeroeCSR917990"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 3
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R3",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 75
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "1"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "66",
+                          "averageRating": "62",
+                          "community": "69",
+                          "employees": "47",
+                          "governance": "66"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 20,
+          "requestId": "4274512568a94f679984b30414abac5a",
+          "supplierName": "HORN TECALEMIT GMBH & CO. KG",
+          "providerKey": {
+              "DUNSNUMBER": "079713841",
+              "ISIN": "BeroeCSR952949"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R2",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 68
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "3"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "65",
+                          "averageRating": "56",
+                          "community": "45",
+                          "employees": "83",
+                          "governance": "30"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 21,
+          "requestId": "72090a4834354e86a1c681bf75c049d1",
+          "supplierName": "HUSQVARNA FLYTT & MÖBEL TRANS.",
+          "providerKey": {
+              "DUNSNUMBER": "200356111",
+              "ISIN": "BeroeCSR947590"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-05-27T07:23:17.000+0000",
+          "requestedDate": "2019-05-27T07:23:17.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-05-27",
+                      "TrendRating": {
+                          "trendRating": "1R2",
+                          "ratingTrendCodeDetails": {
+                              "high": "n/a",
+                              "limited": "4",
+                              "netWorth": null,
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": "10 Employees and Over",
+                              "ratingClassification": "1R",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 73
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "3"
+                      },
+                      "purchaseDate": "2019-05-27"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "51",
+                          "averageRating": "62",
+                          "community": "52",
+                          "employees": "63",
+                          "governance": "81"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 22,
+          "requestId": "ff9104dd7fcf463189aaf755742ce6d9",
+          "supplierName": "Ing. Jan Mendek",
+          "providerKey": {
+              "DUNSNUMBER": "006958318",
+              "ISIN": "US4881522084"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-04-25T09:19:10.000+0000",
+          "requestedDate": "2019-04-25T09:19:10.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 1
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 1
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 2
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-04-25",
+                      "TrendRating": {
+                          "trendRating": "5A2",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 73
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "1"
+                      },
+                      "purchaseDate": "2019-04-25"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "51",
+                          "averageRating": "49",
+                          "community": "46",
+                          "employees": "58",
+                          "governance": "42"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 23,
+          "requestId": "40dd35d39d10457d8378ad9d8b38f19f",
+          "supplierName": "INTELECTOOLS B. I. INFORMATICA LTDA",
+          "providerKey": {
+              "DUNSNUMBER": "001408673",
+              "ISIN": "US8835561023"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-04-25T09:19:10.000+0000",
+          "requestedDate": "2019-04-25T09:19:10.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 0
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 3
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 3
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-04-25",
+                      "TrendRating": {
+                          "trendRating": "5A3",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 68
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "1"
+                      },
+                      "purchaseDate": "2019-04-25"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "69",
+                          "averageRating": "58",
+                          "community": "51",
+                          "employees": "60",
+                          "governance": "51"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 24,
+          "requestId": "f5c3ad7c6b2640cd8f90f674760748c0",
+          "supplierName": "IPRO AS",
+          "providerKey": {
+              "DUNSNUMBER": "006991681",
+              "ISIN": "US9113121068"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-04-25T09:19:10.000+0000",
+          "requestedDate": "2019-04-25T09:19:10.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 14
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 17
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 35
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-04-25",
+                      "TrendRating": {
+                          "trendRating": "5A2",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 73
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "4"
+                      },
+                      "purchaseDate": "2019-04-25"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "71",
+                          "averageRating": "61",
+                          "community": "56",
+                          "employees": "62",
+                          "governance": "53"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      },
+      {
+          "id": 25,
+          "requestId": "86d8384f2b0549ed97ae94023054291e",
+          "supplierName": "PRECIALP",
+          "providerKey": {
+              "DUNSNUMBER": "617608104",
+              "ISIN": "US12504L1098"
+          },
+          "packages": null,
+          "userCompany": "Beroe",
+          "requestCount": 1,
+          "lastRequest": 0,
+          "status": "SHARED",
+          "regionName": "Global",
+          "price": "399.0",
+          "comprStatus": false,
+          "lastRequestedDate": "2019-04-25T06:31:27.000+0000",
+          "requestedDate": "2019-04-25T06:31:27.000+0000",
+          "packageResponse": {
+              "DOW_JONES": {
+                  "Dow Jones Basic": {
+                      "DOWJones": [
+                          {
+                              "issueName": "Regulatory",
+                              "totalCount": 2
+                          },
+                          {
+                              "issueName": "Environment/Production",
+                              "totalCount": 2
+                          },
+                          {
+                              "issueName": "Social/Labour",
+                              "totalCount": 0
+                          }
+                      ]
+                  }
+              },
+              "DNB": {
+                  "D&B Rating Trend": {
+                      "purchaseDate": "2019-04-25",
+                      "TrendRating": {
+                          "trendRating": "5A2",
+                          "ratingTrendCodeDetails": {
+                              "high": "1",
+                              "limited": "4",
+                              "netWorth": "$50,000,000 and Over",
+                              "rating": null,
+                              "description": null,
+                              "fair": "3",
+                              "good": "2",
+                              "numberOfEmployess": null,
+                              "ratingClassification": "5A",
+                              "employeeRangeSymbol": null
+                          }
+                      }
+                  },
+                  "Payment & Paydex Details": {
+                      "paydex": {
+                          "months": "up to 24 months",
+                          "paydexScore": 68
+                      }
+                  },
+                  "Supplier Evaluation Risk": {
+                      "SER": {
+                          "riskScore": "2"
+                      },
+                      "purchaseDate": "2019-04-25"
+                  }
+              },
+              "CSRHUB": {
+                  "csrHubRating": {
+                      "csrHubRating": {
+                          "environment": "67",
+                          "averageRating": "60",
+                          "community": "60",
+                          "employees": "67",
+                          "governance": "47"
+                      }
+                  }
+              }
+          },
+          "declineMessage": null,
+          "declinedDate": null
+      }
   ],
-  "totalCounts": 100
+  "totalCounts": 125
 }
