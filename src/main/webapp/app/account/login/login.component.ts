@@ -20,9 +20,9 @@ import { Location } from '@angular/common';
 })
 export class LoginComponent implements OnInit, AfterViewInit, AfterContentInit {
     authenticationError: boolean;
-    password: string;
+    password: string = 'Beroe@123';
     rememberMe: boolean;
-    username: string;
+    username: string = 'john@supplier.com';
     credentials: any;
     susername: string;
     spassword: string;

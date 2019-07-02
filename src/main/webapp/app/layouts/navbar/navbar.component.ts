@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
     swaggerEnabled: boolean;
     modalRef: NgbModalRef;
     version: string;
-    loggedUser: string = 'Hi User';
+    loggedUser: string = 'Hi John';
     cartCount: number;
     cartTotal: number;
     showCart: boolean;
@@ -153,7 +153,7 @@ export class NavbarComponent implements OnInit {
             // console.log('called' + this.lc.getLocalInfo('fname'));
             this.loggedUser = this.lc.getLocalInfo('fname');
         } else {
-            this.loggedUser = 'Hi User';
+            this.loggedUser = 'Hi John';
         }
         return this.loggedUser;
     }

@@ -82,7 +82,7 @@ export class SupplierlistComponent implements OnInit {
     from 1 to 100, with higher scores indicating better payment performance. The tables below demonstrate how
     the score correlates to payment behavior`;
     noPop = `This is placeholder`;
-    csrPop = `CSR Ratings give the perceived performance on an absolute 0-100 scale`;
+    csrPop = `EcoVadis Sustainability ratings & scorecards help procurement teams monitor the CSR / ESG Practices in the supply chains, across 180 sectors and 150 countries.`;
     dowPop = `A company’s brand reputation is among its most valuable assets. And regulators, especially those of financial institutions, are now requiring “adverse media” coverage as part of due diligence and compliance matters. By knowing the illegal, immoral or unethical conduct of a third party, companies can better evaluate the cost/benefit balance of proposed business relationships.`;
     trendPop = `D&B Rating consists of two parts:
     (1) Rating Classification: A rating of 5A means a business has a worth of $50+ million. HH, on the other end of the scale, indicates that a business is worth up to $4,999.
