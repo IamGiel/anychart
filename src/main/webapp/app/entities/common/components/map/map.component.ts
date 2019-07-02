@@ -104,6 +104,8 @@ export class MapComponent implements OnInit, OnChanges {
                 `Risk: {%RISK} 
                     \nSuppliers: {%numSuppliers}`
             );
+            dotMarkers.tooltip().title(true);
+            dotMarkers.tooltip().titleFormat('Supplier Name: {%Name} ');
             dotMarkers.tooltip().format('Location: {%city}');
         });
 
