@@ -131,6 +131,10 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
         chart.tooltip().zIndex(100);
         chart.yAxis().labels(false);
         chart.yAxis().stroke('#ffff');
+        chart
+            .xAxis()
+            .labels()
+            .fontSize(10);
         // chart.xAxis().stroke(false);
         chart
             .yAxis()
