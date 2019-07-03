@@ -852,7 +852,7 @@ export class SupplierdataComponent implements OnInit {
         //console.log(this.CSRcommunity)
         /*Ethical and Regulatory data*/
         let ethicalRange = [[0], [1, 10], [11, 20], [21, 30], [31]];
-        this.ethicalCorruption = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Regulatory_Issues, ethicalRange);
+        this.ethicalCorruption = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Corruption_Issue, ethicalRange);
         this.ethicalFraud = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Fraud_Issues, ethicalRange);
         this.ethicalRegulatory = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Regulatory_Issues, ethicalRange);
         this.ethicalSanctions = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Sanctions, ethicalRange);
