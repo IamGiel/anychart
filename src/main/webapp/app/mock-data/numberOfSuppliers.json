@@ -57,7 +57,7 @@
     {
       "name": "Australia",
       "id": "AU",
-      "numSuppliers": "0",
+      "numSuppliers": "3",
       "CorrectedRating": 9.1,
       "RISK": "Low",
       "value": 9.1,
@@ -66,7 +66,7 @@
     {
       "name": "Austria",
       "id": "AT",
-      "numSuppliers": "0",
+      "numSuppliers": "2",
       "CorrectedRating": 9,
       "RISK": "Low",
       "value": 9,
@@ -192,7 +192,7 @@
     {
       "name": "Brazil",
       "id": "BR",
-      "numSuppliers": "17",
+      "numSuppliers": "6",
       "CorrectedRating": 8.2,
       "RISK": "Medium",
       "value": 8.2,
@@ -255,7 +255,7 @@
     {
       "name": "Canada",
       "id": "CA",
-      "numSuppliers": "3",
+      "numSuppliers": "2",
       "CorrectedRating": 6.8,
       "RISK": "High",
       "value": 6.8,
@@ -282,7 +282,7 @@
     {
       "name": "Chad",
       "id": "TD",
-      "numSuppliers": "3",
+      "numSuppliers": "2",
       "CorrectedRating": 7.8,
       "RISK": "Low",
       "value": 7.8,
@@ -291,7 +291,7 @@
     {
       "name": "China",
       "id": "CN",
-      "numSuppliers": "7",
+      "numSuppliers": "14",
       "CorrectedRating": 7.8,
       "RISK": "Medium",
       "value": 7.8,
@@ -381,7 +381,7 @@
     {
       "name": "Denmark",
       "id": "DK",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 5.9,
       "RISK": "High",
       "value": 5.9,
@@ -489,7 +489,7 @@
     {
       "name": "France",
       "id": "FR",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 6.4,
       "RISK": "Medium",
       "value": 6.4,
@@ -525,7 +525,7 @@
     {
       "name": "Germany",
       "id": "DE",
-      "numSuppliers": "1",
+      "numSuppliers": "0",
       "CorrectedRating": 6.3,
       "RISK": "High",
       "value": 6.3,
@@ -543,7 +543,7 @@
     {
       "name": "Greece",
       "id": "GR",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 6.2,
       "RISK": "Medium",
       "value": 6.2,
@@ -552,7 +552,7 @@
     {
       "name": "Greenland",
       "id": "GL",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 6.2,
       "RISK": "High",
       "value": 6.2,
@@ -624,7 +624,7 @@
     {
       "name": "Guyana",
       "id": "GY",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 5,
       "RISK": "Medium",
       "value": 5,
@@ -651,7 +651,7 @@
     {
       "name": "Hungary",
       "id": "HU",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 5.8,
       "RISK": "Medium",
       "value": 5.8,
@@ -669,7 +669,7 @@
     {
       "name": "India",
       "id": "IN",
-      "numSuppliers": "2",
+      "numSuppliers": "3",
       "CorrectedRating": 4.9,
       "RISK": "High",
       "value": 4.9,
@@ -723,7 +723,7 @@
     {
       "name": "Italy",
       "id": "IT",
-      "numSuppliers": "3",
+      "numSuppliers": "1",
       "CorrectedRating": 5.5,
       "RISK": "Medium",
       "value": 5.5,
@@ -858,7 +858,7 @@
     {
       "name": "Libya",
       "id": "LY",
-      "numSuppliers": "4",
+      "numSuppliers": "1",
       "CorrectedRating": 4.9,
       "RISK": "High",
       "value": 4.9,
@@ -984,7 +984,7 @@
     {
       "name": "Mongolia",
       "id": "MN",
-      "numSuppliers": "7",
+      "numSuppliers": "6",
       "CorrectedRating": 4.6,
       "RISK": "Medium",
       "value": 4.6,
@@ -1020,7 +1020,7 @@
     {
       "name": "Myanmar",
       "id": "MM",
-      "numSuppliers": "6",
+      "numSuppliers": "4",
       "CorrectedRating": 4.5,
       "RISK": "High",
       "value": 4.5,
@@ -1200,7 +1200,7 @@
     {
       "name": "Russian Federation",
       "id": "RU",
-      "numSuppliers": "18",
+      "numSuppliers": "8",
       "CorrectedRating": 3.1,
       "RISK": "High",
       "value": 3.1,
@@ -1245,7 +1245,7 @@
     {
       "name": "Saudi Arabia",
       "id": "SA",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 3.5,
       "RISK": "High",
       "value": 3.5,
@@ -1299,7 +1299,7 @@
     {
       "name": "Slovakia",
       "id": "SK",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 2.8,
       "RISK": "Low",
       "value": 2.8,
@@ -1353,7 +1353,7 @@
     {
       "name": "Spain",
       "id": "ES",
-      "numSuppliers": "0",
+      "numSuppliers": "1",
       "CorrectedRating": 3.1,
       "RISK": "Low",
       "value": 3.1,
@@ -1371,7 +1371,7 @@
     {
       "name": "Sudan",
       "id": "SD",
-      "numSuppliers": "1",
+      "numSuppliers": "0",
       "CorrectedRating": 3.1,
       "RISK": "High",
       "value": 3.1,
@@ -1533,7 +1533,7 @@
     {
       "name": "United Kingdom",
       "id": "GB",
-      "numSuppliers": "1",
+      "numSuppliers": "2",
       "CorrectedRating": 1.7,
       "RISK": "Medium",
       "value": 1.7,
@@ -1542,7 +1542,7 @@
     {
       "name": "United States",
       "id": "US",
-      "numSuppliers": "15",
+      "numSuppliers": "8",
       "CorrectedRating": 1.6,
       "RISK": "Low",
       "value": 1.6,
