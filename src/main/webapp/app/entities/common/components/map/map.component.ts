@@ -92,7 +92,7 @@ export class MapComponent implements OnInit, OnChanges {
         dotMarkers.fill('#F0EDFB');
 
         // set the size of CITRUS markers
-        dotMarkers.normal().size(1);
+        dotMarkers.normal().size(2);
         dotMarkers.hovered().size(4);
         dotMarkers.selected().size(10);
         // console.log('this is series 3 ', this.mapService.suppliersOnMap.data[0].suppliers);
@@ -100,10 +100,7 @@ export class MapComponent implements OnInit, OnChanges {
         mapCountryColors.labels().format('{%name}');
 
         this.countryData.forEach(ele => {
-            mapCountryColors.tooltip().format(
-                `Risk: {%RISK} 
-                    \nSuppliers: {%numSuppliers}`
-            );
+            mapCountryColors.tooltip().format(`Risk: {%RISK} \nSuppliers: {%numSuppliers}`);
             dotMarkers.tooltip().title(true);
             dotMarkers.tooltip().titleFormat('Supplier Name: {%Name} ');
             dotMarkers.tooltip().format('Location: {%city}');
@@ -112,11 +109,11 @@ export class MapComponent implements OnInit, OnChanges {
         mapCountryColors.tooltip().titleFormat('{%Name}');
 
         let colorRange = this.map.colorRange();
-        colorRange.enabled(true);
+        colorRange.enabled(false);
         mapCountryColors.colorScale(anychart.scales.linearColor('#31D490', '#FFBE45', '#FF4F61'));
         mapCountryColors.stroke('#D2C9F3 .5');
         mapCountryColors.hovered().fill('#D2C9F3');
-        mapCountryColors.selected().fill('#6F4CD9');
+        mapCountryColors.selected().fill('#A694E8');
 
         this.map.container('worldmap');
         // this.map.title('Suppliers Around The World');
