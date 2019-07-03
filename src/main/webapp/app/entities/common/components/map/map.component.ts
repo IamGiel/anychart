@@ -82,6 +82,7 @@ export class MapComponent implements OnInit, OnChanges {
 
     basicMap() {
         this.map.geoData('anychart.maps.world');
+
         // let series2 = this.map.choropleth(this.countryData);
         // let dotMarkers = this.map.marker(this.mapService.suppliersOnMap.data[0].suppliers);
         let dotMarkers = this.map.marker(this.locations);
@@ -105,6 +106,14 @@ export class MapComponent implements OnInit, OnChanges {
             dotMarkers.tooltip().titleFormat('Supplier Name: {%Name} ');
             dotMarkers.tooltip().format('Location: {%city}');
         });
+
+        // data
+        // let levelsData = [
+        //     ["High ", 10],
+        //     ["Medium", 5],
+        //     ["Low", 1]
+        // ];
+        // this.map.legend(true);
 
         mapCountryColors.tooltip().titleFormat('{%Name}');
 

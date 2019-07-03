@@ -69,6 +69,16 @@
         if(typeof(document.querySelector) == 'function') {
         document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
         document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+        document.querySelector('.goog-te-combo').setAttribute('style', 'background: transparent;color:white;margin-top: 10px;');
+        
+        /*const dropdown = document.querySelector('.goog-te-combo');
+        console.log(document.querySelector('.goog-te-combo').options)
+        dropdown.options[dropdown.selectedIndex].value='2';
+        Array.from(document.querySelector('.goog-te-combo').options)
+        .filter(
+            x => {x.value === "en";console.log(x)})[0]
+        .setAttribute('selected', true);
+       */
         }
 
         // If you have jQuery - works cross-browser - uncomment this
@@ -119,7 +129,7 @@
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-127883218-1');
-<!--ga('send','pageview');-->
+    ga('send','pageview');
     </script>
 
     <!-- Piwik -->
