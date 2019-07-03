@@ -13,6 +13,11 @@
     /* padding :20px 0px 0px 30px; */
 }
 
+.data-value {
+    display: inline-block;
+    width: 41px;
+}
+
 .spacing {
     list-style: none;
     line-height: 27px;
@@ -51,6 +56,7 @@ button:focus {
     border-radius: 6px;
     padding-bottom: 0px;
     position: relative;
+    box-shadow: none;
 }
 
 .card1 {

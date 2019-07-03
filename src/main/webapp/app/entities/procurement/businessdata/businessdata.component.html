@@ -55,21 +55,21 @@
           <img class="filter" />
           <div class="row">
             <div class="col-md-4">
-              <jhi-pie-chart [chartData]="ownershipData" hideTooltipPerct='true'></jhi-pie-chart>
+              <jhi-pie-chart [chartData]="ownershipData" [value]="120" hideTooltipPerct='true'></jhi-pie-chart>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
               <ul class="spacing">
                 <li *ngFor="let data of ownershipData">
-                  <span class="label" [ngStyle]="{'background-color': data.fill}"></span>
+                  <span  class="label" [ngStyle]="{'background-color': data.fill}"></span>
                   <span>{{data.label}}</span>
                 </li>
               </ul>
             </div>
-            <div>
+            <div class="col-md-3">
               <ul class="spacing">
                 <li *ngFor="let data of ownershipData">
-                  <span><b>{{data.value}}</b></span>
-                  <!-- <span class="spanPerc">{{data.value}}%</span> -->
+                  <span class="data-value"><b>{{data.value}}</b></span>
+                  <span class="spanPerc">{{getDataPercent(data.value)}}%</span>
                 </li>
               </ul>
             </div>
@@ -84,21 +84,21 @@
           <img class="filter" />
           <div class="row">
             <div class="col-md-4">
-              <jhi-pie-chart [chartData]="businessData" hideTooltipPerct='true'></jhi-pie-chart>
+              <jhi-pie-chart [chartData]="businessData" [value]="120" hideTooltipPerct='true'></jhi-pie-chart>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
               <ul class="spacing">
                 <li *ngFor="let data of businessData">
                     <span class="label" [ngStyle]="{'background-color': data.fill}"></span>
-                  <span>{{data.label}}</span>
+                    <span>{{data.label}}</span>
                 </li>
               </ul>
             </div>
-            <div>
+            <div class="col-md-3">
               <ul class="spacing">
                 <li *ngFor="let data of businessData">
-                  <span><b>{{data.value}}</b></span>
-                  <!-- <span class="spanPerc">{{data.value}}%</span> -->
+                  <span class="data-value"><b>{{data.value}}</b></span>
+                  <span class="spanPerc">{{getDataPercent(data.value)}}%</span>
                 </li>
               </ul>
             </div>
@@ -150,7 +150,7 @@
                 </tbody>
               </table>
             </div> -->
-            <jhi-bar [chartData]="supplierdata" [id]="'revenueid'"></jhi-bar>
+            <jhi-bar [chartData]="annualdata" [id]="'revenueid'"></jhi-bar>
           </div>
         </div>
       </div>

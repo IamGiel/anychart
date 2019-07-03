@@ -97,7 +97,7 @@ export class StackBarComponent implements OnInit {
         series1.normal().fill('#31D490');
         series2.normal().fill('#FFCB70');
         series3.normal().fill('#FF7272');
-        series4.normal().fill('#dddddd');
+        series4.normal().fill('#A9A9A9');
 
         series1.labels(false);
         series2.labels(false);

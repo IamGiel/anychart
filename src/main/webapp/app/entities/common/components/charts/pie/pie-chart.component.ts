@@ -14,6 +14,8 @@ export class PieChartComponent implements OnInit, AfterViewInit {
     @Input() hideTooltipPerct: string;
     @Input() heightValue: string;
     @Input() showValue: string;
+    t;
+    @Input() value: string;
 
     constructor() {}
 
@@ -27,7 +29,7 @@ export class PieChartComponent implements OnInit, AfterViewInit {
         // set the position of labels
         //this.chart.labels().position("outside");
         var label = anychart.standalones.label();
-        label.text('100');
+        label.text(this.value);
         label.width('100%');
         label.height('100%');
         label.adjustFontSize(true);

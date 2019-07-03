@@ -146,7 +146,7 @@ export class SupplierdataComponent implements OnInit {
     ];
 
     offClickHandler(event: any) {
-        if (!this.container.nativeElement.contains(event.target)) {
+        if (this.container.nativeElement != undefined && !this.container.nativeElement.contains(event.target)) {
             // check click origin
             this.ffilter = false;
             this.envfilter = false;
@@ -158,77 +158,77 @@ export class SupplierdataComponent implements OnInit {
             this.showEnvdropdown = false;
             this.showlabordropdown = false;
         }
-        if (!this.second.nativeElement.contains(event.target)) {
+        if (this.second.nativeElement != undefined && !this.second.nativeElement.contains(event.target)) {
             // check click origin
             this.ownershipfilter = false;
             // this.resfilter = false;
         }
-        if (!this.responsefunnel.nativeElement.contains(event.target)) {
+        if (this.responsefunnel.nativeElement != undefined && !this.responsefunnel.nativeElement.contains(event.target)) {
             this.resfilter = false;
         }
 
-        if (!this.dbrating.nativeElement.contains(event.target)) {
+        if (this.dbrating.nativeElement != undefined && !this.dbrating.nativeElement.contains(event.target)) {
             this.financialrating = false;
         }
-        if (!this.dbserrating.nativeElement.contains(event.target)) {
+        if (this.dbserrating.nativeElement != undefined && !this.dbserrating.nativeElement.contains(event.target)) {
             this.financialserrating = false;
         }
-        if (!this.fdbpayindex.nativeElement.contains(event.target)) {
+        if (this.fdbpayindex.nativeElement != undefined && !this.fdbpayindex.nativeElement.contains(event.target)) {
             this.dbpayindex = false;
         }
-        if (!this.eoverallrating.nativeElement.contains(event.target)) {
+        if (this.eoverallrating.nativeElement != undefined && !this.eoverallrating.nativeElement.contains(event.target)) {
             this.overallrating = false;
         }
-        if (!this.elaborhuman.nativeElement.contains(event.target)) {
+        if (this.elaborhuman.nativeElement != undefined && !this.elaborhuman.nativeElement.contains(event.target)) {
             this.laborhuman = false;
         }
-        if (!this.eethics.nativeElement.contains(event.target)) {
+        if (this.eethics.nativeElement != undefined && !this.eethics.nativeElement.contains(event.target)) {
             this.ethics = false;
         }
-        if (!this.eappearances.nativeElement.contains(event.target)) {
+        if (this.eappearances.nativeElement != undefined && !this.eappearances.nativeElement.contains(event.target)) {
             this.appearances = false;
         }
-        if (!this.ecorruption.nativeElement.contains(event.target)) {
+        if (this.ecorruption.nativeElement != undefined && !this.ecorruption.nativeElement.contains(event.target)) {
             this.corruption = false;
         }
-        if (!this.efraud.nativeElement.contains(event.target)) {
+        if (this.efraud.nativeElement != undefined && !this.efraud.nativeElement.contains(event.target)) {
             this.fraud = false;
         }
 
-        if (!this.overallapperances.nativeElement.contains(event.target)) {
+        if (this.overallapperances.nativeElement != undefined && !this.overallapperances.nativeElement.contains(event.target)) {
             this.laborapperances = false;
         }
-        if (!this.ldiscrimination.nativeElement.contains(event.target)) {
+        if (this.ldiscrimination.nativeElement != undefined && !this.ldiscrimination.nativeElement.contains(event.target)) {
             this.discrimination = false;
         }
-        if (!this.lhumanrights.nativeElement.contains(event.target)) {
+        if (this.lhumanrights.nativeElement != undefined && !this.lhumanrights.nativeElement.contains(event.target)) {
             this.humanrights = false;
         }
-        if (!this.maptest.nativeElement.contains(event.target)) {
+        if (this.maptest.nativeElement != undefined && !this.maptest.nativeElement.contains(event.target)) {
             this.mapfilter = false;
         }
-        if (!this.basicmap.nativeElement.contains(event.target)) {
+        if (this.basicmap.nativeElement != undefined && !this.basicmap.nativeElement.contains(event.target)) {
             this.mapdrop = false;
         }
-        if (!this.eenvironmnt.nativeElement.contains(event.target)) {
+        if (this.eenvironmnt.nativeElement != undefined && !this.eenvironmnt.nativeElement.contains(event.target)) {
             this.eenv = false;
         }
-        if (!this.esustanable.nativeElement.contains(event.target)) {
+        if (this.esustanable.nativeElement != undefined && !this.esustanable.nativeElement.contains(event.target)) {
             this.sustainable = false;
         }
-        if (!this.edowjones.nativeElement.contains(event.target)) {
+        if (this.edowjones.nativeElement != undefined && !this.edowjones.nativeElement.contains(event.target)) {
             this.dowjones = false;
         }
-        if (!this.eregulatory.nativeElement.contains(event.target)) {
+        if (this.eregulatory.nativeElement != undefined && !this.eregulatory.nativeElement.contains(event.target)) {
             this.regulatory = false;
         }
-        if (!this.esanctions.nativeElement.contains(event.target)) {
+        if (this.esanctions.nativeElement != undefined && !this.esanctions.nativeElement.contains(event.target)) {
             this.sanctions = false;
         }
-        if (!this.lhealthspace.nativeElement.contains(event.target)) {
+        if (this.lhealthspace.nativeElement != undefined && !this.lhealthspace.nativeElement.contains(event.target)) {
             this.healthsafety = false;
         }
-        if (!this.eworkspace.nativeElement.contains(event.target)) {
+        if (this.eworkspace.nativeElement != undefined && !this.eworkspace.nativeElement.contains(event.target)) {
             this.workspace = false;
         }
     }
@@ -386,6 +386,9 @@ export class SupplierdataComponent implements OnInit {
         this.filtertext = 'Two filters applied';
     }
 
+    getDataPercent(value) {
+        return Math.round(value / 140 * 100);
+    }
     ngOnInit() {
         this.fetchData.getAllDataPoint().subscribe(res => {
             console.log(res);
@@ -404,9 +407,9 @@ export class SupplierdataComponent implements OnInit {
         this.clickfinance = 'D&B Rating';
         this.clickEnvironmental = 'Overall Rating';
         this.chartData = [
-            { label: 'Shared', value: 172, fill: '#31d490' },
-            { label: 'Pending', value: 24, fill: '#FFCB70' },
-            { label: 'Declined', value: 4, fill: '#FF7272' }
+            { label: 'Shared', value: 120, fill: '#31d490' },
+            { label: 'Pending', value: 12, fill: '#FFCB70' },
+            { label: 'Declined', value: 8, fill: '#FF7272' }
         ];
         // this.columnData = [['1', 30], ['2', 40], ['3', 50], ['4', 50], ['5', 45], ['6', 40], ['7', 50], ['8', 30], ['9', 20]];
         this.columnData = [
@@ -484,7 +487,7 @@ export class SupplierdataComponent implements OnInit {
         //     { label: 'RESPONSE HEALTH', value: [5,10,5,7]}
         // ];
 
-        this.responseFunnelData = [['REQUEST', 0, 5, 10, 8], ['RESPONSE', 0, 10, 5, 7], ['RESPONSE HEALTH', 5, 10, 10, 5]];
+        this.responseFunnelData = [['REQUEST', 155, 0, 0, 15], ['RESPONSE', 120, 12, 8, 0], ['RESPONSE HEALTH', 50, 30, 0, 40]];
     }
 
     trackId(index: number, item: any) {
@@ -654,8 +657,8 @@ export class SupplierdataComponent implements OnInit {
                 { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 13, fill: '#FF4F61' }
             ];
             // this.columnDatas = [['0-29', 13], ['30-49', 10], ['50-69', 19], ['70-89', 14], ['90-100', 17]];
-        } else if (type === 'Ethics') {
-            this.clickEnvironmental = 'Ethics';
+        } else if (type === 'Employees') {
+            this.clickEnvironmental = 'Employees';
             this.columnDatas = [
                 { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 6, fill: '#31D490' },
                 { x: '30-49', perc: 1, avgval: 1, name: 'Rating 2', risk: 'Low Risk', num: 14, fill: '#FFBE45' },
@@ -674,8 +677,8 @@ export class SupplierdataComponent implements OnInit {
                 { x: '90-100', perc: 15, avgval: 15, name: 'Rating 5', risk: 'Medium Risk', num: 7, fill: '#FF4F61' }
             ];
             // this.columnDatas = [['0-29', 10], ['30-49', 4], ['50-69', 9], ['70-89', 9], ['90-100', 7]];
-        } else if (type === 'Labour& Human rights') {
-            this.clickEnvironmental = 'Labour& Human rights';
+        } else if (type === 'Community') {
+            this.clickEnvironmental = 'Community';
             this.columnDatas = [
                 { x: '0-29', perc: 8, avgval: 8, name: 'Rating 1', risk: 'Low Risk', num: 13, fill: '#31D490' },
                 { x: '30-49', perc: 16, avgval: 16, name: 'Rating 2', risk: 'Low Risk', num: 9, fill: '#FFBE45' },
@@ -684,8 +687,8 @@ export class SupplierdataComponent implements OnInit {
                 { x: '90-100', perc: 13, avgval: 13, name: 'Rating 5', risk: 'Medium Risk', num: 17, fill: '#FF4F61' }
             ];
             // this.columnDatas = [['0-29', 13], ['30-49', 9], ['50-69', 13], ['70-89', 15], ['90-100', 17]];
-        } else if (type === 'Sustainable procurem..') {
-            this.clickEnvironmental = 'Sustainable procurem..';
+        } else if (type === 'Governance') {
+            this.clickEnvironmental = 'Governance';
             this.columnDatas = [
                 { x: '0-29', perc: 10, avgval: 10, name: 'Rating 1', risk: 'Low Risk', num: 13, fill: '#31D490' },
                 { x: '30-49', perc: 12, avgval: 12, name: 'Rating 2', risk: 'Low Risk', num: 14, fill: '#FFBE45' },
@@ -724,6 +727,9 @@ export class SupplierdataComponent implements OnInit {
             this.showSubCards = false;
             this.environmentdetails = 'Hide details';
             this.financialdetails = 'More details';
+            this.labordetails = 'More details';
+            this.ethicaldetails = 'More details';
+
             this.showEnv = 'show';
             this.showMore = '';
             this.showEthical = '';
@@ -852,7 +858,7 @@ export class SupplierdataComponent implements OnInit {
         //console.log(this.CSRcommunity)
         /*Ethical and Regulatory data*/
         let ethicalRange = [[0], [1, 10], [11, 20], [21, 30], [31]];
-        this.ethicalCorruption = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Regulatory_Issues, ethicalRange);
+        this.ethicalCorruption = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Corruption_Issue, ethicalRange);
         this.ethicalFraud = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Fraud_Issues, ethicalRange);
         this.ethicalRegulatory = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Regulatory_Issues, ethicalRange);
         this.ethicalSanctions = this.getCountWithinRange(data.DowJones.EthicalRegulatory.Sanctions, ethicalRange);
@@ -886,7 +892,8 @@ export class SupplierdataComponent implements OnInit {
             temp['name'] = 'Rating' + i;
             temp['risk'] = res[i];
             temp['num'] = res[i];
-            temp['fill'] = colorList2[i];
+            temp['fill1'] = colorList2[i];
+            temp['fill2'] = '#ddd';
             result.push(temp);
             //result.push([ins,res[i]]);
         });
@@ -927,7 +934,8 @@ export class SupplierdataComponent implements OnInit {
             temp['name'] = 'Rating' + i;
             temp['risk'] = riskValue;
             temp['num'] = arr[i];
-            temp['fill'] = colorList[parseInt(i) - 1];
+            temp['fill1'] = colorList[parseInt(i) - 1];
+            temp['fill2'] = '#ddd';
             result.push(temp);
         }
         return result;
