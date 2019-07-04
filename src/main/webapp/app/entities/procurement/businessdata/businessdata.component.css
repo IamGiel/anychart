@@ -65,3 +65,38 @@
     display: inline-block;
     width: 41px;
 }
+.selected {
+    padding: 0px;
+    display: flow-root;
+}
+.selected li {
+    width: auto;
+    list-style: none;
+    float: left;
+    background-color: black;
+    padding: 2px 10px;
+    color: white;
+    border-radius: 15px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.selected li span {
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+}
+.filtered-count {
+    color: #494949;
+    margin-right: 15px;
+    float: right;
+}
+.save-filter,
+.clear-filter {
+    color: #6b4cd9;
+    cursor: pointer;
+    float: right;
+}
+.clear-filter {
+    margin-right: 15px;
+}

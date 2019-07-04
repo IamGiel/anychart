@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from '../dashboard/dashboard.service';
 @Component({
     selector: 'jhi-businessdata',
     templateUrl: './businessdata.component.html',
@@ -13,7 +14,7 @@ export class BusinessdataComponent implements OnInit {
     industriesData = [];
     supplierdata = [];
     annualdata = [];
-    constructor() {}
+    constructor(private dashboardService: DashboardService) {}
     ngOnInit() {
         this.ownershipData = [
             { label: 'Limited Partnership', value: 84, fill: '#F76693' },

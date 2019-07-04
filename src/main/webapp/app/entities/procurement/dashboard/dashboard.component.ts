@@ -67,6 +67,7 @@ export class DashboardComponent implements OnInit {
 
     tabClicked(tab: string) {
         this.activeSubTab = tab;
+        // this.dashboardService.clearFilterApplied();
     }
 
     maintabClicked(tab: string) {

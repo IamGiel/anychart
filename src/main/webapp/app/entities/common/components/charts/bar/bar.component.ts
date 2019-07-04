@@ -36,15 +36,15 @@ export class BarComponent implements OnInit, AfterViewInit {
         series.hovered().fill('#6b4cd9');
         // set the container id
         chart.container(this.id);
-
-        chart.tooltip().useHtml(true);
-        chart.tooltip().background('#FFF');
+        chart.tooltip(false);
+        // chart.tooltip().useHtml(true);
+        // chart.tooltip().background('#FFF');
         chart.tooltip().separator(false);
-        chart
-            .tooltip()
-            .format(
-                '<span style="font-size:14px;color:#FFF;">{%chart}</span>' + ': <span style="font-size:14px;color:#FFF;">{%value}</span>'
-            );
+        // chart
+        //     .tooltip()
+        //     .format(
+        //         '<span style="font-size:14px;color:#FFF;">{%chart}</span>' + ': <span style="font-size:14px;color:#FFF;">{%value}</span>'
+        //     );
 
         // initiate drawing the chart
         chart.draw();

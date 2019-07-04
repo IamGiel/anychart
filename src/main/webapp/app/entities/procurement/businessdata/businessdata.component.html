@@ -1,4 +1,18 @@
 <div class="container">
+    <div class="row" *ngIf="dashboardService.getBusinessFiltersAppliedOrNot() == true">
+        <div class="col-md-6 p-0 float-L">
+          <ul class="selected">
+            <li style="background-color: transparent"><span style="color: #494949;">Filters applied </span></li>
+            <li> D&B paydex higher than 5 <span (click)="removeSelectedFilter('index')">x</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 p-o float-L">
+          <span class="float-R save-filter">save filter</span>
+          <span class="float-R clear-filter" (click)="dashboardService.clearBusinessFilterApplied()">Clear filter</span>
+          <span class="float-R filtered-count">Filtered 10 of 100</span>
+        </div>
+      </div>
   <div class="row">
     <div class="col-md-6 pl-0">
       <div class="card">

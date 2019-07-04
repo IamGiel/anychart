@@ -47,6 +47,7 @@ export class SupplierdataComponent implements OnInit {
     ) {
         document.addEventListener('click', this.offClickHandler.bind(this)); // bind on doc
     }
+
     closeResult: string;
 
     socialData = [];

@@ -229,7 +229,8 @@
     <div>
       <div class="def" style="padding-top: 0;">
         <span>
-          <button type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
+          <button *ngIf="activeSubTab!=='Business data'" type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
+          <button  *ngIf="activeSubTab==='Business data'" type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setBusinessFiltersApplied()">Apply Filter</button>
         </span>
         <span>
             <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
@@ -266,9 +267,10 @@
   
     <div>
       <div class="def" style="padding-top: 0;">
-        <span>
-          <button type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
-        </span>
+          <span>
+              <button *ngIf="activeSubTab!=='Business data'" type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
+              <button  *ngIf="activeSubTab==='Business data'" type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setBusinessFiltersApplied()">Apply Filter</button>
+            </span>
         <span>
             <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
         </span>
@@ -307,9 +309,10 @@
   
     <div>
       <div class="def" style="padding-top: 0;">
-        <span>
-          <button type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
-        </span>
+          <span>
+              <button *ngIf="activeSubTab!=='Business data'" type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setFiltersApplied()">Apply Filter</button>
+              <button  *ngIf="activeSubTab==='Business data'" type="button" class="btn float-R" (click)="modal.close('Save click'); dashboardService.setBusinessFiltersApplied()">Apply Filter</button>
+            </span>
         <span>
             <button type="button" class="btn cancelbtn float-R" (click)="modal.close('Save click')">CANCEL</button>
         </span>

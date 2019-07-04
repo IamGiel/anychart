@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 export class DashboardService {
     supplierDataFilteredApplied: boolean = false;
     supplierListFilteredApplied: boolean = false;
+    businessDataFilteredApplied: boolean = false;
+    businessListFilteredApplied: boolean = false;
     constructor() {}
 
     getFiltersAppliedOrNot() {
@@ -18,5 +20,16 @@ export class DashboardService {
 
     clearFilterApplied() {
         this.supplierDataFilteredApplied = false;
+    }
+    getBusinessFiltersAppliedOrNot() {
+        return this.businessDataFilteredApplied;
+    }
+
+    setBusinessFiltersApplied() {
+        this.businessDataFilteredApplied = true;
+    }
+
+    clearBusinessFilterApplied() {
+        this.businessDataFilteredApplied = false;
     }
 }
