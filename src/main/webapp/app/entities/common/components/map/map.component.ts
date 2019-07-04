@@ -37,11 +37,13 @@ export class MapComponent implements OnInit, OnChanges, AfterViewInit {
             case 'HQ Location':
                 // this.locations = this.mapService.locationData.HQLocations;
                 this.locations = this.mapService.suppliersOnMap.HQLocations;
+                console.log(this.locations);
                 break;
 
             default:
                 // this.locations = this.mapService.locationData.HQLocations;
                 this.locations = this.mapService.suppliersOnMap.HQLocations;
+                console.log(this.locations);
                 break;
         }
         switch (this.chartData) {
@@ -87,6 +89,7 @@ export class MapComponent implements OnInit, OnChanges, AfterViewInit {
 
         // let series2 = this.map.choropleth(this.countryData);
         // let dotMarkers = this.map.marker(this.mapService.suppliersOnMap.data[0].suppliers);
+        // let numberOfSuppliers = this.map.choropleth(this.mapService.numberOfSuppliers.data);
         let dotMarkers = this.map.marker(this.locations);
         let mapCountryColors = this.map.choropleth(this.countryData);
         dotMarkers.labels(false);
@@ -103,7 +106,7 @@ export class MapComponent implements OnInit, OnChanges, AfterViewInit {
         mapCountryColors.labels().format('{%name}');
 
         this.countryData.forEach(ele => {
-            mapCountryColors.tooltip().format(`Risk: {%RISK} \nSuppliers: {%numSuppliers}`);
+            mapCountryColors.tooltip().format(`Risk: {%RISK} \nSuppliers: {%numSuppliers} `);
             dotMarkers.tooltip().title(true);
             dotMarkers.tooltip().titleFormat('Supplier Name: {%Name} ');
             dotMarkers.tooltip().format('Location: {%city}');
