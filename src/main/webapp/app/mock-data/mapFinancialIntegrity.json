@@ -1,1131 +1,1286 @@
-{"data": 
-  
+{"data":
+
   [
-    {
-      "score": "E",
-      "Name": "Afghanistan",
-      "id": "AF",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Albania",
-      "id": "AL",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Algeria",
-      "id": "DZ",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Angola",
-      "id": "AO",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Argentina",
-      "id": "AR",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Armenia",
-      "id": "AM",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Australia",
-      "id": "AU",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A1",
-      "Name": "Austria",
-      "id": "AT",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "C",
-      "Name": "Azerbaijan",
-      "id": "AZ",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Bahrain",
-      "id": "BH",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Bangladesh",
-      "id": "BD",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Belarus",
-      "id": "BY",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Belgium",
-      "id": "BE",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "B",
-      "Name": "Benin",
-      "id": "BJ",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Bolivia, Plurinational State of",
-      "id": "BO",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Bosnia and Herzegovina",
-      "id": "BA",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A4",
-      "Name": "Botswana",
-      "id": "BW",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Brazil",
-      "id": "BR",
-      "numSuppliers": "17",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A4",
-      "Name": "Bulgaria",
-      "id": "BG",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Burkina Faso",
-      "id": "BF",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "E",
-      "Name": "Burundi",
-      "id": "BI",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Cambodia",
-      "id": "KH",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Cameroon",
-      "id": "CM",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A3",
-      "Name": "Canada",
-      "id": "CA",
-      "numSuppliers": "3",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "B",
-      "Name": "Cape Verde",
-      "id": "CV",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "D",
-      "Name": "Central African Republic",
-      "id": "CF",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Chad",
-      "id": "TD",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A3",
-      "Name": "Chile",
-      "id": "CL",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "B",
-      "Name": "China",
-      "id": "CN",
-      "numSuppliers": "7",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A4",
-      "Name": "Colombia",
-      "id": "CO",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Congo",
-      "id": "CG",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "B",
-      "Name": "Costa Rica",
-      "id": "CR",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Croatia",
-      "id": "HR",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "E",
-      "Name": "Cuba",
-      "id": "CU",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A4",
-      "Name": "Cyprus",
-      "id": "CY",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A2",
-      "Name": "Czech Republic",
-      "id": "CZ",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A2",
-      "Name": "Denmark",
-      "id": "DK",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "C",
-      "Name": "Djibouti",
-      "id": "DJ",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "B",
-      "Name": "Dominica",
-      "id": "DM",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Dominican Republic",
-      "id": "DO",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "B",
-      "Name": "Ecuador",
-      "id": "EC",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Egypt",
-      "id": "EG",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "E",
-      "Name": "El Salvador",
-      "id": "SV",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Eritrea",
-      "id": "ER",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "C",
-      "Name": "Estonia",
-      "id": "EE",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Ethiopia",
-      "id": "ET",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A2",
-      "Name": "France",
-      "id": "FR",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "C",
-      "Name": "Gabon",
-      "id": "GA",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "B",
-      "Name": "Gambia",
-      "id": "GM",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A1",
-      "Name": "Georgia",
-      "id": "GE",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "B",
-      "Name": "Germany",
-      "id": "DE",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Ghana",
-      "id": "GH",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Greece",
-      "id": "GR",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Guatemala",
-      "id": "GT",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Guinea",
-      "id": "GN",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Guyana",
-      "id": "GY",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Haiti",
-      "id": "HT",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Honduras",
-      "id": "HN",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A3",
-      "Name": "Hong Kong",
-      "id": "HK",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A2",
-      "Name": "Hungary",
-      "id": "HU",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "B",
-      "Name": "Iceland",
-      "id": "IS",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A4",
-      "Name": "India",
-      "id": "IN",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "E",
-      "Name": "Indonesia",
-      "id": "ID",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "E",
-      "Name": "Iran, Islamic Republic of",
-      "id": "IR",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A3",
-      "Name": "Iraq",
-      "id": "IQ",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A2",
-      "Name": "Ireland",
-      "id": "IE",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A4",
-      "Name": "Israel",
-      "id": "IL",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Italy",
-      "id": "IT",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Jamaica",
-      "id": "JM",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A2",
-      "Name": "Japan",
-      "id": "JP",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "C",
-      "Name": "Jordan",
-      "id": "JO",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "B",
-      "Name": "Kazakhstan",
-      "id": "KZ",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A4",
-      "Name": "Kenya",
-      "id": "KE",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A3",
-      "Name": "Kuwait",
-      "id": "KW",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "D",
-      "Name": "Kyrgyzstan",
-      "id": "KG",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Lao People's Democratic Republic",
-      "id": "LA",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A3",
-      "Name": "Latvia",
-      "id": "LV",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "C",
-      "Name": "Lebanon",
-      "id": "LB",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Liberia",
-      "id": "LR",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "E",
-      "Name": "Libya",
-      "id": "LY",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A3",
-      "Name": "Lithuania",
-      "id": "LT",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A1",
-      "Name": "Luxembourg",
-      "id": "LU",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "B",
-      "Name": "Macao",
-      "id": "MO",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "D",
-      "Name": "Macedonia, the Former Yugoslav Republic of",
-      "id": "MK",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Madagascar",
-      "id": "MG",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A3",
-      "Name": "Malawi",
-      "id": "MW",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "D",
-      "Name": "Malaysia",
-      "id": "MY",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Maldives",
-      "id": "MV",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Mali",
-      "id": "ML",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "D",
-      "Name": "Malta",
-      "id": "MT",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A4",
-      "Name": "Mauritania",
-      "id": "MR",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Mauritius",
-      "id": "MU",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Mexico",
-      "id": "MX",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Moldova, Republic of",
-      "id": "MD",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Mongolia",
-      "id": "MN",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A4",
-      "Name": "Montenegro",
-      "id": "ME",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "E",
-      "Name": "Morocco",
-      "id": "MA",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Mozambique",
-      "id": "MZ",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "B",
-      "Name": "Myanmar",
-      "id": "MM",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "D",
-      "Name": "Namibia",
-      "id": "NA",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A1",
-      "Name": "Nepal",
-      "id": "NP",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A2",
-      "Name": "Netherlands",
-      "id": "NL",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "C",
-      "Name": "New Zealand",
-      "id": "NZ",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Nicaragua",
-      "id": "NI",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Niger",
-      "id": "NE",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A1",
-      "Name": "Nigeria",
-      "id": "NG",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "B",
-      "Name": "Norway",
-      "id": "NO",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Oman",
-      "id": "OM",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Pakistan",
-      "id": "PK",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A4",
-      "Name": "Palestine, State of",
-      "id": "PS",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Panama",
-      "id": "PA",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Papua New Guinea",
-      "id": "PG",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A4",
-      "Name": "Paraguay",
-      "id": "PY",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A4",
-      "Name": "Peru",
-      "id": "PE",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A3",
-      "Name": "Philippines",
-      "id": "PH",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A2",
-      "Name": "Poland",
-      "id": "PL",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A4",
-      "Name": "Portugal",
-      "id": "PT",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A4",
-      "Name": "Qatar",
-      "id": "QA",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Romania",
-      "id": "RO",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Russian Federation",
-      "id": "RU",
-      "numSuppliers": "18",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Rwanda",
-      "id": "RW",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Sao Tome and Principe",
-      "id": "ST",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "B",
-      "Name": "Saudi Arabia",
-      "id": "SA",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "B",
-      "Name": "Senegal",
-      "id": "SN",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "D",
-      "Name": "Serbia",
-      "id": "RS",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Sierra Leone",
-      "id": "SL",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A3",
-      "Name": "Singapore",
-      "id": "SG",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A3",
-      "Name": "Slovakia",
-      "id": "SK",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "B",
-      "Name": "Slovenia",
-      "id": "SI",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A2",
-      "Name": "South Africa",
-      "id": "ZA",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A2",
-      "Name": "South Korea",
-      "id": "KP",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "C",
-      "Name": "Spain",
-      "id": "ES",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "E",
-      "Name": "Sri Lanka",
-      "id": "LK",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Sudan",
-      "id": "SD",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Suriname",
-      "id": "SR",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A1",
-      "Name": "Sweden",
-      "id": "SE",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "E",
-      "Name": "Switzerland",
-      "id": "CH",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A2",
-      "Name": "Syrian Arab Republic",
-      "id": "SY",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "D",
-      "Name": "Taiwan, Province of China",
-      "id": "TW",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Tajikistan",
-      "id": "TJ",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A4",
-      "Name": "Tanzania, United Republic of",
-      "id": "TZ",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "D",
-      "Name": "Thailand",
-      "id": "TH",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "E",
-      "Name": "Timor-Leste",
-      "id": "TL",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Togo",
-      "id": "TG",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Trinidad and Tobago",
-      "id": "TT",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Tunisia",
-      "id": "TN",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Turkey",
-      "id": "TR",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Turkmenistan",
-      "id": "TM",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Uganda",
-      "id": "UG",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "C",
-      "Name": "Ukraine",
-      "id": "UA",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "A4",
-      "Name": "United Arab Emirates",
-      "id": "AE",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "A3",
-      "Name": "United Kingdom",
-      "id": "GB",
-      "RISK": "Low",
-      "value": 1
-    },
-    {
-      "score": "A2",
-      "Name": "United States",
-      "id": "US",
-      "RISK": "Low",
-      "numSuppliers": "15",
-      "value": 1
-    },
-    {
-      "score": "A4",
-      "Name": "Uruguay",
-      "id": "UY",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "C",
-      "Name": "Uzbekistan",
-      "id": "UZ",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "E",
-      "Name": "Venezuela, Bolivarian Republic of",
-      "id": "VE",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "B",
-      "Name": "Vietnam",
-      "id": "VN",
-      "RISK": "Medium",
-      "value": 5
-    },
-    {
-      "score": "E",
-      "Name": "Yemen",
-      "id": "YE",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "D",
-      "Name": "Zambia",
-      "id": "ZM",
-      "RISK": "High",
-      "value": 10.1
-    },
-    {
-      "score": "E",
-      "Name": "Zimbabwe",
-      "id": "ZW",
-      "RISK": "High",
-      "value": 10.1
-    }
-   ]
-}
+      {
+          "score": "E",
+          "Name": "Afghanistan",
+          "id": "AF",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Albania",
+          "id": "AL",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Algeria",
+          "id": "DZ",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Angola",
+          "id": "AO",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Argentina",
+          "id": "AR",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Armenia",
+          "id": "AM",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Australia",
+          "id": "AU",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 3
+      },
+      {
+          "score": "A1",
+          "Name": "Austria",
+          "id": "AT",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 2
+      },
+      {
+          "score": "C",
+          "Name": "Azerbaijan",
+          "id": "AZ",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Bahrain",
+          "id": "BH",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Bangladesh",
+          "id": "BD",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "C",
+          "Name": "Belarus",
+          "id": "BY",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Belgium",
+          "id": "BE",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Benin",
+          "id": "BJ",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Bolivia, Plurinational State of",
+          "id": "BO",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Bosnia and Herzegovina",
+          "id": "BA",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Botswana",
+          "id": "BW",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Brazil",
+          "id": "BR",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 6
+      },
+      {
+          "score": "A4",
+          "Name": "Bulgaria",
+          "id": "BG",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Burkina Faso",
+          "id": "BF",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Burundi",
+          "id": "BI",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Cambodia",
+          "id": "KH",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Cameroon",
+          "id": "CM",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Canada",
+          "id": "CA",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 3
+      },
+      {
+          "score": "B",
+          "Name": "Cape Verde",
+          "id": "CV",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Central African Republic",
+          "id": "CF",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Chad",
+          "id": "TD",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 2
+      },
+      {
+          "score": "A3",
+          "Name": "Chile",
+          "id": "CL",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "China",
+          "id": "CN",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 14
+      },
+      {
+          "score": "A4",
+          "Name": "Colombia",
+          "id": "CO",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Congo",
+          "id": "CG",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Costa Rica",
+          "id": "CR",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Croatia",
+          "id": "HR",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Cuba",
+          "id": "CU",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Cyprus",
+          "id": "CY",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Czech Republic",
+          "id": "CZ",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Denmark",
+          "id": "DK",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "C",
+          "Name": "Djibouti",
+          "id": "DJ",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Dominica",
+          "id": "DM",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Dominican Republic",
+          "id": "DO",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Ecuador",
+          "id": "EC",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Egypt",
+          "id": "EG",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 2
+      },
+      {
+          "score": "E",
+          "Name": "El Salvador",
+          "id": "SV",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Eritrea",
+          "id": "ER",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Estonia",
+          "id": "EE",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Ethiopia",
+          "id": "ET",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "France",
+          "id": "FR",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "C",
+          "Name": "Gabon",
+          "id": "GA",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Gambia",
+          "id": "GM",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A1",
+          "Name": "Georgia",
+          "id": "GE",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Germany",
+          "id": "DE",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Ghana",
+          "id": "GH",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Greece",
+          "id": "GR",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "C",
+          "Name": "Guatemala",
+          "id": "GT",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Guinea",
+          "id": "GN",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Guyana",
+          "id": "GY",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "C",
+          "Name": "Haiti",
+          "id": "HT",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Honduras",
+          "id": "HN",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Hong Kong",
+          "id": "HK",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Hungary",
+          "id": "HU",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "B",
+          "Name": "Iceland",
+          "id": "IS",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "India",
+          "id": "IN",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 3
+      },
+      {
+          "score": "E",
+          "Name": "Indonesia",
+          "id": "ID",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Iran, Islamic Republic of",
+          "id": "IR",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Iraq",
+          "id": "IQ",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Ireland",
+          "id": "IE",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Israel",
+          "id": "IL",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Italy",
+          "id": "IT",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 1
+      },
+      {
+          "score": "B",
+          "Name": "Jamaica",
+          "id": "JM",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Japan",
+          "id": "JP",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Jordan",
+          "id": "JO",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Kazakhstan",
+          "id": "KZ",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Kenya",
+          "id": "KE",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Kuwait",
+          "id": "KW",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Kyrgyzstan",
+          "id": "KG",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Lao People's Democratic Republic",
+          "id": "LA",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Latvia",
+          "id": "LV",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Lebanon",
+          "id": "LB",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Liberia",
+          "id": "LR",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Libya",
+          "id": "LY",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "A3",
+          "Name": "Lithuania",
+          "id": "LT",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "A1",
+          "Name": "Luxembourg",
+          "id": "LU",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Macao",
+          "id": "MO",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Macedonia, the Former Yugoslav Republic of",
+          "id": "MK",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Madagascar",
+          "id": "MG",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Malawi",
+          "id": "MW",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Malaysia",
+          "id": "MY",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Maldives",
+          "id": "MV",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Mali",
+          "id": "ML",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Malta",
+          "id": "MT",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Mauritania",
+          "id": "MR",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Mauritius",
+          "id": "MU",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Mexico",
+          "id": "MX",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 2
+      },
+      {
+          "score": "C",
+          "Name": "Moldova, Republic of",
+          "id": "MD",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Mongolia",
+          "id": "MN",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 6
+      },
+      {
+          "score": "A4",
+          "Name": "Montenegro",
+          "id": "ME",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Morocco",
+          "id": "MA",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Mozambique",
+          "id": "MZ",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Myanmar",
+          "id": "MM",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 4
+      },
+      {
+          "score": "D",
+          "Name": "Namibia",
+          "id": "NA",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A1",
+          "Name": "Nepal",
+          "id": "NP",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Netherlands",
+          "id": "NL",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "New Zealand",
+          "id": "NZ",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Nicaragua",
+          "id": "NI",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Niger",
+          "id": "NE",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A1",
+          "Name": "Nigeria",
+          "id": "NG",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Norway",
+          "id": "NO",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 1
+      },
+      {
+          "score": "C",
+          "Name": "Oman",
+          "id": "OM",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Pakistan",
+          "id": "PK",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Palestine, State of",
+          "id": "PS",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Panama",
+          "id": "PA",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Papua New Guinea",
+          "id": "PG",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Paraguay",
+          "id": "PY",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Peru",
+          "id": "PE",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Philippines",
+          "id": "PH",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Poland",
+          "id": "PL",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "A4",
+          "Name": "Portugal",
+          "id": "PT",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Qatar",
+          "id": "QA",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Romania",
+          "id": "RO",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 2
+      },
+      {
+          "score": "B",
+          "Name": "Russian Federation",
+          "id": "RU",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 8
+      },
+      {
+          "score": "C",
+          "Name": "Rwanda",
+          "id": "RW",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Sao Tome and Principe",
+          "id": "ST",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Saudi Arabia",
+          "id": "SA",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 1
+      },
+      {
+          "score": "B",
+          "Name": "Senegal",
+          "id": "SN",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Serbia",
+          "id": "RS",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Sierra Leone",
+          "id": "SL",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Singapore",
+          "id": "SG",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "Slovakia",
+          "id": "SK",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Slovenia",
+          "id": "SI",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "South Africa",
+          "id": "ZA",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "South Korea",
+          "id": "KP",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Spain",
+          "id": "ES",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "E",
+          "Name": "Sri Lanka",
+          "id": "LK",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Sudan",
+          "id": "SD",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Suriname",
+          "id": "SR",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A1",
+          "Name": "Sweden",
+          "id": "SE",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 1
+      },
+      {
+          "score": "E",
+          "Name": "Switzerland",
+          "id": "CH",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A2",
+          "Name": "Syrian Arab Republic",
+          "id": "SY",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Taiwan, Province of China",
+          "id": "TW",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Tajikistan",
+          "id": "TJ",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "Tanzania, United Republic of",
+          "id": "TZ",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Thailand",
+          "id": "TH",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Timor-Leste",
+          "id": "TL",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Togo",
+          "id": "TG",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Trinidad and Tobago",
+          "id": "TT",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Tunisia",
+          "id": "TN",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Turkey",
+          "id": "TR",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 2
+      },
+      {
+          "score": "D",
+          "Name": "Turkmenistan",
+          "id": "TM",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Uganda",
+          "id": "UG",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Ukraine",
+          "id": "UA",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A4",
+          "Name": "United Arab Emirates",
+          "id": "AE",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "A3",
+          "Name": "United Kingdom",
+          "id": "GB",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 2
+      },
+      {
+          "score": "A2",
+          "Name": "United States",
+          "id": "US",
+          "RISK": "Low",
+          "value": 1,
+          "numSuppliers": 8
+      },
+      {
+          "score": "A4",
+          "Name": "Uruguay",
+          "id": "UY",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "C",
+          "Name": "Uzbekistan",
+          "id": "UZ",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Venezuela, Bolivarian Republic of",
+          "id": "VE",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "B",
+          "Name": "Vietnam",
+          "id": "VN",
+          "RISK": "Medium",
+          "value": 5,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Yemen",
+          "id": "YE",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "D",
+          "Name": "Zambia",
+          "id": "ZM",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      },
+      {
+          "score": "E",
+          "Name": "Zimbabwe",
+          "id": "ZW",
+          "RISK": "High",
+          "value": 10.1,
+          "numSuppliers": 0
+      }
+  ]
+  }
   

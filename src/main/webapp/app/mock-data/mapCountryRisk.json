@@ -1,1633 +1,1633 @@
-{"data" :
-  [
-    {
-      "name": "Afghanistan",
-      "id": "AF",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.4,
-      "RISK": "High",
-      "value": 9.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Albania",
-      "id": "AL",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.2,
-      "RISK": "Medium",
-      "value": 9.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Algeria",
-      "id": "DZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.2,
-      "RISK": "High",
-      "value": 9.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Angola",
-      "id": "AO",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.2,
-      "RISK": "High",
-      "value": 9.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Argentina",
-      "id": "AR",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.1,
-      "RISK": "Medium",
-      "value": 9.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Armenia",
-      "id": "AM",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.1,
-      "RISK": "Medium",
-      "value": 9.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Australia",
-      "id": "AU",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.1,
-      "RISK": "Low",
-      "value": 9.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Austria",
-      "id": "AT",
-      "numSuppliers": "0",
-      "CorrectedRating": 9,
-      "RISK": "Low",
-      "value": 9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Azerbaijan",
-      "id": "AZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 7.6,
-      "RISK": "High",
-      "value": 7.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Bahamas",
-      "id": "BS",
-      "numSuppliers": "0",
-      "CorrectedRating": 9,
-      "RISK": "High",
-      "value": 9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Bahrain",
-      "id": "BH",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.9,
-      "RISK": "Low",
-      "value": 8.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Bangladesh",
-      "id": "BD",
-      "numSuppliers": "1",
-      "CorrectedRating": 8.9,
-      "RISK": "High",
-      "value": 8.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Barbados",
-      "id": "BB",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.9,
-      "RISK": "Low",
-      "value": 8.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Belarus",
-      "id": "BY",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.7,
-      "RISK": "High",
-      "value": 8.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Belgium",
-      "id": "BE",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.6,
-      "RISK": "Low",
-      "value": 8.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Benin",
-      "id": "BJ",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.6,
-      "RISK": "Medium",
-      "value": 8.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Bhutan",
-      "id": "BT",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.5,
-      "RISK": "Medium",
-      "value": 8.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Bolivia, Plurinational State of",
-      "id": "BO",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.3,
-      "RISK": "Medium",
-      "value": 8.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Bosnia and Herzegovina",
-      "id": "BA",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.3,
-      "RISK": "Medium",
-      "value": 8.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Botswana",
-      "id": "BW",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.2,
-      "RISK": "Medium",
-      "value": 8.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Bouvet Island",
-      "id": "BV",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.2,
-      "RISK": "Medium",
-      "value": 8.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Brazil",
-      "id": "BR",
-      "numSuppliers": "17",
-      "CorrectedRating": 8.2,
-      "RISK": "Medium",
-      "value": 8.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Bulgaria",
-      "id": "BG",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.2,
-      "RISK": "Medium",
-      "value": 8.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Burkina Faso",
-      "id": "BF",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.9,
-      "RISK": "Medium",
-      "value": 6.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Burundi",
-      "id": "BI",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.1,
-      "RISK": "High",
-      "value": 8.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Cabo Verde",
-      "id": "CV",
-      "numSuppliers": "0",
-      "CorrectedRating": 8.1,
-      "RISK": "",
-      "value": 8.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Cambodia",
-      "id": "KH",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.8,
-      "RISK": "High",
-      "value": 6.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Cameroon",
-      "id": "CM",
-      "numSuppliers": "0",
-      "CorrectedRating": 8,
-      "RISK": "Low",
-      "value": 8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Canada",
-      "id": "CA",
-      "numSuppliers": "3",
-      "CorrectedRating": 6.8,
-      "RISK": "High",
-      "value": 6.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Central African Republic",
-      "id": "KY",
-      "numSuppliers": "0",
-      "CorrectedRating": 8,
-      "RISK": "Medium",
-      "value": 8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Central African Republic",
-      "id": "CF",
-      "numSuppliers": "0",
-      "CorrectedRating": 7.9,
-      "RISK": "High",
-      "value": 7.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Chad",
-      "id": "TD",
-      "numSuppliers": "3",
-      "CorrectedRating": 7.8,
-      "RISK": "Low",
-      "value": 7.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "China",
-      "id": "CN",
-      "numSuppliers": "7",
-      "CorrectedRating": 7.8,
-      "RISK": "Medium",
-      "value": 7.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Colombia",
-      "id": "CO",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.6,
-      "RISK": "Low",
-      "value": 6.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Comoros",
-      "id": "KM",
-      "numSuppliers": "0",
-      "CorrectedRating": 7.7,
-      "RISK": "High",
-      "value": 7.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Congo",
-      "id": "CG",
-      "numSuppliers": "0",
-      "CorrectedRating": 7.7,
-      "RISK": "Low",
-      "value": 7.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Costa Rica",
-      "id": "CR",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.5,
-      "RISK": "High",
-      "value": 6.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Côte d'Ivoire",
-      "id": "CI",
-      "numSuppliers": "0",
-      "CorrectedRating": 7.4,
-      "RISK": "Low",
-      "value": 7.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Croatia",
-      "id": "HR",
-      "numSuppliers": "0",
-      "CorrectedRating": 7.3,
-      "RISK": "High",
-      "value": 7.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Cuba",
-      "id": "CU",
-      "numSuppliers": "0",
-      "CorrectedRating": 7.3,
-      "RISK": "Low",
-      "value": 7.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Cyprus",
-      "id": "CY",
-      "numSuppliers": "0",
-      "CorrectedRating": 7.3,
-      "RISK": "Medium",
-      "value": 7.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Czech Republic",
-      "id": "CZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 7,
-      "RISK": "Medium",
-      "value": 7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Denmark",
-      "id": "DK",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.9,
-      "RISK": "High",
-      "value": 5.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Djibouti",
-      "id": "DJ",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.9,
-      "RISK": "Medium",
-      "value": 6.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Dominica",
-      "id": "DM",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.8,
-      "RISK": "High",
-      "value": 4.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Dominican Republic",
-      "id": "DO",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.6,
-      "RISK": "High",
-      "value": 6.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Ecuador",
-      "id": "EC",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.6,
-      "RISK": "Low",
-      "value": 5.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Egypt",
-      "id": "EG",
-      "numSuppliers": "3",
-      "CorrectedRating": 6.6,
-      "RISK": "High",
-      "value": 6.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "El Salvador",
-      "id": "SV",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.6,
-      "RISK": "Low",
-      "value": 6.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Equatorial Guinea",
-      "id": "GQ",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.6,
-      "RISK": "Low",
-      "value": 5.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Eritrea",
-      "id": "ER",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.5,
-      "RISK": "High",
-      "value": 6.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Estonia",
-      "id": "EE",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.4,
-      "RISK": "High",
-      "value": 6.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Ethiopia",
-      "id": "ET",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.4,
-      "RISK": "Medium",
-      "value": 6.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Finland",
-      "id": "FI",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.4,
-      "RISK": "Low",
-      "value": 5.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "France",
-      "id": "FR",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.4,
-      "RISK": "Medium",
-      "value": 6.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Gabon",
-      "id": "GA",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.4,
-      "RISK": "Medium",
-      "value": 6.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Gambia",
-      "id": "GM",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.4,
-      "RISK": "Medium",
-      "value": 5.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Georgia",
-      "id": "GE",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.3,
-      "RISK": "Medium",
-      "value": 6.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Germany",
-      "id": "DE",
-      "numSuppliers": "1",
-      "CorrectedRating": 6.3,
-      "RISK": "High",
-      "value": 6.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Ghana",
-      "id": "GH",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.2,
-      "RISK": "Medium",
-      "value": 6.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Greece",
-      "id": "GR",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.2,
-      "RISK": "Medium",
-      "value": 6.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Greenland",
-      "id": "GL",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.2,
-      "RISK": "High",
-      "value": 6.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Grenada",
-      "id": "GD",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.1,
-      "RISK": "High",
-      "value": 6.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Guadeloupe",
-      "id": "GP",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.7,
-      "RISK": "Low",
-      "value": 2.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Guam",
-      "id": "GU",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.1,
-      "RISK": "Low",
-      "value": 6.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Guatemala",
-      "id": "GT",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.1,
-      "RISK": "Medium",
-      "value": 5.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Guernsey",
-      "id": "GG",
-      "numSuppliers": "0",
-      "CorrectedRating": 6.1,
-      "RISK": "Low",
-      "value": 6.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Guinea",
-      "id": "GN",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.1,
-      "RISK": "Medium",
-      "value": 5.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Guinea-Bissau",
-      "id": "GW",
-      "numSuppliers": "0",
-      "CorrectedRating": 6,
-      "RISK": "High",
-      "value": 6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Guyana",
-      "id": "GY",
-      "numSuppliers": "0",
-      "CorrectedRating": 5,
-      "RISK": "Medium",
-      "value": 5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Haiti",
-      "id": "HT",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.9,
-      "RISK": "High",
-      "value": 5.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Honduras",
-      "id": "HN",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.8,
-      "RISK": "Medium",
-      "value": 5.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Hungary",
-      "id": "HU",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.8,
-      "RISK": "Medium",
-      "value": 5.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Iceland",
-      "id": "IS",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.8,
-      "RISK": "Medium",
-      "value": 5.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "India",
-      "id": "IN",
-      "numSuppliers": "2",
-      "CorrectedRating": 4.9,
-      "RISK": "High",
-      "value": 4.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Indonesia",
-      "id": "ID",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.9,
-      "RISK": "High",
-      "value": 4.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Iran, Islamic Republic of",
-      "id": "IR",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.7,
-      "RISK": "Medium",
-      "value": 5.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Iraq",
-      "id": "IQ",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.7,
-      "RISK": "High",
-      "value": 5.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Ireland",
-      "id": "IE",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.7,
-      "RISK": "Low",
-      "value": 5.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Israel",
-      "id": "IL",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.5,
-      "RISK": "Low",
-      "value": 2.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Italy",
-      "id": "IT",
-      "numSuppliers": "3",
-      "CorrectedRating": 5.5,
-      "RISK": "Medium",
-      "value": 5.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Jamaica",
-      "id": "JM",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.4,
-      "RISK": "Medium",
-      "value": 5.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Japan",
-      "id": "JP",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.4,
-      "RISK": "Medium",
-      "value": 5.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Jordan",
-      "id": "JO",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.4,
-      "RISK": "Medium",
-      "value": 5.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Kazakhstan",
-      "id": "KZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.4,
-      "RISK": "Medium",
-      "value": 5.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Kenya",
-      "id": "KE",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.3,
-      "RISK": "Low",
-      "value": 5.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Korea, Democratic People's Republic of",
-      "id": "KP",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.2,
-      "RISK": "High",
-      "value": 5.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Korea, Republic of",
-      "id": "KR",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.2,
-      "RISK": "Medium",
-      "value": 5.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Kuwait",
-      "id": "KW",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.6,
-      "RISK": "Medium",
-      "value": 3.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Kyrgyzstan",
-      "id": "KG",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.1,
-      "RISK": "Medium",
-      "value": 5.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Lao People's Democratic Republic",
-      "id": "LA",
-      "numSuppliers": "0",
-      "CorrectedRating": 5.1,
-      "RISK": "Medium",
-      "value": 5.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Latvia",
-      "id": "LV",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.3,
-      "RISK": "Medium",
-      "value": 4.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Lebanon",
-      "id": "LB",
-      "numSuppliers": "0",
-      "CorrectedRating": 5,
-      "RISK": "Medium",
-      "value": 5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Lesotho",
-      "id": "LS",
-      "numSuppliers": "0",
-      "CorrectedRating": 5,
-      "RISK": "Medium",
-      "value": 5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Liberia",
-      "id": "LR",
-      "numSuppliers": "0",
-      "CorrectedRating": 5,
-      "RISK": "Medium",
-      "value": 5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Libya",
-      "id": "LY",
-      "numSuppliers": "4",
-      "CorrectedRating": 4.9,
-      "RISK": "High",
-      "value": 4.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Lithuania",
-      "id": "LT",
-      "numSuppliers": "1",
-      "CorrectedRating": 4.2,
-      "RISK": "Low",
-      "value": 4.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Luxembourg",
-      "id": "LU",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.9,
-      "RISK": "Low",
-      "value": 4.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Macedonia",
-      "id": "MK",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.9,
-      "RISK": "Medium",
-      "value": 4.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Madagascar",
-      "id": "MG",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.9,
-      "RISK": "Medium",
-      "value": 4.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Malawi",
-      "id": "MW",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.8,
-      "RISK": "Medium",
-      "value": 4.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Malaysia",
-      "id": "MY",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.8,
-      "RISK": "Medium",
-      "value": 4.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Maldives",
-      "id": "MV",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.7,
-      "RISK": "High",
-      "value": 4.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Mali",
-      "id": "ML",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.7,
-      "RISK": "Medium",
-      "value": 4.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Malta",
-      "id": "MT",
-      "numSuppliers": "0",
-      "CorrectedRating": 4,
-      "RISK": "Low",
-      "value": 4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Mauritania",
-      "id": "MR",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.7,
-      "RISK": "High",
-      "value": 4.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Mauritius",
-      "id": "MU",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.6,
-      "RISK": "Medium",
-      "value": 4.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Mexico",
-      "id": "MX",
-      "numSuppliers": "2",
-      "CorrectedRating": 3.9,
-      "RISK": "Medium",
-      "value": 3.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Moldova, Republic of",
-      "id": "MD",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.6,
-      "RISK": "Medium",
-      "value": 4.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Mongolia",
-      "id": "MN",
-      "numSuppliers": "7",
-      "CorrectedRating": 4.6,
-      "RISK": "Medium",
-      "value": 4.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Montenegro",
-      "id": "ME",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.6,
-      "RISK": "Medium",
-      "value": 4.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Monaco",
-      "id": "MC",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.6,
-      "RISK": "Medium",
-      "value": 4.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Mozambique",
-      "id": "MZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.5,
-      "RISK": "Medium",
-      "value": 4.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Myanmar",
-      "id": "MM",
-      "numSuppliers": "6",
-      "CorrectedRating": 4.5,
-      "RISK": "High",
-      "value": 4.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Namibia",
-      "id": "NA",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.7,
-      "RISK": "Low",
-      "value": 3.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Nepal",
-      "id": "NP",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.3,
-      "RISK": "Medium",
-      "value": 4.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Netherlands",
-      "id": "NL",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.6,
-      "RISK": "Low",
-      "value": 3.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "New Zealand",
-      "id": "NZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.2,
-      "RISK": "Low",
-      "value": 4.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Nicaragua",
-      "id": "NI",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.1,
-      "RISK": "Medium",
-      "value": 4.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Niger",
-      "id": "NE",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.1,
-      "RISK": "Medium",
-      "value": 4.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Nigeria",
-      "id": "NG",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.1,
-      "RISK": "High",
-      "value": 4.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Norway",
-      "id": "NO",
-      "numSuppliers": "1",
-      "CorrectedRating": 4.1,
-      "RISK": "Low",
-      "value": 4.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Oman",
-      "id": "OM",
-      "numSuppliers": "0",
-      "CorrectedRating": 4.1,
-      "RISK": "Medium",
-      "value": 4.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Pakistan",
-      "id": "PK",
-      "numSuppliers": "0",
-      "CorrectedRating": 4,
-      "RISK": "High",
-      "value": 4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Panama",
-      "id": "PA",
-      "numSuppliers": "0",
-      "CorrectedRating": 4,
-      "RISK": "Medium",
-      "value": 4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Papua New Guinea",
-      "id": "PG",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.4,
-      "RISK": "Medium",
-      "value": 3.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Paraguay",
-      "id": "PY",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.3,
-      "RISK": "Medium",
-      "value": 3.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Peru",
-      "id": "PE",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.8,
-      "RISK": "Medium",
-      "value": 3.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Philippines",
-      "id": "PH",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.8,
-      "RISK": "Medium",
-      "value": 3.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Poland",
-      "id": "PL",
-      "numSuppliers": "1",
-      "CorrectedRating": 3.8,
-      "RISK": "Low",
-      "value": 3.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Portugal",
-      "id": "PT",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.8,
-      "RISK": "Low",
-      "value": 3.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Qatar",
-      "id": "QA",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.8,
-      "RISK": "Medium",
-      "value": 3.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Romania",
-      "id": "RO",
-      "numSuppliers": "2",
-      "CorrectedRating": 3.1,
-      "RISK": "Medium",
-      "value": 3.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Russian Federation",
-      "id": "RU",
-      "numSuppliers": "18",
-      "CorrectedRating": 3.1,
-      "RISK": "High",
-      "value": 3.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Rwanda",
-      "id": "RW",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.6,
-      "RISK": "Medium",
-      "value": 3.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Saint Lucia",
-      "id": "LC",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.6,
-      "RISK": "Medium",
-      "value": 3.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Saint Vincent and the Grenadines",
-      "id": "VC",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.5,
-      "RISK": "Medium",
-      "value": 3.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Sao Tome and Principe",
-      "id": "ST",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.5,
-      "RISK": "Medium",
-      "value": 3.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Saudi Arabia",
-      "id": "SA",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.5,
-      "RISK": "High",
-      "value": 3.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Senegal",
-      "id": "SN",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.5,
-      "RISK": "Medium",
-      "value": 3.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Serbia",
-      "id": "RS",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.5,
-      "RISK": "Medium",
-      "value": 3.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Seychelles",
-      "id": "SC",
-      "numSuppliers": "0",
-      "CorrectedRating": 1.5,
-      "RISK": "Medium",
-      "value": 1.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Sierra Leone",
-      "id": "SL",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.4,
-      "RISK": "Medium",
-      "value": 3.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Singapore",
-      "id": "SG",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.8,
-      "RISK": "Medium",
-      "value": 2.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Slovakia",
-      "id": "SK",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.8,
-      "RISK": "Low",
-      "value": 2.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Slovenia",
-      "id": "SI",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.2,
-      "RISK": "Low",
-      "value": 3.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Solomon Islands",
-      "id": "SB",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.2,
-      "RISK": "Medium",
-      "value": 3.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Somalia",
-      "id": "SO",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.7,
-      "RISK": "High",
-      "value": 2.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "South Africa",
-      "id": "ZA",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.1,
-      "RISK": "Medium",
-      "value": 3.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "South Sudan",
-      "id": "SS",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.6,
-      "RISK": "High",
-      "value": 2.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Spain",
-      "id": "ES",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.1,
-      "RISK": "Low",
-      "value": 3.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Sri Lanka",
-      "id": "LK",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.1,
-      "RISK": "Medium",
-      "value": 3.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Sudan",
-      "id": "SD",
-      "numSuppliers": "1",
-      "CorrectedRating": 3.1,
-      "RISK": "High",
-      "value": 3.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Suriname",
-      "id": "SR",
-      "numSuppliers": "0",
-      "CorrectedRating": 3.1,
-      "RISK": "Medium",
-      "value": 3.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Swaziland",
-      "id": "SZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 3,
-      "RISK": "High",
-      "value": 3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Sweden",
-      "id": "SE",
-      "numSuppliers": "1",
-      "CorrectedRating": 3,
-      "RISK": "Low",
-      "value": 3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Switzerland",
-      "id": "CH",
-      "numSuppliers": "0",
-      "CorrectedRating": 3,
-      "RISK": "Low",
-      "value": 3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Syrian Arab Republic",
-      "id": "SY",
-      "numSuppliers": "0",
-      "CorrectedRating": 3,
-      "RISK": "High",
-      "value": 3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Taiwan, Province of China",
-      "id": "TW",
-      "numSuppliers": "0",
-      "CorrectedRating": 3,
-      "RISK": "Low",
-      "value": 3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Tajikistan",
-      "id": "TJ",
-      "numSuppliers": "0",
-      "CorrectedRating": 3,
-      "RISK": "High",
-      "value": 3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Tanzania, United Republic of",
-      "id": "TZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.7,
-      "RISK": "Medium",
-      "value": 2.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Thailand",
-      "id": "TH",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.7,
-      "RISK": "High",
-      "value": 2.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Timor-Leste",
-      "id": "TL",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.2,
-      "RISK": "Medium",
-      "value": 2.2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Togo",
-      "id": "TG",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.6,
-      "RISK": "Medium",
-      "value": 2.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Trinidad and Tobago",
-      "id": "TT",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.1,
-      "RISK": "Medium",
-      "value": 2.1,
-      "FIELD7": ""
-    },
-    {
-      "name": "Tunisia",
-      "id": "TN",
-      "numSuppliers": "0",
-      "CorrectedRating": 2.5,
-      "RISK": "Medium",
-      "value": 2.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Turkey",
-      "id": "TR",
-      "numSuppliers": "2",
-      "CorrectedRating": 2,
-      "RISK": "High",
-      "value": 2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Turkmenistan",
-      "id": "TM",
-      "numSuppliers": "0",
-      "CorrectedRating": 2,
-      "RISK": "High",
-      "value": 2,
-      "FIELD7": ""
-    },
-    {
-      "name": "Uganda",
-      "id": "UG",
-      "numSuppliers": "0",
-      "CorrectedRating": 1.8,
-      "RISK": "High",
-      "value": 1.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Ukraine",
-      "id": "UA",
-      "numSuppliers": "0",
-      "CorrectedRating": 1.8,
-      "RISK": "Medium",
-      "value": 1.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "United Kingdom",
-      "id": "GB",
-      "numSuppliers": "1",
-      "CorrectedRating": 1.7,
-      "RISK": "Medium",
-      "value": 1.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "United States",
-      "id": "US",
-      "numSuppliers": "15",
-      "CorrectedRating": 1.6,
-      "RISK": "Low",
-      "value": 1.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "United States Minor Outlying Islands",
-      "id": "UM",
-      "numSuppliers": "0",
-      "CorrectedRating": 1.6,
-      "RISK": "Low",
-      "value": 1.6,
-      "FIELD7": ""
-    },
-    {
-      "name": "Uruguay",
-      "id": "UY",
-      "numSuppliers": "0",
-      "CorrectedRating": 1.5,
-      "RISK": "Low",
-      "value": 1.5,
-      "FIELD7": ""
-    },
-    {
-      "name": "Uzbekistan",
-      "id": "UZ",
-      "numSuppliers": "0",
-      "CorrectedRating": 1.3,
-      "RISK": "High",
-      "value": 1.3,
-      "FIELD7": ""
-    },
-    {
-      "name": "Vanuatu",
-      "id": "VU",
-      "numSuppliers": "0",
-      "CorrectedRating": 0.9,
-      "RISK": "Medium",
-      "value": 0.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Venezuela, Bolivarian Republic of",
-      "id": "VE",
-      "numSuppliers": "0",
-      "CorrectedRating": 0.9,
-      "RISK": "High",
-      "value": 0.9,
-      "FIELD7": ""
-    },
-    {
-      "name": "Viet Nam",
-      "id": "VN",
-      "numSuppliers": "0",
-      "CorrectedRating": 0.8,
-      "RISK": "High",
-      "value": 0.8,
-      "FIELD7": ""
-    },
-    {
-      "name": "Yemen",
-      "id": "YE",
-      "numSuppliers": "0",
-      "CorrectedRating": 0.7,
-      "RISK": "High",
-      "value": 0.7,
-      "FIELD7": ""
-    },
-    {
-      "name": "Zambia",
-      "id": "ZM",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.4,
-      "RISK": "Medium",
-      "value": 9.4,
-      "FIELD7": ""
-    },
-    {
-      "name": "Zimbabwe",
-      "id": "ZW",
-      "numSuppliers": "0",
-      "CorrectedRating": 9.2,
-      "RISK": "High",
-      "value": 9.2,
-      "FIELD7": ""
-    }
-   ]
+{
+  "data": [
+      {
+          "name": "Afghanistan",
+          "id": "AF",
+          "numSuppliers": 0,
+          "CorrectedRating": 9.4,
+          "RISK": "High",
+          "value": 9.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Albania",
+          "id": "AL",
+          "numSuppliers": 0,
+          "CorrectedRating": 9.2,
+          "RISK": "Medium",
+          "value": 9.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Algeria",
+          "id": "DZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 9.2,
+          "RISK": "High",
+          "value": 9.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Angola",
+          "id": "AO",
+          "numSuppliers": 0,
+          "CorrectedRating": 9.2,
+          "RISK": "High",
+          "value": 9.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Argentina",
+          "id": "AR",
+          "numSuppliers": 0,
+          "CorrectedRating": 9.1,
+          "RISK": "Medium",
+          "value": 9.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Armenia",
+          "id": "AM",
+          "numSuppliers": 0,
+          "CorrectedRating": 9.1,
+          "RISK": "Medium",
+          "value": 9.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Australia",
+          "id": "AU",
+          "numSuppliers": 3,
+          "CorrectedRating": 9.1,
+          "RISK": "Low",
+          "value": 9.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Austria",
+          "id": "AT",
+          "numSuppliers": 2,
+          "CorrectedRating": 9,
+          "RISK": "Low",
+          "value": 9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Azerbaijan",
+          "id": "AZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 7.6,
+          "RISK": "High",
+          "value": 7.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Bahamas",
+          "id": "BS",
+          "numSuppliers": 0,
+          "CorrectedRating": 9,
+          "RISK": "High",
+          "value": 9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Bahrain",
+          "id": "BH",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.9,
+          "RISK": "Low",
+          "value": 8.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Bangladesh",
+          "id": "BD",
+          "numSuppliers": 1,
+          "CorrectedRating": 8.9,
+          "RISK": "High",
+          "value": 8.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Barbados",
+          "id": "BB",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.9,
+          "RISK": "Low",
+          "value": 8.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Belarus",
+          "id": "BY",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.7,
+          "RISK": "High",
+          "value": 8.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Belgium",
+          "id": "BE",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.6,
+          "RISK": "Low",
+          "value": 8.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Benin",
+          "id": "BJ",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.6,
+          "RISK": "Medium",
+          "value": 8.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Bhutan",
+          "id": "BT",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.5,
+          "RISK": "Medium",
+          "value": 8.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Bolivia, Plurinational State of",
+          "id": "BO",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.3,
+          "RISK": "Medium",
+          "value": 8.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Bosnia and Herzegovina",
+          "id": "BA",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.3,
+          "RISK": "Medium",
+          "value": 8.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Botswana",
+          "id": "BW",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.2,
+          "RISK": "Medium",
+          "value": 8.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Bouvet Island",
+          "id": "BV",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.2,
+          "RISK": "Medium",
+          "value": 8.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Brazil",
+          "id": "BR",
+          "numSuppliers": 6,
+          "CorrectedRating": 8.2,
+          "RISK": "Medium",
+          "value": 8.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Bulgaria",
+          "id": "BG",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.2,
+          "RISK": "Medium",
+          "value": 8.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Burkina Faso",
+          "id": "BF",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.9,
+          "RISK": "Medium",
+          "value": 6.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Burundi",
+          "id": "BI",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.1,
+          "RISK": "High",
+          "value": 8.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Cabo Verde",
+          "id": "CV",
+          "numSuppliers": 0,
+          "CorrectedRating": 8.1,
+          "RISK": "",
+          "value": 8.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Cambodia",
+          "id": "KH",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.8,
+          "RISK": "High",
+          "value": 6.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Cameroon",
+          "id": "CM",
+          "numSuppliers": 0,
+          "CorrectedRating": 8,
+          "RISK": "Low",
+          "value": 8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Canada",
+          "id": "CA",
+          "numSuppliers": 3,
+          "CorrectedRating": 6.8,
+          "RISK": "High",
+          "value": 6.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Central African Republic",
+          "id": "KY",
+          "numSuppliers": 0,
+          "CorrectedRating": 8,
+          "RISK": "Medium",
+          "value": 8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Central African Republic",
+          "id": "CF",
+          "numSuppliers": 0,
+          "CorrectedRating": 7.9,
+          "RISK": "High",
+          "value": 7.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Chad",
+          "id": "TD",
+          "numSuppliers": 2,
+          "CorrectedRating": 7.8,
+          "RISK": "Low",
+          "value": 7.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "China",
+          "id": "CN",
+          "numSuppliers": 14,
+          "CorrectedRating": 7.8,
+          "RISK": "Medium",
+          "value": 7.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Colombia",
+          "id": "CO",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.6,
+          "RISK": "Low",
+          "value": 6.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Comoros",
+          "id": "KM",
+          "numSuppliers": 0,
+          "CorrectedRating": 7.7,
+          "RISK": "High",
+          "value": 7.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Congo",
+          "id": "CG",
+          "numSuppliers": 0,
+          "CorrectedRating": 7.7,
+          "RISK": "Low",
+          "value": 7.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Costa Rica",
+          "id": "CR",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.5,
+          "RISK": "High",
+          "value": 6.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Côte d'Ivoire",
+          "id": "CI",
+          "numSuppliers": 0,
+          "CorrectedRating": 7.4,
+          "RISK": "Low",
+          "value": 7.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Croatia",
+          "id": "HR",
+          "numSuppliers": 0,
+          "CorrectedRating": 7.3,
+          "RISK": "High",
+          "value": 7.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Cuba",
+          "id": "CU",
+          "numSuppliers": 0,
+          "CorrectedRating": 7.3,
+          "RISK": "Low",
+          "value": 7.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Cyprus",
+          "id": "CY",
+          "numSuppliers": 0,
+          "CorrectedRating": 7.3,
+          "RISK": "Medium",
+          "value": 7.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Czech Republic",
+          "id": "CZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 7,
+          "RISK": "Medium",
+          "value": 7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Denmark",
+          "id": "DK",
+          "numSuppliers": 1,
+          "CorrectedRating": 5.9,
+          "RISK": "High",
+          "value": 5.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Djibouti",
+          "id": "DJ",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.9,
+          "RISK": "Medium",
+          "value": 6.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Dominica",
+          "id": "DM",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.8,
+          "RISK": "High",
+          "value": 4.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Dominican Republic",
+          "id": "DO",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.6,
+          "RISK": "High",
+          "value": 6.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Ecuador",
+          "id": "EC",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.6,
+          "RISK": "Low",
+          "value": 5.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Egypt",
+          "id": "EG",
+          "numSuppliers": 2,
+          "CorrectedRating": 6.6,
+          "RISK": "High",
+          "value": 6.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "El Salvador",
+          "id": "SV",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.6,
+          "RISK": "Low",
+          "value": 6.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Equatorial Guinea",
+          "id": "GQ",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.6,
+          "RISK": "Low",
+          "value": 5.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Eritrea",
+          "id": "ER",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.5,
+          "RISK": "High",
+          "value": 6.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Estonia",
+          "id": "EE",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.4,
+          "RISK": "High",
+          "value": 6.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Ethiopia",
+          "id": "ET",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.4,
+          "RISK": "Medium",
+          "value": 6.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Finland",
+          "id": "FI",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.4,
+          "RISK": "Low",
+          "value": 5.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "France",
+          "id": "FR",
+          "numSuppliers": 1,
+          "CorrectedRating": 6.4,
+          "RISK": "Medium",
+          "value": 6.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Gabon",
+          "id": "GA",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.4,
+          "RISK": "Medium",
+          "value": 6.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Gambia",
+          "id": "GM",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.4,
+          "RISK": "Medium",
+          "value": 5.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Georgia",
+          "id": "GE",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.3,
+          "RISK": "Medium",
+          "value": 6.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Germany",
+          "id": "DE",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.3,
+          "RISK": "High",
+          "value": 6.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Ghana",
+          "id": "GH",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.2,
+          "RISK": "Medium",
+          "value": 6.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Greece",
+          "id": "GR",
+          "numSuppliers": 1,
+          "CorrectedRating": 6.2,
+          "RISK": "Medium",
+          "value": 6.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Greenland",
+          "id": "GL",
+          "numSuppliers": 1,
+          "CorrectedRating": 6.2,
+          "RISK": "High",
+          "value": 6.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Grenada",
+          "id": "GD",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.1,
+          "RISK": "High",
+          "value": 6.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Guadeloupe",
+          "id": "GP",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.7,
+          "RISK": "Low",
+          "value": 2.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Guam",
+          "id": "GU",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.1,
+          "RISK": "Low",
+          "value": 6.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Guatemala",
+          "id": "GT",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.1,
+          "RISK": "Medium",
+          "value": 5.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Guernsey",
+          "id": "GG",
+          "numSuppliers": 0,
+          "CorrectedRating": 6.1,
+          "RISK": "Low",
+          "value": 6.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Guinea",
+          "id": "GN",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.1,
+          "RISK": "Medium",
+          "value": 5.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Guinea-Bissau",
+          "id": "GW",
+          "numSuppliers": 0,
+          "CorrectedRating": 6,
+          "RISK": "High",
+          "value": 6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Guyana",
+          "id": "GY",
+          "numSuppliers": 1,
+          "CorrectedRating": 5,
+          "RISK": "Medium",
+          "value": 5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Haiti",
+          "id": "HT",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.9,
+          "RISK": "High",
+          "value": 5.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Honduras",
+          "id": "HN",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.8,
+          "RISK": "Medium",
+          "value": 5.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Hungary",
+          "id": "HU",
+          "numSuppliers": 1,
+          "CorrectedRating": 5.8,
+          "RISK": "Medium",
+          "value": 5.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Iceland",
+          "id": "IS",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.8,
+          "RISK": "Medium",
+          "value": 5.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "India",
+          "id": "IN",
+          "numSuppliers": 3,
+          "CorrectedRating": 4.9,
+          "RISK": "High",
+          "value": 4.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Indonesia",
+          "id": "ID",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.9,
+          "RISK": "High",
+          "value": 4.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Iran, Islamic Republic of",
+          "id": "IR",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.7,
+          "RISK": "Medium",
+          "value": 5.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Iraq",
+          "id": "IQ",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.7,
+          "RISK": "High",
+          "value": 5.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Ireland",
+          "id": "IE",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.7,
+          "RISK": "Low",
+          "value": 5.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Israel",
+          "id": "IL",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.5,
+          "RISK": "Low",
+          "value": 2.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Italy",
+          "id": "IT",
+          "numSuppliers": 1,
+          "CorrectedRating": 5.5,
+          "RISK": "Medium",
+          "value": 5.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Jamaica",
+          "id": "JM",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.4,
+          "RISK": "Medium",
+          "value": 5.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Japan",
+          "id": "JP",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.4,
+          "RISK": "Medium",
+          "value": 5.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Jordan",
+          "id": "JO",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.4,
+          "RISK": "Medium",
+          "value": 5.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Kazakhstan",
+          "id": "KZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.4,
+          "RISK": "Medium",
+          "value": 5.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Kenya",
+          "id": "KE",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.3,
+          "RISK": "Low",
+          "value": 5.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Korea, Democratic People's Republic of",
+          "id": "KP",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.2,
+          "RISK": "High",
+          "value": 5.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Korea, Republic of",
+          "id": "KR",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.2,
+          "RISK": "Medium",
+          "value": 5.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Kuwait",
+          "id": "KW",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.6,
+          "RISK": "Medium",
+          "value": 3.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Kyrgyzstan",
+          "id": "KG",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.1,
+          "RISK": "Medium",
+          "value": 5.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Lao People's Democratic Republic",
+          "id": "LA",
+          "numSuppliers": 0,
+          "CorrectedRating": 5.1,
+          "RISK": "Medium",
+          "value": 5.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Latvia",
+          "id": "LV",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.3,
+          "RISK": "Medium",
+          "value": 4.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Lebanon",
+          "id": "LB",
+          "numSuppliers": 0,
+          "CorrectedRating": 5,
+          "RISK": "Medium",
+          "value": 5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Lesotho",
+          "id": "LS",
+          "numSuppliers": 0,
+          "CorrectedRating": 5,
+          "RISK": "Medium",
+          "value": 5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Liberia",
+          "id": "LR",
+          "numSuppliers": 0,
+          "CorrectedRating": 5,
+          "RISK": "Medium",
+          "value": 5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Libya",
+          "id": "LY",
+          "numSuppliers": 1,
+          "CorrectedRating": 4.9,
+          "RISK": "High",
+          "value": 4.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Lithuania",
+          "id": "LT",
+          "numSuppliers": 1,
+          "CorrectedRating": 4.2,
+          "RISK": "Low",
+          "value": 4.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Luxembourg",
+          "id": "LU",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.9,
+          "RISK": "Low",
+          "value": 4.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Macedonia",
+          "id": "MK",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.9,
+          "RISK": "Medium",
+          "value": 4.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Madagascar",
+          "id": "MG",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.9,
+          "RISK": "Medium",
+          "value": 4.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Malawi",
+          "id": "MW",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.8,
+          "RISK": "Medium",
+          "value": 4.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Malaysia",
+          "id": "MY",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.8,
+          "RISK": "Medium",
+          "value": 4.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Maldives",
+          "id": "MV",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.7,
+          "RISK": "High",
+          "value": 4.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Mali",
+          "id": "ML",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.7,
+          "RISK": "Medium",
+          "value": 4.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Malta",
+          "id": "MT",
+          "numSuppliers": 0,
+          "CorrectedRating": 4,
+          "RISK": "Low",
+          "value": 4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Mauritania",
+          "id": "MR",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.7,
+          "RISK": "High",
+          "value": 4.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Mauritius",
+          "id": "MU",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.6,
+          "RISK": "Medium",
+          "value": 4.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Mexico",
+          "id": "MX",
+          "numSuppliers": 2,
+          "CorrectedRating": 3.9,
+          "RISK": "Medium",
+          "value": 3.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Moldova, Republic of",
+          "id": "MD",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.6,
+          "RISK": "Medium",
+          "value": 4.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Mongolia",
+          "id": "MN",
+          "numSuppliers": 6,
+          "CorrectedRating": 4.6,
+          "RISK": "Medium",
+          "value": 4.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Montenegro",
+          "id": "ME",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.6,
+          "RISK": "Medium",
+          "value": 4.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Monaco",
+          "id": "MC",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.6,
+          "RISK": "Medium",
+          "value": 4.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Mozambique",
+          "id": "MZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.5,
+          "RISK": "Medium",
+          "value": 4.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Myanmar",
+          "id": "MM",
+          "numSuppliers": 4,
+          "CorrectedRating": 4.5,
+          "RISK": "High",
+          "value": 4.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Namibia",
+          "id": "NA",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.7,
+          "RISK": "Low",
+          "value": 3.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Nepal",
+          "id": "NP",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.3,
+          "RISK": "Medium",
+          "value": 4.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Netherlands",
+          "id": "NL",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.6,
+          "RISK": "Low",
+          "value": 3.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "New Zealand",
+          "id": "NZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.2,
+          "RISK": "Low",
+          "value": 4.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Nicaragua",
+          "id": "NI",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.1,
+          "RISK": "Medium",
+          "value": 4.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Niger",
+          "id": "NE",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.1,
+          "RISK": "Medium",
+          "value": 4.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Nigeria",
+          "id": "NG",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.1,
+          "RISK": "High",
+          "value": 4.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Norway",
+          "id": "NO",
+          "numSuppliers": 1,
+          "CorrectedRating": 4.1,
+          "RISK": "Low",
+          "value": 4.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Oman",
+          "id": "OM",
+          "numSuppliers": 0,
+          "CorrectedRating": 4.1,
+          "RISK": "Medium",
+          "value": 4.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Pakistan",
+          "id": "PK",
+          "numSuppliers": 0,
+          "CorrectedRating": 4,
+          "RISK": "High",
+          "value": 4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Panama",
+          "id": "PA",
+          "numSuppliers": 0,
+          "CorrectedRating": 4,
+          "RISK": "Medium",
+          "value": 4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Papua New Guinea",
+          "id": "PG",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.4,
+          "RISK": "Medium",
+          "value": 3.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Paraguay",
+          "id": "PY",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.3,
+          "RISK": "Medium",
+          "value": 3.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Peru",
+          "id": "PE",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.8,
+          "RISK": "Medium",
+          "value": 3.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Philippines",
+          "id": "PH",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.8,
+          "RISK": "Medium",
+          "value": 3.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Poland",
+          "id": "PL",
+          "numSuppliers": 1,
+          "CorrectedRating": 3.8,
+          "RISK": "Low",
+          "value": 3.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Portugal",
+          "id": "PT",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.8,
+          "RISK": "Low",
+          "value": 3.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Qatar",
+          "id": "QA",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.8,
+          "RISK": "Medium",
+          "value": 3.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Romania",
+          "id": "RO",
+          "numSuppliers": 2,
+          "CorrectedRating": 3.1,
+          "RISK": "Medium",
+          "value": 3.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Russian Federation",
+          "id": "RU",
+          "numSuppliers": 8,
+          "CorrectedRating": 3.1,
+          "RISK": "High",
+          "value": 3.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Rwanda",
+          "id": "RW",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.6,
+          "RISK": "Medium",
+          "value": 3.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Saint Lucia",
+          "id": "LC",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.6,
+          "RISK": "Medium",
+          "value": 3.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Saint Vincent and the Grenadines",
+          "id": "VC",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.5,
+          "RISK": "Medium",
+          "value": 3.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Sao Tome and Principe",
+          "id": "ST",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.5,
+          "RISK": "Medium",
+          "value": 3.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Saudi Arabia",
+          "id": "SA",
+          "numSuppliers": 1,
+          "CorrectedRating": 3.5,
+          "RISK": "High",
+          "value": 3.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Senegal",
+          "id": "SN",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.5,
+          "RISK": "Medium",
+          "value": 3.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Serbia",
+          "id": "RS",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.5,
+          "RISK": "Medium",
+          "value": 3.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Seychelles",
+          "id": "SC",
+          "numSuppliers": 0,
+          "CorrectedRating": 1.5,
+          "RISK": "Medium",
+          "value": 1.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Sierra Leone",
+          "id": "SL",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.4,
+          "RISK": "Medium",
+          "value": 3.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Singapore",
+          "id": "SG",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.8,
+          "RISK": "Medium",
+          "value": 2.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Slovakia",
+          "id": "SK",
+          "numSuppliers": 1,
+          "CorrectedRating": 2.8,
+          "RISK": "Low",
+          "value": 2.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Slovenia",
+          "id": "SI",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.2,
+          "RISK": "Low",
+          "value": 3.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Solomon Islands",
+          "id": "SB",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.2,
+          "RISK": "Medium",
+          "value": 3.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Somalia",
+          "id": "SO",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.7,
+          "RISK": "High",
+          "value": 2.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "South Africa",
+          "id": "ZA",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.1,
+          "RISK": "Medium",
+          "value": 3.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "South Sudan",
+          "id": "SS",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.6,
+          "RISK": "High",
+          "value": 2.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Spain",
+          "id": "ES",
+          "numSuppliers": 1,
+          "CorrectedRating": 3.1,
+          "RISK": "Low",
+          "value": 3.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Sri Lanka",
+          "id": "LK",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.1,
+          "RISK": "Medium",
+          "value": 3.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Sudan",
+          "id": "SD",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.1,
+          "RISK": "High",
+          "value": 3.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Suriname",
+          "id": "SR",
+          "numSuppliers": 0,
+          "CorrectedRating": 3.1,
+          "RISK": "Medium",
+          "value": 3.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Swaziland",
+          "id": "SZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 3,
+          "RISK": "High",
+          "value": 3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Sweden",
+          "id": "SE",
+          "numSuppliers": 1,
+          "CorrectedRating": 3,
+          "RISK": "Low",
+          "value": 3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Switzerland",
+          "id": "CH",
+          "numSuppliers": 0,
+          "CorrectedRating": 3,
+          "RISK": "Low",
+          "value": 3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Syrian Arab Republic",
+          "id": "SY",
+          "numSuppliers": 0,
+          "CorrectedRating": 3,
+          "RISK": "High",
+          "value": 3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Taiwan, Province of China",
+          "id": "TW",
+          "numSuppliers": 0,
+          "CorrectedRating": 3,
+          "RISK": "Low",
+          "value": 3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Tajikistan",
+          "id": "TJ",
+          "numSuppliers": 0,
+          "CorrectedRating": 3,
+          "RISK": "High",
+          "value": 3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Tanzania, United Republic of",
+          "id": "TZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.7,
+          "RISK": "Medium",
+          "value": 2.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Thailand",
+          "id": "TH",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.7,
+          "RISK": "High",
+          "value": 2.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Timor-Leste",
+          "id": "TL",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.2,
+          "RISK": "Medium",
+          "value": 2.2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Togo",
+          "id": "TG",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.6,
+          "RISK": "Medium",
+          "value": 2.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Trinidad and Tobago",
+          "id": "TT",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.1,
+          "RISK": "Medium",
+          "value": 2.1,
+          "FIELD7": ""
+      },
+      {
+          "name": "Tunisia",
+          "id": "TN",
+          "numSuppliers": 0,
+          "CorrectedRating": 2.5,
+          "RISK": "Medium",
+          "value": 2.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Turkey",
+          "id": "TR",
+          "numSuppliers": 2,
+          "CorrectedRating": 2,
+          "RISK": "High",
+          "value": 2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Turkmenistan",
+          "id": "TM",
+          "numSuppliers": 0,
+          "CorrectedRating": 2,
+          "RISK": "High",
+          "value": 2,
+          "FIELD7": ""
+      },
+      {
+          "name": "Uganda",
+          "id": "UG",
+          "numSuppliers": 0,
+          "CorrectedRating": 1.8,
+          "RISK": "High",
+          "value": 1.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Ukraine",
+          "id": "UA",
+          "numSuppliers": 0,
+          "CorrectedRating": 1.8,
+          "RISK": "Medium",
+          "value": 1.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "United Kingdom",
+          "id": "GB",
+          "numSuppliers": 2,
+          "CorrectedRating": 1.7,
+          "RISK": "Medium",
+          "value": 1.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "United States",
+          "id": "US",
+          "numSuppliers": 8,
+          "CorrectedRating": 1.6,
+          "RISK": "Low",
+          "value": 1.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "United States Minor Outlying Islands",
+          "id": "UM",
+          "numSuppliers": 0,
+          "CorrectedRating": 1.6,
+          "RISK": "Low",
+          "value": 1.6,
+          "FIELD7": ""
+      },
+      {
+          "name": "Uruguay",
+          "id": "UY",
+          "numSuppliers": 0,
+          "CorrectedRating": 1.5,
+          "RISK": "Low",
+          "value": 1.5,
+          "FIELD7": ""
+      },
+      {
+          "name": "Uzbekistan",
+          "id": "UZ",
+          "numSuppliers": 0,
+          "CorrectedRating": 1.3,
+          "RISK": "High",
+          "value": 1.3,
+          "FIELD7": ""
+      },
+      {
+          "name": "Vanuatu",
+          "id": "VU",
+          "numSuppliers": 0,
+          "CorrectedRating": 0.9,
+          "RISK": "Medium",
+          "value": 0.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Venezuela, Bolivarian Republic of",
+          "id": "VE",
+          "numSuppliers": 0,
+          "CorrectedRating": 0.9,
+          "RISK": "High",
+          "value": 0.9,
+          "FIELD7": ""
+      },
+      {
+          "name": "Viet Nam",
+          "id": "VN",
+          "numSuppliers": 0,
+          "CorrectedRating": 0.8,
+          "RISK": "High",
+          "value": 0.8,
+          "FIELD7": ""
+      },
+      {
+          "name": "Yemen",
+          "id": "YE",
+          "numSuppliers": 0,
+          "CorrectedRating": 0.7,
+          "RISK": "High",
+          "value": 0.7,
+          "FIELD7": ""
+      },
+      {
+          "name": "Zambia",
+          "id": "ZM",
+          "numSuppliers": 0,
+          "CorrectedRating": 9.4,
+          "RISK": "Medium",
+          "value": 9.4,
+          "FIELD7": ""
+      },
+      {
+          "name": "Zimbabwe",
+          "id": "ZW",
+          "numSuppliers": 0,
+          "CorrectedRating": 9.2,
+          "RISK": "High",
+          "value": 9.2,
+          "FIELD7": ""
+      }
+  ]
 }
