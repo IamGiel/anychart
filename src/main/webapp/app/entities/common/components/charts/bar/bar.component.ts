@@ -45,8 +45,7 @@ export class BarComponent implements OnInit, AfterViewInit {
             .format(
                 '<span style="font-size:14px;color:#FFF;">{%chart}</span>' + ': <span style="font-size:14px;color:#FFF;">{%value}</span>'
             );
-        var tooltip = chart.tooltip();
-        tooltip.enabled(false);
+
         // initiate drawing the chart
         chart.draw();
         // });

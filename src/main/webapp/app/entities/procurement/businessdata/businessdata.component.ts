@@ -79,6 +79,6 @@ export class BusinessdataComponent implements OnInit {
     }
 
     getDataPercent(value) {
-        return Math.round(value / 120 * 100);
+        return Math.round(value / 140 * 100);
     }
 }
