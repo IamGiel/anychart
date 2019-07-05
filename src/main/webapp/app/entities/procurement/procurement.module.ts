@@ -54,6 +54,7 @@ import { FileUploadModule } from 'ng2-file-upload/ng2-file-upload';
 import { CategoryDashbordDropdownComponent } from './category-dashboard-filter/category-dashboard-dropdown';
 import { CompanyInfoComponent } from './supplierdetails/company-info/company-info.component';
 import { AdminComponent } from './supplierdetails/company-info/admin/admin.component';
+import { D3chartsComponent } from './d3charts/d3charts.component';
 
 library.add(faFacebookSquare, faLinkedin);
 
@@ -98,7 +99,8 @@ library.add(faFacebookSquare, faLinkedin);
         AdminComponent,
         SupplierdataComponent,
         BusinessdataComponent,
-        SupplierlistComponent
+        SupplierlistComponent,
+        D3chartsComponent
 
         // TabComponent
     ],
