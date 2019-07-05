@@ -1158,7 +1158,7 @@
     </div>
   </div>
   <div class="row row-map">
-    <div class="col-md-9 Custom col-map pl-0">
+    <div class="col-md-12 Custom col-map pl-0">
       <div class="float-L">
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -1213,12 +1213,12 @@
               class="fa fa-check"></i> Social Compliance</a>
         </div>
       </div>
-      <div class="icon-p">
+      <div [hidden]="true" class="icon-p">
         <img class="map-icon" (click)="open(mapcontent, 'mapcontent')"
           src="../../../../content/images/full-screen.png" />
       </div>
     </div>
-    <div class="col-md-3 pl-0 pr-0" style="overflow:auto">
+    <div [hidden]="true" class="col-md-3 pl-0 pr-0" style="overflow:auto; display: none;">
       <div>
         <ul class="nav nav-tab justify-content-center">
           <li class="nav-item">
