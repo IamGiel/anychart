@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as d3 from 'd3';
 
 @Component({
     selector: 'jhi-d3charts',
@@ -9,4 +10,5 @@ export class D3chartsComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {}
+    ngAfterContentInit() {}
 }
