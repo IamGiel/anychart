@@ -97,7 +97,6 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
 
         var originalData = dataSet.mapAs({ x: 0, value: 'perc', fill: 'fill2' });
         var benchmark = dataSet.mapAs({ x: 0, value: 'final', fill: 'fill1' });
-        console.log(benchmark);
         var chart = anychart.column();
 
         var series;

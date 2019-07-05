@@ -598,11 +598,11 @@ span.inactive1 {
 }
 
 ::ng-deep /deep/ .carousel-control-prev-icon {
-    background-image: url(../../../../content/images/next.png) !important;
+    background-image: url(../../../../content/images/chevron-left.svg) !important;
 }
 
 ::ng-deep .carousel-control-next-icon {
-    background-image: url(../../../../content/images/next.png);
+    background-image: url(../../../../content/images/chevron-right.svg);
 }
 
 .ngb-carousel {

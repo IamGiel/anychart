@@ -318,7 +318,6 @@ export class SupplierdataComponent implements OnInit {
             this.resfilter = false;
         } else if (type == 'responsefunnel') {
             this.resfilter = !this.resfilter;
-            console.log(this.resfilter, type, 'khk');
             this.laborfilter = false;
             this.ffilter = false;
             this.envfilter = false;
@@ -392,7 +391,6 @@ export class SupplierdataComponent implements OnInit {
     }
     ngOnInit() {
         this.fetchData.getAllDataPoint().subscribe(res => {
-            console.log(res);
             this.extractData(res);
         });
         this.mapdropdown = 'Country Risk';
@@ -401,7 +399,6 @@ export class SupplierdataComponent implements OnInit {
         this.financialData = this.mapService.financialData.data;
         this.mapCountryRisk = this.mapService.mapCountryRisk.data;
         this.suppliersOnMap = this.mapService.suppliersOnMap.data;
-        console.log(this.mapCountryRisk);
         // this.supplierList = this.mapCountryRisk.map(a => a.compName);
         this.mapBusinessIntegrity = this.mapService.mapBusinessIntegrity.data;
         // console.log('>>>>>>> ', this.socialData);
