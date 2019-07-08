@@ -739,11 +739,6 @@ span.inactive1 {
     position: relative;
 }
 
-/*D3 Charts CSS*/
-#canvas {
-}
-#canvas-svg {
-}
 .land {
     fill: #222;
 }

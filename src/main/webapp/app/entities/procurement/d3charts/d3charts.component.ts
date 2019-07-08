@@ -76,41 +76,71 @@ export class D3chartsComponent implements OnInit {
         const yAxisGroup = graph.append('g');
 
         // scale the y axis
-        const y = d3
-            .scaleLinear()
-            .domain([0, d3.max(this.data, d => d.value)])
-            .range([0, graphHeight]);
+        const y = d3.scaleLinear().range([graphHeight, 0]);
 
         // scale the x axis
         const x = d3
             .scaleBand()
-            .domain(this.data.map(item => item.name))
             .range([0, 500])
             .paddingInner(0.2)
             .paddingOuter(0.4);
 
         const xAxis = d3.axisBottom(x);
-        const yAxis = d3.axisRight(y);
+        const yAxis = d3
+            .axisLeft(y)
+            .ticks(10)
+            .tickFormat(d => d + ' orders');
         console.log(xAxis, yAxis);
 
-        // =========== join data ===========
-        const rect = graph.selectAll('rect').data(this.data);
+        // define transition
+        const t = d3.transition().duration(500);
 
-        rect
-            .attr('width', x.bandwidth)
-            .attr('height', d => y(d.value))
-            .attr('fill', 'orange')
-            .attr('x', d => x(d.name));
+        // =========== update data ===========
+        const update = data => {
+            data = this.data;
+            // update scales
+            y.domain([0, d3.max(this.data, d => d.value)]);
+            x.domain(this.data.map(item => item.name));
 
-        rect
-            .enter()
-            .append('rect')
-            .attr('width', x.bandwidth)
-            .attr('height', d => y(d.value))
-            .attr('fill', 'orange')
-            .attr('x', d => x(d.name));
+            // join data
+            const rect = graph.selectAll('rect').data(this.data);
+            // remove entries when data is updated
+            rect.exit().remove();
 
-        xAxisGroup.call(xAxis);
-        yAxisGroup.call(yAxis);
+            rect
+                .attr('width', x.bandwidth)
+                .attr('fill', 'orange')
+                .attr('x', d => x(d.name));
+
+            rect
+                .enter()
+                .append('rect')
+                .attr('width', x.bandwidth)
+                .attr('height', 0)
+                .attr('y', graphHeight)
+                .attr('fill', 'orange')
+                .attr('x', d => x(d.name))
+                .merge(rect)
+                .transition(t)
+                .attr('height', d => graphHeight - y(d.value))
+                .attr('y', d => y(d.value));
+
+            // call axes
+            xAxisGroup.call(xAxis);
+            yAxisGroup.call(yAxis);
+
+            xAxisGroup
+                .selectAll('text')
+                .attr('transform', 'rotate(-35)')
+                .attr('text-anchor', 'end');
+        };
+
+        // change data every interval
+        d3.interval(() => {
+            this.data[0].value += 50;
+            update(this.data);
+        }, 1000);
+
+        update(this.data);
     }
 }
