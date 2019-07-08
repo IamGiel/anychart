@@ -62,11 +62,24 @@ export class D3chartsComponent implements OnInit {
         // select svg container
         const svg = d3.select('#graphContainer');
 
+        const margin = { top: 20, right: 20, bottom: 100, left: 100 };
+        const graphWidth = 600 - margin.left - margin.right;
+        const graphHeight = 600 - margin.top - margin.bottom;
+
+        const graph = svg
+            .append('g')
+            .attr('width', graphWidth)
+            .attr('height', graphHeight)
+            .attr('transform', `translate( ${margin.left}, ${margin.right})`);
+
+        const xAxisGroup = graph.append('g').attr('transform', `translate(0, ${graphHeight})`);
+        const yAxisGroup = graph.append('g');
+
         // scale the y axis
         const y = d3
             .scaleLinear()
             .domain([0, d3.max(this.data, d => d.value)])
-            .range([0, 500]);
+            .range([0, graphHeight]);
 
         // scale the x axis
         const x = d3
@@ -76,8 +89,12 @@ export class D3chartsComponent implements OnInit {
             .paddingInner(0.2)
             .paddingOuter(0.4);
 
+        const xAxis = d3.axisBottom(x);
+        const yAxis = d3.axisRight(y);
+        console.log(xAxis, yAxis);
+
         // =========== join data ===========
-        const rect = svg.selectAll('rect').data(this.data);
+        const rect = graph.selectAll('rect').data(this.data);
 
         rect
             .attr('width', x.bandwidth)
@@ -92,5 +109,8 @@ export class D3chartsComponent implements OnInit {
             .attr('height', d => y(d.value))
             .attr('fill', 'orange')
             .attr('x', d => x(d.name));
+
+        xAxisGroup.call(xAxis);
+        yAxisGroup.call(yAxis);
     }
 }
