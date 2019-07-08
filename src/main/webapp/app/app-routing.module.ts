@@ -38,7 +38,10 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
                     path: 'admin',
                     loadChildren: './admin/admin.module#GatewayAdminModule'
                 },
-
+                {
+                    path: 'dashboard',
+                    loadChildren: './dashboard/dashboard.module#DashboardModule'
+                },
                 {
                     path: 'supplier',
                     loadChildren: './entities/supplier/supplier.module#SupplierModule'

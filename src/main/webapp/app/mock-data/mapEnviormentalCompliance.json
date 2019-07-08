@@ -1,0 +1,1470 @@
+{"data" :
+
+  [
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "AL",
+          "name": "Albania",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "DZ",
+          "name": "Algeria",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "AD",
+          "name": "Andorra",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "AO",
+          "name": "Angola",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "AI",
+          "name": "Anguilla",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "AG",
+          "name": "Antigua and Barbuda",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "AR",
+          "name": "Argentina",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "AM",
+          "name": "Armenia",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "AW",
+          "name": "Aruba",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "AU",
+          "name": "Australia",
+          "score": 22,
+          "numSuppliers": 3
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "AT",
+          "name": "Austria",
+          "score": 33,
+          "numSuppliers": 2
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "AZ",
+          "name": "Azerbaijan",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "BS",
+          "name": "Bahamas",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "BH",
+          "name": "Bahrain",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "BD",
+          "name": "Bangladesh",
+          "score": 33,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "BB",
+          "name": "Barbados",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "BY",
+          "name": "Belarus",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "BE",
+          "name": "Belgium",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "BZ",
+          "name": "Belize",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "BJ",
+          "name": "Benin",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "BM",
+          "name": "Bermuda",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "BT",
+          "name": "Bhutan",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "BO",
+          "name": "Bolivia (Plurinational State of)",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "BA",
+          "name": "Bosnia and Herzegovina",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "BW",
+          "name": "Botswana",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "BR",
+          "name": "Brazil",
+          "score": 22,
+          "numSuppliers": 6
+      },
+      {
+          "RISK": "Low ",
+          "value": 44,
+          "id": "BN",
+          "name": "Brunei Darussalam",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "BG",
+          "name": "Bulgaria",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "BF",
+          "name": "Burkina Faso",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "CV",
+          "name": "Cabo Verde",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "KH",
+          "name": "Cambodia",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "CM",
+          "name": "Cameroon",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "CA",
+          "name": "Canada",
+          "score": 11,
+          "numSuppliers": 3
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "KY",
+          "name": "Cayman Islands",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "TD",
+          "name": "Chile",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "CN",
+          "name": "China",
+          "score": 44,
+          "numSuppliers": 14
+      },
+      {
+          "RISK": "High",
+          "value": 56,
+          "id": "CO",
+          "name": "Colombia",
+          "score": 56,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "KM",
+          "name": "Comoros",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "CG",
+          "name": "Costa Rica",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "CR",
+          "name": "Côte d'Ivoire",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 44,
+          "id": "CI",
+          "name": "Croatia",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "CU",
+          "name": "Cuba",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "CY",
+          "name": "Cyprus",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "CZ",
+          "name": "Czech Republic",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "DK",
+          "name": "Denmark",
+          "score": 11,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Low ",
+          "value": 0,
+          "id": "DJ",
+          "name": "Djibouti",
+          "score": 0,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "DM",
+          "name": "Dominica",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "DO",
+          "name": "Dominican Republic",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "EC",
+          "name": "Ecuador",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "EG",
+          "name": "Egypt",
+          "score": 33,
+          "numSuppliers": 2
+      },
+      {
+          "RISK": "Low ",
+          "value": 0,
+          "id": "SV",
+          "name": "El Salvador",
+          "score": 0,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "EE",
+          "name": "Estonia",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "ET",
+          "name": "Ethiopia",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "FJ",
+          "name": "Fiji",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "High",
+          "value": 56,
+          "id": "FI",
+          "name": "Finland",
+          "score": 56,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "FR",
+          "name": "France",
+          "score": 44,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "High",
+          "value": 44,
+          "id": "GF",
+          "name": "French Guiana",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "GA",
+          "name": "Gabon",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "GM",
+          "name": "Gambia",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "GE",
+          "name": "Georgia",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "DE",
+          "name": "Germany",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "GH",
+          "name": "Ghana",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "GR",
+          "name": "Greece",
+          "score": 11,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "GL",
+          "name": "Greenland",
+          "score": 33,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "GD",
+          "name": "Grenada",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "GP",
+          "name": "Guam",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "GU",
+          "name": "Guatemala",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "GN",
+          "name": "Guinea",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "GY",
+          "name": "Guyana",
+          "score": 22,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "HN",
+          "name": "Honduras",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "High",
+          "value": 67,
+          "id": "HT",
+          "name": "Hong Kong, China (SAR)",
+          "score": 67,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "HU",
+          "name": "Hungary",
+          "score": 11,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Low ",
+          "value": 0,
+          "id": "IS",
+          "name": "Iceland",
+          "score": 0,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 0,
+          "id": "IN",
+          "name": "India",
+          "score": 0,
+          "numSuppliers": 3
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "ID",
+          "name": "Indonesia",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "IR",
+          "name": "Iran (Islamic Republic of)",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "IE",
+          "name": "Ireland",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "IL",
+          "name": "Israel",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "IT",
+          "name": "Italy",
+          "score": 22,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "JM",
+          "name": "Jamaica",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "JP",
+          "name": "Japan",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "JE",
+          "name": "Jersey, Channel Islands",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 0,
+          "id": "JO",
+          "name": "Jordan",
+          "score": 0,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "KZ",
+          "name": "Kazakhstan",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "KE",
+          "name": "Kenya",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "KI",
+          "name": "Kiribati",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "KP",
+          "name": "Korea (Republic of)",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "High",
+          "value": 67,
+          "id": "KR",
+          "name": "Kosovo",
+          "score": 67,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "KW",
+          "name": "Kuwait",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "KG",
+          "name": "Kyrgyzstan",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "LA",
+          "name": "Lao People's Democratic Republic",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "LV",
+          "name": "Latvia",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "High",
+          "value": 56,
+          "id": "LB",
+          "name": "Lebanon",
+          "score": 56,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "LS",
+          "name": "Lesotho",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "LR",
+          "name": "Liberia",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "LY",
+          "name": "Liechtenstein",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "LT",
+          "name": "Lithuania",
+          "score": 22,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "LU",
+          "name": "Luxembourg",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "MO",
+          "name": "Macao",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "MK",
+          "name": "Macedonia",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "MG",
+          "name": "Madagascar",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "MW",
+          "name": "Malawi",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "MY",
+          "name": "Malaysia",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "MV",
+          "name": "Maldives",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "ML",
+          "name": "Mali",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "MT",
+          "name": "Malta",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "MU",
+          "name": "Marshall Islands",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "MU",
+          "name": "Mauritius",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "MX",
+          "name": "Mexico",
+          "score": 33,
+          "numSuppliers": 2
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "FM",
+          "name": "Micronesia (Federated States of)",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "MD",
+          "name": "Moldova (Republic of)",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "MN",
+          "name": "Mongolia",
+          "score": 44,
+          "numSuppliers": 6
+      },
+      {
+          "RISK": "Medium",
+          "value": 56,
+          "id": "ME",
+          "name": "Montenegro",
+          "score": 56,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "MC",
+          "name": "Morocco",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 44,
+          "id": "MZ",
+          "name": "Mozambique",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "MM",
+          "name": "Myanmar",
+          "score": 33,
+          "numSuppliers": 4
+      },
+      {
+          "RISK": "High",
+          "value": 67,
+          "id": "NA",
+          "name": "Namibia",
+          "score": 67,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "NR",
+          "name": "Nauru",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "NP",
+          "name": "Nepal",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "NL",
+          "name": "Netherlands",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "NZ",
+          "name": "New Zealand",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "High",
+          "value": 56,
+          "id": "NI",
+          "name": "Nicaragua",
+          "score": 56,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "NE",
+          "name": "Niger",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "NG",
+          "name": "Nigeria",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 44,
+          "id": "NO",
+          "name": "Norway",
+          "score": 44,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "OM",
+          "name": "Oman",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "PK",
+          "name": "Pakistan",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "PL",
+          "name": "Palau",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "PS",
+          "name": "Palestine",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "PA",
+          "name": "Panama",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "PG",
+          "name": "Papua New Guinea",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "PY",
+          "name": "Paraguay",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "PE",
+          "name": "Peru",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "PH",
+          "name": "Philippines",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "PL",
+          "name": "Poland",
+          "score": 33,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "PT",
+          "name": "Portugal",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "PR",
+          "name": "Puerto Rico",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "QA",
+          "name": "Qatar",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "RE",
+          "name": "Réunion",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "RO",
+          "name": "Romania",
+          "score": 44,
+          "numSuppliers": 2
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "RU",
+          "name": "Russian Federation",
+          "score": 44,
+          "numSuppliers": 8
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "RW",
+          "name": "Rwanda",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "KN",
+          "name": "Saint Kitts and Nevis",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 0,
+          "id": "LC",
+          "name": "Saint Lucia",
+          "score": 0,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "VC",
+          "name": "Saint Vincent and the Grenadines",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "WS",
+          "name": "Samoa",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "ST",
+          "name": "Sao Tome and Principe",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 44,
+          "id": "SA",
+          "name": "Saudi Arabia",
+          "score": 44,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "SN",
+          "name": "Senegal",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "High",
+          "value": 78,
+          "id": "RS",
+          "name": "Serbia",
+          "score": 78,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "High",
+          "value": 67,
+          "id": "SC",
+          "name": "Seychelles",
+          "score": 67,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "SL",
+          "name": "Sierra Leone",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 44,
+          "id": "SG",
+          "name": "Singapore",
+          "score": 44,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "SK",
+          "name": "Slovakia",
+          "score": 11,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "SI",
+          "name": "Slovenia",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "SB",
+          "name": "Solomon Islands",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "ZA",
+          "name": "South Africa",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "ES",
+          "name": "Spain",
+          "score": 22,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "LK",
+          "name": "Sri Lanka",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "SR",
+          "name": "Suriname",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "SZ",
+          "name": "Swaziland",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "SE",
+          "name": "Sweden",
+          "score": 33,
+          "numSuppliers": 1
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "CH",
+          "name": "Switzerland",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 33,
+          "id": "TW",
+          "name": "Taiwan (Province of China)",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "TZ",
+          "name": "Tanzania (United Republic of)",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "High",
+          "value": 67,
+          "id": "TH",
+          "name": "Thailand",
+          "score": 67,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "TL",
+          "name": "Timor-Leste",
+          "score": 33,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "TG",
+          "name": "Togo",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "TO",
+          "name": "Tonga",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "TT",
+          "name": "Trinidad and Tobago",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "TN",
+          "name": "Tunisia",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "TR",
+          "name": "Turkey",
+          "score": 33,
+          "numSuppliers": 2
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "TV",
+          "name": "Tuvalu",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "UG",
+          "name": "Uganda",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "UA",
+          "name": "Ukraine",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 11,
+          "id": "AE",
+          "name": "United Arab Emirates",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 33,
+          "id": "GB",
+          "name": "United Kingdom",
+          "score": 33,
+          "numSuppliers": 2
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "US",
+          "name": "United States",
+          "score": 22,
+          "numSuppliers": 8
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "UY",
+          "name": "Uruguay",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "VU",
+          "name": "Vanuatu",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 22,
+          "id": "VN",
+          "name": "Vietnam",
+          "score": 22,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Medium",
+          "value": 11,
+          "id": "VI",
+          "name": "Virgin Islands (U.S.)",
+          "score": 11,
+          "numSuppliers": 0
+      },
+      {
+          "RISK": "Low ",
+          "value": 22,
+          "id": "ZM",
+          "name": "Zambia",
+          "score": 22,
+          "numSuppliers": 0
+      }
+  ]
+  }
+  

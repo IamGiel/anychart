@@ -14,6 +14,8 @@ export class PieChartComponent implements OnInit, AfterViewInit {
     @Input() hideTooltipPerct: string;
     @Input() heightValue: string;
     @Input() showValue: string;
+    t;
+    @Input() value: string;
 
     constructor() {}
 
@@ -23,19 +25,21 @@ export class PieChartComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         this.chart.container(this.container.nativeElement);
         this.chart.innerRadius('50%');
+
         // set the position of labels
         //this.chart.labels().position("outside");
-        /*  var label = anychart.standalones.label();
-        label.text('100');
+        var label = anychart.standalones.label();
+        label.text(this.value);
         label.width('100%');
         label.height('100%');
         label.adjustFontSize(true);
-        label.fontColor('#60727b');
-        label.fontFamily('Inter UI');
+        // label.fontSize(14);
+        // label.fontColor('#60727b');
+        // label.fontFamily('Inter UI');
         label.hAlign('center');
         label.vAlign('middle');
 
-        this.chart.center().content(label);*/
+        this.chart.center().content(label);
         this.chart.title(this.chartTitle);
         //this.chart.title().letterSpacing('1px');
         // set font family
@@ -49,7 +53,8 @@ export class PieChartComponent implements OnInit, AfterViewInit {
         tooltip.title(false);
         tooltip.separator(false);
         tooltip.fontFamily('Inter UI');
-        tooltip.format('<b>{%x}</b>: <b>{%value}</b>');
+        tooltip.format('<b>{%label}</b>: <b>{%value}</b>');
+
         //this.chart.labels().position('outside');
         // disable the legend
         //this.chart.legend(false);

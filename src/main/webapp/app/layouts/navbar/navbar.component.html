@@ -1,7 +1,30 @@
 <nav class="navbar navbar-dark navbar-expand-md jh-navbar d-lg-none" >
    
 </nav>
-<nav class="navbar navbar-dark navbar-expand-md jh-navbar" >
+<nav class="navbar navbar-dark navbar-expand-md jh-navbar" *ngIf="router.url == '/dashboard'" >
+    <div class="col-md-5 p-3">
+        <div class="jh-logo-container float-left">
+            <!-- <a class="jh-navbar-toggler d-lg-none float-right" href="javascript:void(0);" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                (click)="toggleNavbar()">
+                <fa-icon [icon]="'bars'"></fa-icon>
+            </a> -->
+            <span class="navbar-brand logo float-left" >
+                <img class="pr-2" src="../../../content/images/beroelogo.png" alt="logo" />
+                <span class="pl-2 procure">Procurement</span>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <img class="image" src="../../../content/images/Plus _ Blanc.png" />
+    </div>
+    <div class="col-md-5 text-right">
+        <img src="../../../content/images/user-white.png"/>
+        <a class="menu-text">Arunkumar</a>
+        <i class="fa fa-angle-down"></i>
+    </div>
+</nav>
+<nav class="navbar navbar-dark navbar-expand-md jh-navbar" *ngIf="router.url != '/dashboard'" >
     <div class="col-md-4">
         <div class="jh-logo-container float-left">
             <a class="jh-navbar-toggler d-lg-none float-right" href="javascript:void(0);" data-toggle="collapse"

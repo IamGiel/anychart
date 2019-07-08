@@ -40,17 +40,21 @@ import {
     CategoryDashboardComponent,
     CDFComponent,
     DowJonesComponent,
-    ResponseModal
+    ResponseModal,
+    SupplierdataComponent,
+    BusinessdataComponent,
+    SupplierlistComponent
 } from './';
 
 // new ng2-file-uploader
 import { FileUploadModule } from 'ng2-file-upload/ng2-file-upload';
 
-import { PagerService } from './dashboard/pager.service';
-import { FilterCompaniesPipe } from './filter-companies.pipe';
+//import { PagerService } from './dashboard/pager.service';
+
 import { CategoryDashbordDropdownComponent } from './category-dashboard-filter/category-dashboard-dropdown';
 import { CompanyInfoComponent } from './supplierdetails/company-info/company-info.component';
 import { AdminComponent } from './supplierdetails/company-info/admin/admin.component';
+import { D3chartsComponent } from './d3charts/d3charts.component';
 
 library.add(faFacebookSquare, faLinkedin);
 
@@ -84,7 +88,7 @@ library.add(faFacebookSquare, faLinkedin);
         RequestDataComponent,
         FileSizePipe,
         DropZoneDirective,
-        FilterCompaniesPipe,
+
         SupplierdetailsComponent,
         CategoryDashboardComponent,
         CDFComponent,
@@ -92,11 +96,15 @@ library.add(faFacebookSquare, faLinkedin);
         ResponseModal,
         CategoryDashbordDropdownComponent,
         CompanyInfoComponent,
-        AdminComponent
+        AdminComponent,
+        SupplierdataComponent,
+        BusinessdataComponent,
+        SupplierlistComponent,
+        D3chartsComponent
 
         // TabComponent
     ],
-    providers: [NgbTabsetConfig, PagerService, NgbCarouselConfig],
+    providers: [NgbTabsetConfig, NgbCarouselConfig],
     entryComponents: [CDFComponent, ResponseModal],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

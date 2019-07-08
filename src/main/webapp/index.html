@@ -17,10 +17,34 @@
 
     <!-- Material Design for Bootstrap fonts and icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Material Design for Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.anychart.com/releases/8.6.0/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4">
+    <link rel="stylesheet" href="https://cdn.anychart.com/releases/8.6.0/fonts/css/anychart-font.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4">
+        
+        
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/geodata/1.2.0/custom/world/world.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/8.6.0/js/anychart-base.min.js"></script>
+    
+    <script src="https://cdn.anychart.com/samples/maps-general-features/world-bubble-map/data.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+    <script src="https://cdn.anychart.com/geodata/1.2.0/custom/world/world.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+
 </head>
 
 <body>
@@ -47,6 +71,16 @@
         if(typeof(document.querySelector) == 'function') {
         document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
         document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+        document.querySelector('.goog-te-combo').setAttribute('style', 'background: transparent;color:white;margin-top: 10px;');
+        
+        /*const dropdown = document.querySelector('.goog-te-combo');
+        console.log(document.querySelector('.goog-te-combo').options)
+        dropdown.options[dropdown.selectedIndex].value='2';
+        Array.from(document.querySelector('.goog-te-combo').options)
+        .filter(
+            x => {x.value === "en";console.log(x)})[0]
+        .setAttribute('selected', true);
+       */
         }
 
         // If you have jQuery - works cross-browser - uncomment this
@@ -97,7 +131,7 @@
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-127883218-1');
-<!--ga('send','pageview');-->
+    ga('send','pageview');
     </script>
 
     <!-- Piwik -->

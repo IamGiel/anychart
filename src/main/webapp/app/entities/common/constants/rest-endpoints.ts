@@ -288,6 +288,11 @@ export class RestEndpointConstants {
                 name: 'getERPDetails',
                 url: 'api/erpDetails',
                 method: 'get'
+            },
+            {
+                name: 'getAllDataPoint',
+                url: 'api/getAllDataPoint',
+                method: 'get'
             }
         ]
     };

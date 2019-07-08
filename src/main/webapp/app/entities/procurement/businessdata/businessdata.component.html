@@ -1,0 +1,173 @@
+<div class="container">
+    <div class="row" *ngIf="dashboardService.getBusinessFiltersAppliedOrNot() == true">
+        <div class="col-md-6 p-0 float-L">
+          <ul class="selected">
+            <li style="background-color: transparent"><span style="color: #494949;">Filters applied </span></li>
+            <li> D&B paydex higher than 5 <span (click)="removeSelectedFilter('index')">x</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 p-o float-L">
+          <span class="float-R save-filter">save filter</span>
+          <span class="float-R clear-filter" (click)="dashboardService.clearBusinessFilterApplied()">Clear filter</span>
+          <span class="float-R filtered-count">Filtered 10 of 100</span>
+        </div>
+      </div>
+  <div class="row">
+    <div class="col-md-6 pl-0">
+      <div class="card">
+        <div class="card-body">
+          <span class="card-title">Industries</span>
+          <!-- <img class="filter" /> -->
+          <div class="bars">
+            <!-- <div class="table-responsive">
+              <table class="table table-hover table-striped1 tex-center1">
+                <tbody>
+                  <tr *ngFor="let item of industriesData; let i = index ">
+                    <td class="text-left">{{item.label}}</td>
+                    <td>
+                      <ngb-progressbar type="success" [value]="item.value">{{item.value}}%</ngb-progressbar>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+            <jhi-bar [chartData]="industriesData" [id]="'pharmaid'"></jhi-bar>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 pl-0">
+      <div class="card">
+        <div class="card-body">
+          <span class="card-title">Categories</span>
+          <img class="filter" />
+          <div class="bars">
+            <!-- <div class="table-responsive">
+              <table class="table table-hover table-striped1 tex-center1">
+                <tbody>
+                  <tr *ngFor="let item of categoryData; let i = index ">
+                    <td class="text-left">{{item.label}}</td>
+                    <td>
+                      <ngb-progressbar type="success" [value]="item.value">{{item.value}}%</ngb-progressbar>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+            <jhi-bar [chartData]="categoryData" [id]="'categoryid'"></jhi-bar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:15px">
+    <div class="col-md-6 pl-0">
+      <div class="card">
+        <div class="card-body">
+          <span class="card-title">Ownership type</span>
+          <img class="filter" />
+          <div class="row">
+            <div class="col-md-4">
+              <jhi-pie-chart [chartData]="ownershipData" [value]="120" hideTooltipPerct='true'></jhi-pie-chart>
+            </div>
+            <div class="col-md-5">
+              <ul class="spacing">
+                <li *ngFor="let data of ownershipData">
+                  <span  class="label" [ngStyle]="{'background-color': data.fill}"></span>
+                  <span>{{data.label}}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="spacing">
+                <li *ngFor="let data of ownershipData">
+                  <span class="data-value"><b>{{data.value}}</b></span>
+                  <span class="spanPerc">{{getDataPercent(data.value)}}%</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 pl-0">
+      <div class="card">
+        <div class="card-body">
+          <span class="card-title">Business classification</span>
+          <img class="filter" />
+          <div class="row">
+            <div class="col-md-4">
+              <jhi-pie-chart [chartData]="businessData" [value]="120" hideTooltipPerct='true'></jhi-pie-chart>
+            </div>
+            <div class="col-md-5">
+              <ul class="spacing">
+                <li *ngFor="let data of businessData">
+                    <span class="label" [ngStyle]="{'background-color': data.fill}"></span>
+                    <span>{{data.label}}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="spacing">
+                <li *ngFor="let data of businessData">
+                  <span class="data-value"><b>{{data.value}}</b></span>
+                  <span class="spanPerc">{{getDataPercent(data.value)}}%</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:15px">
+    <div class="col-md-6 pl-0">
+      <div class="card">
+        <div class="card-body">
+          <span class="card-title">Supplier's employee strength</span>
+          <img class="filter" />
+          <div class="bars">
+            <!-- <div class="table-responsive">
+              <table class="table table-hover table-striped1 tex-center1">
+                <tbody>
+                  <tr *ngFor="let item of supplierdata; let i = index ">
+                    <td class="text-left">{{item.label}}</td>
+                    <td>
+                      <ngb-progressbar type="success" [value]="item.value">{{item.value}}%</ngb-progressbar>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+            <jhi-bar [chartData]="supplierdata" [id]="'supplierid'"></jhi-bar>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 pl-0">
+      <div class="card">
+        <div class="card-body">
+          <span class="card-title">Last annual revenue</span>
+          <img class="filter" />
+          <div class="bars">
+            <!-- <div class="table-responsive">
+              <table class="table table-hover table-striped1 tex-center1">
+                <tbody>
+                  <tr *ngFor="let item of supplierdata; let i = index ">
+                    <td class="text-left">{{item.label}}</td>
+                    <td>
+                      <ngb-progressbar type="success" [value]="item.value"><span>{{item.value}}%</span></ngb-progressbar>
+                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+            <jhi-bar [chartData]="annualdata" [id]="'revenueid'"></jhi-bar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

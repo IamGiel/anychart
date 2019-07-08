@@ -149,3 +149,6 @@
 .anychart-credits {
     display: none;
 }
+.progress-bar .bg-success {
+    background-color: #6b4cd9 !important;
+}

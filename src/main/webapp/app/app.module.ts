@@ -39,12 +39,10 @@ import { TagInputModule } from 'ngx-chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FakeBackendService } from './fake-backend.service';
-
 @NgModule({
     imports: [
         NgSelectModule,
         InfiniteScrollModule,
-
         BrowserAnimationsModule,
         GatewayHomeModule,
         GatewayCommonModule,
@@ -59,7 +57,6 @@ import { FakeBackendService } from './fake-backend.service';
 
         SupplierModule,
         ProcurementModule,
-
         FormsModule,
         ReactiveFormsModule,
         AngularFileUploaderModule,
@@ -95,6 +92,6 @@ import { FakeBackendService } from './fake-backend.service';
 })
 export class GatewayAppModule {
     constructor(private dpConfig: NgbDatepickerConfig) {
-        this.dpConfig.minDate = { year: moment().year() - 100, month: 1, day: 1 };
+        this.dpConfig.minDate = { year: moment.default().year() - 100, month: 1, day: 1 };
     }
 }

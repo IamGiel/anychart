@@ -6,6 +6,7 @@ import { CarouselComponent } from './components/carousel.component';
 import { PieChartComponent } from './components/charts/pie/pie-chart.component';
 import { ColumnChartComponent } from './components/charts/column/column-chart.component';
 import { niceDateFormatPipe } from './pipes/date.pipe';
+import { searchPipe } from './pipes/search.pipe';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { RatingBoxComponent } from './components/rating-box/rating-box.component';
 import { TermsConditionsComponent } from './components/terms-conditions/terms-conditions.component';
@@ -25,6 +26,11 @@ import { AchillesQuestionnaireModalComponent } from './modals/achilles-questionn
 import { AchillesQuestionsComponent } from '../../achilles/achilles-questions/achilles-questions.component';
 import { AchillesFormComponent } from '../../achilles/achilles-form/achilles-form.component';
 import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achilles-questionnaire-modal.component';
+import { BarComponent } from './components/charts/bar/bar.component';
+import { TreemapComponent } from './components/charts/treemap/treemap.component';
+import { MapComponent } from './components/map/map.component';
+import { SplineChartComponent } from './components/charts/spline-chart/spline-chart.component';
+import { StackBarComponent } from './components/charts/stack-bar/stack-bar.component';
 @NgModule({
     imports: [GatewaySharedModule, RouterModule.forChild(commonState), NgSelectModule, FormsModule, NgCircleProgressModule.forRoot()],
     declarations: [
@@ -33,6 +39,7 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         PrivacyPolicyComponent,
         CarouselComponent,
         niceDateFormatPipe,
+        searchPipe,
         PaginationComponent,
         TermsConditionsComponent,
         FAQComponent,
@@ -49,7 +56,12 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         AchillesFormComponent,
         RatingBoxComponent,
         PieChartComponent,
-        ColumnChartComponent
+        ColumnChartComponent,
+        BarComponent,
+        TreemapComponent,
+        MapComponent,
+        SplineChartComponent,
+        StackBarComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     entryComponents: [
@@ -65,6 +77,7 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
     exports: [
         CarouselComponent,
         niceDateFormatPipe,
+        searchPipe,
         PaginationComponent,
         TermsConditionsComponent,
         SortableTableDirective,
@@ -80,7 +93,12 @@ import { FileNamePipe } from '../common/modals/achilles-questionnaire-modal/achi
         AchillesFormComponent,
         RatingBoxComponent,
         PieChartComponent,
-        ColumnChartComponent
+        ColumnChartComponent,
+        BarComponent,
+        MapComponent,
+        SplineChartComponent,
+        TreemapComponent,
+        StackBarComponent
     ]
 })
 export class GatewayCommonModule {}

@@ -9,7 +9,10 @@ export * from './upload-supplier/upload-supplier.component';
 export * from './upload-supplier/upload.service';
 export * from './dashboard/dashboard.route';
 export * from './dashboard/dashboard.component';
-export * from './dashboard/dashboard.service';
+export * from './businessdata/businessdata.component';
+export * from './supplierdata/supplierdata.component';
+export * from './supplierlist/supplierlist.component';
+//export * from './dashboard/dashboard.service';
 export * from './supplierdetails/supplierdetails.component';
 export * from './supplierdetails/dowjones.component';
 
