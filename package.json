@@ -60,7 +60,7 @@
     "tslib": "1.9.3",
     "tus-js-client": "^1.5.1",
     "underscore": "^1.9.1",
-    "uppy": "^0.27.4",
+    "uppy": "^2.3.3",
     "webstomp-client": "1.2.0",
     "zone.js": "0.8.26"
   },
